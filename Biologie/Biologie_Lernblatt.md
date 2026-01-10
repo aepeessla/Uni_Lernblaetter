@@ -593,7 +593,7 @@ $\left(\frac{(151 + 154)}{1339+1195+151+154}\right) \cdot 100 = 10.7432\% \to 10
 * <span style="color: #969696ff;">Erfolgskontrolle</span>
 
 
-
+hi
 
 
 
