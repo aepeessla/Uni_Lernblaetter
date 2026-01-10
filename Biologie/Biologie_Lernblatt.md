@@ -583,14 +583,14 @@ $\left(\frac{(151 + 154)}{1339+1195+151+154}\right) \cdot 100 = 10.7432\% \to 10
     * Gen f. <b>$\beta$-Lactamase</b> $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{verleiht resistenz geg.}}\ \ \ \ } $<span style="color: #4f44b4ff;">Ampicillin</span>
         * <b><span style="color: #fc0303ff;">Nur transformierte Zellen überleben auf Amp-Platten.</span></b>
 * <b>Multiple Cloning Site (MCS):</b>
-    * d. Stelle wo d. 
+    * d. Stelle wo d. *Inserts* eingefügt werden
+    * Bereich mit vielen singulären Schnittstellen f. Restriktionsenzyme.
+* <b>Sicherheit</b>:
+    *  pUC-Vektoren = $\lnot$ konjugativ $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{weil}}\ \ \ \ }$ Gene f.  Gentransfer entf.
 
 
-
-
-
-
-
+# <b>3) Funktionsprinzip des lac-Operons & Blau-Weiß-Selektion</b>
+* <span style="color: #6d6d6dff;">Erfolgskontrolle</span>
 
 
 
