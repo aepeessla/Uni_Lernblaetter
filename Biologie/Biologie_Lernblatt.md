@@ -592,9 +592,13 @@ $\left(\frac{(151 + 154)}{1339+1195+151+154}\right) \cdot 100 = 10.7432\% \to 10
 # <b>3) Funktionsprinzip des lac-Operons & Blau-Weiß-Selektion</b>
 * <span style="color: #969696ff;">Erfolgskontrolle</span>
 
-
-hi
-
+* <u>$\alpha$-Komplementation</u>
+    * <b><u>Problem</u></b>:
+        * vollständige $lacZ_Gen =$ zu groß $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{f.}}\ \ \ \ }$ kleine + effiziente Vektoren
+    * <b><u>Lösung</u></b>:
+        * Vector $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{trägt nur}}\ \ \ \ }$ $lacZ'- \text{Fragment }(\alpha-\text{Peptid})$
+            * <span style="color: #ffd900ff;">Wirtsstamm</span>  (E. coli RRI) $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{trägt}}\ \ \ \ }$ Rest des Gens im Genom $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{jedoch fehlt}}\ \ \ \ }$ Aminosäuren 11–41 ($\Omega$-Peptid)
+    * Nur wenn <b>beide Fragmente</b> zsm.kommen, entsteht eine funktionelle $\beta$-Galactosidase17.
 
 
 
