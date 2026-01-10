@@ -600,7 +600,17 @@ $\left(\frac{(151 + 154)}{1339+1195+151+154}\right) \cdot 100 = 10.7432\% \to 10
             * <span style="color: #ffd900ff;">Wirtsstamm</span>  (E. coli RRI) $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{trägt}}\ \ \ \ }$ Rest des Gens im Genom $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{jedoch fehlt}}\ \ \ \ }$ Aminosäuren 11–41 ($\Omega$-Peptid)
     * Nur wenn <b>beide Fragmente</b> zsm.kommen, entsteht eine funktionelle $\beta$-Galactosidase17.
 
-
+## <b>Selektion im Experiment</b>:
+1) <b><u>Iduktion</u></b>:
+    * <b>IPTG</b> $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{dient als}}\ \ \ \ }$ <span style="color: #fc03beff;">Induktor</span>
+        * bindet $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{an}}\ \ \ \ }$ Repressor $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{gibt frei}}\ \ \ \ }$ Operator $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{starten}}\ \ \ \ }$ Transkription
+2) <b><u>Farbnachweis</u></b>:
+    * <b>X-Gal</b> $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{gegegespaltet v.}}\ \ \ \ }$ $\beta$-Galactosidase $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{Enstehung}}\ \ \ \ }$ <span style="background-color: #3b7194ff; color: white; padding: 0px 5px; border-radius: 2px;">blauer Farbstoff</span>
+3) <b><u>Auswertung</u></b>:
+    * <u>blaue Kolonie</u>:
+        * $LacZ' \to$ intakt, kein Insert vorh. (Selbstligation des Vektors)
+    * <u>weiße</u>:
+        * Fremd-DNA in d. MCS inseriert $\to$ <span style="color: #fc0303ff;">Insertionsinaktivierung des $lacZ'$-Gens</span> $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{keine}}\ \ \ \ }$ $\beta$-Galactosidase
 
 
 
