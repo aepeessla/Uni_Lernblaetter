@@ -523,7 +523,7 @@ $\left(\frac{(151 + 154)}{1339+1195+151+154}\right) \cdot 100 = 10.7432\% \to 10
             * <span style="color: #ffd900ff;">Wirtsstamm</span>  (E. coli RRI) $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{trägt}}\ \ \ \ }$ Rest des Gens im Genom $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{jedoch fehlt}}\ \ \ \ }$ Aminosäuren 11–41 ($\Omega$-Peptid)
     * Nur wenn <b>beide Fragmente</b> zsm.kommen, entsteht eine funktionelle $\beta$-Galactosidase17.
 
-## <b>Selektion im Experiment</b>:
+## <b>4) Selektion im Experiment</b>:
 
 1) <b><u>Iduktion</u></b>:
     * <b>IPTG</b> $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{dient als}}\ \ \ \ }$ <span style="color: #fc03beff;">Induktor</span>
