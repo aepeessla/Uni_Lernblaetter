@@ -590,6 +590,7 @@ $\left(\frac{(151 + 154)}{1339+1195+151+154}\right) \cdot 100 = 10.7432\% \to 10
 
 
 # <b>3) Funktionsprinzip des lac-Operons & Blau-Weiß-Selektion</b>
+
 * <span style="color: #969696ff;">Erfolgskontrolle</span>
 
 * <u>$\alpha$-Komplementation</u>
@@ -611,6 +612,41 @@ $\left(\frac{(151 + 154)}{1339+1195+151+154}\right) \cdot 100 = 10.7432\% \to 10
         * $LacZ' \to$ intakt, kein Insert vorh. (Selbstligation des Vektors)
     * <u>weiße</u>:
         * Fremd-DNA in d. MCS inseriert $\to$ <span style="color: #fc0303ff;">Insertionsinaktivierung des $lacZ'$-Gens</span> $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{keine}}\ \ \ \ }$ $\beta$-Galactosidase
+
+# <b>5) Profi-Wissen für die „1“ (Rechenbeispiele & Details)</b>
+
+* <b><u>Transformationsrate:</u></b>:
+    * Anzahl d. Kolonien pro $1~\mu g$ eingesetzter Vektor-DNA.   
+        * Achte bei Berechnung auf d. Verdünnungsschritte (wie viel der Gesamtsuspension wurde tatsächl. ausgestrichen?)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
