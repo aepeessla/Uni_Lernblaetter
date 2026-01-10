@@ -620,11 +620,12 @@ $\left(\frac{(151 + 154)}{1339+1195+151+154}\right) \cdot 100 = 10.7432\% \to 10
         * Achte bei Berechnung auf d. Verdünnungsschritte (wie viel der Gesamtsuspension wurde tatsächl. ausgestrichen?)
 
     * <b><u>Bsp.</u></b>:
-        1) 
+        1) <b><u>Die Ausgangswerte (Was haben wir eingesetzt?)</u></b>
             * <b>Konzentration der pUC19-DNA</b>: $5~ng/\mu l$
             * <b>Eingesetztes Volumen der DNA</b>: $5~\mu l$
             * <b>Gesamtmenge DNA im Ansatz</b>: $5~\mu l \times 5~ng/ \mu l = \mathbf{25~ng}$
-        2) Das Gesamtvolumen des Transformationsansatzes
+
+        2) <b><u>Das Gesamtvolumen des Transformationsansatzes</u></b>
             * $5~\mu l$ DNA-Lösung
             * $200~\mu l$ kompetente Zellen
             * $1000~\mu l$ ($1~ml$) L-Medium zum Auffüllen 7
