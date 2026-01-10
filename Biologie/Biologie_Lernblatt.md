@@ -590,7 +590,7 @@ $\left(\frac{(151 + 154)}{1339+1195+151+154}\right) \cdot 100 = 10.7432\% \to 10
 
 
 # <b>3) Funktionsprinzip des lac-Operons & Blau-Weiß-Selektion</b>
-* <span style="color: #6d6d6dff;">Erfolgskontrolle</span>
+* <span style="color: #969696ff;">Erfolgskontrolle</span>
 
 
 
