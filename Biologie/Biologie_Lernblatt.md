@@ -7,7 +7,7 @@
 ### <u>Mutationstypen</u>
 1) <b>Silentm.</b> = Verän. keine Ausw.
 
-1) <b>Punktm.</b> = nur eine Base verändert
+2) <b>Punktm.</b> = nur eine Base verändert
     * <span style="color: green;">Transition</span> = Purin $\to$ Purin oder Pyrimidin $\to$ Pyrimidin
 
     * <span style="color: blue;">Transversion</span> = Purin $\leftrightarrow$ Pyrimidin 
@@ -18,10 +18,10 @@
 
             ![Transition und Transversion](<Transition und Transversion-1.jpg>)
 
-1) <b>Missensem.</b> = Aminisäure verän.
-1) <b>Nonsensem.</b> = Codon $\rightarrow$ Stoppcodon
+3) <b>Missensem.</b> = Aminisäure verän.
+4) <b>Nonsensem.</b> = Codon $\rightarrow$ Stoppcodon
 
-1) <b>InDel M.</b> = Einf. oder Entf. v. Basen
+5) <b>InDel M.</b> = Einf. oder Entf. v. Basen
     
     * `Frameshift` = Leseraster verschiebt sich
         * aber nur wenn $\pm$ 1 oder 2 Basen
@@ -582,8 +582,8 @@ $\left(\frac{(151 + 154)}{1339+1195+151+154}\right) \cdot 100 = 10.7432\% \to 10
 * <b>Selektionsmarker ($Amp^{R}$)</b>:
     * Gen f. <b>$\beta$-Lactamase</b> $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{verleiht resistenz geg.}}\ \ \ \ } $<span style="color: #4f44b4ff;">Ampicillin</span>
         * <b><span style="color: #fc0303ff;">Nur transformierte Zellen überleben auf Amp-Platten.</span></b>
-
-
+* <b>Multiple Cloning Site (MCS):</b>
+    * d. Stelle wo d. 
 
 
 
