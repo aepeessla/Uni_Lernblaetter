@@ -526,16 +526,13 @@ $\left(\frac{(151 + 154)}{1339+1195+151+154}\right) \cdot 100 = 10.7432\% \to 10
 ## <b>Selektion im Experiment</b>:
 
 1) <b><u>Iduktion</u></b>:
-
     * <b>IPTG</b> $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{dient als}}\ \ \ \ }$ <span style="color: #fc03beff;">Induktor</span>
         * bindet $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{an}}\ \ \ \ }$ Repressor $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{gibt frei}}\ \ \ \ }$ Operator $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{starten}}\ \ \ \ }$ Transkription
 
 2) <b><u>Farbnachweis</u></b>:
-
     * <b>X-Gal</b> $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{gegegespaltet v.}}\ \ \ \ }$ $\beta$-Galactosidase $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{Enstehung}}\ \ \ \ }$ <span style="background-color: #3b7194ff; color: white; padding: 0px 5px; border-radius: 2px;">blauer Farbstoff</span>
 
 3) <b><u>Auswertung</u></b>:
-
     * <u>blaue Kolonie</u>:
         * $LacZ' \to$ intakt, kein Insert vorh. (Selbstligation des Vektors)
     * <u>weiße</u>:
@@ -544,13 +541,9 @@ $\left(\frac{(151 + 154)}{1339+1195+151+154}\right) \cdot 100 = 10.7432\% \to 10
 # <b>5) Profi-Wissen für die „1“ (Rechenbeispiele & Details)</b>
 
 * <b><u>Transformationsrate</u></b>:
-
     * Anzahl d. Kolonien pro $1~\mu g$ eingesetzter Vektor-DNA.   
-
         * Achte bei Berechnung auf d. Verdünnungsschritte (wie viel der Gesamtsuspension wurde tatsächl. ausgestrichen?)
-
     * <b><u>Bsp.</u></b>:
-
         1) <b><u>Die Ausgangswerte (Was haben wir eingesetzt?)</u></b>:
             * <b>Konzentration der pUC19-DNA</b>: $5~ng/\mu l$
             * <b>Eingesetztes Volumen der DNA</b>: $5~\mu l$
