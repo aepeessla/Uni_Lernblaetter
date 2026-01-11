@@ -5,30 +5,46 @@
 * `Gameten` = Keimzellen, Geschlechtszellen
 
 ### <u>Mutationstypen</u>
-<ol>
 
+<ol>
 <li><b>Silentm.</b> = Verän. keine Ausw.</li>
 
 <li><b>Punktm.</b> = nur eine Base verändert</li>
-    * <span style="color: green;">Transition</span> = Purin $\to$ Purin oder Pyrimidin $\to$ Pyrimidin
-
-    * <span style="color: blue;">Transversion</span> = Purin $\leftrightarrow$ Pyrimidin 
-
-        * $\text{Wahrscheinlichkeit} =  \text{Transition} \gt \text{Transversion}$
-
-            * <b>Wrm ?</b>: Weil d. Struktur nahezu identisch ist & weniger Energie aufzuwenden ist
-
-            ![Transition und Transversion](<Transition und Transversion-1.jpg>)
+    <ul>
+        <li><span style="color: green;">Transition</span> = Purin $\to$ Purin oder Pyrimidin $\to$ Pyrimidin</li>
+        <li><span style="color: blue;">Transversion</span> = Purin $\leftrightarrow$ Pyrimidin </li>
+        <ul>
+            <li>$\text{Wahrscheinlichkeit} =  \text{Transition} \gt \text{Transversion}$</li>
+        </ul>
+            <ul>
+            <li><b>Wrm ?</b>: Weil d. Struktur nahezu identisch ist & weniger Energie aufzuwenden ist</li>
+                ![Transition und Transversion](<Transition und Transversion-1.jpg>)
+            </ul>
+    </ul>
+            
 
 <li><b>Missensem.</b> = Aminisäure verän.</li>
 <li><b>Nonsensem.</b> = Codon $\rightarrow$ Stoppcodon</li>
 
 <li> <b>InDel M.</b> = Einf. oder Entf. v. Basen</li>
-    
-    * `Frameshift` = Leseraster verschiebt sich
-        * aber nur wenn $\pm$ 1 oder 2 Basen
-            * <u>Grund</u>: `len(sequenz)` = 
-                $24 \ mod \ 3 = 0$, weil ein Codon aus Basen-<span style="color: red;">Tri</span>pletts besteht
+    <ul>
+        <li>`Frameshift` = Leseraster verschiebt sich</li>
+    </ul>
+        <ul>
+            <li>aber nur wenn $\pm$ 1 oder 2 Basen</li>
+        </ul>
+            <ul>
+            <li><u>Grund</u>: `len(sequenz)` = 
+                $24 \ mod \ 3 = 0$, weil ein Codon aus Basen-<span style="color: red;">Tri</span>pletts besteht</li>
+            </ul>
+                <ul>
+                    <li><u>Grund</u>: `len(sequenz)` = $24 \ mod \ 3 = 0$, weil ein Codon aus Basen-<span style="color: red;">Tri</span>pletts besteht</li>
+            </ul>
+
+
+     
+        * 
+            * 
                 * $24 \pm 1 = 23 \ mod \ 3 = 1$
                 * $24 \pm 2 = 22 \ mod \ 3 = 2$
 </ol>
