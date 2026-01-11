@@ -5,9 +5,11 @@
 * `Gameten` = Keimzellen, Geschlechtszellen
 
 ### <u>Mutationstypen</u>
-1) <b>Silentm.</b> = Verän. keine Ausw.
+<ol>
 
-2) <b>Punktm.</b> = nur eine Base verändert
+<li><b>Silentm.</b> = Verän. keine Ausw.</li>
+
+<li><b>Punktm.</b> = nur eine Base verändert</li>
     * <span style="color: green;">Transition</span> = Purin $\to$ Purin oder Pyrimidin $\to$ Pyrimidin
 
     * <span style="color: blue;">Transversion</span> = Purin $\leftrightarrow$ Pyrimidin 
@@ -18,10 +20,10 @@
 
             ![Transition und Transversion](<Transition und Transversion-1.jpg>)
 
-3) <b>Missensem.</b> = Aminisäure verän.
-4) <b>Nonsensem.</b> = Codon $\rightarrow$ Stoppcodon
+<li><b>Missensem.</b> = Aminisäure verän.</li>
+<li><b>Nonsensem.</b> = Codon $\rightarrow$ Stoppcodon</li>
 
-5) <b>InDel M.</b> = Einf. oder Entf. v. Basen
+<li> <b>InDel M.</b> = Einf. oder Entf. v. Basen</li>
     
     * `Frameshift` = Leseraster verschiebt sich
         * aber nur wenn $\pm$ 1 oder 2 Basen
@@ -29,6 +31,7 @@
                 $24 \ mod \ 3 = 0$, weil ein Codon aus Basen-<span style="color: red;">Tri</span>pletts besteht
                 * $24 \pm 1 = 23 \ mod \ 3 = 1$
                 * $24 \pm 2 = 22 \ mod \ 3 = 2$
+</ol>
 
 ### <u>Baumstammanalyse</u>
 * `autosomal dominant/rezessiv` = Vererb. ü. autosomales Chromosom, merkmal dominant/rezessiv
