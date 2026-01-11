@@ -5,49 +5,30 @@
 * `Gameten` = Keimzellen, Geschlechtszellen
 
 ### <u>Mutationstypen</u>
+1) <b>Silentm.</b> = Verän. keine Ausw.
 
-<ol>
-<li><b>Silentm.</b> = Verän. keine Ausw.</li>
+2) <b>Punktm.</b> = nur eine Base verändert
+    * <span style="color: green;">Transition</span> = Purin $\to$ Purin oder Pyrimidin $\to$ Pyrimidin
 
-<li><b>Punktm.</b> = nur eine Base verändert</li>
-    <ul>
-        <li><span style="color: green;">Transition</span> = Purin $\to$ Purin oder Pyrimidin $\to$ Pyrimidin</li>
-        <li><span style="color: blue;">Transversion</span> = Purin $\leftrightarrow$ Pyrimidin </li>
-        <ul>
-            <li>$\text{Wahrscheinlichkeit} =  \text{Transition} \gt \text{Transversion}$</li>
-        </ul>
-            <ul>
-            <li><b>Wrm ?</b>: Weil d. Struktur nahezu identisch ist & weniger Energie aufzuwenden ist</li>
-                ![Transition und Transversion](<Transition und Transversion-1.jpg>)
-            </ul>
-    </ul>
-            
+    * <span style="color: blue;">Transversion</span> = Purin $\leftrightarrow$ Pyrimidin 
 
-<li><b>Missensem.</b> = Aminisäure verän.</li>
-<li><b>Nonsensem.</b> = Codon $\rightarrow$ Stoppcodon</li>
+        * $\text{Wahrscheinlichkeit} =  \text{Transition} \gt \text{Transversion}$
 
-<li> <b>InDel M.</b> = Einf. oder Entf. v. Basen</li>
-    <ul>
-        <li>`Frameshift` = Leseraster verschiebt sich</li>
-    </ul>
-        <ul>
-            <li>aber nur wenn $\pm$ 1 oder 2 Basen</li>
-        </ul>
-            <ul>
-            <li><u>Grund</u>: `len(sequenz)` = 
-                $24 \ mod \ 3 = 0$, weil ein Codon aus Basen-<span style="color: red;">Tri</span>pletts besteht</li>
-            </ul>
-                <ul>
-                    <li><u>Grund</u>: `len(sequenz)` = $24 \ mod \ 3 = 0$, weil ein Codon aus Basen-<span style="color: red;">Tri</span>pletts besteht</li>
-            </ul>
+            * <b>Wrm ?</b>: Weil d. Struktur nahezu identisch ist & weniger Energie aufzuwenden ist
 
+            ![Transition und Transversion](<Transition und Transversion-1.jpg>)
 
-     
-        * 
-            * 
+3) <b>Missensem.</b> = Aminisäure verän.
+4) <b>Nonsensem.</b> = Codon $\rightarrow$ Stoppcodon
+
+5) <b>InDel M.</b> = Einf. oder Entf. v. Basen
+    
+    * `Frameshift` = Leseraster verschiebt sich
+        * aber nur wenn $\pm$ 1 oder 2 Basen
+            * <u>Grund</u>: `len(sequenz)` = 
+                $24 \ mod \ 3 = 0$, weil ein Codon aus Basen-<span style="color: red;">Tri</span>pletts besteht
                 * $24 \pm 1 = 23 \ mod \ 3 = 1$
                 * $24 \pm 2 = 22 \ mod \ 3 = 2$
-</ol>
 
 ### <u>Baumstammanalyse</u>
 * `autosomal dominant/rezessiv` = Vererb. ü. autosomales Chromosom, merkmal dominant/rezessiv
