@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Biologie_Lernblatt.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<style>
+  /* 1. Ebene: Punkt */
+  ul { list-style-type: disc; } 
+
+  /* 2. Ebene: Pfeil rechts */
+  ul ul { list-style-type: "→ "; }
+
+  /* 3. Ebene: Pfeil rechts (identisch zur 2. Ebene) */
+  ul ul ul { list-style-type: "→ "; }
+</style>
+<h1 id="vokabeln"><strong>Vokabeln</strong></h1>
+<h3 id="uzellentypenu"><u>Zellentypen</u></h3>
+<ul>
+<li><code>Somazellen</code> = Körperzellen</li>
+<li><code>Gameten</code> = Keimzellen, Geschlechtszellen</li>
+</ul>
+<h3 id="umutationstypenu"><u>Mutationstypen</u></h3>
+<ol>
+<li>
+<p><b>Silentm.</b> = Verän. keine Ausw.</p>
+</li>
+<li>
+<p><b>Punktm.</b> = nur eine Base verändert</p>
+<ul>
+<li>
+<p><span style="color: green;">Transition</span> = Purin $\to$ Purin oder Pyrimidin $\to$ Pyrimidin</p>
+</li>
+<li>
+<p><span style="color: blue;">Transversion</span> = Purin $\leftrightarrow$ Pyrimidin</p>
+<ul>
+<li>
+<p>$\text{Wahrscheinlichkeit} =  \text{Transition} \gt \text{Transversion}$</p>
+<ul>
+<li><b>Wrm ?</b>: Weil d. Struktur nahezu identisch ist &amp; weniger Energie aufzuwenden ist</li>
+</ul>
+<p><img src="Transition und Transversion-1.jpg" alt="Transition und Transversion"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><b>Missensem.</b> = Aminisäure verän.</p>
+</li>
+<li>
+<p><b>Nonsensem.</b> = Codon $\rightarrow$ Stoppcodon</p>
+</li>
+<li>
+<p><b>InDel M.</b> = Einf. oder Entf. v. Basen</p>
+<ul>
+<li><code>Frameshift</code> = Leseraster verschiebt sich
+<ul>
+<li>aber nur wenn $\pm$ 1 oder 2 Basen
+<ul>
+<li><u>Grund</u>: <code>len(sequenz)</code> =
+$24 \ mod \ 3 = 0$, weil ein Codon aus Basen-<span style="color: red;">Tri</span>pletts besteht
+<ul>
+<li>$24 \pm 1 = 23 \ mod \ 3 = 1$</li>
+<li>$24 \pm 2 = 22 \ mod \ 3 = 2$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="ubaumstammanalyseu"><u>Baumstammanalyse</u></h3>
+<ul>
+<li><code>autosomal dominant/rezessiv</code> = Vererb. ü. autosomales Chromosom, merkmal dominant/rezessiv</li>
+<li><code>X-Chromosomal dominant/rezessiv</code> = Vererb. ü. X-Chromosom, Merkmal dominant/rezessiv</li>
+<li><code>Y-chromosomal</code> = : Verer. über Y-Chromosom, nur đ Vater</li>
+<li><code>Mitochondriale Erbgänge</code> = nur đ Mutter</li>
+<li><code>Kodominanz</code> = beide Allele  ausgeprägt $\to$ unabhängigen
+Merkmalen
+<ul>
+<li>Bsp. Blutgruppen</li>
+</ul>
+</li>
+<li><code>Intermediärer Erbgang</code> = beide Allele sind im selben Merkmal ausgeprägt
+<ul>
+<li>Blütenfarbe bei Löwenmaul</li>
+</ul>
+</li>
+</ul>
+<h3 id="udominanz-und-rezessivit%C3%A4tu"><u>Dominanz und Rezessivität</u></h3>
+<p><img src="image-11.png" alt="alt text"></p>
+<ul>
+<li>
+<p>erklärt, warum schädl. rezessive Krankheiten häufiger auftreten als schädl. dominante Krankheiten</p>
+</li>
+<li>
+<p><code>Haplosuffizient</code>(rezessiv) = ein Wildtyp-Allel ist ausreichend,
+um den Wildtyp-Phänotyp auszuprägen $\implies$ mutiertes Allel ist rezessiv</p>
+</li>
+<li>
+<p><code>Haploinsuffizient</code>(dominant) = ein Wildtyp-Allel reicht $\lnot$ aus,
+um den Wildtyp-Phänotyp auszuprägen $\implies$ mutiertes Allel = dominant</p>
+</li>
+<li>
+<p><code>Wildtypallel</code> = Genvariante (das Allel), d. in einer natürl. Population am häufigsten vorkommt &amp; als d. funktionale Standard gilt</p>
+</li>
+</ul>
+<h1 id="stammbaum"><strong>Stammbaum</strong></h1>
+<ul>
+<li>
+<p><code>Gen</code> = Absch. d. DNA mit Info. f. d. Synthese v. Proteinen/Enzymen</p>
+</li>
+<li>
+<p><code>Allel</code> = Genvariationen</p>
+</li>
+<li>
+<p><code>Locus</code> = speazielle Region im Chromosom</p>
+</li>
+<li>
+<p><code>homozygot</code> = 1 ident. Allele an einem Locus</p>
+</li>
+<li>
+<p><code>heterozygot</code> = 2 vers. Allele an einem Locus</p>
+</li>
+<li>
+<p><code>hemizygot</code> = <span style="color: red;">Was ????</span></p>
+</li>
+<li>
+<p><code>Phänotyp</code> = Ausprä. eines Gens</p>
+</li>
+<li>
+<p><code>Genotyp</code> = Allelische Zsm.setzung eines Gens</p>
+</li>
+<li>
+<p><code>homolog</code> = homologe Chromosomen</p>
+<ul>
+<li><img src="WhatsApp Bild 2025-11-16 um 15.52.26_0d802323.jpg" alt="alt text"></li>
+</ul>
+</li>
+<li>
+<p><code>Haploid &amp; Diploid</code>
+$
+\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{Anwendung}}\ \ \ \ } \text{Anzahl d. Chromosomensätze} \begin{cases} haploid = Gameten(1n)\ diploid = Somazellen(2n) \end{cases}
+$</p>
+</li>
+<li>
+<p><span style="background-color: #b22727ff; color: white; padding: 0px 5px; border-radius: 2px;">Aneuploidie</span> = Jeder Mensch hat 46 Chromosomen, wenn $\neq$ 46 = Aneuploidie</p>
+</li>
+</ul>
+<hr>
+<h1 id="was-passiert-wenn-man-sagt-dass-ein-merkmal-rezessiv-oder-dominant-ist"><strong>Was passiert wenn man sagt, dass ein Merkmal rezessiv oder dominant ist</strong></h1>
+<blockquote style="border-left: 5px solid gray; margin: 10px; padding-left: 10px;"> Das muss ich noch machen ! Aber dafür muss ich erst einmal Mitose und Meiose lernen!!!</blockquote>
+<ul>
+<li>
+<p><code>Gameten</code> (bei jedem Menschen) = $23$ Chromosomen $\begin{cases}
+22 = \text{Autosom}\
+1 = \text{Genosom}
+\end{cases}$</p>
+<ul>
+<li><b>Bsp.:</b> Allel f. Augenfarbe d. Mutter bei <code>Autosomchromosom 3</code> $\implies$ Beim Vater auch bei <code>Autosomchromosom 3</code>
+<ul>
+<li><span style="color: red;">D. ist dann bei jedem Menschen auf Autosomchromosom 3 !!!</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="synthetische-lethalit%C3%A4t"><strong>Synthetische Lethalität</strong></h1>
+<ul>
+<li>Lethal = tödl.</li>
+<li>synthetische Lethalität <span style="color: #fc0303ff;">tritt nur ein</span>, wenn beide Gene đ. <code>Inhibitoren</code> oder <code>Mutationen</code> ausgeschaltet wurden</li>
+</ul>
+<p><img src="WhatsApp Bild 2025-11-23 um 13.58.42_7ea489df.jpg" alt="alt text"></p>
+<h2 id="bsp">Bsp.:</h2>
+<p><img src="image.png" alt="alt text"></p>
+<h1 id="stammbaumanalyse"><strong>Stammbaumanalyse</strong></h1>
+<h2 id="umonogene-vererbungu"><u>Monogene Vererbung</u></h2>
+<p><img src="image-2.png" alt="alt text"></p>
+<ol>
+<li><u>Uniformitätsregel</u>:
+<ul>
+<li>Kreuzung zw. homozygoten Individuen ($\forall$ Allele gleich), d. sich in einem Merkmal unters., führen zu einer Nachkommensgeneration mit $\equiv$ Merkmal</li>
+</ul>
+</li>
+<li><u>Spaltungsregel</u>:
+<ul>
+<li>Wenn man d. $G_1-Generation$ mit sich selbst kreuzt, dann hat das Nachkommen eine phänotypische Vert. v. 3:1 und eine genotypische Vert. v. 1:2:1</li>
+</ul>
+</li>
+<li><u>Unabhängigkeitsregel</u>:
+<ul>
+<li>Unterschiedl. merkmale werden unabhängig v.einander vererbt</li>
+</ul>
+</li>
+</ol>
+<h2 id="ubspu"><u>Bsp.:</u></h2>
+<p><img src="image-1.png" alt="Farbe mut."></p>
+<ul>
+<li><code>Gen A</code> = Transkriptionsfaktor f. <span style="background-color: #d558ceff; color: white; padding: 0px 5px; border-radius: 2px;">Anthocyanin</span> = verantw. f. violette Farbe</li>
+<li><span style="color: #fccf03;">Punktmutation</span>(<code>Transition</code>, $G \to A$) = Verlust d. <span style="color: #fccf03;">Splicingstelle</span> &amp; <span style="color: #fccf03;">verfrühter Stoppcodon</span> (<code>Nonsense</code>, <code>Frameshift</code>)
+<ul>
+<li>wir haben jzt. $+ 8 B. =$ Leseraster um 2 Basen verschoben
+<ul>
+<li>Weil: $8 \mod 3 = 2$</li>
+</ul>
+</li>
+<li>Funktion $\lnot$ geg. = Blüte weiß</li>
+</ul>
+</li>
+</ul>
+<h1 id="mitose"><strong>Mitose</strong></h1>
+<ul>
+<li>in <span style="background-color: #fc0303ff; color: white; padding: 0px 5px; border-radius: 2px;">Somazellen</span>
+<ul>
+<li>d. ist einf. nur d. $\equiv$ Klonung
+<ul>
+<li>Wundheilung, Wachstum</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-3.png" alt="Mitose"></p>
+<h2 id="uphasen-der-mitoseu"><u>Phasen der Mitose</u></h2>
+<p><img src="image-5.png" alt="alt text"></p>
+<p><a id="prophase_mitose"></a></p>
+<ol>
+<li>
+<p><u>Prophase</u>:</p>
+<ul>
+<li>DNA kondensiert $\to$ Chromosomen</li>
+</ul>
+</li>
+<li>
+<p><u>Prometaphase</u>:</p>
+<ul>
+<li>Kernkörperchen (Ort d. Ribosomen Herstellung) &amp; Kernmembran löst sich auf</li>
+<li>Entstehung des <span style="color: #38d7c8ff;">Spindelapperats</span> an beiden Polen</li>
+</ul>
+<p><a id="Mitose:Metaphase_I"></a></p>
+</li>
+<li>
+<p><u>Metaphase</u>:</p>
+<ul>
+<li>Spindeln des Spindelapperats haften an <span style="color: #38d7c8ff;">Centromeren</span></li>
+<li>Chromosomen in die <span style="background-color: #38d7c8ff; color: white; padding: 0px 5px; border-radius: 2px;">Äquatorialebene</span> gezogen</li>
+</ul>
+<p><img src="image-36.png" alt="alt text"></p>
+</li>
+</ol>
+<p><a id="Mitose_Anaphase"></a></p>
+<ol start="4">
+<li><u>Anaphase</u>:
+<ul>
+<li><span style="color: #38d7c8ff;">Chromosomen</span> werden wieder in <span style="color: #38d7c8ff;">Cromatide</span> aufgeteilt und jewils an den Pol d. Zelle gezogen (Schwestercromatide auseinandergezogen)</li>
+<li>jeder Pol = <strong>46</strong> <span style="color: #38d7c8ff;">Ein-Chromatid-Chromosomen</span></li>
+</ul>
+</li>
+<li><u>Telophase</u>:
+<ul>
+<li>Um Chromosomen bildet sich ein Zellkern</li>
+<li>Chromosomen dekondensieren</li>
+<li>Spindelapperat löst sich auf</li>
+</ul>
+</li>
+</ol>
+<p><a href="https://youtu.be/N97cgUqV0Cg" target="_blank" style="color: #2600ffff; text-decoration: underline;">Visualisierung d. Mitose</a></p>
+<h1 id="meiose"><strong>Meiose</strong></h1>
+<ul>
+<li>in <span style="background-color: #fc0303ff; color: white; padding: 0px 5px; border-radius: 2px;">Gameten</span></li>
+</ul>
+<p><img src="image-6.png" alt="alt text"></p>
+<h2 id="uphasen-der-meioseu"><u>Phasen der Meiose</u></h2>
+<ol>
+<li>
+<p><u>Prophase I</u>:</p>
+<ul>
+<li><a href="#prophase_mitose">Mitose: Prophase </a></li>
+<li>homologe Chromosomenpaare gruppieren sich
+<ul>
+<li>kann zum <code>crossing-over</code> führen
+<ul>
+<li>Rekombination: Genetische Vielfalt vermehrt
+<img src="image-9.png" alt="crossing-over"></li>
+<li>Crossing Over = einzige Weg, um <strong>gekoppelte Gene</strong>(Gene, d. nah beieinander auf demselben Chromosom liegen) voneinander zu trennen &amp; neu zu kombinieren.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><u>Metaphase I</u>:</p>
+<ul>
+<li><a href="#Mitose:Metaphase_I">Mitose: Metaphase I</a></li>
+</ul>
+</li>
+<li>
+<p><u>Anaphase I</u>:</p>
+<ul>
+<li><a href="#Mitose_Anaphase">Mitose Anaphase</a>
+<ul>
+<li>hier ist d. Unters., dass d. jeweils ein <span style="color: #958be8ff;">ganzes Chromosom</span> an d. jewilige Polen gezogen wird</li>
+</ul>
+</li>
+<li><strong>zuvällige Verteilung</strong>: An jedem Pol <em>mütterl.</em> &amp; <em>väterl.</em> Chromosomen</li>
+</ul>
+</li>
+</ol>
+<p>D. passiert jzt. nochmal mit den Tochterzellen
+* <span style="color: #fc0303ff;">keine Interphase</span></p>
+<ul>
+<li><strong>Prophase II</strong>
+<ul>
+<li>$\lnot$ Cross-Over</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-10.png" alt="alt text"></p>
+<h3 id="uunters-zw-mann--frauu"><u>Unters. zw. Mann &amp; Frau</u></h3>
+<p><img src="image-7.png" alt="alt text"></p>
+<ul>
+<li><span style="color: #7ad883ff;">Polkörperchen</span> $\to$ sterben ab</li>
+</ul>
+<h2 id="umonogene-vererbung-mit-mehreren-allelenu"><u>Monogene Vererbung mit mehreren Allelen</u></h2>
+<ul>
+<li>
+<p><u>Bsp.</u>:</p>
+<p><img src="image-33.png" alt="alt text"></p>
+<ul>
+<li>
+<p>A &amp; B = unterschiedl. Antigene auf Oberfläche</p>
+</li>
+<li>
+<p>Wenn A oder B vorhanden $\xrightarrow{wird}$ augeprägt $\implies 0$ <em>rezessiv</em></p>
+</li>
+<li>
+<p>AB = Kodominanz, weil beiden ausgeprägt</p>
+</li>
+<li>
+<p>Jeder Mensch hat 2 Allele f. d. Blutgruppe</p>
+<ul>
+<li>eins v. Mama &amp; eins v. Papa
+<ul>
+<li>
+<p>bei d. Meiose werden die einzelnen Allele aufgeteilt</p>
+<p><img src="image-35.png" alt="alt text"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="upolygene-vererbungu"><u>Polygene Vererbung</u></h2>
+<ul>
+<li>
+<p>vererbte Merkmale = keine klare Entweder-oder-Ausprägung $\xrightarrow{\text{stattdessen}}$ kontinuierlichen Ausprägung in d. Bevölkerung</p>
+<p><img src="image-34.png" alt="alt text"></p>
+</li>
+<li>
+<p>Polygenie $\leftrightarrow$ Pleiotropie</p>
+</li>
+</ul>
+<h3 id="upolygeneu"><u><strong>Polygene</strong></u></h3>
+<ul>
+<li>
+<p>mehrere Gene $\to$ ein Phänotyp</p>
+<ul>
+<li>Beschreibt, wie viele Gene zsm.wirken, um ein einziges, oft quantitatives Merkmal (wie Körpergröße oder Hautfarbe) zu bestimmen
+<ul>
+<li>D. Gene addieren sich so zu sagen</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>verantw. Gene ü. Genom verteilt + oft auf unterschiedl. Chromosomen $\xrightarrow{\text{führt zu}}$ zufälligen Kombinationen &amp; folgt Unabhängigkeitsregel</p>
+</li>
+</ul>
+<h3 id="upleiotopieu"><u><strong>Pleiotopie</strong></u></h3>
+<ul>
+<li>
+<p><span style="color: #8d8d8dff;">Gegenteil v. Polygene</span></p>
+</li>
+<li>
+<p>ein Gen $\to$ mehrere Phänotypen</p>
+<ul>
+<li>dies beschriebt, wie ein einziges Gen durch seine Wirkung aud grundlegende Prozesse des Körpers gleichzeitig mehrere, scheinbar unabhängige Merkmale oder Symptome beeinflusst.</li>
+</ul>
+</li>
+<li>
+<p>Ein Gen = mehrere Funktionen &amp; beeinflusst somit mehrere Merkmale</p>
+</li>
+</ul>
+<h2 id="ubeispielstammb%C3%A4umeu"><u>Beispielstammbäume:</u></h2>
+<p><img src="image-12.png" alt="Stammbaum 1"></p>
+<ul>
+<li>
+<p><code>Vererbungsart</code>:</p>
+<ul>
+<li>Verhältnis zw. Männern &amp; Frauen $\equiv \ \ \to$ <code><em>autosomal</em></code></li>
+</ul>
+  <hr>
+<ul>
+<li>$3/5 = 60 %$ đ.gesetzt</li>
+<li>$2/5 = 40% \  \lnot$ đ.gesetzt</li>
+<li>d. Krankheit tritt in jeder Generation auf
+= <code><em>dominant</em></code></li>
+</ul>
+  <hr>
+<ul>
+<li>$II-10$ = Wahrscheinlichkeit bei 50% krank zu sein</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-13.png" alt="alt text"></p>
+<ul>
+<li>
+<p><code>Vererbungsart</code>:</p>
+<ul>
+<li>tritt nur in 2 Gen. auf + Mutter &amp; Vater gesund &amp; dennoch ein krankes Kind = <code><em>rezessiv</em></code></li>
+</ul>
+  <hr>
+<ul>
+<li>Verhältnis zw. kranken &amp; Männern &amp; Frauen $\equiv$
+= <code><em>autosomal</em></code></li>
+</ul>
+  <hr>
+<ul>
+<li>$IV-4$ zu $25 %$ krank</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-14.png" alt="alt text"></p>
+<ul>
+<li>
+<p><code>Vererbungsart</code>:</p>
+<ul>
+<li>Tritt in jeder Gen. auf = <code><em>dominant</em></code></li>
+</ul>
+  <hr>
+<ul>
+<li>Frauen eher betroffen als Männer
+<ul>
+<li>Vater in $I-1$ krank, aber gesunde Söhne, aber kranke Töchter. D. Mann hat 100% sein Y Chromosom an seine Söhne gegeben $=$ krankes Gen muss auf seinem X-Chromosom liegen. D. Söhne sind nur krank, wenn sie d. X-Chromosom d. Mutter bekommen, welches d. X-Chromosom 100% vererbt bekommt, weil Töchter beide X-Chromosomen v. d. Mutter als auch v. d. Vater vererbt bekommen = <code><em>X-Chromosomal</em></code></li>
+</ul>
+</li>
+</ul>
+  <hr>
+<ul>
+<li>$IV-5$: Söhne = $0%$, Töchter $100%$</li>
+<li>$IV-11$ Söhne = $50%$, Töchter $50%$</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-15.png" alt="alt text"></p>
+<ul>
+<li>
+<p><code>Vererbungsart</code>:</p>
+<ul>
+<li>tritt nicht in jeder Gen. auf = <code><em>rezessiv</em></code></li>
+</ul>
+  <hr>
+<ul>
+<li>Frauen = Träger</li>
+<li>nur Männer betroffen
+<ul>
+<li><code><em>X-Xhromosomal</em></code></li>
+</ul>
+</li>
+</ul>
+  <hr>
+<ul>
+<li>$IV-4$: Söhne = $50%$, Töchter = $50%$</li>
+<li>$III-12$: Söhne = $100%$ gesund, Töchter = $100%$ ein Konduktor</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-16.png" alt="alt text"></p>
+<ul>
+<li><code>Vererbungsart</code>:
+<ul>
+<li>Nur Männer betroffen = <em>gonosomal</em></li>
+<li>tritt in jeder Generation auf = <em>dominant</em></li>
+<li>Jeder Sohn Krankheit ausgeprägt, wenn Vater auch ausgeprägt
+<ul>
+<li>gonosomal + dominant = <code><em>Y-Chromosomal</em></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-17.png" alt="alt text"></p>
+<ul>
+<li><code>Vererbungsart</code>:
+<ul>
+<li>Alle Kinder betroffen, wenn Mutter betroffen</li>
+<li>Wenn Vater betroffen, dann Kinder $\lnot$ betroffen
+<ul>
+<li><code><em>Mitochondriale Vererbung</em></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-18.png" alt="alt text"></p>
+<ul>
+<li>
+<p><code>Vererbungsart</code>:</p>
+<ul>
+<li>ü.springt Gen. = <code><em>rezessiv</em></code></li>
+<li>betroffene Männer &amp; Frauen $\equiv$</li>
+<li>es muss <em>autosomal</em> sein, weil ansonsten Familie B: $I-1,2$ $\lnot$ aufgeht
+<ul>
+<li>$a$ = krank, $A$ = gesund:
+<ul>
+<li>$II-2$ muss $X_aX_a$ haben. $I-1$ muss $X_aY$ haben &amp; müsste krank sein(ist er aber nicht), deswegen muss es eine <code><em>autosomal</em></code> sein</li>
+</ul>
+</li>
+<li>a = krank, A = gesund:
+<ul>
+<li>$I-1,2: Aa \to II-2: aa$</li>
+</ul>
+</li>
+<li>seltene Erkrankung</li>
+</ul>
+</li>
+</ul>
+  <hr>
+</li>
+<li>
+<p><code>Wahrscheinlichkeit</code></p>
+<ul>
+<li>
+<p>$IV-2 \text{ ist } Aa = \text{Wahrscheinlichkeit } III-2 \text{  Aa erbt} = \frac{1}{2} \cdot \text{Wahrscheinlichkeit } IV-2 \text{  Aa vererbt} = \frac{1}{2} = \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4} = 25%$</p>
+</li>
+<li>
+<p>$V-1 = (\text{Wahrscheinlichkeit, d. IV-2 Aa erbt}) \cdot (\text{Wahrscheinlichkeit, d. IV-1 Aa erbt}) \cdot (\text{Wahrscheinlichkeit, d. V-1 aa erbt}) = \frac{1}{4} \cdot \frac{1}{2} \cdot \frac{1}{4} = \frac{1}{32} = \underline{3,125%}$</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-19.png" alt="alt text"></p>
+<ul>
+<li><code>Vererbungsart</code>
+<ul>
+<li>ü.springt Generationen = <code><em>rezessiv</em></code></li>
+<li>Männer &amp; Frauen gleich betroffen = <code><em>autosomal</em></code></li>
+<li><code><em>seltene</em></code> Krankheit</li>
+</ul>
+  <hr>
+</li>
+<li><code>Wahrscheinlichkeit</code>
+<ul>
+<li>Wahrscheinlichkeit, d. $\text{V-1} \ aa$ erbt = $\frac{1}{4} \cdot \frac{1}{6} \cdot \frac{1}{4} = \frac{1}{96} = \underline{1.042%}$</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-20.png" alt="alt text"></p>
+<ul>
+<li>
+<p><code>Vererbungsart</code></p>
+<ul>
+<li>$\text{II-2} = 100% Aa$</li>
+<li>$\text{III-2} = 50% Aa$, weil $\frac{2}{2} \cdot \frac{1}{2} = \frac{2}{4} = \underline{\frac{1}{2}}$</li>
+</ul>
+  <hr>
+<ul>
+<li>$\text{II-4} = 100% Aa$</li>
+<li>$\text{III-3} = 50% Aa$, weil $\frac{2}{2} \cdot \frac{1}{2} = \frac{2}{4} = \underline{\frac{1}{2}}$</li>
+</ul>
+  <hr>
+<ul>
+<li>$\text{IV-1} = 25% Aa$, weil $\frac{1}{2} \cdot \frac{1}{2} = \underline{\frac{1}{4}}$</li>
+<li>$\text{IV-2} = 25% Aa$, weil $\frac{1}{2} \cdot \frac{1}{2} = \underline{\frac{1}{4}}$</li>
+</ul>
+  <hr>
+<ul>
+<li>$\text{V-1} = 1,563% aa$, weil $\frac{1}{4} \cdot \frac{1}{4} \cdot \frac{1}{4} = \underline{\frac{1}{64}}$</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-21.png" alt="alt text"></p>
+<ul>
+<li><code>Vererbungsart</code>
+<ul>
+<li>tritt in jeder Generation auf, aber $\text{III-1,2}$: $\forall$ Kinder gesund</li>
+<li>$\text{II-5,6}$: trotz gesunden Eltern = ein kranker Sohn</li>
+<li>$\text{III-5,6}$: Trotz gesunden Eltern = 2 Kinder krank
+<ul>
+<li><code><em>rezessiv</em></code></li>
+</ul>
+</li>
+<li><u>Warum $\lnot$ X-chromosomal ?</u>
+<ul>
+<li>$\text{III-5} \times \text{III-6}$: Muss $X_AX_a \ &amp; \ X_AY$ sein = d. Tochter $\text{IV-10}$ kann eigentl. $\not$ krank sein, weil d. Vater $100%$ d. gesunde $X_A$ Chromosom weitergeben müsste. Deswegen <code><em>autosom</em></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-22.png" alt="alt text"></p>
+<ul>
+<li>
+<p><code>Vererbungsart</code></p>
+<ul>
+<li>Ü.springt Generationen &amp; obwohl eltern gesund = 1 krankes Kind = <code><em>rezessiv</em></code></li>
+<li>Verhäktnis d. erkrankung $\equiv$ = <code><em>autosomal</em></code></li>
+</ul>
+</li>
+<li>
+<p><code>Wahrscheinlichkeit</code></p>
+<ul>
+<li>$\text{II-3} = \frac{2}{3} = 66,7% Aa$</li>
+<li>$\text{III-2} = \frac{1}{3} = 33,3% Aa$</li>
+<li>$\text{IV-2} = \frac{1}{6} = 16,7% Aa$</li>
+</ul>
+  <hr>
+<ul>
+<li>$\text{II-2} = 100% Aa$</li>
+<li>$\text{III-2} = \frac{2}{3} = 66,7% Aa$</li>
+<li>$\text{IV-1} = \frac{1}{3} = 33,3% Aa$</li>
+</ul>
+  <hr>
+<ul>
+<li>$\text{V-1} = \frac{1}{3} \cdot \frac{1}{6} \cdot \frac{1}{4} = 33,3% aa$</li>
+<li>$1,389%$</li>
+</ul>
+</li>
+</ul>
+<h3 id="uwie-berechnet-man-d-wahrscheinlichkeiten-zsm-u"><u>Wie berechnet man d. Wahrscheinlichkeiten zsm ?</u>:</h3>
+<ul>
+<li>
+<p><strong>Produktregel (&amp;)</strong>:</p>
+<ul>
+<li>wenn wir d. Wahrscheinlichkeit berechnen wollen, dass zwei oder mehr unabhängige Ereignisse nacheinander oder gleichzeitig eintreten müssen</li>
+</ul>
+</li>
+<li>
+<p><strong>Summenregel (&amp;)</strong>:</p>
+</li>
+</ul>
+<h2 id="uwas-sind-gekoppelte-gene-u"><u>Was sind gekoppelte Gene ?</u>:</h2>
+<ul>
+<li>Gene, d. auf dem <em><strong>gleichen Chromosom</strong></em> sehr <em><strong>nah beieinanander liegen</strong></em> $\to$ tendieren dazu zsm. vererbt zu werden
+<ul>
+<li>Kann nur durch <code>Crossing-Over</code> getrennt werden</li>
+</ul>
+</li>
+</ul>
+<p><a id="Crossing_Over"></a></p>
+<h1 id="crossing-over"><strong>Crossing-Over</strong></h1>
+<ul>
+<li>nur so können sich homologe Chromosomen zusammenfinden &amp; sich richtig aufteilen
+<img src="image-25.png" alt="alt text"></li>
+<li><em><strong>Chiasmas</strong></em> = Überkreuzungsstelle
+<ul>
+<li>physische Verbindung, die das homologe Paar zsm.hält $\to$ entscheidend f. korrekte Paarung d. Chromosomen in Metaphase I  &amp; Anaphase I richtig voneinander trennen.</li>
+</ul>
+</li>
+<li><strong>Rekombination</strong>: Chromosomen pro Meiose, ca. <em>2-3 crossing over</em>
+<ul>
+<li>$\lnot$ gleichmäßig $\to$ finden in Hotspots statt (1-2 <strong>kb</strong> (Kilobasen) $\leftrightarrow$ 1000-2000 Basenpaare)</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-26.png" alt="alt text"></p>
+<ul>
+<li><strong>Sister chromatids</strong> $\to$ Schwesterchromatiden</li>
+<li><strong>Homologous chromosomes</strong> $\to$ Homologe Chromosomen</li>
+<li><strong>Synaptonemal complex</strong> $\to$ Synaptonemaler Komplex (Struktur, die die homologen Chromosomen zusammenhält)</li>
+</ul>
+<p><img src="image-27.png" alt="alt text"></p>
+<h2 id="uwie-kommt-es-zu-einem-so-pr%C3%A4zisen-austausch-v-doppelstr%C3%A4ngiger-dnau"><u>Wie kommt es zu einem so präzisen Austausch v. doppelsträngiger DNA?</u></h2>
+<p><img src="image-28.png" alt="alt text">
+<img src="image-29.png" alt="alt text">
+<img src="image-30.png" alt="alt text"></p>
+<p><img src="image-31.png" alt="alt text">
+<img src="image-32.png" alt="alt text"></p>
+<h2 id="urekombination-bei-x-und-yu"><u>Rekombination bei X und Y</u></h2>
+<ul>
+<li><em><strong>heterogametischen Geschlecht</strong></em> (also Männer) tritt Crossing Over zw. <em>X- &amp; Y-Chromosom</em>
+<ul>
+<li>Dise Regionen nennt man: <em><strong>pseudoautosomalen Regionen</strong></em>. Diese simf <em>homolog</em> &amp; enthalten d. <em>gleichen Gene</em>
+<ul>
+<li><span style="color: #fc0303ff;">Verhalten wie autosomale Erbgänge </span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="uwie-berechnet-man-dwahrscheinlichkeit-dass-ein-crossing-over-stattfindet-u"><u>Wie berechnet man d.Wahrscheinlichkeit, dass ein Crossing-Over stattfindet ?</u>:</h2>
+<p><img src="image-23.png" alt="alt text">
+$\left(\frac{(151 + 154)}{1339+1195+151+154}\right) \cdot 100 = 10.7432% \to 10.7432cM \ [centiMorgan]$</p>
+<h2 id="uaufgabe-verteilungswahrscheinlichkeitu"><u>Aufgabe: Verteilungswahrscheinlichkeit</u>:</h2>
+<p><img src="image-24.png" alt="alt text">
+<a href="#Verteilungswahrscheinlichkeit">Lösung</a></p>
+<hr>
+<h1 id="parthenogenese"><strong>Parthenogenese</strong></h1>
+<ul>
+<li><em><strong>asexuelle Reproduktion</strong></em>: eingeschlechtlichen Fortpflanzung
+<ul>
+<li>N.kommen immer identisch zur Mutter
+<ul>
+<li><strong>Vorteile</strong>: keine Partnersuche</li>
+<li><strong>Nachteile</strong>: $\forall$ gleich anfällig f. sich ändernde Umweltbedingungen</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><a id="Verteilungswahrscheinlichkeit"></a></p>
+<p><img src="WhatsApp Bild 2025-12-01 um 21.16.04_c1489598.jpg" alt="alt text"></p>
+<ul>
+<li>wird $2 \times$ geteilt $\to \left( \frac{1}{2}\right)^2 = \underline{\frac{1}{4}}$</li>
+</ul>
+<hr>
+<h1 id="1-dna-klonierung-restriktion-ligation-transformation"><strong>1) DNA-Klonierung (Restriktion, Ligation, Transformation)</strong></h1>
+<p><img src="WhatsApp Image 2026-01-10 at 18.06.31.jpeg" alt="alt text"></p>
+<p><img src="image-38.png" alt="Plasmid"></p>
+<h2 id="uder-puc19-vektor-key-featuresu"><u>Der pUC19-Vektor (Key Features):</u></h2>
+<ul>
+<li>
+<p><code><span style="font-family:'Baskville Old Face'">Vektor (pUC19)</span></code>: Enthält das Genfragment <code>lacZ'</code>.</p>
+</li>
+<li>
+<p>Wirt (E. coli) $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{Mutation}}\ \ \ \ }$ im eigenen Genom $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{ihm fehlt}}\ \ \ \ }$ ein Teil des <code style="background-color: #87a1a5ff; font-family:'Baskville Old Face'; color: rgb(19, 69, 77)">lacZ-Gens</code></p>
+</li>
+<li>
+<p><b>Mutierter ColE1-Origin</b> $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{ermöglicht}}\ \ \ \ }$ „relaxierte“ Replikationskontrolle $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{führt zu}}\ \ \ \ }$ hohen Kopienzahlen (300–500 pro Zelle)</p>
+</li>
+<li>
+<p><b>Selektionsmarker ($Amp^{R}$)</b>:</p>
+<ul>
+<li>Gen f. <b>$\beta$-Lactamase</b> $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{verleiht resistenz geg.}}\ \ \ \ }$ <span style="color: #4f44b4ff;">Ampicillin</span>
+<ul>
+<li><b><span style="color: #fc0303ff;">Nur transformierte Zellen überleben auf Amp-Platten.</span></b></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="urestriktionu"><u>Restriktion</u></h2>
+<ul>
+<li>
+<p><span style="color: #fc0303ff;">Restriktionsenzyme</span> (<span style="font-family:Agency FB">Sal I</span>) $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{schneiden}}\ \ \ \ }$ hochmolekulare DNA$^1$ $\to$ def. Bruchstücke mit vorhersagbaren Enden (Bsp.: <strong>sticky ends</strong>)</p>
+</li>
+<li>
+<p><u>Wie schneidet Sal I d. <b>sticky ends?</b></u></p>
+</li>
+<li>
+<p>Sie erkennen es an <span style="color: rgb(78, 142, 167);">Palindromischen-DNA-Sequenzen</span></p>
+<ul>
+<li>bei <span style="font-family:Agency FB">Sal I</span> ist es immer:
+<ul>
+<li><span style="font-family:Agency FB">5'-G$\downarrow$TCGAC-3'</span></li>
+<li><span style="font-family:Agency FB">3'-CAGCT$\uparrow$G-5'</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p align="left"><font size="1"> <sup>1</sup>Normalerweise bricht d. DNA bei Extraktion sehr leicht ab. Hochmolekular bedeutet, dass sie sehr lang geblieben sind (50.000 bis 100 Mio. Basenpaare lang) <b>Warum wichtig ?</b> Damit man d. gesamte Genom wie ein Puzzle zsm.setzen kann, ist es einfacher größere Puzzle zu haben!</font></p>
+<h2 id="uligationu"><u>Ligation</u></h2>
+<ul>
+<li><span style="color: #c14cc5ff;">T4-DNA-Ligase </span> $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{verknüpft}}\ \ \ \ }$ Phosphodiesterbindung im DNA-Rückgrat
+<img src="image-37.png" alt="alt text">
+<ul>
+<li><b><u>gewünscht f. Klonierung = bimolekulare Reaktion</u></b>
+<ul>
+<li>Vektor $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{verbindet}}\ \ \ \ }$ Insert</li>
+</ul>
+</li>
+<li><b><u>ungewünscht f. Klonierung = monomolekulare Reaktion</u></b>
+<ul>
+<li><em>Selbstligation</em> des Vektors
+<ul>
+<li>Insert $\underrightarrow{\ \ \ \ \lnot \textcolor{#d6b315}{\text{integriert oder ligiert}}\ \ \ \ }$ Sticky ends des Vektors verbinden sich (ohne Insert)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="utransformationu"><u>Transformation</u></h2>
+<ul>
+<li>rekombinierte DNA $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{einfügen}}\ \ \ \ }$ kompetente Wirtszelle</li>
+<li>d. <span style="font-family:'Baskerville Old Face'">E-coli Bakterien</span> nehmen $\lnot$ einfach DNA aus Umgebung auf
+<ul>
+<li>muss künstl. erzwungen werden $\implies$ $CaCl_{2}$ &amp; den Hitzeschock bei $42°C$</li>
+</ul>
+</li>
+</ul>
+<p><b><u>Warum $CaCl_{2}$ &amp; $42°C$ </u></b>?</p>
+<ul>
+<li><span style="font-family:'Baskville Old Face'">E-Coli</span> v. Natur aus $\to \lnot$ kompetent (nehmen Sachen v. d. Umgebung ungern auf)</li>
+</ul>
+<ol>
+<li><b>Chemische Behandlung</b>:
+<ul>
+<li>Zellen $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{behandelt}}\ \ \ \ }$ eiskalter <span style="font-family:'Agency FB'">Calciumchlorid-Lösung</span> ($CaCl_2$)
+<ul>
+<li>$Ca^{2+}$-Ionen $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{lagern sich}}\ \ \ \ }$ neg. DNA &amp; Zellmembran = neutralisiert</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><b>Hitzeschock</b>:
+<ul>
+<li>kurzfristig auf <span style="font-family:'Agency FB'">42°C</span> erwärmt $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{kurze Zeit}}\ \ \ \ }$ temporäre Poren in d. Membran $\to$ DNA $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{kann}}\ \ \ \ }$ in d. Innere schlüpfen</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>N. dem Hitzeschutz $\to$ Pause, weil Bakterien <b>gestresst</b></li>
+</ul>
+<h1 id="b2-regenerationsphaseb"><b>2) Regenerationsphase</b>:</h1>
+<ul>
+<li>
+<p>bekommen frisches <span style="font-family:'Agency FB'">L-Medium</span></p>
+</li>
+<li>
+<p>Bakterien $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{benötigen Zeit}}\ \ \ \ }$ $\beta$-Lactamase zu produz.</p>
+<ul>
+<li>Würde man sie sofort auf <span style="font-family:'Agency FB'">Amp-Platte</span> legen $\implies$ sofort tot</li>
+</ul>
+</li>
+<li>
+<p><b><u>N. d. Regeneraionszeit</u></b> $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{Bakterien} \to \text{aufgestrichen}}\ \ \ \ }$ Agar-Platte</p>
+<ul>
+<li>beinhaltet folgende Stoffe:
+<ul>
+<li><span style="font-family:'Agency FB'">Ampicillin</span></li>
+<li><span style="font-family:'Agency FB'">IPTG</span> &amp; <span style="font-family:'Agency FB'">X-Gal</span> = <span align="left"><font size="5">Blau-Weiß-Selektion</font></span>
+<ul>
+<li><span style="color: rgb(75, 113, 219);">blau</span>= Misserfolg</li>
+<li><span style="color: rgb(160, 160, 160);">weiß</span> = Erfolg</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="bkurs-4-chromosomenb"><b>Kurs 4: Chromosomen</b></h1>
+<h2 id="ubworaus-bestehen-chromosomenbu"><u><b>Woraus bestehen Chromosomen</b></u>:</h2>
+<ul>
+<li>Desoxyribonukleinsäure
+<ul>
+<li><u>mit Proteinen</u>:
+<ul>
+<li><span style="color: rgb(103, 121, 178);">basische</span> Histone  &amp; <span style="color: rgb(204, 133, 52);">sauer</span>  Nichthiston-Proteinen</li>
+</ul>
+</li>
+<li><u>regulatorische RNA</u>:
+<ul>
+<li>RNA ...
+<ul>
+<li>&quot;Bote&quot; f. Bauanleitungen</li>
+</ul>
+</li>
+<li><em>wie Erbgut (Chromatin) verpackt und gesteuert wird</em>
+<ul>
+<li><strong>Strukturgeber</strong>:
+<ul>
+<li>hilft Chromatin in eine bestimmte Form zu bringen $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{Bsp.:}}\ \ \ \ }$ <strong>Barr-Körperchen</strong>
+<ul>
+<li>Frauen $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{ \frac{1}{2} \text{ X-Chromosomen}}\ \ \ \ }$ abgeschaltet &amp; eng verpackt $\to$ RNA-Moleküle $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{lagern sich dort an}}\ \ \ \ }$ Chromosom „stillgelegt“</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-39.png" alt="alt text"></p>
+<ul>
+<li>Kopplungsgruppen = gekoppelte Gene</li>
+</ul>
+<h2 id="uzellzyklusu"><u>Zellzyklus</u>:</h2>
+<ul>
+<li>
+<p><u><strong>Nukleolus-Organisator-Regionen (NOR)</strong></u></p>
+<ul>
+<li>NOR = Stellen auf DNA $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{festlegen}}\ \ \ \ }$ wo im Zellkern d. &quot;Ribosomen-Fabriken&quot; aufgebaut werden
+<ul>
+<li>verantw. f. <span style="font-family:'Agency FB'">Aufbau</span> des <span style="background-color: #b1dfda; color: #4a817a; padding: 0px 5px; border-radius: 2px;">Nukleolus</span></li>
+<li>„Bauleiter“ oder „Zentralen“ für die Herstellung v. <span style="background-color: #b4d8a9; color: #538145; padding: 0px 5px; border-radius: 2px;">Ribosomen</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><u><strong>Polytänchromosomen (Riesenchromosomen)</strong></u></p>
+<ul>
+<li>extrem große Chromosomen</li>
+<li>DNA $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{immer weiter verdoppelt + ohne Zellteilung}}\ \ \ \ }$ Dienen der Massenproduktion
+<ul>
+<li>Zelle kann sehr schnell große Mengen an Stoffen (Bsp.: <em>Speichelproteine</em>) herstellen</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Interphase = Transkription</p>
+</li>
+<li>
+<p><u><strong>Euchromatin</strong></u></p>
+<ul>
+<li>locker &amp; aktive Teil des Erbguts</li>
+<li>DNA = neg. &amp; Histone = pos. geladen $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{Acetylierung}}\ \ \ \ }$ Histone = neutralisiert $\to$ Histone gelockert</li>
+<li>inaktive Stellen = <strong>Heterochromatin</strong>
+<img src="image-40.png" alt="alt text"></li>
+</ul>
+</li>
+<li>
+<p><a href="#Crossing_Over">Crossing over</a></p>
+</li>
+</ul>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+              {left: "$$", right: "$$", display: true},
+              {left: "$", right: "$", display: false},
+              {left: "\\(", right: "\\)", display: false},
+              {left: "\\[", right: "\\]", display: true}
+            ]
+        });
+    });
+</script>
+<style>
+    /* Kleine Korrektur, damit Formeln nicht abgeschnitten werden */
+    .katex-display { overflow-x: auto; overflow-y: hidden; }
+</style>
+</body>
+</html>
