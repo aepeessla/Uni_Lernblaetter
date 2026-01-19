@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EiP_Lernblatt.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="kommandozeilenargumente"><strong>Kommandozeilenargumente</strong></h1>
+<ul>
+<li><code>import sys</code> $\leftarrow$ immer !!!</li>
+</ul>
+<h2 id="uwie-%C3%BCgibt-man-argumente-u"><u>Wie ü.gibt man Argumente ?</u></h2>
+<p><code>&lt;var&gt; = sys.[i]</code></p>
+<h1 id="infinet-values-for-max--min"><strong>infinet values for max &amp; min</strong></h1>
+<ul>
+<li><span style="background-color: #d1d1d1; color: #575757; padding: 0px 5px; border-radius: 2px;font-family:'Courier New">float('-inf')</span>
+<ul>
+<li>f. max</li>
+</ul>
+</li>
+<li><span style="background-color: #d1d1d1; color: #575757; padding: 0px 5px; border-radius: 2px;font-family:'Courier New">float('inf')</span>
+<ul>
+<li>f. min</li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> sys
+
+<span class="hljs-keyword">if</span> len(sys.argv) &lt; <span class="hljs-number">3</span>: <span class="hljs-comment">#guckt, ob ich mind. 3 Elemente habe (Dateiname, liter, distanz)</span>
+    print(<span class="hljs-string">'Bitte geben Sie Liter und die Distanz an!.'</span>)
+    sys.exit() <span class="hljs-comment">#beendet d. Programm sofort</span>
+    
+liter = float(sys.argv[<span class="hljs-number">1</span>])
+distanz = float(sys.argv[<span class="hljs-number">2</span>])
+
+verbrauch = (liter *<span class="hljs-number">100</span>)/distanz
+
+print(round(verbrauch,<span class="hljs-number">2</span>))
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment"># Terminal</span>
+python3 verbracuh.py <span class="hljs-number">45.5</span> <span class="hljs-number">600</span>
+
+<span class="hljs-comment"># Output</span>
+<span class="hljs-number">7.58</span>
+</div></code></pre>
+<h1 id="%22call-by-value%22-vs-%22call-by-reference%22"><strong>&quot;Call by Value&quot; vs. &quot;Call by Reference&quot;</strong></h1>
+<ul>
+<li>
+<p><u>Call by Value (Werte-Kopie)</u>:</p>
+<ul>
+<li>Wie ein Foto v. einem Blatt Papier
+<ul>
+<li>Wenn ich auf dem Foto herummale, bleibt das Original-Blatt sauber.</li>
+</ul>
+<pre class="hljs"><code><div>int, float, str, bool
+</div></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><u>Call by Reference (Adress-Verweis)</u>:</p>
+<ul>
+<li>Wie  Google-Doc-Link.
+<ul>
+<li>Wenn ich ü. den Link etw. im Dokument lösche, dann ist es $\forall$ anderen, d. den Link haben, auch weg.</li>
+</ul>
+<pre class="hljs"><code><div>list, dict, set
+</div></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="string"><strong>String</strong></h1>
+<p><span style="color: #fc0303ff;"><strong>Man kann ein Text nicht ändern !!!</strong></span></p>
+<pre class="hljs"><code><div>text = <span class="hljs-string">"Was machen Sachen"</span>
+
+text[<span class="hljs-number">2</span>] = i
+
+<span class="hljs-comment">#Augabe: Error</span>
+</div></code></pre>
+<h1 id="listen"><strong>Listen</strong></h1>
+<h2 id="uwerkzeugeu"><u>Werkzeuge</u>:</h2>
+<ul>
+<li><code>.pop()</code>:
+<ul>
+<li><code>.pop(&lt;index&gt;)</code></li>
+<li>dann wird das Element an dieser stelle gelöscht</li>
+</ul>
+</li>
+<li><code>.remove()</code>:
+<ul>
+<li>wenn das erste Element, der dem Element in <code>.remove(&lt;elem&gt;)</code> entsprciht, wird entfernt</li>
+</ul>
+</li>
+<li><code>.copy()</code>:
+<ul>
+<li><span style="color: #fc0303ff;"><strong>wichtig !!!!</strong></span>
+<ul>
+<li>
+<p>man kopirt nur d. <em><strong>oberste Ebene</strong></em></p>
+<pre class="hljs"><code><div>x = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>],<span class="hljs-number">5</span>]
+y = x.copy()
+
+y[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>] = y[<span class="hljs-number">2</span>]      
+print(<span class="hljs-string">'x: '</span>, x) <span class="hljs-comment"># [[1,2],[5,4],5]</span>
+print(<span class="hljs-string">'y: '</span>, y) <span class="hljs-comment"># [[1,2],[5,4],5]</span>
+
+y[<span class="hljs-number">2</span>] = y[<span class="hljs-number">0</span>]
+print(<span class="hljs-string">'x: '</span>, x) <span class="hljs-comment"># [[1,2],[5,4],5]</span>
+print(<span class="hljs-string">'y: '</span>, y) <span class="hljs-comment"># [[1,2],[5,4],[1,2]]</span>
+</div></code></pre>
+<pre class="hljs"><code><div>x = [[<span class="hljs-number">1</span>], [<span class="hljs-number">2</span>]]
+y = x.copy()
+y[<span class="hljs-number">0</span>].append(<span class="hljs-number">10</span>)
+y[<span class="hljs-number">1</span>] = [<span class="hljs-number">99</span>]
+print(x) <span class="hljs-comment">#[[1, 10], [2]] </span>
+</div></code></pre>
+<p>x = [[1], [2]]
+y = x.copy()
+y[0].append(10)
+y[1] = [99]
+print(x)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="uwann-append-und-wann--u"><u>Wann .append und wann += ?</u>:</h2>
+<ul>
+<li><code>.append()</code>:
+<ul>
+<li>Wenn ich ein Objekt mit den Klammern hinzufügen möchte
+<ul>
+<li>Bsp.: Ich lege d. gesamte tüte mit den Elementen in den Wagen</li>
+</ul>
+</li>
+<li>wenn ich nur den Inhalt hinzufügen möchte
+<ul>
+<li>Bsp.: Ich lege nur d. Ware in den Wagen &amp; schmeiße die leere Tüte weg</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code><div>haupt_liste = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
+zusatz = [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+
+<span class="hljs-comment"># Szenario A: append (Das Objekt als Ganzes)</span>
+liste_a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
+liste_a.append(zusatz)
+print(liste_a)
+<span class="hljs-comment"># Ergebnis: [1, 2, [3, 4]]  &lt;-- Liste in der Liste</span>
+
+<span class="hljs-comment"># Szenario B: += (Nur der Inhalt)</span>
+liste_b = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
+liste_b += zusatz
+print(liste_b)
+<span class="hljs-comment"># Ergebnis: [1, 2, 3, 4]    &lt;-- Alles auf einer Ebene</span>
+</div></code></pre>
+<h1 id="dictionaries"><strong>Dictionaries</strong></h1>
+<h2 id="uwie-sortieren-u"><u>Wie sortieren ?</u>:</h2>
+<ul>
+<li><code>sorted_indices = sorted(häufigkeiten.keys())</code><pre class="hljs"><code><div>my_dict = {<span class="hljs-string">'a'</span>: <span class="hljs-number">2</span>, <span class="hljs-string">'c'</span>: <span class="hljs-number">1</span>, <span class="hljs-string">'b'</span>: <span class="hljs-number">4</span>, <span class="hljs-string">'d'</span>: <span class="hljs-number">3</span>}
+sortierte_liste_tupel = sorted(my_dict.keys()) <span class="hljs-comment"># Ausgabe: {'a': 1, 'b': 2, 'c': 3, 'd': 4}</span>
+</div></code></pre>
+</li>
+</ul>
+<h2 id="uwie-elemente-hinzuf%C3%BCgenu"><u>Wie Elemente hinzufügen</u>:</h2>
+<ul>
+<li><code>dic.upadte()</code></li>
+</ul>
+<pre class="hljs"><code><div>dic = {}
+n = <span class="hljs-number">7</span>
+k = <span class="hljs-number">3</span>
+
+dic.update({(n,k) : <span class="hljs-number">45</span>})
+print(dic)
+</div></code></pre>
+<hr>
+<h1 id="mit-text-arbeiten"><strong>Mit Text arbeiten</strong></h1>
+<p><span style="color: #fc0303ff;">Man muss es sich so vorstellen, dass <code>.readlines()</code> unsere Augen sind &amp; wir jede Zeile lesen ! Das heißt, wenn ich etw. hinzufüge, dass ich dann mit den Augen unter d. letzen Zeile bin. Wenn jmd. jzt. fragen würde, was da steht, dann würde ich &quot;nichts&quot; sagen, weil da nichts geschrieben steht. Damit ich lesen kann, muss ich wieder mit den Augen zur ersten Zeile, welches hier mit <code>.seek({</code><a title="D. Stelle, das ich vorlesen möchte ">index</a><code>})</code> geschieht. ES IST GANZ WICHTIG ZU WISSEN, DASS <code>.split()</code>, <code>.strip()</code>, usw. EINEN STRING ZURÜCK GEBEN !!!</span></p>
+<p>Also wenn ich in der Klausur eine Aufgabe bekommen sollte, welches mit einer Datei ist, dann muss ich als ersten gucken, ob ich den gesamten Inhalt als Ganzes brauche, oder ob ich es auch zeilenweise angucken kann.</p>
+<p>Wenn ich eine „Textanalyse“ machen muss, also den gesamten Text vor mir gedruckt haben möchte, damit ich da zum Bsp Wörter oder Buchstaben „korrigieren“ möchte, dann benutze ich readlines(). Im Computer ist d. gedruckte Blatt dann eine Liste mit den einzelnen Elementen als String mit \n &amp; \t.</p>
+<p>Wenn ich aber zeilenweise abschreiben möchte, v. einem Buch in meinen Heft, dann muss ich <code style="background-color: #a2ced4ff; font-family:'Courier New'; color: #000000ff">.readline()</code> verwenden. Wichtig hierbei ist, dass <code style="background-color: #ca7f7fff; font-family:'Courier New'; color: #000000ff">mein Auge immer einen Zeile weiter geht !</code> + ich muss dem Computer sagen, dass es etwas <code style="background-color: #ca7f7fff; font-family:'Courier New'; color: #000000ff">n Mal</code> machen soll, weil er dann etwas z.B. nur 1 mal macht</p>
+<h2 id="uallgemeinu"><u>Allgemein</u>:</h2>
+<ul>
+<li>
+<p><code>r</code> = read</p>
+</li>
+<li>
+<p><code>w</code> = write</p>
+</li>
+<li>
+<p><code>a</code> = append</p>
+</li>
+<li>
+<p><strong>Wie kombinieren?</strong></p>
+<ul>
+<li>bestehende Datei ändern möchte $\to$ <code>'r+'</code></li>
+<li>neue Datei erstellen &amp; konrollieren möchte $\to$ <code>'w+'</code></li>
+<li>an bestehende Datei etw. anhängen möchte $\to$ <code>'a+'</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="uwie-datei-%C3%B6ffnen-u"><u>Wie Datei öffnen ?</u>:</h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">with</span> open(<span class="hljs-string">"Probe.txt"</span>, <span class="hljs-string">'r'</span>) <span class="hljs-keyword">as</span> data:
+    print(data)
+</div></code></pre>
+<ul>
+<li>somit benötige ich kein <code>var = close()</code> am Ende</li>
+</ul>
+<h3 id="readlines"><em><strong>.readlines()</strong></em>:</h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">with</span> open(<span class="hljs-string">"Probe.txt"</span>, <span class="hljs-string">'r'</span>) <span class="hljs-keyword">as</span> data:
+    f_inhalt = data.readlines()
+    print(f_inhalt)
+</div></code></pre>
+<ul>
+<li>somit wird mir eine Liste aus den Elementen ausgegeben</li>
+<li><a href="#Probe.txt">Textdatei</a></li>
+</ul>
+<pre class="hljs"><code><div>    <span class="hljs-comment"># Ausgabe</span>
+    [<span class="hljs-string">'1) Papa \n'</span>, <span class="hljs-string">'2) Mama \n'</span>, <span class="hljs-string">'3) Efe \n'</span>, <span class="hljs-string">'4) Sude \n'</span>, <span class="hljs-string">'5) Simge \n'</span>, <span class="hljs-string">'6) Pepee \n'</span>, <span class="hljs-string">'7) Mayla '</span>]
+</div></code></pre>
+<h3 id="readline"><em><strong>.readline()</strong></em></h3>
+<p>.readline() ist so, als ob wir ein Buch haben und ein Heft. Unser Auge guckt im Buch n. d. ersten Zeile und wir schreiben d.as in unser Heft ab. Autom., wenn wir ins Buch gucken, beginnen wir mit d. 2. Zeile &amp; d. schreiben wir ebenso in ins Heft. usw.
+Da wir dem Computer alles definieren müssen, müssen wir sagen wie viele solcher Prozesse wir durchmachen möchten, welches hier = 66 mal ist. D.h., dass wir 66 $\times$ d. Buch lesen &amp; abschreiben</p>
+<ul>
+<li>
+<p><em>Übungsblatt 6, Nr.4</em></p>
+</li>
+<li>
+<p>hierbei wird nur eine Zeile gelesen</p>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">with</span> open(<span class="hljs-string">"Probe.txt"</span>, <span class="hljs-string">'r'</span>) <span class="hljs-keyword">as</span> data:
+    f_inhalt = data.readline()
+    print(f_inhalt)
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment"># Augabe</span>
+<span class="hljs-number">1</span>) Papa 
+
+</div></code></pre>
+<ul>
+<li>wenn ich aber <code>print(f_inhalt, end=' ')</code> mache, dann wird es ohne den Absatz ausgegeben</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment"># Augabe</span>
+<span class="hljs-number">1</span>) Papa 
+</div></code></pre>
+<h2 id="uwie-%C4%91-zeilen-iterieren-u"><u>Wie đ Zeilen iterieren ?</u>:</h2>
+<ul>
+<li><span style="background-color: #b66464ff; color: white; padding: 0px 5px; border-radius: 2px;">đ d. Iterieren, wird ein Memory-Problem umgangen !&lt;/span</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">with</span> open(<span class="hljs-string">"Probe.txt"</span>, <span class="hljs-string">'r'</span>) <span class="hljs-keyword">as</span> data:
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> data:
+        print(line, end=<span class="hljs-string">''</span>)
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">#Ausgabe</span>
+<span class="hljs-number">1</span>) Papa 
+<span class="hljs-number">2</span>) Mama 
+<span class="hljs-number">3</span>) Efe 
+<span class="hljs-number">4</span>) Sude 
+<span class="hljs-number">5</span>) Simge 
+<span class="hljs-number">6</span>) Pepee 
+</div></code></pre>
+<h2 id="uwie-inhalt-zu-d-datei-hinzuf%C3%BCgen-u"><u>Wie Inhalt zu d. Datei hinzufügen ?</u>:</h2>
+<ul>
+<li><a href="#Probe.txt2">Text2</a></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">with</span> open(<span class="hljs-string">"Probe.txt"</span>, <span class="hljs-string">'a+'</span>) <span class="hljs-keyword">as</span> data:
+
+    mayla = <span class="hljs-string">'\n7) Mayla'</span> 
+    
+    <span class="hljs-comment"># 1. Schreiben/Anhängen</span>
+    data.write(mayla)
+    
+    <span class="hljs-comment"># 2. Zeiger zurücksetzen auf den Anfang (Index 0)</span>
+    data.seek(<span class="hljs-number">0</span>)
+    
+    <span class="hljs-comment"># 3. Lesen der gesamten Datei ab Index 0</span>
+    inhalt = data.read()
+    
+    <span class="hljs-comment"># 4. Ausgabe des gelesenen Inhalts</span>
+    print(inhalt)
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment"># Veränderte Textdatei:</span>
+<span class="hljs-number">1</span>) Papa 
+<span class="hljs-number">2</span>) Mama 
+<span class="hljs-number">3</span>) Efe 
+<span class="hljs-number">4</span>) Sude 
+<span class="hljs-number">5</span>) Simge 
+<span class="hljs-number">6</span>) Pepee 
+<span class="hljs-number">7</span>) Mayla
+</div></code></pre>
+<ul>
+<li>Wie kann man denn direkt einen kompletten langen Text hinzufügen ?</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">with</span> open(<span class="hljs-string">"Probe.txt"</span>, <span class="hljs-string">'a+'</span>) <span class="hljs-keyword">as</span> data:
+
+    <span class="hljs-comment">#String schrieben</span>
+    mayla = str(input(<span class="hljs-string">f"Was soll hinzugefügt werden: "</span>)) 
+    
+    <span class="hljs-comment">#String zur Datei hinzufügen</span>
+    data.write(<span class="hljs-string">'\n'</span> + mayla)
+
+    <span class="hljs-comment">#Position in der Datei wieder auf die erste zeile setzen</span>
+    data.seek(<span class="hljs-number">0</span>)
+    
+    lines = data.readlines()
+
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> lines:
+        print(line, end=<span class="hljs-string">""</span>)
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment"># Augabe</span>
+<span class="hljs-number">1</span>) Papa 
+<span class="hljs-number">2</span>) Mama 
+<span class="hljs-number">3</span>) Efe 
+<span class="hljs-number">4</span>) Sude 
+<span class="hljs-number">5</span>) Simge 
+<span class="hljs-number">6</span>) Pepee
+<span class="hljs-number">7</span>) Mayla
+</div></code></pre>
+<ul>
+<li><code>w+</code><pre class="hljs"><code><div><span class="hljs-keyword">with</span> open(<span class="hljs-string">"Probe.txt"</span>, <span class="hljs-string">'w+'</span>) <span class="hljs-keyword">as</span> data:
+
+    <span class="hljs-comment">#String schrieben</span>
+    mayla = str(input(<span class="hljs-string">f"Was soll hinzugefügt werden: "</span>)) 
+    
+    <span class="hljs-comment">#String zur Datei hinzufügen</span>
+    data.write(mayla)
+
+    <span class="hljs-comment">#Position in der Datei wieder auf die erste zeile setzen</span>
+    data.seek(<span class="hljs-number">0</span>)
+    
+    lines = data.readlines()
+
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> lines:
+        print(line, end=<span class="hljs-string">""</span>)
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment"># Ausgabe</span>
+Hallo was geht ?
+<span class="hljs-comment"># man sieht alos, dass d. gesamte Inhalt gelöscht wurde</span>
+</div></code></pre>
+</li>
+</ul>
+<h2 id="uwie-kann-man-denn-gezielt-leere-zeilen-entfernen-u"><u>Wie kann man denn gezielt leere Zeilen entfernen ?</u>:</h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">with</span> open(<span class="hljs-string">"Probe.txt"</span>, <span class="hljs-string">'a+'</span>) <span class="hljs-keyword">as</span> data:
+
+    data.seek(<span class="hljs-number">0</span>)
+    
+    lines = data.readlines()
+
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> lines:
+        <span class="hljs-keyword">if</span> line.strip() == <span class="hljs-string">''</span>:
+            <span class="hljs-keyword">continue</span>
+            
+        print(line, end=<span class="hljs-string">""</span>)
+</div></code></pre>
+<ul>
+<li><span style="color: #fc0303ff;">Somit sagen wir also, wenn wir an eine leere Zeile stoßen, dann einfach ignorieren &amp; mit d. nächsten Zeile weiter machen zu lesen ?</span></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment"># Text davor</span>
+
+<span class="hljs-number">1</span>) Papa 
+<span class="hljs-number">2</span>) Mama 
+<span class="hljs-number">3</span>) Efe 
+<span class="hljs-number">4</span>) Sude 
+<span class="hljs-number">5</span>) Simge 
+<span class="hljs-number">6</span>) Pepee 
+<span class="hljs-number">7</span>) Mayla 
+
+<span class="hljs-comment"># Text danach:</span>
+<span class="hljs-number">1</span>) Papa 
+<span class="hljs-number">2</span>) Mama
+<span class="hljs-number">3</span>) Efe
+<span class="hljs-number">4</span>) Sude
+<span class="hljs-number">5</span>) Simge
+<span class="hljs-number">6</span>) Pepee
+<span class="hljs-number">7</span>) Mayla
+</div></code></pre>
+<h2 id="u"><u></h2>
+<p>Wie kann ich denn machen, dass ich jede dritte Zeile oder 4. Zeile lesen möchte ?</u>:</p>
+<ul>
+<li><code>%</code></li>
+</ul>
+<h2 id="uwie-kann-man-einfach-eine-neue-datei-erstellen-u"><u>Wie kann man einfach eine neue Datei erstellen ?</u>:</h2>
+<pre class="hljs"><code><div>pfad = <span class="hljs-string">'My fam.txt'</span>
+<span class="hljs-keyword">with</span> open(pfad,<span class="hljs-string">'w'</span>):
+    <span class="hljs-keyword">pass</span>
+</div></code></pre>
+<h2 id="uwas-ist-ein-optionaler-parameter-u"><u>Was ist ein optionaler Parameter ?</u>:</h2>
+<ul>
+<li>ein optinaler Parameter ist ein Parameter, dass immer autom, f, eine var, gegesetzt wird, falls hier ichts eingesetzt wird</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">begruessung</span><span class="hljs-params">(name=<span class="hljs-string">"Mensch"</span>)</span>:</span>
+    print(<span class="hljs-string">"Hallo "</span> + name)
+
+begruessung()       
+begruessung(<span class="hljs-string">"Lisa"</span>)  
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">#output</span>
+<span class="hljs-string">"Hallo Mensch"</span>
+<span class="hljs-string">"Hallo Lisa"</span>
+</div></code></pre>
+<h2 id="uwie-kann-man-einzelne-zeichen-z%C3%A4hlen-u"><u>Wie kann man einzelne Zeichen zählen ?</u>:</h2>
+<ul>
+<li>wir verw. .count()</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">letterCount</span><span class="hljs-params">(text, zeichen=string.ascii_letters)</span>:</span>
+    count_collection = []
+
+    <span class="hljs-keyword">for</span> letter <span class="hljs-keyword">in</span> zeichen:
+        count = text.count(letter)
+        count_collection.append(count)
+
+    <span class="hljs-keyword">return</span> count_collection
+
+text = str(input(<span class="hljs-string">'String: '</span>)) <span class="hljs-comment">#"Was machen Sachen ?"</span>
+zeichen = str(input(<span class="hljs-string">'Zeichen: '</span>)) <span class="hljs-comment">#'ach'</span>
+
+print(letterCount(text, zeichen))
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">#Output</span>
+[<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>]
+</div></code></pre>
+<ul>
+<li>$3 \times a,\  2 \times c,\  2\times h$</li>
+</ul>
+<h1 id="rekursion"><strong>Rekursion</strong></h1>
+<p>So kann mich sich die Rekursion auch vorstellen.</p>
+<p>Bsp.: Fibonacci-Zahlen</p>
+<p>Wenn du wissen willst, was der Wert von $F(5)$ ist, gehst du zu Person 5. Da diese d. Antwort $\lnot$ auswendig weiß, ruft sie sofort bei ihren Kollegen in Büro 4 und Büro 3 an und bittet sie um Hilfe. D. Problem bei d. normalen Rekursion ist, dass diese Kollegen wiederum ihre Nachbarn anrufen müssen, was zu unzähligen Telefonaten führt, bei denen dieselben Fragen immer &amp; immer wieder gestellt werden.</p>
+<p>Hier kommt unsere Schachtel 📦 ins Spiel, d. im Flur $\forall$ erreichbar steht: das Memo-Dictionary. Bevor eine Person zum Hörer greift, schaut sie erst in diese Schachtel. Liegt dort schon ein Zettel mit dem Ergebnis f. ihr Büro, nimmt sie den Wert einfach heraus &amp; gibt ihn sofort an den Fragesteller weiter. Ist d. Schachtel leer, müssen die Kollegen angerufen werden. Die Einzigen, d. niemals telefonieren müssen, sind d. Personen in Büro 0 und Büro 1. Sie kennen ihre Werte (0 und 1) sofort, legen sie als Erste in d. Schachtel und starten damit d. Kettenreaktion. Sobald eine Person d. Antw. ihrer beiden Kollegen erhalten hat, addiert sie diese, schreibt das neue Ergebnis auf einen Zettel für die Schachtel und liefert die Antwort ab. So wird jede Zahl im Gebäude nur ein einziges Mal wirklich berechnet. ✨</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">querSumme</span><span class="hljs-params">(n:str, result:int)</span>-&gt;int:</span>
+    <span class="hljs-keyword">if</span> len(n) == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">return</span> result
+    <span class="hljs-keyword">else</span>:
+        b = int(n[<span class="hljs-number">0</span>])
+        result += b
+        <span class="hljs-keyword">return</span> querSumme(n[<span class="hljs-number">1</span>:],result)
+
+
+n = str(input(<span class="hljs-string">"n: "</span>))
+n_lst = []
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> n:
+    n_lst.append(i)
+result = <span class="hljs-number">0</span>
+print(querSumme(n_lst,result))
+</div></code></pre>
+<p>oder</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">quersumme</span><span class="hljs-params">(n: int)</span> -&gt; int:</span>
+    <span class="hljs-keyword">if</span> n &lt; <span class="hljs-number">10</span>:
+        <span class="hljs-keyword">return</span> n
+    
+    <span class="hljs-keyword">return</span> (n % <span class="hljs-number">10</span>) + quersumme(n // <span class="hljs-number">10</span>)
+</div></code></pre>
+<h1 id="dreiecke"><strong>Dreiecke</strong></h1>
+<h2 id="u1-fl%C3%A4che-deines-dreiecks-begrenzenu"><u>1) Fläche deines Dreiecks begrenzen</u>:</h2>
+<ul>
+<li>
+<p><span style="color: #707070ff;">Präsenzblatt</span></p>
+</li>
+<li>
+<p><a href="https://youtu.be/ROrIMOsDMtw" target="_blank" style="color: #e4c516; text-decoration: underline;">Was wir berechnen</a></p>
+</li>
+<li>
+<p>Also $len(Höhe_{absolut})$ &amp; je n. dem wo wir uns in dem absoluten intervall befinden, wird d. Breite demetsprechend berechnet.</p>
+</li>
+<li>
+<p>$H_{absolut} \in [1,4]$</p>
+<ul>
+<li>wobei $H_{relativ} \in [0,3]$, weil Länge = $4-1 = 3$ (Gesamtlänge)</li>
+</ul>
+</li>
+<li>
+<p>Also, wir haben jzt. d. Basis $B$, aber weil wir aber d. Hälfte d. Basis benötigen = $\frac{B}{2}$</p>
+</li>
+<li>
+<p>d. absolute Höhe $H_{abs}$ &amp; autom. auch $H_{rel}$</p>
+</li>
+<li>
+<p>Die $Gesamthöhe \in [2.5, 5.5]$ &amp; $H_{relativ}$ bewegt sich im Bereich $5.5 - 2.5 = 3 \implies H_{relativ} \in [0,3]$</p>
+<ol>
+<li>random Höhe wählen</li>
+<li>$H_{rel}$ bestimmen</li>
+<li>${B}$ bestimmen</li>
+<li>x koordinaten Wählen:  $r.choice[x_{mid} - w, x_{mid} + w]$.</li>
+</ol>
+</li>
+<li>
+<p>Rampe $B = 2$ &amp; $H_{abs} = 1 \to$ Verhätnis zwischen Höhe zur Länge $= \frac{Höhe}{Länge}$</p>
+<ul>
+<li>
+<p>$100$ Menschen ingesamt</p>
+</li>
+<li>
+<p>$34$ = krank</p>
+</li>
+<li>
+<p>$34/100 = 0.34 = 34\ %$</p>
+</li>
+<li>
+<p>Das Verhältnis zw. den Menschen &amp; den Kranken beträgt $34\ %$</p>
+<ul>
+<li>wir wollen wissen, wie das Verhältnis zwischen d. Breite &amp; der relativen Höhe ist $= \frac{\frac{B}{2}}{H} = \frac{B}{2H}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="btestsb"><b>Tests</b></h1>
+<h2 id="uallgemeinu"><u>Allgemein</u>:</h2>
+<ol>
+<li>Anweisungsü.deckung: $C_0$</li>
+<li>Zweigsü.deckung: $C_1$</li>
+<li>Pfadü.deckung: $C_2a, C_2b, C_2c$</li>
+<li>Bedingungsü.deckung: $C_3a, C_3b, C_3c$</li>
+</ol>
+<h3 id="uwas-ist-anweisungs%C3%BCdeckung-c0u"><u>Was ist Anweisungsü.deckung: $C_0$</u>:</h3>
+<p><img src="image-1.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">vokal_counter</span><span class="hljs-params">(wort:str)</span>-&gt; tuple:</span>
+    gesamtzahl = <span class="hljs-number">0</span>
+    vokale = <span class="hljs-number">0</span>
+
+    <span class="hljs-keyword">while</span> len(wort) &gt; <span class="hljs-number">0</span>:
+        gesamtzahl += <span class="hljs-number">1</span>
+
+        <span class="hljs-keyword">if</span> wort[<span class="hljs-number">0</span>] <span class="hljs-keyword">in</span> <span class="hljs-string">"aeiou"</span>:
+            vokale += <span class="hljs-number">1</span>
+
+        wort = wort[<span class="hljs-number">1</span>:]
+
+    <span class="hljs-keyword">return</span> gesamtzahl, vokale     
+
+
+wort = str(input(<span class="hljs-string">"Wort: "</span>)).lower().replace(<span class="hljs-string">" "</span>,<span class="hljs-string">""</span>)
+print(wort)
+print(vokal_counter(wort))
+</div></code></pre>
+<h3 id="uwas-ist-zweig%C3%BCdeckung-c1u"><u>Was ist Zweigü.deckung: $C_1$</u>:</h3>
+<p><img src="image-2.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">c1_test</span><span class="hljs-params">()</span>-&gt;bool:</span>
+    <span class="hljs-keyword">return</span> vokal_counter(<span class="hljs-string">'ab'</span>) == (<span class="hljs-number">2</span>,<span class="hljs-number">1</span>) 
+</div></code></pre>
+<h3 id="uwas-ist-pfad%C3%BCdeckung-c2au"><u>Was ist Pfadü.deckung: $C_2a$</u>:</h3>
+<hr>
+<h1 id="storage"><strong>Storage</strong></h1>
+<p><a id="Probe.txt"></a></p>
+<pre class="hljs"><code><div><span class="hljs-comment">#Probe.txt</span>
+<span class="hljs-number">1</span>) Papa 
+<span class="hljs-number">2</span>) Mama 
+<span class="hljs-number">3</span>) Efe 
+<span class="hljs-number">4</span>) Sude 
+<span class="hljs-number">5</span>) Simge 
+<span class="hljs-number">6</span>) Pepee 
+<span class="hljs-number">7</span>) Mayla 
+</div></code></pre>
+<p><a id="Probe.txt2"></a></p>
+<pre class="hljs"><code><div><span class="hljs-comment">#Probe.txt</span>
+<span class="hljs-number">1</span>) Papa 
+<span class="hljs-number">2</span>) Mama 
+<span class="hljs-number">3</span>) Efe 
+<span class="hljs-number">4</span>) Sude 
+<span class="hljs-number">5</span>) Simge 
+<span class="hljs-number">6</span>) Pepee 
+</div></code></pre>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
+
+</body>
+</html>
