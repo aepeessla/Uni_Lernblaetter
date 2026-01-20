@@ -365,6 +365,24 @@ code {
           : 'default'
     });
   </script>
+<style>
+  /* 1. Ebene: Punkt */
+  ul { list-style-type: disc; } 
+
+  /* 2. Ebene: Pfeil rechts */
+  ul ul { list-style-type: "→ "; }
+
+  /* 3. Ebene: Pfeil rechts (identisch zur 2. Ebene) */
+  ul ul ul { list-style-type: "→ "; }
+</style>
+<style>
+  img {
+    width: 1000px;  /* Hier deine gewünschte Breite eintragen */
+    height: auto;  /* Behält das Seitenverhältnis bei, damit nichts verzerrt wird */
+    display: block;
+    margin: 10px 0; /* Sorgt für etwas Abstand nach oben und unten */
+  }
+</style>
 <h1 id="kommandozeilenargumente"><strong>Kommandozeilenargumente</strong></h1>
 <ul>
 <li><code>import sys</code> $\leftarrow$ immer !!!</li>
@@ -441,47 +459,96 @@ text[<span class="hljs-number">2</span>] = i
 <h1 id="listen"><strong>Listen</strong></h1>
 <h2 id="uwerkzeugeu"><u>Werkzeuge</u>:</h2>
 <ul>
-<li><code>.pop()</code>:
+<li>
+<p>clear</p>
+</li>
+<li>
+<p>count</p>
+</li>
+<li>
+<p>extend</p>
+</li>
+<li>
+<p>index</p>
+</li>
+<li>
+<p>insert</p>
+</li>
+<li>
+<p>reverse</p>
+</li>
+<li>
+<p>sort</p>
+</li>
+<li>
+<p><code>.pop()</code>:</p>
 <ul>
 <li><code>.pop(&lt;index&gt;)</code></li>
 <li>dann wird das Element an dieser stelle gelöscht</li>
 </ul>
 </li>
-<li><code>.remove()</code>:
+<li>
+<p><code>.remove()</code>:</p>
 <ul>
 <li>wenn das erste Element, der dem Element in <code>.remove(&lt;elem&gt;)</code> entsprciht, wird entfernt</li>
 </ul>
 </li>
-<li><code>.copy()</code>:
+<li>
+<p><code>.copy()</code>:</p>
 <ul>
 <li><span style="color: #fc0303ff;"><strong>wichtig !!!!</strong></span>
 <ul>
-<li>
-<p>man kopirt nur d. <em><strong>oberste Ebene</strong></em></p>
-<pre class="hljs"><code><div>x = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>],<span class="hljs-number">5</span>]
-y = x.copy()
-
-y[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>] = y[<span class="hljs-number">2</span>]      
-print(<span class="hljs-string">'x: '</span>, x) <span class="hljs-comment"># [[1,2],[5,4],5]</span>
-print(<span class="hljs-string">'y: '</span>, y) <span class="hljs-comment"># [[1,2],[5,4],5]</span>
-
-y[<span class="hljs-number">2</span>] = y[<span class="hljs-number">0</span>]
-print(<span class="hljs-string">'x: '</span>, x) <span class="hljs-comment"># [[1,2],[5,4],5]</span>
-print(<span class="hljs-string">'y: '</span>, y) <span class="hljs-comment"># [[1,2],[5,4],[1,2]]</span>
-</div></code></pre>
-<pre class="hljs"><code><div>x = [[<span class="hljs-number">1</span>], [<span class="hljs-number">2</span>]]
-y = x.copy()
-y[<span class="hljs-number">0</span>].append(<span class="hljs-number">10</span>)
-y[<span class="hljs-number">1</span>] = [<span class="hljs-number">99</span>]
-print(x) <span class="hljs-comment">#[[1, 10], [2]] </span>
-</div></code></pre>
-<p>x = [[1], [2]]
-y = x.copy()
-y[0].append(10)
-y[1] = [99]
-print(x)</p>
+<li>man kopirt nur d. <em><strong>oberste Ebene</strong></em></li>
+</ul>
 </li>
 </ul>
+<pre class="hljs"><code><div>lst = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]
+lst2 = lst.copy()
+
+print(<span class="hljs-string">f"id(lst): <span class="hljs-subst">{id(lst)}</span>, id(lst2): <span class="hljs-subst">{id(lst2)}</span>"</span>)
+<span class="hljs-keyword">if</span> id(lst[<span class="hljs-number">0</span>]) == id(lst2[<span class="hljs-number">0</span>]):
+    print(<span class="hljs-literal">True</span>)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-literal">False</span>)
+</div></code></pre>
+  <hr>
+<pre class="hljs"><code><div>liste_a = [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+liste_b = liste_a
+
+liste_b[<span class="hljs-number">0</span>] = <span class="hljs-number">2</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">#Ausgabe:</span>
+Originale Listen:
+---------------------------------
+Lista A:  [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+Liste B: [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+
+V1 Listen:
+---------------------------------
+Liste_a: [<span class="hljs-number">2</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+Liste_b: [<span class="hljs-number">2</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+ID von A: <span class="hljs-number">1834691293696</span>
+ID von B: <span class="hljs-number">1834691293696</span>
+<span class="hljs-literal">True</span>
+</div></code></pre>
+<ul>
+<li><u><strong>Anw. des ersten .copy()</strong>:</u><pre class="hljs"><code><div>liste_a = [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+liste_b = liste_a.copy()
+
+liste_b[<span class="hljs-number">0</span>] = <span class="hljs-number">2</span>
+</div></code></pre>
+<pre class="hljs"><code><div>Originale Listen:
+Lista A:  [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+Liste B: [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+
+V1 Listen:
+Liste_a: [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+Liste_b: [<span class="hljs-number">2</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+ID von A: <span class="hljs-number">2152350446080</span>
+ID von B: <span class="hljs-number">2152352749696</span>
+
+<span class="hljs-literal">False</span>
+</div></code></pre>
 </li>
 </ul>
 </li>
