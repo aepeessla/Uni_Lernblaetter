@@ -383,6 +383,11 @@ code {
     margin: 10px 0; /* Sorgt für etwas Abstand nach oben und unten */
   }
 </style>
+<h1 id="merken-f-d-klausur">Merken f. d. Klausur:</h1>
+<ul>
+<li>wenn ich weiß, wie oft etw. passieren muss = <span style="background-color: #bddb85; color: #607a30; padding: 0px 5px; border-radius: 2px;">for-Schleife</span></li>
+<li>wenn ich $\lnot$ weiß, wie oft etw. passieren muss = <span style="background-color: #85c7db; color: #2a6e83; padding: 0px 5px; border-radius: 2px;">while-Schleife</span></li>
+</ul>
 <h1 id="kommandozeilenargumente"><strong>Kommandozeilenargumente</strong></h1>
 <ul>
 <li><code>import sys</code> $\leftarrow$ immer !!!</li>
@@ -502,16 +507,6 @@ text[<span class="hljs-number">2</span>] = i
 </ul>
 </li>
 </ul>
-<pre class="hljs"><code><div>lst = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]
-lst2 = lst.copy()
-
-print(<span class="hljs-string">f"id(lst): <span class="hljs-subst">{id(lst)}</span>, id(lst2): <span class="hljs-subst">{id(lst2)}</span>"</span>)
-<span class="hljs-keyword">if</span> id(lst[<span class="hljs-number">0</span>]) == id(lst2[<span class="hljs-number">0</span>]):
-    print(<span class="hljs-literal">True</span>)
-<span class="hljs-keyword">else</span>:
-    print(<span class="hljs-literal">False</span>)
-</div></code></pre>
-  <hr>
 <pre class="hljs"><code><div>liste_a = [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
 liste_b = liste_a
 
@@ -532,7 +527,9 @@ ID von B: <span class="hljs-number">1834691293696</span>
 <span class="hljs-literal">True</span>
 </div></code></pre>
 <ul>
-<li><u><strong>Anw. des ersten .copy()</strong>:</u><pre class="hljs"><code><div>liste_a = [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+<li><u><strong>Anw. des ersten .copy()</strong>:</u></li>
+</ul>
+<pre class="hljs"><code><div>liste_a = [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
 liste_b = liste_a.copy()
 
 liste_b[<span class="hljs-number">0</span>] = <span class="hljs-number">2</span>
@@ -549,8 +546,27 @@ ID von B: <span class="hljs-number">2152352749696</span>
 
 <span class="hljs-literal">False</span>
 </div></code></pre>
-</li>
+<ul>
+<li><u><strong>echte unabhängige copy ?</strong></u></li>
 </ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> copy
+
+liste_a = [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+liste_b = copy.deepcopy(liste_a)
+
+liste_b[<span class="hljs-number">0</span>] = <span class="hljs-number">2</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">#Ausgabe:</span>
+Originale Listen:
+Lista A:  [[<span class="hljs-number">1</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">8</span>], [<span class="hljs-number">9</span>, <span class="hljs-number">6</span>], <span class="hljs-number">7</span>]
+Liste B: [[<span class="hljs-number">1</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">8</span>], [<span class="hljs-number">9</span>, <span class="hljs-number">6</span>], <span class="hljs-number">7</span>]
+
+V1 Listen:
+ID <span class="hljs-string">"OG-Conteiner"</span>: <span class="hljs-number">1667841546688</span>
+ID <span class="hljs-string">"Copy-Conteiner"</span>: <span class="hljs-number">1667839716544</span>
+
+<span class="hljs-literal">False</span>
+</div></code></pre>
 </li>
 </ul>
 <h2 id="uwann-append-und-wann--u"><u>Wann .append und wann += ?</u>:</h2>
@@ -970,6 +986,46 @@ print(vokal_counter(wort))
     <span class="hljs-keyword">return</span> vokal_counter(<span class="hljs-string">'ab'</span>) == (<span class="hljs-number">2</span>,<span class="hljs-number">1</span>) 
 </div></code></pre>
 <h3 id="uwas-ist-pfad%C3%BCdeckung-c2au"><u>Was ist Pfadü.deckung: $C_2a$</u>:</h3>
+<h1 id="sortieralgorithmen"><strong>Sortieralgorithmen</strong></h1>
+<p><img src="image-3.png" alt="alt text"></p>
+<h2 id="ul%C3%B6sungu"><u><strong>Lösung</strong></u>:</h2>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">insertion_sort</span><span class="hljs-params">(lst: list[int])</span>-&gt; list[int]:</span>
+    <span class="hljs-keyword">if</span> len(lst) &lt;= <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> lst
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,len(lst)):
+            j = i<span class="hljs-number">-1</span>
+
+            key = lst[i]
+            <span class="hljs-keyword">while</span> j &gt;= <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> lst[j] &gt; key:
+                lst[j+<span class="hljs-number">1</span>] = lst[j]
+                j -=<span class="hljs-number">1</span>
+                
+            lst[j+<span class="hljs-number">1</span>] = key
+            
+    <span class="hljs-keyword">return</span> lst
+
+
+lst = [<span class="hljs-number">8</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">9</span>, <span class="hljs-number">7</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>]
+print(lst)
+print(insertion_sort(lst))
+</div></code></pre>
+<ul>
+<li><u><strong>Wrm. eine for Schleife ?</strong></u>
+<ol>
+<li>Muster erkennen:
+<ul>
+<li>es gibt immer einen Trenner <code>|</code></li>
+<li>links v. Trenner $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{im jeden Schritt}}\ \ \ \ }$ länger
+<ul>
+<li>Wir brauchen eine Schleife, d. den Trenner v. vorne bis hinten schiebt.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
 <hr>
 <h1 id="storage"><strong>Storage</strong></h1>
 <p><a id="Probe.txt"></a></p>
