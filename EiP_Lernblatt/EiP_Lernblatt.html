@@ -750,9 +750,47 @@ print(liste_b)
 </div></code></pre>
 </li>
 </ul>
-<h2 id="u%C3%A4ndert-sich-lst-wenn-ich-codefor-zeile-in-lstcode-verwende-und-zeile-ver%C3%A4ndereu"><u>Ändert sich lst, wenn ich <code>for zeile in lst:</code> verwende und zeile verändere?</u></h2>
+<h2 id="uwie-ver%C3%A4ndert-sich-meine-liste-wenn-ich-mit-nested-forschleifen-arbeite-u"><u>Wie verändert sich meine Liste, wenn ich mit nested-for_schleifen arbeite ?</u></h2>
+<pre class="hljs"><code><div>lst =[
+        [[], []], 
+        [[], []], 
+        [[], []], 
+        [[], []]
+    ]
+
+<span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> lst:
+    <span class="hljs-keyword">for</span> spalte <span class="hljs-keyword">in</span> zeile:
+        spalte = <span class="hljs-number">1</span>
+
+<span class="hljs-comment"># Ausgabe:</span>
+lst =[[[], []],[[], []],[[], []], [[], []]] statt lst =[[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>],[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>],[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]]
+</div></code></pre>
 <ul>
-<li>JA</li>
+<li>wie muss ich mir das vorstellen ?<pre class="hljs"><code><div><span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> lst:
+    zeile = <span class="hljs-number">1</span>
+</div></code></pre>
+<ul>
+<li>lst = Mein Boss mit der Liste meiner Arbeitszeiten</li>
+<li>zeile = Ich, dass sich krankmeldet
+<ul>
+<li>Wenn ich direkt bei meinem Boss anrufe &amp; mich krank melde $\implies$ ändert meinen Arbeitsplan</li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> lst:
+    <span class="hljs-keyword">for</span> spalte <span class="hljs-keyword">in</span> lst:
+        spalte = <span class="hljs-number">1</span>
+</div></code></pre>
+<ul>
+<li>lst = Mein Boss mit der Liste meiner Arbeitszeiten</li>
+<li>zeile = Mein Kollege</li>
+<li>spalte = Ich, dass sich krankmeldet
+<ul>
+<li>Ich sage meinem Kollege, dass ich krank bin $\to$ er vergisst es $\to$ mein Boss bekommt davon nichts min $\implies$ D. Liste mit meinen Arbeitszeiten sind gleich</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h1 id="dictionaries"><strong>Dictionaries</strong></h1>
 <h2 id="uwie-sortieren-u"><u>Wie sortieren ?</u>:</h2>
@@ -1177,6 +1215,37 @@ print(insertion_sort(lst))
 </ul>
 </li>
 </ol>
+</li>
+</ul>
+<h1 id="random"><strong>random</strong></h1>
+<h2 id="uwie-kann-ich-rchoice-verw-und-denen-eine-wahrscheinlichkeit-geben-u"><u>Wie kann ich <code>r.choice()</code> verw. und denen eine Wahrscheinlichkeit geben ?</u></h2>
+<ul>
+<li>
+<p><code>r.choices(&lt;lst&gt;, &lt;wahrscheinlichkeit 1&gt;, &lt;wahrscheinlichkeit 2&gt;, ...) -&gt; list</code></p>
+<ul>
+<li><u>Beispiel 1:</u></li>
+</ul>
+<pre class="hljs"><code><div>seq = [[<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>]]
+wahrscheinlichkeit = r.choices(seq,weights = [<span class="hljs-number">20</span>, <span class="hljs-number">60</span>, <span class="hljs-number">20</span>], k = <span class="hljs-number">1</span>)
+
+<span class="hljs-comment"># Jedem Element wird automatisch d. Wahrscheinlichkeit ü.geb., welches d. gleiche Index hat:</span>
+<span class="hljs-number">1</span> = <span class="hljs-number">20</span>%
+<span class="hljs-number">3</span> = <span class="hljs-number">60</span>%
+<span class="hljs-number">5</span> = <span class="hljs-number">20</span>% 
+</div></code></pre>
+<p>k = die Anzahl der Drehung</p>
+<ul>
+<li>Wenn k = 3 $to$ 3 $\times$ gedreht
+<ul>
+<li><em><strong>Bsp</strong></em>: [['<em>', '', '</em>']]</li>
+</ul>
+</li>
+<li>Wenn k = 1 $to$ 1 $\times$ gedreht
+<ul>
+<li><em><strong>Bsp</strong></em>:['*']</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <hr>
