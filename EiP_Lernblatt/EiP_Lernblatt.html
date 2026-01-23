@@ -691,53 +691,95 @@ print(liste_b)
 </li>
 </ul>
 <h2 id="uwie-ver%C3%A4ndert-sich-meine-liste-wenn-ich-mit-nested-forschleifen-arbeite-u"><u>Wie verändert sich meine Liste, wenn ich mit nested-for_schleifen arbeite ?</u></h2>
-<pre class="hljs"><code><div>lst =[
-        [[], []], 
-        [[], []], 
-        [[], []], 
-        [[], []]
-    ]
+<ul>
+<li>Genau die Stelle d. ich verändern möchte, muss ich mit einem Index machen:<pre class="hljs"><code><div>lst = [[
+    [[], [], [], []], 
+    [[], [], [], []], 
+    [[], [], [], []], 
+    [[], [], [], []]
+], 
+[   [[], [], [], []], 
+    [[], [], [], []], 
+    [[], [], [], []], 
+    [[], [], [], []]
+], 
+[
+    [[], [], [], []], 
+    [[], [], [], []], 
+    [[], [], [], []], 
+    [[], [], [], []]
+]]
 
-<span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> lst:
-    <span class="hljs-keyword">for</span> spalte <span class="hljs-keyword">in</span> zeile:
-        spalte = <span class="hljs-number">1</span>
+<span class="hljs-comment">#Ich möchte d. 4. Ebene ändern = 4. Ebene = Index</span>
 
-<span class="hljs-comment"># Ausgabe:</span>
-lst =[[[], []], [[], []], [[], []], [[], []]] statt lst = [[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]]
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> lst: <span class="hljs-comment">#lst = 1.Ebene, i = 2.Ebene</span>
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> i: <span class="hljs-comment"># 3.Ebene</span>
+        <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(len(j)): <span class="hljs-comment">#4.Ebene</span>
+            j[k] = <span class="hljs-number">2</span> 
 </div></code></pre>
-<ul>
-<li>
-<p><u><strong>Wie muss ich mir das vorstellen ?</strong></u></p>
-<pre class="hljs"><code><div><span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> lst:
-    zeile = <span class="hljs-number">1</span>
-</div></code></pre>
-<ul>
-<li><code>lst</code> = Mein Boss mit der Liste meiner Arbeitszeiten</li>
-<li><code>zeile</code> = Ich, dass sich krankmeldet
-<ul>
-<li>Wenn ich direkt bei meinem Boss anrufe &amp; mich krank melde $\implies$ ändert meinen Arbeitsplan</li>
-</ul>
 </li>
 </ul>
-<pre class="hljs"><code><div><span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> lst:
-    <span class="hljs-keyword">for</span> spalte <span class="hljs-keyword">in</span> lst:
-        spalte = <span class="hljs-number">1</span>
+<h2 id="uwie-kann-ich-autom-ein-spielbrett-durch-gehen--werte-eins-u"><u>Wie kann ich autom. ein Spielbrett durch gehen &amp; Werte eins. ?</u></h2>
+<ul>
+<li><u>Wir müssen d. Spielfeld erst einmal bauen</u>:<pre class="hljs"><code><div>n = <span class="hljs-number">5</span>
+m = <span class="hljs-number">5</span>
+
+spielfeld = [[[]<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(n)]<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(m)]
+
+<span class="hljs-comment">#spielfeld = [</span>
+<span class="hljs-comment"># [[], [], [], [], []], </span>
+<span class="hljs-comment"># [[], [], [], [], []], </span>
+<span class="hljs-comment"># [[], [], [], [], []], </span>
+<span class="hljs-comment"># [[], [], [], [], []], </span>
+<span class="hljs-comment"># [[], [], [], [], []]</span>
+<span class="hljs-comment"># ]</span>
 </div></code></pre>
-<ul>
-<li><code>lst</code> = Mein Boss mit der Liste meiner Arbeitszeiten</li>
-<li><code>zeile</code> = Mein Kollege</li>
-<li><code>spalte</code> = Ich, dass sich krankmeldet
-<ul>
-<li>Ich sage meinem Kollege, dass ich krank bin $\to$ er vergisst es $\to$ mein Boss bekommt davon nichts min $\implies$ D. Liste mit meinen Arbeitszeiten sind gleich</li>
-</ul>
 </li>
-</ul>
+<li><u>Zufälliges Verteilen v. Bomben</u>:<pre class="hljs"><code><div>möglichekeiten = [<span class="hljs-string">''</span>, <span class="hljs-string">'*'</span>]
+
+<span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> spielfeld:
+    <span class="hljs-keyword">for</span> spalte <span class="hljs-keyword">in</span> range(len(zeile)):
+        ausgw_elem = r.choices(möglichekeiten, weights=[<span class="hljs-number">60</span>,<span class="hljs-number">40</span>], k=<span class="hljs-number">1</span>)
+        zeile[spalte] = ausgw_elem[<span class="hljs-number">0</span>]
+
+<span class="hljs-comment">#spielfeld = [</span>
+<span class="hljs-comment">#   ['*', '', '', '*', '*'],</span>
+<span class="hljs-comment">#   ['*', '', '*', '*', ''], </span>
+<span class="hljs-comment">#   ['*', '', '', '', ''], </span>
+<span class="hljs-comment">#   ['*', '', '', '*', '*'], </span>
+<span class="hljs-comment">#   ['', '*', '*', '*', '']</span>
+<span class="hljs-comment"># ]</span>
+</div></code></pre>
 </li>
-<li>
-<p><u><strong>Lösung</strong></u></p>
-<pre class="hljs"><code><div><span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> lst:
-    <span class="hljs-keyword">for</span> spalte range(len(zeile)):
-        zeile[spalte] = <span class="hljs-number">1</span>
+<li><u>Wir zählen d. Nachbarn</u><pre class="hljs"><code><div>max_n = n<span class="hljs-number">-1</span> <span class="hljs-comment"># wenn ich n eing., dann ich mein Index = n-1</span>
+max_m = m<span class="hljs-number">-1</span>
+
+<span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> range(n):
+    <span class="hljs-keyword">for</span> spalte <span class="hljs-keyword">in</span> range(m):
+                
+        <span class="hljs-comment">#Ist d. Feld ü.haupt eine Bombe ? Dann brauchen wir d. Gucken d. N.barn nicht</span>
+        <span class="hljs-keyword">if</span> spielfeld[zeile][spalte] == <span class="hljs-string">'*'</span>:
+            <span class="hljs-keyword">continue</span>
+        
+        <span class="hljs-comment">#wenn aktuelles Feld != '*' -&gt; Dann gucken wir und d. Nachbarn an!</span>
+        bomben_count = <span class="hljs-number">0</span>
+
+        <span class="hljs-comment">#gucken d. Umgebung:</span>
+        <span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> range(<span class="hljs-number">-1</span>,<span class="hljs-number">2</span>):
+            <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(<span class="hljs-number">-1</span>,<span class="hljs-number">2</span>):
+
+                <span class="hljs-comment">#Sicherstellen, dass wir nicht auf d. [-1] Element zugreifen:</span>
+                y_now = zeile + y
+                x_now = spalte + x
+                
+                
+                <span class="hljs-comment">#Wenn nein, dann gucken, ob es p.haupt in meinem aufgespannten Brett ist</span>
+                <span class="hljs-keyword">if</span> <span class="hljs-number">0</span> &lt;= y_now &lt;= max_n <span class="hljs-keyword">and</span> <span class="hljs-number">0</span> &lt;= x_now &lt;= max_m: <span class="hljs-comment">#wenn ja, dann zählen wir d. Umgebung</span>
+                    <span class="hljs-keyword">if</span> spielfeld[y_now][x_now] == <span class="hljs-string">'*'</span>:
+                        bomben_count += <span class="hljs-number">1</span>
+        spielfeld[zeile][spalte] = bomben_count
+
+print(spielfeld)
 </div></code></pre>
 </li>
 </ul>
