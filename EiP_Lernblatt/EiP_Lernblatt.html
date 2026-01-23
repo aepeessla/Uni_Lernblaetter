@@ -661,66 +661,6 @@ print(liste_b)
 </div></code></pre>
 <h2 id="uwie-werden-mehrdimensionale-listen-sortiert-u"><u>Wie werden mehrdimensionale Listen sortiert ?</u></h2>
 <ul>
-<li>d. Summe von i kann es $\lnot$ sein:<pre class="hljs"><code><div>[<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>]
-[<span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>]
-[<span class="hljs-number">15</span>, <span class="hljs-number">15</span>, <span class="hljs-number">3</span>]
----------------------------------------------------------------
-[<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>] <span class="hljs-number">4</span>
-[<span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>] <span class="hljs-number">13</span>
-[<span class="hljs-number">15</span>, <span class="hljs-number">15</span>, <span class="hljs-number">3</span>] <span class="hljs-number">33</span>
-
-<span class="hljs-comment">#etw. größere Liste</span>
-[<span class="hljs-number">5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">5</span>, <span class="hljs-number">13</span>, <span class="hljs-number">5</span>, <span class="hljs-number">11</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">20</span>, <span class="hljs-number">7</span>]
-[<span class="hljs-number">6</span>, <span class="hljs-number">8</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">8</span>, <span class="hljs-number">13</span>, <span class="hljs-number">8</span>, <span class="hljs-number">15</span>, <span class="hljs-number">1</span>, <span class="hljs-number">20</span>]
-[<span class="hljs-number">13</span>, <span class="hljs-number">18</span>, <span class="hljs-number">18</span>, <span class="hljs-number">15</span>, <span class="hljs-number">16</span>, <span class="hljs-number">17</span>, <span class="hljs-number">15</span>, <span class="hljs-number">8</span>, <span class="hljs-number">16</span>, <span class="hljs-number">6</span>]
-[<span class="hljs-number">18</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">2</span>, <span class="hljs-number">16</span>, <span class="hljs-number">6</span>, <span class="hljs-number">18</span>, <span class="hljs-number">9</span>]
-[<span class="hljs-number">3</span>, <span class="hljs-number">13</span>, <span class="hljs-number">9</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">13</span>, <span class="hljs-number">7</span>, <span class="hljs-number">16</span>, <span class="hljs-number">8</span>]
-[<span class="hljs-number">20</span>, <span class="hljs-number">12</span>, <span class="hljs-number">4</span>, <span class="hljs-number">19</span>, <span class="hljs-number">16</span>, <span class="hljs-number">2</span>, <span class="hljs-number">16</span>, <span class="hljs-number">0</span>, <span class="hljs-number">16</span>, <span class="hljs-number">10</span>]
-[<span class="hljs-number">19</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">19</span>, <span class="hljs-number">17</span>, <span class="hljs-number">20</span>, <span class="hljs-number">11</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>]
-[<span class="hljs-number">6</span>, <span class="hljs-number">12</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">14</span>, <span class="hljs-number">2</span>, <span class="hljs-number">15</span>, <span class="hljs-number">9</span>]
-[<span class="hljs-number">11</span>, <span class="hljs-number">2</span>, <span class="hljs-number">10</span>, <span class="hljs-number">13</span>, <span class="hljs-number">15</span>, <span class="hljs-number">11</span>, <span class="hljs-number">8</span>, <span class="hljs-number">14</span>, <span class="hljs-number">16</span>, <span class="hljs-number">4</span>]
-[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">19</span>, <span class="hljs-number">1</span>, <span class="hljs-number">19</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">14</span>, <span class="hljs-number">4</span>]
----------------------------------------------------------------
-[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">19</span>, <span class="hljs-number">1</span>, <span class="hljs-number">19</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">14</span>, <span class="hljs-number">4</span>] <span class="hljs-number">78</span>
-[<span class="hljs-number">3</span>, <span class="hljs-number">13</span>, <span class="hljs-number">9</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">13</span>, <span class="hljs-number">7</span>, <span class="hljs-number">16</span>, <span class="hljs-number">8</span>] <span class="hljs-number">80</span>
-[<span class="hljs-number">5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">5</span>, <span class="hljs-number">13</span>, <span class="hljs-number">5</span>, <span class="hljs-number">11</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">20</span>, <span class="hljs-number">7</span>] <span class="hljs-number">83</span>
-[<span class="hljs-number">6</span>, <span class="hljs-number">8</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">8</span>, <span class="hljs-number">13</span>, <span class="hljs-number">8</span>, <span class="hljs-number">15</span>, <span class="hljs-number">1</span>, <span class="hljs-number">20</span>] <span class="hljs-number">85</span>
-[<span class="hljs-number">6</span>, <span class="hljs-number">12</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">14</span>, <span class="hljs-number">2</span>, <span class="hljs-number">15</span>, <span class="hljs-number">9</span>] <span class="hljs-number">76</span>
-[<span class="hljs-number">11</span>, <span class="hljs-number">2</span>, <span class="hljs-number">10</span>, <span class="hljs-number">13</span>, <span class="hljs-number">15</span>, <span class="hljs-number">11</span>, <span class="hljs-number">8</span>, <span class="hljs-number">14</span>, <span class="hljs-number">16</span>, <span class="hljs-number">4</span>] <span class="hljs-number">104</span>
-[<span class="hljs-number">13</span>, <span class="hljs-number">18</span>, <span class="hljs-number">18</span>, <span class="hljs-number">15</span>, <span class="hljs-number">16</span>, <span class="hljs-number">17</span>, <span class="hljs-number">15</span>, <span class="hljs-number">8</span>, <span class="hljs-number">16</span>, <span class="hljs-number">6</span>] <span class="hljs-number">142</span>
-[<span class="hljs-number">18</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">2</span>, <span class="hljs-number">16</span>, <span class="hljs-number">6</span>, <span class="hljs-number">18</span>, <span class="hljs-number">9</span>] <span class="hljs-number">109</span>
-[<span class="hljs-number">19</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">19</span>, <span class="hljs-number">17</span>, <span class="hljs-number">20</span>, <span class="hljs-number">11</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>] <span class="hljs-number">116</span>
-[<span class="hljs-number">20</span>, <span class="hljs-number">12</span>, <span class="hljs-number">4</span>, <span class="hljs-number">19</span>, <span class="hljs-number">16</span>, <span class="hljs-number">2</span>, <span class="hljs-number">16</span>, <span class="hljs-number">0</span>, <span class="hljs-number">16</span>, <span class="hljs-number">10</span>] <span class="hljs-number">115</span>
-</div></code></pre>
-</li>
-<li>Anhand des max. Wertes wird es auch $\lnot$ sortiert:<pre class="hljs"><code><div>[<span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">18</span>, <span class="hljs-number">11</span>]
-[<span class="hljs-number">19</span>, <span class="hljs-number">15</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>]
-[<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">12</span>, <span class="hljs-number">8</span>]
-[<span class="hljs-number">19</span>, <span class="hljs-number">3</span>, <span class="hljs-number">15</span>, <span class="hljs-number">10</span>]
----------------------------------------------------------------
-[<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">12</span>, <span class="hljs-number">8</span>] <span class="hljs-number">12</span>
-[<span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">18</span>, <span class="hljs-number">11</span>] <span class="hljs-number">18</span>
-[<span class="hljs-number">19</span>, <span class="hljs-number">3</span>, <span class="hljs-number">15</span>, <span class="hljs-number">10</span>] <span class="hljs-number">19</span>
-[<span class="hljs-number">19</span>, <span class="hljs-number">15</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>] <span class="hljs-number">19</span>
-
-<span class="hljs-comment">#Etwas größere Liste</span>
-[<span class="hljs-number">9</span>, <span class="hljs-number">14</span>, <span class="hljs-number">12</span>, <span class="hljs-number">4</span>, <span class="hljs-number">20</span>, <span class="hljs-number">5</span>, <span class="hljs-number">13</span>]
-[<span class="hljs-number">20</span>, <span class="hljs-number">0</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">11</span>, <span class="hljs-number">20</span>, <span class="hljs-number">4</span>]
-[<span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">20</span>, <span class="hljs-number">12</span>, <span class="hljs-number">11</span>, <span class="hljs-number">18</span>, <span class="hljs-number">8</span>]
-[<span class="hljs-number">10</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">10</span>, <span class="hljs-number">12</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>]
-[<span class="hljs-number">12</span>, <span class="hljs-number">17</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">14</span>, <span class="hljs-number">2</span>, <span class="hljs-number">10</span>]
-[<span class="hljs-number">14</span>, <span class="hljs-number">17</span>, <span class="hljs-number">18</span>, <span class="hljs-number">2</span>, <span class="hljs-number">10</span>, <span class="hljs-number">17</span>, <span class="hljs-number">7</span>]
-[<span class="hljs-number">13</span>, <span class="hljs-number">13</span>, <span class="hljs-number">6</span>, <span class="hljs-number">15</span>, <span class="hljs-number">16</span>, <span class="hljs-number">8</span>, <span class="hljs-number">3</span>]
----------------------------------------------------------------
-[<span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">20</span>, <span class="hljs-number">12</span>, <span class="hljs-number">11</span>, <span class="hljs-number">18</span>, <span class="hljs-number">8</span>] <span class="hljs-number">20</span>
-[<span class="hljs-number">9</span>, <span class="hljs-number">14</span>, <span class="hljs-number">12</span>, <span class="hljs-number">4</span>, <span class="hljs-number">20</span>, <span class="hljs-number">5</span>, <span class="hljs-number">13</span>] <span class="hljs-number">20</span>
-[<span class="hljs-number">10</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">10</span>, <span class="hljs-number">12</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>] <span class="hljs-number">12</span>
-[<span class="hljs-number">12</span>, <span class="hljs-number">17</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">14</span>, <span class="hljs-number">2</span>, <span class="hljs-number">10</span>] <span class="hljs-number">17</span>
-[<span class="hljs-number">13</span>, <span class="hljs-number">13</span>, <span class="hljs-number">6</span>, <span class="hljs-number">15</span>, <span class="hljs-number">16</span>, <span class="hljs-number">8</span>, <span class="hljs-number">3</span>] <span class="hljs-number">16</span>
-[<span class="hljs-number">14</span>, <span class="hljs-number">17</span>, <span class="hljs-number">18</span>, <span class="hljs-number">2</span>, <span class="hljs-number">10</span>, <span class="hljs-number">17</span>, <span class="hljs-number">7</span>] <span class="hljs-number">18</span>
-[<span class="hljs-number">20</span>, <span class="hljs-number">0</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">11</span>, <span class="hljs-number">20</span>, <span class="hljs-number">4</span>] <span class="hljs-number">20</span>
-</div></code></pre>
-</li>
 <li>Es wird anhand des ersten Elements sortiert<pre class="hljs"><code><div>[<span class="hljs-number">11</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>]
 [<span class="hljs-number">16</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">16</span>]
 [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">12</span>, <span class="hljs-number">20</span>]
@@ -763,15 +703,17 @@ print(liste_b)
         spalte = <span class="hljs-number">1</span>
 
 <span class="hljs-comment"># Ausgabe:</span>
-lst =[[[], []],[[], []],[[], []], [[], []]] statt lst =[[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>],[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>],[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]]
+lst =[[[], []], [[], []], [[], []], [[], []]] statt lst = [[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]]
 </div></code></pre>
 <ul>
-<li>wie muss ich mir das vorstellen ?<pre class="hljs"><code><div><span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> lst:
+<li>
+<p><u><strong>Wie muss ich mir das vorstellen ?</strong></u></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> lst:
     zeile = <span class="hljs-number">1</span>
 </div></code></pre>
 <ul>
-<li>lst = Mein Boss mit der Liste meiner Arbeitszeiten</li>
-<li>zeile = Ich, dass sich krankmeldet
+<li><code>lst</code> = Mein Boss mit der Liste meiner Arbeitszeiten</li>
+<li><code>zeile</code> = Ich, dass sich krankmeldet
 <ul>
 <li>Wenn ich direkt bei meinem Boss anrufe &amp; mich krank melde $\implies$ ändert meinen Arbeitsplan</li>
 </ul>
@@ -782,14 +724,21 @@ lst =[[[], []],[[], []],[[], []], [[], []]] statt lst =[[<span class="hljs-numbe
         spalte = <span class="hljs-number">1</span>
 </div></code></pre>
 <ul>
-<li>lst = Mein Boss mit der Liste meiner Arbeitszeiten</li>
-<li>zeile = Mein Kollege</li>
-<li>spalte = Ich, dass sich krankmeldet
+<li><code>lst</code> = Mein Boss mit der Liste meiner Arbeitszeiten</li>
+<li><code>zeile</code> = Mein Kollege</li>
+<li><code>spalte</code> = Ich, dass sich krankmeldet
 <ul>
 <li>Ich sage meinem Kollege, dass ich krank bin $\to$ er vergisst es $\to$ mein Boss bekommt davon nichts min $\implies$ D. Liste mit meinen Arbeitszeiten sind gleich</li>
 </ul>
 </li>
 </ul>
+</li>
+<li>
+<p><u><strong>Lösung</strong></u></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> lst:
+    <span class="hljs-keyword">for</span> spalte range(len(zeile)):
+        zeile[spalte] = <span class="hljs-number">1</span>
+</div></code></pre>
 </li>
 </ul>
 <h1 id="dictionaries"><strong>Dictionaries</strong></h1>
@@ -1269,7 +1218,7 @@ wahrscheinlichkeit = r.choices(seq,weights = [<span class="hljs-number">20</span
 <span class="hljs-number">5</span>) Simge 
 <span class="hljs-number">6</span>) Pepee 
 </div></code></pre>
-<p>#** random aufgaben**</p>
+<h1 id="random-aufgaben"><strong>random Aufgaben</strong></h1>
 <pre class="hljs"><code><div><span class="hljs-comment">#wir müssen uns von innen nach außen arbeiten</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mehrdim_liste_sortieren</span><span class="hljs-params">(lst:list[int])</span> -&gt; list[int]:</span>
     <span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> lst:
