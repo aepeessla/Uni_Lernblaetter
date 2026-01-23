@@ -750,6 +750,10 @@ print(liste_b)
 </div></code></pre>
 </li>
 </ul>
+<h2 id="u%C3%A4ndert-sich-lst-wenn-ich-codefor-zeile-in-lstcode-verwende-und-zeile-ver%C3%A4ndereu"><u>Ändert sich lst, wenn ich <code>for zeile in lst:</code> verwende und zeile verändere?</u></h2>
+<ul>
+<li>JA</li>
+</ul>
 <h1 id="dictionaries"><strong>Dictionaries</strong></h1>
 <h2 id="uwie-sortieren-u"><u>Wie sortieren ?</u>:</h2>
 <ul>
@@ -1196,8 +1200,50 @@ print(insertion_sort(lst))
 <span class="hljs-number">5</span>) Simge 
 <span class="hljs-number">6</span>) Pepee 
 </div></code></pre>
+<p>#** random aufgaben**</p>
+<pre class="hljs"><code><div><span class="hljs-comment">#wir müssen uns von innen nach außen arbeiten</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mehrdim_liste_sortieren</span><span class="hljs-params">(lst:list[int])</span> -&gt; list[int]:</span>
+    <span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> lst:
+        <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(len(zeile)<span class="hljs-number">-1</span>):
+            min_elem = min(zeile[n:])
+            min_elem_index = zeile.index(min_elem,n)
+            zeile[n],zeile[min_elem_index] = zeile[min_elem_index], zeile[n]
+
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(lst)<span class="hljs-number">-1</span>):
+        min_zeile = min(lst[i:])
+        index_min_zeile = lst.index(min_zeile,i)
+        lst[i], lst[index_min_zeile] = lst[index_min_zeile],lst[i]
+
+    
+    <span class="hljs-keyword">return</span> lst
+
+
+
+lst_größe = int(input(<span class="hljs-string">"Listengröße: "</span>))
+lst = [[r.randint(<span class="hljs-number">0</span>,<span class="hljs-number">20</span>) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(lst_größe)]<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(lst_größe)]
+print(lst)
+
+<span class="hljs-comment">#erstellen einer identischen, unabhängigen copy d. unarbeiteten Liste</span>
+lst1 = copy.deepcopy(lst)
+
+<span class="hljs-comment">#Ausführen meiner Liste</span>
+i_sorted_lst = mehrdim_liste_sortieren(lst)
+print(<span class="hljs-string">f'Mein Ergebnis: <span class="hljs-subst">{i_sorted_lst}</span>'</span>)
+
+<span class="hljs-comment">#test</span>
+
+<span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> lst1:
+    zeile.sort()
+
+lst1.sort()
+print(<span class="hljs-string">f'Wie es sein sollte: <span class="hljs-subst">{lst1}</span>'</span>)
+
+<span class="hljs-keyword">if</span> lst1 == i_sorted_lst:
+    print(<span class="hljs-literal">True</span>)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-literal">False</span>)
+</div></code></pre>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
-
 </body>
 </html>
