@@ -721,7 +721,7 @@ print(liste_b)
 </ul>
 <h2 id="uwie-kann-ich-autom-ein-spielbrett-durch-gehen--werte-eins-u"><u>Wie kann ich autom. ein Spielbrett durch gehen &amp; Werte eins. ?</u></h2>
 <ul>
-<li><span style="color: rgb(252, 3, 3);">Def. eine Var. relation aufschrieben, wenn mehrere Var. f. d. Gleiche stehen:
+<li><span style="color: #fc0303;">Def. eine Var. relation aufschrieben, wenn mehrere Var. f. d. Gleiche stehen:
 <ul>
 <li>y = Zeile = m</li>
 <li>x = Spalte = n</span></li>
@@ -1305,6 +1305,56 @@ print(<span class="hljs-string">f'Wie es sein sollte: <span class="hljs-subst">{
     print(<span class="hljs-literal">True</span>)
 <span class="hljs-keyword">else</span>:
     print(<span class="hljs-literal">False</span>)
+</div></code></pre>
+<hr>
+<p><img src="image-4.png" alt="alt text"></p>
+<ul>
+<li><u><strong>Def. d. Laufzeit</strong></u></li>
+</ul>
+<ol>
+<li>Algorithmus $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{besteht}}\ \ \ \ }$ eine Schleife
+<ul>
+<li>v. $2$ bis $\sqrt{n}$</li>
+</ul>
+</li>
+<li>Anzahl d. Schrittzahlen: $\sqrt{n}-2$ weil 1 und 2 $\lnot$ enthalten</li>
+<li>$\lim_{n \to \infty} = \sqrt{n}$</li>
+</ol>
+<ul>
+<li><u><strong>Bew. d. Ü.legenheit</strong></u>:
+$$\lim_{n \to \infty} \frac{\sqrt{n}}{n}$$</li>
+</ul>
+<p>$$\lim_{n \to \infty} \frac{n^{0.5}}{n^1}$$</p>
+<p>$$\lim_{n \to \infty} n^{0.5 - 1} = \lim_{n \to \infty} n^{-0.5}$$</p>
+<p>$$\lim_{n \to \infty} \frac{1}{n^{0.5}} = \lim_{n \to \infty} \frac{1}{\sqrt{n}} = 0$$</p>
+<ul>
+<li><u><strong>Logische Rechtfertigung</strong></u>:</li>
+</ul>
+<ol>
+<li>Jeder Teiler $d$ einer Zahl $n$ hat einen Partner-Teiler $d'$, sodass $\color{#fc0303}d \cdot d' = n$ gilt.</li>
+<li>Wären beide Teiler $\boldsymbol{&gt;}$ als $\sqrt{n}$, wäre ihr Produkt $d \cdot d'$ automatisch $\boldsymbol{&gt;}$ als $n$ ($\sqrt{n} \cdot \sqrt{n} = n$).</li>
+<li>Mindestens einer d. beiden Teiler muss $\le \sqrt{n}$ sein. Finden wir bis $\sqrt{n}$ keine Zahl, d. $n$ ohne Rest teilt, kann es auch danach keine geben.</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> math
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_prime_number</span><span class="hljs-params">(n: int)</span> -&gt; bool:</span>
+
+
+    <span class="hljs-keyword">while</span> n&lt;<span class="hljs-number">0</span>:
+        print(<span class="hljs-string">"n muss positiv sein!"</span>)
+        n = int(input(<span class="hljs-string">"n: "</span>))
+
+    <span class="hljs-keyword">if</span> n &lt; <span class="hljs-number">2</span>: <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span> <span class="hljs-comment">#Weil 1 keine Primzahl, 2, weil ?</span>
+    
+    <span class="hljs-comment"># Wir prüfen nur bis zur Wurzel von n!</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, int(math.sqrt(n)) + <span class="hljs-number">1</span>):
+        <span class="hljs-keyword">if</span> n % i == <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+
+        
+n = int(input(<span class="hljs-string">"n: "</span>))
+print(is_prime_number(n))
 </div></code></pre>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
