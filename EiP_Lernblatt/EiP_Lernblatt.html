@@ -1344,7 +1344,7 @@ $$\lim_{n \to \infty} \frac{\sqrt{n}}{n}$$</li>
         print(<span class="hljs-string">"n muss positiv sein!"</span>)
         n = int(input(<span class="hljs-string">"n: "</span>))
 
-    <span class="hljs-keyword">if</span> n &lt; <span class="hljs-number">2</span>: <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span> <span class="hljs-comment">#Weil 1 keine Primzahl, 2, weil ?</span>
+    <span class="hljs-keyword">if</span> n &lt; <span class="hljs-number">2</span>: <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span> <span class="hljs-comment">#Weil 1 keine Primzahl.</span>
     
     <span class="hljs-comment"># Wir prüfen nur bis zur Wurzel von n!</span>
     <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, int(math.sqrt(n)) + <span class="hljs-number">1</span>):
