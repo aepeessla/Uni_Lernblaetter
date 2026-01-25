@@ -1356,6 +1356,85 @@ $$\lim_{n \to \infty} \frac{\sqrt{n}}{n}$$</li>
 n = int(input(<span class="hljs-string">"n: "</span>))
 print(is_prime_number(n))
 </div></code></pre>
+<hr>
+<p><img src="image-5.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum_iterativ</span><span class="hljs-params">(numbers:list[int])</span>-&gt;int:</span>
+    <span class="hljs-keyword">if</span> len(numbers) == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+    
+    <span class="hljs-keyword">else</span>:
+        summe = <span class="hljs-number">0</span>
+
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> numbers:
+            summe += i
+        <span class="hljs-keyword">return</span> summe
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum_rekursive</span><span class="hljs-params">(numbers: list[int])</span>-&gt;int:</span>
+
+    <span class="hljs-keyword">if</span> len(numbers) == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">if</span> len(numbers) == <span class="hljs-number">1</span>:
+            <span class="hljs-keyword">return</span> numbers[<span class="hljs-number">0</span>]
+        
+        <span class="hljs-keyword">return</span> numbers[<span class="hljs-number">0</span>] + sum_rekursive(numbers[<span class="hljs-number">1</span>:])
+
+
+numbers = [r.randint(<span class="hljs-number">0</span>,<span class="hljs-number">20</span>)<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>)]
+print(numbers)
+print(sum_iterativ(numbers))
+print(sum_rekursive(numbers))
+</div></code></pre>
+<ul>
+<li>number = [5,8,3]</li>
+<li><strong>Schritt 1)</strong> 5 + summe[8,3]</li>
+</ul>
+<hr>
+![alt text](image-6.png)
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">berechnen_von_feld_B</span><span class="hljs-params">(n: int, feld_A: list[int])</span>-&gt; list[int]:</span>
+    
+    <span class="hljs-comment">#wir erstellen zunächst das Feld_B</span>
+    feld_B = [[[]<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(n<span class="hljs-number">-2</span>)] <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(n<span class="hljs-number">-2</span>)]
+
+    <span class="hljs-comment">#Koordinaten für feld_B</span>
+   
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,n<span class="hljs-number">-1</span>):
+        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,n<span class="hljs-number">-1</span>):
+            
+            summe = <span class="hljs-number">0</span>
+            <span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> range(<span class="hljs-number">-1</span>,<span class="hljs-number">2</span>):
+                <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(<span class="hljs-number">-1</span>,<span class="hljs-number">2</span>):
+                    ni = i+y
+                    nj = j+x
+
+                    summe += feld_A[ni][nj]
+
+            feld_B[i<span class="hljs-number">-1</span>][j<span class="hljs-number">-1</span>] = summe
+    <span class="hljs-keyword">return</span> feld_B
+
+
+
+n = int(input(<span class="hljs-string">'n: '</span>))
+feld_A = [[r.randint(<span class="hljs-number">1</span>,<span class="hljs-number">5</span>)<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(n)] <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(n)]
+print(<span class="hljs-string">f'Feld A: <span class="hljs-subst">{feld_A}</span>'</span>)
+feld_B = berechnen_von_feld_B(n,feld_A)
+print(<span class="hljs-string">f'Feld B: <span class="hljs-subst">{feld_B}</span>'</span>)
+
+print(<span class="hljs-number">20</span>* <span class="hljs-string">'-'</span>)
+
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> feld_A:
+    print(*i)
+
+<span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> feld_B:
+    print(*j)
+</div></code></pre>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>
