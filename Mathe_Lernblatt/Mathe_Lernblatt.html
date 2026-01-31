@@ -365,6 +365,24 @@ code {
           : 'default'
     });
   </script>
+<style>
+  /* 1. Ebene: Punkt */
+  ul { list-style-type: disc; } 
+
+  /* 2. Ebene: Pfeil rechts */
+  ul ul { list-style-type: "→ "; }
+
+  /* 3. Ebene: Pfeil rechts (identisch zur 2. Ebene) */
+  ul ul ul { list-style-type: "→ "; }
+</style>
+<style>
+  img {
+    width: 1000px;  /* Hier deine gewünschte Breite eintragen */
+    height: auto;  /* Behält das Seitenverhältnis bei, damit nichts verzerrt wird */
+    display: block;
+    margin: 10px 0; /* Sorgt für etwas Abstand nach oben und unten */
+  }
+</style>
 <h1 id="stetigkeit">Stetigkeit:</h1>
 <p><span style="color: #ec1616ff;">Immer gucken, ob man den Ausdruck vereinfachen kann!</span></p>
 <h2 id="uwann-stetig-f-einen-parameter-u"><u>Wann stetig f. einen Parameter ?</u></h2>
@@ -905,6 +923,27 @@ Da $\rho = \frac{3}{2} = 1.5$ ist, gilt $\rho &gt; 1$. Nach dem Wurzelkriterium 
 </ul>
 </li>
 </ul>
+<h3 id="umonotonie-kriteriumu"><u>Monotonie-Kriterium</u></h3>
+<ul>
+<li>
+<p>Wenn eine Folge n. <em><strong>unten beschränkt</strong></em> &amp; <em><strong>monoton fallend</strong></em> ist, dann <em><strong>konvergiert</strong></em> sie !</p>
+</li>
+<li>
+<p><u>Bei explizieten Folgen $\to$ Differenz bilden</u>:</p>
+<ul>
+<li>$a_{n+1} - a_n \le 0$</li>
+</ul>
+</li>
+<li>
+<p><u>Bei Produkten oder Potenzen $\to$ Quotient</u>:</p>
+<ul>
+<li>$\frac{a_{n+1}}{a_n} \le 1$</li>
+</ul>
+</li>
+<li>
+<p><u>Rekursive Folgen $\to$ Induktion</u></p>
+</li>
+</ul>
 <hr>
 <h1 id="btaylor-polynomb"><b>Taylor Polynom</b></h1>
 <h2 id="uformelu"><u>Formel:</u></h2>
@@ -1371,6 +1410,9 @@ $= \frac{84 \div 12 }{120 \div 12} = \underline{\frac{7}{10}}$</p>
 <li>$lim_{n \to \infty} \frac{3^n}{n!}$
 <img src="image-11.png" alt="Grenzwert_Aufgabe 1"></li>
 </ol>
+<h2 id="konvergenz"><strong>Konvergenz</strong></h2>
+<p><img src="image-12.png" alt="alt text">
+<img src="WhatsApp Image 2026-01-31 at 15.44.38.jpeg" alt="Meine Berechnung"></p>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>
