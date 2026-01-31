@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mathe_Lernblatt.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="stetigkeit">Stetigkeit:</h1>
+<p><span style="color: #ec1616ff;">Immer gucken, ob man den Ausdruck vereinfachen kann!</span></p>
+<h2 id="uwann-stetig-f-einen-parameter-u"><u>Wann stetig f. einen Parameter ?</u></h2>
+<p><img src="image-10.png" alt="alt text"></p>
+<ol>
+<li><em><strong>Wo stetig ?</strong></em>
+<ul>
+<li><strong>hier:</strong> = $\mathbb{R}\backslash {0,2}$</li>
+</ul>
+</li>
+<li><em><strong>Wo kommt $x$ vor, wobei hier $x = {0,2}$ ist</strong></em>
+<ul>
+<li>Gleichsetzen &amp; n. einer d. Variabeln umstellen</li>
+</ul>
+</li>
+</ol>
+<p><img src="image-9.png" alt="Beispiel"></p>
+<ul>
+<li>Genau d. Gleiche</li>
+</ul>
+<h1 id="uzwischenwertsatzu"><u>Zwischenwertsatz</u></h1>
+<h2 id="ustetigkeit-im-mehrdimensionalem-raumu"><u>Stetigkeit im mehrdimensionalem Raum</u></h2>
+<h3 id="usandwich-lemmau"><u>Sandwich-Lemma</u>:</h3>
+<p><img src="image-7.png" alt="alt text">
+<img src="image-8.png" alt="alt text"></p>
+<h3 id="uwenn-audruck-vereinfachtu"><u>Wenn Audruck vereinfacht</u>:</h3>
+<ol>
+<li>$\lim_{\binom{x}{y} \to \binom{x_0}{y_0}}$</li>
+<li>Das Ergebnis = dem Funktionwert
+<ul>
+<li>Bsp.: $f(x,y) = \begin{cases} \frac{x^2 - y^2}{x + y}, &amp; \text{falls } y \neq -x, \ 2, &amp; \text{falls } y = -x. \end{cases}$
+<ul>
+<li>hier ist es d. $\mathbf{2}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="wachstumshierachie">Wachstumshierachie</h1>
+<p>$$\ln(n) \lt n^a \lt a^n \lt n! \lt n^n$$</p>
+<hr>
+<h1 id="grenzwerte">Grenzwerte</h1>
+<ul>
+<li>man kann theoretisch immer den dominanten Teil ausklammern $\to$ kürzen und dann den Grenzwert bestimmen !</li>
+</ul>
+<h2 id="usandwitch-lemmau"><u>Sandwitch-Lemma</u></h2>
+<ul>
+<li>
+<p>häufige Anwendung: <em><strong>Fakultät</strong></em></p>
+</li>
+<li>
+<p>Wir müssen eine <em><strong>obere</strong></em> &amp; eine <em><strong>untere Grenze</strong></em> def.</p>
+<ul>
+<li>beweisen, ab welchen $n$ es gültig ist !</li>
+</ul>
+</li>
+<li>
+<p>bei $(-1)^n \dots$</p>
+<p><img src="WhatsApp Image 2026-01-06 at 17.02.33.jpeg" alt="alt text"></p>
+</li>
+<li>
+<p>$a_n =\sqrt[n]{\dots}$
+<img src="WhatsApp Image 2026-01-06 at 17.56.52.jpeg" alt="alt text"></p>
+</li>
+<li>
+<p>$\sum_{k=1}^{n} \frac{1}{\sqrt{n^2 + k}}$</p>
+<ul>
+<li><em><strong>obere Schranke</strong></em> = $k$
+<ul>
+<li>$\mathbf{n} \cdot \frac{1}{\sqrt{n^2 + 1}}$, weil es $n \ \times$ berechnet wird</li>
+</ul>
+</li>
+<li><em><strong>untere Schranke</strong></em> = $n$
+<ul>
+<li>$\mathbf{n} \cdot \frac{1}{\sqrt{n^2 + n}}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="ulh%C3%B4pitalu"><u>L'hôpital</u></h2>
+<h3 id="uwann-darf-ich-es-benutzen-u"><u>Wann darf ich es benutzen ?</u></h3>
+<ol>
+<li>
+<p>$\lim_{x \to c} \frac{f(x)}{g(x)} = \frac{0}{0}$</p>
+</li>
+<li>
+<p>$\lim_{x \to c} \frac{f(x)}{g(x)} = \frac{\pm \infty}{\pm \infty}$</p>
+</li>
+<li>
+<p>$\lim_{x \to c} \frac{f(x)}{g(x)} = 0 \cdot \pm \infty$</p>
+<ul>
+<li><strong>Kehrbruch</strong> bilden &amp; dann anwenden</li>
+</ul>
+</li>
+</ol>
+<h2 id="ugrenzwertbetrachtung-im-mehrdimensionalenu"><u>Grenzwertbetrachtung im Mehrdimensionalen</u></h2>
+<h3 id="usandwitchlemmau"><u>Sandwitch_Lemma</u>:</h3>
+<ul>
+<li>$\sin(x), \cos(x)$
+<img src="WhatsApp Image 2025-12-31 at 16.11.14.jpeg" alt="alt text"></li>
+</ul>
+<h3 id="unormale-berechnungu"><u>Normale Berechnung</u>:</h3>
+<p><span style="color: #ec1616ff;">Sobald eine Bedingung $\lnot$ stimmt, existiert d. Grenze $\lnot$</span></p>
+<p><strong>1) Fall</strong>: $x = 0$ mit $\lim_{y \to [\text{zur jeweiligen Grenze}]} \  \lor \ y = 0$ mit $\lim_{x \to [\text{zur jeweiligen Grenze}]}$</p>
+<p><strong>2) Fall</strong>: $y = mx \ \lor x = my$</p>
+<p><strong>3) Fall</strong>: $y = x^2 \ \lor x = y^2$</p>
+<hr>
+<h1 id="reihen"><strong>Reihen</strong></h1>
+<h2 id="uspezielle-reihenu"><u>Spezielle Reihen:</u></h2>
+<ul>
+<li>
+<p><u>geometrische Reihe</u></p>
+<ul>
+<li>$\sum_{k=0}^{\infty} a \cdot r^k$
+<ul>
+<li>$|r|\lt 1$ = konvergent
+<ul>
+<li><a href="#Formelf.KonvergenzgeometrischerReihen">Formel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><u>p-Reihe</u>
+$$\sum_{k=1}^{\infty}\frac{1}{n^p}$$</p>
+<ul>
+<li>
+<p>harmonische ist nur p=1:$\sum_{k=1}^{\infty}\frac{1}{n^1 = n}$</p>
+</li>
+<li>
+<p>wenn $p \le 1$, dann <em><strong>divergiert</strong></em> sie, weil sie langsamer wächst als d. harmonische Reihe, weil sie bereits zu langsam ist</p>
+<ul>
+<li>p ist somit garantiert ein Bruch = $\sqrt[n]{n}$</li>
+</ul>
+</li>
+<li>
+<p>wenn $p \gt 1$, dann <em><strong>konvergiert</strong></em> sie, weil die schneller wächst !</p>
+</li>
+</ul>
+</li>
+<li>
+<p><u><a href="#Whatever-this-is">Whatever this is</a></u>
+$$\sum_{n=1}^{\infty}\frac{1}{n(n+1)}$$</p>
+</li>
+<li>
+<p><u>Teleskopsumme</u>
+$$\sum_{k=1}^{n} (a_k - a_{k+1})$$</p>
+</li>
+<li>
+<p>$S_n = (a_1 - a_2) + (a_2 - a_3) + (a_3 - a_4) + \dots + (a_{n-1} - a_n) + (a_n - a_{n+1})$</p>
+</li>
+<li>
+<p>N. dem <span style="color: #fc03beff;">Wegheben</span>
+aller Terme v. $a_2$ bis $a_n$ bleiben nur d. <span style="color: #fc03beff;"><em>erste Term</em> des <em>ersten Gliedes</em></span>
+&amp; d. <span style="color: #fc03beff;"><em>letzte Term</em> des <em>letzten Gliedes</em> </span>
+übrig: $S_n = a_1 - a_{n+1}$
+*  $\sum_{k=1}^{\infty} (a_k - a_{k+1}) = \lim_{n \to \infty} S_n = \lim_{n \to \infty} (a_1 - a_{n+1})$
+* Wenn $\lim_{k \to \infty} a_k = L$ existiert, dann konvergiert d. $\infty$-Reihe gegen:
+$$S = a_1 - L$$</p>
+</li>
+</ul>
+<p><a id="Whatever-this-is"></a>
+<img src="WhatsApp Bild 2025-11-26 um 13.29.22_b7ce0bb4.jpg" alt="alt text"></p>
+<p><a id="Exponentialreihe"></a></p>
+<ul>
+<li><u>Exponentialreihe</u>
+$$\mathbf{e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \dots}$$</li>
+</ul>
+<p><a id="alterniernde_Reihen"></a></p>
+<ul>
+<li>
+<p><u>Alterniernde Reihen</u>
+$$\sum_{k=0}^{\infty} (-1)^k \cdot a_k \quad \text{oder} \quad \sum_{k=0}^{\infty} (-1)^{k+1} \cdot a_k$$</p>
+</li>
+<li>
+<p><u>Potenzreihen</u></p>
+<ul>
+<li><u>Bedeutung:</u>
+<ul>
+<li>$x$: D. Var., meist reell oder komplex.</li>
+<li>$x_0$: D. Entwicklungspunkt (oder Zentrum) d. Reihe.</li>
+<li>$a_k$: Die Koeffizienten d. Reihe (oft đ Ableitungen d. Funktion $f(x)$ bestimmt).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>$$\sum_{k=0}^{\infty} a_k (x - x_0)^k = a_0 + a_1(x-x_0) + a_2(x-x_0)^2 + \dots$$</p>
+<ul>
+<li>
+<p><u>Taylor-Reihe</u>
+$$\sum_{n = 0}^{\infty} \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n$$</p>
+</li>
+<li>
+<p><u>Binomische Reihe</u></p>
+</li>
+</ul>
+<p>$$\sum_{n = 0}^{\infty} \binom{m}{n}z^n$$</p>
+<ul>
+<li>Konvergenzradius: $\mathbf{R = 1}$, weil $z$ hier keinen Koeffizienten hat
+<ul>
+<li>Bsp.: mit Variation: $\sum_{n=0}^{\infty} (2z)^n = 1 + 2z + 4z^2 + \dots$
+<ul>
+<li>$|q| &lt; 1$ muss dennoch gültig sein $\to |2z| \lt 1 = |z| \lt \frac{1}{2}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="unullfolgenkriteriumu"><u>Nullfolgenkriterium</u></h3>
+<ul>
+<li><span style="color: #fc0303ff;">Glieder einer konvergenten Reihe müssen immer gegen 0 konvergieren !</span></li>
+</ul>
+<ol>
+<li><u>Annahme (Voraussetzung)</u>: D. $\infty$ Reihe $\sum_{n=0}^{\infty} a_n$ sei konvergent.
+<ul>
+<li><u>Folge</u>: Dies bedeutet per Def., dass d. Folge d. Partialsummen $S_n = \sum_{k=0}^{n} a_k$ gegen einen endl. Grenzwert $S$ konvergiert: $\lim_{n \to \infty} S_n = S$.</li>
+</ul>
+</li>
+<li><u>Beziehung zw. Glied &amp; Partialsumme</u>: Jedes einzelne Reihenglied $a_n$ kann als d. Differenz zw. d. $n$-ten Partialsumme $S_n$ &amp; d. $(n-1)$-ten Partialsumme $S_{n-1}$ ausgedrückt werden: $a_n = S_n - S_{n-1}$</li>
+<li>Da die Folge d. Partialsummen konvergiert, strebt sowohl $S_n$ als auch d. direkt vorhergehende Term $S_{n-1}$ gegen denselben Grenzwert $S$:$\lim_{n \to \infty} a_n = \lim_{n \to \infty} (S_n - S_{n-1})$ $\lim_{n \to \infty} a_n = \lim_{n \to \infty} S_n - \lim_{n \to \infty} S_{n-1} = S - S = 0$</li>
+</ol>
+<hr>
+<h1 id="legendre-polynome"><strong>Legendre-Polynome</strong></h1>
+<ul>
+<li>
+<p><strong>Die Bestapproximation</strong></p>
+</li>
+<li>
+<p><em>d. ist wie Taylorpolynom, aber <strong>global</strong></em></p>
+</li>
+<li>
+<p><u>Thema</u>: Bestapproximation im Quadratischen Mittel ($\text{L}^2\text{-Approximation}$)</p>
+</li>
+<li>
+<p><u>Ziel</u>: D. Minimierungsproblem: $\mathbf{\min_{p_{n}}\int_{-1}^{1}|f(x)-p_{n}(x)|^{2}dx \text{, wobei } p_{n} \text{ ein Polynom vom Grad } n \text{ ist}}$</p>
+<ul>
+<li>Die Lösung $p_n$ ist das Bestapproximationspolynom $L_n(x)$.</li>
+</ul>
+</li>
+<li>
+<p>Berechnung d. Koeffizienten: $L^2$-Skalarprodukt</p>
+<ul>
+<li>$c_k = \langle f,g\rangle = \int_{-1}^{1}\overline{f(x)}g(x)dx$ (für $\mathbb{C}$) 5 oder $\int_{a}^{b}f(x)g(x)dx$ (für $\mathbb{R}$</li>
+</ul>
+</li>
+</ul>
+<h2 id="uschritteu"><u>Schritte</u>:</h2>
+<ol>
+<li>
+<p><u>Ansatz des Bestapproximationspolynoms</u>
+$$L_{n}(x)=\sum_{k=0}^{n}c_{k}P_{k}(x)$$</p>
+</li>
+<li>
+<p><u>Berechnung der Koeffizienten $c_k$B</u></p>
+</li>
+</ol>
+<ul>
+<li>
+<p>Für $\mathbb{C}$: $c_{k}=\frac{\langle P_{k},f\rangle}{||P_{k}||_{L^{2}(-1,1)}^{2}}$</p>
+</li>
+<li>
+<p>Für. $\mathbb{R}$: $\ell_k = \frac{\langle f, P_k \rangle}{||P_k||^2}$</p>
+</li>
+</ul>
+<ol>
+<li><u>Endgültige Formel des Bestapproximationspolynoms</u></li>
+</ol>
+<p><img src="image.png" alt="alt text"></p>
+<ul>
+<li>
+<p>$P_0(x) = 1$</p>
+</li>
+<li>
+<p>$P_1(x) = x$</p>
+</li>
+<li>
+<p>$P_2(x) = \frac{1}{2} \left( 3x^2 - 1 \right)$</p>
+</li>
+<li>
+<p>$P_3(x) = \frac{1}{2} \left( 5x^3 - 3x \right)$</p>
+</li>
+</ul>
+<h1 id="fourier-reihen"><strong>Fourier-Reihen</strong></h1>
+<ul>
+<li>
+<p>D. einzige Unterschied zu Legendre-Polynome ist, dass wir jzt. Trigonometrische Funktionen verw.</p>
+</li>
+<li>
+<p>Fourier-Reihen: $\frac{1}{2}a_0 + \sum_{k=1}^{n}(a_k \cos(kx) + b_k \sin(kx))$</p>
+<ul>
+<li>
+<p>$a_k = 2 \text{Re}(c_k) = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos(kx) dx$</p>
+</li>
+<li>
+<p>$b_k = -2 \text{Im}(c_k) = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin(kx) dx$</p>
+</li>
+<li>
+<p>wichtig: $\cos(x)=$ <span style="color: #61bc43ff;">gerade</span> &amp; $\sin(x)=$ <span style="color: #bc4343ff;">ungerade</span></p>
+<ul>
+<li>
+<p>Wenn z.B. $f(x) = x$, dann wissen wir sofort, dass $x$ ungerade ist = $a_k$ (also $\cos(x)$) $= 0$</p>
+</li>
+<li>
+<p>Wir müssen also nur $b_k$ berechnen</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>Re</code> = Realteil</p>
+</li>
+<li>
+<p><code>Im</code> = Imaginärteil</p>
+<ul>
+<li>Bsp.: $z = x + iy$
+<ul>
+<li>$x =$ Re, $y =$ Im</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>$P_0(x) = 1$</p>
+</li>
+<li>
+<p>$P_1(x) = x$</p>
+</li>
+<li>
+<p>$P_2(x) = \frac{1}{2} \left( 3x^2 - 1 \right)$</p>
+</li>
+<li>
+<p>$P_3(x) = \frac{1}{2} \left( 5x^3 - 3x \right)$</p>
+</li>
+</ul>
+<hr>
+<h2 id="konvergenzkriterien"><strong>Konvergenzkriterien</strong></h2>
+<p><a id="Formelf.KonvergenzgeometrischerReihen"></a></p>
+<h3 id="uformel-f-konvergenz-geometrischer-reihenu"><u>Formel f. Konvergenz geometrischer Reihen</u>:</h3>
+<p>$$\sum_{k=0}^{\infty} a \cdot x^k = 1 + x + x^2 + x^3 + \dots$$
+mit a = 1</p>
+<ul>
+<li>
+<p>Grenzwert dieser Reihe:  <span style="color: #3aac1dff;">$\boxed{\sum_{k=0}^{\infty} a \cdot r^k = \frac{a}{1-r}}$</span></p>
+<ul>
+<li><span style="color: #fc0303ff;">nur gültig</span> wenn, $|x|\lt 1$, also muss x im Intervall $(-1, 1)$ liegen</li>
+</ul>
+</li>
+</ul>
+<h3 id="umajorantenkriterium-vglkriteriumu"><u>Majorantenkriterium (Vgl.kriterium)</u>:</h3>
+<p>Seien $\sum_{k=1}^{\infty} a_k$ und $\sum_{k=1}^{\infty} b_k$ zwei Reihen, deren Glieder ab einem Index $k_0$ nicht-negativ sind ($a_k \ge 0$ und $b_k \ge 0$).</p>
+<ol>
+<li><strong>Bedingung der Glieder:</strong>
+<ul>
+<li>Die Glieder d. zu unters. Reihe $a_k$ sind $\le$ den Gliedern d. Vgl.reihe $b_k \forall k \ge k_0$: $0 \le a_k \le b_k$</li>
+</ul>
+</li>
+<li><strong>Bedingung der Konvergenz (Majorante):</strong>
+<ul>
+<li>Die <span style="color: #fc03beff;">Vgl.reihe</span> $\sum b_k$ ist <span style="color: #fc03beff;">konvergent</span>
+<ul>
+<li>Dann konvergiert auch d. zu unters. Reihe $\sum_{k=1}^{\infty} a_k$.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><u>Bsp.:</u></li>
+<li>Um beispielsweise zu zeigen, dass $\sum_{k=1}^{\infty} \frac{1}{2k}$ divergiert, kann man d. <em>Minorantenkriterium</em> verw., indem man d. Glieder vergl.: $$\frac{1}{2k} = \frac{1}{2} \cdot \frac{1}{k}$$ Da d. Reihe $\sum \frac{1}{k}$ divergiert, divergiert auch $\sum \frac{1}{2} \cdot \frac{1}{k}$ (Multiplikation mit einem <span style="color: #fc03beff;">konstanten Faktor</span>
+ungleich Null ändert d. Konvergenz nicht). Da $\sum b_k = \sum \frac{1}{2k}$ divergiert und für $k \ge 1$ gilt $\frac{1}{2k} \le \frac{1}{k}$, wäre $\sum \frac{1}{2k}$ d. Minorante, wenn wir diese mit $\sum \frac{1}{k}$ vergl. würden.</li>
+</ul>
+<h3 id="uminorantenkriterium-vglkriteriumu"><u>Minorantenkriterium (Vgl.kriterium)</u>:</h3>
+<p>Seien $\sum_{k=1}^{\infty} a_k$ &amp; $\sum_{k=1}^{\infty} b_k$ zwei Reihen, deren Glieder ab einem Index $k_0$ nicht-negativ sind ($a_k \ge 0$ und $b_k \ge 0$).</p>
+<ol>
+<li><strong>Bedingung der Glieder:</strong>
+<ul>
+<li>Die Glieder d. zu unters. Reihe $a_k$ sind $\le$ den Gliedern d. Vgl.reihe $b_k$ für alle $k \ge k_0$:
+$0 \le b_k \le a_k$</li>
+</ul>
+</li>
+<li><strong>Bedingung der Divergenz (Minorante):</strong>
+<ul>
+<li>Bedingung der Divergenz (Minorante): Die Vergleichsreihe $\sum b_k$ ist divergent.
+<ul>
+<li>Dann <span style="color: #fc0303ff;">divergiert</span>
+auch d. zu unters. Reihe $\sum_{k=1}^{\infty} a_k$.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>Die am häufigsten verwendete Minorante ist die <span style="color: #9cfd00ff;">Harmonische Reihe $\sum_{k=1}^{\infty} \frac{1}{k}$</span></li>
+<li><strong>Bsp.:</strong>
+<ul>
+<li>Ein besseres Bsp ff. d. Anw. ist d. Reihe $\sum_{k=1}^{\infty} \frac{1}{\sqrt{k}}$. Wir wählen d. Minorante $b_k = \frac{1}{k}$ (divergiert). F. $k \ge 1$ gilt $\sqrt{k} \le k$.Daher ist $\frac{1}{\sqrt{k}} \ge \frac{1}{k}$.Weil $b_k \le a_k$ und $\sum b_k$ divergiert, divergiert auch $\sum \frac{1}{\sqrt{k}}$.</li>
+</ul>
+</li>
+</ul>
+<h3 id="uabsolute-konvergenzu"><u>Absolute Konvergenz</u>:</h3>
+<ul>
+<li>$z = |z|(\cos \varphi + i \sin \varphi)$</li>
+<li>Eine Reihe $\sum_{n=0}^{\infty} a_n$ heißt absolut konvergent, wenn die Reihe der Beträge $\sum_{n=0}^{\infty} |a_n|$ konvergiert.
+$$\sum z^n$$</li>
+<li>Die Reihe der Beträge ist hier:$\sum_{n=0}^{\infty} |z^n| = \sum_{n=0}^{\infty} |z|^n$
+<ul>
+<li>Dies ist eine reelle geometrische Reihe mit dem Quotienten $r = |z|$.</li>
+<li><strong>Konvergenz:</strong> D. Summe konvergiert genau dann, wenn d. Quotient $|z| \lt 1$. Die Summenformel ist dann $\frac{1}{1-|z|}$.$$\sum_{n=0}^{\infty} |z|^n = \frac{1}{1-|z|}, \quad \text{falls } |z|&lt;1$$</li>
+<li><strong>Divergenz:</strong> D. Summe divergiert (gegen $+\infty$), falls $|z| \ge 1$  ist. $\sum_{n=0}^{\infty} |z|^n \quad \text{divergiert (gegen }+\infty), \quad \text{falls } |z| \ge 1$</li>
+</ul>
+</li>
+</ul>
+<p><a id="Quotientenkriteriums"></a></p>
+<h3 id="uquotientenkriteriumu"><u>Quotientenkriterium</u></h3>
+<ul>
+<li>
+<p>Sei $(a_k)_{k \in \mathbb{N}}$ eine Folge:</p>
+<ul>
+<li>$\mathbf{\rho = \lim_{k \to \infty} \left| \frac{a_{k+1}}{a_k} \right|}$</li>
+<li><strong>dann gilt:</strong>:
+<ol>
+<li><u>Konvergenz</u>: Falls $\mathbf{\rho &lt; 1}$, so ist $\sum_{k=0}^{\infty} a_k$ absolut konvergent.</li>
+<li><u>Divergenz</u>: Falls $\mathbf{\rho &gt; 1}$, so ist $\sum_{k=0}^{\infty} a_k$ divergent.</li>
+<li><u>Keine Aussage</u>: Falls $\mathbf{\rho = 1}$, ist keine Aussage möglich.
+<ul>
+<li>Man muss ein anderes Kriterium (z.B. <span style="color: #fc0303ff;">Majoranten-</span>
+oder <span style="color: #fc0303ff;">Wurzelkriterium</span>
+) verwenden.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><u>Bsp.:</u></p>
+</li>
+<li>
+<p><a href="#Exponentialreihe">Exponentialreihe</a></p>
+</li>
+<li>
+<p><u>Reihe</u>: $\sum_{n=0}^{\infty} a_n$, wobei d. Glieder $a_n = \frac{1}{n!} x^n$ sind
+$$\left| \frac{a_{n+1}}{a_n} \right| = \left| \frac{\frac{1}{(n+1)!} x^{n+1}}{\frac{1}{n!} x^n} \right|$$
+$$\left| \frac{x^{n+1}}{(n+1)!} \cdot \frac{n!}{x^n} \right|$$</p>
+</li>
+<li>
+<p>Potenzen: $\frac{x^{n+1}}{x^n} = x$</p>
+</li>
+<li>
+<p>Fakultäten: $\frac{n!}{(n+1)!} = \frac{n!}{(n+1)n!} = \frac{1}{n+1}$
+$$\left| x \cdot \frac{1}{n+1} \right| = |x| \cdot \frac{1}{n+1}$$</p>
+</li>
+</ul>
+<p>Jzt. berechnet man den Grenzwert $\rho$ für $n \to \infty$:</p>
+<p>$$\rho = \lim_{n \to \infty} \left| x \right| \cdot \frac{1}{n+1}$$</p>
+<p>Da $|x|$ für jedes $x$ eine feste, endliche Zahl ist und $\lim_{n \to \infty} \frac{1}{n+1} = 0$:</p>
+<p>$$\rho = |x| \cdot 0 = \mathbf{0}$$</p>
+<ul>
+<li><u>Schlussfoglerung</u>: Da der Grenzwert $\rho = 0$ ist, gilt immer $\rho &lt; 1$, unabhängig davon, welche komplexe Zahl $x$ gewählt wurde:</li>
+</ul>
+<p>$\rho = 0 \implies \sum_{n=0}^{\infty} \frac{1}{n!} x^n \text{ ist absolut konvergent } \forall x \in \mathbb{C}$</p>
+<p><u>Daher konvergiert d. Exponentialreihe $\forall x$ im gesamten komplexen Raum.</u></p>
+<h3 id="uleibniz-kriteriumu"><u>Leibniz-Kriterium</u></h3>
+<ul>
+<li>
+<p><u>Verwendung:</u> <a href="#alterniernde_Reihen">Alterniernde Reihen</a></p>
+</li>
+<li>
+<p><u>Kriterien:</u></p>
+<ul>
+<li>
+<p><strong>Monotonie</strong>: D. Folge der Beträge $(a_k)<em>{k \in \mathbb{N}}$ muss <span style="color: #fce303ff;"> monoton fallend sein</span>:$$a</em>{k+1} \le a_k \quad \text{für fast alle } k$$</p>
+</li>
+<li>
+<p><strong>Nullfolge</strong>: D.Folge d. Beträge muss eine Nullfolge sein: $$\lim_{k \to \infty} a_k = 0$$</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a id="Wurzelkriteriums"></a></p>
+<h3 id="uwurzelkriteriumu"><u>Wurzelkriterium</u></h3>
+<ul>
+<li>
+<p>Besonders nützlich, wenn Glieder d. Reihe Potenzen v. $k$ enthalten.
+$$\mathbf{\rho = \lim_{k \to \infty} \sqrt[k]{|a_k|}}$$</p>
+</li>
+<li>
+<p><u>Konvergenz:</u></p>
+<ol>
+<li>$\mathbf{\rho &lt; 1} \implies \sum_{k=0}^{\infty} a_k$ absolut konvergent.</li>
+<li>$\mathbf{\rho &gt; 1} \implies \sum_{k=0}^{\infty} a_k$ divergent.</li>
+<li>$\mathbf{\rho = 1} \implies$ keine Aussage möglich
+<ul>
+<li>Man muss ein anderes Kriterium verw. (z.B. d. Quotientenkriterium).</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><u>Bsp.:</u> $$\sum_{k=1}^{\infty} \left( \frac{3k}{2k + 1} \right)^k$$</p>
+</li>
+</ul>
+<ol>
+<li><u>Grenzwert bestimmen:</u></li>
+</ol>
+<p>$$\rho = \lim_{k \to \infty} \sqrt[k]{|a_k|} = \lim_{k \to \infty} \sqrt[k]{\left| \left( \frac{3k}{2k + 1} \right)^k \right|}$$</p>
+<ul>
+<li>$\forall$ Terme $\gt 0 \implies$ $k$-te Wurzel &amp; d. $k$-te Potenz heben sich auf</li>
+</ul>
+<p>$$\rho = \lim_{k \to \infty} \sqrt[k]{|a_k|} = \lim_{k \to \infty} \sqrt[\cancel{k}]{\left| \left( \frac{3k}{2k + 1} \right)^{\cancel{k}} \right|}$$</p>
+<p>$$\rho = \lim_{k \to \infty} \frac{3k}{2k + 1}$$</p>
+<ol>
+<li><u>Grenzwert berechnen</u></li>
+</ol>
+<p>$$\rho = \lim_{k \to \infty} \frac{3}{2 + \frac{1}{k}}$$</p>
+<ul>
+<li>Da $\lim_{k \to \infty} \frac{1}{k} = 0$:</li>
+</ul>
+<p>$$\rho = \frac{3}{2 + 0} = \mathbf{\frac{3}{2}}$$</p>
+<ol>
+<li><u>Schlussfolgerung</u>:
+Da $\rho = \frac{3}{2} = 1.5$ ist, gilt $\rho &gt; 1$. Nach dem Wurzelkriterium ist d. Reihe divergent.</li>
+</ol>
+<h3 id="ukonvergenzradius-ru"><u>Konvergenzradius $R$</u></h3>
+<ul>
+<li>kann mit <a href="#Quotientenkriteriums">Quotientenkriteriums</a> oder  <a href="#Wurzelkriteriums">Wurzelkriteriums</a> gefunden werden</li>
+<li>konvergiert absolut $\forall x$, d. innerhalb des Radius liegen: $|x - x_0| &lt; R$</li>
+<li>divergiert $\forall x$, d. außerhalb des Radius liegen: $|x - x_0| &gt; R$</li>
+<li>muss auch an den Rändern des Intervalls selbst geprüft werden: $|x - x_0| = R$.</li>
+<li><span style="color: #fc03beff;">Man kann sie wie normale Polynome behandeln !</span>
+<ul>
+<li><strong>Bsp.</strong>: $$\frac{d}{dx} \left( \sum_{k=0}^{\infty} a_k x^k \right) = \sum_{k=1}^{\infty} k \cdot a_k x^{k-1}$$</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="btaylor-polynomb"><b>Taylor Polynom</b></h1>
+<h2 id="uformelu"><u>Formel:</u></h2>
+<p><span style="color: green;">$$T_n(x;a) = \sum_{k=0}^n \frac{f^{(k)}}{k!} \cdot (x-a)^k$$</span></p>
+<hr>
+<h1 id="bableitungenb"><b>Ableitungen</b></h1>
+<h2 id="mathbfxx">$\mathbf{x^x}$</h2>
+<ul>
+<li>Sonderfall
+<ul>
+<li>$x^x = e^{\ln(x)\cdot x}$</li>
+</ul>
+</li>
+</ul>
+<h2 id="mathbfsinx2">$\mathbf{\sin(x)^2}$</h2>
+<ul>
+<li>es ist eine verschachtelte Funktion
+<ul>
+<li>außen = $v^2$</li>
+<li>innen = $\sin(x)$</li>
+</ul>
+</li>
+</ul>
+<h2 id="mathbfsinhx2-leftrightarrow-coshx2">$\mathbf{\sinh(x)^2 \leftrightarrow \cosh(x)^2}$</h2>
+<ul>
+<li>$\cosh(x) \leftrightarrow \sinh(x)$</li>
+</ul>
+<hr>
+<h2 id="mathbfsinpi-x2">$\mathbf(\sin(\pi x)^2)$</h2>
+<ul>
+<li>äußerste Funktion: $u(v)$</li>
+<li>mittlere Funktion: $v(w)$</li>
+<li>innerste Funktion: $w(x)$</li>
+</ul>
+<h3 id="urechnungu"><u>Rechnung:</u></h3>
+<p>$$\sin(\pi x)^2$$
+$$u(v) = (v)^2 \to 2(v) $$
+$$v(w) = \sin(\pi x) \to \cos(w)$$
+$$w(x) = \pi x \to \pi$$
+$$= 2(\sin(\pi x)) \cdot \cos(\pi x) \cdot \pi \iff \overbrace{2 \pi}^{\text{Identität}}
+(\sin(\pi x)) \cdot \cos(\pi x) $$</p>
+<ul>
+<li>wobei hier $\alpha = \pi x$</li>
+</ul>
+<p>$$\iff \pi = 2 \cdot (2 \sin(\pi x) \cdot \cos(\pi x)) \iff \pi \sin(2 \pi x)$$</p>
+<p>$$\underline{\underline{f'(x)= \pi \sin(2 \pi x)}}$$</p>
+<h2 id="ubwie-berechnet-man-cos2x-f%C3%BCr-x--0-ub"><u><b>Wie berechnet man $\cos^2(x)$ für $x = 0$ ?</u></b></h2>
+<ul>
+<li>wir können uns erst einmal $\cos(0)$ angucken: $\cos(0) = 1$ &amp; dann $1^2$ berechnen: $1^2 = 1$</li>
+</ul>
+<p><b>Ergebnis</b> : $\cos^2(0) = 1$</p>
+<br>
+<h2 id="ubnullstellenub"><u><b>Nullstellen</u></b></h2>
+<h3 id="umethodenu"><u>Methoden:</u></h3>
+<ol>
+<li><u><b>Zwischenwertsatz</u></b>
+<ul>
+<li>$f(x)$ ist einmal $\gt 0$ und einmal $\lt 0$
+= <b>Nullstelle garantiert</b></li>
+</ul>
+</li>
+<li><u><b>Newton Verfahren</b></u>
+<ul>
+<li><code>Formel</code> = <span style="color: green;">${x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}}$</span>
+<ul>
+<li>man beginnt z.B. bei $x_0 = 0 \to 0 - \frac{f(0)}{f'(0)} = Ergebnis$</li>
+<li>$x_1 = Ergebnis - \frac{f(Ergebnis)}{f'(Ergebnis)}$</li>
+<li>usw.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="bidentit%C3%A4ten--regelnb"><b>Identitäten &amp; Regeln</b></h1>
+<h2 id="trigonometrie"><code>Trigonometrie:</code></h2>
+<ul>
+<li>
+<p>$\sin(2 \alpha) \iff 2 \sin(\alpha) \cos(\alpha)$</p>
+</li>
+<li>
+<p>$\cos(\alpha)^2 + \sin(\alpha)^2 \iff 1$</p>
+</li>
+<li>
+<p>$\cos^2(\alpha) - \sin^2(\alpha) \iff \cos(2\alpha)$</p>
+</li>
+<li>
+<p>$\cos^2(t) = \frac{1}{2} (1 + \cos(2t))$ oder $\frac{1+ \cos(2t)}{2}$</p>
+</li>
+<li>
+<p>$\sin(x) \cdot \cos(x) = \frac{1}{2} \sin(2x)$</p>
+</li>
+<li>
+<p>$\sin^2(t) = \frac{1-\cos(2t)}{2}$</p>
+  <hr>
+</li>
+<li>
+<p><em><strong>Kehrbruch</strong></em>:</p>
+<ul>
+<li>$\sec(x) = \frac{1}{\cos(x)} \leftrightarrow \csc(x) = \frac{1}{\sin(x)}$</li>
+</ul>
+</li>
+<li>
+<p><em><strong>Verhältnis</strong></em>:</p>
+<ul>
+<li>$\tan(x) = \frac{\sin(x)}{\cos(x)} \leftrightarrow  \cot(x) = \frac{\cos(x)}{\sin(x)}$</li>
+</ul>
+</li>
+<li>
+<p><em><strong>Umkehrfunktion</strong></em>:</p>
+<ul>
+<li>$arc...$</li>
+</ul>
+</li>
+<li>
+<p><em><strong>Hyperbelfunktion</strong></em>:</p>
+<ul>
+<li>
+<p>$\sinh(x) = \frac{e^x - e^{-x}}{2} \leftrightarrow \cosh(x) = \frac{e^x + e^{-x}}{2}$</p>
+<ul>
+<li>$\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$, weil $\frac{\sinh(x)}{\cosh(x)}$</li>
+</ul>
+</li>
+</ul>
+  <hr>
+</li>
+<li>
+<p>$\frac{d}{dx}\arctan(x) = \frac{1}{1+x^2}$</p>
+</li>
+<li>
+<p>$\frac{d}{dx} \operatorname{arccot}(x) = - \frac{1}{1+x^2}$</p>
+</li>
+</ul>
+<h3 id="additionstheorem"><code>Additionstheorem:</code></h3>
+<h1 id="bgesetzeb"><b>Gesetze</b></h1>
+<h2 id="wurzeln"><code>Wurzeln</code></h2>
+<ul>
+<li>$k \cdot \sqrt{m} = \sqrt{k^2 \cdot m}$
+<ul>
+<li><span style="color: grey;">Übung 3, Aufgabe 3.4)a)i)</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="logaririthmus"><code>Logaririthmus</code></h2>
+<ul>
+<li><b>Umkehrfunktion</b>: $y = ln(x) \to f^{-1}(y) = e^y$</li>
+</ul>
+<h2 id="exponentialfunktion"><code>Exponentialfunktion</code></h2>
+<ul>
+<li><b>Umkehrfunktion</b>: $y = e^x \to f^{-1}(y) = \ln(y)$</li>
+</ul>
+<h1 id="bintegraleb"><b>Integrale</b></h1>
+<h3 id="utrapetzregelu"><u>Trapetzregel:</u></h3>
+<ul>
+<li>man kann mit d. Trapetzregel dem Integralwert v. \ln(x) nähern</li>
+<li><span style="color: green;">$A = \frac{1}{2} \cdot (Höhe_1 + Höhe_2) \cdot Breite$</span>
+<ul>
+<li><code>Breite</code>: Intervall auf x-Achse</li>
+<li><code>Höhe</code> = f(x) an den Intervallgrenzen</li>
+</ul>
+</li>
+</ul>
+<h2 id="uregelnu"><u>Regeln</u></h2>
+<h3 id="summenregel"><code>Summenregel</code></h3>
+<p>$$\int (x^2 + 2) ,dx = \int x^2 ,dx + \int 2 ,dx$$</p>
+<h3 id="potenzregel"><code>Potenzregel:</code></h3>
+<p>$$f(x) = x^n \to F(x) = \frac{1}{n+1}x^{n+1}+C $$</p>
+<h3 id="e-funktion"><code>e-Funktion</code></h3>
+<p>$$f(x) = e^x \to F(x) = e^x + C$$</p>
+<h3 id="algm-exponentialfunktion"><code>Algm. Exponentialfunktion</code></h3>
+<p>$$f(x) = a^x \to \frac{a^x}{\ln(a)} + C$$</p>
+<h2 id="utechnikenu"><u>Techniken</u></h2>
+<h3 id="partielle-integration-produktintegration"><code>Partielle Integration (Produktintegration)</code></h3>
+<ul>
+<li>Umkehrfunktion d. Produktregel</li>
+</ul>
+<p>$$\int u(x) \cdot v'(x) ,dx = u(x) \cdot v(x) - \int u'(x) \cdot v(x) ,dx$$</p>
+<ul>
+<li><u>Faustregel</u>: <span style="color: red;"> $u(x)$ so asuwählen, sodass es bei d. Ableitung einfacher wird</span></li>
+</ul>
+<h3 id="substitutionsregel"><code>Substitutionsregel</code></h3>
+<ul>
+<li>Umkehfunktion d. Kettenregel</li>
+</ul>
+<ol>
+<li>
+<p><u><b>unbestimmtes Integral</b></u>: $\int$</p>
+<ul>
+<li>$\int e^{2x}$
+<ol>
+<li><u>Subsitution</u>: $u = 2x$ &amp; $dx = \frac{du}{2}$</li>
+<li><u>Integrieren</u>: $\int e^u \cdot \frac{1}{2} du = \frac{1}{2}e^u + C$</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><u><b>Bestimmtes Integral</b></u>:</p>
+<ul>
+<li>$\int_{0}^{1} e^{2x} ,dx$
+<ol>
+<li><u>Substitution &amp; Differential</u>: $u = 2x$ &amp; $dx = \frac{du}{2}$</li>
+<li><u>Grenzen anpassen</u>: $x=0 \to u=0$; $x=1 \to u=2$</li>
+<li><u>Integrieren</u>: $\int_{\mathbf{0}}^{\mathbf{2}} e^u \cdot \frac{1}{2} ,du = \frac{1}{2} [e^u]_{0}^{2}$</li>
+<li><u>Ende</u>: Jzt. nur n. d. neuen Grenzen eins.. KEINE Rücksubstitution v. $u$ zu $x$ mehr nötig!</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><u><b>Trigonometrsche Substitution</b></u>:</p>
+<ul>
+<li>$\sqrt{a^2-x^2} \to x = a \cdot \sin(t)$</li>
+<li>$\sqrt{x^2+a^2} \to x = a \cdot \tan(t)$</li>
+<li>$\sqrt{x^2-a^2} \to x = a \cdot \sec(t)$</li>
+</ul>
+</li>
+</ol>
+<h2 id="udas-bestimmte-integral-hauptsatz-der-differential--und-integralrechnungu"><u>Das bestimmte Integral (Hauptsatz der Differential- und Integralrechnung)</u></h2>
+<ul>
+<li>Das bestimmte Integral berechnet die Nettofläche unter d. Kurve zw. 2 Grenzen $a$ und $b$.</li>
+</ul>
+<h3 id="fundamentalsatz-der-analysis"><code>Fundamentalsatz der Analysis</code></h3>
+<p>$$\int_{a}^{b} f(x) ,dx = F(b) - F(a)$$</p>
+<h3 id="zerlegung-des-integrationsintervalls"><code>Zerlegung des Integrationsintervalls</code></h3>
+<p>$$\int_{a}^{b} f(x) ,dx = \int_{a}^{c} f(x) ,dx + \int_{c}^{b} f(x) ,dx \quad \text{für } a &lt; c &lt; b$$</p>
+<h3 id="wechseln-d-grenzen"><code>Wechseln d. Grenzen</code></h3>
+<p>$$\int_{a}^{b} f(x) ,dx = - \int_{b}^{a} f(x) ,dx$$</p>
+<h1 id="bintegration-im-mehrdimensionalem-raumb"><b>Integration im Mehrdimensionalem Raum</b></h1>
+<h2 id="ukettenlinieu"><u>Kettenlinie</u></h2>
+<h3 id="fl%C3%A4che"><strong>Fläche</strong>:</h3>
+<p>$$\int_{a}^{b} y(t) \cdot x(t) ,dt$$</p>
+<h3 id="bogenl%C3%A4nge"><strong>Bogenlänge</strong>:</h3>
+<p>$$||\dot{c}|| = \int_{a}^{b} \sqrt{(x(t))^2 + (y(t))^2} ,dt$$</p>
+<h3 id="parametisierung"><strong>Parametisierung</strong>:</h3>
+<p>$$s(t) \to t(s)$$</p>
+<h2 id="ueinheitskreisu"><u>Einheitskreis</u>:</h2>
+<h3 id="orthogonalit%C3%A4t"><strong>Orthogonalität</strong>:</h3>
+<p>$$\langle z.B.: c(t), \dot{c}(t)\rangle$$</p>
+<h3 id="l%C3%A4nge"><strong>Länge</strong>:</h3>
+<p>$$||\dot{c}|| =\int_{a}^{b} \sqrt{(x'(t))^2 + (y'(t))^2}$$</p>
+<h2 id="uformen--kategoerienu"><u>Formen + Kategoerien</u></h2>
+<ul>
+<li>
+<p><em><strong>Zikloide</strong></em>:
+<img src="image-1.png" alt="alt text"></p>
+<ul>
+<li>
+<p><strong>Symmetrie</strong>: $4\int_{\frac{t}{4}}^{\frac{t}{4}} \dots$</p>
+</li>
+<li>
+<p><strong>Fläche</strong>: $\int_{a}^{b} y(x) \cdot x'(t) ,dt$</p>
+</li>
+<li>
+<p><strong>Länge</strong>: $$\int_{a}^{b} \sqrt{(y'(t))^2+(x'(t))^2}$$</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Astroide</strong>:
+<img src="image-2.png" alt="alt text"></p>
+<ul>
+<li>
+<p><strong>Symmetrie</strong>: $4\int_{\frac{t}{4}}^{\frac{t}{4}} \dots$</p>
+</li>
+<li>
+<p><strong>Fläche</strong>: $\int_{a}^{b} y(x) \cdot x'(t) ,dt$ für $t \in$ {I. Quadrant}</p>
+</li>
+<li>
+<p><strong>Länge</strong>: $$\int_{a}^{b} \sqrt{(y'(t))^2+(x'(t))^2}$$</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Kreisvolvente</strong>:
+<img src="image-3.png" alt="alt text"></p>
+<ul>
+<li><strong>Kanonosche Parapetisierung</strong>: Bogenlänge($s(t)$) $= \left(||\dot{c}(t)|| \right) \to t(s)$</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p><strong>Vierblattrose</strong>:
+<img src="image-4.png" alt="alt text"></p>
+<ul>
+<li>
+<p><strong>Symmetrie</strong>: $4\int_{\frac{t}{4}}^{\frac{t}{4}} \dots$</p>
+</li>
+<li>
+<p><strong>Fläche</strong>: $\int_{a}^{b} y(x) \cdot x'(t) ,dt$</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Gerano-Lemniskate</strong>
+<img src="image-5.png" alt="alt text"></p>
+<ul>
+<li>
+<p><strong>Symmetrie</strong>: $2 \int_{\frac{t}{2}}^{\frac{t}{2}} \dots$</p>
+</li>
+<li>
+<p><strong>Fläche</strong>: $\int_{a}^{b} y(x) \cdot x'(t) ,dt$</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Schraublinie</strong></p>
+<p><img src="image-6.png" alt="alt text"></p>
+<ul>
+<li>
+<p><strong>Länge</strong>: $$\int_{a}^{b} \sqrt{(y'(t))^2+(x'(t))^2}$$</p>
+</li>
+<li>
+<p><strong>Parametisieren</strong>: $$s(t) \to t(s)$$</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="ufl%C3%A4che-u-d-kurveu"><u>Fläche u. d. Kurve</u></h2>
+<ul>
+<li>$c(t) = \binom{x(t)}{y(t)} = \int_{a}^{b} y(t)x'(t) ,dt$</li>
+</ul>
+<h2 id="ubogenl%C3%A4nge-einer-kurveu"><u>Bogenlänge einer Kurve</u></h2>
+<ul>
+<li>$\dot{c}(t) = ||\dot{c}(t)|| = \int_{a}^{b} \sqrt{(x'(t))^2 + (y'(t))^2} ,dt$</li>
+</ul>
+<h1 id="gradienten">Gradienten</h1>
+<p>$$f^{\nabla}(x,y) = \binom{\frac{d}{dx}f(x,y)}{\frac{d}{dy}f(x,y)}$$</p>
+<h1 id="h%C3%B6henlinie">Höhenlinie:</h1>
+<p>$f(x,y) = c$</p>
+<ul>
+<li><strong>Umstellen n. Standartform:</strong>
+<ol>
+<li><em><strong>Gerade</strong></em>:
+<ul>
+<li>$y = mx + b$</li>
+</ul>
+</li>
+<li><em><strong>Kreis um $(0,0)$</strong></em>
+<ul>
+<li>$x^2 + y^2 = r^2$</li>
+</ul>
+</li>
+<li><em><strong>Verschobener Kreis</strong></em>
+<ul>
+<li>$(x - x_0)^2 + (y-y_0)^2 = r^2$</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="bbr%C3%BCcheb"><b>Brüche</b></h1>
+<h2 id="uerweiternu"><u>Erweitern</u></h2>
+<p><u>Bsp.</u>:</p>
+<p>$$\frac{7}{24}+\frac{9}{40}+\frac{11}{60}$$
+<u>Wie bekomme ich den gleichen Nenner ?</u></p>
+<ul>
+<li>
+<p><span style="color: #FF69B4;">KgT</span></p>
+<ol>
+<li>
+<p><u>Primfaktorzerlegung</u></p>
+<p>$24 = 6 \cdot 4 = 2 \cdot 3 \cdot 2 \cdot 2 = [2^3,3]$
+$40 = 2 \cdot 20 = 2 \cdot 2 \cdot 10 = 2 \cdot 2 \cdot 2 \cdot 5 = [2^3, 5]$
+$60 = 2 \cdot 30 = 2 \cdot 2 \cdot 15 = 2\cdot 2 \cdot 3 \cdot 5 = [2^2, 3 , 5]$</p>
+<ul>
+<li>Faktoren d. Vorkommen (größte Exponent)</li>
+</ul>
+<p>$2^3 \cdot 3 \cdot 5 = 8 \cdot 3 \cdot 5 = \underline{120}$</p>
+</li>
+<li>
+<p><u>Ich kann die  gefundenen Faktoren auch zum erweitern des Zählern verwenden</u>:</p>
+<ul>
+<li>Wir gucken uns $\frac{7}{24}$ an:
+<ul>
+<li>Wir haben d. Faktoren im Hauptenner: $2^3 \cdot 3 \cdot 5$</li>
+<li>Nenner v. $T_1 = 2^3 \cdot 3 \to$ uns fehlt d. Fator 5
+$= \frac{7 \cdot 5}{24 \cdot 5} = \underline{\frac{35}{120}}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="uk%C3%BCrzenu"><u>Kürzen</u></h2>
+<p><u>Bsp.</u>:</p>
+<p>$$\frac{84}{120}$$</p>
+<p><u>Wie bekomme ich d. größte Zahl zum kürzen ?</u></p>
+<ul>
+<li>
+<p><span style="color: #FF69B4;">GgT</span></p>
+<ol>
+<li>
+<p><u>Primfaktorzerlegung</U>:</p>
+<p>$84 = 2 \cdot 42 = 2 \cdot 2 \cdot 21 = 2 \cdot 2 \cdot 3 \cdot 7 = [2^2,3,7]$
+$120 = 2 \cdot 60 = 2 \cdot 2 \cdot 30 = 2 \cdot 2 \cdot 2 \cdot 15 = 2 \cdot 2 \cdot 2 \cdot 3 \cdot 5 = [2^3,3,5]$</p>
+<ul>
+<li>Faktoren d. bei beiden v.kommen (kleinste Exponent)</li>
+</ul>
+<p>$2^2 \cdot 3 = 4 \cdot 3 = \underline{12}$
+$= \frac{84 \div 12 }{120 \div 12} = \underline{\frac{7}{10}}$</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="ufakult%C3%A4tu"><u>Fakultät</u></h2>
+<ol>
+<li>
+<p><u>D. rekursive Regel</U>:</p>
+<ul>
+<li>$n! = n \cdot (n-1)!$
+<ul>
+<li>$5! = 5 \cdot 4! = 5 \cdot (4 \cdot 3 \cdot 2 \cdot 1) = 120$.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><u>n!!</U>:</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>$n!! = \mathbf{1 \cdot 3 \cdot \dots \cdot (n-2) \cdot n}$</p>
+</li>
+<li>
+<p>$n!!! = \mathbf{3 \cdot 6 \ \dots \cdot 6 \cdot 3}$</p>
+</li>
+<li>
+<p>$(2n+1)!! = \mathbf{1 \cdot 3 \cdot \dots \cdot (2n-3) \cdot (2n-1) \cdot (2n+1)}$</p>
+</li>
+<li>
+<p>Bsp.:</p>
+<ul>
+<li>$9!!! = 9\cdot(9-3)\cdot(9-6) = 9 \cdot 6 \cdot 3 = 162$</li>
+<li>$12!!!!! = 12 \cdot (12-5)\cdot(12-10) = 12\cdot7\cdot2 = 168$</li>
+</ul>
+</li>
+</ul>
+<h2 id="uwann-verw-wir-den-grad-des-gr%C3%B6%C3%9Ften-exp-um-den-bruch-zu-vereinfachen-u"><u>Wann verw. wir den Grad des größten Exp., um den Bruch zu vereinfachen ?</u></h2>
+<ul>
+<li><span style="color: #fc0303ff;">immer, wenn wir den Grenzwert eines Bruchen angucken !!! </span></li>
+</ul>
+<h2 id="uder-binomische-lehrsatzu"><u>Der binomische Lehrsatz</u></h2>
+<p>$$(a+b)^n = \sum_{k=0}^{n} \binom{n}{k} \cdot a^{n-k} \cdot b^{k}$$</p>
+<ul>
+<li>wobei $\binom{n}{k} = \frac{n!}{k! \cdot (n-k)!}$</li>
+</ul>
+<h2 id="usymmetrie-einer-funktionu"><u>Symmetrie einer Funktion</u></h2>
+<p>$$f(-x) = |-x| = |x| = f(x)$$</p>
+<ul>
+<li>dann ist unsere Funktion gerade
+<ul>
+<li>Bsp.: $\mathbf{f(x) = |x|}$</li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
+</body>
+</html>
