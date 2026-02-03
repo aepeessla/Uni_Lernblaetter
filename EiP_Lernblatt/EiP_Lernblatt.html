@@ -844,8 +844,15 @@ print(dic)
     print(f_inhalt)
 </div></code></pre>
 <ul>
-<li>somit wird mir eine Liste aus den Elementen ausgegeben</li>
-<li><a href="#Probe.txt">Textdatei</a></li>
+<li>
+<p>das nimmt den Inhalt und packt es in eine Liste, wobei jedes Element des Textest ein Element in der gesamten readline Liste ist</p>
+</li>
+<li>
+<p>somit wird mir eine Liste aus den Elementen ausgegeben</p>
+</li>
+<li>
+<p><a href="#Probe.txt">Textdatei</a></p>
+</li>
 </ul>
 <pre class="hljs"><code><div>    <span class="hljs-comment"># Ausgabe</span>
     [<span class="hljs-string">'1) Papa \n'</span>, <span class="hljs-string">'2) Mama \n'</span>, <span class="hljs-string">'3) Efe \n'</span>, <span class="hljs-string">'4) Sude \n'</span>, <span class="hljs-string">'5) Simge \n'</span>, <span class="hljs-string">'6) Pepee \n'</span>, <span class="hljs-string">'7) Mayla '</span>]
@@ -1012,9 +1019,12 @@ Hallo was geht ?
 <li><code>%</code></li>
 </ul>
 <h2 id="uwie-kann-man-einfach-eine-neue-datei-erstellen-u"><u>Wie kann man einfach eine neue Datei erstellen ?</u>:</h2>
-<pre class="hljs"><code><div>pfad = <span class="hljs-string">'My fam.txt'</span>
-<span class="hljs-keyword">with</span> open(pfad,<span class="hljs-string">'w'</span>):
-    <span class="hljs-keyword">pass</span>
+<pre class="hljs"><code><div>
+</div></code></pre>
+<h2 id="uwie-kontrollieren-ob-ene-datei-bereits-existiert-u"><u>Wie kontrollieren, ob ene Datei bereits existiert ?</u>:</h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> os
+
+os.path.exists(&lt;pfad&gt;) -&gt; bool
 </div></code></pre>
 <h2 id="uwas-ist-ein-optionaler-parameter-u"><u>Was ist ein optionaler Parameter ?</u>:</h2>
 <ul>
@@ -1435,6 +1445,299 @@ print(<span class="hljs-number">20</span>* <span class="hljs-string">'-'</span>)
 <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> feld_B:
     print(*j)
 </div></code></pre>
+<hr>
+<h1 id="bild-hinzuf%C3%BCgen">BIld hinzufügen</h1>
+<p>import random as r</p>
+<p>def num_in_bereich(num:int)-&gt;int:
+while 0 &gt; num or num &gt; 3999:
+print(&quot;Die Zahl muss zwischen 1 und 3999 sein!&quot;)
+num = int(input(&quot;num: &quot;))
+return num</p>
+<p>def umwandlung_römische_zahl(num:int)-&gt;str:
+num = num_in_bereich(num)
+römische_zahl = &quot;&quot;</p>
+<pre><code>symbole = [['M'], ['C','D', 'M'], ['X','L', 'C'], ['I','V','X']]
+
+einheiten = [1000,100,10,1]
+n_num = num
+index = 0
+
+for reihe in einheiten:
+    rest = n_num % reihe
+    ziffer = (n_num - rest) // reihe 
+    n_num = rest
+    
+    if ziffer &lt;= 0:
+        index += 1
+        continue
+    
+    else:
+        if ziffer == 9:
+            römische_zahl += symbole[index][0] + symbole[index][2]
+        elif 6 &lt;= ziffer &lt;= 8:
+            ziffer -= 5
+            element = ziffer * symbole[index][0] 
+
+            römische_zahl += symbole[index][1] + element
+        elif ziffer == 5:
+            römische_zahl += symbole[index][1]
+
+        elif ziffer == 4:
+            römische_zahl += symbole[index][0] + symbole[index][1]
+        
+        elif 1 &lt;= ziffer &lt;= 3:
+            element = ziffer * symbole[index][0] 
+            römische_zahl += element
+    index += 1
+
+return römische_zahl
+</code></pre>
+<p>num = r.randint(1,3999)
+print(num)
+print(umwandlung_römische_zahl(num))</p>
+<hr>
+<p><img src="image-7.png" alt="alt text"></p>
+<ul>
+<li>Datei öffnen<pre class="hljs"><code><div><span class="hljs-keyword">import</span> string
+<span class="hljs-keyword">import</span> os
+
+<span class="hljs-comment">#erstellen der Datei</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">erstellen_der_dateien</span><span class="hljs-params">(n:int)</span>-&gt;<span class="hljs-keyword">None</span>:</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, n+<span class="hljs-number">1</span>):
+        name = <span class="hljs-string">f"Verändert<span class="hljs-subst">{i}</span>.txt"</span>
+        open(name, <span class="hljs-string">'w'</span>).close()
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">datei_ver</span>ä<span class="hljs-title">ndern</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">with</span> open(<span class="hljs-string">"Beispieltext.txt"</span>, <span class="hljs-string">"r"</span>) <span class="hljs-keyword">as</span> f:
+        inhalt = f.read().strip()
+        zeilen = inhalt.split(<span class="hljs-string">"\n\n"</span>)
+        f.seek(<span class="hljs-number">0</span>) <span class="hljs-comment">#Ich gehe mit den Augen in die erste zeile</span>
+        anzahl_der_Absätze = len(zeilen)
+        
+        erstellen_der_dateien(anzahl_der_Absätze)
+        
+        
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(anzahl_der_Absätze): <span class="hljs-comment">#nimm jeweils eine Zeile:</span>
+            splitet_list = zeilen[i].split()
+            <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(len(splitet_list)):
+                <span class="hljs-keyword">if</span> j % <span class="hljs-number">3</span> == <span class="hljs-number">0</span>:
+                    splitet_list[j] = splitet_list[j].upper()
+                <span class="hljs-keyword">elif</span> j % <span class="hljs-number">3</span> == <span class="hljs-number">1</span>:
+                    splitet_list[j] = splitet_list[j].lower()
+                <span class="hljs-keyword">elif</span> j % <span class="hljs-number">3</span> == <span class="hljs-number">2</span>:
+                    splitet_list[j] = <span class="hljs-string">'Helau'</span>
+            
+            
+            datei_i = <span class="hljs-string">f"Verändert<span class="hljs-subst">{i+<span class="hljs-number">1</span>}</span>.txt"</span>        
+            <span class="hljs-keyword">with</span> open(datei_i, <span class="hljs-string">'w'</span>) <span class="hljs-keyword">as</span> d:
+                d.write(<span class="hljs-string">" "</span>.join(splitet_list))
+                
+        
+datei_verändern()
+</div></code></pre>
+</li>
+</ul>
+<hr>
+<h1 id="rekursion"><strong>Rekursion</strong></h1>
+<ol>
+<li><a href="#punktsumme">Punktsumme</a></li>
+<li><a href="#Primzahltest">Primzahltest</a></li>
+<li><a href="#Bin%C3%A4rstellen_z%C3%A4hlen">Binärstellen zählen</a></li>
+</ol>
+<h2 id="%C3%BCbung-9-1">Übung 9, 1</h2>
+<p><a id="punktsumme"></a></p>
+<ul>
+<li>
+<p>n = int, Basis</p>
+</li>
+<li>
+<p>p = int, Potenz</p>
+</li>
+<li>
+<p>$S(n,p) = \sum_{k=1}^{n} k^p$</p>
+<ul>
+<li>$S(3,2) = 1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14$</li>
+</ul>
+</li>
+<li>
+<p>Wenn ich n = 3 habe, dann ist es $3 \to 2 \to 1$ &amp; am Ende dann $1 \to 2 \to 3$</p>
+</li>
+<li>
+<p>p immer gleich !</p>
+</li>
+<li>
+<p><strong>Base case</strong>:</p>
+<ul>
+<li>Wenn n == 1</li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">punktsumme_berechnen</span><span class="hljs-params">(n:int, p:int)</span>:</span>
+    wenn n gleich <span class="hljs-number">1</span> ist:
+        dann gib mir die <span class="hljs-number">1</span> zurück <span class="hljs-comment">#weil 1**{etwas} immer = 1 ist</span>
+    
+    Returne die n**p + punktsumme_berechnen(n<span class="hljs-number">-1</span>, p)
+</div></code></pre>
+<ul>
+<li>
+<p>1 Gruppe soll sich das n nehmen und es potenzieren</p>
+</li>
+<li>
+<p>sie soll der nächsten Abteilung die n-1 geben und die sollen darauf die p potenzieren</p>
+</li>
+<li>
+<p>diese sollen dann das gleiche machen bis eine Abteilung = 1 hat.</p>
+</li>
+<li>
+<p>dannach soll die letzte Abteilung das ergbenis an die Abteilung davor geben und diese Addieren</p>
+</li>
+<li>
+<p>immer so weiter bis wir am Anfang sind.</p>
+</li>
+<li>
+<p><em><strong>Code</strong></em>:</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">punktsumme_berechnen</span><span class="hljs-params">(n:int, p:int)</span> -&gt; int:</span>
+<span class="hljs-keyword">if</span> n == <span class="hljs-number">1</span>:
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
+
+<span class="hljs-keyword">return</span> n**p + punktsumme_berechnen(n<span class="hljs-number">-1</span>,p)
+
+
+n = int(input(<span class="hljs-string">"n: "</span>))
+p = int(input(<span class="hljs-string">"p: "</span>))
+print(punktsumme_berechnen(n,p))
+</div></code></pre>
+</li>
+</ul>
+<p><em><strong>Korrektur</strong></em>:</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">punktsumme_berechnen</span><span class="hljs-params">(n:int, p:int)</span> -&gt; int:</span>
+    <span class="hljs-keyword">if</span> n == <span class="hljs-number">0</span>: <span class="hljs-comment">#Besser, weil man auch n = 0 eingeben kann. Oben würde das ein error geben !</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+    
+    <span class="hljs-keyword">return</span> n**p + punktsumme_berechnen(n<span class="hljs-number">-1</span>,p)
+
+
+n = int(input(<span class="hljs-string">"n: "</span>))
+p = int(input(<span class="hljs-string">"p: "</span>))
+print(punktsumme_berechnen(n,p))
+</div></code></pre>
+<hr>
+<p><a id="Primzahltest"></a></p>
+<p><img src="image-8.png" alt="alt text"></p>
+<p><img src="image-9.png" alt="Meine Rechnung"></p>
+<ul>
+<li>bei $n = 2$ &amp; $3$ haben wir bei <code>m.floor(n**0.5)</code> $=1$, welches bedeutet, dass $2$ &amp; $3$ nur einen Teiler hat und zwar nur den Teiler $i = 1$, welches bedeutet, dass sie eine Primzahl sind, weil jede Zahl einen Teiler v. 1 hat !</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> math <span class="hljs-keyword">as</span> m
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">n_gr</span>öß<span class="hljs-title">ergleich_zwei</span><span class="hljs-params">(n:int)</span>-&gt;int:</span>
+    <span class="hljs-keyword">while</span> n &lt; <span class="hljs-number">2</span>:
+        print(<span class="hljs-string">"n muss &gt;= 2 sein!"</span>)
+        n = int(input(<span class="hljs-string">"n: "</span>))
+    <span class="hljs-keyword">return</span> n
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">primzahltest</span><span class="hljs-params">(n:int, i=<span class="hljs-number">2</span>)</span>-&gt;bool:</span>
+    
+    <span class="hljs-comment">#wenn m.floor(n**0.5), für n=2,3 = 1, dann ist es automatisch eine Primzahl, weil 1 der Teiler von alles ganzen Zahlen ist. Somit haben 2 und 3 nur die 1 als Teiler == Primzahl !</span>
+    <span class="hljs-keyword">if</span> i &gt; m.floor(n**<span class="hljs-number">0.5</span>):
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+    
+    <span class="hljs-comment">#wenn n &gt; 3, dann müssen wir ein Stopp setzen, wenn i == m.floor(n**0.5) ist  </span>
+    <span class="hljs-keyword">elif</span> i == m.floor(n**<span class="hljs-number">0.5</span>):
+        <span class="hljs-keyword">if</span> n %i == <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+        
+    <span class="hljs-comment">#das ist die normale Kontrolle zwischen [2,m.floor(n**0.5)]</span>
+    <span class="hljs-keyword">elif</span> n % i  == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> primzahltest(n,i+<span class="hljs-number">1</span>)
+    
+    
+n_test = int(input(<span class="hljs-string">"n: "</span>))
+n = n_größergleich_zwei(n_test)
+print(primzahltest(n))
+</div></code></pre>
+<hr>
+<p><a id="Binärstellen_zählen"></a></p>
+<p><img src="image-10.png" alt="alt text"></p>
+<ul>
+<li><strong>direkte Weg, ohne Rekurssion</strong>
+<ul>
+<li>habe d. Formel selbst hergeleitet 😋</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-11.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> math <span class="hljs-keyword">as</span> m
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">kontrolle_n</span><span class="hljs-params">(n:int)</span>-&gt;int:</span>
+    <span class="hljs-keyword">while</span> n &lt;= <span class="hljs-number">0</span>:
+        print(<span class="hljs-string">'n muss eine positive Zahl &amp; größer als 0 sein!'</span>)
+        n = int(input(<span class="hljs-string">'n: '</span>))
+    <span class="hljs-keyword">return</span> n
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">direkte_audgabe</span><span class="hljs-params">(n:int)</span>-&gt;int:</span>
+    k = m.log2(n)
+    <span class="hljs-keyword">return</span> int(k+<span class="hljs-number">1</span>)
+
+n_old = int(input(<span class="hljs-string">'n: '</span>))
+n = kontrolle_n(n_old)
+print(direkte_audgabe(n))
+</div></code></pre>
+<ul>
+<li><strong>Richtige Vers.</strong></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> math <span class="hljs-keyword">as</span> m
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">kontrolle_n</span><span class="hljs-params">(n:int)</span>-&gt;int:</span>
+    <span class="hljs-keyword">while</span> n &lt;= <span class="hljs-number">0</span>:
+        print(<span class="hljs-string">'n muss eine positive Zahl &amp; größer als 0 sein!'</span>)
+        n = int(input(<span class="hljs-string">'n: '</span>))
+    <span class="hljs-keyword">return</span> n
+        
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bin</span>ä<span class="hljs-title">rstellen</span><span class="hljs-params">(n:int)</span>-&gt;int:</span>
+    <span class="hljs-keyword">if</span> n &lt;= <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> + binärstellen(n//<span class="hljs-number">2</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">direkte_audgabe</span><span class="hljs-params">(n:int)</span>-&gt;int:</span>
+    k = m.log2(n)
+    <span class="hljs-keyword">return</span> int(k+<span class="hljs-number">1</span>)
+
+n_old = int(input(<span class="hljs-string">'n: '</span>))
+n = kontrolle_n(n_old)
+
+print(direkte_audgabe(n))
+print(binärstellen(n))
+</div></code></pre>
+<ul>
+<li><u>Wrm. funktioniert d. ?</u>
+<ol>
+<li>Aufruf: <code>n=4</code>: <code>return 1 + binärstellen(2)</code>
+<ul>
+<li>&quot;Ich habe hier eine 1, aber ich weiß noch nicht, was das Ergebnis von binärstellen(2) ist. Ich muss warten.&quot; ⏳ (Er schreibt sich &quot;1 + ?&quot; auf einen Zettel und legt ihn beiseite.)</li>
+</ul>
+</li>
+<li>Aufruf: <code>n=2</code>: <code>return 1 + binärstellen(1)</code>
+<ul>
+<li>&quot;Ich habe noch eine 1, aber ich muss auf das Ergebnis von binärstellen(1) warten.&quot;</li>
+</ul>
+</li>
+<li>Aufruf: <code>n=1</code>: <code>if n &lt;= 1</code>
+<ul>
+<li>gibt 1 weiter</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>1+1+1 = 3</li>
+</ul>
+</li>
+</ul>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>
