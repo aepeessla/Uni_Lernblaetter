@@ -383,6 +383,11 @@ code {
     margin: 10px 0; /* Sorgt für etwas Abstand nach oben und unten */
   }
 </style>
+<h1 id="inhaltsverzeichnis"><strong>Inhaltsverzeichnis</strong></h1>
+<ol>
+<li><a href="#Kommandozeilenargumente">Kommandozeilenargumente</a></li>
+<li><a href="#infinet_values_for_max_&amp;_min">infinet values for max &amp; min</a></li>
+</ol>
 <h1 id="tipps-f-d-klausur"><strong>Tipps f. d. Klausur</strong>:</h1>
 <ul>
 <li>wenn ich weiß, wie oft etw. passieren muss = <span style="background-color: #bddb85; color: #607a30; padding: 0px 5px; border-radius: 2px;">for-Schleife</span></li>
@@ -423,25 +428,13 @@ code {
   </table>
 </li>
 </ul>
+<p><a id="Kommandozeilenargumente"></a></p>
 <h1 id="kommandozeilenargumente"><strong>Kommandozeilenargumente</strong></h1>
 <ul>
 <li><code>import sys</code> $\leftarrow$ immer !!!</li>
 </ul>
 <h2 id="uwie-%C3%BCgibt-man-argumente-u"><u>Wie ü.gibt man Argumente ?</u></h2>
 <p><code>&lt;var&gt; = sys.[i]</code></p>
-<h1 id="infinet-values-for-max--min"><strong>infinet values for max &amp; min</strong></h1>
-<ul>
-<li><span style="background-color: #d1d1d1; color: #575757; padding: 0px 5px; border-radius: 2px;font-family:'Courier New">float('-inf')</span>
-<ul>
-<li>f. max</li>
-</ul>
-</li>
-<li><span style="background-color: #d1d1d1; color: #575757; padding: 0px 5px; border-radius: 2px;font-family:'Courier New">float('inf')</span>
-<ul>
-<li>f. min</li>
-</ul>
-</li>
-</ul>
 <pre class="hljs"><code><div><span class="hljs-keyword">import</span> sys
 
 <span class="hljs-keyword">if</span> len(sys.argv) &lt; <span class="hljs-number">3</span>: <span class="hljs-comment">#guckt, ob ich mind. 3 Elemente habe (Dateiname, liter, distanz)</span>
@@ -461,6 +454,20 @@ python3 verbracuh.py <span class="hljs-number">45.5</span> <span class="hljs-num
 <span class="hljs-comment"># Output</span>
 <span class="hljs-number">7.58</span>
 </div></code></pre>
+<p><a id="infinet_values_for_max_&_min"></a></p>
+<h1 id="infinet-values-for-max--min"><strong>infinet values for max &amp; min</strong></h1>
+<ul>
+<li><span style="background-color: #d1d1d1; color: #575757; padding: 0px 5px; border-radius: 2px;font-family:'Courier New">float('-inf')</span>
+<ul>
+<li>f. max</li>
+</ul>
+</li>
+<li><span style="background-color: #d1d1d1; color: #575757; padding: 0px 5px; border-radius: 2px;font-family:'Courier New">float('inf')</span>
+<ul>
+<li>f. min</li>
+</ul>
+</li>
+</ul>
 <h1 id="%22call-by-value%22-vs-%22call-by-reference%22"><strong>&quot;Call by Value&quot; vs. &quot;Call by Reference&quot;</strong></h1>
 <ul>
 <li>
@@ -496,6 +503,119 @@ text[<span class="hljs-number">2</span>] = i
 
 <span class="hljs-comment">#Augabe: Error</span>
 </div></code></pre>
+<ul>
+<li>
+<p><code>.upper()</code> $\to$ <em>copy</em></p>
+</li>
+<li>
+<p><code>.lower()</code> $\to$ <em>copy</em></p>
+</li>
+<li>
+<p><code>.strip()</code>: <em>str</em> $\to$ <em>str</em></p>
+<ul>
+<li>Entf. Leerzeichen v. Anfang &amp; Ende</li>
+</ul>
+</li>
+<li>
+<p><code>.split(&lt;elem&gt;)</code>: <em>str</em> $\to$ <em>list</em></p>
+</li>
+<li>
+<p><code>.replace(&lt;alt&gt;,&lt;neu&gt;)</code>: <em>str</em> $\to$ <em>str</em></p>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> string
+
+&lt;var&gt; = string.ascii_lowercase  <span class="hljs-comment">#abcdefghijklmnopqrstuvwxyz</span>
+
+&lt;var&gt; = string.ascii_uppercase <span class="hljs-comment">#ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+
+&lt;var&gt; = string.ascii_letter <span class="hljs-comment">#abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+
+&lt;var&gt; = string.digits <span class="hljs-comment">#0123456789</span>
+
+&lt;var&gt; = string.hexdigits <span class="hljs-comment">#0123456789abcdefABCDEF</span>
+
+&lt;var&gt; = string.whitespace <span class="hljs-comment">#</span>
+</div></code></pre>
+<h2 id="arbeiten-mir-pfad"><strong>Arbeiten mir Pfad</strong></h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> os
+</div></code></pre>
+<p><span style="background-color: #d2b537ff; color: #605214ff; padding: 0px 5px; border-radius: 2px;">dir = directory (Verzeichnis)</span></p>
+<ul>
+<li>
+<p><code>&lt;var&gt; = os.getcwd()</code> $\to$ <em>str</em></p>
+<ul>
+<li>aktuelles Arbeitsverzeichnis</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;var&gt; = os.chdir(&lt;pfad&gt;)</code></p>
+<ul>
+<li>wechselt Arbeitsverzeichnis</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;var&gt; = os.listdir(&lt;pfad&gt;)</code> $\to <em>list</em></p>
+</li>
+<li>
+<p><code>&lt;var&gt; = os.isfile(&lt;pfad&gt;)</code></p>
+<ul>
+<li>Ist ü.gebene Pfad eine Datei ?</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;var&gt; = os.isdir(&lt;pfad&gt;)</code></p>
+<ul>
+<li>Ist ü.gebene Pfad ein Ordner ?</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;var&gt; = os.exists(&lt;pfad&gt;)</code></p>
+<ul>
+<li>exististert Ordner oder Datei ?</li>
+</ul>
+</li>
+</ul>
+<h3 id="uerzeugen-l%C3%B6schen--umbenennenu"><u>Erzeugen löschen &amp; umbenennen</u>:</h3>
+<ul>
+<li>
+<p><code>os.mkdir(&lt;pfad&gt;/&lt;Ordner_name&gt;)</code></p>
+<ul>
+<li>erzeugt einen Ordner am Pfad</li>
+<li><code>os.mkdir('/Volumes/Efes USB/Uni/Semester 6/EiP/Übung für mich selbst/Hallo')</code>
+<ul>
+<li>pfad: /Volumes/Efes USB/Uni/Semester 6/EiP/Übung für mich selbst</li>
+<li>ordner: /Hallo</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>os.makedirs('/Volumes/Efes USB/Uni/Semester 6/EiP/Übung für mich selbst/Hallo/Was/Geht')</code></p>
+<ul>
+<li>es wird eine Kette an Ordner erstellt</li>
+<li><img src="image-12.png" alt="alt text"></li>
+</ul>
+</li>
+<li>
+<p><code>os.rmdir(&lt;pfad&gt;)</code></p>
+<ul>
+<li>Ordner löschen</li>
+</ul>
+</li>
+<li>
+<p><code>os.remove(&lt;pfad&gt;)</code></p>
+<ul>
+<li>Datei löschen</li>
+</ul>
+</li>
+<li>
+<p><code>os.replace(&lt;alt_name&gt;, &lt;neu_name&gt;)</code></p>
+<ul>
+<li>Name ändern</li>
+</ul>
+</li>
+</ul>
 <h1 id="listen"><strong>Listen</strong></h1>
 <h2 id="uwerkzeugeu"><u>Werkzeuge</u>:</h2>
 <ul>
