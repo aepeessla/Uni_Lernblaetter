@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EiP_Lernblatt.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<style>
+  /* 1. Ebene: Punkt */
+  ul { list-style-type: disc; } 
+
+  /* 2. Ebene: Pfeil rechts */
+  ul ul { list-style-type: "→ "; }
+
+  /* 3. Ebene: Pfeil rechts (identisch zur 2. Ebene) */
+  ul ul ul { list-style-type: "→ "; }
+</style>
+<style>
+  img {
+    width: 1000px;  /* Hier deine gewünschte Breite eintragen */
+    height: auto;  /* Behält das Seitenverhältnis bei, damit nichts verzerrt wird */
+    display: block;
+    margin: 10px 0; /* Sorgt für etwas Abstand nach oben und unten */
+  }
+</style>
+<h1 id="inhaltsverzeichnis"><strong>Inhaltsverzeichnis</strong></h1>
+<ol>
+<li><a href="#Kommandozeilenargumente">Kommandozeilenargumente</a></li>
+<li><a href="#infinet_values_for_max_&amp;_min">infinet values for max &amp; min</a></li>
+</ol>
+<h1 id="tipps-f-d-klausur"><strong>Tipps f. d. Klausur</strong>:</h1>
+<ul>
+<li>wenn ich weiß, wie oft etw. passieren muss = <span style="background-color: #bddb85; color: #607a30; padding: 0px 5px; border-radius: 2px;">for-Schleife</span></li>
+<li>wenn ich $\lnot$ weiß, wie oft etw. passieren muss = <span style="background-color: #85c7db; color: #2a6e83; padding: 0px 5px; border-radius: 2px;">while-Schleife</span></li>
+<li>man könnte solch eine Tabelle machen, damit es nicht so kompliziert wird  <table border="1" style="border-collapse: collapse; width: 100%; font-family: sans-serif;">
+  <thead>
+      <tr style="background-color: #f2f2f2;">
+      <th style="padding: 10px;">Schritt (i)</th>
+      <th style="padding: 10px;">Key (Element rechts)</th>
+      <th style="padding: 10px;">Liste vor dem Verschieben</th>
+      <th style="padding: 10px;">Vergleich im sortierten Teil</th>
+      <th style="padding: 10px;">Aktion / Ergebnis</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+      <td style="padding: 10px; text-align: center;">1</td>
+      <td style="padding: 10px; text-align: center;"><b>1</b></td>
+      <td style="padding: 10px;">[ 9 | <b>1</b>, 2, 7, 3 ]</td>
+      <td style="padding: 10px;">9 > 1 ? Ja.</td>
+      <td style="padding: 10px;">9 schiebt nach rechts, 1 wird vorne eingesetzt: <b>[ 1, 9 | 2, 7, 3 ]</b></td>
+      </tr>
+      <tr>
+      <td style="padding: 10px; text-align: center;">2</td>
+      <td style="padding: 10px; text-align: center;"><b>2</b></td>
+      <td style="padding: 10px;">[ 1, 9 | <b>2</b>, 7, 3 ]</td>
+      <td style="padding: 10px;">9 > 2 ? Ja.<br>1 > 2 ? Nein.</td>
+      <td style="padding: 10px;">9 schiebt nach rechts, 2 stoppt hinter der 1: <b>[ 1, 2, 9 | 7, 3 ]</b></td>
+      </tr>
+      <tr>
+      <td style="padding: 10px; text-align: center;">3</td>
+      <td style="padding: 10px; text-align: center;"><b>7</b></td>
+      <td style="padding: 10px;">[ 1, 2, 9 | <b>7</b>, 3 ]</td>
+      <td style="padding: 10px;">9 > 7 ? Ja.<br>2 > 7 ? Nein.</td>
+      <td style="padding: 10px;">9 schiebt nach rechts, 7 stoppt hinter der 2: <b>[ 1, 2, 7, 9 | 3 ]</b></td>
+      </tr>
+  </tbody>
+  </table>
+</li>
+</ul>
+<p><a id="Kommandozeilenargumente"></a></p>
+<h1 id="kommandozeilenargumente"><strong>Kommandozeilenargumente</strong></h1>
+<ul>
+<li><code>import sys</code> $\leftarrow$ immer !!!</li>
+</ul>
+<h2 id="uwie-%C3%BCgibt-man-argumente-u"><u>Wie ü.gibt man Argumente ?</u></h2>
+<p><code>&lt;var&gt; = sys.[i]</code></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> sys
+
+<span class="hljs-keyword">if</span> len(sys.argv) &lt; <span class="hljs-number">3</span>: <span class="hljs-comment">#guckt, ob ich mind. 3 Elemente habe (Dateiname, liter, distanz)</span>
+    print(<span class="hljs-string">'Bitte geben Sie Liter und die Distanz an!.'</span>)
+    sys.exit() <span class="hljs-comment">#beendet d. Programm sofort</span>
+    
+liter = float(sys.argv[<span class="hljs-number">1</span>])
+distanz = float(sys.argv[<span class="hljs-number">2</span>])
+
+verbrauch = (liter *<span class="hljs-number">100</span>)/distanz
+
+print(round(verbrauch,<span class="hljs-number">2</span>))
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment"># Terminal</span>
+python3 verbracuh.py <span class="hljs-number">45.5</span> <span class="hljs-number">600</span>
+
+<span class="hljs-comment"># Output</span>
+<span class="hljs-number">7.58</span>
+</div></code></pre>
+<p><a id="infinet_values_for_max_&_min"></a></p>
+<h1 id="infinet-values-for-max--min"><strong>infinet values for max &amp; min</strong></h1>
+<ul>
+<li><span style="background-color: #d1d1d1; color: #575757; padding: 0px 5px; border-radius: 2px;font-family:'Courier New">float('-inf')</span>
+<ul>
+<li>f. max</li>
+</ul>
+</li>
+<li><span style="background-color: #d1d1d1; color: #575757; padding: 0px 5px; border-radius: 2px;font-family:'Courier New">float('inf')</span>
+<ul>
+<li>f. min</li>
+</ul>
+</li>
+</ul>
+<h1 id="%22call-by-value%22-vs-%22call-by-reference%22"><strong>&quot;Call by Value&quot; vs. &quot;Call by Reference&quot;</strong></h1>
+<ul>
+<li>
+<p><u>Call by Value (Werte-Kopie)</u>:</p>
+<ul>
+<li>Wie ein Foto v. einem Blatt Papier
+<ul>
+<li>Wenn ich auf dem Foto herummale, bleibt das Original-Blatt sauber.</li>
+</ul>
+<pre class="hljs"><code><div>int, float, str, bool
+</div></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><u>Call by Reference (Adress-Verweis)</u>:</p>
+<ul>
+<li>Wie  Google-Doc-Link.
+<ul>
+<li>Wenn ich ü. den Link etw. im Dokument lösche, dann ist es $\forall$ anderen, d. den Link haben, auch weg.</li>
+</ul>
+<pre class="hljs"><code><div>list, dict, set
+</div></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="string"><strong>String</strong></h1>
+<p><span style="color: #fc0303ff;"><strong>Man kann ein Text nicht ändern !!!</strong></span></p>
+<pre class="hljs"><code><div>text = <span class="hljs-string">"Was machen Sachen"</span>
+
+text[<span class="hljs-number">2</span>] = i
+
+<span class="hljs-comment">#Augabe: Error</span>
+</div></code></pre>
+<ul>
+<li>
+<p><code>.upper()</code> $\to$ <em>copy</em></p>
+</li>
+<li>
+<p><code>.lower()</code> $\to$ <em>copy</em></p>
+</li>
+<li>
+<p><code>.strip()</code>: <em>str</em> $\to$ <em>str</em></p>
+<ul>
+<li>Entf. Leerzeichen v. Anfang &amp; Ende</li>
+</ul>
+</li>
+<li>
+<p><code>.split(&lt;elem&gt;)</code>: <em>str</em> $\to$ <em>list</em></p>
+</li>
+<li>
+<p><code>.replace(&lt;alt&gt;,&lt;neu&gt;)</code>: <em>str</em> $\to$ <em>str</em></p>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> string
+
+&lt;var&gt; = string.ascii_lowercase  <span class="hljs-comment">#abcdefghijklmnopqrstuvwxyz</span>
+
+&lt;var&gt; = string.ascii_uppercase <span class="hljs-comment">#ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+
+&lt;var&gt; = string.ascii_letter <span class="hljs-comment">#abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+
+&lt;var&gt; = string.digits <span class="hljs-comment">#0123456789</span>
+
+&lt;var&gt; = string.hexdigits <span class="hljs-comment">#0123456789abcdefABCDEF</span>
+
+&lt;var&gt; = string.whitespace <span class="hljs-comment">#</span>
+</div></code></pre>
+<h2 id="arbeiten-mir-pfad"><strong>Arbeiten mir Pfad</strong></h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> os
+</div></code></pre>
+<p><span style="background-color: #d2b537ff; color: #605214ff; padding: 0px 5px; border-radius: 2px;">dir = directory (Verzeichnis)</span></p>
+<ul>
+<li>
+<p><code>&lt;var&gt; = os.getcwd()</code> $\to$ <em>str</em></p>
+<ul>
+<li>aktuelles Arbeitsverzeichnis</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;var&gt; = os.chdir(&lt;pfad&gt;)</code></p>
+<ul>
+<li>wechselt Arbeitsverzeichnis</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;var&gt; = os.listdir(&lt;pfad&gt;)</code> $\to <em>list</em></p>
+</li>
+<li>
+<p><code>&lt;var&gt; = os.isfile(&lt;pfad&gt;)</code></p>
+<ul>
+<li>Ist ü.gebene Pfad eine Datei ?</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;var&gt; = os.isdir(&lt;pfad&gt;)</code></p>
+<ul>
+<li>Ist ü.gebene Pfad ein Ordner ?</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;var&gt; = os.exists(&lt;pfad&gt;)</code></p>
+<ul>
+<li>exististert Ordner oder Datei ?</li>
+</ul>
+</li>
+</ul>
+<h3 id="uerzeugen-l%C3%B6schen--umbenennenu"><u>Erzeugen löschen &amp; umbenennen</u>:</h3>
+<ul>
+<li>
+<p><code>os.mkdir(&lt;pfad&gt;/&lt;Ordner_name&gt;)</code></p>
+<ul>
+<li>erzeugt einen Ordner am Pfad</li>
+<li><code>os.mkdir('/Volumes/Efes USB/Uni/Semester 6/EiP/Übung für mich selbst/Hallo')</code>
+<ul>
+<li>pfad: /Volumes/Efes USB/Uni/Semester 6/EiP/Übung für mich selbst</li>
+<li>ordner: /Hallo</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>os.makedirs('/Volumes/Efes USB/Uni/Semester 6/EiP/Übung für mich selbst/Hallo/Was/Geht')</code></p>
+<ul>
+<li>es wird eine Kette an Ordner erstellt</li>
+<li><img src="image-12.png" alt="alt text"></li>
+</ul>
+</li>
+<li>
+<p><code>os.rmdir(&lt;pfad&gt;)</code></p>
+<ul>
+<li>Ordner löschen</li>
+</ul>
+</li>
+<li>
+<p><code>os.remove(&lt;pfad&gt;)</code></p>
+<ul>
+<li>Datei löschen</li>
+</ul>
+</li>
+<li>
+<p><code>os.replace(&lt;alt_name&gt;, &lt;neu_name&gt;)</code></p>
+<ul>
+<li>Name ändern</li>
+</ul>
+</li>
+</ul>
+<h1 id="listen"><strong>Listen</strong></h1>
+<h2 id="uwerkzeugeu"><u>Werkzeuge</u>:</h2>
+<ul>
+<li>
+<p><code>&lt;liste&gt;.clear()</code>:</p>
+<ul>
+<li>in-place</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;list&gt;.count(&lt;elem&gt;)</code>:</p>
+<ul>
+<li>zählen des Elem.</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;list1&gt;.extend(&lt;liste2&gt;)</code>:</p>
+<ul>
+<li>in-place</li>
+<li>Die Liste wird ausgepackt &amp; hinzugefügt ?</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;list&gt;.index(&lt;elem&gt;, start, end)</code>:</p>
+<ul>
+<li>gibt Index v. Objekt</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;list&gt;.insert(&lt;elem&gt;)</code>:</p>
+<ul>
+<li>in-place</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;list&gt;.reverse()</code>:</p>
+<ul>
+<li>in-place</li>
+<li><code>&lt;list&gt;[::-1]</code> = Kopie</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;list&gt;.sort()</code>:</p>
+<ul>
+<li><span style="color: rgb(255, 0, 0);">in-place</span> Sortierung</li>
+<li>sorted(<list>) = Kopie</li>
+</ul>
+</li>
+<li>
+<p><code>.pop(&lt;index&gt;)</code>:</p>
+<ul>
+<li>dann wird das Element an dieser stelle gelöscht</li>
+</ul>
+</li>
+<li>
+<p><code>.remove()</code>:</p>
+<ul>
+<li>wenn das erste Element, der dem Element in <code>.remove(&lt;elem&gt;)</code> entspricht, wird entf.</li>
+</ul>
+</li>
+<li>
+<p><code>.copy()</code>:</p>
+<ul>
+<li><span style="color: #fc0303ff;"><strong>wichtig !!!!</strong></span>
+<ul>
+<li>man kopirt nur d. <em><strong>oberste Ebene</strong></em></li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code><div>liste_a = [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+liste_b = liste_a
+
+liste_b[<span class="hljs-number">0</span>] = <span class="hljs-number">2</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">#Ausgabe:</span>
+Originale Listen:
+---------------------------------
+Lista A:  [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+Liste B: [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+
+V1 Listen:
+---------------------------------
+Liste_a: [<span class="hljs-number">2</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+Liste_b: [<span class="hljs-number">2</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+ID von A: <span class="hljs-number">1834691293696</span>
+ID von B: <span class="hljs-number">1834691293696</span>
+<span class="hljs-literal">True</span>
+</div></code></pre>
+<ul>
+<li><u><strong>Anw. des ersten .copy()</strong>:</u></li>
+</ul>
+<pre class="hljs"><code><div>liste_a = [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+liste_b = liste_a.copy()
+
+liste_b[<span class="hljs-number">0</span>] = <span class="hljs-number">2</span>
+</div></code></pre>
+<pre class="hljs"><code><div>Originale Listen:
+Lista A:  [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+Liste B: [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+
+V1 Listen:
+Liste_a: [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+Liste_b: [<span class="hljs-number">2</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+ID von A: <span class="hljs-number">2152350446080</span>
+ID von B: <span class="hljs-number">2152352749696</span>
+
+<span class="hljs-literal">False</span>
+</div></code></pre>
+<ul>
+<li><u><strong>echte unabhängige copy ?</strong></u></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> copy
+
+liste_a = [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+liste_b = copy.deepcopy(liste_a)
+
+liste_b[<span class="hljs-number">0</span>] = <span class="hljs-number">2</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">#Ausgabe:</span>
+Originale Listen:
+Lista A:  [[<span class="hljs-number">1</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">8</span>], [<span class="hljs-number">9</span>, <span class="hljs-number">6</span>], <span class="hljs-number">7</span>]
+Liste B: [[<span class="hljs-number">1</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">8</span>], [<span class="hljs-number">9</span>, <span class="hljs-number">6</span>], <span class="hljs-number">7</span>]
+
+V1 Listen:
+ID <span class="hljs-string">"OG-Conteiner"</span>: <span class="hljs-number">1667841546688</span>
+ID <span class="hljs-string">"Copy-Conteiner"</span>: <span class="hljs-number">1667839716544</span>
+
+<span class="hljs-literal">False</span>
+</div></code></pre>
+</li>
+</ul>
+<h2 id="uwann-append-und-wann--u"><u>Wann .append und wann += ?</u>:</h2>
+<ul>
+<li><code>.append()</code>:
+<ul>
+<li>Wenn ich ein Objekt mit den Klammern hinzufügen möchte
+<ul>
+<li>Bsp.: Ich lege d. gesamte tüte mit den Elementen in den Wagen</li>
+</ul>
+</li>
+<li>wenn ich nur den Inhalt hinzufügen möchte
+<ul>
+<li>Bsp.: Ich lege nur d. Ware in den Wagen &amp; schmeiße die leere Tüte weg</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code><div>haupt_liste = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
+zusatz = [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+
+<span class="hljs-comment"># Szenario A: append (Das Objekt als Ganzes)</span>
+liste_a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
+liste_a.append(zusatz)
+print(liste_a)
+<span class="hljs-comment"># Ergebnis: [1, 2, [3, 4]]  &lt;-- Liste in der Liste</span>
+
+<span class="hljs-comment"># Szenario B: += (Nur der Inhalt)</span>
+liste_b = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
+liste_b += zusatz
+print(liste_b)
+<span class="hljs-comment"># Ergebnis: [1, 2, 3, 4]    &lt;-- Alles auf einer Ebene</span>
+</div></code></pre>
+<h2 id="uwie-werden-mehrdimensionale-listen-sortiert-u"><u>Wie werden mehrdimensionale Listen sortiert ?</u></h2>
+<ul>
+<li>Es wird anhand des ersten Elements sortiert<pre class="hljs"><code><div>[<span class="hljs-number">11</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>]
+[<span class="hljs-number">16</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">16</span>]
+[<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">12</span>, <span class="hljs-number">20</span>]
+[<span class="hljs-number">10</span>, <span class="hljs-number">17</span>, <span class="hljs-number">2</span>, <span class="hljs-number">12</span>]
+---------------------------------------------------------------
+[<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">12</span>, <span class="hljs-number">20</span>] <span class="hljs-number">4</span>
+[<span class="hljs-number">10</span>, <span class="hljs-number">17</span>, <span class="hljs-number">2</span>, <span class="hljs-number">12</span>] <span class="hljs-number">10</span>
+[<span class="hljs-number">11</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>] <span class="hljs-number">11</span>
+[<span class="hljs-number">16</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">16</span>] <span class="hljs-number">16</span>
+
+<span class="hljs-comment">#größere Liste</span>
+[<span class="hljs-number">16</span>, <span class="hljs-number">0</span>, <span class="hljs-number">19</span>, <span class="hljs-number">7</span>, <span class="hljs-number">3</span>, <span class="hljs-number">18</span>, <span class="hljs-number">2</span>]
+[<span class="hljs-number">8</span>, <span class="hljs-number">15</span>, <span class="hljs-number">9</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>]
+[<span class="hljs-number">3</span>, <span class="hljs-number">14</span>, <span class="hljs-number">10</span>, <span class="hljs-number">19</span>, <span class="hljs-number">20</span>, <span class="hljs-number">20</span>, <span class="hljs-number">5</span>]
+[<span class="hljs-number">11</span>, <span class="hljs-number">1</span>, <span class="hljs-number">17</span>, <span class="hljs-number">11</span>, <span class="hljs-number">1</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]
+[<span class="hljs-number">2</span>, <span class="hljs-number">17</span>, <span class="hljs-number">12</span>, <span class="hljs-number">17</span>, <span class="hljs-number">12</span>, <span class="hljs-number">20</span>, <span class="hljs-number">3</span>]
+[<span class="hljs-number">2</span>, <span class="hljs-number">16</span>, <span class="hljs-number">16</span>, <span class="hljs-number">18</span>, <span class="hljs-number">7</span>, <span class="hljs-number">4</span>, <span class="hljs-number">0</span>]
+[<span class="hljs-number">14</span>, <span class="hljs-number">12</span>, <span class="hljs-number">1</span>, <span class="hljs-number">6</span>, <span class="hljs-number">13</span>, <span class="hljs-number">8</span>, <span class="hljs-number">20</span>]
+---------------------------------------------------------------
+[<span class="hljs-number">2</span>, <span class="hljs-number">16</span>, <span class="hljs-number">16</span>, <span class="hljs-number">18</span>, <span class="hljs-number">7</span>, <span class="hljs-number">4</span>, <span class="hljs-number">0</span>] <span class="hljs-number">2</span>
+[<span class="hljs-number">2</span>, <span class="hljs-number">17</span>, <span class="hljs-number">12</span>, <span class="hljs-number">17</span>, <span class="hljs-number">12</span>, <span class="hljs-number">20</span>, <span class="hljs-number">3</span>] <span class="hljs-number">2</span>
+[<span class="hljs-number">3</span>, <span class="hljs-number">14</span>, <span class="hljs-number">10</span>, <span class="hljs-number">19</span>, <span class="hljs-number">20</span>, <span class="hljs-number">20</span>, <span class="hljs-number">5</span>] <span class="hljs-number">3</span>
+[<span class="hljs-number">8</span>, <span class="hljs-number">15</span>, <span class="hljs-number">9</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>] <span class="hljs-number">8</span>
+[<span class="hljs-number">11</span>, <span class="hljs-number">1</span>, <span class="hljs-number">17</span>, <span class="hljs-number">11</span>, <span class="hljs-number">1</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>] <span class="hljs-number">11</span>
+[<span class="hljs-number">14</span>, <span class="hljs-number">12</span>, <span class="hljs-number">1</span>, <span class="hljs-number">6</span>, <span class="hljs-number">13</span>, <span class="hljs-number">8</span>, <span class="hljs-number">20</span>] <span class="hljs-number">14</span>
+[<span class="hljs-number">16</span>, <span class="hljs-number">0</span>, <span class="hljs-number">19</span>, <span class="hljs-number">7</span>, <span class="hljs-number">3</span>, <span class="hljs-number">18</span>, <span class="hljs-number">2</span>] <span class="hljs-number">16</span>
+</div></code></pre>
+</li>
+</ul>
+<h2 id="uwie-ver%C3%A4ndert-sich-meine-liste-wenn-ich-mit-nested-forschleifen-arbeite-u"><u>Wie verändert sich meine Liste, wenn ich mit nested-for_schleifen arbeite ?</u></h2>
+<ul>
+<li>Genau die Stelle d. ich verändern möchte, muss ich mit einem Index machen:<pre class="hljs"><code><div>lst = [[
+    [[], [], [], []], 
+    [[], [], [], []], 
+    [[], [], [], []], 
+    [[], [], [], []]
+], 
+[   [[], [], [], []], 
+    [[], [], [], []], 
+    [[], [], [], []], 
+    [[], [], [], []]
+], 
+[
+    [[], [], [], []], 
+    [[], [], [], []], 
+    [[], [], [], []], 
+    [[], [], [], []]
+]]
+
+<span class="hljs-comment">#Ich möchte d. 4. Ebene ändern = 4. Ebene = Index</span>
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> lst: <span class="hljs-comment">#lst = 1.Ebene, i = 2.Ebene</span>
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> i: <span class="hljs-comment"># 3.Ebene</span>
+        <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(len(j)): <span class="hljs-comment">#4.Ebene</span>
+            j[k] = <span class="hljs-number">2</span> 
+</div></code></pre>
+</li>
+</ul>
+<h2 id="uwie-kann-ich-autom-ein-spielbrett-durch-gehen--werte-eins-u"><u>Wie kann ich autom. ein Spielbrett durch gehen &amp; Werte eins. ?</u></h2>
+<ul>
+<li><span style="color: #fc0303;">Def. eine Var. relation aufschrieben, wenn mehrere Var. f. d. Gleiche stehen:
+<ul>
+<li>y = Zeile = m</li>
+<li>x = Spalte = n</span></li>
+</ul>
+</li>
+<li><u>Wir müssen d. Spielfeld erst einmal bauen</u>:<pre class="hljs"><code><div>n = <span class="hljs-number">5</span>
+m = <span class="hljs-number">5</span>
+
+spielfeld = [[[]<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(n)]<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(m)]
+
+<span class="hljs-comment">#spielfeld = [</span>
+<span class="hljs-comment"># [[], [], [], [], []], </span>
+<span class="hljs-comment"># [[], [], [], [], []], </span>
+<span class="hljs-comment"># [[], [], [], [], []], </span>
+<span class="hljs-comment"># [[], [], [], [], []], </span>
+<span class="hljs-comment"># [[], [], [], [], []]</span>
+<span class="hljs-comment"># ]</span>
+</div></code></pre>
+</li>
+<li><u>Zufälliges Verteilen v. Bomben</u>:<pre class="hljs"><code><div>möglichekeiten = [<span class="hljs-string">''</span>, <span class="hljs-string">'*'</span>]
+
+<span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> spielfeld:
+    <span class="hljs-keyword">for</span> spalte <span class="hljs-keyword">in</span> range(len(zeile)):
+        ausgw_elem = r.choices(möglichekeiten, weights=[<span class="hljs-number">60</span>,<span class="hljs-number">40</span>], k=<span class="hljs-number">1</span>)
+        zeile[spalte] = ausgw_elem[<span class="hljs-number">0</span>]
+
+<span class="hljs-comment">#spielfeld = [</span>
+<span class="hljs-comment">#   ['*', '', '', '*', '*'],</span>
+<span class="hljs-comment">#   ['*', '', '*', '*', ''], </span>
+<span class="hljs-comment">#   ['*', '', '', '', ''], </span>
+<span class="hljs-comment">#   ['*', '', '', '*', '*'], </span>
+<span class="hljs-comment">#   ['', '*', '*', '*', '']</span>
+<span class="hljs-comment"># ]</span>
+</div></code></pre>
+</li>
+<li><u>Wir zählen d. Nachbarn</u><pre class="hljs"><code><div>max_n = n<span class="hljs-number">-1</span>
+max_m = m<span class="hljs-number">-1</span>
+
+<span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> range(m):
+    <span class="hljs-keyword">for</span> spalte <span class="hljs-keyword">in</span> range(n):
+                
+        <span class="hljs-comment">#Ist d. Feld ü.haupt eine Bombe ? Dann brauchen wir d. Gucken d. N.barn nicht</span>
+        <span class="hljs-keyword">if</span> spielfeld[zeile][spalte] == <span class="hljs-string">'*'</span>:
+            <span class="hljs-keyword">continue</span>
+
+        bomben_count = <span class="hljs-number">0</span>
+
+        <span class="hljs-comment">#gucken d. Umgebung:</span>
+        <span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> range(<span class="hljs-number">-1</span>,<span class="hljs-number">2</span>):
+            <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(<span class="hljs-number">-1</span>,<span class="hljs-number">2</span>):
+
+                <span class="hljs-comment">#Sicherstellen, dass wir nicht auf d. [-1] Element zugreifen:</span>
+                y_now = zeile + y
+                x_now = spalte + x
+                
+                
+                <span class="hljs-comment">#Wenn nein, dann gucken, ob es p.haupt in meinem aufgespannten Brett ist</span>
+                <span class="hljs-keyword">if</span> <span class="hljs-number">0</span> &lt;= y_now &lt;= max_m <span class="hljs-keyword">and</span> <span class="hljs-number">0</span> &lt;= x_now &lt;= max_n: <span class="hljs-comment">#wenn ja, dann zählen wir d. Umgebung</span>
+                    <span class="hljs-keyword">if</span> spielfeld[y_now][x_now] == <span class="hljs-string">'*'</span>:
+                        bomben_count += <span class="hljs-number">1</span>
+        spielfeld[zeile][spalte] = bomben_count
+</div></code></pre>
+</li>
+</ul>
+<h1 id="dictionaries"><strong>Dictionaries</strong></h1>
+<h2 id="uwie-sortieren-u"><u>Wie sortieren ?</u>:</h2>
+<ul>
+<li><code>sorted_indices = sorted(häufigkeiten.keys())</code><pre class="hljs"><code><div>my_dict = {<span class="hljs-string">'a'</span>: <span class="hljs-number">2</span>, <span class="hljs-string">'c'</span>: <span class="hljs-number">1</span>, <span class="hljs-string">'b'</span>: <span class="hljs-number">4</span>, <span class="hljs-string">'d'</span>: <span class="hljs-number">3</span>}
+sortierte_liste_tupel = sorted(my_dict.keys()) <span class="hljs-comment"># Ausgabe: {'a': 1, 'b': 2, 'c': 3, 'd': 4}</span>
+</div></code></pre>
+</li>
+</ul>
+<h2 id="uwie-elemente-hinzuf%C3%BCgenu"><u>Wie Elemente hinzufügen</u>:</h2>
+<ul>
+<li><code>dic.upadte()</code></li>
+</ul>
+<pre class="hljs"><code><div>dic = {}
+n = <span class="hljs-number">7</span>
+k = <span class="hljs-number">3</span>
+
+dic.update({(n,k) : <span class="hljs-number">45</span>})
+print(dic)
+</div></code></pre>
+<hr>
+<h1 id="mit-text-arbeiten"><strong>Mit Text arbeiten</strong></h1>
+<p><span style="color: #fc0303ff;">Man muss es sich so vorstellen, dass <code>.readlines()</code> unsere Augen sind &amp; wir jede Zeile lesen ! Das heißt, wenn ich etw. hinzufüge, dass ich dann mit den Augen unter d. letzen Zeile bin. Wenn jmd. jzt. fragen würde, was da steht, dann würde ich &quot;nichts&quot; sagen, weil da nichts geschrieben steht. Damit ich lesen kann, muss ich wieder mit den Augen zur ersten Zeile, welches hier mit <code>.seek({</code><a title="D. Stelle, das ich vorlesen möchte ">index</a><code>})</code> geschieht. ES IST GANZ WICHTIG ZU WISSEN, DASS <code>.split()</code>, <code>.strip()</code>, usw. EINEN STRING ZURÜCK GEBEN !!!</span></p>
+<p>Also wenn ich in der Klausur eine Aufgabe bekommen sollte, welches mit einer Datei ist, dann muss ich als ersten gucken, ob ich den gesamten Inhalt als Ganzes brauche, oder ob ich es auch zeilenweise angucken kann.</p>
+<p>Wenn ich eine „Textanalyse“ machen muss, also den gesamten Text vor mir gedruckt haben möchte, damit ich da zum Bsp Wörter oder Buchstaben „korrigieren“ möchte, dann benutze ich readlines(). Im Computer ist d. gedruckte Blatt dann eine Liste mit den einzelnen Elementen als String mit \n &amp; \t.</p>
+<p>Wenn ich aber zeilenweise abschreiben möchte, v. einem Buch in meinen Heft, dann muss ich <code style="background-color: #a2ced4ff; font-family:'Courier New'; color: #000000ff">.readline()</code> verwenden. Wichtig hierbei ist, dass <code style="background-color: #ca7f7fff; font-family:'Courier New'; color: #000000ff">mein Auge immer einen Zeile weiter geht !</code> + ich muss dem Computer sagen, dass es etwas <code style="background-color: #ca7f7fff; font-family:'Courier New'; color: #000000ff">n Mal</code> machen soll, weil er dann etwas z.B. nur 1 mal macht</p>
+<h2 id="uallgemeinu"><u>Allgemein</u>:</h2>
+<ul>
+<li>
+<p><code>r</code> = read</p>
+</li>
+<li>
+<p><code>w</code> = write</p>
+</li>
+<li>
+<p><code>a</code> = append</p>
+</li>
+<li>
+<p><strong>Wie kombinieren?</strong></p>
+<ul>
+<li>bestehende Datei ändern möchte $\to$ <code>'r+'</code></li>
+<li>neue Datei erstellen &amp; konrollieren möchte $\to$ <code>'w+'</code></li>
+<li>an bestehende Datei etw. anhängen möchte $\to$ <code>'a+'</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="uwie-datei-%C3%B6ffnen-u"><u>Wie Datei öffnen ?</u>:</h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">with</span> open(<span class="hljs-string">"Probe.txt"</span>, <span class="hljs-string">'r'</span>) <span class="hljs-keyword">as</span> data:
+    print(data)
+</div></code></pre>
+<ul>
+<li>somit benötige ich kein <code>var = close()</code> am Ende</li>
+</ul>
+<h3 id="readlines"><em><strong>.readlines()</strong></em>:</h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">with</span> open(<span class="hljs-string">"Probe.txt"</span>, <span class="hljs-string">'r'</span>) <span class="hljs-keyword">as</span> data:
+    f_inhalt = data.readlines()
+    print(f_inhalt)
+</div></code></pre>
+<ul>
+<li>
+<p>das nimmt den Inhalt und packt es in eine Liste, wobei jedes Element des Textest ein Element in der gesamten readline Liste ist</p>
+</li>
+<li>
+<p>somit wird mir eine Liste aus den Elementen ausgegeben</p>
+</li>
+<li>
+<p><a href="#Probe.txt">Textdatei</a></p>
+</li>
+</ul>
+<pre class="hljs"><code><div>    <span class="hljs-comment"># Ausgabe</span>
+    [<span class="hljs-string">'1) Papa \n'</span>, <span class="hljs-string">'2) Mama \n'</span>, <span class="hljs-string">'3) Efe \n'</span>, <span class="hljs-string">'4) Sude \n'</span>, <span class="hljs-string">'5) Simge \n'</span>, <span class="hljs-string">'6) Pepee \n'</span>, <span class="hljs-string">'7) Mayla '</span>]
+</div></code></pre>
+<h3 id="readline"><em><strong>.readline()</strong></em></h3>
+<p>.readline() ist so, als ob wir ein Buch haben und ein Heft. Unser Auge guckt im Buch n. d. ersten Zeile und wir schreiben d.as in unser Heft ab. Autom., wenn wir ins Buch gucken, beginnen wir mit d. 2. Zeile &amp; d. schreiben wir ebenso in ins Heft. usw.
+Da wir dem Computer alles definieren müssen, müssen wir sagen wie viele solcher Prozesse wir durchmachen möchten, welches hier = 66 mal ist. D.h., dass wir 66 $\times$ d. Buch lesen &amp; abschreiben</p>
+<ul>
+<li>
+<p><em>Übungsblatt 6, Nr.4</em></p>
+</li>
+<li>
+<p>hierbei wird nur eine Zeile gelesen</p>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">with</span> open(<span class="hljs-string">"Probe.txt"</span>, <span class="hljs-string">'r'</span>) <span class="hljs-keyword">as</span> data:
+    f_inhalt = data.readline()
+    print(f_inhalt)
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment"># Augabe</span>
+<span class="hljs-number">1</span>) Papa 
+
+</div></code></pre>
+<ul>
+<li>wenn ich aber <code>print(f_inhalt, end=' ')</code> mache, dann wird es ohne den Absatz ausgegeben</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment"># Augabe</span>
+<span class="hljs-number">1</span>) Papa 
+</div></code></pre>
+<h2 id="uwie-%C4%91-zeilen-iterieren-u"><u>Wie đ Zeilen iterieren ?</u>:</h2>
+<ul>
+<li><span style="background-color: #b66464ff; color: white; padding: 0px 5px; border-radius: 2px;">đ d. Iterieren, wird ein Memory-Problem umgangen !&lt;/span</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">with</span> open(<span class="hljs-string">"Probe.txt"</span>, <span class="hljs-string">'r'</span>) <span class="hljs-keyword">as</span> data:
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> data:
+        print(line, end=<span class="hljs-string">''</span>)
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">#Ausgabe</span>
+<span class="hljs-number">1</span>) Papa 
+<span class="hljs-number">2</span>) Mama 
+<span class="hljs-number">3</span>) Efe 
+<span class="hljs-number">4</span>) Sude 
+<span class="hljs-number">5</span>) Simge 
+<span class="hljs-number">6</span>) Pepee 
+</div></code></pre>
+<h2 id="uwie-inhalt-zu-d-datei-hinzuf%C3%BCgen-u"><u>Wie Inhalt zu d. Datei hinzufügen ?</u>:</h2>
+<ul>
+<li><a href="#Probe.txt2">Text2</a></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">with</span> open(<span class="hljs-string">"Probe.txt"</span>, <span class="hljs-string">'a+'</span>) <span class="hljs-keyword">as</span> data:
+
+    mayla = <span class="hljs-string">'\n7) Mayla'</span> 
+    
+    <span class="hljs-comment"># 1. Schreiben/Anhängen</span>
+    data.write(mayla)
+    
+    <span class="hljs-comment"># 2. Zeiger zurücksetzen auf den Anfang (Index 0)</span>
+    data.seek(<span class="hljs-number">0</span>)
+    
+    <span class="hljs-comment"># 3. Lesen der gesamten Datei ab Index 0</span>
+    inhalt = data.read()
+    
+    <span class="hljs-comment"># 4. Ausgabe des gelesenen Inhalts</span>
+    print(inhalt)
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment"># Veränderte Textdatei:</span>
+<span class="hljs-number">1</span>) Papa 
+<span class="hljs-number">2</span>) Mama 
+<span class="hljs-number">3</span>) Efe 
+<span class="hljs-number">4</span>) Sude 
+<span class="hljs-number">5</span>) Simge 
+<span class="hljs-number">6</span>) Pepee 
+<span class="hljs-number">7</span>) Mayla
+</div></code></pre>
+<ul>
+<li>Wie kann man denn direkt einen kompletten langen Text hinzufügen ?</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">with</span> open(<span class="hljs-string">"Probe.txt"</span>, <span class="hljs-string">'a+'</span>) <span class="hljs-keyword">as</span> data:
+
+    <span class="hljs-comment">#String schrieben</span>
+    mayla = str(input(<span class="hljs-string">f"Was soll hinzugefügt werden: "</span>)) 
+    
+    <span class="hljs-comment">#String zur Datei hinzufügen</span>
+    data.write(<span class="hljs-string">'\n'</span> + mayla)
+
+    <span class="hljs-comment">#Position in der Datei wieder auf die erste zeile setzen</span>
+    data.seek(<span class="hljs-number">0</span>)
+    
+    lines = data.readlines()
+
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> lines:
+        print(line, end=<span class="hljs-string">""</span>)
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment"># Augabe</span>
+<span class="hljs-number">1</span>) Papa 
+<span class="hljs-number">2</span>) Mama 
+<span class="hljs-number">3</span>) Efe 
+<span class="hljs-number">4</span>) Sude 
+<span class="hljs-number">5</span>) Simge 
+<span class="hljs-number">6</span>) Pepee
+<span class="hljs-number">7</span>) Mayla
+</div></code></pre>
+<ul>
+<li><code>w+</code><pre class="hljs"><code><div><span class="hljs-keyword">with</span> open(<span class="hljs-string">"Probe.txt"</span>, <span class="hljs-string">'w+'</span>) <span class="hljs-keyword">as</span> data:
+
+    <span class="hljs-comment">#String schrieben</span>
+    mayla = str(input(<span class="hljs-string">f"Was soll hinzugefügt werden: "</span>)) 
+    
+    <span class="hljs-comment">#String zur Datei hinzufügen</span>
+    data.write(mayla)
+
+    <span class="hljs-comment">#Position in der Datei wieder auf die erste zeile setzen</span>
+    data.seek(<span class="hljs-number">0</span>)
+    
+    lines = data.readlines()
+
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> lines:
+        print(line, end=<span class="hljs-string">""</span>)
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment"># Ausgabe</span>
+Hallo was geht ?
+<span class="hljs-comment"># man sieht alos, dass d. gesamte Inhalt gelöscht wurde</span>
+</div></code></pre>
+</li>
+</ul>
+<h2 id="uwie-kann-man-denn-gezielt-leere-zeilen-entfernen-u"><u>Wie kann man denn gezielt leere Zeilen entfernen ?</u>:</h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">with</span> open(<span class="hljs-string">"Probe.txt"</span>, <span class="hljs-string">'a+'</span>) <span class="hljs-keyword">as</span> data:
+
+    data.seek(<span class="hljs-number">0</span>)
+    
+    lines = data.readlines()
+
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> lines:
+        <span class="hljs-keyword">if</span> line.strip() == <span class="hljs-string">''</span>:
+            <span class="hljs-keyword">continue</span>
+            
+        print(line, end=<span class="hljs-string">""</span>)
+</div></code></pre>
+<ul>
+<li><span style="color: #fc0303ff;">Somit sagen wir also, wenn wir an eine leere Zeile stoßen, dann einfach ignorieren &amp; mit d. nächsten Zeile weiter machen zu lesen ?</span></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment"># Text davor</span>
+
+<span class="hljs-number">1</span>) Papa 
+<span class="hljs-number">2</span>) Mama 
+<span class="hljs-number">3</span>) Efe 
+<span class="hljs-number">4</span>) Sude 
+<span class="hljs-number">5</span>) Simge 
+<span class="hljs-number">6</span>) Pepee 
+<span class="hljs-number">7</span>) Mayla 
+
+<span class="hljs-comment"># Text danach:</span>
+<span class="hljs-number">1</span>) Papa 
+<span class="hljs-number">2</span>) Mama
+<span class="hljs-number">3</span>) Efe
+<span class="hljs-number">4</span>) Sude
+<span class="hljs-number">5</span>) Simge
+<span class="hljs-number">6</span>) Pepee
+<span class="hljs-number">7</span>) Mayla
+</div></code></pre>
+<h2 id="u"><u></h2>
+<p>Wie kann ich denn machen, dass ich jede dritte Zeile oder 4. Zeile lesen möchte ?</u>:</p>
+<ul>
+<li><code>%</code></li>
+</ul>
+<h2 id="uwie-kann-man-einfach-eine-neue-datei-erstellen-u"><u>Wie kann man einfach eine neue Datei erstellen ?</u>:</h2>
+<pre class="hljs"><code><div>
+</div></code></pre>
+<h2 id="uwie-kontrollieren-ob-ene-datei-bereits-existiert-u"><u>Wie kontrollieren, ob ene Datei bereits existiert ?</u>:</h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> os
+
+os.path.exists(&lt;pfad&gt;) -&gt; bool
+</div></code></pre>
+<h2 id="uwas-ist-ein-optionaler-parameter-u"><u>Was ist ein optionaler Parameter ?</u>:</h2>
+<ul>
+<li>ein optinaler Parameter ist ein Parameter, dass immer autom, f, eine var, gegesetzt wird, falls hier ichts eingesetzt wird</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">begruessung</span><span class="hljs-params">(name=<span class="hljs-string">"Mensch"</span>)</span>:</span>
+    print(<span class="hljs-string">"Hallo "</span> + name)
+
+begruessung()       
+begruessung(<span class="hljs-string">"Lisa"</span>)  
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">#output</span>
+<span class="hljs-string">"Hallo Mensch"</span>
+<span class="hljs-string">"Hallo Lisa"</span>
+</div></code></pre>
+<h2 id="uwie-kann-man-einzelne-zeichen-z%C3%A4hlen-u"><u>Wie kann man einzelne Zeichen zählen ?</u>:</h2>
+<ul>
+<li>wir verw. .count()</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">letterCount</span><span class="hljs-params">(text, zeichen=string.ascii_letters)</span>:</span>
+    count_collection = []
+
+    <span class="hljs-keyword">for</span> letter <span class="hljs-keyword">in</span> zeichen:
+        count = text.count(letter)
+        count_collection.append(count)
+
+    <span class="hljs-keyword">return</span> count_collection
+
+text = str(input(<span class="hljs-string">'String: '</span>)) <span class="hljs-comment">#"Was machen Sachen ?"</span>
+zeichen = str(input(<span class="hljs-string">'Zeichen: '</span>)) <span class="hljs-comment">#'ach'</span>
+
+print(letterCount(text, zeichen))
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">#Output</span>
+[<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>]
+</div></code></pre>
+<ul>
+<li>$3 \times a,\  2 \times c,\  2\times h$</li>
+</ul>
+<h1 id="rekursion"><strong>Rekursion</strong></h1>
+<p>So kann mich sich die Rekursion auch vorstellen.</p>
+<p>Bsp.: Fibonacci-Zahlen</p>
+<p>Wenn du wissen willst, was der Wert von $F(5)$ ist, gehst du zu Person 5. Da diese d. Antwort $\lnot$ auswendig weiß, ruft sie sofort bei ihren Kollegen in Büro 4 und Büro 3 an und bittet sie um Hilfe. D. Problem bei d. normalen Rekursion ist, dass diese Kollegen wiederum ihre Nachbarn anrufen müssen, was zu unzähligen Telefonaten führt, bei denen dieselben Fragen immer &amp; immer wieder gestellt werden.</p>
+<p>Hier kommt unsere Schachtel 📦 ins Spiel, d. im Flur $\forall$ erreichbar steht: das Memo-Dictionary. Bevor eine Person zum Hörer greift, schaut sie erst in diese Schachtel. Liegt dort schon ein Zettel mit dem Ergebnis f. ihr Büro, nimmt sie den Wert einfach heraus &amp; gibt ihn sofort an den Fragesteller weiter. Ist d. Schachtel leer, müssen die Kollegen angerufen werden. Die Einzigen, d. niemals telefonieren müssen, sind d. Personen in Büro 0 und Büro 1. Sie kennen ihre Werte (0 und 1) sofort, legen sie als Erste in d. Schachtel und starten damit d. Kettenreaktion. Sobald eine Person d. Antw. ihrer beiden Kollegen erhalten hat, addiert sie diese, schreibt das neue Ergebnis auf einen Zettel für die Schachtel und liefert die Antwort ab. So wird jede Zahl im Gebäude nur ein einziges Mal wirklich berechnet. ✨</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">querSumme</span><span class="hljs-params">(n:str, result:int)</span>-&gt;int:</span>
+    <span class="hljs-keyword">if</span> len(n) == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">return</span> result
+    <span class="hljs-keyword">else</span>:
+        b = int(n[<span class="hljs-number">0</span>])
+        result += b
+        <span class="hljs-keyword">return</span> querSumme(n[<span class="hljs-number">1</span>:],result)
+
+
+n = str(input(<span class="hljs-string">"n: "</span>))
+n_lst = []
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> n:
+    n_lst.append(i)
+result = <span class="hljs-number">0</span>
+print(querSumme(n_lst,result))
+</div></code></pre>
+<p>oder</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">quersumme</span><span class="hljs-params">(n: int)</span> -&gt; int:</span>
+    <span class="hljs-keyword">if</span> n &lt; <span class="hljs-number">10</span>:
+        <span class="hljs-keyword">return</span> n
+    
+    <span class="hljs-keyword">return</span> (n % <span class="hljs-number">10</span>) + quersumme(n // <span class="hljs-number">10</span>)
+</div></code></pre>
+<h1 id="dreiecke"><strong>Dreiecke</strong></h1>
+<h2 id="u1-fl%C3%A4che-deines-dreiecks-begrenzenu"><u>1) Fläche deines Dreiecks begrenzen</u>:</h2>
+<ul>
+<li>
+<p><span style="color: #707070ff;">Präsenzblatt</span></p>
+</li>
+<li>
+<p><a href="https://youtu.be/ROrIMOsDMtw" target="_blank" style="color: #e4c516; text-decoration: underline;">Was wir berechnen</a></p>
+</li>
+<li>
+<p>Also $len(Höhe_{absolut})$ &amp; je n. dem wo wir uns in dem absoluten intervall befinden, wird d. Breite demetsprechend berechnet.</p>
+</li>
+<li>
+<p>$H_{absolut} \in [1,4]$</p>
+<ul>
+<li>wobei $H_{relativ} \in [0,3]$, weil Länge = $4-1 = 3$ (Gesamtlänge)</li>
+</ul>
+</li>
+<li>
+<p>Also, wir haben jzt. d. Basis $B$, aber weil wir aber d. Hälfte d. Basis benötigen = $\frac{B}{2}$</p>
+</li>
+<li>
+<p>d. absolute Höhe $H_{abs}$ &amp; autom. auch $H_{rel}$</p>
+</li>
+<li>
+<p>Die $Gesamthöhe \in [2.5, 5.5]$ &amp; $H_{relativ}$ bewegt sich im Bereich $5.5 - 2.5 = 3 \implies H_{relativ} \in [0,3]$</p>
+<ol>
+<li>random Höhe wählen</li>
+<li>$H_{rel}$ bestimmen</li>
+<li>${B}$ bestimmen</li>
+<li>x koordinaten Wählen:  $r.choice[x_{mid} - w, x_{mid} + w]$.</li>
+</ol>
+</li>
+<li>
+<p>Rampe $B = 2$ &amp; $H_{abs} = 1 \to$ Verhätnis zwischen Höhe zur Länge $= \frac{Höhe}{Länge}$</p>
+<ul>
+<li>
+<p>$100$ Menschen ingesamt</p>
+</li>
+<li>
+<p>$34$ = krank</p>
+</li>
+<li>
+<p>$34/100 = 0.34 = 34\ %$</p>
+</li>
+<li>
+<p>Das Verhältnis zw. den Menschen &amp; den Kranken beträgt $34\ %$</p>
+<ul>
+<li>wir wollen wissen, wie das Verhältnis zwischen d. Breite &amp; der relativen Höhe ist $= \frac{\frac{B}{2}}{H} = \frac{B}{2H}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="btestsb"><b>Tests</b></h1>
+<h2 id="uallgemeinu"><u>Allgemein</u>:</h2>
+<ol>
+<li>Anweisungsü.deckung: $C_0$</li>
+<li>Zweigsü.deckung: $C_1$</li>
+<li>Pfadü.deckung: $C_2a, C_2b, C_2c$</li>
+<li>Bedingungsü.deckung: $C_3a, C_3b, C_3c$</li>
+</ol>
+<h3 id="uwas-ist-anweisungs%C3%BCdeckung-c0u"><u>Was ist Anweisungsü.deckung: $C_0$</u>:</h3>
+<p><img src="image-1.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">vokal_counter</span><span class="hljs-params">(wort:str)</span>-&gt; tuple:</span>
+    gesamtzahl = <span class="hljs-number">0</span>
+    vokale = <span class="hljs-number">0</span>
+
+    <span class="hljs-keyword">while</span> len(wort) &gt; <span class="hljs-number">0</span>:
+        gesamtzahl += <span class="hljs-number">1</span>
+
+        <span class="hljs-keyword">if</span> wort[<span class="hljs-number">0</span>] <span class="hljs-keyword">in</span> <span class="hljs-string">"aeiou"</span>:
+            vokale += <span class="hljs-number">1</span>
+
+        wort = wort[<span class="hljs-number">1</span>:]
+
+    <span class="hljs-keyword">return</span> gesamtzahl, vokale     
+
+
+wort = str(input(<span class="hljs-string">"Wort: "</span>)).lower().replace(<span class="hljs-string">" "</span>,<span class="hljs-string">""</span>)
+print(wort)
+print(vokal_counter(wort))
+</div></code></pre>
+<h3 id="uwas-ist-zweig%C3%BCdeckung-c1u"><u>Was ist Zweigü.deckung: $C_1$</u>:</h3>
+<p><img src="image-2.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">c1_test</span><span class="hljs-params">()</span>-&gt;bool:</span>
+    <span class="hljs-keyword">return</span> vokal_counter(<span class="hljs-string">'ab'</span>) == (<span class="hljs-number">2</span>,<span class="hljs-number">1</span>) 
+</div></code></pre>
+<h3 id="uwas-ist-pfad%C3%BCdeckung-c2au"><u>Was ist Pfadü.deckung: $C_2a$</u>:</h3>
+<h1 id="sortieralgorithmen"><strong>Sortieralgorithmen</strong></h1>
+<p><img src="image-3.png" alt="alt text"></p>
+<h2 id="ul%C3%B6sungu"><u><strong>Lösung</strong></u>:</h2>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">insertion_sort</span><span class="hljs-params">(lst: list[int])</span>-&gt; list[int]:</span>
+    <span class="hljs-keyword">if</span> len(lst) &lt;= <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> lst
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,len(lst)):
+            j = i<span class="hljs-number">-1</span>
+
+            key = lst[i]
+            <span class="hljs-keyword">while</span> j &gt;= <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> lst[j] &gt; key:
+                lst[j+<span class="hljs-number">1</span>] = lst[j]
+                j -=<span class="hljs-number">1</span>
+                
+            lst[j+<span class="hljs-number">1</span>] = key
+            
+    <span class="hljs-keyword">return</span> lst
+
+
+lst = [<span class="hljs-number">8</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">9</span>, <span class="hljs-number">7</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>]
+print(lst)
+print(insertion_sort(lst))
+</div></code></pre>
+<ul>
+<li><u><strong>Wrm. eine for Schleife ?</strong></u>
+<ol>
+<li>Muster erkennen:
+<ul>
+<li>es gibt immer einen Trenner <code>|</code></li>
+<li>links v. Trenner $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{im jeden Schritt}}\ \ \ \ }$ länger
+<ul>
+<li>Wir brauchen eine Schleife, d. den Trenner v. vorne bis hinten schiebt.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="random"><strong>random</strong></h1>
+<h2 id="uwie-kann-ich-rchoice-verw-und-denen-eine-wahrscheinlichkeit-geben-u"><u>Wie kann ich <code>r.choice()</code> verw. und denen eine Wahrscheinlichkeit geben ?</u></h2>
+<ul>
+<li>
+<p><code>r.choices(&lt;lst&gt;, &lt;wahrscheinlichkeit 1&gt;, &lt;wahrscheinlichkeit 2&gt;, ...) -&gt; list</code></p>
+<ul>
+<li><u>Beispiel 1:</u></li>
+</ul>
+<pre class="hljs"><code><div>seq = [[<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>]]
+wahrscheinlichkeit = r.choices(seq,weights = [<span class="hljs-number">20</span>, <span class="hljs-number">60</span>, <span class="hljs-number">20</span>], k = <span class="hljs-number">1</span>)
+
+<span class="hljs-comment"># Jedem Element wird automatisch d. Wahrscheinlichkeit ü.geb., welches d. gleiche Index hat:</span>
+<span class="hljs-number">1</span> = <span class="hljs-number">20</span>%
+<span class="hljs-number">3</span> = <span class="hljs-number">60</span>%
+<span class="hljs-number">5</span> = <span class="hljs-number">20</span>% 
+</div></code></pre>
+<p>k = die Anzahl der Drehung</p>
+<ul>
+<li>Wenn k = 3 $to$ 3 $\times$ gedreht
+<ul>
+<li><em><strong>Bsp</strong></em>: [['<em>', '', '</em>']]</li>
+</ul>
+</li>
+<li>Wenn k = 1 $to$ 1 $\times$ gedreht
+<ul>
+<li><em><strong>Bsp</strong></em>:['*']</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="storage"><strong>Storage</strong></h1>
+<p><a id="Probe.txt"></a></p>
+<pre class="hljs"><code><div><span class="hljs-comment">#Probe.txt</span>
+<span class="hljs-number">1</span>) Papa 
+<span class="hljs-number">2</span>) Mama 
+<span class="hljs-number">3</span>) Efe 
+<span class="hljs-number">4</span>) Sude 
+<span class="hljs-number">5</span>) Simge 
+<span class="hljs-number">6</span>) Pepee 
+<span class="hljs-number">7</span>) Mayla 
+</div></code></pre>
+<p><a id="Probe.txt2"></a></p>
+<pre class="hljs"><code><div><span class="hljs-comment">#Probe.txt</span>
+<span class="hljs-number">1</span>) Papa 
+<span class="hljs-number">2</span>) Mama 
+<span class="hljs-number">3</span>) Efe 
+<span class="hljs-number">4</span>) Sude 
+<span class="hljs-number">5</span>) Simge 
+<span class="hljs-number">6</span>) Pepee 
+</div></code></pre>
+<h1 id="random-aufgaben"><strong>random Aufgaben</strong></h1>
+<pre class="hljs"><code><div><span class="hljs-comment">#wir müssen uns von innen nach außen arbeiten</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mehrdim_liste_sortieren</span><span class="hljs-params">(lst:list[int])</span> -&gt; list[int]:</span>
+    <span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> lst:
+        <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(len(zeile)<span class="hljs-number">-1</span>):
+            min_elem = min(zeile[n:])
+            min_elem_index = zeile.index(min_elem,n)
+            zeile[n],zeile[min_elem_index] = zeile[min_elem_index], zeile[n]
+
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(lst)<span class="hljs-number">-1</span>):
+        min_zeile = min(lst[i:])
+        index_min_zeile = lst.index(min_zeile,i)
+        lst[i], lst[index_min_zeile] = lst[index_min_zeile],lst[i]
+
+    
+    <span class="hljs-keyword">return</span> lst
+
+
+
+lst_größe = int(input(<span class="hljs-string">"Listengröße: "</span>))
+lst = [[r.randint(<span class="hljs-number">0</span>,<span class="hljs-number">20</span>) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(lst_größe)]<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(lst_größe)]
+print(lst)
+
+<span class="hljs-comment">#erstellen einer identischen, unabhängigen copy d. unarbeiteten Liste</span>
+lst1 = copy.deepcopy(lst)
+
+<span class="hljs-comment">#Ausführen meiner Liste</span>
+i_sorted_lst = mehrdim_liste_sortieren(lst)
+print(<span class="hljs-string">f'Mein Ergebnis: <span class="hljs-subst">{i_sorted_lst}</span>'</span>)
+
+<span class="hljs-comment">#test</span>
+
+<span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> lst1:
+    zeile.sort()
+
+lst1.sort()
+print(<span class="hljs-string">f'Wie es sein sollte: <span class="hljs-subst">{lst1}</span>'</span>)
+
+<span class="hljs-keyword">if</span> lst1 == i_sorted_lst:
+    print(<span class="hljs-literal">True</span>)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-literal">False</span>)
+</div></code></pre>
+<hr>
+<p><img src="image-4.png" alt="alt text"></p>
+<ul>
+<li><u><strong>Def. d. Laufzeit</strong></u></li>
+</ul>
+<ol>
+<li>Algorithmus $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{besteht}}\ \ \ \ }$ eine Schleife
+<ul>
+<li>v. $2$ bis $\sqrt{n}$</li>
+</ul>
+</li>
+<li>Anzahl d. Schrittzahlen: $\sqrt{n}-2$ weil 1 und 2 $\lnot$ enthalten</li>
+<li>$\lim_{n \to \infty} = \sqrt{n}$</li>
+</ol>
+<ul>
+<li><u><strong>Bew. d. Ü.legenheit</strong></u>:
+$$\lim_{n \to \infty} \frac{\sqrt{n}}{n}$$</li>
+</ul>
+<p>$$\lim_{n \to \infty} \frac{n^{0.5}}{n^1}$$</p>
+<p>$$\lim_{n \to \infty} n^{0.5 - 1} = \lim_{n \to \infty} n^{-0.5}$$</p>
+<p>$$\lim_{n \to \infty} \frac{1}{n^{0.5}} = \lim_{n \to \infty} \frac{1}{\sqrt{n}} = 0$$</p>
+<ul>
+<li><u><strong>Logische Rechtfertigung</strong></u>:</li>
+</ul>
+<ol>
+<li>Jeder Teiler $d$ einer Zahl $n$ hat einen Partner-Teiler $d'$, sodass $\color{#fc0303}d \cdot d' = n$ gilt.</li>
+<li>Wären beide Teiler $\boldsymbol{&gt;}$ als $\sqrt{n}$, wäre ihr Produkt $d \cdot d'$ automatisch $\boldsymbol{&gt;}$ als $n$ ($\sqrt{n} \cdot \sqrt{n} = n$).</li>
+<li>Mindestens einer d. beiden Teiler muss $\le \sqrt{n}$ sein. Finden wir bis $\sqrt{n}$ keine Zahl, d. $n$ ohne Rest teilt, kann es auch danach keine geben.</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> math
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_prime_number</span><span class="hljs-params">(n: int)</span> -&gt; bool:</span>
+
+
+    <span class="hljs-keyword">while</span> n&lt;<span class="hljs-number">0</span>:
+        print(<span class="hljs-string">"n muss positiv sein!"</span>)
+        n = int(input(<span class="hljs-string">"n: "</span>))
+
+    <span class="hljs-keyword">if</span> n &lt; <span class="hljs-number">2</span>: <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span> <span class="hljs-comment">#Weil 1 keine Primzahl.</span>
+    
+    <span class="hljs-comment"># Wir prüfen nur bis zur Wurzel von n!</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, int(math.sqrt(n)) + <span class="hljs-number">1</span>):
+        <span class="hljs-keyword">if</span> n % i == <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+
+        
+n = int(input(<span class="hljs-string">"n: "</span>))
+print(is_prime_number(n))
+</div></code></pre>
+<hr>
+<p><img src="image-5.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum_iterativ</span><span class="hljs-params">(numbers:list[int])</span>-&gt;int:</span>
+    <span class="hljs-keyword">if</span> len(numbers) == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+    
+    <span class="hljs-keyword">else</span>:
+        summe = <span class="hljs-number">0</span>
+
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> numbers:
+            summe += i
+        <span class="hljs-keyword">return</span> summe
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum_rekursive</span><span class="hljs-params">(numbers: list[int])</span>-&gt;int:</span>
+
+    <span class="hljs-keyword">if</span> len(numbers) == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">if</span> len(numbers) == <span class="hljs-number">1</span>:
+            <span class="hljs-keyword">return</span> numbers[<span class="hljs-number">0</span>]
+        
+        <span class="hljs-keyword">return</span> numbers[<span class="hljs-number">0</span>] + sum_rekursive(numbers[<span class="hljs-number">1</span>:])
+
+
+numbers = [r.randint(<span class="hljs-number">0</span>,<span class="hljs-number">20</span>)<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>)]
+print(numbers)
+print(sum_iterativ(numbers))
+print(sum_rekursive(numbers))
+</div></code></pre>
+<ul>
+<li>number = [5,8,3]</li>
+<li><strong>Schritt 1)</strong> 5 + summe[8,3]</li>
+</ul>
+<hr>
+![alt text](image-6.png)
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">berechnen_von_feld_B</span><span class="hljs-params">(n: int, feld_A: list[int])</span>-&gt; list[int]:</span>
+    
+    <span class="hljs-comment">#wir erstellen zunächst das Feld_B</span>
+    feld_B = [[[]<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(n<span class="hljs-number">-2</span>)] <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(n<span class="hljs-number">-2</span>)]
+
+    <span class="hljs-comment">#Koordinaten für feld_B</span>
+   
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,n<span class="hljs-number">-1</span>):
+        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,n<span class="hljs-number">-1</span>):
+            
+            summe = <span class="hljs-number">0</span>
+            <span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> range(<span class="hljs-number">-1</span>,<span class="hljs-number">2</span>):
+                <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(<span class="hljs-number">-1</span>,<span class="hljs-number">2</span>):
+                    ni = i+y
+                    nj = j+x
+
+                    summe += feld_A[ni][nj]
+
+            feld_B[i<span class="hljs-number">-1</span>][j<span class="hljs-number">-1</span>] = summe
+    <span class="hljs-keyword">return</span> feld_B
+
+
+
+n = int(input(<span class="hljs-string">'n: '</span>))
+feld_A = [[r.randint(<span class="hljs-number">1</span>,<span class="hljs-number">5</span>)<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(n)] <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(n)]
+print(<span class="hljs-string">f'Feld A: <span class="hljs-subst">{feld_A}</span>'</span>)
+feld_B = berechnen_von_feld_B(n,feld_A)
+print(<span class="hljs-string">f'Feld B: <span class="hljs-subst">{feld_B}</span>'</span>)
+
+print(<span class="hljs-number">20</span>* <span class="hljs-string">'-'</span>)
+
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> feld_A:
+    print(*i)
+
+<span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> feld_B:
+    print(*j)
+</div></code></pre>
+<hr>
+<h1 id="bild-hinzuf%C3%BCgen">BIld hinzufügen</h1>
+<p>import random as r</p>
+<p>def num_in_bereich(num:int)-&gt;int:
+while 0 &gt; num or num &gt; 3999:
+print(&quot;Die Zahl muss zwischen 1 und 3999 sein!&quot;)
+num = int(input(&quot;num: &quot;))
+return num</p>
+<p>def umwandlung_römische_zahl(num:int)-&gt;str:
+num = num_in_bereich(num)
+römische_zahl = &quot;&quot;</p>
+<pre><code>symbole = [['M'], ['C','D', 'M'], ['X','L', 'C'], ['I','V','X']]
+
+einheiten = [1000,100,10,1]
+n_num = num
+index = 0
+
+for reihe in einheiten:
+    rest = n_num % reihe
+    ziffer = (n_num - rest) // reihe 
+    n_num = rest
+    
+    if ziffer &lt;= 0:
+        index += 1
+        continue
+    
+    else:
+        if ziffer == 9:
+            römische_zahl += symbole[index][0] + symbole[index][2]
+        elif 6 &lt;= ziffer &lt;= 8:
+            ziffer -= 5
+            element = ziffer * symbole[index][0] 
+
+            römische_zahl += symbole[index][1] + element
+        elif ziffer == 5:
+            römische_zahl += symbole[index][1]
+
+        elif ziffer == 4:
+            römische_zahl += symbole[index][0] + symbole[index][1]
+        
+        elif 1 &lt;= ziffer &lt;= 3:
+            element = ziffer * symbole[index][0] 
+            römische_zahl += element
+    index += 1
+
+return römische_zahl
+</code></pre>
+<p>num = r.randint(1,3999)
+print(num)
+print(umwandlung_römische_zahl(num))</p>
+<hr>
+<p><img src="image-7.png" alt="alt text"></p>
+<ul>
+<li>Datei öffnen<pre class="hljs"><code><div><span class="hljs-keyword">import</span> string
+<span class="hljs-keyword">import</span> os
+
+<span class="hljs-comment">#erstellen der Datei</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">erstellen_der_dateien</span><span class="hljs-params">(n:int)</span>-&gt;<span class="hljs-keyword">None</span>:</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, n+<span class="hljs-number">1</span>):
+        name = <span class="hljs-string">f"Verändert<span class="hljs-subst">{i}</span>.txt"</span>
+        open(name, <span class="hljs-string">'w'</span>).close()
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">datei_ver</span>ä<span class="hljs-title">ndern</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">with</span> open(<span class="hljs-string">"Beispieltext.txt"</span>, <span class="hljs-string">"r"</span>) <span class="hljs-keyword">as</span> f:
+        inhalt = f.read().strip()
+        zeilen = inhalt.split(<span class="hljs-string">"\n\n"</span>)
+        f.seek(<span class="hljs-number">0</span>) <span class="hljs-comment">#Ich gehe mit den Augen in die erste zeile</span>
+        anzahl_der_Absätze = len(zeilen)
+        
+        erstellen_der_dateien(anzahl_der_Absätze)
+        
+        
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(anzahl_der_Absätze): <span class="hljs-comment">#nimm jeweils eine Zeile:</span>
+            splitet_list = zeilen[i].split()
+            <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(len(splitet_list)):
+                <span class="hljs-keyword">if</span> j % <span class="hljs-number">3</span> == <span class="hljs-number">0</span>:
+                    splitet_list[j] = splitet_list[j].upper()
+                <span class="hljs-keyword">elif</span> j % <span class="hljs-number">3</span> == <span class="hljs-number">1</span>:
+                    splitet_list[j] = splitet_list[j].lower()
+                <span class="hljs-keyword">elif</span> j % <span class="hljs-number">3</span> == <span class="hljs-number">2</span>:
+                    splitet_list[j] = <span class="hljs-string">'Helau'</span>
+            
+            
+            datei_i = <span class="hljs-string">f"Verändert<span class="hljs-subst">{i+<span class="hljs-number">1</span>}</span>.txt"</span>        
+            <span class="hljs-keyword">with</span> open(datei_i, <span class="hljs-string">'w'</span>) <span class="hljs-keyword">as</span> d:
+                d.write(<span class="hljs-string">" "</span>.join(splitet_list))
+                
+        
+datei_verändern()
+</div></code></pre>
+</li>
+</ul>
+<hr>
+<h1 id="rekursion"><strong>Rekursion</strong></h1>
+<ol>
+<li><a href="#punktsumme">Punktsumme</a></li>
+<li><a href="#Primzahltest">Primzahltest</a></li>
+<li><a href="#Bin%C3%A4rstellen_z%C3%A4hlen">Binärstellen zählen</a></li>
+</ol>
+<h2 id="%C3%BCbung-9-1">Übung 9, 1</h2>
+<p><a id="punktsumme"></a></p>
+<ul>
+<li>
+<p>n = int, Basis</p>
+</li>
+<li>
+<p>p = int, Potenz</p>
+</li>
+<li>
+<p>$S(n,p) = \sum_{k=1}^{n} k^p$</p>
+<ul>
+<li>$S(3,2) = 1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14$</li>
+</ul>
+</li>
+<li>
+<p>Wenn ich n = 3 habe, dann ist es $3 \to 2 \to 1$ &amp; am Ende dann $1 \to 2 \to 3$</p>
+</li>
+<li>
+<p>p immer gleich !</p>
+</li>
+<li>
+<p><strong>Base case</strong>:</p>
+<ul>
+<li>Wenn n == 1</li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">punktsumme_berechnen</span><span class="hljs-params">(n:int, p:int)</span>:</span>
+    wenn n gleich <span class="hljs-number">1</span> ist:
+        dann gib mir die <span class="hljs-number">1</span> zurück <span class="hljs-comment">#weil 1**{etwas} immer = 1 ist</span>
+    
+    Returne die n**p + punktsumme_berechnen(n<span class="hljs-number">-1</span>, p)
+</div></code></pre>
+<ul>
+<li>
+<p>1 Gruppe soll sich das n nehmen und es potenzieren</p>
+</li>
+<li>
+<p>sie soll der nächsten Abteilung die n-1 geben und die sollen darauf die p potenzieren</p>
+</li>
+<li>
+<p>diese sollen dann das gleiche machen bis eine Abteilung = 1 hat.</p>
+</li>
+<li>
+<p>dannach soll die letzte Abteilung das ergbenis an die Abteilung davor geben und diese Addieren</p>
+</li>
+<li>
+<p>immer so weiter bis wir am Anfang sind.</p>
+</li>
+<li>
+<p><em><strong>Code</strong></em>:</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">punktsumme_berechnen</span><span class="hljs-params">(n:int, p:int)</span> -&gt; int:</span>
+<span class="hljs-keyword">if</span> n == <span class="hljs-number">1</span>:
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
+
+<span class="hljs-keyword">return</span> n**p + punktsumme_berechnen(n<span class="hljs-number">-1</span>,p)
+
+
+n = int(input(<span class="hljs-string">"n: "</span>))
+p = int(input(<span class="hljs-string">"p: "</span>))
+print(punktsumme_berechnen(n,p))
+</div></code></pre>
+</li>
+</ul>
+<p><em><strong>Korrektur</strong></em>:</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">punktsumme_berechnen</span><span class="hljs-params">(n:int, p:int)</span> -&gt; int:</span>
+    <span class="hljs-keyword">if</span> n == <span class="hljs-number">0</span>: <span class="hljs-comment">#Besser, weil man auch n = 0 eingeben kann. Oben würde das ein error geben !</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+    
+    <span class="hljs-keyword">return</span> n**p + punktsumme_berechnen(n<span class="hljs-number">-1</span>,p)
+
+
+n = int(input(<span class="hljs-string">"n: "</span>))
+p = int(input(<span class="hljs-string">"p: "</span>))
+print(punktsumme_berechnen(n,p))
+</div></code></pre>
+<hr>
+<p><a id="Primzahltest"></a></p>
+<p><img src="image-8.png" alt="alt text"></p>
+<p><img src="image-9.png" alt="Meine Rechnung"></p>
+<ul>
+<li>bei $n = 2$ &amp; $3$ haben wir bei <code>m.floor(n**0.5)</code> $=1$, welches bedeutet, dass $2$ &amp; $3$ nur einen Teiler hat und zwar nur den Teiler $i = 1$, welches bedeutet, dass sie eine Primzahl sind, weil jede Zahl einen Teiler v. 1 hat !</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> math <span class="hljs-keyword">as</span> m
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">n_gr</span>öß<span class="hljs-title">ergleich_zwei</span><span class="hljs-params">(n:int)</span>-&gt;int:</span>
+    <span class="hljs-keyword">while</span> n &lt; <span class="hljs-number">2</span>:
+        print(<span class="hljs-string">"n muss &gt;= 2 sein!"</span>)
+        n = int(input(<span class="hljs-string">"n: "</span>))
+    <span class="hljs-keyword">return</span> n
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">primzahltest</span><span class="hljs-params">(n:int, i=<span class="hljs-number">2</span>)</span>-&gt;bool:</span>
+    
+    <span class="hljs-comment">#wenn m.floor(n**0.5), für n=2,3 = 1, dann ist es automatisch eine Primzahl, weil 1 der Teiler von alles ganzen Zahlen ist. Somit haben 2 und 3 nur die 1 als Teiler == Primzahl !</span>
+    <span class="hljs-keyword">if</span> i &gt; m.floor(n**<span class="hljs-number">0.5</span>):
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+    
+    <span class="hljs-comment">#wenn n &gt; 3, dann müssen wir ein Stopp setzen, wenn i == m.floor(n**0.5) ist  </span>
+    <span class="hljs-keyword">elif</span> i == m.floor(n**<span class="hljs-number">0.5</span>):
+        <span class="hljs-keyword">if</span> n %i == <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+        
+    <span class="hljs-comment">#das ist die normale Kontrolle zwischen [2,m.floor(n**0.5)]</span>
+    <span class="hljs-keyword">elif</span> n % i  == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> primzahltest(n,i+<span class="hljs-number">1</span>)
+    
+    
+n_test = int(input(<span class="hljs-string">"n: "</span>))
+n = n_größergleich_zwei(n_test)
+print(primzahltest(n))
+</div></code></pre>
+<hr>
+<p><a id="Binärstellen_zählen"></a></p>
+<p><img src="image-10.png" alt="alt text"></p>
+<ul>
+<li><strong>direkte Weg, ohne Rekurssion</strong>
+<ul>
+<li>habe d. Formel selbst hergeleitet 😋</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-11.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> math <span class="hljs-keyword">as</span> m
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">kontrolle_n</span><span class="hljs-params">(n:int)</span>-&gt;int:</span>
+    <span class="hljs-keyword">while</span> n &lt;= <span class="hljs-number">0</span>:
+        print(<span class="hljs-string">'n muss eine positive Zahl &amp; größer als 0 sein!'</span>)
+        n = int(input(<span class="hljs-string">'n: '</span>))
+    <span class="hljs-keyword">return</span> n
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">direkte_audgabe</span><span class="hljs-params">(n:int)</span>-&gt;int:</span>
+    k = m.log2(n)
+    <span class="hljs-keyword">return</span> int(k+<span class="hljs-number">1</span>)
+
+n_old = int(input(<span class="hljs-string">'n: '</span>))
+n = kontrolle_n(n_old)
+print(direkte_audgabe(n))
+</div></code></pre>
+<ul>
+<li><strong>Richtige Vers.</strong></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> math <span class="hljs-keyword">as</span> m
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">kontrolle_n</span><span class="hljs-params">(n:int)</span>-&gt;int:</span>
+    <span class="hljs-keyword">while</span> n &lt;= <span class="hljs-number">0</span>:
+        print(<span class="hljs-string">'n muss eine positive Zahl &amp; größer als 0 sein!'</span>)
+        n = int(input(<span class="hljs-string">'n: '</span>))
+    <span class="hljs-keyword">return</span> n
+        
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bin</span>ä<span class="hljs-title">rstellen</span><span class="hljs-params">(n:int)</span>-&gt;int:</span>
+    <span class="hljs-keyword">if</span> n &lt;= <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> + binärstellen(n//<span class="hljs-number">2</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">direkte_audgabe</span><span class="hljs-params">(n:int)</span>-&gt;int:</span>
+    k = m.log2(n)
+    <span class="hljs-keyword">return</span> int(k+<span class="hljs-number">1</span>)
+
+n_old = int(input(<span class="hljs-string">'n: '</span>))
+n = kontrolle_n(n_old)
+
+print(direkte_audgabe(n))
+print(binärstellen(n))
+</div></code></pre>
+<ul>
+<li><u>Wrm. funktioniert d. ?</u>
+<ol>
+<li>Aufruf: <code>n=4</code>: <code>return 1 + binärstellen(2)</code>
+<ul>
+<li>&quot;Ich habe hier eine 1, aber ich weiß noch nicht, was das Ergebnis von binärstellen(2) ist. Ich muss warten.&quot; ⏳ (Er schreibt sich &quot;1 + ?&quot; auf einen Zettel und legt ihn beiseite.)</li>
+</ul>
+</li>
+<li>Aufruf: <code>n=2</code>: <code>return 1 + binärstellen(1)</code>
+<ul>
+<li>&quot;Ich habe noch eine 1, aber ich muss auf das Ergebnis von binärstellen(1) warten.&quot;</li>
+</ul>
+</li>
+<li>Aufruf: <code>n=1</code>: <code>if n &lt;= 1</code>
+<ul>
+<li>gibt 1 weiter</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>1+1+1 = 3</li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
+</body>
+</html>
