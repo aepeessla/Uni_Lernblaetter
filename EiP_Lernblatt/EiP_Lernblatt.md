@@ -1454,16 +1454,28 @@ print(binärstellen(n))
 <hr>
 
 # **Backtracking**
+
 ![alt text](image-13.png)
 
 * $\forall$ geschieht <span style="color: #fc03beff;">in place !</span>
+* $num \in [0,9]$, num darf nur $1 \times$ in einem $3\times 3$-Block, Spalte & Zeile enthalten sein
+    * Allgemien Logik:
+        ```python
+        for num in range(1,10):
+            wenn num in Block:
+                continue
+            wenn num in spalte:
+                comtinue
+            wenn num in zeile:
+                continue
+            ansonsten:
+                setzte 0_index = num
+        ```
 
-## <u>Erstellen des 1-D Sudoku Feldes</u>:
+## <u>Soduko Feld gegeben</u>:
 
 ```python
-import random as r
-
-sudoku = [r.randint(-9,0) for _ in range(81)]
+sudoku_a = [5, 3, 0, 0, 7, 0, 0, 0, 0, 6, 0, 0, 1, 9, 5, 0, 0, 0, 0, 9, 8, 0, 0, 0, 0, 6, 0, 8, 0, 0, 0, 6, 0, 0, 0, 3, 4, 0, 0, 8, 0, 3, 0, 0, 1, 7, 0, 0, 0, 2, 0, 0, 0, 6, 0, 6, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 4, 1, 9, 0, 0, 5, 0, 0, 0, 0, 8, 0, 0, 7, 9]
 ```
 
 ## <u>Auswerten d. Zahlen</u>:
@@ -1481,6 +1493,41 @@ zahlen = abs(zahlen)
     * `13 // 9 = 1`
 * <u>**Spalte**</u>:
     * `13 % 9 = 4`
+
+## <u>Base-Case</u>:
+```python
+wenn keine 0 mehr enthalten:
+    return Lösung
+ansonsten:
+    finde den index mit der 0
+```
+
+## <u>Wie Position finden ?</u>:
+* $i = 24$
+* zeile = $24 \ // \ 9 = 2$
+* spalte = $24 \  \% \ 9 = 6$
+
+* <u>untere Grenze</u>: 
+    * $2 \cdot 9 = 18$
+    * `zeile * 9`
+
+* <u>obere Grenze</u>: 
+    * $\text{untere Grenze} \ + 9 = 27 $
+
+* Mein Bereich ist also: I = [18,27]
+
+* wir nutzen eine for-Schleife:
+    ```python
+    spalte = 0_index % 9 #6
+    start = spalte * 9 #6*9 = 54
+
+    for i in range(start,len(sudoku),9):
+    ```
+    * 0:  Index beginnt bei 0
+    * len(sudoku):  Liste hat 81 Elemente & wird autom. in d. Index-Form umgewandelt wird, weil *end in range* ***exklusiv*** ist. 
+    * 9: Weil wir in 9er Schritten springen wollen
+
+## <u>Kommt eine Zahl bereits v. ?</u>+
 
 
 

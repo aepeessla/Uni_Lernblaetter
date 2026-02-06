@@ -1870,11 +1870,24 @@ print(binärstellen(n))
 <p><img src="image-13.png" alt="alt text"></p>
 <ul>
 <li>$\forall$ geschieht <span style="color: #fc03beff;">in place !</span></li>
+<li>$num \in [0,9]$, num darf nur $1 \times$ in einem $3\times 3$-Block, Spalte &amp; Zeile enthalten sein
+<ul>
+<li>Allgemien Logik:<pre class="hljs"><code><div><span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>):
+    wenn num <span class="hljs-keyword">in</span> Block:
+        <span class="hljs-keyword">continue</span>
+    wenn num <span class="hljs-keyword">in</span> spalte:
+        comtinue
+    wenn num <span class="hljs-keyword">in</span> zeile:
+        <span class="hljs-keyword">continue</span>
+    ansonsten:
+        setzte <span class="hljs-number">0</span>_index = num
+</div></code></pre>
+</li>
 </ul>
-<h2 id="uerstellen-des-1-d-sudoku-feldesu"><u>Erstellen des 1-D Sudoku Feldes</u>:</h2>
-<pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
-
-sudoku = [r.randint(<span class="hljs-number">-9</span>,<span class="hljs-number">0</span>) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(<span class="hljs-number">81</span>)]
+</li>
+</ul>
+<h2 id="usoduko-feld-gegebenu"><u>Soduko Feld gegeben</u>:</h2>
+<pre class="hljs"><code><div>sudoku_a = [<span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">7</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">7</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]
 </div></code></pre>
 <h2 id="uauswerten-d-zahlenu"><u>Auswerten d. Zahlen</u>:</h2>
 <ul>
@@ -1898,6 +1911,54 @@ sudoku = [r.randint(<span class="hljs-number">-9</span>,<span class="hljs-number
 </ul>
 </li>
 </ul>
+<h2 id="ubase-caseu"><u>Base-Case</u>:</h2>
+<pre class="hljs"><code><div>wenn keine <span class="hljs-number">0</span> mehr enthalten:
+    <span class="hljs-keyword">return</span> Lösung
+ansonsten:
+    finde den index mit der <span class="hljs-number">0</span>
+</div></code></pre>
+<h2 id="uwie-position-finden-u"><u>Wie Position finden ?</u>:</h2>
+<ul>
+<li>
+<p>$i = 24$</p>
+</li>
+<li>
+<p>zeile = $24 \ // \ 9 = 2$</p>
+</li>
+<li>
+<p>spalte = $24 \  % \ 9 = 6$</p>
+</li>
+<li>
+<p><u>untere Grenze</u>:</p>
+<ul>
+<li>$2 \cdot 9 = 18$</li>
+<li><code>zeile * 9</code></li>
+</ul>
+</li>
+<li>
+<p><u>obere Grenze</u>:</p>
+<ul>
+<li>$\text{untere Grenze} \ + 9 = 27 $</li>
+</ul>
+</li>
+<li>
+<p>Mein Bereich ist also: I = [18,27]</p>
+</li>
+<li>
+<p>wir nutzen eine for-Schleife:</p>
+<pre class="hljs"><code><div>spalte = <span class="hljs-number">0</span>_index % <span class="hljs-number">9</span> <span class="hljs-comment">#6</span>
+start = spalte * <span class="hljs-number">9</span> <span class="hljs-comment">#6*9 = 54</span>
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(start,len(sudoku),<span class="hljs-number">9</span>):
+</div></code></pre>
+<ul>
+<li>0:  Index beginnt bei 0</li>
+<li>len(sudoku):  Liste hat 81 Elemente &amp; wird autom. in d. Index-Form umgewandelt wird, weil <em>end in range</em> <em><strong>exklusiv</strong></em> ist.</li>
+<li>9: Weil wir in 9er Schritten springen wollen</li>
+</ul>
+</li>
+</ul>
+<h2 id="ukommt-eine-zahl-bereits-v-u"><u>Kommt eine Zahl bereits v. ?</u>+</h2>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>
