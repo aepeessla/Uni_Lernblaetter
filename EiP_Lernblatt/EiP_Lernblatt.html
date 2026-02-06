@@ -570,7 +570,7 @@ text[<span class="hljs-number">2</span>] = i
 </ul>
 </li>
 <li>
-<p><code>&lt;var&gt; = os.exists(&lt;pfad&gt;)</code></p>
+<p><code>&lt;var&gt; = os.path.exists(&lt;pfad&gt;)</code></p>
 <ul>
 <li>exististert Ordner oder Datei ?</li>
 </ul>
@@ -617,6 +617,13 @@ text[<span class="hljs-number">2</span>] = i
 </li>
 </ul>
 <h1 id="listen"><strong>Listen</strong></h1>
+<ul>
+<li>mit Input Liste generieren lassen<pre class="hljs"><code><div>such_input = input(<span class="hljs-string">"Zahlen für Suchmuster (getrennt durch Leerzeichen, z.B. '1 3 1'): "</span>)
+
+mein_muster = [int(x) <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> such_input.split()]
+</div></code></pre>
+</li>
+</ul>
 <h2 id="uwerkzeugeu"><u>Werkzeuge</u>:</h2>
 <ul>
 <li>
@@ -1857,6 +1864,60 @@ print(binärstellen(n))
 <li>1+1+1 = 3</li>
 </ul>
 </li>
+</ul>
+<hr>
+<p><img src="image-13.png" alt="alt text"></p>
+<p>Ich habe das so verstanden import random as r</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
+
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">loese_suduko</span><span class="hljs-params">(sudoku:list[int])</span>:</span>
+
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>,len(sudoku), <span class="hljs-number">9</span>):
+
+        zeile = sudoku[i:i+<span class="hljs-number">9</span>]
+
+       
+
+
+
+sudoku = [r.randint(<span class="hljs-number">-9</span>,<span class="hljs-number">0</span>) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(<span class="hljs-number">81</span>)]
+
+loese_suduko(sudoku)
+</div></code></pre>
+<ul>
+<li>
+<p>Jzt., wenn eine Stelle $= 0$ ist, dann soll ich diese Stelle mit einer Zahl setzten, d. da rein passt, wenn es keine Lösung gibt, dann soll ich sagen, dass es keine Lösung f. dieses Soduko gibt, also wenn eine 9er-Einheit nicht gefunden wurde, sofort abbrechen &amp; sagen, dass man dies nicht lösen kann.</p>
+</li>
+<li>
+<p>Ich finde d. Aufgabe unnormal verwirrend. Ich verstehe nicht, was sie genau v. mir möchten. Also ich habe d. Funktion &quot;<code>def loese_sudoku(sudoku:list[int])-&gt;list[int] | str:</code>&quot; &amp; hier bekomme ich ein <strong>Sudoku-Feld</strong> ü.geben, dass Zahlen zw. $0$ bis $-9$ enthält. D. Stellen, d. eine 0 sind, sind quazi mein leeres Feld, welches ich auffüllen muss. Wenn etwas nicht lösbar ist, dann soll d. Einträge löschen, welches bedeutet, dass ich eine Kopie von diesem Feld benötige.</p>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
+
+<span class="hljs-keyword">import</span> copy <span class="hljs-keyword">as</span> c 
+
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">loese_suduko</span><span class="hljs-params">(sudoku_og:list[int])</span>:</span>
+
+    sudoku = c.deepcopy(sudoku_og)
+
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>,len(sudoku), <span class="hljs-number">9</span>):
+
+        zeile = sudoku[i:i+<span class="hljs-number">9</span>]
+
+        print(zeile)
+
+
+
+sudoku = [r.randint(<span class="hljs-number">-9</span>,<span class="hljs-number">0</span>) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(<span class="hljs-number">81</span>)]
+
+loese_suduko(sudoku)
+</div></code></pre>
+<ul>
+<li>Ich muss mich zudem immer an $9$ Stellen orientieren, welches ein $3 \times 3$ Feld im Bild ist. D. einzelnen Zahlen muss ich mit abs(zahlen) angucken, welches bedeutet, dass ich durch eine Zeile iterieren muss &amp; gucken muss, welche Zahlen n.</li>
 </ul>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
