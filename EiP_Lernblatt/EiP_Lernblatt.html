@@ -428,6 +428,28 @@ code {
   </table>
 </li>
 </ul>
+<h2 id="uwann--und-wann--u"><u>Wann // und wann % ?</u></h2>
+<ul>
+<li><code>//</code>:
+<ul>
+<li>in welcher Kiste bin ich ?</li>
+<li>Wie viel passt eine gesamte Gruppe irgendwo rein
+<ul>
+<li><em><strong>Gruppe</strong></em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>%</code>:
+<ul>
+<li>Was bleibt übrig
+<ul>
+<li><em><strong>Rest_Position</strong></em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <p><a id="Kommandozeilenargumente"></a></p>
 <h1 id="kommandozeilenargumente"><strong>Kommandozeilenargumente</strong></h1>
 <ul>
@@ -1989,6 +2011,15 @@ zeile *= <span class="hljs-number">9</span>
 
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(zeile, zeile+<span class="hljs-number">9</span>):
     print(i)
+</div></code></pre>
+<h2 id="ukommt-zahl-in-block-vor-u"><u>Kommt Zahl in Block vor ?</u>:</h2>
+<pre class="hljs"><code><div>zeile = <span class="hljs-number">2</span>
+spalte = <span class="hljs-number">6</span>
+
+zeile_rest = zeile % <span class="hljs-number">3</span>
+spalte_rest = spalte % <span class="hljs-number">2</span>
+
+print(zeile_rest, spalte_rest)
 </div></code></pre>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>

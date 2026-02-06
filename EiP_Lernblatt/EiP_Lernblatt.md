@@ -69,7 +69,15 @@
     </tbody>
     </table>
 
+## <u>Wann // und wann % ?</u>
 
+* `//`:
+    * in welcher Kiste bin ich ?
+    * Wie viel passt eine gesamte Gruppe irgendwo rein 
+        * ***Gruppe***
+* `%`:
+    * Was bleibt übrig
+        * ***Rest_Position***
 
 <a id="Kommandozeilenargumente"></a>
 
@@ -1570,6 +1578,17 @@ for i in range(zeile, zeile+9):
     print(i)
 ```
 
+## <u>Kommt Zahl in Block vor ?</u>:
+
+```python
+zeile = 2
+spalte = 6
+
+zeile_rest = zeile % 3
+spalte_rest = spalte % 2
+
+print(zeile_rest, spalte_rest)
+```
 
 
 
