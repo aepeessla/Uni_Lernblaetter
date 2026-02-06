@@ -1482,113 +1482,76 @@ print(binärstellen(n))
 
 ## <u>Soduko Feld gegeben</u>:
 
-```python
-sudoku_a = [5, 3, 0, 0, 7, 0, 0, 0, 0, 6, 0, 0, 1, 9, 5, 0, 0, 0, 0, 9, 8, 0, 0, 0, 0, 6, 0, 8, 0, 0, 0, 6, 0, 0, 0, 3, 4, 0, 0, 8, 0, 3, 0, 0, 1, 7, 0, 0, 0, 2, 0, 0, 0, 6, 0, 6, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 4, 1, 9, 0, 0, 5, 0, 0, 0, 0, 8, 0, 0, 7, 9]
-```
 
-## <u>Auswerten d. Zahlen</u>:
-* d. gesetzten Zahlen sind festbetoniert
-* nur d. Zahlen d. $= 0$ sind werden mit einer Zahl zw. $1,9$ gesetzt
-* Es darf f. $x \in [1,9],x$ nur $1 \times$ v.kommen !
+
+
+
 
 ```python
-zahlen = abs(zahlen)
-```
-## <u>Base-Case</u>:
-```python
-wenn keine 0 mehr enthalten:
-    return Lösung
-ansonsten:
-    finde den index mit der 0
-```
+def loese_sudoku(sudoku):
+    # 1. Basisfall: Wenn keine 0 mehr da ist, sind wir fertig!
+    if 0 not in sudoku:
+        return sudoku
 
-## <u>Wie berechnen wir d. Zeile & d. Spalte ?</u>:
-* Index: 13
-* <u>**Zeile**</u>:
-    * `13 // 9 = 1`
-* <u>**Spalte**</u>:
-    * `13 % 9 = 4`
+    # 2. Finde das erste freie Feld
+    index = sudoku.index(0)
+    zeile = index // 9
+    spalte = index % 9
 
+    # 3. Wir probieren die Zahlen 1 bis 9
+    for num in range(1, 10):
+        
+        # --- DER WÄCHTER-CHECK 👮 ---
+        # Wir gehen davon aus, dass die Zahl erlaubt ist, bis wir das Gegenteil beweisen.
+        ist_erlaubt = True
 
-## <u>Wie bestimmen wir in welchem $3 \times 3$-Block sich unsere 0 befindet ?</u>:
-Wir müssen die obere linke Ecke und die untere rechte Ecke berechnen:
+        # Wächter 1: Spalte prüfen ⬇️
+        for i in range(spalte, 81, 9):
+            if sudoku[i] == num:
+                ist_erlaubt = False
+                break # Alarm! Zahl gefunden.
+        
+        # Wächter 2: Zeile prüfen ➡️
+        start_zeile = zeile * 9
+        for i in range(start_zeile, start_zeile + 9):
+            if sudoku[i] == num:
+                ist_erlaubt = False
+                break # Alarm! Zahl gefunden.
 
-* spalte = 0_index % 9
-* zeile = 0_index // 9
-* spalte % 3, gibt Spalte im aktuellen Block
-* zeile % 3, gibt Zeile im aktuellen Block
-
-```python
-0_index = 13
-spalte = 13 % 9  = 4
-zeile = 13 // 9 = 1
-
-oberer_rechter_block_spalte = spalte % 3 = 1
-oberer_rechter_block_zeile = zeile % 3 = 1
-
-oberer_rechter_block = 
-```
-
-
-
-
-
-
-## <u>Wie Position finden ?</u>:
-* $i = 24$
-* zeile = $24 \ // \ 9 = 2$
-* spalte = $24 \  \% \ 9 = 6$
-
-* <u>untere Grenze</u>: 
-    * $2 \cdot 9 = 18$
-    * `zeile * 9`
-
-* <u>obere Grenze</u>: 
-    * $\text{untere Grenze} \ + 9 = 27 $
-
-* Mein Bereich ist also: I = [18,27]
-
-* wir nutzen eine for-Schleife:
-    ```python
-    spalte = index0 % 9 #6
-    start = spalte * 9 #6*9 = 54
-
-    for i in range(start,len(sudoku),9):
-    ```
-    * 0:  Index beginnt bei 0
-    * len(sudoku):  Liste hat 81 Elemente & wird autom. in d. Index-Form umgewandelt wird, weil *end in range* ***exklusiv*** ist. 
-    * 9: Weil wir in 9er Schritten springen wollen
-
-## <u>Kommt eine Zahl in einer Spalte vor ?</u>:
-```python
-index0 = 24
-spalte = index0 % 9 #6
-
-for i in range(spalte, len(sudoku),9):
+        # Wächter 3: 3x3 Block prüfen 📦
+        # Deine Formel für die Ecke oben links:
+        zeile_rest = zeile % 3
+        spalte_rest = spalte % 3
+        block_start = (index - spalte_rest) - (zeile_rest * 9)
+        block_start1 = block_start + 1
+        block_start2 = block_start1 + 1
+    
+        round = 0
+        for _ in range(3):
+            block_start, block_start1, block_start2 = block_start + round, block_start1 + round, block_start2 + round
+            round = 9
+            
+            if sudoku[block_start] == num or sudoku[block_start1] == num or sudoku[block_start2] == num:
+                ist_erlaubt = False
+                break # Alarm! Zahl gefunden.
+        
+        
+        # 4. Wenn alle Wächter "Okay" sagen:
+        if ist_erlaubt:
+            sudoku[index] = num # Zahl setzen
+            ergebnis = loese_sudoku(sudoku)
+            if ergebnis != None:
+                return ergebnis
+            else:
+                sudoku[index] = 0
+        
+    return None        
+            
+            
+sudoku = [5, 3, 0, 0, 7, 0, 0, 0, 0, 6, 0, 0, 1, 9, 5, 0, 0, 0, 0, 9, 8, 0, 0, 0, 0, 6, 0, 8, 0, 0, 0, 6, 0, 0, 0, 3, 4, 0, 0, 8, 0, 3, 0, 0, 1, 7, 0, 0, 0, 2, 0, 0, 0, 6, 0, 6, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 4, 1, 9, 0, 0, 5, 0, 0, 0, 0, 8, 0, 0, 7, 9]
+print(loese_sudoku(sudoku))
 ```
 
-## <u>Kommt eine Zahl in einer Zeile vor ?</u>:
-```python
-index0 = 24
-
-zeile = index0 // 9 
-zeile *= 9
-
-for i in range(zeile, zeile+9):
-    print(i)
-```
-
-## <u>Kommt Zahl in Block vor ?</u>:
-
-```python
-zeile = 2
-spalte = 6
-
-zeile_rest = zeile % 3
-spalte_rest = spalte % 2
-
-print(zeile_rest, spalte_rest)
-```
 
 
 
