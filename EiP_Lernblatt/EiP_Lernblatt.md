@@ -1465,7 +1465,7 @@ print(binärstellen(n))
             wenn num in Block:
                 continue
             wenn num in spalte:
-                comtinue
+                continue
             wenn num in zeile:
                 continue
             ansonsten:
@@ -1486,6 +1486,13 @@ sudoku_a = [5, 3, 0, 0, 7, 0, 0, 0, 0, 6, 0, 0, 1, 9, 5, 0, 0, 0, 0, 9, 8, 0, 0,
 ```python
 zahlen = abs(zahlen)
 ```
+## <u>Base-Case</u>:
+```python
+wenn keine 0 mehr enthalten:
+    return Lösung
+ansonsten:
+    finde den index mit der 0
+```
 
 ## <u>Wie berechnen wir d. Zeile & d. Spalte ?</u>:
 * Index: 13
@@ -1494,13 +1501,30 @@ zahlen = abs(zahlen)
 * <u>**Spalte**</u>:
     * `13 % 9 = 4`
 
-## <u>Base-Case</u>:
+
+## <u>Wie bestimmen wir in welchem $3 \times 3$-Block sich unsere 0 befindet ?</u>:
+Wir müssen die obere linke Ecke und die untere rechte Ecke berechnen:
+
+* spalte = 0_index % 9
+* zeile = 0_index // 9
+* spalte % 3, gibt Spalte im aktuellen Block
+* zeile % 3, gibt Zeile im aktuellen Block
+
 ```python
-wenn keine 0 mehr enthalten:
-    return Lösung
-ansonsten:
-    finde den index mit der 0
+0_index = 13
+spalte = 13 % 9  = 4
+zeile = 13 // 9 = 1
+
+oberer_rechter_block_spalte = spalte % 3 = 1
+oberer_rechter_block_zeile = zeile % 3 = 1
+
+oberer_rechter_block = 
 ```
+
+
+
+
+
 
 ## <u>Wie Position finden ?</u>:
 * $i = 24$
@@ -1518,7 +1542,7 @@ ansonsten:
 
 * wir nutzen eine for-Schleife:
     ```python
-    spalte = 0_index % 9 #6
+    spalte = index0 % 9 #6
     start = spalte * 9 #6*9 = 54
 
     for i in range(start,len(sudoku),9):
@@ -1527,10 +1551,24 @@ ansonsten:
     * len(sudoku):  Liste hat 81 Elemente & wird autom. in d. Index-Form umgewandelt wird, weil *end in range* ***exklusiv*** ist. 
     * 9: Weil wir in 9er Schritten springen wollen
 
-## <u>Kommt eine Zahl bereits v. ?</u>+
+## <u>Kommt eine Zahl in einer Spalte vor ?</u>:
+```python
+index0 = 24
+spalte = index0 % 9 #6
 
+for i in range(spalte, len(sudoku),9):
+```
 
+## <u>Kommt eine Zahl in einer Zeile vor ?</u>:
+```python
+index0 = 24
 
+zeile = index0 // 9 
+zeile *= 9
+
+for i in range(zeile, zeile+9):
+    print(i)
+```
 
 
 
