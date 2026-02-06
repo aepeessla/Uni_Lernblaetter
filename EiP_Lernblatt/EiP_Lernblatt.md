@@ -1456,65 +1456,15 @@ print(binärstellen(n))
 # **Backtracking**
 ![alt text](image-13.png)
 
-Ich habe das so verstanden import random as r
+* $\forall$ <span style="color: #fc03beff;">in place !</span>
 
+## <u>Erstellen des 1-D Sudoku Feldes</u>
 
-```python
+```
 import random as r
 
-
-def loese_suduko(sudoku:list[int]):
-    for i in range(0,len(sudoku), 9):
-        zeile = sudoku[i:i+9]
-
-
 sudoku = [r.randint(-9,0) for _ in range(81)]
-
-loese_suduko(sudoku)
 ```
-
-* Jzt., wenn eine Stelle $= 0$ ist, dann soll ich diese Stelle mit einer Zahl setzten, d. da rein passt, wenn es keine Lösung gibt, dann soll ich sagen, dass es keine Lösung f. dieses Soduko gibt, also wenn eine 9er-Einheit nicht gefunden wurde, sofort abbrechen & sagen, dass man dies nicht lösen kann. 
-
-* Ich finde d. Aufgabe unnormal verwirrend. Ich verstehe nicht, was sie genau v. mir möchten. Also ich habe d. Funktion "`def loese_sudoku(sudoku:list[int])->list[int] | str:`" & hier bekomme ich ein **Sudoku-Feld** ü.geben, dass Zahlen zw. $0$ bis $-9$ enthält. D. Stellen, d. eine 0 sind, sind quazi mein leeres Feld, welches ich auffüllen muss. Wenn etwas nicht lösbar ist, dann soll d. Einträge löschen, welches bedeutet, dass ich eine Kopie von diesem Feld benötige.
-
-```python
-import random as r
-
-import copy as c 
-
-
-
-def loese_suduko(sudoku_og:list[int]):
-
-    sudoku = c.deepcopy(sudoku_og)
-
-    for i in range(0,len(sudoku), 9):
-
-        zeile = sudoku[i:i+9]
-
-        print(zeile)
-
-
-
-sudoku = [r.randint(-9,0) for _ in range(81)]
-
-loese_suduko(sudoku)
-```
-* Ich muss mich zudem immer an $9$ Stellen orientieren, welches ein $3 \times 3$ Feld im Bild ist. D. einzelnen Zahlen muss ich mit abs(zahlen) angucken, welches bedeutet, dass ich durch eine Zeile iterieren muss & gucken muss, welche Zahlen n. $\lnot$ eingetragen wurden.
-
-* <u>**Zahlen d. Verfügbar sind**</u>
-```python
-#Zahlen d. Verfügbar sind
-zahlen = [i for i in range(1,10)]
-```
-* ich kann d. so machen, dass ich dann eine Zahl entferne, wenn es bereits in diesem Feld vorhanden ist.
-    * Feld: `[1, 2, 3, 4, 5, 6, 7, 8, 9]`
-    ```python
-    für i in zeile:
-        wenn 
-    ```
-
-
 
 
 
