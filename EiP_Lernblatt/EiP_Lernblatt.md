@@ -1480,11 +1480,95 @@ print(binärstellen(n))
                 setzte 0_index = num
         ```
 
-## <u>Soduko Feld gegeben</u>:
+## <u>Soduko Feld geg.</u>:
+```python
+sudoku = [5, 3, 0, 0, 7, 0, 0, 0, 0, 6, 0, 0, 1, 9, 5, 0, 0, 0, 0, 9, 8, 0, 0, 0, 0, 6, 0, 8, 0, 0, 0, 6, 0, 0, 0, 3, 4, 0, 0, 8, 0, 3, 0, 0, 1, 7, 0, 0, 0, 2, 0, 0, 0, 6, 0, 6, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 4, 1, 9, 0, 0, 5, 0, 0, 0, 0, 8, 0, 0, 7, 9]
+```
+
+## <u>Müssen wir weiter gucken oder sind wir fertig ?</u>:
+```python
+wenn es keine 0 gibt:
+    return sudoku
+
+mache ansosnten einfach weiter
+```
+* wir müssen 3 Fälle kontrollieren: Zeile, Spalten & Block:
+* wir haben einen Wächter d. sagt, ob es erlaubt oder $\lnot$ erlaubt ist: `ist_erlaubt = True`
+    * Wir gehen mal davon aus, dass es erlaubt ist
+* wenn ein Fall bereits enthalten ist, dann müssen wir es direkt abbrechen und mit d. nächsten Zahl weiter machen!
+
+## <u>Fall 1: Zeile</u>:
+```python
+for i in range(spalte, 81, 9):
+    wenn sudoku[i] == num:
+        ist_erlaubt = False
+        ABBRUCH #wenn es hier schon False ist, dann bracuhen wir nicht weiter zu gucken
+```
+```python
+for i in range(spalte, 81, 9):
+    if sudoku[i] == num:
+        ist_erlaubt = False
+        break #wenn es hier schon False ist, dann bracuhen wir nicht weiter zu gucken
+```
 
 
+## <u>Fall 2: Zeile</u>:
+```python
+start_zeile = zeile * 9
+for i in range(start_zeile, start_zeile + 9):
+    wenn sudoku[i] == num:
+        ist_erlaubt = False
+        ABBRUCH #wenn es hier schon False ist, dann bracuhen wir nicht weiter zu gucken
+```
+```python
+start_zeile = zeile * 9
+for i in range(start_zeile, start_zeile + 9):
+    if sudoku[i] == num:
+        ist_erlaubt = False
+        break #wenn es hier schon False ist, dann bracuhen wir nicht weiter zu gucken
+```
 
+## <u>Fall 3: Block</u>:
+* finde d. Position v. meiner 0 innerhalb seiner Blockes ($spalte \in [0,2]$, $zeile \in [0,2]$)
+    * Berechne d. 1. Pos. in dem jeweiligen Block
 
+```python
+zeile_rest = zeile % 3
+spalte_rest = spalte % 3
+block_start = (index - spalte_rest) - (zeile_rest * 9)
+block_start1 = block_start + 1
+block_start2 = block_start2 + 1
+
+round = 0
+for _ in range(3):
+    block_start, block_start1, block_start2 = block_start + j, block_start1 + j, bock_start2 + j
+    round = 9
+    wenn  sudoku[blockstart] == num oder sudoku[blockstart1] == num oder sudoku[blockstart2] == num:
+        ist_erlaubt = False #Wächter gibt Alerm aus
+        break
+```
+
+## <u>Finale Kontrolle für Zahl</u>:
+```python
+wenn der Wächter True sagt, dann ist d. Zahl erlaubt
+    * sudoku[index0] wird dann gleich d. Zahl gesetzt
+    * das Ergebnis v. d. loese_sudoku(sudoku) speichern wir in der Var. ergebnis
+        * ist das Ergebnis None ?
+            * wenn ja, dann wissen wir, dass diese Zahl nicht die richtige war und machen mit der nächsten Zahl weiter
+            * wenn nein, dann geben wir die veränderte Liste an loese_sudoku(sudoku) weiter # Sie nimmt ich dann die nächste 0 und macht wieder das gleiche
+```
+```python
+if ist_erlaubt:
+    sudoku[index] = num
+    ergebnis = loese_sudoku(sudoku)
+    if ergebnis != None:
+        return Ergebnis
+    else:
+        sudoku[index] = 0 # wir sind hier immer noch in der Schleife (Es soll ja noch die restlichen Zahlen gucken!!!  
+```
+*   `None` wird nur einmal ausgegeben
+
+## <u>Fertiger Code</u>:
 
 
 ```python
