@@ -1453,6 +1453,7 @@ print(binärstellen(n))
 
 <hr>
 
+# **Backtracking**
 ![alt text](image-13.png)
 
 Ich habe das so verstanden import random as r
@@ -1462,15 +1463,9 @@ Ich habe das so verstanden import random as r
 import random as r
 
 
-
 def loese_suduko(sudoku:list[int]):
-
     for i in range(0,len(sudoku), 9):
-
         zeile = sudoku[i:i+9]
-
-       
-
 
 
 sudoku = [r.randint(-9,0) for _ in range(81)]
@@ -1505,7 +1500,20 @@ sudoku = [r.randint(-9,0) for _ in range(81)]
 
 loese_suduko(sudoku)
 ```
-* Ich muss mich zudem immer an $9$ Stellen orientieren, welches ein $3 \times 3$ Feld im Bild ist. D. einzelnen Zahlen muss ich mit abs(zahlen) angucken, welches bedeutet, dass ich durch eine Zeile iterieren muss & gucken muss, welche Zahlen n.  
+* Ich muss mich zudem immer an $9$ Stellen orientieren, welches ein $3 \times 3$ Feld im Bild ist. D. einzelnen Zahlen muss ich mit abs(zahlen) angucken, welches bedeutet, dass ich durch eine Zeile iterieren muss & gucken muss, welche Zahlen n. $\lnot$ eingetragen wurden.
+
+* <u>**Zahlen d. Verfügbar sind**</u>
+```python
+#Zahlen d. Verfügbar sind
+zahlen = [i for i in range(1,10)]
+```
+* ich kann d. so machen, dass ich dann eine Zahl entferne, wenn es bereits in diesem Feld vorhanden ist.
+    * Feld: `[1, 2, 3, 4, 5, 6, 7, 8, 9]`
+    ```python
+    für i in zeile:
+        wenn 
+    ```
+
 
 
 

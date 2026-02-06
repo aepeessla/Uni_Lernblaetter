@@ -1866,20 +1866,15 @@ print(binärstellen(n))
 </li>
 </ul>
 <hr>
+<h1 id="backtracking"><strong>Backtracking</strong></h1>
 <p><img src="image-13.png" alt="alt text"></p>
 <p>Ich habe das so verstanden import random as r</p>
 <pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
 
 
-
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">loese_suduko</span><span class="hljs-params">(sudoku:list[int])</span>:</span>
-
     <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>,len(sudoku), <span class="hljs-number">9</span>):
-
         zeile = sudoku[i:i+<span class="hljs-number">9</span>]
-
-       
-
 
 
 sudoku = [r.randint(<span class="hljs-number">-9</span>,<span class="hljs-number">0</span>) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(<span class="hljs-number">81</span>)]
@@ -1917,7 +1912,25 @@ sudoku = [r.randint(<span class="hljs-number">-9</span>,<span class="hljs-number
 loese_suduko(sudoku)
 </div></code></pre>
 <ul>
-<li>Ich muss mich zudem immer an $9$ Stellen orientieren, welches ein $3 \times 3$ Feld im Bild ist. D. einzelnen Zahlen muss ich mit abs(zahlen) angucken, welches bedeutet, dass ich durch eine Zeile iterieren muss &amp; gucken muss, welche Zahlen n.</li>
+<li>
+<p>Ich muss mich zudem immer an $9$ Stellen orientieren, welches ein $3 \times 3$ Feld im Bild ist. D. einzelnen Zahlen muss ich mit abs(zahlen) angucken, welches bedeutet, dass ich durch eine Zeile iterieren muss &amp; gucken muss, welche Zahlen n. $\lnot$ eingetragen wurden.</p>
+</li>
+<li>
+<p><u><strong>Zahlen d. Verfügbar sind</strong></u></p>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment">#Zahlen d. Verfügbar sind</span>
+zahlen = [i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>)]
+</div></code></pre>
+<ul>
+<li>ich kann d. so machen, dass ich dann eine Zahl entferne, wenn es bereits in diesem Feld vorhanden ist.
+<ul>
+<li>Feld: <code>[1, 2, 3, 4, 5, 6, 7, 8, 9]</code></li>
+</ul>
+<pre class="hljs"><code><div>für i <span class="hljs-keyword">in</span> zeile:
+    wenn 
+</div></code></pre>
+</li>
 </ul>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
