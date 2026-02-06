@@ -1871,11 +1871,33 @@ print(binärstellen(n))
 <ul>
 <li>$\forall$ geschieht <span style="color: #fc03beff;">in place !</span></li>
 </ul>
-<h2 id="uerstellen-des-1-d-sudoku-feldesu"><u>Erstellen des 1-D Sudoku Feldes</u></h2>
-<pre class="hljs"><code><div>import random as r
+<h2 id="uerstellen-des-1-d-sudoku-feldesu"><u>Erstellen des 1-D Sudoku Feldes</u>:</h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
 
-sudoku = [r.randint(-9,0) for _ in range(81)]
+sudoku = [r.randint(<span class="hljs-number">-9</span>,<span class="hljs-number">0</span>) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(<span class="hljs-number">81</span>)]
 </div></code></pre>
+<h2 id="uauswerten-d-zahlenu"><u>Auswerten d. Zahlen</u>:</h2>
+<ul>
+<li>d. gesetzten Zahlen sind festbetoniert</li>
+<li>nur d. Zahlen d. $= 0$ sind werden mit einer Zahl zw. $1,9$ gesetzt</li>
+<li>Es darf f. $x \in [1,9],x$ nur $1 \times$ v.kommen !</li>
+</ul>
+<pre class="hljs"><code><div>zahlen = abs(zahlen)
+</div></code></pre>
+<h2 id="uwie-berechnen-wir-d-zeile--d-spalte-u"><u>Wie berechnen wir d. Zeile &amp; d. Spalte ?</u>:</h2>
+<ul>
+<li>Index: 13</li>
+<li><u><strong>Zeile</strong></u>:
+<ul>
+<li><code>13 // 9 = 1</code></li>
+</ul>
+</li>
+<li><u><strong>Spalte</strong></u>:
+<ul>
+<li><code>13 % 9 = 4</code></li>
+</ul>
+</li>
+</ul>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>

@@ -1456,15 +1456,36 @@ print(binärstellen(n))
 # **Backtracking**
 ![alt text](image-13.png)
 
-* $\forall$ <span style="color: #fc03beff;">in place !</span>
+* $\forall$ geschieht <span style="color: #fc03beff;">in place !</span>
 
-## <u>Erstellen des 1-D Sudoku Feldes</u>
+## <u>Erstellen des 1-D Sudoku Feldes</u>:
 
-```
+```python
 import random as r
 
 sudoku = [r.randint(-9,0) for _ in range(81)]
 ```
+
+## <u>Auswerten d. Zahlen</u>:
+* d. gesetzten Zahlen sind festbetoniert
+* nur d. Zahlen d. $= 0$ sind werden mit einer Zahl zw. $1,9$ gesetzt
+* Es darf f. $x \in [1,9],x$ nur $1 \times$ v.kommen !
+
+```python
+zahlen = abs(zahlen)
+```
+
+## <u>Wie berechnen wir d. Zeile & d. Spalte ?</u>:
+* Index: 13
+* <u>**Zeile**</u>:
+    * `13 // 9 = 1`
+* <u>**Spalte**</u>:
+    * `13 % 9 = 4`
+
+
+
+
+
 
 
 
