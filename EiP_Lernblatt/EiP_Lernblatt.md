@@ -11,7 +11,7 @@
 
 <style>
   img {
-    width: 1000px;  /* Hier deine gewünschte Breite eintragen */
+    width: 500px;  /* Hier deine gewünschte Breite eintragen */
     height: auto;  /* Behält das Seitenverhältnis bei, damit nichts verzerrt wird */
     display: block;
     margin: 10px 0; /* Sorgt für etwas Abstand nach oben und unten */
@@ -480,21 +480,6 @@ print(liste_b)
                             bomben_count += 1
             spielfeld[zeile][spalte] = bomben_count
     ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # **Dictionaries**
@@ -1635,6 +1620,11 @@ def loese_sudoku(sudoku):
 sudoku = [5, 3, 0, 0, 7, 0, 0, 0, 0, 6, 0, 0, 1, 9, 5, 0, 0, 0, 0, 9, 8, 0, 0, 0, 0, 6, 0, 8, 0, 0, 0, 6, 0, 0, 0, 3, 4, 0, 0, 8, 0, 3, 0, 0, 1, 7, 0, 0, 0, 2, 0, 0, 0, 6, 0, 6, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 4, 1, 9, 0, 0, 5, 0, 0, 0, 0, 8, 0, 0, 7, 9]
 print(loese_sudoku(sudoku))
 ```
+
+<hr>
+
+![alt text](image-15.png)
+![alt text](image-16.png)
 
 
 
