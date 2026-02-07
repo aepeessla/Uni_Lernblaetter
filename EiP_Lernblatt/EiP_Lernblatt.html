@@ -377,7 +377,7 @@ code {
 </style>
 <style>
   img {
-    width: 1000px;  /* Hier deine gewünschte Breite eintragen */
+    width: 500px;  /* Hier deine gewünschte Breite eintragen */
     height: auto;  /* Behält das Seitenverhältnis bei, damit nichts verzerrt wird */
     display: block;
     margin: 10px 0; /* Sorgt für etwas Abstand nach oben und unten */
@@ -426,6 +426,28 @@ code {
       </tr>
   </tbody>
   </table>
+</li>
+</ul>
+<h2 id="uwann--und-wann--u"><u>Wann // und wann % ?</u></h2>
+<ul>
+<li><code>//</code>:
+<ul>
+<li>in welcher Kiste bin ich ?</li>
+<li>Wie viel passt eine gesamte Gruppe irgendwo rein
+<ul>
+<li><em><strong>Gruppe</strong></em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>%</code>:
+<ul>
+<li>Was bleibt übrig
+<ul>
+<li><em><strong>Rest_Position</strong></em></li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <p><a id="Kommandozeilenargumente"></a></p>
@@ -1866,60 +1888,209 @@ print(binärstellen(n))
 </li>
 </ul>
 <hr>
+<h1 id="backtracking"><strong>Backtracking</strong></h1>
 <p><img src="image-13.png" alt="alt text"></p>
-<p>Ich habe das so verstanden import random as r</p>
-<pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
-
-
-
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">loese_suduko</span><span class="hljs-params">(sudoku:list[int])</span>:</span>
-
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>,len(sudoku), <span class="hljs-number">9</span>):
-
-        zeile = sudoku[i:i+<span class="hljs-number">9</span>]
-
-       
-
-
-
-sudoku = [r.randint(<span class="hljs-number">-9</span>,<span class="hljs-number">0</span>) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(<span class="hljs-number">81</span>)]
-
-loese_suduko(sudoku)
-</div></code></pre>
 <ul>
-<li>
-<p>Jzt., wenn eine Stelle $= 0$ ist, dann soll ich diese Stelle mit einer Zahl setzten, d. da rein passt, wenn es keine Lösung gibt, dann soll ich sagen, dass es keine Lösung f. dieses Soduko gibt, also wenn eine 9er-Einheit nicht gefunden wurde, sofort abbrechen &amp; sagen, dass man dies nicht lösen kann.</p>
-</li>
-<li>
-<p>Ich finde d. Aufgabe unnormal verwirrend. Ich verstehe nicht, was sie genau v. mir möchten. Also ich habe d. Funktion &quot;<code>def loese_sudoku(sudoku:list[int])-&gt;list[int] | str:</code>&quot; &amp; hier bekomme ich ein <strong>Sudoku-Feld</strong> ü.geben, dass Zahlen zw. $0$ bis $-9$ enthält. D. Stellen, d. eine 0 sind, sind quazi mein leeres Feld, welches ich auffüllen muss. Wenn etwas nicht lösbar ist, dann soll d. Einträge löschen, welches bedeutet, dass ich eine Kopie von diesem Feld benötige.</p>
+<li>$\forall$ geschieht <span style="color: #fc03beff;">in place !</span></li>
+<li>$num \in [0,9]$, num darf nur $1 \times$ in einem $3\times 3$-Block, Spalte &amp; Zeile enthalten sein
+<ul>
+<li>Allgemien Logik:<pre class="hljs"><code><div><span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>):
+    wenn num <span class="hljs-keyword">in</span> Block:
+        <span class="hljs-keyword">continue</span>
+    wenn num <span class="hljs-keyword">in</span> spalte:
+        <span class="hljs-keyword">continue</span>
+    wenn num <span class="hljs-keyword">in</span> zeile:
+        <span class="hljs-keyword">continue</span>
+    ansonsten:
+        setzte <span class="hljs-number">0</span>_index = num
+</div></code></pre>
 </li>
 </ul>
-<pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
+</li>
+</ul>
+<h2 id="usoduko-feld-gegu"><u>Soduko Feld geg.</u>:</h2>
+<pre class="hljs"><code><div>sudoku = [<span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">7</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">7</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]
+</div></code></pre>
+<h2 id="um%C3%BCssen-wir-weiter-gucken-oder-sind-wir-fertig-u"><u>Müssen wir weiter gucken oder sind wir fertig ?</u>:</h2>
+<pre class="hljs"><code><div>wenn es keine <span class="hljs-number">0</span> gibt:
+    <span class="hljs-keyword">return</span> sudoku
 
-<span class="hljs-keyword">import</span> copy <span class="hljs-keyword">as</span> c 
-
-
-
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">loese_suduko</span><span class="hljs-params">(sudoku_og:list[int])</span>:</span>
-
-    sudoku = c.deepcopy(sudoku_og)
-
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>,len(sudoku), <span class="hljs-number">9</span>):
-
-        zeile = sudoku[i:i+<span class="hljs-number">9</span>]
-
-        print(zeile)
-
-
-
-sudoku = [r.randint(<span class="hljs-number">-9</span>,<span class="hljs-number">0</span>) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(<span class="hljs-number">81</span>)]
-
-loese_suduko(sudoku)
+mache ansosnten einfach weiter
 </div></code></pre>
 <ul>
-<li>Ich muss mich zudem immer an $9$ Stellen orientieren, welches ein $3 \times 3$ Feld im Bild ist. D. einzelnen Zahlen muss ich mit abs(zahlen) angucken, welches bedeutet, dass ich durch eine Zeile iterieren muss &amp; gucken muss, welche Zahlen n.</li>
+<li>wir müssen 3 Fälle kontrollieren: Zeile, Spalten &amp; Block:</li>
+<li>wir haben einen Wächter d. sagt, ob es erlaubt oder $\lnot$ erlaubt ist: <code>ist_erlaubt = True</code>
+<ul>
+<li>Wir gehen mal davon aus, dass es erlaubt ist</li>
 </ul>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
+</li>
+<li>wenn ein Fall bereits enthalten ist, dann müssen wir es direkt abbrechen und mit d. nächsten Zahl weiter machen!</li>
+</ul>
+<h2 id="ufall-1-zeileu"><u>Fall 1: Zeile</u>:</h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(spalte, <span class="hljs-number">81</span>, <span class="hljs-number">9</span>):
+    wenn sudoku[i] == num:
+        ist_erlaubt = <span class="hljs-literal">False</span>
+        ABBRUCH <span class="hljs-comment">#wenn es hier schon False ist, dann bracuhen wir nicht weiter zu gucken</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(spalte, <span class="hljs-number">81</span>, <span class="hljs-number">9</span>):
+    <span class="hljs-keyword">if</span> sudoku[i] == num:
+        ist_erlaubt = <span class="hljs-literal">False</span>
+        <span class="hljs-keyword">break</span> <span class="hljs-comment">#wenn es hier schon False ist, dann bracuhen wir nicht weiter zu gucken</span>
+</div></code></pre>
+<h2 id="ufall-2-zeileu"><u>Fall 2: Zeile</u>:</h2>
+<pre class="hljs"><code><div>start_zeile = zeile * <span class="hljs-number">9</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(start_zeile, start_zeile + <span class="hljs-number">9</span>):
+    wenn sudoku[i] == num:
+        ist_erlaubt = <span class="hljs-literal">False</span>
+        ABBRUCH <span class="hljs-comment">#wenn es hier schon False ist, dann bracuhen wir nicht weiter zu gucken</span>
+</div></code></pre>
+<pre class="hljs"><code><div>start_zeile = zeile * <span class="hljs-number">9</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(start_zeile, start_zeile + <span class="hljs-number">9</span>):
+    <span class="hljs-keyword">if</span> sudoku[i] == num:
+        ist_erlaubt = <span class="hljs-literal">False</span>
+        <span class="hljs-keyword">break</span> <span class="hljs-comment">#wenn es hier schon False ist, dann bracuhen wir nicht weiter zu gucken</span>
+</div></code></pre>
+<h2 id="ufall-3-blocku"><u>Fall 3: Block</u>:</h2>
+<ul>
+<li>finde d. Position v. meiner 0 innerhalb seiner Blockes ($spalte \in [0,2]$, $zeile \in [0,2]$)
+<ul>
+<li>Berechne d. 1. Pos. in dem jeweiligen Block</li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code><div>zeile_rest = zeile % <span class="hljs-number">3</span>
+spalte_rest = spalte % <span class="hljs-number">3</span>
+block_start = (index - spalte_rest) - (zeile_rest * <span class="hljs-number">9</span>)
+block_start1 = block_start + <span class="hljs-number">1</span>
+block_start2 = block_start2 + <span class="hljs-number">1</span>
+
+round = <span class="hljs-number">0</span>
+<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
+    block_start, block_start1, block_start2 = block_start + j, block_start1 + j, bock_start2 + j
+    round = <span class="hljs-number">9</span>
+    wenn  sudoku[blockstart] == num oder sudoku[blockstart1] == num oder sudoku[blockstart2] == num:
+        ist_erlaubt = <span class="hljs-literal">False</span> <span class="hljs-comment">#Wächter gibt Alerm aus</span>
+        <span class="hljs-keyword">break</span>
+</div></code></pre>
+<h2 id="ufinale-kontrolle-f%C3%BCr-zahlu"><u>Finale Kontrolle für Zahl</u>:</h2>
+<pre class="hljs"><code><div>wenn der Wächter <span class="hljs-literal">True</span> sagt, dann ist d. Zahl erlaubt
+    * sudoku[index0] wird dann gleich d. Zahl gesetzt
+    * das Ergebnis v. d. loese_sudoku(sudoku) speichern wir <span class="hljs-keyword">in</span> der Var. ergebnis
+        * ist das Ergebnis <span class="hljs-literal">None</span> ?
+            * wenn ja, dann wissen wir, dass diese Zahl nicht die richtige war und machen mit der nächsten Zahl weiter
+            * wenn nein, dann geben wir die veränderte Liste an loese_sudoku(sudoku) weiter <span class="hljs-comment"># Sie nimmt ich dann die nächste 0 und macht wieder das gleiche</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-keyword">if</span> ist_erlaubt:
+    sudoku[index] = num
+    ergebnis = loese_sudoku(sudoku)
+    <span class="hljs-keyword">if</span> ergebnis != <span class="hljs-literal">None</span>:
+        <span class="hljs-keyword">return</span> Ergebnis
+    <span class="hljs-keyword">else</span>:
+        sudoku[index] = <span class="hljs-number">0</span> <span class="hljs-comment"># wir sind hier immer noch in der Schleife (Es soll ja noch die restlichen Zahlen gucken!!!  </span>
+</div></code></pre>
+<ul>
+<li><code>None</code> wird nur einmal ausgegeben</li>
+</ul>
+<h2 id="ufertiger-codeu"><u>Fertiger Code</u>:</h2>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">loese_sudoku</span><span class="hljs-params">(sudoku)</span>:</span>
+    <span class="hljs-comment"># 1. Basisfall: Wenn keine 0 mehr da ist, sind wir fertig!</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-number">0</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> sudoku:
+        <span class="hljs-keyword">return</span> sudoku
+
+    <span class="hljs-comment"># 2. Finde das erste freie Feld</span>
+    index = sudoku.index(<span class="hljs-number">0</span>)
+    zeile = index // <span class="hljs-number">9</span>
+    spalte = index % <span class="hljs-number">9</span>
+
+    <span class="hljs-comment"># 3. Wir probieren die Zahlen 1 bis 9</span>
+    <span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>):
+        
+        <span class="hljs-comment"># --- DER WÄCHTER-CHECK 👮 ---</span>
+        <span class="hljs-comment"># Wir gehen davon aus, dass die Zahl erlaubt ist, bis wir das Gegenteil beweisen.</span>
+        ist_erlaubt = <span class="hljs-literal">True</span>
+
+        <span class="hljs-comment"># Wächter 1: Spalte prüfen ⬇️</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(spalte, <span class="hljs-number">81</span>, <span class="hljs-number">9</span>):
+            <span class="hljs-keyword">if</span> sudoku[i] == num:
+                ist_erlaubt = <span class="hljs-literal">False</span>
+                <span class="hljs-keyword">break</span> <span class="hljs-comment"># Alarm! Zahl gefunden.</span>
+        
+        <span class="hljs-comment"># Wächter 2: Zeile prüfen ➡️</span>
+        start_zeile = zeile * <span class="hljs-number">9</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(start_zeile, start_zeile + <span class="hljs-number">9</span>):
+            <span class="hljs-keyword">if</span> sudoku[i] == num:
+                ist_erlaubt = <span class="hljs-literal">False</span>
+                <span class="hljs-keyword">break</span> <span class="hljs-comment"># Alarm! Zahl gefunden.</span>
+
+        <span class="hljs-comment"># Wächter 3: 3x3 Block prüfen 📦</span>
+        <span class="hljs-comment"># Deine Formel für die Ecke oben links:</span>
+        zeile_rest = zeile % <span class="hljs-number">3</span>
+        spalte_rest = spalte % <span class="hljs-number">3</span>
+        block_start = (index - spalte_rest) - (zeile_rest * <span class="hljs-number">9</span>)
+        block_start1 = block_start + <span class="hljs-number">1</span>
+        block_start2 = block_start1 + <span class="hljs-number">1</span>
+    
+        round = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
+            block_start, block_start1, block_start2 = block_start + round, block_start1 + round, block_start2 + round
+            round = <span class="hljs-number">9</span>
+            
+            <span class="hljs-keyword">if</span> sudoku[block_start] == num <span class="hljs-keyword">or</span> sudoku[block_start1] == num <span class="hljs-keyword">or</span> sudoku[block_start2] == num:
+                ist_erlaubt = <span class="hljs-literal">False</span>
+                <span class="hljs-keyword">break</span> <span class="hljs-comment"># Alarm! Zahl gefunden.</span>
+        
+        
+        <span class="hljs-comment"># 4. Wenn alle Wächter "Okay" sagen:</span>
+        <span class="hljs-keyword">if</span> ist_erlaubt:
+            sudoku[index] = num <span class="hljs-comment"># Zahl setzen</span>
+            ergebnis = loese_sudoku(sudoku)
+            <span class="hljs-keyword">if</span> ergebnis != <span class="hljs-literal">None</span>:
+                <span class="hljs-keyword">return</span> ergebnis
+            <span class="hljs-keyword">else</span>:
+                sudoku[index] = <span class="hljs-number">0</span>
+        
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">None</span>        
+            
+            
+sudoku = [<span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">7</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">7</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]
+print(loese_sudoku(sudoku))
+</div></code></pre>
+<hr>
+<p><img src="image-15.png" alt="alt text">
+<img src="image-16.png" alt="alt text"></p>
+<h3 id="uallgemeinu"><u>Allgemein</u>:</h3>
+<ul>
+<li>
+<p>Ich bin d. Arbeitgeber &amp; ich gebe meinen Mitarbeitern (Forscher) einen Handbuch, was sie machen sollen &amp; bei welchen Situationen, wie handeln sollen. Ansonsten bekommen sie Panik &amp; wissen $\lnot$ was zu tun ist. Am Ende laufen sie endlos im Kreis &amp; sind irgendwann exhausted!</p>
+<ul>
+<li>Was soll eine einzelne Abteilung machen ?</li>
+<li>Was soll sie den Mitarbeitern am Besten Bescheid geben, damit es effizient ist ?</li>
+<li>dann wdh.</li>
+</ul>
+</li>
+<li>
+<p>Wenn ein Forscher auf dem Boden ist , dann gibt dieses True zurück &amp; das wird dann von unten n. oben zurück gegeben:
+<code>True</code>(letzter Rekursionsaufruf)-&gt;<code>True</code> -&gt; <code>True</code> -&gt;… -&gt;<code>True</code> -&gt; <code>False</code>(Der erste Forscher, d. d. Suchtruppen überhaupt in d. Loch geschickt hat)</p>
+</li>
+</ul>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+              {left: "$$", right: "$$", display: true},
+              {left: "$", right: "$", display: false},
+              {left: "\\(", right: "\\)", display: false},
+              {left: "\\[", right: "\\]", display: true}
+            ]
+        });
+    });
+</script>
+<style>
+    /* Kleine Korrektur, damit Formeln nicht abgeschnitten werden */
+    .katex-display { overflow-x: auto; overflow-y: hidden; }
+</style>
 </body>
 </html>
