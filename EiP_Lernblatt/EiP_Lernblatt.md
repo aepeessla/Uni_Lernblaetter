@@ -11,7 +11,7 @@
 
 <style>
   img {
-    width: 500px;  /* Hier deine gewünschte Breite eintragen */
+    width: 1000px;  /* Hier deine gewünschte Breite eintragen */
     height: auto;  /* Behält das Seitenverhältnis bei, damit nichts verzerrt wird */
     display: block;
     margin: 10px 0; /* Sorgt für etwas Abstand nach oben und unten */
@@ -69,15 +69,7 @@
     </tbody>
     </table>
 
-## <u>Wann // und wann % ?</u>
 
-* `//`:
-    * in welcher Kiste bin ich ?
-    * Wie viel passt eine gesamte Gruppe irgendwo rein 
-        * ***Gruppe***
-* `%`:
-    * Was bleibt übrig
-        * ***Rest_Position***
 
 <a id="Kommandozeilenargumente"></a>
 
@@ -480,6 +472,21 @@ print(liste_b)
                             bomben_count += 1
             spielfeld[zeile][spalte] = bomben_count
     ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # **Dictionaries**
@@ -1446,211 +1453,59 @@ print(binärstellen(n))
 
 <hr>
 
-# **Backtracking**
-
 ![alt text](image-13.png)
 
-* $\forall$ geschieht <span style="color: #fc03beff;">in place !</span>
-* $num \in [0,9]$, num darf nur $1 \times$ in einem $3\times 3$-Block, Spalte & Zeile enthalten sein
-    * Allgemien Logik:
-        ```python
-        for num in range(1,10):
-            wenn num in Block:
-                continue
-            wenn num in spalte:
-                continue
-            wenn num in zeile:
-                continue
-            ansonsten:
-                setzte 0_index = num
-        ```
-
-## <u>Soduko Feld geg.</u>:
-```python
-sudoku = [5, 3, 0, 0, 7, 0, 0, 0, 0, 6, 0, 0, 1, 9, 5, 0, 0, 0, 0, 9, 8, 0, 0, 0, 0, 6, 0, 8, 0, 0, 0, 6, 0, 0, 0, 3, 4, 0, 0, 8, 0, 3, 0, 0, 1, 7, 0, 0, 0, 2, 0, 0, 0, 6, 0, 6, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 4, 1, 9, 0, 0, 5, 0, 0, 0, 0, 8, 0, 0, 7, 9]
-```
-
-## <u>Müssen wir weiter gucken oder sind wir fertig ?</u>:
-```python
-wenn es keine 0 gibt:
-    return sudoku
-
-mache ansosnten einfach weiter
-```
-* wir müssen 3 Fälle kontrollieren: Zeile, Spalten & Block:
-* wir haben einen Wächter d. sagt, ob es erlaubt oder $\lnot$ erlaubt ist: `ist_erlaubt = True`
-    * Wir gehen mal davon aus, dass es erlaubt ist
-* wenn ein Fall bereits enthalten ist, dann müssen wir es direkt abbrechen und mit d. nächsten Zahl weiter machen!
-
-## <u>Fall 1: Zeile</u>:
-```python
-for i in range(spalte, 81, 9):
-    wenn sudoku[i] == num:
-        ist_erlaubt = False
-        ABBRUCH #wenn es hier schon False ist, dann bracuhen wir nicht weiter zu gucken
-```
-```python
-for i in range(spalte, 81, 9):
-    if sudoku[i] == num:
-        ist_erlaubt = False
-        break #wenn es hier schon False ist, dann bracuhen wir nicht weiter zu gucken
-```
-
-
-## <u>Fall 2: Zeile</u>:
-```python
-start_zeile = zeile * 9
-for i in range(start_zeile, start_zeile + 9):
-    wenn sudoku[i] == num:
-        ist_erlaubt = False
-        ABBRUCH #wenn es hier schon False ist, dann bracuhen wir nicht weiter zu gucken
-```
-```python
-start_zeile = zeile * 9
-for i in range(start_zeile, start_zeile + 9):
-    if sudoku[i] == num:
-        ist_erlaubt = False
-        break #wenn es hier schon False ist, dann bracuhen wir nicht weiter zu gucken
-```
-
-## <u>Fall 3: Block</u>:
-* finde d. Position v. meiner 0 innerhalb seiner Blockes ($spalte \in [0,2]$, $zeile \in [0,2]$)
-    * Berechne d. 1. Pos. in dem jeweiligen Block
-
-```python
-zeile_rest = zeile % 3
-spalte_rest = spalte % 3
-block_start = (index - spalte_rest) - (zeile_rest * 9)
-block_start1 = block_start + 1
-block_start2 = block_start2 + 1
-
-round = 0
-for _ in range(3):
-    block_start, block_start1, block_start2 = block_start + j, block_start1 + j, bock_start2 + j
-    round = 9
-    wenn  sudoku[blockstart] == num oder sudoku[blockstart1] == num oder sudoku[blockstart2] == num:
-        ist_erlaubt = False #Wächter gibt Alerm aus
-        break
-```
-
-## <u>Finale Kontrolle für Zahl</u>:
-```python
-wenn der Wächter True sagt, dann ist d. Zahl erlaubt
-    * sudoku[index0] wird dann gleich d. Zahl gesetzt
-    * das Ergebnis v. d. loese_sudoku(sudoku) speichern wir in der Var. ergebnis
-        * ist das Ergebnis None ?
-            * wenn ja, dann wissen wir, dass diese Zahl nicht die richtige war und machen mit der nächsten Zahl weiter
-            * wenn nein, dann geben wir die veränderte Liste an loese_sudoku(sudoku) weiter # Sie nimmt ich dann die nächste 0 und macht wieder das gleiche
-```
-```python
-if ist_erlaubt:
-    sudoku[index] = num
-    ergebnis = loese_sudoku(sudoku)
-    if ergebnis != None:
-        return Ergebnis
-    else:
-        sudoku[index] = 0 # wir sind hier immer noch in der Schleife (Es soll ja noch die restlichen Zahlen gucken!!!  
-```
-*   `None` wird nur einmal ausgegeben
-
-## <u>Fertiger Code</u>:
+Ich habe das so verstanden import random as r
 
 
 ```python
-def loese_sudoku(sudoku):
-    # 1. Basisfall: Wenn keine 0 mehr da ist, sind wir fertig!
-    if 0 not in sudoku:
-        return sudoku
+import random as r
 
-    # 2. Finde das erste freie Feld
-    index = sudoku.index(0)
-    zeile = index // 9
-    spalte = index % 9
 
-    # 3. Wir probieren die Zahlen 1 bis 9
-    for num in range(1, 10):
-        
-        # --- DER WÄCHTER-CHECK 👮 ---
-        # Wir gehen davon aus, dass die Zahl erlaubt ist, bis wir das Gegenteil beweisen.
-        ist_erlaubt = True
 
-        # Wächter 1: Spalte prüfen ⬇️
-        for i in range(spalte, 81, 9):
-            if sudoku[i] == num:
-                ist_erlaubt = False
-                break # Alarm! Zahl gefunden.
-        
-        # Wächter 2: Zeile prüfen ➡️
-        start_zeile = zeile * 9
-        for i in range(start_zeile, start_zeile + 9):
-            if sudoku[i] == num:
-                ist_erlaubt = False
-                break # Alarm! Zahl gefunden.
+def loese_suduko(sudoku:list[int]):
 
-        # Wächter 3: 3x3 Block prüfen 📦
-        # Deine Formel für die Ecke oben links:
-        zeile_rest = zeile % 3
-        spalte_rest = spalte % 3
-        block_start = (index - spalte_rest) - (zeile_rest * 9)
-        block_start1 = block_start + 1
-        block_start2 = block_start1 + 1
-    
-        round = 0
-        for _ in range(3):
-            block_start, block_start1, block_start2 = block_start + round, block_start1 + round, block_start2 + round
-            round = 9
-            
-            if sudoku[block_start] == num or sudoku[block_start1] == num or sudoku[block_start2] == num:
-                ist_erlaubt = False
-                break # Alarm! Zahl gefunden.
-        
-        
-        # 4. Wenn alle Wächter "Okay" sagen:
-        if ist_erlaubt:
-            sudoku[index] = num # Zahl setzen
-            ergebnis = loese_sudoku(sudoku)
-            if ergebnis != None:
-                return ergebnis
-            else:
-                sudoku[index] = 0
-        
-    return None        
-            
-            
-sudoku = [5, 3, 0, 0, 7, 0, 0, 0, 0, 6, 0, 0, 1, 9, 5, 0, 0, 0, 0, 9, 8, 0, 0, 0, 0, 6, 0, 8, 0, 0, 0, 6, 0, 0, 0, 3, 4, 0, 0, 8, 0, 3, 0, 0, 1, 7, 0, 0, 0, 2, 0, 0, 0, 6, 0, 6, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 4, 1, 9, 0, 0, 5, 0, 0, 0, 0, 8, 0, 0, 7, 9]
-print(loese_sudoku(sudoku))
+    for i in range(0,len(sudoku), 9):
+
+        zeile = sudoku[i:i+9]
+
+       
+
+
+
+sudoku = [r.randint(-9,0) for _ in range(81)]
+
+loese_suduko(sudoku)
 ```
 
-<hr>
+* Jzt., wenn eine Stelle $= 0$ ist, dann soll ich diese Stelle mit einer Zahl setzten, d. da rein passt, wenn es keine Lösung gibt, dann soll ich sagen, dass es keine Lösung f. dieses Soduko gibt, also wenn eine 9er-Einheit nicht gefunden wurde, sofort abbrechen & sagen, dass man dies nicht lösen kann. 
 
-![alt text](image-15.png)
-![alt text](image-16.png)
+* Ich finde d. Aufgabe unnormal verwirrend. Ich verstehe nicht, was sie genau v. mir möchten. Also ich habe d. Funktion "`def loese_sudoku(sudoku:list[int])->list[int] | str:`" & hier bekomme ich ein **Sudoku-Feld** ü.geben, dass Zahlen zw. $0$ bis $-9$ enthält. D. Stellen, d. eine 0 sind, sind quazi mein leeres Feld, welches ich auffüllen muss. Wenn etwas nicht lösbar ist, dann soll d. Einträge löschen, welches bedeutet, dass ich eine Kopie von diesem Feld benötige.
 
-### <u>Allgemein</u>:
-* Ich bin d. Arbeitgeber & ich gebe meinen Mitarbeitern (Forscher) einen Handbuch, was sie machen sollen & bei welchen Situationen, wie handeln sollen. Ansonsten bekommen sie Panik & wissen $\lnot$ was zu tun ist. Am Ende laufen sie endlos im Kreis & sind irgendwann exhausted!
+```python
+import random as r
 
-    * Was soll eine einzelne Abteilung machen ?
-    * Was soll sie den Mitarbeitern am Besten Bescheid geben, damit es effizient ist ?
-    * dann wdh.
-
-* Wenn ein Forscher auf dem Boden ist , dann gibt dieses True zurück & das wird dann von unten n. oben zurück gegeben:
-`True`(letzter Rekursionsaufruf)->`True` -> `True` ->… ->`True` -> `False`(Der erste Forscher, d. d. Suchtruppen überhaupt in d. Loch geschickt hat)
+import copy as c 
 
 
 
+def loese_suduko(sudoku_og:list[int]):
+
+    sudoku = c.deepcopy(sudoku_og)
+
+    for i in range(0,len(sudoku), 9):
+
+        zeile = sudoku[i:i+9]
+
+        print(zeile)
 
 
 
+sudoku = [r.randint(-9,0) for _ in range(81)]
 
-
-
-
-
-
-
-
-
-
+loese_suduko(sudoku)
+```
+* Ich muss mich zudem immer an $9$ Stellen orientieren, welches ein $3 \times 3$ Feld im Bild ist. D. einzelnen Zahlen muss ich mit abs(zahlen) angucken, welches bedeutet, dass ich durch eine Zeile iterieren muss & gucken muss, welche Zahlen n.  
 
 
 
@@ -1693,22 +1548,18 @@ print(loese_sudoku(sudoku))
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-            delimiters: [
-              {left: "$$", right: "$$", display: true},
-              {left: "$", right: "$", display: false},
-              {left: "\\(", right: "\\)", display: false},
-              {left: "\\[", right: "\\]", display: true}
-            ]
-        });
-    });
-</script>
-<style>
-    /* Kleine Korrektur, damit Formeln nicht abgeschnitten werden */
-    .katex-display { overflow-x: auto; overflow-y: hidden; }
-</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
