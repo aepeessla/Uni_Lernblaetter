@@ -1626,6 +1626,15 @@ print(loese_sudoku(sudoku))
 ![alt text](image-15.png)
 ![alt text](image-16.png)
 
+### <u>Allgemein</u>:
+* Ich bin d. Arbeitgeber & ich gebe meinen Mitarbeitern (Forscher) einen Handbuch, was sie machen sollen & bei welchen Situationen, wie handeln sollen. Ansonsten bekommen sie Panik & wissen $\lnot$ was zu tun ist. Am Ende laufen sie endlos im Kreis & sind irgendwann exhausted!
+
+    * Was soll eine einzelne Abteilung machen ?
+    * Was soll sie den Mitarbeitern am Besten Bescheid geben, damit es effizient ist ?
+    * dann wdh.
+
+* Wenn ein Forscher auf dem Boden ist , dann gibt dieses True zurück & das wird dann von unten n. oben zurück gegeben:
+`True`(letzter Rekursionsaufruf)->`True` -> `True` ->… ->`True` -> `False`(Der erste Forscher, d. d. Suchtruppen überhaupt in d. Loch geschickt hat)
 
 
 
