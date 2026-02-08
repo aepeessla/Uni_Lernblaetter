@@ -1508,66 +1508,13 @@ loese_suduko(sudoku)
 ```
 * Ich muss mich zudem immer an $9$ Stellen orientieren, welches ein $3 \times 3$ Feld im Bild ist. D. einzelnen Zahlen muss ich mit abs(zahlen) angucken, welches bedeutet, dass ich durch eine Zeile iterieren muss & gucken muss, welche Zahlen n.  
 
-* True = Loch, False = Käse
-
-* Weg v. Wasser speichern
-* Wir müssen v. `True` $\to$ `True` spingen
-
-* **Wann Ende**:
-    1) Wenn kaese[-1][y][x] erreicht & `== True`
-    2) Wenn keine mögl. Schritte erlaubt $\to$ Sackgasse
-
-* ***Richtungen***: [(-1,0,0), (1,0,0), (0,1,0), (0,-1,0), (0,0,1), (0,0,-1)]
-
-* Wir müssen v. kaese[0][x][x] n. `True` suchen, und v. diesem Weg an müssen wir $\forall$ Wege unters., d. `True` sind !
-    * Wenn kaese[i] f. i = 0, dann dürfen wir nur n. links, rechts, unten.
-        -> [(1,0,0), (1,0,0), (0,1,0), (0,-1,0), (0,0,1), (0,0,-1)]
-        ansonsten:
-            #Wir können n. oben, links, rechts, unten
-            [(-1,0,0), (1,0,0), (0,1,0), (0,-1,0), (0,0,1), (0,0,-1)]
-            
-* Besuchte Orte: visited = set()
-                              
-    * Anfang: kaese[0][x][x]
-        * Wenn wir hier sind, dann nicht wasserdicht
-    • Wenn wir in einer Sackgasse sind, dann müssen wir den gespeicherten Weg leeren
-    • Ende: kaese[-1][x][x]. Wenn wir hier True finden, dann müssen wir den Wächter auf True setzen
-    
-    
-{40 * "-"}*CODE*{40 * "-"}
-{10 * "-"}Erstes Loch auf Oberfläche finden:{10 * "-"}
-kaese[0][y][x]
-for y in range(n):
-    for x in range(n):
-        if kaese[0][y][x] == False:
-            continue
-        else:
-        visited.add((0,y,x))
-            <Logik>
-            
-{10 * "-"}Erlaubte Richtungen:{10 * "-"}
-richtungen = [(-1,0,0), (1,0,0), (0,1,0), (0,-1,0), (0,0,1), (0,0,-1)]
-erlaubte_richtungen = []
-
-for zn, yn, xn in richtungen:
-    if kaese[z+zn][y+yn][x+xn] == True:
-    erlaubte_richtungen.append((z+zn,y+yn,x+xn))
-    
-for richtung in erlaubte_richtungen:
-    visited.append(ausgewählte_richtung)
-
-{10 * "-"}Wann Sackgasse ?:{10 * "-"}
-if len(erlaubte_richtungen) == 0:
-    #Sackgasse
-    return None
-
-{10 * "-"}Kontrolle am Ende:{10 * "-"}
-#Am Ende angekommen ?
-if kaese[z] == kaese[n-1]:
-    wasserdicht = Flase #False, weil Wasser konnte durchsickern
-else:
 
 
+
+<hr>
+
+![alt text](image-17.png)
+![alt text](image-18.png)
 
 ```python
 import random as r
@@ -1592,15 +1539,20 @@ def wasserdicht(z:int, y:int, x:int, kaese:list[list[list[bool]]], visited:set[t
     #True = dicht
     #False = nicht dicht
         
+    #befindet sich d. Koordinate ü.haupt in d. Käse ?
     if z<0 or z>(höhe_z-1) or y<0 or y>(höhe_y-1) or x<0 or x>(höhe_x-1):
         return False
+    #handelt es sich ü.haupt an dieser Koordinate um ein Loch ?
     elif kaese[z][y][x] != True:
         return False
+    #hat diese Stelle bereits jemand besucht ?
     elif tuple((z,y,x)) in visited:
         return False
-    #unten angekommen          
+    #Ist eine Truppe unten angekommen ?
     if z == höhe_z-1: #True brauche ich gar nicht zu gucken, weil ich nur unten ankommen kann, wenn es ein Loch ist
         return True
+    
+    #Wenn eine Truppe ein Loch gefunden wurde, welches legal ist, dann schrieben sie sich d. Koordinaten in der Bescuhtenliste auf
     visited.add(tuple((z,y,x)))
     
     
@@ -1610,9 +1562,10 @@ def wasserdicht(z:int, y:int, x:int, kaese:list[list[list[bool]]], visited:set[t
         z_new,y_new,x_new = z+nz,y+ny,x+nx
         
         result = wasserdicht(z_new, y_new, x_new, kaese, visited)
+        #Haben d. Männer meiner Truppen einen Loch gefunden ? Sagt es Schritt für Schritt den oberen Männern Bescheid
         if result == True:
-            return True
-    return False
+            return True #Das ist die Endnachricht, dass ich bekomme
+    return False  #Das ist die Endnachricht, dass ich bekommes
         
         
         
@@ -1636,15 +1589,17 @@ def erzeuge(prozent:int, groesse:int)->bool:
     print(kaese)    
     visited = set()
     
-    
+    #Kontrolliere zunächst wo auf der Oberflöche ein Loch ist
     for b in range(groesse):
         for c in range(groesse):
+            # wenn ich auf d. Oberfläche ein Loch gefunden habe, schicke ich meine Suchtruppen hin
             if kaese[0][b][c] == True:
-
+                #Werden meine Truppen den Boden erreichen oder nicht ?
                 ergebnis = wasserdicht(0, b, c, kaese, visited)
                 if ergebnis == True:
                     return False
                 else:
+                    #wenn sie an einem Punkt nicht weiter kommen, dann schicke ich eine truppe zum nächsten Loch
                     continue
     return True           
 

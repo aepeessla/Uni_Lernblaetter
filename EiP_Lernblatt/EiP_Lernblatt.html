@@ -1894,6 +1894,7 @@ loese_suduko(sudoku)
 <p>Ich finde d. Aufgabe unnormal verwirrend. Ich verstehe nicht, was sie genau v. mir möchten. Also ich habe d. Funktion &quot;<code>def loese_sudoku(sudoku:list[int])-&gt;list[int] | str:</code>&quot; &amp; hier bekomme ich ein <strong>Sudoku-Feld</strong> ü.geben, dass Zahlen zw. $0$ bis $-9$ enthält. D. Stellen, d. eine 0 sind, sind quazi mein leeres Feld, welches ich auffüllen muss. Wenn etwas nicht lösbar ist, dann soll d. Einträge löschen, welches bedeutet, dass ich eine Kopie von diesem Feld benötige.</p>
 </li>
 </ul>
+<h3 id="ubrain-stormingu"><u>Brain Storming</u></h3>
 <pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
 
 <span class="hljs-keyword">import</span> copy <span class="hljs-keyword">as</span> c 
@@ -1919,6 +1920,100 @@ loese_suduko(sudoku)
 <ul>
 <li>Ich muss mich zudem immer an $9$ Stellen orientieren, welches ein $3 \times 3$ Feld im Bild ist. D. einzelnen Zahlen muss ich mit abs(zahlen) angucken, welches bedeutet, dass ich durch eine Zeile iterieren muss &amp; gucken muss, welche Zahlen n.</li>
 </ul>
+<hr>
+<p><img src="image-17.png" alt="alt text">
+<img src="image-18.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">kontrolle_eingabe</span><span class="hljs-params">(prozent:int, groesse:int)</span>-&gt;str|list[<span class="hljs-keyword">None</span>]:</span>
+    
+    <span class="hljs-keyword">if</span> prozent &lt; <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> prozent &gt;= <span class="hljs-number">100</span>:
+        prozent = <span class="hljs-string">'Illegal'</span>
+        
+    <span class="hljs-keyword">if</span> groesse &lt;= <span class="hljs-number">0</span>:
+        groesse = <span class="hljs-string">'Illegal'</span>
+    
+    <span class="hljs-keyword">return</span> prozent, groesse
+    
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wasserdicht</span><span class="hljs-params">(z:int, y:int, x:int, kaese:list[list[list[bool]]], visited:set[tuple[int,int,int]])</span>-&gt; bool:</span>
+    höhe_z = len(kaese)
+    höhe_y = len(kaese[<span class="hljs-number">0</span>])
+    höhe_x = len(kaese[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>])
+    
+    <span class="hljs-comment">#True = dicht</span>
+    <span class="hljs-comment">#False = nicht dicht</span>
+        
+    <span class="hljs-comment">#befindet sich d. Koordinate ü.haupt in d. Käse ?</span>
+    <span class="hljs-keyword">if</span> z&lt;<span class="hljs-number">0</span> <span class="hljs-keyword">or</span> z&gt;(höhe_z<span class="hljs-number">-1</span>) <span class="hljs-keyword">or</span> y&lt;<span class="hljs-number">0</span> <span class="hljs-keyword">or</span> y&gt;(höhe_y<span class="hljs-number">-1</span>) <span class="hljs-keyword">or</span> x&lt;<span class="hljs-number">0</span> <span class="hljs-keyword">or</span> x&gt;(höhe_x<span class="hljs-number">-1</span>):
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+    <span class="hljs-comment">#handelt es sich ü.haupt an dieser Koordinate um ein Loch ?</span>
+    <span class="hljs-keyword">elif</span> kaese[z][y][x] != <span class="hljs-literal">True</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+    <span class="hljs-comment">#hat diese Stelle bereits jemand besucht ?</span>
+    <span class="hljs-keyword">elif</span> tuple((z,y,x)) <span class="hljs-keyword">in</span> visited:
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+    <span class="hljs-comment">#Ist eine Truppe unten angekommen ?</span>
+    <span class="hljs-keyword">if</span> z == höhe_z<span class="hljs-number">-1</span>: <span class="hljs-comment">#True brauche ich gar nicht zu gucken, weil ich nur unten ankommen kann, wenn es ein Loch ist</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+    
+    <span class="hljs-comment">#Wenn eine Truppe ein Loch gefunden wurde, welches legal ist, dann schrieben sie sich d. Koordinaten in der Bescuhtenliste auf</span>
+    visited.add(tuple((z,y,x)))
+    
+    
+    
+    richtungen = [(<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>), (<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>), (<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>), (<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>), (<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>), (<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>)]
+    <span class="hljs-keyword">for</span> nz,ny,nx <span class="hljs-keyword">in</span> richtungen:
+        z_new,y_new,x_new = z+nz,y+ny,x+nx
+        
+        result = wasserdicht(z_new, y_new, x_new, kaese, visited)
+        <span class="hljs-comment">#Haben d. Männer meiner Truppen einen Loch gefunden ? Sagt es Schritt für Schritt den oberen Männern Bescheid</span>
+        <span class="hljs-keyword">if</span> result == <span class="hljs-literal">True</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span> <span class="hljs-comment">#Das ist die Endnachricht, dass ich bekomme</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>  <span class="hljs-comment">#Das ist die Endnachricht, dass ich bekommes</span>
+        
+        
+        
+            
+       
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">erzeuge</span><span class="hljs-params">(prozent:int, groesse:int)</span>-&gt;bool:</span>  
+    prozent1, groesse1 = kontrolle_eingabe(prozent, groesse)
+    <span class="hljs-keyword">if</span> prozent1 == <span class="hljs-string">'Illegal'</span> <span class="hljs-keyword">or</span> groesse1 == <span class="hljs-string">'Illegal'</span>:
+        <span class="hljs-keyword">return</span> []
+    
+    <span class="hljs-comment">#Loch oder Käse</span>
+    elem = [<span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>]
+    kaese = [[[<span class="hljs-string">''</span> <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(groesse1)]<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(groesse1)]<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(groesse1)]
+    ausg_elem = r.choices(elem, weights=[prozent1, <span class="hljs-number">100</span>-prozent1], k=<span class="hljs-number">1</span>)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> kaese:
+        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> i:
+            <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(len(j)):
+                ausg_elem = r.choices(elem, weights=[prozent1,<span class="hljs-number">100</span>-prozent1], k=<span class="hljs-number">1</span>)
+                j[k] = ausg_elem[<span class="hljs-number">0</span>]
+                
+    print(kaese)    
+    visited = set()
+    
+    <span class="hljs-comment">#Kontrolliere zunächst wo auf der Oberflöche ein Loch ist</span>
+    <span class="hljs-keyword">for</span> b <span class="hljs-keyword">in</span> range(groesse):
+        <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> range(groesse):
+            <span class="hljs-comment"># wenn ich auf d. Oberfläche ein Loch gefunden habe, schicke ich meine Suchtruppen hin</span>
+            <span class="hljs-keyword">if</span> kaese[<span class="hljs-number">0</span>][b][c] == <span class="hljs-literal">True</span>:
+                <span class="hljs-comment">#Werden meine Truppen den Boden erreichen oder nicht ?</span>
+                ergebnis = wasserdicht(<span class="hljs-number">0</span>, b, c, kaese, visited)
+                <span class="hljs-keyword">if</span> ergebnis == <span class="hljs-literal">True</span>:
+                    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+                <span class="hljs-keyword">else</span>:
+                    <span class="hljs-comment">#wenn sie an einem Punkt nicht weiter kommen, dann schicke ich eine truppe zum nächsten Loch</span>
+                    <span class="hljs-keyword">continue</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>           
+
+
+groesse = int(input(<span class="hljs-string">"Größe: "</span>))
+prozent = int(input(<span class="hljs-string">"Prozent: "</span>))
+print(erzeuge(prozent,groesse)) 
+</div></code></pre>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>
