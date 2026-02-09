@@ -523,7 +523,47 @@ text[<span class="hljs-number">2</span>] = i
 <p><code>.replace(&lt;alt&gt;,&lt;neu&gt;)</code>: <em>str</em> $\to$ <em>str</em></p>
 </li>
 </ul>
-<pre class="hljs"><code><div><span class="hljs-keyword">import</span> string
+<h2 id="uwie-anzahl-strings-z%C3%A4hlen-u"><u>Wie Anzahl Strings zählen ?</u></h2>
+<ul>
+<li><code>&lt;gewinner&gt; = max(&lt;kandidaten&gt;, key=&lt;bewertungs_regel&gt;)</code></li>
+</ul>
+<pre class="hljs"><code><div>tiere = [<span class="hljs-string">'zebra'</span>, <span class="hljs-string">'dachs'</span>, <span class="hljs-string">'zebra'</span>, <span class="hljs-string">'dachs'</span>, <span class="hljs-string">'aal'</span>]
+
+<span class="hljs-comment">#Gucke jedes Wort nur einmal = set()</span>
+    <span class="hljs-comment"># Problem: Keine feste Reihenfolge</span>
+<span class="hljs-comment"># sortiere diesen Set</span>
+    <span class="hljs-comment"># Jedes Wort nur einmal + sortiert</span>
+<span class="hljs-comment"># bestimme max anhand anzahl</span>
+gewinner = max(sorted(set(tiere)), key=tiere.count)
+
+print(gewinner)
+</div></code></pre>
+<p><u><strong>Beispiel 2</strong></u>:</p>
+<pre class="hljs"><code><div>woerter = [<span class="hljs-string">"Maus"</span>, <span class="hljs-string">"Elefant"</span>, <span class="hljs-string">"Hund"</span>, <span class="hljs-string">"Ameise"</span>]
+
+<span class="hljs-comment">#finde das Wort mit der am längsten ist</span>
+kandidaten = sorted(set(woerter))
+print(<span class="hljs-string">f"kandidaten: <span class="hljs-subst">{kandidaten}</span>"</span>)
+
+gewinner = max(kandidaten, key=len)
+
+print(gewinner)
+</div></code></pre>
+<ul>
+<li>key = len</li>
+</ul>
+<p><u><strong>Beispiel 3</strong></u>:</p>
+<pre class="hljs"><code><div>namen = {<span class="hljs-number">1</span>: <span class="hljs-string">'Efe'</span>, <span class="hljs-number">2</span>: <span class="hljs-string">'Simge'</span>, <span class="hljs-number">3</span>: <span class="hljs-string">'Sude'</span>, <span class="hljs-number">4</span>: <span class="hljs-string">'Tülay'</span>, <span class="hljs-number">5</span>: <span class="hljs-string">'Ergün'</span>, <span class="hljs-number">6</span>: <span class="hljs-string">'Mayla'</span>, <span class="hljs-number">7</span>: <span class="hljs-string">'Pepee'</span>}
+
+<span class="hljs-comment">#finde das Wort mit der am längsten ist</span>
+gewinner = max(sorted(set(namen.values())), key=len)
+
+print(gewinner)
+``
+
+
+```python
+<span class="hljs-keyword">import</span> string
 
 &lt;var&gt; = string.ascii_lowercase  <span class="hljs-comment">#abcdefghijklmnopqrstuvwxyz</span>
 
@@ -914,6 +954,17 @@ max_m = m<span class="hljs-number">-1</span>
 </li>
 </ul>
 <h1 id="dictionaries"><strong>Dictionaries</strong></h1>
+<h2 id="uwie-durch-dict-iterieren-u"><u>Wie durch dict() iterieren ?</u>:</h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> dict.keys():
+
+
+
+<span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> dict.values():
+
+
+
+<span class="hljs-keyword">for</span> key, value <span class="hljs-keyword">in</span> dict.items()
+</div></code></pre>
 <h2 id="uwie-sortieren-u"><u>Wie sortieren ?</u>:</h2>
 <ul>
 <li><code>sorted_indices = sorted(häufigkeiten.keys())</code><pre class="hljs"><code><div>my_dict = {<span class="hljs-string">'a'</span>: <span class="hljs-number">2</span>, <span class="hljs-string">'c'</span>: <span class="hljs-number">1</span>, <span class="hljs-string">'b'</span>: <span class="hljs-number">4</span>, <span class="hljs-string">'d'</span>: <span class="hljs-number">3</span>}
@@ -1629,55 +1680,63 @@ print(<span class="hljs-number">20</span>* <span class="hljs-string">'-'</span>)
     print(*j)
 </div></code></pre>
 <hr>
-<h1 id="bild-hinzuf%C3%BCgen">BIld hinzufügen</h1>
-<p>import random as r</p>
-<p>def num_in_bereich(num:int)-&gt;int:
-while 0 &gt; num or num &gt; 3999:
-print(&quot;Die Zahl muss zwischen 1 und 3999 sein!&quot;)
-num = int(input(&quot;num: &quot;))
-return num</p>
-<p>def umwandlung_römische_zahl(num:int)-&gt;str:
-num = num_in_bereich(num)
-römische_zahl = &quot;&quot;</p>
-<pre><code>symbole = [['M'], ['C','D', 'M'], ['X','L', 'C'], ['I','V','X']]
+<h1 id="bild-hinzuf%C3%BCgen">Bild hinzufügen</h1>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
 
-einheiten = [1000,100,10,1]
-n_num = num
-index = 0
 
-for reihe in einheiten:
-    rest = n_num % reihe
-    ziffer = (n_num - rest) // reihe 
-    n_num = rest
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">num_in_bereich</span><span class="hljs-params">(num:int)</span>-&gt;int:</span>
+    <span class="hljs-keyword">while</span> <span class="hljs-number">0</span> &gt; num <span class="hljs-keyword">or</span> num &gt; <span class="hljs-number">3999</span>:
+        print(<span class="hljs-string">"Die Zahl muss zwischen 1 und 3999 sein!"</span>)
+        num = int(input(<span class="hljs-string">"num: "</span>))
+    <span class="hljs-keyword">return</span> num
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">umwandlung_r</span>ö<span class="hljs-title">mische_zahl</span><span class="hljs-params">(num:int)</span>-&gt;str:</span>
+    num = num_in_bereich(num)
+    römische_zahl = <span class="hljs-string">""</span>
     
-    if ziffer &lt;= 0:
-        index += 1
-        continue
-    
-    else:
-        if ziffer == 9:
-            römische_zahl += symbole[index][0] + symbole[index][2]
-        elif 6 &lt;= ziffer &lt;= 8:
-            ziffer -= 5
-            element = ziffer * symbole[index][0] 
+    symbole = [[<span class="hljs-string">'M'</span>], [<span class="hljs-string">'C'</span>,<span class="hljs-string">'D'</span>, <span class="hljs-string">'M'</span>], [<span class="hljs-string">'X'</span>,<span class="hljs-string">'L'</span>, <span class="hljs-string">'C'</span>], [<span class="hljs-string">'I'</span>,<span class="hljs-string">'V'</span>,<span class="hljs-string">'X'</span>]]
 
-            römische_zahl += symbole[index][1] + element
-        elif ziffer == 5:
-            römische_zahl += symbole[index][1]
+    einheiten = [<span class="hljs-number">1000</span>,<span class="hljs-number">100</span>,<span class="hljs-number">10</span>,<span class="hljs-number">1</span>]
+    n_num = num
+    index = <span class="hljs-number">0</span>
 
-        elif ziffer == 4:
-            römische_zahl += symbole[index][0] + symbole[index][1]
+    <span class="hljs-keyword">for</span> reihe <span class="hljs-keyword">in</span> einheiten:
+        rest = n_num % reihe
+        ziffer = (n_num - rest) // reihe 
+        n_num = rest
         
-        elif 1 &lt;= ziffer &lt;= 3:
-            element = ziffer * symbole[index][0] 
-            römische_zahl += element
-    index += 1
+        <span class="hljs-keyword">if</span> ziffer &lt;= <span class="hljs-number">0</span>:
+            index += <span class="hljs-number">1</span>
+            <span class="hljs-keyword">continue</span>
+        
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">if</span> ziffer == <span class="hljs-number">9</span>:
+                römische_zahl += symbole[index][<span class="hljs-number">0</span>] + symbole[index][<span class="hljs-number">2</span>]
+            <span class="hljs-keyword">elif</span> <span class="hljs-number">6</span> &lt;= ziffer &lt;= <span class="hljs-number">8</span>:
+                ziffer -= <span class="hljs-number">5</span>
+                element = ziffer * symbole[index][<span class="hljs-number">0</span>] 
 
-return römische_zahl
-</code></pre>
-<p>num = r.randint(1,3999)
+                römische_zahl += symbole[index][<span class="hljs-number">1</span>] + element
+            <span class="hljs-keyword">elif</span> ziffer == <span class="hljs-number">5</span>:
+                römische_zahl += symbole[index][<span class="hljs-number">1</span>]
+
+            <span class="hljs-keyword">elif</span> ziffer == <span class="hljs-number">4</span>:
+                römische_zahl += symbole[index][<span class="hljs-number">0</span>] + symbole[index][<span class="hljs-number">1</span>]
+            
+            <span class="hljs-keyword">elif</span> <span class="hljs-number">1</span> &lt;= ziffer &lt;= <span class="hljs-number">3</span>:
+                element = ziffer * symbole[index][<span class="hljs-number">0</span>] 
+                römische_zahl += element
+        index += <span class="hljs-number">1</span>
+
+    <span class="hljs-keyword">return</span> römische_zahl
+
+
+
+num = r.randint(<span class="hljs-number">1</span>,<span class="hljs-number">3999</span>)
 print(num)
-print(umwandlung_römische_zahl(num))</p>
+print(umwandlung_römische_zahl(num))
+</div></code></pre>
 <hr>
 <p><img src="image-7.png" alt="alt text"></p>
 <ul>
