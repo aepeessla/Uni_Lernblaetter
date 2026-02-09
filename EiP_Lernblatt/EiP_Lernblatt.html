@@ -1380,6 +1380,60 @@ wahrscheinlichkeit = r.choices(seq,weights = [<span class="hljs-number">20</span
 </li>
 </ul>
 <hr>
+<p><img src="image-19.png" alt="alt text"></p>
+<h3 id="uentf-v-sonderzeichenu"><u>Entf. v. Sonderzeichen</u></h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> string <span class="hljs-keyword">as</span> s
+
+sonderzeichen = s.punctuation
+
+für symbol <span class="hljs-keyword">in</span> sonderzeichen:
+    text = text.replace(symbol, <span class="hljs-string">""</span>)
+
+<span class="hljs-comment">#Mache davon eine Liste</span>
+text = text.lower().split()
+</div></code></pre>
+<ul>
+<li>ergebnis = {l: (n,w)}</li>
+</ul>
+<h3 id="uwelche-l%C3%A4ngen-gibt-es-u"><u>Welche längen gibt es ?</u></h3>
+<pre class="hljs"><code><div>längen = []
+
+<span class="hljs-keyword">for</span> wort <span class="hljs-keyword">in</span> text:
+    <span class="hljs-keyword">if</span> len(wort) <span class="hljs-keyword">in</span> längen:
+        <span class="hljs-keyword">continue</span>
+    <span class="hljs-keyword">else</span>:
+        längen.append(len(wort))
+</div></code></pre>
+<h3 id="uwie-viele-w%C3%B6rter-mit-der-gleichen-l%C3%A4nge-gibt-es-u"><u>Wie viele Wörter mit der gleichen Länge gibt es ?</u></h3>
+<pre class="hljs"><code><div>count = <span class="hljs-number">0</span>
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(länge)):
+    <span class="hljs-keyword">for</span> wort <span class="hljs-keyword">in</span> text:
+        <span class="hljs-keyword">if</span> len(wort) == i:
+            count += <span class="hljs-number">1</span>
+    count = <span class="hljs-number">0</span>
+</div></code></pre>
+<h3 id="ud-meiste-wortu"><u>D. meiste Wort</u>:</h3>
+<p>.count()</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># Wir erstellen ein leeres Dictionary</span>
+woerter_sammlung = {} 
+
+<span class="hljs-keyword">for</span> wort <span class="hljs-keyword">in</span> wort_liste:
+    laenge = len(wort)
+    
+    <span class="hljs-comment"># Jetzt müssen wir prüfen:</span>
+    <span class="hljs-comment"># Kennen wir diese Länge schon als Schlüssel im Dictionary?</span>
+    <span class="hljs-keyword">if</span> laenge <span class="hljs-keyword">in</span> woerter_sammlung:
+        <span class="hljs-comment"># Falls JA: Füge das Wort der Liste hinzu, die dort schon liegt</span>
+        <span class="hljs-comment"># (Wie greift man auf den Wert zu und hängt etwas an?)</span>
+        woerter_sammlung[laenge] = wort
+
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-comment"># Falls NEIN: Erstelle einen neuen Eintrag für diese Länge</span>
+        <span class="hljs-comment"># Der Wert muss eine neue Liste sein, die das aktuelle Wort enthält.</span>
+        <span class="hljs-keyword">pass</span> <span class="hljs-comment"># &lt;-- Dein Code hier</span>
+</div></code></pre>
+<hr>
 <h1 id="storage"><strong>Storage</strong></h1>
 <p><a id="Probe.txt"></a></p>
 <pre class="hljs"><code><div><span class="hljs-comment">#Probe.txt</span>

@@ -947,8 +947,72 @@ print(insertion_sort(lst))
     * Wenn k = 1 $to$ 1 $\times$ gedreht
         * ***Bsp***:['*']
 
+<hr>
+
+![alt text](image-19.png)
+
+### <u>Entf. v. Sonderzeichen</u>
+```python
+import string as s
+
+sonderzeichen = s.punctuation
+
+für symbol in sonderzeichen:
+    text = text.replace(symbol, "")
+
+#Mache davon eine Liste
+text = text.lower().split()
+```
+
+* ergebnis = {l: (n,w)}
+
+### <u>Welche längen gibt es ?</u>
+```Python
+längen = []
+
+for wort in text:
+    if len(wort) in längen:
+        continue
+    else:
+        längen.append(len(wort))
+```
+
+### <u>Wie viele Wörter mit der gleichen Länge gibt es ?</u>
+```python
+count = 0
+
+for i in range(len(länge)):
+    for wort in text:
+        if len(wort) == i:
+            count += 1
+    count = 0
+```
 
 
+
+### <u>D. meiste Wort</u>:
+.count()
+
+
+```python
+# Wir erstellen ein leeres Dictionary
+woerter_sammlung = {} 
+
+for wort in wort_liste:
+    laenge = len(wort)
+    
+    # Jetzt müssen wir prüfen:
+    # Kennen wir diese Länge schon als Schlüssel im Dictionary?
+    if laenge in woerter_sammlung:
+        # Falls JA: Füge das Wort der Liste hinzu, die dort schon liegt
+        # (Wie greift man auf den Wert zu und hängt etwas an?)
+        woerter_sammlung[laenge] = 
+
+    else:
+        # Falls NEIN: Erstelle einen neuen Eintrag für diese Länge
+        # Der Wert muss eine neue Liste sein, die das aktuelle Wort enthält.
+        pass # <-- Dein Code hier
+```
 
 
 
