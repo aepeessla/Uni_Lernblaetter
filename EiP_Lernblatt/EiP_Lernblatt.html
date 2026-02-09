@@ -1976,32 +1976,39 @@ loese_suduko(sudoku)
 <ul>
 <li>Ich muss mich zudem immer an $9$ Stellen orientieren, welches ein $3 \times 3$ Feld im Bild ist. D. einzelnen Zahlen muss ich mit abs(zahlen) angucken, welches bedeutet, dass ich durch eine Zeile iterieren muss &amp; gucken muss, welche Zahlen n.</li>
 </ul>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 <hr>
-<p><img src="image-14.png" alt="alt text"></p>
+<p><img src="WhatsApp Image 2026-02-09 at 15.28.11.jpeg" alt="alt text"></p>
 <h2 id="ubrainstormingu"><u><strong>Brainstorming</strong></u>:</h2>
 <ol>
 <li>Sonderzeichen entf.</li>
-<li>Welche Wortlängen gibt</li>
+<li>Welche Wortlängen gibt es</li>
 <li>Was ist d. meiste Wort dieser Wortlänge ?</li>
 <li>Was ist das meine Wort mit dieser Wortlänge ?</li>
 </ol>
 <hr>
-<pre class="hljs"><code><div>längen = []
-für wort in text:
-    wenn len(wort) bereits in längen ist:
-        mache einfach weiter
-    ansonsten:
-        füge es in längen hinzu
-
-wörter_einmalig = set(text)
-wort_häufigkeit = {}
-
-for wort in anzahl_wörter:
-    häufigkeit = zähle Häufigkeit vom Wort in text
-    wort_häufigkeit[wort] = häufigkeit
-</div></code></pre>
 <h3 id="uwie-entf-ich-sonderzeichenu"><u>Wie entf. ich Sonderzeichen</u>:</h3>
+<h4 id="upseudocodeu"><u>Pseudocode</u>:</h4>
+<pre class="hljs"><code><div>importiere string als s
+
+sonderzeichen = s.punctuation
+zahlen = s.digits
+
+für symbol in sonderzeichen:
+    Ist symbol in text enhalten:
+        #ja ?
+        ersetzte in Text das symbol mit &quot;&quot;
+    ansonsten:
+        mache einfach weiter
+
+für zahl in zahlen:
+    Ist zahl in Text:
+        ersetzte die zahl in text mit ''
+    ansonsten:
+        mache einfach weiter
+
+wandle den text:str in eine liste, indem jedes Wort kleingeschrieben ist und ein Element ist: list[str]
+</div></code></pre>
+<h4 id="ucodeu"><u>Code</u>:</h4>
 <pre class="hljs"><code><div><span class="hljs-keyword">import</span> string <span class="hljs-keyword">as</span> s
 
 text = <span class="hljs-string">'ein Test, ein Test! ein Beispiel'</span>
@@ -2016,19 +2023,11 @@ zahlen = s.digits
     text = text.replace(zahl, <span class="hljs-string">""</span>)
 
 text_lst = text.lower().split()
-print(text_lst)
 
 <span class="hljs-comment">#Audgabe:</span>
 [<span class="hljs-string">'ein'</span>, <span class="hljs-string">'test'</span>, <span class="hljs-string">'ein'</span>, <span class="hljs-string">'test'</span>, <span class="hljs-string">'ein'</span>, <span class="hljs-string">'beispiel'</span>]
 </div></code></pre>
-<ul>
-<li><code>text = text.split()</code>: Wir haben jzt. jedes Wort als ein Element in einer liste
--&gt; list[str]</li>
-</ul>
-<h3 id="uerstellen-eine-gruppeu"><u>Erstellen eine Gruppe</u>:</h3>
-<ul>
-<li>{länge: list[Wörter mit dieser Länge]}</li>
-</ul>
+<h4 id="upseudocodeu"><u>Pseudocode</u>:</h4>
 <pre class="hljs"><code><div>#länge noch nicht in der gruppe
     #füge länge hinzu und das entsprechende list(wort)
 #länge bereits in der gruppe
@@ -2041,6 +2040,7 @@ für wort in text_lst:
     wenn len(wort) bereits in gruppe:
         gruppe[len(wort)].append(wort)
 </div></code></pre>
+<h4 id="ucodeu"><u>Code</u>:</h4>
 <pre class="hljs"><code><div><span class="hljs-comment">#länge noch nicht in der gruppe</span>
     <span class="hljs-comment">#füge länge hinzu und das entsprechende list(wort)</span>
 <span class="hljs-comment">#länge bereits in der gruppe</span>
@@ -2057,7 +2057,51 @@ gruppe = {}
 gruppe: {<span class="hljs-number">3</span>: [<span class="hljs-string">'ein'</span>, <span class="hljs-string">'ein'</span>, <span class="hljs-string">'ein'</span>], <span class="hljs-number">4</span>: [<span class="hljs-string">'test'</span>, <span class="hljs-string">'test'</span>], <span class="hljs-number">8</span>: [<span class="hljs-string">'beispiel'</span>]}
 </div></code></pre>
 <h3 id="uwelches-wort-kommt-am-meisten-vor-u"><u>Welches Wort kommt am meisten vor ?</u>:</h3>
-<p>=======</p>
+<h4 id="upseudocodeu"><u>Pseudocode</u>:</h4>
+<pre class="hljs"><code><div>ergebnis = {}
+für laenge, liste in gruppe.items():
+    anzahl_woerter = len(liste)
+    meiste_wort = max(set(strings), key=strings.count)
+    ergebnis[laenge] = list((anzahl_woerter, meiste_wort))
+</div></code></pre>
+<h4 id="ucodeu"><u>Code</u>:</h4>
+<pre class="hljs"><code><div>ergebnis = {}
+<span class="hljs-keyword">for</span> laenge, liste <span class="hljs-keyword">in</span> gruppe.items():
+    anzahl_woerter = len(liste)
+    meiste_wort = max(set(strings), key=strings.count)
+    ergebnis[laenge] = list((anzahl_woerter, meiste_wort))
+</div></code></pre>
+<h2 id="ufertiger-codeu"><u>Fertiger Code</u></h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> string <span class="hljs-keyword">as</span> s
+
+text = <span class="hljs-string">'ein Test, ein Test! ein Beispiel'</span>
+
+sonderzeichen = s.punctuation
+zahlen = s.digits
+
+<span class="hljs-keyword">for</span> symbol <span class="hljs-keyword">in</span> sonderzeichen:
+    text = text.replace(symbol, <span class="hljs-string">""</span>)
+
+<span class="hljs-keyword">for</span> zahl <span class="hljs-keyword">in</span> zahlen:
+    text = text.replace(zahl, <span class="hljs-string">""</span>)
+
+text_lst = text.split()
+
+gruppe = {}
+<span class="hljs-keyword">for</span> wort <span class="hljs-keyword">in</span> text_lst:
+    <span class="hljs-keyword">if</span> len(wort.lower()) <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> gruppe:
+        gruppe[len(wort)] = [wort]
+    <span class="hljs-keyword">else</span>: 
+        gruppe[len(wort)].append(wort)
+
+ergebnis = {}
+<span class="hljs-keyword">for</span> laenge, liste <span class="hljs-keyword">in</span> gruppe.items():
+    anzahl_woerter = len(liste)
+    meiste_wort = max(set(liste), key=liste.count)
+    ergebnis[laenge] = tuple((anzahl_woerter, meiste_wort))
+
+print(ergebnis)
+</div></code></pre>
 <hr>
 <p><img src="image-17.png" alt="alt text">
 <img src="image-18.png" alt="alt text"></p>
