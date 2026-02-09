@@ -375,14 +375,6 @@ code {
   /* 3. Ebene: Pfeil rechts (identisch zur 2. Ebene) */
   ul ul ul { list-style-type: "→ "; }
 </style>
-<style>
-  img {
-    width: 1000px;  /* Hier deine gewünschte Breite eintragen */
-    height: auto;  /* Behält das Seitenverhältnis bei, damit nichts verzerrt wird */
-    display: block;
-    margin: 10px 0; /* Sorgt für etwas Abstand nach oben und unten */
-  }
-</style>
 <h1 id="inhaltsverzeichnis"><strong>Inhaltsverzeichnis</strong></h1>
 <ol>
 <li><a href="#Kommandozeilenargumente">Kommandozeilenargumente</a></li>
@@ -974,14 +966,14 @@ sortierte_liste_tupel = sorted(my_dict.keys()) <span class="hljs-comment"># Ausg
 </ul>
 <h2 id="uwie-elemente-hinzuf%C3%BCgenu"><u>Wie Elemente hinzufügen</u>:</h2>
 <ul>
-<li><code>dic.upadte()</code></li>
+<li><code>&lt;dic&gt;.update({&lt;key&gt;: &lt;value&gt;})</code></li>
 </ul>
-<pre class="hljs"><code><div>dic = {}
+<pre class="hljs"><code><div>dic = {<span class="hljs-number">3</span>: (<span class="hljs-number">3</span>, <span class="hljs-string">'ein'</span>), <span class="hljs-number">4</span>: (<span class="hljs-number">2</span>, <span class="hljs-string">'test'</span>), <span class="hljs-number">8</span>: (<span class="hljs-number">1</span>, <span class="hljs-string">'beispiel'</span>)}
 n = <span class="hljs-number">7</span>
 k = <span class="hljs-number">3</span>
 
 dic.update({(n,k) : <span class="hljs-number">45</span>})
-print(dic)
+print(dic) <span class="hljs-comment">#{3: (3, 'ein'), 4: (2, 'test'), 8: (1, 'beispiel'), (7, 3): 45}</span>
 </div></code></pre>
 <hr>
 <h1 id="mit-text-arbeiten"><strong>Mit Text arbeiten</strong></h1>
@@ -2277,6 +2269,8 @@ groesse = int(input(<span class="hljs-string">"Größe: "</span>))
 prozent = int(input(<span class="hljs-string">"Prozent: "</span>))
 print(erzeuge(prozent,groesse)) 
 </div></code></pre>
+<hr>
+<p><img src="WhatsApp Image 2026-02-09 at 17.54.24.jpeg" alt="alt text"></p>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>
