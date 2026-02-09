@@ -947,8 +947,72 @@ print(insertion_sort(lst))
     * Wenn k = 1 $to$ 1 $\times$ gedreht
         * ***Bsp***:['*']
 
+<hr>
+
+![alt text](image-19.png)
+
+### <u>Entf. v. Sonderzeichen</u>
+```python
+import string as s
+
+sonderzeichen = s.punctuation
+
+für symbol in sonderzeichen:
+    text = text.replace(symbol, "")
+
+#Mache davon eine Liste
+text = text.lower().split()
+```
+
+* ergebnis = {l: (n,w)}
+
+### <u>Welche längen gibt es ?</u>
+```Python
+längen = []
+
+for wort in text:
+    if len(wort) in längen:
+        continue
+    else:
+        längen.append(len(wort))
+```
+
+### <u>Wie viele Wörter mit der gleichen Länge gibt es ?</u>
+```python
+count = 0
+
+for i in range(len(länge)):
+    for wort in text:
+        if len(wort) == i:
+            count += 1
+    count = 0
+```
 
 
+
+### <u>D. meiste Wort</u>:
+.count()
+
+
+```python
+# Wir erstellen ein leeres Dictionary
+woerter_sammlung = {} 
+
+for wort in wort_liste:
+    laenge = len(wort)
+    
+    # Jetzt müssen wir prüfen:
+    # Kennen wir diese Länge schon als Schlüssel im Dictionary?
+    if laenge in woerter_sammlung:
+        # Falls JA: Füge das Wort der Liste hinzu, die dort schon liegt
+        # (Wie greift man auf den Wert zu und hängt etwas an?)
+        woerter_sammlung[laenge] = 
+
+    else:
+        # Falls NEIN: Erstelle einen neuen Eintrag für diese Länge
+        # Der Wert muss eine neue Liste sein, die das aktuelle Wort enthält.
+        pass # <-- Dein Code hier
+```
 
 
 
@@ -1482,6 +1546,7 @@ loese_suduko(sudoku)
 
 * Ich finde d. Aufgabe unnormal verwirrend. Ich verstehe nicht, was sie genau v. mir möchten. Also ich habe d. Funktion "`def loese_sudoku(sudoku:list[int])->list[int] | str:`" & hier bekomme ich ein **Sudoku-Feld** ü.geben, dass Zahlen zw. $0$ bis $-9$ enthält. D. Stellen, d. eine 0 sind, sind quazi mein leeres Feld, welches ich auffüllen muss. Wenn etwas nicht lösbar ist, dann soll d. Einträge löschen, welches bedeutet, dass ich eine Kopie von diesem Feld benötige.
 
+### <u>Brain Storming</u>
 ```python
 import random as r
 
@@ -1507,101 +1572,123 @@ loese_suduko(sudoku)
 ```
 * Ich muss mich zudem immer an $9$ Stellen orientieren, welches ein $3 \times 3$ Feld im Bild ist. D. einzelnen Zahlen muss ich mit abs(zahlen) angucken, welches bedeutet, dass ich durch eine Zeile iterieren muss & gucken muss, welche Zahlen n.  
 
-<hr>
 
-![alt text](image-14.png)
 
-## <u>**Brainstorming**</u>:
-
-1) Sonderzeichen entf.
-1) Welche Wortlängen gibt
-1) Was ist d. meiste Wort dieser Wortlänge ?
-1) Was ist das meine Wort mit dieser Wortlänge ?
 
 <hr>
 
-```
-längen = []
-für wort in text:
-    wenn len(wort) bereits in längen ist:
-        mache einfach weiter
-    ansonsten:
-        füge es in längen hinzu
-
-wörter_einmalig = set(text)
-wort_häufigkeit = {}
-
-for wort in anzahl_wörter:
-    häufigkeit = zähle Häufigkeit vom Wort in text
-    wort_häufigkeit[wort] = häufigkeit
-```
- 
-
-
-### <u>Wie entf. ich Sonderzeichen</u>:
+![alt text](image-17.png)
+![alt text](image-18.png)
 
 ```python
-import string as s
+import random as r
 
-text = 'ein Test, ein Test! ein Beispiel'
 
-sonderzeichen = s.punctuation
-zahlen = s.digits
+def kontrolle_eingabe(prozent:int, groesse:int)->str|list[None]:
+    
+    if prozent < 0 or prozent >= 100:
+        prozent = 'Illegal'
+        
+    if groesse <= 0:
+        groesse = 'Illegal'
+    
+    return prozent, groesse
+    
 
-for symbol in sonderzeichen:
-    text = text.replace(symbol, "")
+def wasserdicht(z:int, y:int, x:int, kaese:list[list[list[bool]]], visited:set[tuple[int,int,int]])-> bool:
+    höhe_z = len(kaese)
+    höhe_y = len(kaese[0])
+    höhe_x = len(kaese[0][0])
+    
+    #True = dicht
+    #False = nicht dicht
+        
+    #befindet sich d. Koordinate ü.haupt in d. Käse ?
+    if z<0 or z>(höhe_z-1) or y<0 or y>(höhe_y-1) or x<0 or x>(höhe_x-1):
+        return False
+    #handelt es sich ü.haupt an dieser Koordinate um ein Loch ?
+    elif kaese[z][y][x] != True:
+        return False
+    #hat diese Stelle bereits jemand besucht ?
+    elif tuple((z,y,x)) in visited:
+        return False
+    #Ist eine Truppe unten angekommen ?
+    if z == höhe_z-1: #True brauche ich gar nicht zu gucken, weil ich nur unten ankommen kann, wenn es ein Loch ist
+        return True
+    
+    #Wenn eine Truppe ein Loch gefunden wurde, welches legal ist, dann schrieben sie sich d. Koordinaten in der Bescuhtenliste auf
+    visited.add(tuple((z,y,x)))
+    
+    
+    
+    richtungen = [(-1,0,0), (1,0,0), (0,1,0), (0,-1,0), (0,0,1), (0,0,-1)]
+    for nz,ny,nx in richtungen:
+        z_new,y_new,x_new = z+nz,y+ny,x+nx
+        
+        result = wasserdicht(z_new, y_new, x_new, kaese, visited)
+        #Haben d. Männer meiner Truppen einen Loch gefunden ? Sagt es Schritt für Schritt den oberen Männern Bescheid
+        if result == True:
+            return True #Das ist die Endnachricht, dass ich bekomme
+    return False  #Das ist die Endnachricht, dass ich bekommes
+        
+        
+        
+            
+       
+def erzeuge(prozent:int, groesse:int)->bool:  
+    prozent1, groesse1 = kontrolle_eingabe(prozent, groesse)
+    if prozent1 == 'Illegal' or groesse1 == 'Illegal':
+        return []
+    
+    #Loch oder Käse
+    elem = [True, False]
+    kaese = [[['' for _ in range(groesse1)]for _ in range(groesse1)]for _ in range(groesse1)]
+    ausg_elem = r.choices(elem, weights=[prozent1, 100-prozent1], k=1)
+    for i in kaese:
+        for j in i:
+            for k in range(len(j)):
+                ausg_elem = r.choices(elem, weights=[prozent1,100-prozent1], k=1)
+                j[k] = ausg_elem[0]
+                
+    print(kaese)    
+    visited = set()
+    
+    #Kontrolliere zunächst wo auf der Oberflöche ein Loch ist
+    for b in range(groesse):
+        for c in range(groesse):
+            # wenn ich auf d. Oberfläche ein Loch gefunden habe, schicke ich meine Suchtruppen hin
+            if kaese[0][b][c] == True:
+                #Werden meine Truppen den Boden erreichen oder nicht ?
+                ergebnis = wasserdicht(0, b, c, kaese, visited)
+                if ergebnis == True:
+                    return False
+                else:
+                    #wenn sie an einem Punkt nicht weiter kommen, dann schicke ich eine truppe zum nächsten Loch
+                    continue
+    return True           
 
-for zahl in zahlen:
-    text = text.replace(zahl, "")
 
-text_lst = text.lower().split()
-print(text_lst)
-
-#Audgabe:
-['ein', 'test', 'ein', 'test', 'ein', 'beispiel']
+groesse = int(input("Größe: "))
+prozent = int(input("Prozent: "))
+print(erzeuge(prozent,groesse)) 
 ```
 
-* `text = text.split()`: Wir haben jzt. jedes Wort als ein Element in einer liste
-    -> list[str]
 
 
-### <u>Erstellen eine Gruppe</u>:
-* {länge: list[Wörter mit dieser Länge]}
-
-```
-#länge noch nicht in der gruppe
-    #füge länge hinzu und das entsprechende list(wort)
-#länge bereits in der gruppe
 
 
-gruppe = {}
-für wort in text_lst:
-    wenn len(wort) nicht in gruppe:
-        gruppe[len(wort)] = list(wort)
-    wenn len(wort) bereits in gruppe:
-        gruppe[len(wort)].append(wort)
-```
 
 
-```python
-#länge noch nicht in der gruppe
-    #füge länge hinzu und das entsprechende list(wort)
-#länge bereits in der gruppe
 
 
-gruppe = {}
-for wort in text_lst:
-    if len(wort) not in gruppe:
-        gruppe[len(wort)] = [wort]
-    else: 
-        gruppe[len(wort)].append(wort)
-
-#Ausgabe:
-gruppe: {3: ['ein', 'ein', 'ein'], 4: ['test', 'test'], 8: ['beispiel']}
-```
 
 
-### <u>Welches Wort kommt am meisten vor ?</u>:
+
+
+
+
+
+
 
 
 

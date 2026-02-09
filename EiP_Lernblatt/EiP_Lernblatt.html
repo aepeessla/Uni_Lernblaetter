@@ -1380,6 +1380,60 @@ wahrscheinlichkeit = r.choices(seq,weights = [<span class="hljs-number">20</span
 </li>
 </ul>
 <hr>
+<p><img src="image-19.png" alt="alt text"></p>
+<h3 id="uentf-v-sonderzeichenu"><u>Entf. v. Sonderzeichen</u></h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> string <span class="hljs-keyword">as</span> s
+
+sonderzeichen = s.punctuation
+
+für symbol <span class="hljs-keyword">in</span> sonderzeichen:
+    text = text.replace(symbol, <span class="hljs-string">""</span>)
+
+<span class="hljs-comment">#Mache davon eine Liste</span>
+text = text.lower().split()
+</div></code></pre>
+<ul>
+<li>ergebnis = {l: (n,w)}</li>
+</ul>
+<h3 id="uwelche-l%C3%A4ngen-gibt-es-u"><u>Welche längen gibt es ?</u></h3>
+<pre class="hljs"><code><div>längen = []
+
+<span class="hljs-keyword">for</span> wort <span class="hljs-keyword">in</span> text:
+    <span class="hljs-keyword">if</span> len(wort) <span class="hljs-keyword">in</span> längen:
+        <span class="hljs-keyword">continue</span>
+    <span class="hljs-keyword">else</span>:
+        längen.append(len(wort))
+</div></code></pre>
+<h3 id="uwie-viele-w%C3%B6rter-mit-der-gleichen-l%C3%A4nge-gibt-es-u"><u>Wie viele Wörter mit der gleichen Länge gibt es ?</u></h3>
+<pre class="hljs"><code><div>count = <span class="hljs-number">0</span>
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(länge)):
+    <span class="hljs-keyword">for</span> wort <span class="hljs-keyword">in</span> text:
+        <span class="hljs-keyword">if</span> len(wort) == i:
+            count += <span class="hljs-number">1</span>
+    count = <span class="hljs-number">0</span>
+</div></code></pre>
+<h3 id="ud-meiste-wortu"><u>D. meiste Wort</u>:</h3>
+<p>.count()</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># Wir erstellen ein leeres Dictionary</span>
+woerter_sammlung = {} 
+
+<span class="hljs-keyword">for</span> wort <span class="hljs-keyword">in</span> wort_liste:
+    laenge = len(wort)
+    
+    <span class="hljs-comment"># Jetzt müssen wir prüfen:</span>
+    <span class="hljs-comment"># Kennen wir diese Länge schon als Schlüssel im Dictionary?</span>
+    <span class="hljs-keyword">if</span> laenge <span class="hljs-keyword">in</span> woerter_sammlung:
+        <span class="hljs-comment"># Falls JA: Füge das Wort der Liste hinzu, die dort schon liegt</span>
+        <span class="hljs-comment"># (Wie greift man auf den Wert zu und hängt etwas an?)</span>
+        woerter_sammlung[laenge] = wort
+
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-comment"># Falls NEIN: Erstelle einen neuen Eintrag für diese Länge</span>
+        <span class="hljs-comment"># Der Wert muss eine neue Liste sein, die das aktuelle Wort enthält.</span>
+        <span class="hljs-keyword">pass</span> <span class="hljs-comment"># &lt;-- Dein Code hier</span>
+</div></code></pre>
+<hr>
 <h1 id="storage"><strong>Storage</strong></h1>
 <p><a id="Probe.txt"></a></p>
 <pre class="hljs"><code><div><span class="hljs-comment">#Probe.txt</span>
@@ -1894,6 +1948,7 @@ loese_suduko(sudoku)
 <p>Ich finde d. Aufgabe unnormal verwirrend. Ich verstehe nicht, was sie genau v. mir möchten. Also ich habe d. Funktion &quot;<code>def loese_sudoku(sudoku:list[int])-&gt;list[int] | str:</code>&quot; &amp; hier bekomme ich ein <strong>Sudoku-Feld</strong> ü.geben, dass Zahlen zw. $0$ bis $-9$ enthält. D. Stellen, d. eine 0 sind, sind quazi mein leeres Feld, welches ich auffüllen muss. Wenn etwas nicht lösbar ist, dann soll d. Einträge löschen, welches bedeutet, dass ich eine Kopie von diesem Feld benötige.</p>
 </li>
 </ul>
+<h3 id="ubrain-stormingu"><u>Brain Storming</u></h3>
 <pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
 
 <span class="hljs-keyword">import</span> copy <span class="hljs-keyword">as</span> c 
@@ -1920,85 +1975,99 @@ loese_suduko(sudoku)
 <li>Ich muss mich zudem immer an $9$ Stellen orientieren, welches ein $3 \times 3$ Feld im Bild ist. D. einzelnen Zahlen muss ich mit abs(zahlen) angucken, welches bedeutet, dass ich durch eine Zeile iterieren muss &amp; gucken muss, welche Zahlen n.</li>
 </ul>
 <hr>
-<p><img src="image-14.png" alt="alt text"></p>
-<h2 id="ubrainstormingu"><u><strong>Brainstorming</strong></u>:</h2>
-<ol>
-<li>Sonderzeichen entf.</li>
-<li>Welche Wortlängen gibt</li>
-<li>Was ist d. meiste Wort dieser Wortlänge ?</li>
-<li>Was ist das meine Wort mit dieser Wortlänge ?</li>
-</ol>
-<hr>
-<pre class="hljs"><code><div>längen = []
-für wort in text:
-    wenn len(wort) bereits in längen ist:
-        mache einfach weiter
-    ansonsten:
-        füge es in längen hinzu
+<p><img src="image-17.png" alt="alt text">
+<img src="image-18.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
 
-wörter_einmalig = set(text)
-wort_häufigkeit = {}
 
-for wort in anzahl_wörter:
-    häufigkeit = zähle Häufigkeit vom Wort in text
-    wort_häufigkeit[wort] = häufigkeit
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">kontrolle_eingabe</span><span class="hljs-params">(prozent:int, groesse:int)</span>-&gt;str|list[<span class="hljs-keyword">None</span>]:</span>
+    
+    <span class="hljs-keyword">if</span> prozent &lt; <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> prozent &gt;= <span class="hljs-number">100</span>:
+        prozent = <span class="hljs-string">'Illegal'</span>
+        
+    <span class="hljs-keyword">if</span> groesse &lt;= <span class="hljs-number">0</span>:
+        groesse = <span class="hljs-string">'Illegal'</span>
+    
+    <span class="hljs-keyword">return</span> prozent, groesse
+    
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wasserdicht</span><span class="hljs-params">(z:int, y:int, x:int, kaese:list[list[list[bool]]], visited:set[tuple[int,int,int]])</span>-&gt; bool:</span>
+    höhe_z = len(kaese)
+    höhe_y = len(kaese[<span class="hljs-number">0</span>])
+    höhe_x = len(kaese[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>])
+    
+    <span class="hljs-comment">#True = dicht</span>
+    <span class="hljs-comment">#False = nicht dicht</span>
+        
+    <span class="hljs-comment">#befindet sich d. Koordinate ü.haupt in d. Käse ?</span>
+    <span class="hljs-keyword">if</span> z&lt;<span class="hljs-number">0</span> <span class="hljs-keyword">or</span> z&gt;(höhe_z<span class="hljs-number">-1</span>) <span class="hljs-keyword">or</span> y&lt;<span class="hljs-number">0</span> <span class="hljs-keyword">or</span> y&gt;(höhe_y<span class="hljs-number">-1</span>) <span class="hljs-keyword">or</span> x&lt;<span class="hljs-number">0</span> <span class="hljs-keyword">or</span> x&gt;(höhe_x<span class="hljs-number">-1</span>):
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+    <span class="hljs-comment">#handelt es sich ü.haupt an dieser Koordinate um ein Loch ?</span>
+    <span class="hljs-keyword">elif</span> kaese[z][y][x] != <span class="hljs-literal">True</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+    <span class="hljs-comment">#hat diese Stelle bereits jemand besucht ?</span>
+    <span class="hljs-keyword">elif</span> tuple((z,y,x)) <span class="hljs-keyword">in</span> visited:
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+    <span class="hljs-comment">#Ist eine Truppe unten angekommen ?</span>
+    <span class="hljs-keyword">if</span> z == höhe_z<span class="hljs-number">-1</span>: <span class="hljs-comment">#True brauche ich gar nicht zu gucken, weil ich nur unten ankommen kann, wenn es ein Loch ist</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+    
+    <span class="hljs-comment">#Wenn eine Truppe ein Loch gefunden wurde, welches legal ist, dann schrieben sie sich d. Koordinaten in der Bescuhtenliste auf</span>
+    visited.add(tuple((z,y,x)))
+    
+    
+    
+    richtungen = [(<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>), (<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>), (<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>), (<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>), (<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>), (<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>)]
+    <span class="hljs-keyword">for</span> nz,ny,nx <span class="hljs-keyword">in</span> richtungen:
+        z_new,y_new,x_new = z+nz,y+ny,x+nx
+        
+        result = wasserdicht(z_new, y_new, x_new, kaese, visited)
+        <span class="hljs-comment">#Haben d. Männer meiner Truppen einen Loch gefunden ? Sagt es Schritt für Schritt den oberen Männern Bescheid</span>
+        <span class="hljs-keyword">if</span> result == <span class="hljs-literal">True</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span> <span class="hljs-comment">#Das ist die Endnachricht, dass ich bekomme</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>  <span class="hljs-comment">#Das ist die Endnachricht, dass ich bekommes</span>
+        
+        
+        
+            
+       
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">erzeuge</span><span class="hljs-params">(prozent:int, groesse:int)</span>-&gt;bool:</span>  
+    prozent1, groesse1 = kontrolle_eingabe(prozent, groesse)
+    <span class="hljs-keyword">if</span> prozent1 == <span class="hljs-string">'Illegal'</span> <span class="hljs-keyword">or</span> groesse1 == <span class="hljs-string">'Illegal'</span>:
+        <span class="hljs-keyword">return</span> []
+    
+    <span class="hljs-comment">#Loch oder Käse</span>
+    elem = [<span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>]
+    kaese = [[[<span class="hljs-string">''</span> <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(groesse1)]<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(groesse1)]<span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(groesse1)]
+    ausg_elem = r.choices(elem, weights=[prozent1, <span class="hljs-number">100</span>-prozent1], k=<span class="hljs-number">1</span>)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> kaese:
+        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> i:
+            <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(len(j)):
+                ausg_elem = r.choices(elem, weights=[prozent1,<span class="hljs-number">100</span>-prozent1], k=<span class="hljs-number">1</span>)
+                j[k] = ausg_elem[<span class="hljs-number">0</span>]
+                
+    print(kaese)    
+    visited = set()
+    
+    <span class="hljs-comment">#Kontrolliere zunächst wo auf der Oberflöche ein Loch ist</span>
+    <span class="hljs-keyword">for</span> b <span class="hljs-keyword">in</span> range(groesse):
+        <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> range(groesse):
+            <span class="hljs-comment"># wenn ich auf d. Oberfläche ein Loch gefunden habe, schicke ich meine Suchtruppen hin</span>
+            <span class="hljs-keyword">if</span> kaese[<span class="hljs-number">0</span>][b][c] == <span class="hljs-literal">True</span>:
+                <span class="hljs-comment">#Werden meine Truppen den Boden erreichen oder nicht ?</span>
+                ergebnis = wasserdicht(<span class="hljs-number">0</span>, b, c, kaese, visited)
+                <span class="hljs-keyword">if</span> ergebnis == <span class="hljs-literal">True</span>:
+                    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+                <span class="hljs-keyword">else</span>:
+                    <span class="hljs-comment">#wenn sie an einem Punkt nicht weiter kommen, dann schicke ich eine truppe zum nächsten Loch</span>
+                    <span class="hljs-keyword">continue</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>           
+
+
+groesse = int(input(<span class="hljs-string">"Größe: "</span>))
+prozent = int(input(<span class="hljs-string">"Prozent: "</span>))
+print(erzeuge(prozent,groesse)) 
 </div></code></pre>
-<h3 id="uwie-entf-ich-sonderzeichenu"><u>Wie entf. ich Sonderzeichen</u>:</h3>
-<pre class="hljs"><code><div><span class="hljs-keyword">import</span> string <span class="hljs-keyword">as</span> s
-
-text = <span class="hljs-string">'ein Test, ein Test! ein Beispiel'</span>
-
-sonderzeichen = s.punctuation
-zahlen = s.digits
-
-<span class="hljs-keyword">for</span> symbol <span class="hljs-keyword">in</span> sonderzeichen:
-    text = text.replace(symbol, <span class="hljs-string">""</span>)
-
-<span class="hljs-keyword">for</span> zahl <span class="hljs-keyword">in</span> zahlen:
-    text = text.replace(zahl, <span class="hljs-string">""</span>)
-
-text_lst = text.lower().split()
-print(text_lst)
-
-<span class="hljs-comment">#Audgabe:</span>
-[<span class="hljs-string">'ein'</span>, <span class="hljs-string">'test'</span>, <span class="hljs-string">'ein'</span>, <span class="hljs-string">'test'</span>, <span class="hljs-string">'ein'</span>, <span class="hljs-string">'beispiel'</span>]
-</div></code></pre>
-<ul>
-<li><code>text = text.split()</code>: Wir haben jzt. jedes Wort als ein Element in einer liste
--&gt; list[str]</li>
-</ul>
-<h3 id="uerstellen-eine-gruppeu"><u>Erstellen eine Gruppe</u>:</h3>
-<ul>
-<li>{länge: list[Wörter mit dieser Länge]}</li>
-</ul>
-<pre class="hljs"><code><div>#länge noch nicht in der gruppe
-    #füge länge hinzu und das entsprechende list(wort)
-#länge bereits in der gruppe
-
-
-gruppe = {}
-für wort in text_lst:
-    wenn len(wort) nicht in gruppe:
-        gruppe[len(wort)] = list(wort)
-    wenn len(wort) bereits in gruppe:
-        gruppe[len(wort)].append(wort)
-</div></code></pre>
-<pre class="hljs"><code><div><span class="hljs-comment">#länge noch nicht in der gruppe</span>
-    <span class="hljs-comment">#füge länge hinzu und das entsprechende list(wort)</span>
-<span class="hljs-comment">#länge bereits in der gruppe</span>
-
-
-gruppe = {}
-<span class="hljs-keyword">for</span> wort <span class="hljs-keyword">in</span> text_lst:
-    <span class="hljs-keyword">if</span> len(wort) <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> gruppe:
-        gruppe[len(wort)] = [wort]
-    <span class="hljs-keyword">else</span>: 
-        gruppe[len(wort)].append(wort)
-
-<span class="hljs-comment">#Ausgabe:</span>
-gruppe: {<span class="hljs-number">3</span>: [<span class="hljs-string">'ein'</span>, <span class="hljs-string">'ein'</span>, <span class="hljs-string">'ein'</span>], <span class="hljs-number">4</span>: [<span class="hljs-string">'test'</span>, <span class="hljs-string">'test'</span>], <span class="hljs-number">8</span>: [<span class="hljs-string">'beispiel'</span>]}
-</div></code></pre>
-<h3 id="uwelches-wort-kommt-am-meisten-vor-u"><u>Welches Wort kommt am meisten vor ?</u>:</h3>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>
