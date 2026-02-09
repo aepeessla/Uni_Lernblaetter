@@ -947,6 +947,11 @@ print(insertion_sort(lst))
     * Wenn k = 1 $to$ 1 $\times$ gedreht
         * ***Bsp***:['*']
 
+<<<<<<< HEAD
+
+
+
+=======
 <hr>
 
 ![alt text](image-19.png)
@@ -1546,7 +1551,9 @@ loese_suduko(sudoku)
 
 * Ich finde d. Aufgabe unnormal verwirrend. Ich verstehe nicht, was sie genau v. mir möchten. Also ich habe d. Funktion "`def loese_sudoku(sudoku:list[int])->list[int] | str:`" & hier bekomme ich ein **Sudoku-Feld** ü.geben, dass Zahlen zw. $0$ bis $-9$ enthält. D. Stellen, d. eine 0 sind, sind quazi mein leeres Feld, welches ich auffüllen muss. Wenn etwas nicht lösbar ist, dann soll d. Einträge löschen, welches bedeutet, dass ich eine Kopie von diesem Feld benötige.
 
+
 ### <u>Brain Storming</u>
+
 ```python
 import random as r
 
@@ -1572,6 +1579,103 @@ loese_suduko(sudoku)
 ```
 * Ich muss mich zudem immer an $9$ Stellen orientieren, welches ein $3 \times 3$ Feld im Bild ist. D. einzelnen Zahlen muss ich mit abs(zahlen) angucken, welches bedeutet, dass ich durch eine Zeile iterieren muss & gucken muss, welche Zahlen n.  
 
+<<<<<<< HEAD
+<hr>
+
+![alt text](image-14.png)
+
+## <u>**Brainstorming**</u>:
+
+1) Sonderzeichen entf.
+1) Welche Wortlängen gibt
+1) Was ist d. meiste Wort dieser Wortlänge ?
+1) Was ist das meine Wort mit dieser Wortlänge ?
+
+<hr>
+
+```
+längen = []
+für wort in text:
+    wenn len(wort) bereits in längen ist:
+        mache einfach weiter
+    ansonsten:
+        füge es in längen hinzu
+
+wörter_einmalig = set(text)
+wort_häufigkeit = {}
+
+for wort in anzahl_wörter:
+    häufigkeit = zähle Häufigkeit vom Wort in text
+    wort_häufigkeit[wort] = häufigkeit
+```
+ 
+
+
+### <u>Wie entf. ich Sonderzeichen</u>:
+
+```python
+import string as s
+
+text = 'ein Test, ein Test! ein Beispiel'
+
+sonderzeichen = s.punctuation
+zahlen = s.digits
+
+for symbol in sonderzeichen:
+    text = text.replace(symbol, "")
+
+for zahl in zahlen:
+    text = text.replace(zahl, "")
+
+text_lst = text.lower().split()
+print(text_lst)
+
+#Audgabe:
+['ein', 'test', 'ein', 'test', 'ein', 'beispiel']
+```
+
+* `text = text.split()`: Wir haben jzt. jedes Wort als ein Element in einer liste
+    -> list[str]
+
+
+### <u>Erstellen eine Gruppe</u>:
+* {länge: list[Wörter mit dieser Länge]}
+
+```
+#länge noch nicht in der gruppe
+    #füge länge hinzu und das entsprechende list(wort)
+#länge bereits in der gruppe
+
+
+gruppe = {}
+für wort in text_lst:
+    wenn len(wort) nicht in gruppe:
+        gruppe[len(wort)] = list(wort)
+    wenn len(wort) bereits in gruppe:
+        gruppe[len(wort)].append(wort)
+```
+
+
+```python
+#länge noch nicht in der gruppe
+    #füge länge hinzu und das entsprechende list(wort)
+#länge bereits in der gruppe
+
+
+gruppe = {}
+for wort in text_lst:
+    if len(wort) not in gruppe:
+        gruppe[len(wort)] = [wort]
+    else: 
+        gruppe[len(wort)].append(wort)
+
+#Ausgabe:
+gruppe: {3: ['ein', 'ein', 'ein'], 4: ['test', 'test'], 8: ['beispiel']}
+```
+
+
+### <u>Welches Wort kommt am meisten vor ?</u>:
+=======
 
 
 
@@ -1672,6 +1776,7 @@ groesse = int(input("Größe: "))
 prozent = int(input("Prozent: "))
 print(erzeuge(prozent,groesse)) 
 ```
+
 
 
 
