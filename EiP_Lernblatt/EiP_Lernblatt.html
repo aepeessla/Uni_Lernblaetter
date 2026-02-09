@@ -514,6 +514,20 @@ text[<span class="hljs-number">2</span>] = i
 <li>
 <p><code>.replace(&lt;alt&gt;,&lt;neu&gt;)</code>: <em>str</em> $\to$ <em>str</em></p>
 </li>
+<li>
+<p><code>&quot;&lt;objekt, womit es verbunden werden soll&gt;&quot;.join(&lt;liste&gt;)</code>: <em>list[str]</em> $\to$ <em>str</em></p>
+<pre class="hljs"><code><div>liste = [<span class="hljs-string">"Was"</span>, <span class="hljs-string">"machen"</span>, <span class="hljs-string">"Sachen"</span>]
+
+neue_liste1 = <span class="hljs-string">" "</span>.join(liste)
+neue_liste2 = <span class="hljs-string">","</span>.join(liste)
+print(neue_liste1)
+print(neue_liste2)
+
+<span class="hljs-comment">#Ausgabe:</span>
+Was machen Sachen
+Was,machen,Sachen
+</div></code></pre>
+</li>
 </ul>
 <h2 id="uwie-anzahl-strings-z%C3%A4hlen-u"><u>Wie Anzahl Strings zählen ?</u></h2>
 <ul>
@@ -2270,7 +2284,120 @@ prozent = int(input(<span class="hljs-string">"Prozent: "</span>))
 print(erzeuge(prozent,groesse)) 
 </div></code></pre>
 <hr>
-<p><img src="WhatsApp Image 2026-02-09 at 17.54.24.jpeg" alt="alt text"></p>
+<p><img src="WhatsApp Image 2026-02-09 at 17.54.24-1.jpeg" alt="alt text">
+s</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> string <span class="hljs-keyword">as</span> s
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">einlesefunktion</span><span class="hljs-params">(pfad:str)</span>-&gt; dict[str, list[tuple[str, str]]]:</span>
+    <span class="hljs-keyword">with</span> open(pfad, <span class="hljs-string">"r"</span>) <span class="hljs-keyword">as</span> f:
+        
+        zeilen = f.readlines()
+
+        buch = {}
+        <span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> zeilen:
+            <span class="hljs-comment"># " Marie Vujow,39934/88859 " </span>
+            zeile = zeile.strip()
+            <span class="hljs-comment"># "Marie Vujow,39934/88859"</span>
+            zeile = zeile.split(<span class="hljs-string">","</span>)
+            <span class="hljs-comment"># ["Marie Vujow", "39934/88859"]</span>
+
+            name = zeile[<span class="hljs-number">0</span>] <span class="hljs-comment">#"Marie Vujow"</span>
+
+            nummer_lst = zeile[<span class="hljs-number">1</span>].split(<span class="hljs-string">'/'</span>) <span class="hljs-comment">#["39934", "88859"]</span>
+            nummer = tuple((nummer_lst[<span class="hljs-number">0</span>], nummer_lst[<span class="hljs-number">1</span>]))
+
+            buch.setdefault(name, []).append(nummer)
+            
+            
+        <span class="hljs-keyword">return</span> buch
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ausgabefunktion</span><span class="hljs-params">(dateiname:str, telefonbuch:dict[str, list[tuple[str, str]]])</span>:</span>
+    telefonbuch = sorted(telefonbuch.items(), key=<span class="hljs-keyword">lambda</span> x: x[<span class="hljs-number">0</span>])
+    telefonbuch = dict(telefonbuch)
+    <span class="hljs-comment"># 'Marie Vujow': [('39934', '88859'), ('2677', '706122'), ('35691', '8636479'), ('6275', '98108532'), ('2804', '0264389727')]</span>
+    
+    <span class="hljs-keyword">with</span> open(dateiname, <span class="hljs-string">"w"</span>) <span class="hljs-keyword">as</span> f:
+
+        <span class="hljs-keyword">for</span> name, nummer <span class="hljs-keyword">in</span> telefonbuch.items():
+            <span class="hljs-comment">#name = 'Marie Vujow'</span>
+            <span class="hljs-comment">#nummer = [('39934', '88859'), ('2677', '706122'), ('35691', '8636479'), ('6275', '98108532'), ('2804', '0264389727')]</span>
+            formatierte_nummern = []
+            <span class="hljs-keyword">for</span> vorwahl, tel_num <span class="hljs-keyword">in</span> nummer:
+                formatierte_nummern.append(<span class="hljs-string">f"<span class="hljs-subst">{vorwahl}</span>/<span class="hljs-subst">{tel_num}</span>"</span>) 
+
+            alle_nummern_str = <span class="hljs-string">", "</span>.join(formatierte_nummern)   
+            f.write(<span class="hljs-string">f"<span class="hljs-subst">{name}</span>: <span class="hljs-subst">{alle_nummern_str}</span>\n"</span>)
+            
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hinzuf</span>ü<span class="hljs-title">gen</span><span class="hljs-params">(telefonbuch:dict)</span>:</span>
+    <span class="hljs-comment">#nach einen Namen fragen:</span>
+        <span class="hljs-comment">#name: str</span>
+            <span class="hljs-comment">#Anfangsbuchstaben sollen groß sein !</span>
+        <span class="hljs-comment">#nummer:str</span>
+            <span class="hljs-comment">#Vorwahl/Nummer</span>
+        
+        <span class="hljs-comment">#wenn name nicht in telefonbuch:</span>
+            <span class="hljs-comment"># neuer Eintrag: dict[name] = tuple((nummer))</span>
+
+    name = str(input(<span class="hljs-string">"Name, den sie hinzufügen möchten (Anfangsbuchstaben groß!): "</span>)).strip()
+
+    <span class="hljs-comment">#Namen bereinigen</span>
+    zahlen = s.digits
+    sonderzeichen = s.punctuation
+
+    <span class="hljs-keyword">for</span> zahl <span class="hljs-keyword">in</span> zahlen:
+        name = name.replace(zahl, <span class="hljs-string">""</span>)
+    
+    <span class="hljs-keyword">for</span> symbol <span class="hljs-keyword">in</span> sonderzeichen:
+        name = name.replace(symbol, <span class="hljs-string">""</span>)
+
+    <span class="hljs-comment">#name: "Efe Aksoy"</span>
+    name = name.split(<span class="hljs-string">" "</span>)
+    bearbeitet = []
+    <span class="hljs-comment">#name: ["Efe","Aksoy"]</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> name:
+        <span class="hljs-comment">#i = "Efe"</span>
+        ersterbuchstabe = i[<span class="hljs-number">0</span>].upper()
+        name_rest = i[<span class="hljs-number">1</span>:].lower()
+        name = ersterbuchstabe + name_rest
+        bearbeitet.append(name)
+    fertiger_name = <span class="hljs-string">" "</span>.join(bearbeitet)
+
+
+    
+    nummer = str(input(<span class="hljs-string">"Nummer in der Form: Vorwahl/Nummer: "</span>))
+    <span class="hljs-comment">#nummer: "vorwahl/nummer"</span>
+    nummer = nummer.split(<span class="hljs-string">"/"</span>) 
+    <span class="hljs-comment">#nummer: ["vorwahl", "nummer"]</span>
+
+    <span class="hljs-keyword">if</span> fertiger_name <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> telefonbuch.keys():
+        telefonbuch[fertiger_name] = [(nummer[<span class="hljs-number">0</span>],nummer[<span class="hljs-number">1</span>])]
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-comment">#name = "Efe Aksoy"</span>
+        <span class="hljs-comment">#nummer = ["vorwahl", "nummer"]</span>
+        telefonbuch[fertiger_name].append(tuple((nummer[<span class="hljs-number">0</span>],nummer[<span class="hljs-number">1</span>])))
+
+    <span class="hljs-keyword">return</span> telefonbuch
+<span class="hljs-comment"># ... deine Funktionen oben ...</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># Hier kommt der Ablauf rein, den du testen willst:</span>
+    pfad = <span class="hljs-string">r"G:\Uni\Semester 6\EiP\Übung für mich selbst\Telefonbuch.csv"</span>
+
+    buch = einlesefunktion(pfad)
+   
+    <span class="hljs-comment"># Jetzt testen wir das Hinzufügen</span>
+    neues_buch = hinzufügen(buch)
+    
+    <span class="hljs-comment"># Und jetzt speichern wir das Ergebnis</span>
+    ausgabefunktion(<span class="hljs-string">"test_ausgabe.txt"</span>, neues_buch)
+
+<span class="hljs-comment"># Dieser Block sorgt dafür, dass main() nur ausgeführt wird, </span>
+<span class="hljs-comment"># wenn du die Datei direkt startest (nicht beim Importieren).</span>
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    main()
+
+</div></code></pre>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>
