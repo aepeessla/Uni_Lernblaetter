@@ -1946,8 +1946,7 @@ for wort in anzahl_wörter:
 <h3 id="uwie-entf-ich-sonderzeichenu"><u>Wie entf. ich Sonderzeichen</u>:</h3>
 <pre class="hljs"><code><div><span class="hljs-keyword">import</span> string <span class="hljs-keyword">as</span> s
 
-text = <span class="hljs-string">'ADHS (Aufmerksamkeitsdefizit-Hyperaktivitätsstörung) ist eine neurobiologische Entwicklungsstörung, die durch Kernsymptome wie Unaufmerksamkeit, Impulsivität und Hyperaktivität (oft als innere Unruhe bei Erwachsenen) gekennzeichnet ist. Sie betrifft Kinder und Erwachsene (ca. 2-3% der Erwachsenen), ist stark genetisch bedingt (76-80% Erblichkeit) und erfordert oft eine multimodale Therapie aus Verhaltenstherapie, Beratung und ggf. Medikamenten. '</span>
-text = text.strip()
+text = <span class="hljs-string">'ein Test, ein Test! ein Beispiel'</span>
 
 sonderzeichen = s.punctuation
 zahlen = s.digits
@@ -1959,22 +1958,47 @@ zahlen = s.digits
     text = text.replace(zahl, <span class="hljs-string">""</span>)
 
 text_lst = text.lower().split()
+print(text_lst)
 
 <span class="hljs-comment">#Audgabe:</span>
-[<span class="hljs-string">'ADHS'</span>, <span class="hljs-string">'AufmerksamkeitsdefizitHyperaktivitätsstörung'</span>, <span class="hljs-string">'ist'</span>, <span class="hljs-string">'eine'</span>, <span class="hljs-string">'neurobiologische'</span>, <span class="hljs-string">'Entwicklungsstörung'</span>, <span class="hljs-string">'die'</span>, <span class="hljs-string">'durch'</span>, <span class="hljs-string">'Kernsymptome'</span>, <span class="hljs-string">'wie'</span>, <span class="hljs-string">'Unaufmerksamkeit'</span>, <span class="hljs-string">'Impulsivität'</span>, <span class="hljs-string">'und'</span>, <span class="hljs-string">'Hyperaktivität'</span>, <span class="hljs-string">'oft'</span>, <span class="hljs-string">'als'</span>, <span class="hljs-string">'innere'</span>, <span class="hljs-string">'Unruhe'</span>, <span class="hljs-string">'bei'</span>, <span class="hljs-string">'Erwachsenen'</span>, <span class="hljs-string">'gekennzeichnet'</span>, <span class="hljs-string">'ist'</span>, <span class="hljs-string">'Sie'</span>, <span class="hljs-string">'betrifft'</span>, <span class="hljs-string">'Kinder'</span>, <span class="hljs-string">'und'</span>, <span class="hljs-string">'Erwachsene'</span>, <span class="hljs-string">'ca'</span>, <span class="hljs-string">'der'</span>, <span class="hljs-string">'Erwachsenen'</span>, <span class="hljs-string">'ist'</span>, <span class="hljs-string">'stark'</span>, <span class="hljs-string">'genetisch'</span>, <span class="hljs-string">'bedingt'</span>, <span class="hljs-string">'Erblichkeit'</span>, <span class="hljs-string">'und'</span>, <span class="hljs-string">'erfordert'</span>, <span class="hljs-string">'oft'</span>, <span class="hljs-string">'eine'</span>, <span class="hljs-string">'multimodale'</span>, <span class="hljs-string">'Therapie'</span>, <span class="hljs-string">'aus'</span>, <span class="hljs-string">'Verhaltenstherapie'</span>, <span class="hljs-string">'Beratung'</span>, <span class="hljs-string">'und'</span>, <span class="hljs-string">'ggf'</span>, <span class="hljs-string">'Medikamenten'</span>]
+[<span class="hljs-string">'ein'</span>, <span class="hljs-string">'test'</span>, <span class="hljs-string">'ein'</span>, <span class="hljs-string">'test'</span>, <span class="hljs-string">'ein'</span>, <span class="hljs-string">'beispiel'</span>]
 </div></code></pre>
 <ul>
 <li><code>text = text.split()</code>: Wir haben jzt. jedes Wort als ein Element in einer liste
 -&gt; list[str]</li>
 </ul>
-<h3 id="ul%C3%A4ngeherausbekommenu"><u>Längeherausbekommen</u></h3>
-<pre class="hljs"><code><div>wörter_einmalig = set(text)
-wort_häufigkeit = {}
+<h3 id="uerstellen-eine-gruppeu"><u>Erstellen eine Gruppe</u>:</h3>
+<ul>
+<li>{länge: list[Wörter mit dieser Länge]}</li>
+</ul>
+<pre class="hljs"><code><div>#länge noch nicht in der gruppe
+    #füge länge hinzu und das entsprechende list(wort)
+#länge bereits in der gruppe
 
-<span class="hljs-keyword">for</span> wort <span class="hljs-keyword">in</span> wörter_einmalig:
-    häufigkeit = text.count(text)
-    wort_häufigkeit[wort] = häufigkeit
+
+gruppe = {}
+für wort in text_lst:
+    wenn len(wort) nicht in gruppe:
+        gruppe[len(wort)] = list(wort)
+    wenn len(wort) bereits in gruppe:
+        gruppe[len(wort)].append(wort)
 </div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">#länge noch nicht in der gruppe</span>
+    <span class="hljs-comment">#füge länge hinzu und das entsprechende list(wort)</span>
+<span class="hljs-comment">#länge bereits in der gruppe</span>
+
+
+gruppe = {}
+<span class="hljs-keyword">for</span> wort <span class="hljs-keyword">in</span> text_lst:
+    <span class="hljs-keyword">if</span> len(wort) <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> gruppe:
+        gruppe[len(wort)] = [wort]
+    <span class="hljs-keyword">else</span>: 
+        gruppe[len(wort)].append(wort)
+
+<span class="hljs-comment">#Ausgabe:</span>
+gruppe: {<span class="hljs-number">3</span>: [<span class="hljs-string">'ein'</span>, <span class="hljs-string">'ein'</span>, <span class="hljs-string">'ein'</span>], <span class="hljs-number">4</span>: [<span class="hljs-string">'test'</span>, <span class="hljs-string">'test'</span>], <span class="hljs-number">8</span>: [<span class="hljs-string">'beispiel'</span>]}
+</div></code></pre>
+<h3 id="uwelches-wort-kommt-am-meisten-vor-u"><u>Welches Wort kommt am meisten vor ?</u>:</h3>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>

@@ -1543,8 +1543,7 @@ for wort in anzahl_wörter:
 ```python
 import string as s
 
-text = 'ADHS (Aufmerksamkeitsdefizit-Hyperaktivitätsstörung) ist eine neurobiologische Entwicklungsstörung, die durch Kernsymptome wie Unaufmerksamkeit, Impulsivität und Hyperaktivität (oft als innere Unruhe bei Erwachsenen) gekennzeichnet ist. Sie betrifft Kinder und Erwachsene (ca. 2-3% der Erwachsenen), ist stark genetisch bedingt (76-80% Erblichkeit) und erfordert oft eine multimodale Therapie aus Verhaltenstherapie, Beratung und ggf. Medikamenten. '
-text = text.strip()
+text = 'ein Test, ein Test! ein Beispiel'
 
 sonderzeichen = s.punctuation
 zahlen = s.digits
@@ -1556,30 +1555,53 @@ for zahl in zahlen:
     text = text.replace(zahl, "")
 
 text_lst = text.lower().split()
+print(text_lst)
 
 #Audgabe:
-['ADHS', 'AufmerksamkeitsdefizitHyperaktivitätsstörung', 'ist', 'eine', 'neurobiologische', 'Entwicklungsstörung', 'die', 'durch', 'Kernsymptome', 'wie', 'Unaufmerksamkeit', 'Impulsivität', 'und', 'Hyperaktivität', 'oft', 'als', 'innere', 'Unruhe', 'bei', 'Erwachsenen', 'gekennzeichnet', 'ist', 'Sie', 'betrifft', 'Kinder', 'und', 'Erwachsene', 'ca', 'der', 'Erwachsenen', 'ist', 'stark', 'genetisch', 'bedingt', 'Erblichkeit', 'und', 'erfordert', 'oft', 'eine', 'multimodale', 'Therapie', 'aus', 'Verhaltenstherapie', 'Beratung', 'und', 'ggf', 'Medikamenten']
+['ein', 'test', 'ein', 'test', 'ein', 'beispiel']
 ```
+
 * `text = text.split()`: Wir haben jzt. jedes Wort als ein Element in einer liste
     -> list[str]
 
-### <u>Längeherausbekommen</u>
-```python
-wörter_einmalig = set(text)
-wort_häufigkeit = {}
 
-for wort in wörter_einmalig:
-    häufigkeit = text.count(text)
-    wort_häufigkeit[wort] = häufigkeit
+### <u>Erstellen eine Gruppe</u>:
+* {länge: list[Wörter mit dieser Länge]}
+
+```
+#länge noch nicht in der gruppe
+    #füge länge hinzu und das entsprechende list(wort)
+#länge bereits in der gruppe
+
+
+gruppe = {}
+für wort in text_lst:
+    wenn len(wort) nicht in gruppe:
+        gruppe[len(wort)] = list(wort)
+    wenn len(wort) bereits in gruppe:
+        gruppe[len(wort)].append(wort)
 ```
 
 
+```python
+#länge noch nicht in der gruppe
+    #füge länge hinzu und das entsprechende list(wort)
+#länge bereits in der gruppe
 
 
+gruppe = {}
+for wort in text_lst:
+    if len(wort) not in gruppe:
+        gruppe[len(wort)] = [wort]
+    else: 
+        gruppe[len(wort)].append(wort)
+
+#Ausgabe:
+gruppe: {3: ['ein', 'ein', 'ein'], 4: ['test', 'test'], 8: ['beispiel']}
+```
 
 
-
-
+### <u>Welches Wort kommt am meisten vor ?</u>:
 
 
 
