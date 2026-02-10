@@ -2284,7 +2284,8 @@ prozent = int(input(<span class="hljs-string">"Prozent: "</span>))
 print(erzeuge(prozent,groesse)) 
 </div></code></pre>
 <hr>
-<p><img src="WhatsApp Image 2026-02-09 at 17.54.24-1.jpeg" alt="alt text"></p>
+<p><img src="WhatsApp Image 2026-02-09 at 17.54.24-1.jpeg" alt="alt text">
+s</p>
 <pre class="hljs"><code><div><span class="hljs-keyword">import</span> string <span class="hljs-keyword">as</span> s
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">einlesefunktion</span><span class="hljs-params">(pfad:str)</span>-&gt; dict[str, list[tuple[str, str]]]:</span>
@@ -2358,8 +2359,8 @@ print(erzeuge(prozent,groesse))
         <span class="hljs-comment">#i = "Efe"</span>
         ersterbuchstabe = i[<span class="hljs-number">0</span>].upper()
         name_rest = i[<span class="hljs-number">1</span>:].lower()
-        formatierter_name = ersterbuchstabe + name_rest
-        bearbeitet.append(formatierter_name)
+        name = ersterbuchstabe + name_rest
+        bearbeitet.append(name)
     fertiger_name = <span class="hljs-string">" "</span>.join(bearbeitet)
 
 
@@ -2395,213 +2396,8 @@ print(erzeuge(prozent,groesse))
 <span class="hljs-comment"># wenn du die Datei direkt startest (nicht beim Importieren).</span>
 <span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
     main()
+
 </div></code></pre>
-<hr>
-<p><img src="image-21.png" alt="alt text">
-<img src="image-22.png" alt="alt text"></p>
-<h2 id="udef-inventarhinzufuegeninventar-slot-itemu"><u>def inventar_hinzufuegen(inventar, slot, item):</u></h2>
-<ul>
-<li>inventar = {}</li>
-<li>slot = str(input(&quot;Slot: &quot;)).strip()</li>
-<li>item = (str(input('Gegenstand: ').strip()),(int(input(&quot;Gewicht: &quot;))))</li>
-</ul>
-<h2 id="ud-def-entferneinventarslot-nameu"><u>d) <code>def entferne(inventar,slot, name)</code></u></h2>
-<pre class="hljs"><code><div>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">entferne_item</span><span class="hljs-params">(inventar:dict[str, list[tuple[str,int]]], slot:str, name:str)</span>-&gt;bool:</span>
-    <span class="hljs-comment"># ist slot vorhanden ?</span>
-        <span class="hljs-comment"># wenn ich einfach slot inventar[slot] mache und das slot nicht vorhanden ist, dann Error:</span>
-    <span class="hljs-comment">#item = (_name_, gewicht)</span>
-    
-    <span class="hljs-comment">#list[str]: [slot1, slot2, ..., slotN]</span>
-    inventar_keys = [slot <span class="hljs-keyword">for</span> slot, liste <span class="hljs-keyword">in</span> inventar.items()]
-
-    
-    <span class="hljs-comment">#inventar = {</span>
-        <span class="hljs-comment"># "Sonderwaffe": [("Langschwert", 12), ("Axt", 15)],</span>
-        <span class="hljs-comment"># "Helm": [("Eisenhelm", 5)],</span>
-        <span class="hljs-comment"># "Waffe": [("Langschwert", 12), ("Bogen", 8)],</span>
-        <span class="hljs-comment"># "Tank": []</span>
-        <span class="hljs-comment"># }</span>
-        
-    <span class="hljs-comment"># wenn nicht vorhanden, dann direkt abbrechen und sagen, dass es nicht vorhanden ist</span>
-    <span class="hljs-keyword">if</span> slot <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> inventar_keys:
-       <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
-   
-    <span class="hljs-comment">#ansonsten suche nach dem slot</span>
-    slot_mit_elem = inventar[slot] <span class="hljs-comment">#inventar[slot] = list[tuple[str,int]]: [("Sonderwaffe", [("Langschwert", 12), ("Axt", 15)])]</span>
-    <span class="hljs-comment">#iteriere durch die Liste: [("Langschwert", 12), ("Axt", 15)]</span>
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(slot_mit_elem)):
-        <span class="hljs-comment"># wenn [0] == name, dann entferne diese und breche die Schleife sofort ab</span>
-        <span class="hljs-keyword">if</span> slot_mit_elem[i][<span class="hljs-number">0</span>] == name:
-            
-            slot_mit_elem.pop(i)
-            inventar[slot]= slot_mit_elem
-            <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span> 
-</div></code></pre>
-<ul>
-<li>
-<p><u><strong>Problem 1</strong></u>:</p>
-<ul>
-<li>
-<p>Statt...</p>
-<pre class="hljs"><code><div>inventar_keys = [slot <span class="hljs-keyword">for</span> slot, liste <span class="hljs-keyword">in</span> inventar.items()]
-<span class="hljs-keyword">if</span> slot <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> inventar_keys:
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
-</div></code></pre>
-<p>verwende...</p>
-<pre class="hljs"><code><div><span class="hljs-keyword">if</span> slot <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> inventar:
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
-</div></code></pre>
-<ul>
-<li>Python guckt dann autom. auf d. <code>keys()</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><u><strong>Problem 2</strong></u>:</p>
-<pre class="hljs"><code><div>slot_mit_elem.pop(i)
-        inventar[slot]= slot_mit_elem
-        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
-</div></code></pre>
-<ul>
-<li>slot_mit_elem = ein Zeiger, d. heißt, wenn ich <code>slot_mit_elem.pop(i)</code> mache, dann wird autom. auch Inventar geändert</li>
-</ul>
-</li>
-<li>
-<p><u><strong>finaler code</strong></u>:</p>
-<pre class="hljs"><code><div> 
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">inventar_hinzufuegen</span><span class="hljs-params">(inventar: dict, slot:str, item:tuple[str, int])</span>-&gt; dict[str, list[tuple[str,int]]]:</span>
-    
-    <span class="hljs-comment">#inventar</span>
-    <span class="hljs-keyword">if</span> slot <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> inventar:
-        inventar[slot] = [item]
-    <span class="hljs-keyword">else</span>:
-        inventar[slot].append(item) 
-    
-    <span class="hljs-keyword">return</span> inventar
-
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">gesamtgewicht</span><span class="hljs-params">(inventar:dict[str, list[tuple[str,int]]])</span>-&gt; int:</span>
-    gesamt_gewicht = <span class="hljs-number">0</span>
-    <span class="hljs-keyword">for</span> slot,liste <span class="hljs-keyword">in</span> inventar.items():
-        <span class="hljs-keyword">for</span> elem <span class="hljs-keyword">in</span> liste:
-            gesamt_gewicht += elem[<span class="hljs-number">1</span>]
-    
-    <span class="hljs-keyword">return</span> gesamt_gewicht
-
-
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">schwerstes_item</span><span class="hljs-params">(inventar:dict[str, list[tuple[str,int]]])</span>-&gt; tuple[str, str, int]:</span>
-    ergebnis = (<span class="hljs-string">""</span>,<span class="hljs-string">""</span>, float(<span class="hljs-string">'-inf'</span>))
-    
-    <span class="hljs-keyword">for</span> slot, liste <span class="hljs-keyword">in</span> inventar.items():
-        <span class="hljs-keyword">for</span> elem <span class="hljs-keyword">in</span> liste:
-            <span class="hljs-keyword">if</span> elem[<span class="hljs-number">1</span>] &gt; ergebnis[<span class="hljs-number">2</span>]:
-                ergebnis = (slot, elem[<span class="hljs-number">0</span>], elem[<span class="hljs-number">1</span>])
-            
-            <span class="hljs-keyword">elif</span> elem[<span class="hljs-number">1</span>] == ergebnis[<span class="hljs-number">2</span>]:
-                <span class="hljs-keyword">if</span> slot &lt; ergebnis[<span class="hljs-number">0</span>]:
-                    ergebnis = (slot, elem[<span class="hljs-number">0</span>], elem[<span class="hljs-number">1</span>])
-                <span class="hljs-keyword">else</span>:
-                    <span class="hljs-keyword">continue</span>
-    <span class="hljs-keyword">return</span> ergebnis
-
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">entferne_item</span><span class="hljs-params">(inventar:dict[str, list[tuple[str,int]]], slot:str, name:str)</span>-&gt;bool:</span>
-    <span class="hljs-comment"># ist slot vorhanden ?</span>
-        <span class="hljs-comment"># wenn ich einfach slot inventar[slot] mache und das slot nicht vorhanden ist, dann Error:</span>
-    <span class="hljs-comment">#item = (_name_, gewicht)</span>
-    
-    <span class="hljs-comment">#inventar = {</span>
-        <span class="hljs-comment"># "Sonderwaffe": [("Langschwert", 12), ("Axt", 15)],</span>
-        <span class="hljs-comment"># "Helm": [("Eisenhelm", 5)],</span>
-        <span class="hljs-comment"># "Waffe": [("Langschwert", 12), ("Bogen", 8)],</span>
-        <span class="hljs-comment"># "Tank": []</span>
-        <span class="hljs-comment"># }</span>
-        
-    <span class="hljs-comment"># wenn nicht vorhanden, dann direkt abbrechen und sagen, dass es nicht vorhanden ist</span>
-    <span class="hljs-keyword">if</span> slot <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> inventar:
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
-
-    <span class="hljs-comment">#ansonsten suche nach dem slot</span>
-    slot_mit_elem = inventar[slot] <span class="hljs-comment">#inventar[slot] = list[tuple[str,int]]: [("Sonderwaffe", [("Langschwert", 12), ("Axt", 15)])]</span>
-    <span class="hljs-comment">#iteriere durch die Liste: [("Langschwert", 12), ("Axt", 15)]</span>
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(slot_mit_elem)):
-        <span class="hljs-comment"># wenn [0] == name, dann entferne diese und breche die Schleife sofort ab</span>
-        <span class="hljs-keyword">if</span> slot_mit_elem[i][<span class="hljs-number">0</span>] == name:
-            slot_mit_elem.pop(i)
-            <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span> 
-            
-
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">gewichtsanpassung</span><span class="hljs-params">(inventar:dict[str, list[tuple[str,int]]], slot:str, name:str, neues_gewicht:int)</span>:</span>
-    <span class="hljs-comment">#erstes Item mit Namen aus Slot = neue Gewicht</span>
-    
-    <span class="hljs-comment">#Kontrolle slot</span>
-    <span class="hljs-keyword">if</span> slot <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> inventar:
-        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
-    
-    richtiger_slot = inventar[slot] <span class="hljs-comment">#[("Langschwert", 12), ("Axt", 15), ("Axt", 55)]</span>
-    
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(richtiger_slot)):
-        <span class="hljs-keyword">if</span> richtiger_slot[i][<span class="hljs-number">0</span>] == name:
-            richtiger_slot[i] = (richtiger_slot[i][<span class="hljs-number">0</span>], neues_gewicht)
-            <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
-    
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
-            
-
-    
-
-
-inventar = {}
-<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
-    frage = str(input(<span class="hljs-string">"Möchten Sie etwas hinzufügen (j/n) ?: "</span>)).lower()
-    <span class="hljs-keyword">if</span> frage != <span class="hljs-string">"j"</span>:
-        <span class="hljs-keyword">break</span>
-    
-    slot = str(input(<span class="hljs-string">"Slot: "</span>)).strip()
-    item = (str(input(<span class="hljs-string">'Gegenstand: '</span>).strip()),(int(input(<span class="hljs-string">"Gewicht: "</span>))))
-    inventar = inventar_hinzufuegen(inventar, slot, item)
-
-
-print(inventar)
-print(gesamtgewicht(inventar))
-print(schwerstes_item(inventar))
-
-
-<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
-    frage = str(input(<span class="hljs-string">"Möchten Sie etwas entfernen (j/n) ?: "</span>)).lower()
-    <span class="hljs-keyword">if</span> frage != <span class="hljs-string">"j"</span>:
-        <span class="hljs-keyword">break</span>
-    slot = str(input(<span class="hljs-string">"Slot: "</span>)).strip()
-    name = str(input(<span class="hljs-string">"Name: "</span>)).strip()
-    print(entferne_item(inventar,slot, name))
-
-<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
-    frage = str(input(<span class="hljs-string">"Möchten Sie das Gewicht ändern (j/n) ?: "</span>)).lower()
-    <span class="hljs-keyword">if</span> frage != <span class="hljs-string">"j"</span>:
-        <span class="hljs-keyword">break</span>
-    slot = str(input(<span class="hljs-string">"Slot: "</span>)).strip()
-    name = str(input(<span class="hljs-string">"Name: "</span>)).strip()
-    neues_gewicht = int(input(<span class="hljs-string">'Neues Gewicht: '</span>))
-    print(gewichtsanpassung(inventar, slot, name, neues_gewicht))
-</div></code></pre>
-</li>
-</ul>
-<h3 id="uwas-ich-gelernt-habeu"><u>Was ich gelernt habe</u>:</h3>
-<ul>
-<li>
-<p>Bei wdh. Abfrage, eine $\infty$ Abfrage erstellen mit <code>while True</code>. In d. Schleife Werte abfragen &amp; Funktion in Schleife ausf</p>
-</li>
-<li>
-<p><code>for i in dict():</code> dann ist i autom.  = .keys()</p>
-</li>
-<li>
-<p>dict(), wenn ich etw. änder, dann ist es wie bei der Liste, dass wird auch autom. bei d. OG dict() auch geändert</p>
-</li>
-</ul>
-<hr>
-<p><img src="image-23.png" alt="alt text"></p>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>
