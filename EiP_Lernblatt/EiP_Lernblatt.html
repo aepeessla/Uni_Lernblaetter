@@ -375,14 +375,6 @@ code {
   /* 3. Ebene: Pfeil rechts (identisch zur 2. Ebene) */
   ul ul ul { list-style-type: "→ "; }
 </style>
-<style>
-  img {
-    width: 1000px;  /* Hier deine gewünschte Breite eintragen */
-    height: auto;  /* Behält das Seitenverhältnis bei, damit nichts verzerrt wird */
-    display: block;
-    margin: 10px 0; /* Sorgt für etwas Abstand nach oben und unten */
-  }
-</style>
 <h1 id="inhaltsverzeichnis"><strong>Inhaltsverzeichnis</strong></h1>
 <ol>
 <li><a href="#Kommandozeilenargumente">Kommandozeilenargumente</a></li>
@@ -522,8 +514,62 @@ text[<span class="hljs-number">2</span>] = i
 <li>
 <p><code>.replace(&lt;alt&gt;,&lt;neu&gt;)</code>: <em>str</em> $\to$ <em>str</em></p>
 </li>
+<li>
+<p><code>&quot;&lt;objekt, womit es verbunden werden soll&gt;&quot;.join(&lt;liste&gt;)</code>: <em>list[str]</em> $\to$ <em>str</em></p>
+<pre class="hljs"><code><div>liste = [<span class="hljs-string">"Was"</span>, <span class="hljs-string">"machen"</span>, <span class="hljs-string">"Sachen"</span>]
+
+neue_liste1 = <span class="hljs-string">" "</span>.join(liste)
+neue_liste2 = <span class="hljs-string">","</span>.join(liste)
+print(neue_liste1)
+print(neue_liste2)
+
+<span class="hljs-comment">#Ausgabe:</span>
+Was machen Sachen
+Was,machen,Sachen
+</div></code></pre>
+</li>
 </ul>
-<pre class="hljs"><code><div><span class="hljs-keyword">import</span> string
+<h2 id="uwie-anzahl-strings-z%C3%A4hlen-u"><u>Wie Anzahl Strings zählen ?</u></h2>
+<ul>
+<li><code>&lt;gewinner&gt; = max(&lt;kandidaten&gt;, key=&lt;bewertungs_regel&gt;)</code></li>
+</ul>
+<pre class="hljs"><code><div>tiere = [<span class="hljs-string">'zebra'</span>, <span class="hljs-string">'dachs'</span>, <span class="hljs-string">'zebra'</span>, <span class="hljs-string">'dachs'</span>, <span class="hljs-string">'aal'</span>]
+
+<span class="hljs-comment">#Gucke jedes Wort nur einmal = set()</span>
+    <span class="hljs-comment"># Problem: Keine feste Reihenfolge</span>
+<span class="hljs-comment"># sortiere diesen Set</span>
+    <span class="hljs-comment"># Jedes Wort nur einmal + sortiert</span>
+<span class="hljs-comment"># bestimme max anhand anzahl</span>
+gewinner = max(sorted(set(tiere)), key=tiere.count)
+
+print(gewinner)
+</div></code></pre>
+<p><u><strong>Beispiel 2</strong></u>:</p>
+<pre class="hljs"><code><div>woerter = [<span class="hljs-string">"Maus"</span>, <span class="hljs-string">"Elefant"</span>, <span class="hljs-string">"Hund"</span>, <span class="hljs-string">"Ameise"</span>]
+
+<span class="hljs-comment">#finde das Wort mit der am längsten ist</span>
+kandidaten = sorted(set(woerter))
+print(<span class="hljs-string">f"kandidaten: <span class="hljs-subst">{kandidaten}</span>"</span>)
+
+gewinner = max(kandidaten, key=len)
+
+print(gewinner)
+</div></code></pre>
+<ul>
+<li>key = len</li>
+</ul>
+<p><u><strong>Beispiel 3</strong></u>:</p>
+<pre class="hljs"><code><div>namen = {<span class="hljs-number">1</span>: <span class="hljs-string">'Efe'</span>, <span class="hljs-number">2</span>: <span class="hljs-string">'Simge'</span>, <span class="hljs-number">3</span>: <span class="hljs-string">'Sude'</span>, <span class="hljs-number">4</span>: <span class="hljs-string">'Tülay'</span>, <span class="hljs-number">5</span>: <span class="hljs-string">'Ergün'</span>, <span class="hljs-number">6</span>: <span class="hljs-string">'Mayla'</span>, <span class="hljs-number">7</span>: <span class="hljs-string">'Pepee'</span>}
+
+<span class="hljs-comment">#finde das Wort mit der am längsten ist</span>
+gewinner = max(sorted(set(namen.values())), key=len)
+
+print(gewinner)
+``
+
+
+```python
+<span class="hljs-keyword">import</span> string
 
 &lt;var&gt; = string.ascii_lowercase  <span class="hljs-comment">#abcdefghijklmnopqrstuvwxyz</span>
 
@@ -914,6 +960,17 @@ max_m = m<span class="hljs-number">-1</span>
 </li>
 </ul>
 <h1 id="dictionaries"><strong>Dictionaries</strong></h1>
+<h2 id="uwie-durch-dict-iterieren-u"><u>Wie durch dict() iterieren ?</u>:</h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> dict.keys():
+
+
+
+<span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> dict.values():
+
+
+
+<span class="hljs-keyword">for</span> key, value <span class="hljs-keyword">in</span> dict.items()
+</div></code></pre>
 <h2 id="uwie-sortieren-u"><u>Wie sortieren ?</u>:</h2>
 <ul>
 <li><code>sorted_indices = sorted(häufigkeiten.keys())</code><pre class="hljs"><code><div>my_dict = {<span class="hljs-string">'a'</span>: <span class="hljs-number">2</span>, <span class="hljs-string">'c'</span>: <span class="hljs-number">1</span>, <span class="hljs-string">'b'</span>: <span class="hljs-number">4</span>, <span class="hljs-string">'d'</span>: <span class="hljs-number">3</span>}
@@ -923,14 +980,14 @@ sortierte_liste_tupel = sorted(my_dict.keys()) <span class="hljs-comment"># Ausg
 </ul>
 <h2 id="uwie-elemente-hinzuf%C3%BCgenu"><u>Wie Elemente hinzufügen</u>:</h2>
 <ul>
-<li><code>dic.upadte()</code></li>
+<li><code>&lt;dic&gt;.update({&lt;key&gt;: &lt;value&gt;})</code></li>
 </ul>
-<pre class="hljs"><code><div>dic = {}
+<pre class="hljs"><code><div>dic = {<span class="hljs-number">3</span>: (<span class="hljs-number">3</span>, <span class="hljs-string">'ein'</span>), <span class="hljs-number">4</span>: (<span class="hljs-number">2</span>, <span class="hljs-string">'test'</span>), <span class="hljs-number">8</span>: (<span class="hljs-number">1</span>, <span class="hljs-string">'beispiel'</span>)}
 n = <span class="hljs-number">7</span>
 k = <span class="hljs-number">3</span>
 
 dic.update({(n,k) : <span class="hljs-number">45</span>})
-print(dic)
+print(dic) <span class="hljs-comment">#{3: (3, 'ein'), 4: (2, 'test'), 8: (1, 'beispiel'), (7, 3): 45}</span>
 </div></code></pre>
 <hr>
 <h1 id="mit-text-arbeiten"><strong>Mit Text arbeiten</strong></h1>
@@ -1379,6 +1436,8 @@ wahrscheinlichkeit = r.choices(seq,weights = [<span class="hljs-number">20</span
 </ul>
 </li>
 </ul>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<p>=======</p>
 <hr>
 <p><img src="image-19.png" alt="alt text"></p>
 <h3 id="uentf-v-sonderzeichenu"><u>Entf. v. Sonderzeichen</u></h3>
@@ -1426,7 +1485,7 @@ woerter_sammlung = {}
     <span class="hljs-keyword">if</span> laenge <span class="hljs-keyword">in</span> woerter_sammlung:
         <span class="hljs-comment"># Falls JA: Füge das Wort der Liste hinzu, die dort schon liegt</span>
         <span class="hljs-comment"># (Wie greift man auf den Wert zu und hängt etwas an?)</span>
-        woerter_sammlung[laenge] = wort
+        woerter_sammlung[laenge] = 
 
     <span class="hljs-keyword">else</span>:
         <span class="hljs-comment"># Falls NEIN: Erstelle einen neuen Eintrag für diese Länge</span>
@@ -1627,55 +1686,63 @@ print(<span class="hljs-number">20</span>* <span class="hljs-string">'-'</span>)
     print(*j)
 </div></code></pre>
 <hr>
-<h1 id="bild-hinzuf%C3%BCgen">BIld hinzufügen</h1>
-<p>import random as r</p>
-<p>def num_in_bereich(num:int)-&gt;int:
-while 0 &gt; num or num &gt; 3999:
-print(&quot;Die Zahl muss zwischen 1 und 3999 sein!&quot;)
-num = int(input(&quot;num: &quot;))
-return num</p>
-<p>def umwandlung_römische_zahl(num:int)-&gt;str:
-num = num_in_bereich(num)
-römische_zahl = &quot;&quot;</p>
-<pre><code>symbole = [['M'], ['C','D', 'M'], ['X','L', 'C'], ['I','V','X']]
+<h1 id="bild-hinzuf%C3%BCgen">Bild hinzufügen</h1>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
 
-einheiten = [1000,100,10,1]
-n_num = num
-index = 0
 
-for reihe in einheiten:
-    rest = n_num % reihe
-    ziffer = (n_num - rest) // reihe 
-    n_num = rest
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">num_in_bereich</span><span class="hljs-params">(num:int)</span>-&gt;int:</span>
+    <span class="hljs-keyword">while</span> <span class="hljs-number">0</span> &gt; num <span class="hljs-keyword">or</span> num &gt; <span class="hljs-number">3999</span>:
+        print(<span class="hljs-string">"Die Zahl muss zwischen 1 und 3999 sein!"</span>)
+        num = int(input(<span class="hljs-string">"num: "</span>))
+    <span class="hljs-keyword">return</span> num
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">umwandlung_r</span>ö<span class="hljs-title">mische_zahl</span><span class="hljs-params">(num:int)</span>-&gt;str:</span>
+    num = num_in_bereich(num)
+    römische_zahl = <span class="hljs-string">""</span>
     
-    if ziffer &lt;= 0:
-        index += 1
-        continue
-    
-    else:
-        if ziffer == 9:
-            römische_zahl += symbole[index][0] + symbole[index][2]
-        elif 6 &lt;= ziffer &lt;= 8:
-            ziffer -= 5
-            element = ziffer * symbole[index][0] 
+    symbole = [[<span class="hljs-string">'M'</span>], [<span class="hljs-string">'C'</span>,<span class="hljs-string">'D'</span>, <span class="hljs-string">'M'</span>], [<span class="hljs-string">'X'</span>,<span class="hljs-string">'L'</span>, <span class="hljs-string">'C'</span>], [<span class="hljs-string">'I'</span>,<span class="hljs-string">'V'</span>,<span class="hljs-string">'X'</span>]]
 
-            römische_zahl += symbole[index][1] + element
-        elif ziffer == 5:
-            römische_zahl += symbole[index][1]
+    einheiten = [<span class="hljs-number">1000</span>,<span class="hljs-number">100</span>,<span class="hljs-number">10</span>,<span class="hljs-number">1</span>]
+    n_num = num
+    index = <span class="hljs-number">0</span>
 
-        elif ziffer == 4:
-            römische_zahl += symbole[index][0] + symbole[index][1]
+    <span class="hljs-keyword">for</span> reihe <span class="hljs-keyword">in</span> einheiten:
+        rest = n_num % reihe
+        ziffer = (n_num - rest) // reihe 
+        n_num = rest
         
-        elif 1 &lt;= ziffer &lt;= 3:
-            element = ziffer * symbole[index][0] 
-            römische_zahl += element
-    index += 1
+        <span class="hljs-keyword">if</span> ziffer &lt;= <span class="hljs-number">0</span>:
+            index += <span class="hljs-number">1</span>
+            <span class="hljs-keyword">continue</span>
+        
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">if</span> ziffer == <span class="hljs-number">9</span>:
+                römische_zahl += symbole[index][<span class="hljs-number">0</span>] + symbole[index][<span class="hljs-number">2</span>]
+            <span class="hljs-keyword">elif</span> <span class="hljs-number">6</span> &lt;= ziffer &lt;= <span class="hljs-number">8</span>:
+                ziffer -= <span class="hljs-number">5</span>
+                element = ziffer * symbole[index][<span class="hljs-number">0</span>] 
 
-return römische_zahl
-</code></pre>
-<p>num = r.randint(1,3999)
+                römische_zahl += symbole[index][<span class="hljs-number">1</span>] + element
+            <span class="hljs-keyword">elif</span> ziffer == <span class="hljs-number">5</span>:
+                römische_zahl += symbole[index][<span class="hljs-number">1</span>]
+
+            <span class="hljs-keyword">elif</span> ziffer == <span class="hljs-number">4</span>:
+                römische_zahl += symbole[index][<span class="hljs-number">0</span>] + symbole[index][<span class="hljs-number">1</span>]
+            
+            <span class="hljs-keyword">elif</span> <span class="hljs-number">1</span> &lt;= ziffer &lt;= <span class="hljs-number">3</span>:
+                element = ziffer * symbole[index][<span class="hljs-number">0</span>] 
+                römische_zahl += element
+        index += <span class="hljs-number">1</span>
+
+    <span class="hljs-keyword">return</span> römische_zahl
+
+
+
+num = r.randint(<span class="hljs-number">1</span>,<span class="hljs-number">3999</span>)
 print(num)
-print(umwandlung_römische_zahl(num))</p>
+print(umwandlung_römische_zahl(num))
+</div></code></pre>
 <hr>
 <p><img src="image-7.png" alt="alt text"></p>
 <ul>
@@ -1975,6 +2042,154 @@ loese_suduko(sudoku)
 <li>Ich muss mich zudem immer an $9$ Stellen orientieren, welches ein $3 \times 3$ Feld im Bild ist. D. einzelnen Zahlen muss ich mit abs(zahlen) angucken, welches bedeutet, dass ich durch eine Zeile iterieren muss &amp; gucken muss, welche Zahlen n.</li>
 </ul>
 <hr>
+<p><img src="WhatsApp Image 2026-02-09 at 15.28.11.jpeg" alt="alt text"></p>
+<h2 id="ubrainstormingu"><u><strong>Brainstorming</strong></u>:</h2>
+<ol>
+<li>Sonderzeichen entf.</li>
+<li>Welche Wortlängen gibt es</li>
+<li>Was ist d. meiste Wort dieser Wortlänge ?</li>
+<li>Was ist das meine Wort mit dieser Wortlänge ?</li>
+</ol>
+<hr>
+<h3 id="uwie-entf-ich-sonderzeichenu"><u>Wie entf. ich Sonderzeichen</u>:</h3>
+<h4 id="upseudocodeu"><u>Pseudocode</u>:</h4>
+<pre class="hljs"><code><div>importiere string als s
+
+sonderzeichen = s.punctuation
+zahlen = s.digits
+
+für symbol in sonderzeichen:
+    Ist symbol in text enhalten:
+        #ja ?
+        ersetzte in Text das symbol mit &quot;&quot;
+    ansonsten:
+        mache einfach weiter
+
+für zahl in zahlen:
+    Ist zahl in Text:
+        ersetzte die zahl in text mit ''
+    ansonsten:
+        mache einfach weiter
+
+wandle den text:str in eine liste, indem jedes Wort kleingeschrieben ist und ein Element ist: list[str]
+</div></code></pre>
+<h4 id="ucodeu"><u>Code</u>:</h4>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> string <span class="hljs-keyword">as</span> s
+
+text = <span class="hljs-string">'ein Test, ein Test! ein Beispiel'</span>
+
+sonderzeichen = s.punctuation
+zahlen = s.digits
+
+<span class="hljs-keyword">for</span> symbol <span class="hljs-keyword">in</span> sonderzeichen:
+    text = text.replace(symbol, <span class="hljs-string">""</span>)
+
+<span class="hljs-keyword">for</span> zahl <span class="hljs-keyword">in</span> zahlen:
+    text = text.replace(zahl, <span class="hljs-string">""</span>)
+
+text_lst = text.lower().split()
+
+<span class="hljs-comment">#Audgabe:</span>
+[<span class="hljs-string">'ein'</span>, <span class="hljs-string">'test'</span>, <span class="hljs-string">'ein'</span>, <span class="hljs-string">'test'</span>, <span class="hljs-string">'ein'</span>, <span class="hljs-string">'beispiel'</span>]
+</div></code></pre>
+<h4 id="upseudocodeu"><u>Pseudocode</u>:</h4>
+<pre class="hljs"><code><div>#länge noch nicht in der gruppe
+    #füge länge hinzu und das entsprechende list(wort)
+#länge bereits in der gruppe
+
+
+gruppe = {}
+für wort in text_lst:
+    wenn len(wort) nicht in gruppe:
+        gruppe[len(wort)] = list(wort)
+    wenn len(wort) bereits in gruppe:
+        gruppe[len(wort)].append(wort)
+</div></code></pre>
+<h4 id="ucodeu"><u>Code</u>:</h4>
+<pre class="hljs"><code><div><span class="hljs-comment">#länge noch nicht in der gruppe</span>
+    <span class="hljs-comment">#füge länge hinzu und das entsprechende list(wort)</span>
+<span class="hljs-comment">#länge bereits in der gruppe</span>
+
+
+gruppe = {}
+<span class="hljs-keyword">for</span> wort <span class="hljs-keyword">in</span> text_lst:
+    <span class="hljs-keyword">if</span> len(wort) <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> gruppe:
+        gruppe[len(wort)] = [wort]
+    <span class="hljs-keyword">else</span>: 
+        gruppe[len(wort)].append(wort)
+
+<span class="hljs-comment">#Ausgabe:</span>
+gruppe: {<span class="hljs-number">3</span>: [<span class="hljs-string">'ein'</span>, <span class="hljs-string">'ein'</span>, <span class="hljs-string">'ein'</span>], <span class="hljs-number">4</span>: [<span class="hljs-string">'test'</span>, <span class="hljs-string">'test'</span>], <span class="hljs-number">8</span>: [<span class="hljs-string">'beispiel'</span>]}
+</div></code></pre>
+<h3 id="uwelches-wort-kommt-am-meisten-vor-u"><u>Welches Wort kommt am meisten vor ?</u>:</h3>
+<h4 id="upseudocodeu"><u>Pseudocode</u>:</h4>
+<pre class="hljs"><code><div>ergebnis = {}
+für laenge, liste in gruppe.items():
+    anzahl_woerter = len(liste)
+    meiste_wort = max(set(strings), key=strings.count)
+    ergebnis[laenge] = list((anzahl_woerter, meiste_wort))
+</div></code></pre>
+<ul>
+<li><code>set()</code> $\lnot$ sortiert, wenn wir $max$ machen, dann nimmt es einf. direkt d. Erste, aber dass sollte auch alphabetisch geschehen:
+<ul>
+<li>Wenn 2 Elem. gleiche Anzahl haben, dann müssen wir das nehmen, was als erstes im Alphabet vorkommt.
+<ul>
+<li><code>set()-&gt;sorted()-&gt;max()</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code><div>ergebnis = {}
+    <span class="hljs-keyword">for</span> laenge, liste <span class="hljs-keyword">in</span> gruppe.items():
+        anzahl_woerter = len(liste)
+        meiste_wort = max(sorted(set(liste)), key=liste.count)
+        ergebnis[laenge] = tuple((anzahl_woerter, meiste_wort))
+</div></code></pre>
+<h4 id="ucodeu"><u>Code</u>:</h4>
+<pre class="hljs"><code><div>ergebnis = {}
+<span class="hljs-keyword">for</span> laenge, liste <span class="hljs-keyword">in</span> gruppe.items():
+    anzahl_woerter = len(liste)
+    meiste_wort = max(set(strings), key=strings.count)
+    ergebnis[laenge] = list((anzahl_woerter, meiste_wort))
+</div></code></pre>
+<h2 id="ufertiger-codeu"><u>Fertiger Code</u></h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> string <span class="hljs-keyword">as</span> s
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wortlaengenstatistik</span><span class="hljs-params">(text:str)</span>-&gt; dict[int, tuple[int, str]]:</span>
+    sonderzeichen = s.punctuation
+    zahlen = s.digits
+
+    <span class="hljs-keyword">for</span> symbol <span class="hljs-keyword">in</span> sonderzeichen:
+        text = text.replace(symbol, <span class="hljs-string">""</span>)
+
+    <span class="hljs-keyword">for</span> zahl <span class="hljs-keyword">in</span> zahlen:
+        text = text.replace(zahl, <span class="hljs-string">""</span>)
+
+    text_lst = text.lower().split()
+
+    gruppe = {}
+    <span class="hljs-keyword">for</span> wort <span class="hljs-keyword">in</span> text_lst:
+        <span class="hljs-keyword">if</span> len(wort) <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> gruppe:
+            gruppe[len(wort)] = [wort]
+        <span class="hljs-keyword">else</span>: 
+            gruppe[len(wort)].append(wort)
+
+    ergebnis = {}
+    <span class="hljs-keyword">for</span> laenge, liste <span class="hljs-keyword">in</span> gruppe.items():
+        anzahl_woerter = len(liste)
+        meiste_wort = max(sorted(set(liste)), key=liste.count)
+        ergebnis[laenge] = tuple((anzahl_woerter, meiste_wort))
+
+    <span class="hljs-keyword">return</span> ergebnis
+
+
+text = <span class="hljs-string">'Ein Test und ein test.'</span>
+text.strip()
+print(wortlaengenstatistik(text))
+</div></code></pre>
+<hr>
 <p><img src="image-17.png" alt="alt text">
 <img src="image-18.png" alt="alt text"></p>
 <pre class="hljs"><code><div><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> r
@@ -2068,6 +2283,325 @@ groesse = int(input(<span class="hljs-string">"Größe: "</span>))
 prozent = int(input(<span class="hljs-string">"Prozent: "</span>))
 print(erzeuge(prozent,groesse)) 
 </div></code></pre>
+<hr>
+<p><img src="WhatsApp Image 2026-02-09 at 17.54.24-1.jpeg" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> string <span class="hljs-keyword">as</span> s
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">einlesefunktion</span><span class="hljs-params">(pfad:str)</span>-&gt; dict[str, list[tuple[str, str]]]:</span>
+    <span class="hljs-keyword">with</span> open(pfad, <span class="hljs-string">"r"</span>) <span class="hljs-keyword">as</span> f:
+        
+        zeilen = f.readlines()
+
+        buch = {}
+        <span class="hljs-keyword">for</span> zeile <span class="hljs-keyword">in</span> zeilen:
+            <span class="hljs-comment"># " Marie Vujow,39934/88859 " </span>
+            zeile = zeile.strip()
+            <span class="hljs-comment"># "Marie Vujow,39934/88859"</span>
+            zeile = zeile.split(<span class="hljs-string">","</span>)
+            <span class="hljs-comment"># ["Marie Vujow", "39934/88859"]</span>
+
+            name = zeile[<span class="hljs-number">0</span>] <span class="hljs-comment">#"Marie Vujow"</span>
+
+            nummer_lst = zeile[<span class="hljs-number">1</span>].split(<span class="hljs-string">'/'</span>) <span class="hljs-comment">#["39934", "88859"]</span>
+            nummer = tuple((nummer_lst[<span class="hljs-number">0</span>], nummer_lst[<span class="hljs-number">1</span>]))
+
+            buch.setdefault(name, []).append(nummer)
+            
+            
+        <span class="hljs-keyword">return</span> buch
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ausgabefunktion</span><span class="hljs-params">(dateiname:str, telefonbuch:dict[str, list[tuple[str, str]]])</span>:</span>
+    telefonbuch = sorted(telefonbuch.items(), key=<span class="hljs-keyword">lambda</span> x: x[<span class="hljs-number">0</span>])
+    telefonbuch = dict(telefonbuch)
+    <span class="hljs-comment"># 'Marie Vujow': [('39934', '88859'), ('2677', '706122'), ('35691', '8636479'), ('6275', '98108532'), ('2804', '0264389727')]</span>
+    
+    <span class="hljs-keyword">with</span> open(dateiname, <span class="hljs-string">"w"</span>) <span class="hljs-keyword">as</span> f:
+
+        <span class="hljs-keyword">for</span> name, nummer <span class="hljs-keyword">in</span> telefonbuch.items():
+            <span class="hljs-comment">#name = 'Marie Vujow'</span>
+            <span class="hljs-comment">#nummer = [('39934', '88859'), ('2677', '706122'), ('35691', '8636479'), ('6275', '98108532'), ('2804', '0264389727')]</span>
+            formatierte_nummern = []
+            <span class="hljs-keyword">for</span> vorwahl, tel_num <span class="hljs-keyword">in</span> nummer:
+                formatierte_nummern.append(<span class="hljs-string">f"<span class="hljs-subst">{vorwahl}</span>/<span class="hljs-subst">{tel_num}</span>"</span>) 
+
+            alle_nummern_str = <span class="hljs-string">", "</span>.join(formatierte_nummern)   
+            f.write(<span class="hljs-string">f"<span class="hljs-subst">{name}</span>: <span class="hljs-subst">{alle_nummern_str}</span>\n"</span>)
+            
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hinzuf</span>ü<span class="hljs-title">gen</span><span class="hljs-params">(telefonbuch:dict)</span>:</span>
+    <span class="hljs-comment">#nach einen Namen fragen:</span>
+        <span class="hljs-comment">#name: str</span>
+            <span class="hljs-comment">#Anfangsbuchstaben sollen groß sein !</span>
+        <span class="hljs-comment">#nummer:str</span>
+            <span class="hljs-comment">#Vorwahl/Nummer</span>
+        
+        <span class="hljs-comment">#wenn name nicht in telefonbuch:</span>
+            <span class="hljs-comment"># neuer Eintrag: dict[name] = tuple((nummer))</span>
+
+    name = str(input(<span class="hljs-string">"Name, den sie hinzufügen möchten (Anfangsbuchstaben groß!): "</span>)).strip()
+
+    <span class="hljs-comment">#Namen bereinigen</span>
+    zahlen = s.digits
+    sonderzeichen = s.punctuation
+
+    <span class="hljs-keyword">for</span> zahl <span class="hljs-keyword">in</span> zahlen:
+        name = name.replace(zahl, <span class="hljs-string">""</span>)
+    
+    <span class="hljs-keyword">for</span> symbol <span class="hljs-keyword">in</span> sonderzeichen:
+        name = name.replace(symbol, <span class="hljs-string">""</span>)
+
+    <span class="hljs-comment">#name: "Efe Aksoy"</span>
+    name = name.split(<span class="hljs-string">" "</span>)
+    bearbeitet = []
+    <span class="hljs-comment">#name: ["Efe","Aksoy"]</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> name:
+        <span class="hljs-comment">#i = "Efe"</span>
+        ersterbuchstabe = i[<span class="hljs-number">0</span>].upper()
+        name_rest = i[<span class="hljs-number">1</span>:].lower()
+        formatierter_name = ersterbuchstabe + name_rest
+        bearbeitet.append(formatierter_name)
+    fertiger_name = <span class="hljs-string">" "</span>.join(bearbeitet)
+
+
+    
+    nummer = str(input(<span class="hljs-string">"Nummer in der Form: Vorwahl/Nummer: "</span>))
+    <span class="hljs-comment">#nummer: "vorwahl/nummer"</span>
+    nummer = nummer.split(<span class="hljs-string">"/"</span>) 
+    <span class="hljs-comment">#nummer: ["vorwahl", "nummer"]</span>
+
+    <span class="hljs-keyword">if</span> fertiger_name <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> telefonbuch.keys():
+        telefonbuch[fertiger_name] = [(nummer[<span class="hljs-number">0</span>],nummer[<span class="hljs-number">1</span>])]
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-comment">#name = "Efe Aksoy"</span>
+        <span class="hljs-comment">#nummer = ["vorwahl", "nummer"]</span>
+        telefonbuch[fertiger_name].append(tuple((nummer[<span class="hljs-number">0</span>],nummer[<span class="hljs-number">1</span>])))
+
+    <span class="hljs-keyword">return</span> telefonbuch
+<span class="hljs-comment"># ... deine Funktionen oben ...</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># Hier kommt der Ablauf rein, den du testen willst:</span>
+    pfad = <span class="hljs-string">r"G:\Uni\Semester 6\EiP\Übung für mich selbst\Telefonbuch.csv"</span>
+
+    buch = einlesefunktion(pfad)
+   
+    <span class="hljs-comment"># Jetzt testen wir das Hinzufügen</span>
+    neues_buch = hinzufügen(buch)
+    
+    <span class="hljs-comment"># Und jetzt speichern wir das Ergebnis</span>
+    ausgabefunktion(<span class="hljs-string">"test_ausgabe.txt"</span>, neues_buch)
+
+<span class="hljs-comment"># Dieser Block sorgt dafür, dass main() nur ausgeführt wird, </span>
+<span class="hljs-comment"># wenn du die Datei direkt startest (nicht beim Importieren).</span>
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    main()
+</div></code></pre>
+<hr>
+<p><img src="image-21.png" alt="alt text">
+<img src="image-22.png" alt="alt text"></p>
+<h2 id="udef-inventarhinzufuegeninventar-slot-itemu"><u>def inventar_hinzufuegen(inventar, slot, item):</u></h2>
+<ul>
+<li>inventar = {}</li>
+<li>slot = str(input(&quot;Slot: &quot;)).strip()</li>
+<li>item = (str(input('Gegenstand: ').strip()),(int(input(&quot;Gewicht: &quot;))))</li>
+</ul>
+<h2 id="ud-def-entferneinventarslot-nameu"><u>d) <code>def entferne(inventar,slot, name)</code></u></h2>
+<pre class="hljs"><code><div>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">entferne_item</span><span class="hljs-params">(inventar:dict[str, list[tuple[str,int]]], slot:str, name:str)</span>-&gt;bool:</span>
+    <span class="hljs-comment"># ist slot vorhanden ?</span>
+        <span class="hljs-comment"># wenn ich einfach slot inventar[slot] mache und das slot nicht vorhanden ist, dann Error:</span>
+    <span class="hljs-comment">#item = (_name_, gewicht)</span>
+    
+    <span class="hljs-comment">#list[str]: [slot1, slot2, ..., slotN]</span>
+    inventar_keys = [slot <span class="hljs-keyword">for</span> slot, liste <span class="hljs-keyword">in</span> inventar.items()]
+
+    
+    <span class="hljs-comment">#inventar = {</span>
+        <span class="hljs-comment"># "Sonderwaffe": [("Langschwert", 12), ("Axt", 15)],</span>
+        <span class="hljs-comment"># "Helm": [("Eisenhelm", 5)],</span>
+        <span class="hljs-comment"># "Waffe": [("Langschwert", 12), ("Bogen", 8)],</span>
+        <span class="hljs-comment"># "Tank": []</span>
+        <span class="hljs-comment"># }</span>
+        
+    <span class="hljs-comment"># wenn nicht vorhanden, dann direkt abbrechen und sagen, dass es nicht vorhanden ist</span>
+    <span class="hljs-keyword">if</span> slot <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> inventar_keys:
+       <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+   
+    <span class="hljs-comment">#ansonsten suche nach dem slot</span>
+    slot_mit_elem = inventar[slot] <span class="hljs-comment">#inventar[slot] = list[tuple[str,int]]: [("Sonderwaffe", [("Langschwert", 12), ("Axt", 15)])]</span>
+    <span class="hljs-comment">#iteriere durch die Liste: [("Langschwert", 12), ("Axt", 15)]</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(slot_mit_elem)):
+        <span class="hljs-comment"># wenn [0] == name, dann entferne diese und breche die Schleife sofort ab</span>
+        <span class="hljs-keyword">if</span> slot_mit_elem[i][<span class="hljs-number">0</span>] == name:
+            
+            slot_mit_elem.pop(i)
+            inventar[slot]= slot_mit_elem
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span> 
+</div></code></pre>
+<ul>
+<li>
+<p><u><strong>Problem 1</strong></u>:</p>
+<ul>
+<li>
+<p>Statt...</p>
+<pre class="hljs"><code><div>inventar_keys = [slot <span class="hljs-keyword">for</span> slot, liste <span class="hljs-keyword">in</span> inventar.items()]
+<span class="hljs-keyword">if</span> slot <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> inventar_keys:
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+</div></code></pre>
+<p>verwende...</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">if</span> slot <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> inventar:
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+</div></code></pre>
+<ul>
+<li>Python guckt dann autom. auf d. <code>keys()</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><u><strong>Problem 2</strong></u>:</p>
+<pre class="hljs"><code><div>slot_mit_elem.pop(i)
+        inventar[slot]= slot_mit_elem
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+</div></code></pre>
+<ul>
+<li>slot_mit_elem = ein Zeiger, d. heißt, wenn ich <code>slot_mit_elem.pop(i)</code> mache, dann wird autom. auch Inventar geändert</li>
+</ul>
+</li>
+<li>
+<p><u><strong>finaler code</strong></u>:</p>
+<pre class="hljs"><code><div> 
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">inventar_hinzufuegen</span><span class="hljs-params">(inventar: dict, slot:str, item:tuple[str, int])</span>-&gt; dict[str, list[tuple[str,int]]]:</span>
+    
+    <span class="hljs-comment">#inventar</span>
+    <span class="hljs-keyword">if</span> slot <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> inventar:
+        inventar[slot] = [item]
+    <span class="hljs-keyword">else</span>:
+        inventar[slot].append(item) 
+    
+    <span class="hljs-keyword">return</span> inventar
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">gesamtgewicht</span><span class="hljs-params">(inventar:dict[str, list[tuple[str,int]]])</span>-&gt; int:</span>
+    gesamt_gewicht = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> slot,liste <span class="hljs-keyword">in</span> inventar.items():
+        <span class="hljs-keyword">for</span> elem <span class="hljs-keyword">in</span> liste:
+            gesamt_gewicht += elem[<span class="hljs-number">1</span>]
+    
+    <span class="hljs-keyword">return</span> gesamt_gewicht
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">schwerstes_item</span><span class="hljs-params">(inventar:dict[str, list[tuple[str,int]]])</span>-&gt; tuple[str, str, int]:</span>
+    ergebnis = (<span class="hljs-string">""</span>,<span class="hljs-string">""</span>, float(<span class="hljs-string">'-inf'</span>))
+    
+    <span class="hljs-keyword">for</span> slot, liste <span class="hljs-keyword">in</span> inventar.items():
+        <span class="hljs-keyword">for</span> elem <span class="hljs-keyword">in</span> liste:
+            <span class="hljs-keyword">if</span> elem[<span class="hljs-number">1</span>] &gt; ergebnis[<span class="hljs-number">2</span>]:
+                ergebnis = (slot, elem[<span class="hljs-number">0</span>], elem[<span class="hljs-number">1</span>])
+            
+            <span class="hljs-keyword">elif</span> elem[<span class="hljs-number">1</span>] == ergebnis[<span class="hljs-number">2</span>]:
+                <span class="hljs-keyword">if</span> slot &lt; ergebnis[<span class="hljs-number">0</span>]:
+                    ergebnis = (slot, elem[<span class="hljs-number">0</span>], elem[<span class="hljs-number">1</span>])
+                <span class="hljs-keyword">else</span>:
+                    <span class="hljs-keyword">continue</span>
+    <span class="hljs-keyword">return</span> ergebnis
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">entferne_item</span><span class="hljs-params">(inventar:dict[str, list[tuple[str,int]]], slot:str, name:str)</span>-&gt;bool:</span>
+    <span class="hljs-comment"># ist slot vorhanden ?</span>
+        <span class="hljs-comment"># wenn ich einfach slot inventar[slot] mache und das slot nicht vorhanden ist, dann Error:</span>
+    <span class="hljs-comment">#item = (_name_, gewicht)</span>
+    
+    <span class="hljs-comment">#inventar = {</span>
+        <span class="hljs-comment"># "Sonderwaffe": [("Langschwert", 12), ("Axt", 15)],</span>
+        <span class="hljs-comment"># "Helm": [("Eisenhelm", 5)],</span>
+        <span class="hljs-comment"># "Waffe": [("Langschwert", 12), ("Bogen", 8)],</span>
+        <span class="hljs-comment"># "Tank": []</span>
+        <span class="hljs-comment"># }</span>
+        
+    <span class="hljs-comment"># wenn nicht vorhanden, dann direkt abbrechen und sagen, dass es nicht vorhanden ist</span>
+    <span class="hljs-keyword">if</span> slot <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> inventar:
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+
+    <span class="hljs-comment">#ansonsten suche nach dem slot</span>
+    slot_mit_elem = inventar[slot] <span class="hljs-comment">#inventar[slot] = list[tuple[str,int]]: [("Sonderwaffe", [("Langschwert", 12), ("Axt", 15)])]</span>
+    <span class="hljs-comment">#iteriere durch die Liste: [("Langschwert", 12), ("Axt", 15)]</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(slot_mit_elem)):
+        <span class="hljs-comment"># wenn [0] == name, dann entferne diese und breche die Schleife sofort ab</span>
+        <span class="hljs-keyword">if</span> slot_mit_elem[i][<span class="hljs-number">0</span>] == name:
+            slot_mit_elem.pop(i)
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span> 
+            
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">gewichtsanpassung</span><span class="hljs-params">(inventar:dict[str, list[tuple[str,int]]], slot:str, name:str, neues_gewicht:int)</span>:</span>
+    <span class="hljs-comment">#erstes Item mit Namen aus Slot = neue Gewicht</span>
+    
+    <span class="hljs-comment">#Kontrolle slot</span>
+    <span class="hljs-keyword">if</span> slot <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> inventar:
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+    
+    richtiger_slot = inventar[slot] <span class="hljs-comment">#[("Langschwert", 12), ("Axt", 15), ("Axt", 55)]</span>
+    
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(richtiger_slot)):
+        <span class="hljs-keyword">if</span> richtiger_slot[i][<span class="hljs-number">0</span>] == name:
+            richtiger_slot[i] = (richtiger_slot[i][<span class="hljs-number">0</span>], neues_gewicht)
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+    
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+            
+
+    
+
+
+inventar = {}
+<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+    frage = str(input(<span class="hljs-string">"Möchten Sie etwas hinzufügen (j/n) ?: "</span>)).lower()
+    <span class="hljs-keyword">if</span> frage != <span class="hljs-string">"j"</span>:
+        <span class="hljs-keyword">break</span>
+    
+    slot = str(input(<span class="hljs-string">"Slot: "</span>)).strip()
+    item = (str(input(<span class="hljs-string">'Gegenstand: '</span>).strip()),(int(input(<span class="hljs-string">"Gewicht: "</span>))))
+    inventar = inventar_hinzufuegen(inventar, slot, item)
+
+
+print(inventar)
+print(gesamtgewicht(inventar))
+print(schwerstes_item(inventar))
+
+
+<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+    frage = str(input(<span class="hljs-string">"Möchten Sie etwas entfernen (j/n) ?: "</span>)).lower()
+    <span class="hljs-keyword">if</span> frage != <span class="hljs-string">"j"</span>:
+        <span class="hljs-keyword">break</span>
+    slot = str(input(<span class="hljs-string">"Slot: "</span>)).strip()
+    name = str(input(<span class="hljs-string">"Name: "</span>)).strip()
+    print(entferne_item(inventar,slot, name))
+
+<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+    frage = str(input(<span class="hljs-string">"Möchten Sie das Gewicht ändern (j/n) ?: "</span>)).lower()
+    <span class="hljs-keyword">if</span> frage != <span class="hljs-string">"j"</span>:
+        <span class="hljs-keyword">break</span>
+    slot = str(input(<span class="hljs-string">"Slot: "</span>)).strip()
+    name = str(input(<span class="hljs-string">"Name: "</span>)).strip()
+    neues_gewicht = int(input(<span class="hljs-string">'Neues Gewicht: '</span>))
+    print(gewichtsanpassung(inventar, slot, name, neues_gewicht))
+</div></code></pre>
+</li>
+</ul>
+<h3 id="uwas-ich-gelernt-habeu"><u>Was ich gelernt habe</u>:</h3>
+<ul>
+<li>
+<p>Bei wdh. Abfrage, eine $\infty$ Abfrage erstellen mit <code>while True</code>. In d. Schleife Werte abfragen &amp; Funktion in Schleife ausf</p>
+</li>
+<li>
+<p><code>for i in dict():</code> dann ist i autom.  = .keys()</p>
+</li>
+<li>
+<p>dict(), wenn ich etw. änder, dann ist es wie bei der Liste, dass wird auch autom. bei d. OG dict() auch geändert</p>
+</li>
+</ul>
+<hr>
+<p><img src="image-23.png" alt="alt text"></p>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>
