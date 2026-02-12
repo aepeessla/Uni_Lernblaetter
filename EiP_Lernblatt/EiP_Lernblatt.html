@@ -990,6 +990,46 @@ k = <span class="hljs-number">3</span>
 dic.update({(n,k) : <span class="hljs-number">45</span>})
 print(dic) <span class="hljs-comment">#{3: (3, 'ein'), 4: (2, 'test'), 8: (1, 'beispiel'), (7, 3): 45}</span>
 </div></code></pre>
+<h2 id="uwie-hashtabelle-einen-festen-speicherplatz-geben-u"><u>Wie Hashtabelle einen festen Speicherplatz geben ?</u>:</h2>
+<ul>
+<li>unsere Hash-tabelle soll nur 10 Stellen haben: 0 bis 9</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hinzuf</span>ü<span class="hljs-title">gen</span><span class="hljs-params">(tabelle:dict, schluessel:int, wert:str)</span>-&gt; dict[int, str]:</span>
+
+    <span class="hljs-keyword">if</span> len(tabelle) == <span class="hljs-number">10</span>:
+        <span class="hljs-keyword">return</span> tabelle
+    
+    <span class="hljs-comment"># %10 sorgt dafür, dass wir in dem Bereich v. 10 bleiben</span>
+    hashwert = (schluessel ** <span class="hljs-number">2</span> + schluessel - <span class="hljs-number">1</span>) % <span class="hljs-number">10</span>
+    <span class="hljs-keyword">while</span> hashwert <span class="hljs-keyword">in</span> tabelle:
+        <span class="hljs-comment">#normalerweise einfach nur hashwert - 10, aber wir müssen % 10 machen, sodass es noch im Bereich von 0 bis 9 ist</span>
+        hashwert = (hashwert - <span class="hljs-number">1</span>) % <span class="hljs-number">10</span>
+    tabelle[hashwert] = wert
+
+    <span class="hljs-keyword">return</span> tabelle
+
+hashtabelle = {}
+hinzufügen(hashtabelle, <span class="hljs-number">2</span>, <span class="hljs-string">'wert 1'</span>)
+hinzufügen(hashtabelle, <span class="hljs-number">5</span>, <span class="hljs-string">'wert 2'</span>)
+hinzufügen(hashtabelle, <span class="hljs-number">4</span>, <span class="hljs-string">'wert 3'</span>)
+hinzufügen(hashtabelle, <span class="hljs-number">5</span>, <span class="hljs-string">'wert 4'</span>)
+</div></code></pre>
+<ul>
+<li>so sieht d. hash-Tabelle aus:
+______________________________
+Wie sieht die Hastabelle aus ?
+______________________________
+0 |
+1 |
+2 |
+3 |
+4 |
+5 | 'wert 1'
+6 |
+7 | 'wert 4'
+8 | 'wert 3'
+9 | 'wert 2'</li>
+</ul>
 <hr>
 <h1 id="mit-text-arbeiten"><strong>Mit Text arbeiten</strong></h1>
 <p><span style="color: #fc0303ff;">Man muss es sich so vorstellen, dass <code>.readlines()</code> unsere Augen sind &amp; wir jede Zeile lesen ! Das heißt, wenn ich etw. hinzufüge, dass ich dann mit den Augen unter d. letzen Zeile bin. Wenn jmd. jzt. fragen würde, was da steht, dann würde ich &quot;nichts&quot; sagen, weil da nichts geschrieben steht. Damit ich lesen kann, muss ich wieder mit den Augen zur ersten Zeile, welches hier mit <code>.seek({</code><a title="D. Stelle, das ich vorlesen möchte ">index</a><code>})</code> geschieht. ES IST GANZ WICHTIG ZU WISSEN, DASS <code>.split()</code>, <code>.strip()</code>, usw. EINEN STRING ZURÜCK GEBEN !!!</span></p>
@@ -1794,6 +1834,7 @@ datei_verändern()
 <li><a href="#Bin%C3%A4rstellen_z%C3%A4hlen">Binärstellen zählen</a></li>
 <li><a href="#Ab_und_aufsteigen">Ab und aufsteigen</a></li>
 <li><a href="#gerade_ungerade">gerade/ungerade</a></li>
+<li><a href="#High_five">High five</a></li>
 </ol>
 <h2 id="%C3%BCbung-9-1">Übung 9, 1</h2>
 <p><a id="punktsumme"></a></p>
@@ -2024,6 +2065,32 @@ gerade_ungerade(n)
        
 n = <span class="hljs-number">3</span>
 ab_und_aufsteigen(n)
+</div></code></pre>
+<p><a id="High_five"></a></p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">iterativ</span><span class="hljs-params">(n:int)</span>:</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,n+<span class="hljs-number">1</span>):
+        <span class="hljs-keyword">if</span> i % <span class="hljs-number">5</span> == <span class="hljs-number">0</span>:
+            print(<span class="hljs-string">"High Five!"</span>)
+        <span class="hljs-keyword">else</span>:
+            print(i)
+            
+            
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">recusiv</span><span class="hljs-params">(n:int)</span>:</span>
+    <span class="hljs-keyword">if</span> n &lt; <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span>
+    
+    recusiv(n<span class="hljs-number">-1</span>)
+    
+    <span class="hljs-keyword">if</span> n % <span class="hljs-number">5</span> == <span class="hljs-number">0</span>:
+        print(<span class="hljs-string">"High Five !"</span>)
+    <span class="hljs-keyword">else</span>:
+        print(n)
+    
+    
+    
+n = int(input(<span class="hljs-string">"n: "</span>))
+iterativ(n)
+recusiv(n)
 </div></code></pre>
 <hr>
 <p><img src="image-13.png" alt="alt text"></p>
