@@ -1317,6 +1317,99 @@ print(querSumme(n_lst,result))
     
     <span class="hljs-keyword">return</span> (n % <span class="hljs-number">10</span>) + quersumme(n // <span class="hljs-number">10</span>)
 </div></code></pre>
+<h1 id="klassen"><strong>Klassen</strong></h1>
+<p><img src="image-24.png" alt="alt text"></p>
+<h2 id="uwie-kann-ich-instanzen-besch%C3%BCtzen-u"><u>Wie kann ich Instanzen beschützen ?</u>:</h2>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> ...<span class="hljs-params">()</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, farbe)</span>:</span>
+        self._farbe = farbe
+</div></code></pre>
+<ul>
+<li>man kann es jetzt v. Draußen $\lnot$ anfassen oder verändern !</li>
+</ul>
+<h2 id="uarten-veigenst%C3%A4ndigen-funktionenu"><u>Arten v.eigenständigen Funktionen</u>:</h2>
+<ul>
+<li><u>Instanzfunktionen</u> $\to$ <code>self.</code>:
+<ul>
+<li>gehört zum Objekt, aber $\lnot$ zur Klasse:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mach_etwas</span><span class="hljs-params">(self, ...)</span>:</span>
+    <span class="hljs-keyword">pass</span>
+</div></code></pre>
+</li>
+<li><u>statische Funktionen</u> $\to$ <code>@staticmethod</code>:
+<ul>
+<li>kein bezug auf Klasse</li>
+<li>d. genau d. Gleiche wie d. <span style="color: rgb(56, 177, 96);">funktionale Programmierung</span>, aber halt nur in der Klasse</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">@staticmethod</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mach_etwas</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">pass</span>
+</div></code></pre>
+</li>
+<li><u>Klassenfunktionen</u> $\to$ <code>classmethod</code>:<pre class="hljs"><code><div><span class="hljs-meta">@classmethod</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mach_etwas</span><span class="hljs-params">(cls)</span>:</span>
+    <span class="hljs-keyword">pass</span>
+</div></code></pre>
+</li>
+</ul>
+<h2 id="ureihenfolge-der-ausfu"><u>Reihenfolge der Ausf.</u>:</h2>
+<ol>
+<li>Built-in-Funktionen (<code>__&lt;etw.&gt;__</code>)</li>
+<li>statische Funktionen (<code>&lt;parameter&gt;</code>)</li>
+<li>Instanzfunktionen (<code>self</code>)</li>
+<li>Klassenfunktionen (<code>cls</code>)</li>
+</ol>
+<h2 id="uwas-ist-polymorphismus-u"><u>Was ist Polymorphismus ?</u>:</h2>
+<ul>
+<li>Operationen $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{funktionieren}}\ \ \ \ }$ vers. Datentypen</li>
+<li>Operationen/Funktionen = Gleicher Name $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{aber}}\ \ \ \ }$ unterschiedl. Funktionalität</li>
+</ul>
+<h2 id="uwas-ist-polymorphismus-u"><u>Was ist Polymorphismus ?</u>:</h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">from</span> abc <span class="hljs-keyword">import</span> ABC, abstractmethod
+
+<span class="hljs-comment"># Das hier ist das Interface (der Bauplan)</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tier</span><span class="hljs-params">(ABC)</span>:</span>
+    
+<span class="hljs-meta">    @abstractmethod</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">laut_geben</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">pass</span>  <span class="hljs-comment"># Hier passiert NICHTS. Nur der Name ist wichtig.</span>
+
+<span class="hljs-meta">    @abstractmethod</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bewegen</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">pass</span>
+
+<span class="hljs-comment"># --- Die Umsetzung (Implementierung) ---</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hund</span><span class="hljs-params">(Tier)</span>:</span>
+    <span class="hljs-comment"># Der Hund MUSS 'laut_geben' und 'bewegen' haben, </span>
+    <span class="hljs-comment"># sonst wirft Python einen Fehler!</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">laut_geben</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Wuff!"</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bewegen</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Der Hund rennt."</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Fisch</span><span class="hljs-params">(Tier)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">laut_geben</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Blub..."</span>
+    
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bewegen</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Der Fisch schwimmt."</span>
+</div></code></pre>
+<h2 id="ukontrolle-v-objekten-auch-mit-vererbungu"><u>Kontrolle v. Objekten (auch mit Vererbung)</u>:</h2>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tier</span>:</span>
+    <span class="hljs-keyword">pass</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hund</span><span class="hljs-params">(Tier)</span>:</span>
+    <span class="hljs-keyword">pass</span>
+
+bello = Hund()
+
+<span class="hljs-comment"># Der Unterschied:</span>
+print(type(bello) == Tier)        <span class="hljs-comment"># False (Zu streng!)</span>
+print(isinstance(bello, Tier))    <span class="hljs-comment"># True (Richtig! Ein Hund IST ein Tier.)</span>
+</div></code></pre>
 <h1 id="dreiecke"><strong>Dreiecke</strong></h1>
 <h2 id="u1-fl%C3%A4che-deines-dreiecks-begrenzenu"><u>1) Fläche deines Dreiecks begrenzen</u>:</h2>
 <ul>
@@ -2787,16 +2880,16 @@ matrix = [
     [<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>]
 ],
 [
-	[<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
-	[<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
-	[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>],
-	[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
-	[<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
-	[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>],
-	[<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>],
-	[<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
-	[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>],
-	[<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]
+    [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
+    [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
+    [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>],
+    [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+    [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
+    [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>],
+    [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>],
+    [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
+    [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>],
+    [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]
 ],
     [
     [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>], 
@@ -2829,6 +2922,107 @@ ergebnis = [<span class="hljs-number">6</span>, <span class="hljs-number">22</sp
 
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>,<span class="hljs-number">4</span>):
     print(laengster_pfad(matrix[i], start_ziel[i][<span class="hljs-number">0</span>], start_ziel[i][<span class="hljs-number">1</span>]))
+</div></code></pre>
+<h1 id="klassen">Klassen</h1>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Pizza</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name)</span>:</span>
+        self.name = name
+        self.ist_gebacken = <span class="hljs-literal">False</span>
+        <span class="hljs-comment"># Wir nutzen ein Set für schnelle Suche (besser als Tupel für .count)</span>
+        self.moegliche_zutaten = {<span class="hljs-string">"tomaten"</span>, <span class="hljs-string">"käse"</span>, <span class="hljs-string">"salami"</span>, <span class="hljs-string">"ananas"</span>} 
+        self.belag = set()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">backen</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-comment"># Die Klasse schützt sich selbst: Wenn schon gebacken, Fehler melden.</span>
+        <span class="hljs-keyword">if</span> self.ist_gebacken:
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+        
+        <span class="hljs-comment"># Wenn alles ok: Zustand ändern</span>
+        self.ist_gebacken = <span class="hljs-literal">True</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">belegen</span><span class="hljs-params">(self, neue_zutaten_liste)</span>:</span>
+        <span class="hljs-comment"># 1. Check: Ist sie schon gebacken? (Türsteher 1)</span>
+        <span class="hljs-keyword">if</span> self.ist_gebacken:
+            print(<span class="hljs-string">"Fehler: Pizza ist schon gebacken!"</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+
+        <span class="hljs-comment"># 2. Check: Sind alle Zutaten erlaubt? (Türsteher 2)</span>
+        <span class="hljs-keyword">for</span> zutat <span class="hljs-keyword">in</span> neue_zutaten_liste:
+            <span class="hljs-keyword">if</span> zutat <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> self.moegliche_zutaten:
+                print(<span class="hljs-string">f"Fehler: Wir haben kein <span class="hljs-subst">{zutat}</span>!"</span>)
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+
+        <span class="hljs-comment"># 3. Aktion: Erst wenn alle Checks durch sind, hinzufügen!</span>
+        <span class="hljs-keyword">for</span> zutat <span class="hljs-keyword">in</span> neue_zutaten_liste:
+            self.belag.add(zutat)
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+
+<span class="hljs-comment"># --- Vererbung ---</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ItalienischePizza</span><span class="hljs-params">(Pizza)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name)</span>:</span>
+        super().__init__(name)
+        self.wurde_gewirbelt = <span class="hljs-literal">False</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wirbeln</span><span class="hljs-params">(self)</span>:</span>
+        self.wurde_gewirbelt = <span class="hljs-literal">True</span>
+        print(<span class="hljs-string">"Der Teig fliegt durch die Luft! 🌪️"</span>)
+
+    <span class="hljs-comment"># Wir ÜBERSCHREIBEN die Backen-Methode</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">backen</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-comment"># Zusätzlicher Check für die Italiener</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.wurde_gewirbelt:
+            print(<span class="hljs-string">"Mamma Mia! Erst wirbeln!"</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+        
+        <span class="hljs-comment"># Wenn gewirbelt wurde, macht die Mutterklasse den Rest (Zustand auf True setzen)</span>
+        <span class="hljs-keyword">return</span> super().backen()
+
+    <span class="hljs-comment"># Wir ÜBERSCHREIBEN Belegen wegen Ananas</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">belegen</span><span class="hljs-params">(self, neue_zutaten_liste)</span>:</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-string">"ananas"</span> <span class="hljs-keyword">in</span> neue_zutaten_liste:
+            print(<span class="hljs-string">"Sakrileg! Keine Ananas auf italienische Pizza! 🚫🍍"</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+        
+        <span class="hljs-comment"># Wenn keine Ananas dabei ist, macht die Mutterklasse den Rest</span>
+        <span class="hljs-keyword">return</span> super().belegen(neue_zutaten_liste)
+
+<span class="hljs-comment"># --- Hauptprogramm (Das "Menü") ---</span>
+<span class="hljs-comment"># Merkregel: Das Menü soll nur Eingaben an die Methoden weiterreichen.</span>
+<span class="hljs-comment"># Es soll NICHT selbst prüfen ("if pizza.zustand == True").</span>
+
+meine_pizza = ItalienischePizza(<span class="hljs-string">"Luigi Speciale"</span>)
+
+<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+    eingabe = input(<span class="hljs-string">"\n(b)elegen, (w)irbeln, (o)fen/backen, (z)eigen, (e)nde: "</span>).lower()
+
+    <span class="hljs-keyword">if</span> eingabe == <span class="hljs-string">"e"</span>:
+        <span class="hljs-keyword">break</span>
+    
+    <span class="hljs-keyword">elif</span> eingabe == <span class="hljs-string">"b"</span>:
+        zutaten_input = input(<span class="hljs-string">"Zutaten (mit Komma getrennt): "</span>).lower().split(<span class="hljs-string">","</span>)
+        <span class="hljs-comment"># Trick: Liste bereinigen (Leerzeichen entfernen)</span>
+        zutaten_sauber = [z.strip() <span class="hljs-keyword">for</span> z <span class="hljs-keyword">in</span> zutaten_input]
+        
+        <span class="hljs-comment"># Wir rufen nur auf. Die Methode printet selbst Fehlermeldungen!</span>
+        <span class="hljs-keyword">if</span> meine_pizza.belegen(zutaten_sauber):
+            print(<span class="hljs-string">"Erfolgreich belegt!"</span>)
+
+    <span class="hljs-keyword">elif</span> eingabe == <span class="hljs-string">"w"</span>:
+        meine_pizza.wirbeln()
+
+    <span class="hljs-keyword">elif</span> eingabe == <span class="hljs-string">"o"</span>: <span class="hljs-comment"># Ofen</span>
+        <span class="hljs-comment"># Hier rufen wir einfach backen() auf.</span>
+        <span class="hljs-comment"># Ob es klappt (wegen Wirbeln oder weil schon gebacken), entscheidet die Klasse!</span>
+        <span class="hljs-keyword">if</span> meine_pizza.backen():
+            print(<span class="hljs-string">"Pizza ist fertig gebacken! 🍕🔥"</span>)
+        <span class="hljs-keyword">else</span>:
+            print(<span class="hljs-string">"Backen hat nicht geklappt (siehe Fehler oben)."</span>)
+
+    <span class="hljs-keyword">elif</span> eingabe == <span class="hljs-string">"z"</span>:
+        print(<span class="hljs-string">f"Pizza: <span class="hljs-subst">{meine_pizza.name}</span>"</span>)
+        print(<span class="hljs-string">f"Belag: <span class="hljs-subst">{meine_pizza.belag}</span>"</span>)
+        print(<span class="hljs-string">f"Zustand: <span class="hljs-subst">{<span class="hljs-string">'Gebacken'</span> <span class="hljs-keyword">if</span> meine_pizza.ist_gebacken <span class="hljs-keyword">else</span> <span class="hljs-string">'Roh'</span>}</span>"</span>)
 </div></code></pre>
 <p><a id="Altklausuren"></a></p>
 <h1 id="altklausuren"><strong>Altklausuren</strong></h1>
