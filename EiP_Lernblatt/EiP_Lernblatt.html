@@ -3489,8 +3489,7 @@ print(<span class="hljs-string">f"Benötigte Tausche: <span class="hljs-subst">{
                 str1[idx], str1[i] = str1[i], str1[idx]
                 
                 <span class="hljs-comment"># RECURSE: Kosten berechnen (1 für hier + Rest)</span>
-                rest = tatsächtlicher_tausch(str1, str2, idx + <span class="hljs-number">1</span>)
-                aktuelle_kosten = <span class="hljs-number">1</span> + rest
+                aktuelle_kosten = <span class="hljs-number">1</span> + tatsächtlicher_tausch(str1, str2, idx + <span class="hljs-number">1</span>)
                 
                 <span class="hljs-comment"># Minimum aktualisieren</span>
                 <span class="hljs-keyword">if</span> aktuelle_kosten &lt; min_kosten:
@@ -3506,6 +3505,21 @@ print(<span class="hljs-string">f"Benötigte Tausche: <span class="hljs-subst">{
 <span class="hljs-comment"># Test</span>
 print(anagramm_swaps(<span class="hljs-string">"Regel"</span>, <span class="hljs-string">"Lager"</span>)) <span class="hljs-comment"># Sollte 2 ergeben</span>
 </div></code></pre>
+<ul>
+<li>D. Addition passiert bei <code>aktuelle_kosten = 1 + tatsächtlicher_tausch(str1, str2, idx + 1)</code>
+<ul>
+<li>D hat d. gleiche Logik wie:<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">quersumme</span><span class="hljs-params">(n:str)</span>-&gt;int:</span>
+
+    <span class="hljs-keyword">if</span> len(n) == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+    <span class="hljs-keyword">return</span> int(n[<span class="hljs-number">0</span>]) + quersumme(n[<span class="hljs-number">1</span>:])
+
+print(quersumme(<span class="hljs-string">"1501"</span>))
+</div></code></pre>
+</li>
+</ul>
+</li>
+</ul>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>
