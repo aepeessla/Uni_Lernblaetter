@@ -3394,6 +3394,72 @@ print(Schwerkraft.ball_anzahl)
 <h1 id="altklausuren"><strong>Altklausuren</strong></h1>
 <h2 id="ureserwierte-key-w%C3%B6rteru"><u>Reserwierte Key Wörter</u>:</h2>
 <p>False, None, True, and, as, assert, async, await, break, class, continue, def, del, elif, else, except, finally, for, from, global, if, import, in, is, lambda, nonlocal, not, or, pass, raise, return, try, while, with, yield</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> math
+
+<span class="hljs-comment"># Teil a) Hilfsfunktion (hattest du ja schon)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_anagram</span><span class="hljs-params">(str1: str, str2: str)</span> -&gt; bool:</span>
+    <span class="hljs-keyword">return</span> sorted(str1) == sorted(str2)
+
+<span class="hljs-comment"># Teil b) Die Backtracking-Lösung</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">anagram_swaps</span><span class="hljs-params">(str1: str, str2: str)</span> -&gt; int | float:</span>
+    <span class="hljs-comment"># 1. BOSS-CHECK: Sind es überhaupt Anagramme?</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> is_anagram(str1, str2):
+        <span class="hljs-keyword">return</span> math.inf
+    
+    <span class="hljs-comment"># Wir wandeln Strings in Listen um, damit wir tauschen können</span>
+    s1_list = list(str1)
+    s2_list = list(str2)
+    
+    <span class="hljs-comment"># Wir starten den ersten Forscher bei Index 0</span>
+    <span class="hljs-keyword">return</span> solve_recursive(s1_list, s2_list, <span class="hljs-number">0</span>)
+
+<span class="hljs-comment"># --- DER FORSCHER (Die Truppe) ---</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">solve_recursive</span><span class="hljs-params">(current: list[str], target: list[str], index: int)</span> -&gt; int:</span>
+    <span class="hljs-comment"># BASE CASE: Sind wir am Ende des Wortes angekommen?</span>
+    <span class="hljs-keyword">if</span> index == len(current):
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> <span class="hljs-comment"># 0 Tausche nötig, wir sind fertig.</span>
+
+    <span class="hljs-comment"># OPTIMIERUNG: Ist der Buchstabe hier schon richtig?</span>
+    <span class="hljs-keyword">if</span> current[index] == target[index]:
+        <span class="hljs-comment"># Dann mach gar nichts und lös einfach den Rest ab index+1</span>
+        <span class="hljs-keyword">return</span> solve_recursive(current, target, index + <span class="hljs-number">1</span>)
+
+    <span class="hljs-comment"># WENN FALSCH: Wir müssen tauschen!</span>
+    <span class="hljs-comment"># Welchen Buchstaben brauchen wir hier unbedingt?</span>
+    wunsch_buchstabe = target[index]
+    
+    min_rest_swaps = math.inf
+
+    <span class="hljs-comment"># Suche im Rest des Wortes (ab index + 1) nach dem Wunsch-Buchstaben</span>
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(index + <span class="hljs-number">1</span>, len(current)):
+        
+        <span class="hljs-keyword">if</span> current[j] == wunsch_buchstabe:
+            <span class="hljs-comment"># GEFUNDEN! Wir probieren diesen Tausch aus.</span>
+            
+            <span class="hljs-comment"># 1. Tauschen (Hole Buchstaben nach vorne)</span>
+            current[index], current[j] = current[j], current[index]
+            
+            <span class="hljs-comment"># 2. Rekursion (Truppe losschicken für den Rest)</span>
+            res = solve_recursive(current, target, index + <span class="hljs-number">1</span>)
+            
+            <span class="hljs-comment"># 3. Ergebnis auswerten</span>
+            <span class="hljs-comment"># Gesamtkosten = 1 (mein Tausch) + Rest</span>
+            <span class="hljs-keyword">if</span> <span class="hljs-number">1</span> + res &lt; min_rest_swaps:
+                min_rest_swaps = <span class="hljs-number">1</span> + res
+            
+            <span class="hljs-comment"># 4. AUFRÄUMEN (Backtracking) - WICHTIG!</span>
+            <span class="hljs-comment"># Tausch rückgängig machen für den nächsten Schleifendurchlauf</span>
+            current[index], current[j] = current[j], current[index]
+
+    <span class="hljs-keyword">return</span> min_rest_swaps
+
+<span class="hljs-comment"># --- TESTEN ---</span>
+wort1 = <span class="hljs-string">"tset"</span> <span class="hljs-comment"># soll zu "test" werden</span>
+wort2 = <span class="hljs-string">"test"</span>
+
+print(<span class="hljs-string">f"Benötigte Tausche: <span class="hljs-subst">{anagram_swaps(wort1, wort2)}</span>"</span>)
+<span class="hljs-comment"># Erwartung: tset -&gt; test (das 'e' von hinten nach vorne holen) = 1 Tausch</span>
+</div></code></pre>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>
