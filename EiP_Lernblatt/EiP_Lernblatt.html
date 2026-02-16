@@ -3460,6 +3460,52 @@ wort2 = <span class="hljs-string">"test"</span>
 print(<span class="hljs-string">f"Benötigte Tausche: <span class="hljs-subst">{anagram_swaps(wort1, wort2)}</span>"</span>)
 <span class="hljs-comment"># Erwartung: tset -&gt; test (das 'e' von hinten nach vorne holen) = 1 Tausch</span>
 </div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">anagramm_swaps</span><span class="hljs-params">(str1, str2)</span>:</span>
+    <span class="hljs-comment"># Listen erstellen</span>
+    str1 = [i.lower() <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> str1]
+    str2 = [i.lower() <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> str2]
+    
+    <span class="hljs-comment"># Vorab-Check (optional, aber gut für Performance):</span>
+    <span class="hljs-keyword">if</span> sorted(str1) != sorted(str2):
+        <span class="hljs-keyword">return</span> float(<span class="hljs-string">'inf'</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">tats</span>ä<span class="hljs-title">chtlicher_tausch</span><span class="hljs-params">(str1, str2, idx)</span>:</span>
+        <span class="hljs-comment"># 1. Abbruchbedingung: Ende erreicht</span>
+        <span class="hljs-keyword">if</span> idx == len(str2):
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+        
+        <span class="hljs-comment"># 2. Fall "Match": Buchstabe stimmt schon</span>
+        <span class="hljs-keyword">if</span> str1[idx] == str2[idx]:
+            <span class="hljs-comment"># WICHTIG: Nicht 0 zurückgeben, sondern weitermachen!</span>
+            <span class="hljs-keyword">return</span> tatsächtlicher_tausch(str1, str2, idx + <span class="hljs-number">1</span>)
+        
+        <span class="hljs-comment"># 3. Fall "Tausch nötig": Lokales Minimum suchen</span>
+        min_kosten = float(<span class="hljs-string">'inf'</span>)
+
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(idx + <span class="hljs-number">1</span>, len(str1)):
+            <span class="hljs-comment"># Wir suchen einen passenden Partner</span>
+            <span class="hljs-keyword">if</span> str1[i] == str2[idx]:
+                <span class="hljs-comment"># DO: Tauschen</span>
+                str1[idx], str1[i] = str1[i], str1[idx]
+                
+                <span class="hljs-comment"># RECURSE: Kosten berechnen (1 für hier + Rest)</span>
+                rest = tatsächtlicher_tausch(str1, str2, idx + <span class="hljs-number">1</span>)
+                aktuelle_kosten = <span class="hljs-number">1</span> + rest
+                
+                <span class="hljs-comment"># Minimum aktualisieren</span>
+                <span class="hljs-keyword">if</span> aktuelle_kosten &lt; min_kosten:
+                    min_kosten = aktuelle_kosten
+                
+                <span class="hljs-comment"># UNDO: Zurücktauschen</span>
+                str1[idx], str1[i] = str1[i], str1[idx]
+        
+        <span class="hljs-keyword">return</span> min_kosten
+
+    <span class="hljs-keyword">return</span> tatsächtlicher_tausch(str1, str2, <span class="hljs-number">0</span>)
+
+<span class="hljs-comment"># Test</span>
+print(anagramm_swaps(<span class="hljs-string">"Regel"</span>, <span class="hljs-string">"Lager"</span>)) <span class="hljs-comment"># Sollte 2 ergeben</span>
+</div></code></pre>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>
