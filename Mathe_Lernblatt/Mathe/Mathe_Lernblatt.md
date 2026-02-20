@@ -9,14 +9,6 @@
   ul ul ul { list-style-type: "→ "; }
 </style>
 
-<style>
-  img {
-    width: 1000px;  /* Hier deine gewünschte Breite eintragen */
-    height: auto;  /* Behält das Seitenverhältnis bei, damit nichts verzerrt wird */
-    display: block;
-    margin: 10px 0; /* Sorgt für etwas Abstand nach oben und unten */
-  }
-</style>
 
 
 # Stetigkeit:
