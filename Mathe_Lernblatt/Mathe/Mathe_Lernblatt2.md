@@ -28,6 +28,8 @@
 
 **3) Fall**: $y = x^2 \ \lor x = y^2$
 
+* man kann auch `Sandwitch-Lemma` anw. 
+
 
 
 
