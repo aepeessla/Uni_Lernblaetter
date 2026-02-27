@@ -602,7 +602,7 @@ $$\int_{a}^{b} f(x) \,dx = - \int_{b}^{a} f(x) \,dx$$
 ## <u>Kettenlinie</u>
 ### **Fläche**:
 
-$$\int_{a}^{b} y(t) \cdot x(t) \,dt$$
+$$\int_{a}^{b} y(t) \cdot \dot{x}(t) \,dt$$
 
 ### **Bogenlänge**:
 $$||\dot{c}|| = \int_{a}^{b} \sqrt{(x(t))^2 + (y(t))^2} \,dt$$
