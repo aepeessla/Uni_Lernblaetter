@@ -604,6 +604,9 @@ $$\int_{a}^{b} f(x) \,dx = - \int_{b}^{a} f(x) \,dx$$
 
 $$\int_{a}^{b} y(t) \cdot \dot{x}(t) \,dt$$
 
+### **Geschwindigkeitsvektor**:
+$$c(t) = \begin{pmatrix} x(t) \\ y(t) \end{pmatrix} \implies \mathbf{\dot{c}(t) = \begin{pmatrix} \dot{x}(t) \\ \dot{y}(t) \end{pmatrix} = \begin{pmatrix} \frac{d}{dt} x(t)\\ \frac{d}{dt} y(t) \end{pmatrix}}$$
+
 ### **Bogenlänge**:
 $$||\dot{c}|| = \int_{a}^{b} \sqrt{(x(t))^2 + (y(t))^2} \,dt$$
 
