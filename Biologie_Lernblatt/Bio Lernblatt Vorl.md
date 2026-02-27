@@ -10,7 +10,7 @@
 </style>
 
 
-# **DNA POl bei Eukaryoten**
+# **DNA POL bei Eukaryoten**
 
 ![alt text](image-43.png)
 
