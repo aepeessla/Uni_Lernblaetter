@@ -116,19 +116,31 @@
 
 # **DNA-Amplifikation**
 
+## <u>**Wie und warum kommt es zur gezielten DNA-Amplifikation in Eukaryoten?**</u>
+
+* Physiologisch $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nutzt}}\ \ \ \ }$ selektive Über-Replikation definierter Genom-Abschnitte $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Zweck}}\ \ \ \ }$ Erhöhung der Gendosis für starke Proteinproduktion (z.B. rRNA-Gene in Amphibien-Oocyten)
+* Pathologisch $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{passiert bei}}\ \ \ \ }$Mutationsereignissen in Krebszellen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Folge}}\ \ \ \ }$ Amplifikation von Onkogenen (sichtbar als HSR oder "Double Minutes")
+
+## <u>**Was sind Onkogene?**</u>
+* natürl. Gene, d wachstumsfördernd sind
+    * geben Zelle d. Signal zur Teilung
+
+## <u>**Wie stoppen Medikamente wie Acyclovir oder AZT die Virusvermehrung?**</u>
+
+* Medikament $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{besteht aus}}\ \ \ \ }$ Nukleotidanaloga (<span style="font-family: script MT">synthetische Arzneistoffe, d. natürl. Bausteinen von DNA/RNA ähneln, aber modifiziert sind</span>) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{eingebaut durch}}\ \ \ \ }$ virale Polymerasen / Reverse Transkriptase (z.B. AZT bei HIV) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Folge}}\ \ \ \ }$ Kettenabbruch bei viraler Replikation
+
+## <u>**Wie wird der Übergang zwischen den verschiedenen Zellzyklus-Phasen gesteuert?**</u>
+
+* Zellzyklus $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{kontrolle durch}}\ \ \ \ }$ CDK-Cyclin-Komplexe
+* Komplex-Aufbau $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{besteht aus}}\ \ \ \ }$ Cyclin (regulatorisches Protein) + CDK (cyclinabhängige Kinase)
+* Mechanismus $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{aktiver Komplex}}\ \ \ \ }$ phosphoryliert Zielproteine $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Ergebnis}}\ \ \ \ }$ Auslösung des nächsten Zellzyklus-Schritts (z.B. Eintritt in die S-Phase)
+
+## <u>**Wie verhindert der "Wächter des Genoms" (p53) die Replikation von defekter DNA?**</u>
+
+* DNA-Schaden $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{führt zur}}\ \ \ \ }$ Aktivierung von p53 $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{aktives p35}}\ \ \ \ }$ bindet an Regulationsbereich des p21-Gens $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Zelle prod.}}\ \ \ \ }$ p21 (ein Cdk-Inhibitorprotein) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{p21 blockiert}}\ \ \ \ }$ den Cyclin-Cdk-Komplex der S-Phase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Ergebnis}}\ \ \ \ }$ Eintritt in S-Phase wird verhindert
 
 
-
-
-
-
-
-
-
-
-
-
-
+* <span style="color: #fc0303; font-family: Courier New">Kinasen aktiviert & Inhibitoren blockieren</span>
 
 
 
