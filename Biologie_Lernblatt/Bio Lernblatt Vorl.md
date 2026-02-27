@@ -1,13 +1,27 @@
-<style>
-  /* 1. Ebene: Punkt */
-  ul { list-style-type: disc; } 
-
-  /* 2. Ebene: Pfeil rechts */
-  ul ul { list-style-type: "→ "; }
-
-  /* 3. Ebene: Pfeil rechts (identisch zur 2. Ebene) */
-  ul ul ul { list-style-type: "→ "; }
-</style>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 900px; margin: auto; }
+        /* Listen-Styling */
+        ul { list-style-type: disc; } 
+        ul ul { list-style-type: "→ "; padding-left: 20px; }
+        ul ul ul { list-style-type: "→ "; }
+        
+        /* Highlight-Boxen für die Pfeile im Text */
+        span.arrow-box {
+            color: #d6b315;
+            font-weight: bold;
+            padding: 0 5px;
+        }
+        img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body>
+   </body>
+</html>
 
 
 # **DNA POl bei Eukaryoten**
