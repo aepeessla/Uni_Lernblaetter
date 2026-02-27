@@ -69,7 +69,7 @@
 * an den Enden $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{hinzugef.}}\ \ \ \ }$ Telomere $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{durch}}\ \ \ \ }$ Telomerasen $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{Grund}}\ \ \ \ }$ Verlustvermeidung
 
 * Telomere $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{bestehen}}\ \ \ \ }$ simplen, tandem-repetitiven Seq.
-    * Bsp. bei Mensch: (TTAGGG)_{n = ca. 2000}
+    * Bsp. bei Mensch: $(TTAGGG)_{n = ca. 2000}$
 
 ![alt text](image-47.png)
 
