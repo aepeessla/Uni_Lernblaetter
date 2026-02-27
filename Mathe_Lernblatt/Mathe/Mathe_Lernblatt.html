@@ -1185,13 +1185,13 @@ $$= 2(\sin(\pi x)) \cdot \cos(\pi x) \cdot \pi \iff \overbrace{2 \pi}^{\text{Ide
 <img src="image-1.png" alt="alt text"></p>
 <ul>
 <li>
-<p><strong>Symmetrie</strong>: $4\int_{\frac{t}{4}}^{\frac{t}{4}} \dots$</p>
+<p><strong>Symmetrie</strong>: $2\int_{0}^{b} \dots$</p>
 </li>
 <li>
-<p><strong>Fläche</strong>: $\int_{a}^{b} y(x) \cdot x'(t) ,dt$</p>
+<p><strong>Fläche</strong>: $\int_{a}^{b} y(x) \cdot \dot{x}(t) ,dt$</p>
 </li>
 <li>
-<p><strong>Länge</strong>: $$\int_{a}^{b} \sqrt{(y'(t))^2+(x'(t))^2}$$</p>
+<p><strong>Länge</strong>: $$\int_{a}^{b} \sqrt{(\dot{y}(t))^2+(\dot{x}(t))^2}$$</p>
 </li>
 </ul>
 </li>
@@ -1203,7 +1203,7 @@ $$= 2(\sin(\pi x)) \cdot \cos(\pi x) \cdot \pi \iff \overbrace{2 \pi}^{\text{Ide
 <p><strong>Symmetrie</strong>: $4\int_{\frac{t}{4}}^{\frac{t}{4}} \dots$</p>
 </li>
 <li>
-<p><strong>Fläche</strong>: $\int_{a}^{b} y(x) \cdot x'(t) ,dt$ für $t \in$ {I. Quadrant}</p>
+<p><strong>Fläche</strong>: $\int_{a}^{b} y(x) \cdot \dot{x}(t) ,dt$ für $t \in$ {I. Quadrant}</p>
 </li>
 <li>
 <p><strong>Länge</strong>: $$\int_{a}^{b} \sqrt{(y'(t))^2+(x'(t))^2}$$</p>
@@ -1214,8 +1214,10 @@ $$= 2(\sin(\pi x)) \cdot \cos(\pi x) \cdot \pi \iff \overbrace{2 \pi}^{\text{Ide
 <p><strong>Kreisvolvente</strong>:
 <img src="image-3.png" alt="alt text"></p>
 <ul>
-<li><strong>Kanonosche Parapetisierung</strong>: Bogenlänge($s(t)$) $= \left(||\dot{c}(t)|| \right) \to t(s)$</li>
+<li>In der Klausur gegeben:</li>
 </ul>
+<p>$$c(t) = \begin{pmatrix} x(t) \ y(t) \end{pmatrix} = \begin{pmatrix} r(\cos t + t \sin t) \ r(\sin t - t \cos t) \end{pmatrix}$$</p>
+<p>$$\dot{c}(t) = \begin{pmatrix} \dot{x}(t) \ \dot{y}(t) \end{pmatrix} = \begin{pmatrix} \frac{d}{dt} x(t)\ \frac{d}{dt} y(t) \end{pmatrix}$$</p>
 </li>
 </ul>
 <hr>
@@ -1223,6 +1225,7 @@ $$= 2(\sin(\pi x)) \cdot \cos(\pi x) \cdot \pi \iff \overbrace{2 \pi}^{\text{Ide
 <li>
 <p><strong>Vierblattrose</strong>:
 <img src="image-4.png" alt="alt text"></p>
+<p>$$c(t) = \begin{pmatrix} x(t) \ y(t) \end{pmatrix} = \begin{pmatrix} a \cos(2t) \cos(t) \ a \cos(2t) \sin(t) \end{pmatrix}$$</p>
 <ul>
 <li>
 <p><strong>Symmetrie</strong>: $4\int_{\frac{t}{4}}^{\frac{t}{4}} \dots$</p>
@@ -1249,7 +1252,7 @@ $$= 2(\sin(\pi x)) \cdot \cos(\pi x) \cdot \pi \iff \overbrace{2 \pi}^{\text{Ide
 <p><img src="image-6.png" alt="alt text"></p>
 <ul>
 <li>
-<p><strong>Länge</strong>: $$\int_{a}^{b} \sqrt{(y'(t))^2+(x'(t))^2}$$</p>
+<p><strong>Länge</strong>: $$\int_{a}^{b} \sqrt{(\dot{y}(t))^2+(\dot{x}(t))^2}$$</p>
 </li>
 <li>
 <p><strong>Parametisieren</strong>: $$s(t) \to t(s)$$</p>
