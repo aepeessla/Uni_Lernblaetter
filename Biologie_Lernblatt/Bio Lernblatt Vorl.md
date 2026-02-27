@@ -69,7 +69,7 @@
 * an den Enden $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{hinzugef.}}\ \ \ \ }$ Telomere $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{durch}}\ \ \ \ }$ Telomerasen $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{Grund}}\ \ \ \ }$ Verlustvermeidung
 
 * Telomere $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{bestehen}}\ \ \ \ }$ simplen, tandem-repetitiven Seq.
-    * Bsp. bei Mensch: $(TTAGGG)_{n = ca. 2000}$
+    * Bsp. bei Mensch: $\color{red}(TTAGGG)_{n = ca. 2000}$
 
 ![alt text](image-47.png)
 
@@ -77,8 +77,9 @@
 # **Telomerase**
 
 ## **<u>Das End-Replikationsproblem</u>**
-* <u>Was ist das grundlegende Problem bei der Replikation linearer Chromosomen?</u>
-    * lineare Chromosomen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Problem}}\ \ \ \ }$ Primerentf. am Folgestrang $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Folge}}\ \ \ \ }$ Chromosomen verkürzen sich bei jeder Replikation
+<u>Was ist das grundlegende Problem bei der Replikation linearer Chromosomen?</u>
+
+* lineare Chromosomen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Problem}}\ \ \ \ }$ Primerentf. am Folgestrang $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Folge}}\ \ \ \ }$ Chromosomen verkürzen sich bei jeder Replikation
 
 ## <u>**Was ist d. Lösung ?**</u>
 
@@ -86,25 +87,25 @@
 
 ## <u>**Was ist die Telomerase & wie funktioniert sie biochemisch?**</u>
 
-* Telomerase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ist ein}}\ \ \ \ }$  Ribonukleoprotein $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{besteht aus}}\ \ \ \ }$  Protein (TERT) + RNA-Anteil (TERC)
-* Enzym-Klasse $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{wirkt als}}\ \ \ \ }$  Reverse Transkriptase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nutzt}}\ \ \ \ }$  eigene RNA (TERC) als Matrize für DNA-Synthese
-* Arbeitsweise $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{verlängert aktiv}}\ \ \ \ }$  den 3'-Überhang (Matrizenstrang) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{danach}}\ \ \ \ }$  Primase & DNA-Polymerase füllen den Folgestrang auf
+* Telomerase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ist ein}}\ \ \ \ }$  <span style="color: #fc0303;">Ribonukleoprotein</span> $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{besteht aus}}\ \ \ \ }$  Protein ($TERT$) + RNA-Anteil ($TERC$)
+* Enzym-Klasse $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{wirkt als}}\ \ \ \ }$  **Reverse Transkriptase** $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nutzt}}\ \ \ \ }$  eigene RNA ($TERC$) als Matrize f. DNA-Synthese
+* Arbeitsweise: Telomerase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{verlängert aktiv}}\ \ \ \ }$  den 3'-Überhang (Matrizenstrang) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{danach}}\ \ \ \ }$  Primase & DNA-Polymerase füllen den Folgestrang auf
 
 ## <u>**Wie schützt die Zelle ihre offenen DNA-Enden vor dem Abbau oder falscher Reparatur?**</u>
 
-* Telomer-DNA $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{bildet}}\ \ \ \ }$  T-Loop (Schleife) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Funktion}}\ \ \ \ }$  versteckt das offene Ende & reguliert Telomerase-Aktivität
-* SHELTERIN-Komplex (z.B. TRF1/TRF2) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{bindet an}}\ \ \ \ }$  T-Loop $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Funktion}}\ \ \ \ }$  versiegelt das Ende & schützt vor unbeabsichtigter DNA-Reparatur
+* Telomer-DNA $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{bildet}}\ \ \ \ }$  `T-Loop` (Schleife) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Funktion}}\ \ \ \ }$  versteckt das offene Ende & reguliert Telomerase-Aktivität
+* `SHELTERIN-Komplex` (z.B. $TRF1/TRF2$) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{bindet an}}\ \ \ \ }$  `T-Loop` $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Funktion}}\ \ \ \ }$  versiegelt das Ende & schützt vor unbeabsichtigter DNA-Reparatur
 
 ![alt text](image-50.png)
 
 ## <u>**Wie erkennen Telomerase-Enzyme, wo sie arbeiten müssen?**</u>
 
-* Telomere ➔ produzieren ➔ long non-coding RNA (TERRA)
-* verkürzte Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nutzen}}\ \ \ \ }$  TERRA $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{lockt an}}\ \ \ \ }$  Telomerase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{verhindert}}\ \ \ \ }$  vorzeitige Seneszenz
+* Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{prod.}}\ \ \ \ }$  **long non-coding RNA** ($TERRA$)
+* verkürzte Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nutzen}}\ \ \ \ }$  $TERRA$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{lockt an}}\ \ \ \ }$  `Telomerase` $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{verhindert}}\ \ \ \ }$  vorzeitige Seneszenz
 
 ## <u>**Warum altern unsere Zellen?**</u>
-* Somazellen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{schalten ab}}\ \ \ \ }$  Telomerase (n. d. Geburt) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Folge}}\ \ \ \ }$  Telomere verkürzen sich stetig
-* Kritische Verkürzung $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{führt zu}}\ \ \ \ }$  Teilungsstopp (Hayflick-Limit, ca. 100 Mitosen) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Ergebnis}}\ \ \ \ }$  Zelluläre Seneszenz
+* `Somazellen` $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{schalten ab}}\ \ \ \ }$  `Telomerase` (n. d. Geburt) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Folge}}\ \ \ \ }$  Telomere *verkürzen* sich stetig
+* Kritische Verkürzung $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{führt zu}}\ \ \ \ }$  Teilungsstopp (<b><span style="color: #fc0303;">Hayflick-Limit</span></b>, ca. 100 Mitosen) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Ergebnis}}\ \ \ \ }$  Zelluläre Seneszenz
 
 ## <u>**Welche Zellen altern nicht und warum?**</u>
 
@@ -127,17 +128,17 @@
 
 ## <u>**Wie stoppen Medikamente wie Acyclovir oder AZT die Virusvermehrung?**</u>
 
-* Medikament $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{besteht aus}}\ \ \ \ }$ Nukleotidanaloga (<span style="font-family: script MT">synthetische Arzneistoffe, d. natürl. Bausteinen von DNA/RNA ähneln, aber modifiziert sind</span>) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{eingebaut durch}}\ \ \ \ }$ virale Polymerasen / Reverse Transkriptase (z.B. AZT bei HIV) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Folge}}\ \ \ \ }$ Kettenabbruch bei viraler Replikation
+* Medikament $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{besteht aus}}\ \ \ \ }$ `Nukleotidanaloga` (<span style="font-family: script MT">synthetische Arzneistoffe, d. natürl. Bausteinen von DNA/RNA ähneln, aber modifiziert sind</span>) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{eingebaut durch}}\ \ \ \ }$ virale Polymerasen / Reverse Transkriptase (z.B. $AZT$ bei $HIV$) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Folge}}\ \ \ \ }$ Kettenabbruch bei viraler Replikation
 
 ## <u>**Wie wird der Übergang zwischen den verschiedenen Zellzyklus-Phasen gesteuert?**</u>
 
-* Zellzyklus $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{kontrolle durch}}\ \ \ \ }$ CDK-Cyclin-Komplexe
-* Komplex-Aufbau $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{besteht aus}}\ \ \ \ }$ Cyclin (regulatorisches Protein) + CDK (cyclinabhängige Kinase)
+* Zellzyklus $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{kontrolle durch}}\ \ \ \ }$ `CDK-Cyclin-Komplexe`
+* Komplex-Aufbau $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{besteht aus}}\ \ \ \ }$ `Cyclin` (regulatorisches Protein) + $CDK$ (cyclinabhängige Kinase)
 * Mechanismus $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{aktiver Komplex}}\ \ \ \ }$ phosphoryliert Zielproteine $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Ergebnis}}\ \ \ \ }$ Auslösung des nächsten Zellzyklus-Schritts (z.B. Eintritt in die S-Phase)
 
 ## <u>**Wie verhindert der "Wächter des Genoms" (p53) die Replikation von defekter DNA?**</u>
 
-* DNA-Schaden $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{führt zur}}\ \ \ \ }$ Aktivierung von p53 $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{aktives p35}}\ \ \ \ }$ bindet an Regulationsbereich des p21-Gens $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Zelle prod.}}\ \ \ \ }$ p21 (ein Cdk-Inhibitorprotein) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{p21 blockiert}}\ \ \ \ }$ den Cyclin-Cdk-Komplex der S-Phase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Ergebnis}}\ \ \ \ }$ Eintritt in S-Phase wird verhindert
+* DNA-Schaden $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{führt zur}}\ \ \ \ }$ Aktivierung von **p53** $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{aktives p35}}\ \ \ \ }$ bindet an Regulationsbereich des **p21-Gens** $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Zelle prod.}}\ \ \ \ }$ **p21** (ein Cdk-Inhibitorprotein) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{p21 blockiert}}\ \ \ \ }$ den `Cyclin-Cdk-Komplex` der S-Phase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Ergebnis}}\ \ \ \ }$ Eintritt in S-Phase wird verhindert
 
 
 * <span style="color: #fc0303; font-family: Courier New">Kinasen aktiviert & Inhibitoren blockieren</span>
