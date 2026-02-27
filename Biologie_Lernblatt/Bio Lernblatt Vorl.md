@@ -22,7 +22,7 @@
 * RPA(Replication Protein A) = d. sind d. einzelstrangbindenden Proteine (**ssb-Protein** (Single-Strand Binding Protein)), d. d. Replikationsgabel aufhalten
 * Pol $\epsilon$: $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{synthetisiert}}\ \ \ \ }$ Leitstrang
 * Pol $\delta$: $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{synthetisiert}}\ \ \ \ }$ Folgestrang
-* PCNA $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{gibt Polymeasen}}\ \ \ \ }$ halt
+* PCNA(Proliferating Cell Nuclear Antigen) $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{gibt Polymeasen}}\ \ \ \ }$ halt
 * POL $\alpha$-Primase $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{setzt}}\ \ \ \ }$ Primer
 * FEN1 (Flap Endonuclease) $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{schneidet}}\ \ \ \ }$ Primer am Ende weg
 * DNA-Ligase $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{versiegelt}}\ \ \ \ }$ DNA-Strang
