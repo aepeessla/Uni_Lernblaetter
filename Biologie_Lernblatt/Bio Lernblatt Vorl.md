@@ -129,27 +129,24 @@
 
 # **Was kann geschehen, wenn d. nicht so läuft wie geplant ?**
 
-1) <u>Progerie</u>
-    * <u>Was macht es ?</u>
-        * Kinder $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{altern}}\ \ \ \ }$ schneller
-    * <u>Grund ?</u>
-        * Helikase-Defekt
-    * <u>Was geschieht ?</u>
-        * Replikationsgabel $\lnot$ sauber $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{entstehung}}\ \ \ \ }$ DNA-Brüche
-        * man benötigt Helikase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{entwirren}}\ \ \ \ }$ Telomere
-            * wenn Helikase $\lnot$ richtig funktioniert $\implies$ Telomere verkürzen schneller als normal $=$ schnellere Alterung
+**<u>Progerie</u>**
+* <u>Was macht es ?</u>
+    * Kinder $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{altern}}\ \ \ \ }$ schneller
+* <u>Grund ?</u>
+    * Helikase-Defekt
+* <u>Was geschieht ?</u>
+    * Replikationsgabel $\lnot$ sauber $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{entstehung}}\ \ \ \ }$ DNA-Brüche
+    * man benötigt Helikase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{entwirren}}\ \ \ \ }$ Telomere
+        * wenn Helikase $\lnot$ richtig funktioniert $\implies$ Telomere verkürzen schneller als normal $=$ schnellere Alterung
 
-
-    
-2) <u>Ophtalmoplegia</u>
-    * <u>Was macht es ?</u>
-        * Augenmuskelatur $\implies$ gelähmt
-    * <u>Grund ?</u>
-        * DNA Pol $\gamma$-Defekt
-
-3) <u>**Was genau wird mit Krebs assoziiert ?**</u>
-    * DNA Pol $\gamma$ mut.
-    * erhöhte Expression v. DNA $\beta$
+**<u>Ophtalmoplegia</u>**
+* <u>Was macht es ?</u>
+    * Augenmuskelatur $\implies$ gelähmt $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Grund}}\ \ \ \ }$ Mitochondrien funk. $\lnot$ richtig $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{weil}}\ \ \ \ }$ DNA Pol $\gamma$-Defekt
+* <u>Warum ausgerechnet d. Augenmuskelatur ?</u>
+    * manche Gewebe = Energie-Junkie(benötign viel ATP) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{führt zu}}\ \ \ \ }$ ATP-/Energie-Mangel $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Augenmuskeln}}\ \ \ \ }$ schalten ab $\implies$ Lähmung
+<u>**Was genau wird mit Krebs assoziiert ?**</u>
+* DNA Pol $\gamma$ mut.
+* erhöhte Expression v. DNA $\beta$
 
 # **Wrm. werden Telomere immer kürzer ?**
 
