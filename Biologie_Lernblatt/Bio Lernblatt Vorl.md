@@ -345,7 +345,7 @@ Das Problem ist nur, dass d. `Telomerase` bei `Somazellen` n. d. ***Geburt abges
     * rekombinierte DNA $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{geg.}}\ \ \ \ }$ Organismen
 
 ## <u>**Wrm. ist Gentechnik mögl.?**</u>
-* \forall Organismen = DNA $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Speicher}}\ \ \ \ }$ f. Erbinfo.
+* $\forall$ Organismen = DNA $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Speicher}}\ \ \ \ }$ f. Erbinfo.
 
 ## <u>**Klassisches Züchten**</u>
 Mutter Pferd ($2n = 64$) + Vater Esel ($2n = 62$) = Maultier
@@ -366,6 +366,117 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
     * d. künstl. Erhöhung d. Mutationsrate durch Radiation, um neue eigenschaften zu erzeugen
 
 ![alt text](image-56.png)
+
+# **Restriktionsenzyme**
+
+![alt text](image-57.png)
+
+## <u>**Was machen Restriktionsnukleasen ?**</u>
+* schneiden eindringende fremde DNA in Bakterien
+* Methylierung dient auch hier als Schutz oder Stempel
+
+## <u>**Wie schneiden Restriktionnukleasen d. DNA ?**</u>
+* <span style="color:red">sequenzspezifisch</span> 
+    * $GAATTC$ = palindromisch
+    * hier sind es <span style="color:red">sticky ends</span>
+        * es gibt auch glatte Enden = <span style="color:red">blunt ends</span>
+![alt text](image-58.png)
+
+## <u>**Wann sind 2 Restiktionsenzyme kompartible ?**</u>
+* wenn sie id. ü.hänge hinterlassen
+
+## <u>**Was genau bedeutet hier palindromisch  ?**</u>
+* Seq. auf Leitstrang muss id. auf dem Folgestrang sein $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{gelesen}}\ \ \ \ }$ $5' \to 3'$
+
+# **DNA-Ligase**
+![alt text](image-59.png)
+## <u>**Mehrere Mögl. d. Ligase**</u>:
+
+![alt text](image-60.png)
+
+## <u>**Wie findet man d. jenige Bakterien, d. rekombinante Moleküle aufgebnommen haben ?**</u>:
+1) <u>Selektion</u>:
+    * Resistenzgen wird auf alle Bakterien gestrichen $\implies$ nur Bakterien, d. Plasmid aufgenoommen haben ü.leben
+1) <u>Screening</u>:
+    * Reportergene ($lacZ$)
+    * Blau-Weiß-Screening:
+        * Gen f. Enzym $\beta-Galaktosidase$ ($lacZ$) liegt genau an d. Stelle, wo man den Gen einf. möchte
+            * wenn blau $\implies$ $lacZ$ intakt $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{sapltet Farbstoff}}\ \ \ \ }$ Kolonie wird blau
+            * wenn weiß $\implies$ wunschgen erfolgr. eingebaut, weil lacZ-Gen unterbrochen$ \underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Kein Enzym, um Farbstoff zu spalten}}\ \ \ \ }$ Kolonie bleibt weiß
+    * <u>Fluoreszenz (GFP)</u>: 
+        * Ein anderer Reporter = Grün-fluoreszierende Protein"
+            * Bakterien $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{leuchten unter UV-Licht}}\ \ \ \ }$ grün
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
