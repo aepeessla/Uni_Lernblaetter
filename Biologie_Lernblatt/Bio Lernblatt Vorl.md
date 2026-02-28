@@ -425,21 +425,24 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
 ![alt text](image-76.png)
 ![alt text](image-77.png)
 ![alt text](image-78.png)
+![alt text](image-79.png)
 
+## <u>**Recap**</u>:
+![alt text](image-80.png)
+![alt text](image-81.png)
 
+<hr>
 
-
-
-
-
-
-
-
-
-
-
-
-
+![alt text](image-82.png)
+![alt text](image-83.png)
+![alt text](image-85.png)
+![alt text](image-86.png)
+![alt text](image-87.png)
+![alt text](image-88.png)
+![alt text](image-90.png)
+![alt text](image-91.png)
+![alt text](image-92.png)
+![alt text](image-93.png)
 
 
 

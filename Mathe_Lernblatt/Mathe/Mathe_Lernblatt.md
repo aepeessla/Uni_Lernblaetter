@@ -602,10 +602,7 @@ $$\int_{a}^{b} f(x) \,dx = - \int_{b}^{a} f(x) \,dx$$
 ## <u>Kettenlinie</u>
 ### **Fläche**:
 
-$$\int_{a}^{b} y(t) \cdot \dot{x}(t) \,dt$$
-
-### **Geschwindigkeitsvektor**:
-$$c(t) = \begin{pmatrix} x(t) \\ y(t) \end{pmatrix} \implies \mathbf{\dot{c}(t) = \begin{pmatrix} \dot{x}(t) \\ \dot{y}(t) \end{pmatrix} = \begin{pmatrix} \frac{d}{dt} x(t)\\ \frac{d}{dt} y(t) \end{pmatrix}}$$
+$$\int_{a}^{b} y(t) \cdot x(t) \,dt$$
 
 ### **Bogenlänge**:
 $$||\dot{c}|| = \int_{a}^{b} \sqrt{(x(t))^2 + (y(t))^2} \,dt$$
@@ -626,37 +623,30 @@ $$||\dot{c}|| =\int_{a}^{b} \sqrt{(x'(t))^2 + (y'(t))^2}$$
 * ***Zikloide***:
     ![alt text](image-1.png)
 
-    * **Symmetrie**: $2\int_{0}^{b} \dots$
+    * **Symmetrie**: $4\int_{\frac{t}{4}}^{\frac{t}{4}} \dots$
 
-    * **Fläche**: $\int_{a}^{b} y(x) \cdot \dot{x}(t) \,dt$ 
+    * **Fläche**: $\int_{a}^{b} y(x) \cdot x'(t) \,dt$ 
 
-    * **Länge**: $$\int_{a}^{b} \sqrt{(\dot{y}(t))^2+(\dot{x}(t))^2}$$
+    * **Länge**: $$\int_{a}^{b} \sqrt{(y'(t))^2+(x'(t))^2}$$
 
 * **Astroide**:
     ![alt text](image-2.png)
 
     * **Symmetrie**: $4\int_{\frac{t}{4}}^{\frac{t}{4}} \dots$
 
-    * **Fläche**: $\int_{a}^{b} y(x) \cdot \dot{x}(t) \,dt$ für $t \in$ {I. Quadrant}
+    * **Fläche**: $\int_{a}^{b} y(x) \cdot x'(t) \,dt$ für $t \in$ {I. Quadrant}
 
     * **Länge**: $$\int_{a}^{b} \sqrt{(y'(t))^2+(x'(t))^2}$$
 
 * **Kreisvolvente**:
     ![alt text](image-3.png)
 
-    * In der Klausur gegeben:
-
-    $$c(t) = \begin{pmatrix} x(t) \\ y(t) \end{pmatrix} = \begin{pmatrix} r(\cos t + t \sin t) \\ r(\sin t - t \cos t) \end{pmatrix}$$
-
-    $$\dot{c}(t) = \begin{pmatrix} \dot{x}(t) \\ \dot{y}(t) \end{pmatrix} = \begin{pmatrix} \frac{d}{dt} x(t)\\ \frac{d}{dt} y(t) \end{pmatrix}$$
-
+    * **Kanonosche Parapetisierung**: Bogenlänge($s(t)$) $= \left(||\dot{c}(t)|| \right) \to t(s)$
 
 <hr>
 
 * **Vierblattrose**:
     ![alt text](image-4.png)
-
-    $$c(t) = \begin{pmatrix} x(t) \\ y(t) \end{pmatrix} = \begin{pmatrix} a \cos(2t) \cos(t) \\ a \cos(2t) \sin(t) \end{pmatrix}$$
 
     * **Symmetrie**: $4\int_{\frac{t}{4}}^{\frac{t}{4}} \dots$
 
@@ -678,7 +668,7 @@ $$||\dot{c}|| =\int_{a}^{b} \sqrt{(x'(t))^2 + (y'(t))^2}$$
 
     ![alt text](image-6.png)
 
-    * **Länge**: $$\int_{a}^{b} \sqrt{(\dot{y}(t))^2+(\dot{x}(t))^2}$$
+    * **Länge**: $$\int_{a}^{b} \sqrt{(y'(t))^2+(x'(t))^2}$$
 
     * **Parametisieren**: $$s(t) \to t(s)$$
 
@@ -973,9 +963,6 @@ $$0 \leq \sin^2\left(\frac{1}{n}\right) \leq \frac{1}{n^2}$$
 
 
 
-$L = \frac{1}{\lim_{n \to \infty} \left( \left| \sqrt[n]{a_n} \right| \right)}$
-
-$L = \lim_{n \to \infty} \left| \frac{a_n}{ a_{n+1}} \right|$
 
 
 
@@ -983,15 +970,5 @@ $L = \lim_{n \to \infty} \left| \frac{a_n}{ a_{n+1}} \right|$
 
 
 
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']]
-    },
-    svg: {
-      fontCache: 'global'
-    }
-  };
-</script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
