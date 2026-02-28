@@ -134,6 +134,12 @@
         * Kinder $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{altern}}\ \ \ \ }$ schneller
     * <u>Grund ?</u>
         * Helikase-Defekt
+    * <u>Was geschieht ?</u>
+        * Replikationsgabel $\lnot$ sauber $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{entstehung}}\ \ \ \ }$ DNA-Brüche
+        * man benötigt Helikase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{entwirren}}\ \ \ \ }$ Telomere
+            * wenn Helikase $\lnot$ richtig funktioniert $\implies$ Telomere verkürzen schneller als normal $=$ schnellere Alterung
+
+
     
 2) <u>Ophtalmoplegia</u>
     * <u>Was macht es ?</u>
