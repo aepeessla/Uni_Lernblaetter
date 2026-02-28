@@ -410,8 +410,9 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
 ## <u>**Was sind Vektoren ?**</u>:
 
 ![alt text](image-61.png)
-
-
+![alt text](image-62.png)
+## <u>**Was ist ein high copy number Replikations-Origin ?**</u>:
+* normales **Origin of Replication**, das aber sagt, dass es sehr viel transkribiert werden soll
 
 
 
