@@ -197,6 +197,12 @@
 
 ![alt text](image-50.png)
 
+## <u>**Was würde ohne T-loop geschehen & was ist mit unbeabsichtigter DNA-Reparatur gemeint?**</u>
+
+* Reperaturenzyme versuchen d. Enden mit einem anderen Ende zu verkleben \implies Chromosomen würden verschmelzen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{bildet}}\ \ \ \ }$  `T-Loop` (Schleife) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nächste Zellteilung}}\ \ \ \ }$ Zerstörung des Erbguts
+* Zelle könnte v. Außen n. Innen anfangen, d. DNA abzubauen
+
+
 ## <u>**Wie erkennen Telomerase-Enzyme, wo sie arbeiten müssen?**</u>
 
 * Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{prod.}}\ \ \ \ }$  **long non-coding RNA** ($TERRA$)
