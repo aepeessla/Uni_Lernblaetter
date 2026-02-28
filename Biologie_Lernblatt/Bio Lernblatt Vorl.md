@@ -402,11 +402,14 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
     * Blau-Weiß-Screening:
         * Gen f. Enzym $\beta-Galaktosidase$ ($lacZ$) liegt genau an d. Stelle, wo man den Gen einf. möchte
             * wenn blau $\implies$ $lacZ$ intakt $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{sapltet Farbstoff}}\ \ \ \ }$ Kolonie wird blau
-            * wenn weiß $\implies$ wunschgen erfolgr. eingebaut, weil lacZ-Gen unterbrochen$ \underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Kein Enzym, um Farbstoff zu spalten}}\ \ \ \ }$ Kolonie bleibt weiß
+            * wenn weiß $\implies$ wunschgen erfolgr. eingebaut, weil lacZ-Gen unterbrochen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Kein Enzym, um Farbstoff zu spalten}}\ \ \ \ }$ Kolonie bleibt weiß
     * <u>Fluoreszenz (GFP)</u>: 
         * Ein anderer Reporter = Grün-fluoreszierende Protein"
             * Bakterien $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{leuchten unter UV-Licht}}\ \ \ \ }$ grün
 
+## <u>**Was sind Vektoren ?**</u>:
+
+![alt text](image-61.png)
 
 
 
