@@ -225,19 +225,29 @@
 
 ## <u>**Wie erkennen Telomerase-Enzyme, wo sie arbeiten müssen?**</u>
 
-* Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{prod.}}\ \ \ \ }$  **long non-coding RNA** (<p><button popovertarget="err" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">TERRA</button></p><div id="err" popover style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9em;">
-  * Sie ist d. RNA, d. v. Telomeren abgelesen wird
-  * RNA-Polymerase schreibt diese DNA-Seq $\to$ RNA-Seq um
-  * Diese Telomere bleiben hängen & heißen TERRA (Stimme d. Telomere)
-  * Sie gehören zu den hoch repetitiven DNA (10%)
+* Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{prod.}}\ \ \ \ }$  **long non-coding RNA** (<p>
+  <button popovertarget="err" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">
+    TERRA
+  </button>
+</p>
+
+<div id="err" popover style="
+    padding: 20px; 
+    border-radius: 8px; 
+    border: 1px solid #ccc; 
+    max-width: 400px;    /* Verhindert, dass es zu breit wird */
+    max-height: 80ch;   /* Erlaubt vertikales Scrollen im Fenster */
+    overflow: auto;      /* Aktiviert Scrollbalken, falls nötig */
+">
+  <ul style="margin: 0; padding-left: 20px;">
+    <li>Sie ist d. RNA, d. v. Telomeren abgelesen wird</li>
+    <li>RNA-Polymerase schreibt diese DNA-Seq &rarr; RNA-Seq um</li>
+    <li>Diese Telomere bleiben hängen & heißen TERRA (Stimme d. Telomere)</li>
+    <li>Sie gehören zu den hoch repetitiven DNA (10%)</li>
+  </ul>
   <hr>
-  
-  ![alt text](image-54.png)
-</div>)
-
-
-
-
+  <img src="image-54.png" alt="Telomere Diagramm" style="max-width: 100%; height: auto; display: block; margin-top: 10px;">
+</div>
 
 
 * verkürzte Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nutzen}}\ \ \ \ }$  $TERRA$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{lockt an}}\ \ \ \ }$  `Telomerase` $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{verhindert}}\ \ \ \ }$  vorzeitige Seneszenz
@@ -286,8 +296,6 @@
 
 
 * <span style="color: #fc0303; font-family: Courier New">Kinasen aktiviert & Inhibitoren blockieren</span>
-
-
 
 
 
