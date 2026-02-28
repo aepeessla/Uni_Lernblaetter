@@ -62,6 +62,13 @@
 </style>
 
 
+
+<div id="info-einstein" popover style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9em;">
+  Einstein war ein theoretischer Physiker und Nobelpreisträger.
+</div>
+
+
+
 <!-- Der richtige Lerninhalt -->
 <table>
   <tr>
@@ -218,7 +225,15 @@
 
 ## <u>**Wie erkennen Telomerase-Enzyme, wo sie arbeiten müssen?**</u>
 
-* Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{prod.}}\ \ \ \ }$  **long non-coding RNA** ($TERRA$)
+* Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{prod.}}\ \ \ \ }$  **long non-coding RNA** (<p><button popovertarget="err" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">TERRA</button></p><div id="err" popover style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9em;">
+  Sie ist d. RNA, d. v. Telomeren abgelesen wird. RNA-Polymerase schreibt diese DNA-Seq in RNA-Seq um. Diese Telomere bleiben hängen & heißen TERRA (Stimme d. Telomere)
+</div>)
+
+
+
+
+
+
 * verkürzte Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nutzen}}\ \ \ \ }$  $TERRA$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{lockt an}}\ \ \ \ }$  `Telomerase` $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{verhindert}}\ \ \ \ }$  vorzeitige Seneszenz
 
 * `TERRA` $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{kann hemmen}}\ \ \ \ }$ Telomerase synthetisiert $\lnot \infty$
