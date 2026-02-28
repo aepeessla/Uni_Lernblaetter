@@ -17,6 +17,12 @@
   }
 </style>
 
+<style>
+  body {
+    font-size: 10px; /* Verkleinert die Standardschrift von 16px auf 14px */
+  }
+</style>
+
 
 <!-- Der richtige Lerninhalt -->
 
