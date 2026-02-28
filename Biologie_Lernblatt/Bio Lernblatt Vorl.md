@@ -269,6 +269,14 @@
 ![alt text](image-48.png)
 ![alt text](image-49.png)
 
+## <u>**Zusammenfassung**</u>
+Also, d. Problem ist eigentlich nur, dass d. codierende Seq. im **Folgestrang** $\lnot$ synthetisiert werden kann, weil d. `Primase` keinen Platz hat eine neuen `Primer` zu setzten, d. dann d. `DNA-Polymerase` ermöglicht, den letzten codierenden Rest zu transkribieren. D. `Telomerase` fügt hierfür d. Telomer im Leitstrang hinzu, damit d. `Primase` mehr Platz hat, um einen Primer hinter d. codierenden Seq. zu setzten und den codierenden Teil zu synthetisieren.
+
+Das Problem ist nur, dass d. `Telomerase` bei `Somazellen` n. d. ***Geburt abgeschaltet*** wird & d. Zeit ab diesem Zeitpunkt anfängt zu schlagen, welches man als Countdown sehen kann, d. bis zum endgültigen Zelltot runterzählt. D. `Telomere` werden quazi bei jeder Zellteilung kürzer, weil keine Telomerasen vorhanden sind, d. d. fehlenden Lücken beheben kann. Grund für ***Alterung***. 
+
+
+
+
 # **DNA-Amplifikation**
 
 ## <u>**Wie und warum kommt es zur gezielten DNA-Amplifikation in Eukaryoten?**</u>
