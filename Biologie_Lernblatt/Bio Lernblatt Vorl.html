@@ -668,6 +668,24 @@ code {
 <p><span style="color: #fc0303; font-family: Courier New">Kinasen aktiviert &amp; Inhibitoren blockieren</span></p>
 </li>
 </ul>
+<style>
+  .luecke {
+    border-bottom: 2px solid #000; /* Der Unterstrich */
+    color: transparent;           /* Text am Anfang unsichtbar */
+    cursor: pointer;
+    padding: 0 5px;
+    transition: color 0.3s;       /* Schöner Einblend-Effekt */
+  }
+
+  .luecke.offen {
+    color: black;                 /* Text wird sichtbar */
+    border-bottom: 1px solid #ccc;
+  }
+</style>
+<p>
+  Das Gegenteil von Tag ist 
+  <span class="luecke" onclick="this.classList.toggle('offen')">Nacht</span>.
+</p>
 <script>
   MathJax = {
     tex: {
