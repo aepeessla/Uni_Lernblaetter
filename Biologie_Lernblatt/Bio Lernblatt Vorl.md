@@ -16,7 +16,7 @@
     height: auto;  /* Die Höhe passt sich automatisch an (keine Verzerrung) */
   }
 </style>
-
+<!-- Textgröße -->
 <style>
   body {
     font-size: 13px; /* Verkleinert die Standardschrift von 16px auf 14px */
@@ -45,8 +45,21 @@
     display: block;
   }
 </style>
+<!-- Lückentext -->
+<style>
+  .luecke {
+    border-bottom: 2px solid #000; /* Der Unterstrich */
+    color: transparent;           /* Text am Anfang unsichtbar */
+    cursor: pointer;
+    padding: 0 5px;
+    transition: color 0.3s;       /* Schöner Einblend-Effekt */
+  }
 
-
+  .luecke.offen {
+    color: black;                 /* Text wird sichtbar */
+    border-bottom: 1px solid #ccc;
+  }
+</style>
 
 
 <!-- Der richtige Lerninhalt -->
@@ -257,6 +270,12 @@
 
 
 
+
+<!-- <p>
+  Das Gegenteil von Tag ist 
+  <span class="luecke" onclick="this.classList.toggle('offen')">Nacht</span>.
+</p>
+-->
 
 
 
