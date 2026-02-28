@@ -274,7 +274,29 @@ Also, d. Problem ist eigentlich nur, dass d. codierende Seq. im **Folgestrang** 
 
 Das Problem ist nur, dass d. `Telomerase` bei `Somazellen` n. d. ***Geburt abgeschaltet*** wird & d. Zeit ab diesem Zeitpunkt anfängt zu schlagen, welches man als Countdown sehen kann, d. bis zum endgültigen Zelltot runterzählt. D. `Telomere` werden quazi bei jeder Zellteilung kürzer, weil keine Telomerasen vorhanden sind, d. d. fehlenden Lücken beheben kann. Grund für ***Alterung***. 
 
+<table>
+  <tr>
+    <th>Merkmal</th>
+    <th>Keimzellen (Spermien/Eizellen)</th>
+    <th>Somazellen (Körperzellen)</th>
+  </tr>
+  <tr>
+    <td><b>Telomerase-Aktivität</b></td>
+    <td>Hochaktiv</td>
+    <td>Inaktiv (abgeschaltet nach der Geburt)</td>
+  </tr>
+  <tr>
+    <td><b>Telomer-Länge</b></td>
+    <td>Bleibt über Generationen identisch lang</td>
+    <td>Wird bei jeder Zellteilung kürzer</td>
+  </tr>
+  <tr>
+    <td><b>Konsequenz</b></td>
+    <td>"Unsterblichkeit": Informationen werden verlustfrei an Kinder weitergegeben</td>
+    <td>Begrenzte Lebensdauer: Zellen altern und gehen in Seneszenz</td>
+  </tr>
 
+</table>
 
 
 # **DNA-Amplifikation**
