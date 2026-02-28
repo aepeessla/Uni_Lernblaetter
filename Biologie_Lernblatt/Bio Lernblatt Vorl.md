@@ -9,7 +9,7 @@
   /* 3. Ebene: Pfeil rechts (identisch zur 2. Ebene) */
   ul ul ul { list-style-type: "→ "; }
 </style>
-
+<!-- Image -->
 <style>
   img {
     width: 400px;  /* Alle Bilder werden 300px breit */
@@ -99,6 +99,19 @@
 * Pol $\epsilon$: $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{synthetisiert}}\ \ \ \ }$ Leitstrang
 * Pol $\delta$: $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{synthetisiert}}\ \ \ \ }$ Folgestrang
 * <span style="background-color: #e6e216; color: #8f8d1a; padding: 0px 5px; border-radius: 2px;">PCNA</span>(Proliferating Cell Nuclear Antigen) $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{gibt Polymeasen}}\ \ \ \ }$ halt
+    
+    * <u><b>Warum Antigen ?</b></u>
+        * Bei Patienten (mit Autoimmunerkrankungen, wie Lupus) im Zellkern $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{gefunden}}\ \ \ \ }$ Antikörper $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{gerichtet an}}\ \ \ \ }$ Polymerase-Klammer $\implies$ Antigen
+    * <u><b>Warum so wichtig ?</b></u>
+        * nur in aktiven ***teilenden*** Zellen vorhanden
+        * kaum in ruhenden
+            * <span style="color-background: #7abd2d ; color: #7abd2d">Marker f. Tumorenwachstum </span>
+    * <u><b>Was macht es genau ?</b></u>    
+        * sorgt dafür, dass d. Polymerase nicht weg fliegt
+
+    <img src="image-53.png" alt="Girl" style="width: 150px;">
+
+    
 * POL $\alpha$-Primase $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{setzt}}\ \ \ \ }$ Primer
 * <span style="background-color: #e6e216; color: #8f8d1a; padding: 0px 5px; border-radius: 2px;">FEN1</span> (Flap Endonuclease) $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{schneidet}}\ \ \ \ }$ Primer am Ende weg
 * DNA-Ligase $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{versiegelt}}\ \ \ \ }$ DNA-Strang
