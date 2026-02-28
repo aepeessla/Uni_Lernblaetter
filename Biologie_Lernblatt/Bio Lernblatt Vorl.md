@@ -202,6 +202,10 @@
 * Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{prod.}}\ \ \ \ }$  **long non-coding RNA** ($TERRA$)
 * verkürzte Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nutzen}}\ \ \ \ }$  $TERRA$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{lockt an}}\ \ \ \ }$  `Telomerase` $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{verhindert}}\ \ \ \ }$  vorzeitige Seneszenz
 
+* TERRA $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{kann hemmen}}\ \ \ \ }$ Telomer synthetisiert $\lnot \infty$
+
+<span style="font-size: 8px">TERRA = Telomeric Repeat-containing RNA</span>
+
 ## <u>**Warum altern unsere Zellen?**</u>
 * `Somazellen` $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{schalten ab}}\ \ \ \ }$  `Telomerase` (n. d. Geburt) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Folge}}\ \ \ \ }$  Telomere *verkürzen* sich stetig
 * Kritische Verkürzung $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{führt zu}}\ \ \ \ }$  Teilungsstopp (<b><span style="color: #fc0303;">Hayflick-Limit</span></b>, ca. 100 Mitosen) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Ergebnis}}\ \ \ \ }$  Zelluläre Seneszenz
