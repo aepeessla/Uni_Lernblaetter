@@ -179,7 +179,7 @@
 ## <u>**Was ist die Telomerase & wie funktioniert sie biochemisch?**</u>
 
 * Telomerase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ist ein}}\ \ \ \ }$  <span style="color: #fc0303;">Ribonukleoprotein</span> $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{besteht aus}}\ \ \ \ }$  Protein ($\colorbox{red}{TERT}$) + RNA-Anteil ($\colorbox{red}{TERC}$)
-* Enzym-Klasse $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{wirkt als}}\ \ \ \ }$  **Reverse Transkriptase** $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nutzt}}\ \ \ \ }$  eigene RNA ($TERC$) als Matrize f. DNA-Synthese
+* $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nutzt}}\ \ \ \ }$  eigene RNA ($TERC$) als Matrize f. DNA-Synthese
 * Arbeitsweise: Telomerase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{verlängert aktiv}}\ \ \ \ }$  den 3'-Überhang (Matrizenstrang) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{danach}}\ \ \ \ }$  Primase & DNA-Polymerase füllen den Folgestrang auf
 
 <span style="font-size: 8px;">TERT= Telomerase Reverse Transcriptase; TERC = Telomerase RNA Component</span>
