@@ -411,7 +411,7 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
 
 ![alt text](image-61.png)
 ![alt text](image-64.png)
-## <u>**Was ist ein high copy number Replikations-Origin ?**</u>:
+![alt text](image-65.png)
 
 
 
