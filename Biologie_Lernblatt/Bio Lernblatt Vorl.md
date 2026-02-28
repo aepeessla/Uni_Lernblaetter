@@ -226,14 +226,13 @@
 ## <u>**Wie erkennen Telomerase-Enzyme, wann sie abbrechen müssen?**</u>
 
 * Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{prod. gleichzeitig}}\ \ \ \ }$  **long non-coding RNA** (<p>
-  <button popovertarget="info-einstein" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">
+  <button popovertarget="TERRA" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">
     Terra
   </button> 
-  veröffentlicht.
 </p>
 
-<div id="info-einstein" popover style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9em;">
-  Also ist TERRA wie der Manometer bei der Heizung. TERRA wird immer produziert, wenn Telomerase aktiv ist. TERRA wird v. einem RNA-Polymerase synthetisiert. Wenn Telomer so kurz ist, dass sich dann auch TERRA verändert, weiß d. Zelle, dass d. Zeit gekommen ist zu sterben.
+<div id="TERRA" popover style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9em;">
+  Also ist TERRA wie der Manometer bei der Heizung. TERRA wird immer prod., wenn Telomerase aktiv ist. TERRA wird v. einem RNA-Polymerase synthetisiert. Wenn Telomer so kurz ist, dass sich dann auch TERRA verändert, weiß d. Zelle, dass d. Zeit gekommen ist zu sterben.
 </div>)
 
 1) **Embryonalphase**:
