@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bio Lernblatt Vorl.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<!-- Style:  -->
+<style>
+  /* 1. Ebene: Punkt */
+  ul { list-style-type: disc; } 
+
+  /* 2. Ebene: Pfeil rechts */
+  ul ul { list-style-type: "→ "; }
+
+  /* 3. Ebene: Pfeil rechts (identisch zur 2. Ebene) */
+  ul ul ul { list-style-type: "→ "; }
+</style>
+<!-- Image -->
+<style>
+  img {
+    width: 400px;  /* Alle Bilder werden 300px breit */
+    height: auto;  /* Die Höhe passt sich automatisch an (keine Verzerrung) */
+  }
+</style>
+<!-- Textgröße -->
+<style>
+  body {
+    font-size: 13px; /* Verkleinert die Standardschrift von 16px auf 14px */
+  }
+</style>
+<!-- Tabelle -->
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse; /* Verbindet die Ränder zu sauberen Linien */
+    font-size: 13px;           /* Schrift verkleinern */
+  }
+
+  /* Linien nur an den Seiten der Zellen (Spaltentrennung) */
+  th, td {
+    border: 1px solid #000;    /* Schwarze Linie um jede Zelle */
+    padding: 10px;
+    text-align: left;
+  }
+
+  /* Bilder skalieren ohne zu schneiden */
+  td img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;       /* Skaliert proportional im Rahmen */
+    display: block;
+  }
+</style>
+<!-- Lückentext -->
+<style>
+  .luecke {
+    border-bottom: 2px solid #000; /* Der Unterstrich */
+    color: transparent;           /* Text am Anfang unsichtbar */
+    cursor: pointer;
+    padding: 0 5px;
+    transition: color 0.3s;       /* Schöner Einblend-Effekt */
+  }
+
+  .luecke.offen {
+    color: black;                 /* Text wird sichtbar */
+    border-bottom: 1px solid #ccc;
+  }
+</style>
+<div id="info-einstein" popover style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9em;">
+  Einstein war ein theoretischer Physiker und Nobelpreisträger.
+</div>
+<!-- Der richtige Lerninhalt -->
+<table>
+  <tr>
+    <th></th>
+    <th>Eukaryoten</th>
+    <th>Prokaryoten</th>
+  </tr>
+  <tr>
+    <td><b>len(Okazaki Fragment)</b></td>
+    <td>100 bis 200 Nt</td>
+    <td>1000 bis 2000 Nt</td>
+  </tr>
+  <tr>
+    <td><b>len(Primer)</b></td>
+    <td>8 bis 11 Nt</td>
+    <td>11 bis 12 Nt</td>
+  </tr>
+  <tr>
+    <td><b>Replikationsgeschwindigkeit</b></td>
+    <td>2500 Nt/min.</td>
+    <td>50.000 Nt/min.</td>
+  </tr>
+  <tr>
+    <td><b>Anzahl pro Replikon</b></td>
+    <td>25.000(Maus)</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td><b>len(Replikons)</b></td>
+    <td>150 kb(Maus)</td>
+    <td>4.700 (E.Coli.)</td>
+  </tr>
+</table>
+<h1 id="dna-pol-bei-eukaryoten"><strong>DNA POL bei Eukaryoten</strong></h1>
+<p><img src="image-43.png" alt="alt text"></p>
+<h1 id="eukaryotische-replikationsgabel"><strong>Eukaryotische Replikationsgabel</strong></h1>
+<p><img src="image-44.png" alt="alt text"></p>
+<ul>
+<li>
+<p>Helikase = Reißverschluss öffner</p>
+</li>
+<li>
+<p><span style="background-color: #e6e216; color: #8f8d1a; padding: 0px 5px; border-radius: 2px;">RPA</span>
+(Replication Protein A) = d. sind d. einzelstrangbindenden Proteine (<strong>ssb-Protein</strong> (Single-Strand Binding Protein)), d. d. Replikationsgabel aufhalten</p>
+</li>
+<li>
+<p>Pol $\epsilon$: $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{synthetisiert}}\ \ \ \ }$ Leitstrang</p>
+</li>
+<li>
+<p>Pol $\delta$: $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{synthetisiert}}\ \ \ \ }$ Folgestrang</p>
+</li>
+<li>
+<p><span style="background-color: #e6e216; color: #8f8d1a; padding: 0px 5px; border-radius: 2px;">PCNA</span>(Proliferating Cell Nuclear Antigen) $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{gibt Polymeasen}}\ \ \ \ }$ halt</p>
+<ul>
+<li><u><b>Warum so wichtig ?</b></u>
+<ul>
+<li>nur in aktiven <em><strong>teilenden</strong></em> Zellen vorhanden</li>
+<li>kaum in ruhenden
+<ul>
+<li><span style="color-background: #7abd2d ; color: #7abd2d">Marker f. Tumorenwachstum </span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><u><b>Was macht es genau ?</b></u>
+<ul>
+<li>❗sorgt dafür, dass d. Polymerase nicht weg fliegt ❗</li>
+</ul>
+</li>
+</ul>
+  <img src="image-53.png" alt="Girl" style="width: 150px;">
+</li>
+<li>
+<p>POL $\alpha$-Primase $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{setzt}}\ \ \ \ }$ Primer</p>
+</li>
+<li>
+<p><span style="background-color: #e6e216; color: #8f8d1a; padding: 0px 5px; border-radius: 2px;">FEN1</span> (Flap Endonuclease) $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{schneidet}}\ \ \ \ }$ Primer am Ende weg</p>
+</li>
+<li>
+<p>DNA-Ligase $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{versiegelt}}\ \ \ \ }$ DNA-Strang</p>
+</li>
+</ul>
+<h1 id="wann-wei%C3%9F-d-zelle-dass-d-replikation-zu-ende-ist-termination"><strong>Wann weiß d. Zelle, dass d. Replikation zu Ende ist? (Termination)</strong></h1>
+<ul>
+<li>Wenn 2 Teams aufeinanderstoßen</li>
+<li>Vorteil $\to$ kein besonderen Signale notw.</li>
+</ul>
+<h1 id="was-sind-histonen-oktamere"><strong>Was sind Histonen-Oktamere ?</strong></h1>
+<ul>
+<li>D. ist das fertige Produkt aus einzelnen Histonen</li>
+<li>besteht aus $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{jeweils einer Kopie}}\ \ \ \ }$ v. 4 Proterinen
+<ul>
+<li>$H2A$, $H2B$, $H3$ und $H4$.</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-45.png" alt="alt text"></p>
+<h1 id="was-kann-geschehen-wenn-d-nicht-so-l%C3%A4uft-wie-geplant"><strong>Was kann geschehen, wenn d. nicht so läuft wie geplant ?</strong></h1>
+<p><strong><u>Progerie</u></strong></p>
+<ul>
+<li><u>Was macht es ?</u>
+<ul>
+<li>Kinder $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{altern}}\ \ \ \ }$ schneller</li>
+</ul>
+</li>
+<li><u>Grund ?</u>
+<ul>
+<li>Helikase-Defekt</li>
+</ul>
+</li>
+<li><u>Was geschieht ?</u>
+<ul>
+<li>Replikationsgabel $\lnot$ sauber $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{entstehung}}\ \ \ \ }$ DNA-Brüche</li>
+<li>man benötigt Helikase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{entwirren}}\ \ \ \ }$ Telomere
+<ul>
+<li>wenn Helikase $\lnot$ richtig funktioniert $\implies$ Telomere verkürzen schneller als normal $=$ schnellere Alterung</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong><u>Ophtalmoplegia</u></strong></p>
+<ul>
+<li><u>Was macht es ?</u>
+<ul>
+<li>Augenmuskelatur $\implies$ gelähmt $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Grund}}\ \ \ \ }$ Mitochondrien funk. $\lnot$ richtig $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{weil}}\ \ \ \ }$ DNA Pol $\gamma$-Defekt</li>
+</ul>
+</li>
+<li><u>Warum ausgerechnet d. Augenmuskelatur ?</u>
+<ul>
+<li>manche Gewebe = Energie-Junkie(benötign viel ATP) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{führt zu}}\ \ \ \ }$ ATP-/Energie-Mangel $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Augenmuskeln}}\ \ \ \ }$ schalten ab $\implies$ Lähmung</li>
+</ul>
+</li>
+</ul>
+<p><u><strong>Was genau wird mit Krebs assoziiert ?</strong></u></p>
+<ul>
+<li>DNA Pol $\gamma$ mut.</li>
+<li>erhöhte Expression v. DNA $\beta$</li>
+</ul>
+<h1 id="wrm-werden-telomere-immer-k%C3%BCrzer"><strong>Wrm. werden Telomere immer kürzer ?</strong></h1>
+<ul>
+<li>Primerentf.  $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{verkürzt}}\ \ \ \ }$ Chromosomen $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{pro}}\ \ \ \ }$ Replikation</li>
+</ul>
+<p><img src="image-46.png" alt="alt text"></p>
+<h1 id="wie-verhindert-d-zelle-dieses-problem"><strong>Wie verhindert d. Zelle dieses Problem ?</strong></h1>
+<ul>
+<li>
+<p>an den Enden $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{hinzugef.}}\ \ \ \ }$ Telomere $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{durch}}\ \ \ \ }$ Telomerasen $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{Grund}}\ \ \ \ }$ Verlustvermeidung</p>
+</li>
+<li>
+<p>Telomere $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{bestehen}}\ \ \ \ }$ <span style="color: #6c6ee0;">simplen, tandem-repetitiven Seq.</span></p>
+<ul>
+<li>Bsp. bei Mensch: $\color{red}(TTAGGG)_{n = ca. 2000}$</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-47.png" alt="alt text"></p>
+<h1 id="telomerase"><strong>Telomerase</strong></h1>
+<h2 id="udas-end-replikationsproblemu"><strong><u>Das End-Replikationsproblem</u></strong></h2>
+<p><u>Was ist das grundlegende Problem bei der Replikation linearer Chromosomen?</u></p>
+<ul>
+<li>lineare Chromosomen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Problem}}\ \ \ \ }$ Primerentf. am Folgestrang $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Folge}}\ \ \ \ }$ Chromosomen verkürzen sich bei jeder Replikation</li>
+</ul>
+<h2 id="uwas-ist-d-l%C3%B6sung-u"><u><strong>Was ist d. Lösung ?</strong></u></h2>
+<ul>
+<li>Chromosomenenden $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{besitzen}}\ \ \ \ }$ Telomere (z.B. $TTAGGG_n$) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{verlängert durch}}\ \ \ \ }$ Telomerase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Ergebnis}}\ \ \ \ }$ Kompensation des DNA-Verlusts</li>
+</ul>
+<h2 id="uwas-ist-die-telomerase--wie-funktioniert-sie-biochemischu"><u><strong>Was ist die Telomerase &amp; wie funktioniert sie biochemisch?</strong></u></h2>
+<ul>
+<li>Telomerase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ist ein}}\ \ \ \ }$  <span style="color: #fc0303;">Ribonukleoprotein</span> $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{besteht aus}}\ \ \ \ }$  Protein ($\colorbox{red}{TERT}$) + RNA-Anteil ($\colorbox{red}{TERC}$)</li>
+<li>$\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nutzt}}\ \ \ \ }$  eigene RNA ($TERC$) als Matrize f. DNA-Synthese</li>
+<li>Arbeitsweise: Telomerase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{verlängert aktiv}}\ \ \ \ }$  den 3'-Überhang (Matrizenstrang) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{danach}}\ \ \ \ }$  Primase &amp; DNA-Polymerase füllen den Folgestrang auf</li>
+</ul>
+<p><span style="font-size: 8px;">TERT= Telomerase Reverse Transcriptase; TERC = Telomerase RNA Component</span></p>
+<h2 id="uwie-sch%C3%BCtzt-die-zelle-ihre-offenen-dna-enden-vor-dem-abbau-oder-falscher-reparaturu"><u><strong>Wie schützt die Zelle ihre offenen DNA-Enden vor dem Abbau oder falscher Reparatur?</strong></u></h2>
+<ul>
+<li>
+<p>Telomer-DNA $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{bildet}}\ \ \ \ }$  <code>T-Loop</code> (Schleife) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Funktion}}\ \ \ \ }$  versteckt das offene Ende &amp; reguliert Telomerase-Aktivität</p>
+</li>
+<li>
+<p><code>SHELTERIN-Komplex</code> (z.B. $TRF1/TRF2$) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{bindet an}}\ \ \ \ }$  <code>T-Loop</code> $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Funktion}}\ \ \ \ }$  versiegelt das Ende &amp; schützt vor unbeabsichtigter DNA-Reparatur</p>
+</li>
+<li>
+<p><code>TRF1</code> = reguliert len(Telomere)</p>
+</li>
+<li>
+<p><code>TRF2</code> = Stabilität</p>
+<ul>
+<li>hilft T-loop zu bilden</li>
+</ul>
+</li>
+</ul>
+<p><span style="font-size: 8px">TRF = Telomere Repeat binding Factor, SHELTERIN-KOMPLEX bei Eukaryoten</span></p>
+<p><img src="image-50.png" alt="alt text"></p>
+<h2 id="uwas-w%C3%BCrde-ohne-t-loop-geschehen--was-ist-mit-unbeabsichtigter-dna-reparatur-gemeintu"><u><strong>Was würde ohne T-loop geschehen &amp; was ist mit unbeabsichtigter DNA-Reparatur gemeint?</strong></u></h2>
+<ul>
+<li>Reperaturenzyme versuchen d. Enden mit einem anderen Ende zu verkleben $\implies$ Chromosomen würden verschmelzen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{bildet}}\ \ \ \ }$  <code>T-Loop</code> (Schleife) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nächste Zellteilung}}\ \ \ \ }$ Zerstörung des Erbguts</li>
+<li>Zelle könnte v. Außen n. Innen anfangen, d. DNA abzubauen</li>
+</ul>
+<h2 id="uwie-erkennen-telomerase-enzyme-wann-sie-abbrechen-m%C3%BCssenu"><u><strong>Wie erkennen Telomerase-Enzyme, wann sie abbrechen müssen?</strong></u></h2>
+<ul>
+<li>Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{prod. gleichzeitig}}\ \ \ \ }$  <strong>long non-coding RNA</strong> (<p>
+<button popovertarget="TERRA" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">
+Terra
+</button></li>
+</ul>
+</p>
+<div id="TERRA" popover style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9em;">
+  Also ist TERRA wie der Manometer bei der Heizung. TERRA wird immer prod., wenn Telomerase aktiv ist. TERRA wird v. einem RNA-Polymerase synthetisiert. Wenn Telomer so kurz ist, dass sich dann auch TERRA verändert, weiß d. Zelle, dass d. Zeit gekommen ist zu sterben.
+</div>)
+<ol>
+<li><strong>Embryonalphase</strong>:</li>
+</ol>
+<ul>
+<li>Zelle teilt sich rasant $\to$ Telomerase hochaktiv $\implies$ End-Replikations-Problem sofort behoben</li>
+</ul>
+<ol start="2">
+<li><strong>Geburt</strong>:</li>
+</ol>
+<ul>
+<li>Zelle wandelt sich um zu einer somatischen Zelle \to Gen f. Telomerase wird abgeschaltet $\implies$ Telomerase verschwindet aus d. Zelle</li>
+</ul>
+<ol start="3">
+<li><strong>Erwachsenenleben</strong>:</li>
+</ol>
+<ul>
+<li>regelmäßige Zellteilung $\to$ jede Replikation = Verust des Endes $\implies$ Telomer immer kürzer</li>
+</ul>
+<ol start="4">
+<li><strong>Das Hayflick-Limit wird erreicht (Kritische Telomerkürze)</strong>:</li>
+</ol>
+<ul>
+<li>n. 50 bis 70 zellteilungen Limit erreicht $\implies$ Telomer zu kurz, um T-loop zu bilde; SHELTERIN-Komplax verlieren halt</li>
+</ul>
+<ol start="5">
+<li><strong>Zellulär Alarm(TERRA greift ein)</strong>:</li>
+</ol>
+<ul>
+<li>Zelle = Panik $\to$ fährt TERRA-Prod. drastisch hoch $\to$ nackte Chromosomenende v. Zelle als lebensbedrohlichen DNA-Doppelbruch intepretiert $\to$ DNA-Schaden-Kontrollpunkt wird aktiviert</li>
+</ul>
+<ol start="6">
+<li><strong>Endstsadium</strong>:</li>
+</ol>
+<ul>
+<li>
+<p>Seneszenz</p>
+</li>
+<li>
+<p>Apoptose</p>
+</li>
+<li>
+<p>verkürzte Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nutzen}}\ \ \ \ }$  $TERRA$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{lockt an}}\ \ \ \ }$  <code>Telomerase</code> $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{verhindert}}\ \ \ \ }$  vorzeitige Seneszenz</p>
+</li>
+<li>
+<p><code>TERRA</code> $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{kann hemmen}}\ \ \ \ }$ Telomerase synthetisiert $\lnot \infty$</p>
+</li>
+</ul>
+<p><span style="font-size: 8px">TERRA = Telomeric Repeat-containing RNA, Seneszenz = Zelle hört auf sich zu teilen, stirbt aber $\lnot$ sofort ab</span></p>
+<h2 id="uwarum-altern-unsere-zellenu"><u><strong>Warum altern unsere Zellen?</strong></u></h2>
+<ul>
+<li><code>Somazellen</code> $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{schalten ab}}\ \ \ \ }$  <code>Telomerase</code> (n. d. Geburt) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Folge}}\ \ \ \ }$  Telomere <em>verkürzen</em> sich stetig</li>
+<li>Kritische Verkürzung $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{führt zu}}\ \ \ \ }$  Teilungsstopp (<b><span style="color: #fc0303;">Hayflick-Limit</span></b>, ca. 100 Mitosen) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Ergebnis}}\ \ \ \ }$  Zelluläre Seneszenz</li>
+</ul>
+<h2 id="uwelche-zellen-altern-nicht-und-warumu"><u><strong>Welche Zellen altern nicht und warum?</strong></u></h2>
+<ul>
+<li>Keimzellen &amp; Krebszellen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{besitzen}}\ \ \ \ }$  aktive Telomerase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Folge}}\ \ \ \ }$  unbegrenzte Zellteilung (unlimited proliferation)</li>
+<li>Somazellen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Telomere abgestellt}}\ \ \ \ }$  ist eine evolutionäre Strategie $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Zweck}}\ \ \ \ }$  Tumorunterdrückung (da 85% aller Tumore Telomerase+ sind)</li>
+</ul>
+<p><img src="image-48.png" alt="alt text">
+<img src="image-49.png" alt="alt text"></p>
+<h2 id="uzusammenfassungu"><u><strong>Zusammenfassung</strong></u></h2>
+<p>Also, d. Problem ist eigentlich nur, dass d. codierende Seq. im <strong>Folgestrang</strong> $\lnot$ synthetisiert werden kann, weil d. <code>Primase</code> keinen Platz hat eine neuen <code>Primer</code> zu setzten, d. dann d. <code>DNA-Polymerase</code> ermöglicht, den letzten codierenden Rest zu transkribieren. D. <code>Telomerase</code> fügt hierfür d. Telomer im Leitstrang hinzu, damit d. <code>Primase</code> mehr Platz hat, um einen Primer hinter d. codierenden Seq. zu setzten und den codierenden Teil zu synthetisieren.</p>
+<p>Das Problem ist nur, dass d. <code>Telomerase</code> bei <code>Somazellen</code> n. d. <em><strong>Geburt abgeschaltet</strong></em> wird &amp; d. Zeit ab diesem Zeitpunkt anfängt zu schlagen, welches man als Countdown sehen kann, d. bis zum endgültigen Zelltot runterzählt. D. <code>Telomere</code> werden quazi bei jeder Zellteilung kürzer, weil keine Telomerasen vorhanden sind, d. d. fehlenden Lücken beheben kann. Grund für <em><strong>Alterung</strong></em>.</p>
+<table>
+  <tr>
+    <th>Merkmal</th>
+    <th>Keimzellen (Spermien/Eizellen)</th>
+    <th>Somazellen (Körperzellen)</th>
+  </tr>
+  <tr>
+    <td><b>Telomerase-Aktivität</b></td>
+    <td>Hochaktiv</td>
+    <td>Inaktiv (abgeschaltet nach der Geburt)</td>
+  </tr>
+  <tr>
+    <td><b>Telomer-Länge</b></td>
+    <td>Bleibt über Generationen identisch lang</td>
+    <td>Wird bei jeder Zellteilung kürzer</td>
+  </tr>
+  <tr>
+    <td><b>Konsequenz</b></td>
+    <td>"Unsterblichkeit": Informationen werden verlustfrei an Kinder weitergegeben</td>
+    <td>Begrenzte Lebensdauer: Zellen altern und gehen in Seneszenz</td>
+  </tr>
+</table>
+<h1 id="dna-amplifikation"><strong>DNA-Amplifikation</strong></h1>
+<h2 id="uwie-und-warum-kommt-es-zur-gezielten-dna-amplifikation-in-eukaryotenu"><u><strong>Wie und warum kommt es zur gezielten DNA-Amplifikation in Eukaryoten?</strong></u></h2>
+<ul>
+<li>Physiologisch $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nutzt}}\ \ \ \ }$ selektive Über-Replikation definierter Genom-Abschnitte $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Zweck}}\ \ \ \ }$ Erhöhung der Gendosis für starke Proteinproduktion (z.B. rRNA-Gene in Amphibien-Oocyten)</li>
+<li>Pathologisch $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{passiert bei}}\ \ \ \ }$Mutationsereignissen in Krebszellen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Folge}}\ \ \ \ }$ Amplifikation von Onkogenen (sichtbar als HSR oder &quot;Double Minutes&quot;)</li>
+</ul>
+<h2 id="uwas-sind-onkogeneu"><u><strong>Was sind Onkogene?</strong></u></h2>
+<ul>
+<li>natürl. Gene, d wachstumsfördernd sind
+<ul>
+<li>geben Zelle d. Signal zur Teilung</li>
+</ul>
+</li>
+</ul>
+<h2 id="uwie-stoppen-medikamente-wie-acyclovir-oder-azt-die-virusvermehrungu"><u><strong>Wie stoppen Medikamente wie Acyclovir oder AZT die Virusvermehrung?</strong></u></h2>
+<ul>
+<li>Medikament $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{besteht aus}}\ \ \ \ }$ <code>Nukleotidanaloga</code> (<span style="font-family: script MT">synthetische Arzneistoffe, d. natürl. Bausteinen von DNA/RNA ähneln, aber modifiziert sind</span>) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{eingebaut durch}}\ \ \ \ }$ virale Polymerasen / Reverse Transkriptase (z.B. $AZT$ bei $HIV$) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Folge}}\ \ \ \ }$ Kettenabbruch bei viraler Replikation</li>
+</ul>
+<h2 id="uwie-wird-der-%C3%BCbergang-zwischen-den-verschiedenen-zellzyklus-phasen-gesteuertu"><u><strong>Wie wird der Übergang zwischen den verschiedenen Zellzyklus-Phasen gesteuert?</strong></u></h2>
+<ul>
+<li>Zellzyklus $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{kontrolle durch}}\ \ \ \ }$ <code>CDK-Cyclin-Komplexe</code></li>
+<li>Komplex-Aufbau $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{besteht aus}}\ \ \ \ }$ <code>Cyclin</code> (regulatorisches Protein) + $CDK$ (cyclinabhängige Kinase)</li>
+<li>Mechanismus $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{aktiver Komplex}}\ \ \ \ }$ phosphoryliert Zielproteine $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Ergebnis}}\ \ \ \ }$ Auslösung des nächsten Zellzyklus-Schritts (z.B. Eintritt in die S-Phase)</li>
+</ul>
+<h2 id="uwie-verhindert-der-%22w%C3%A4chter-des-genoms%22-p53-die-replikation-von-defekter-dnau"><u><strong>Wie verhindert der &quot;Wächter des Genoms&quot; (p53) die Replikation von defekter DNA?</strong></u></h2>
+<ul>
+<li>
+<p>DNA-Schaden $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{führt zur}}\ \ \ \ }$ Aktivierung von <strong>p53</strong> $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{aktives p35}}\ \ \ \ }$ bindet an Regulationsbereich des <strong>p21-Gens</strong> $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Zelle prod.}}\ \ \ \ }$ <strong>p21</strong> (ein Cdk-Inhibitorprotein) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{p21 blockiert}}\ \ \ \ }$ den <code>Cyclin-Cdk-Komplex</code> der S-Phase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Ergebnis}}\ \ \ \ }$ Eintritt in S-Phase wird verhindert</p>
+</li>
+<li>
+<p><span style="color: #fc0303; font-family: Courier New">Kinasen aktiviert &amp; Inhibitoren blockieren</span></p>
+</li>
+</ul>
+<h2 id="uzusammenfassungu"><u><strong>Zusammenfassung.:</strong></u></h2>
+<p>
+  DNA-Amplifikation ist im Grunde die gezielte, massenhafte Kopierung eines DNA-Abschnitts. 
+  Das ist wie eine 
+  <span class="luecke" onclick="this.classList.toggle('offen')">Polysom</span>, 
+  bei der DNA-Polymerasen den Zielabschnitt exponentiell vervielfältigen.
+</p>
+<p><img src="image-55.png" alt="alt text"></p>
+<h1 id="gentechnologie">Gentechnologie</h1>
+<h2 id="uwas-ist-klassische-genetik-u"><u><strong>Was ist klassische Genetik ?</strong></u></h2>
+<ul>
+<li>Herstellung neu rekombinierter DNA-Moleküle aus derselben Art oder unterschiedl. Arten.</li>
+<li><span style="color: #dfcb1b">Transfergene</span>
+<ul>
+<li>rekombinierte DNA $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{geg.}}\ \ \ \ }$ Organismen</li>
+</ul>
+</li>
+</ul>
+<h2 id="uwrm-ist-gentechnik-m%C3%B6glu"><u><strong>Wrm. ist Gentechnik mögl.?</strong></u></h2>
+<ul>
+<li>$\forall$ Organismen = DNA $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Speicher}}\ \ \ \ }$ f. Erbinfo.</li>
+</ul>
+<h2 id="uklassisches-z%C3%BCchtenu"><u><strong>Klassisches Züchten</strong></u></h2>
+<p>Mutter Pferd ($2n = 64$) + Vater Esel ($2n = 62$) = Maultier</p>
+<h2 id="umutationenu"><u><strong>Mutationen</strong></u></h2>
+<ul>
+<li><u>Mensch</u>:
+<ul>
+<li>~ $60$ Neumut. beim Baby</li>
+</ul>
+</li>
+<li><u>Weizen</u>:
+<ul>
+<li>$\gt$ $100$ Neumut. bei Pflanze</li>
+</ul>
+</li>
+</ul>
+<h2 id="umut-z%C3%BCchtungu"><u><strong>Mut. Züchtung</strong></u></h2>
+<p>Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000 \times$</p>
+<ul>
+<li>$\gt$ 3400 Sorten im Markt</li>
+<li>DNA-Transfer/Neu/-Rekombination finden bereits auch in d. Natur statt</li>
+<li><strong>konventionelle Züchtung</strong>:
+<ul>
+<li>Individuen mit gewünschten Eigenschaften (z. B. besonders große Früchte) miteinander gekreuzt $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Problem}}\ \ \ \ }$ Durch d. Kreuzung werden ungezielt Tausende unterschiedl. Gene neu kombiniert. Man weiß also nicht genau, welche Gene man am Ende erhält, und muss hoffen, dass d. beste Kombination dabei ist</li>
+</ul>
+</li>
+<li><strong>Mutagenese</strong>:
+<ul>
+<li>d. künstl. Erhöhung d. Mutationsrate durch Radiation, um neue eigenschaften zu erzeugen</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-56.png" alt="alt text"></p>
+<h1 id="restriktionsenzyme"><strong>Restriktionsenzyme</strong></h1>
+<p><img src="image-57.png" alt="alt text"></p>
+<h2 id="uwas-machen-restriktionsnukleasen-u"><u><strong>Was machen Restriktionsnukleasen ?</strong></u></h2>
+<ul>
+<li>schneiden eindringende fremde DNA in Bakterien</li>
+<li>Methylierung dient auch hier als Schutz oder Stempel</li>
+</ul>
+<h2 id="uwie-schneiden-restriktionnukleasen-d-dna-u"><u><strong>Wie schneiden Restriktionnukleasen d. DNA ?</strong></u></h2>
+<ul>
+<li><span style="color:red">sequenzspezifisch</span>
+<ul>
+<li>$GAATTC$ = palindromisch</li>
+<li>hier sind es <span style="color:red">sticky ends</span>
+<ul>
+<li>es gibt auch glatte Enden = <span style="color:red">blunt ends</span>
+<img src="image-58.png" alt="alt text"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="uwann-sind-2-restiktionsenzyme-kompartible-u"><u><strong>Wann sind 2 Restiktionsenzyme kompartible ?</strong></u></h2>
+<ul>
+<li>wenn sie id. ü.hänge hinterlassen</li>
+</ul>
+<h2 id="uwas-genau-bedeutet-hier-palindromisch-u"><u><strong>Was genau bedeutet hier palindromisch  ?</strong></u></h2>
+<ul>
+<li>Seq. auf Leitstrang muss id. auf dem Folgestrang sein $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{gelesen}}\ \ \ \ }$ $5' \to 3'$</li>
+</ul>
+<h1 id="dna-ligase"><strong>DNA-Ligase</strong></h1>
+<p><img src="image-59.png" alt="alt text"></p>
+<h2 id="umehrere-m%C3%B6gl-d-ligaseu"><u><strong>Mehrere Mögl. d. Ligase</strong></u>:</h2>
+<p><img src="image-60.png" alt="alt text"></p>
+<h2 id="uwie-findet-man-d-jenige-bakterien-d-rekombinante-molek%C3%BCle-aufgebnommen-haben-u"><u><strong>Wie findet man d. jenige Bakterien, d. rekombinante Moleküle aufgebnommen haben ?</strong></u>:</h2>
+<ol>
+<li><u>Selektion</u>:
+<ul>
+<li>Resistenzgen wird auf alle Bakterien gestrichen $\implies$ nur Bakterien, d. Plasmid aufgenoommen haben ü.leben</li>
+</ul>
+</li>
+<li><u>Screening</u>:
+<ul>
+<li>Reportergene ($lacZ$)</li>
+<li>Blau-Weiß-Screening:
+<ul>
+<li>Gen f. Enzym $\beta-Galaktosidase$ ($lacZ$) liegt genau an d. Stelle, wo man den Gen einf. möchte
+<ul>
+<li>wenn blau $\implies$ $lacZ$ intakt $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{sapltet Farbstoff}}\ \ \ \ }$ Kolonie wird blau</li>
+<li>wenn weiß $\implies$ wunschgen erfolgr. eingebaut, weil lacZ-Gen unterbrochen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Kein Enzym, um Farbstoff zu spalten}}\ \ \ \ }$ Kolonie bleibt weiß</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><u>Fluoreszenz (GFP)</u>:
+<ul>
+<li>Ein anderer Reporter = Grün-fluoreszierende Protein&quot;
+<ul>
+<li>Bakterien $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{leuchten unter UV-Licht}}\ \ \ \ }$ grün</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="uwas-sind-vektoren-u"><u><strong>Was sind Vektoren ?</strong></u>:</h2>
+<p><img src="image-61.png" alt="alt text">
+<img src="image-64.png" alt="alt text">
+<img src="image-65.png" alt="alt text">
+<img src="image-66.png" alt="alt text">
+<img src="image-67.png" alt="alt text">
+<img src="image-68.png" alt="alt text">
+<img src="image-69.png" alt="alt text">
+<img src="image-70.png" alt="alt text">
+<img src="image-71.png" alt="alt text">
+<img src="image-72.png" alt="alt text">
+<img src="image-73.png" alt="alt text">
+<img src="image-74.png" alt="alt text">
+<img src="image-75.png" alt="alt text">
+<img src="image-76.png" alt="alt text">
+<img src="image-77.png" alt="alt text">
+<img src="image-78.png" alt="alt text"></p>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</body>
+</html>
