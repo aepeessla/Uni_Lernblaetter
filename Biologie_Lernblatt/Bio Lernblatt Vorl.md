@@ -336,22 +336,36 @@ Das Problem ist nur, dass d. `Telomerase` bei `Somazellen` n. d. ***Geburt abges
 
 ![alt text](image-55.png)
 
+# Gentechnologie
 
+## <u>**Was ist klassische Genetik ?**</u>
 
+* Herstellung neu rekombinierter DNA-Moleküle aus derselben Art oder unterschiedl. Arten.
+* <span style="color: #dfcb1b">Transfergene</span>
+    * rekombinierte DNA $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{geg.}}\ \ \ \ }$ Organismen
 
+## <u>**Wrm. ist Gentechnik mögl.?**</u>
+* \forall Organismen = DNA $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Speicher}}\ \ \ \ }$ f. Erbinfo.
 
+## <u>**Klassisches Züchten**</u>
+Mutter Pferd ($2n = 64$) + Vater Esel ($2n = 62$) = Maultier
 
-
-
-
-
-
-
-
-
-
-
-
+## <u>**Mutationen**</u>
+* <u>Mensch</u>:
+    * ~ $60$ Neumut. beim Baby
+* <u>Weizen</u>:
+    * $\gt$ $100$ Neumut. bei Pflanze
+ 
+## <u>**Mut. Züchtung**</u>
+Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000 \times$
+* $\gt$ 3400 Sorten im Markt
+* DNA-Transfer/Neu/-Rekombination finden bereits auch in d. Natur statt
+* konventionelle Züchtung:
+    * Individuen mit gewünschten Eigenschaften (z. B. besonders große Früchte) miteinander gekreuzt $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Problem}}\ \ \ \ }$ Durch d. Kreuzung werden ungezielt Tausende unterschiedl. Gene neu kombiniert. Man weiß also nicht genau, welche Gene man am Ende erhält, und muss hoffen, dass d. beste Kombination dabei ist
+* Mutagenese
+    * d. künstl. Erhöhung d. Mutationsrate durch Radiation, um neue eigenschaften zu erzeugen
+    
+![alt text](image-56.png)
 
 
 
