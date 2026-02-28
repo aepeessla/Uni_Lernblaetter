@@ -199,7 +199,7 @@
 
 ## <u>**Was würde ohne T-loop geschehen & was ist mit unbeabsichtigter DNA-Reparatur gemeint?**</u>
 
-* Reperaturenzyme versuchen d. Enden mit einem anderen Ende zu verkleben \implies Chromosomen würden verschmelzen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{bildet}}\ \ \ \ }$  `T-Loop` (Schleife) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nächste Zellteilung}}\ \ \ \ }$ Zerstörung des Erbguts
+* Reperaturenzyme versuchen d. Enden mit einem anderen Ende zu verkleben $\implies$ Chromosomen würden verschmelzen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{bildet}}\ \ \ \ }$  `T-Loop` (Schleife) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nächste Zellteilung}}\ \ \ \ }$ Zerstörung des Erbguts
 * Zelle könnte v. Außen n. Innen anfangen, d. DNA abzubauen
 
 
