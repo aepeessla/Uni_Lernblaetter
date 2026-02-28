@@ -144,6 +144,7 @@
     * Augenmuskelatur $\implies$ gelähmt $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Grund}}\ \ \ \ }$ Mitochondrien funk. $\lnot$ richtig $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{weil}}\ \ \ \ }$ DNA Pol $\gamma$-Defekt
 * <u>Warum ausgerechnet d. Augenmuskelatur ?</u>
     * manche Gewebe = Energie-Junkie(benötign viel ATP) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{führt zu}}\ \ \ \ }$ ATP-/Energie-Mangel $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Augenmuskeln}}\ \ \ \ }$ schalten ab $\implies$ Lähmung
+
 <u>**Was genau wird mit Krebs assoziiert ?**</u>
 * DNA Pol $\gamma$ mut.
 * erhöhte Expression v. DNA $\beta$
@@ -180,6 +181,8 @@
 * Telomerase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ist ein}}\ \ \ \ }$  <span style="color: #fc0303;">Ribonukleoprotein</span> $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{besteht aus}}\ \ \ \ }$  Protein ($\colorbox{red}{TERT}$) + RNA-Anteil ($\colorbox{red}{TERC}$)
 * Enzym-Klasse $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{wirkt als}}\ \ \ \ }$  **Reverse Transkriptase** $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nutzt}}\ \ \ \ }$  eigene RNA ($TERC$) als Matrize f. DNA-Synthese
 * Arbeitsweise: Telomerase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{verlängert aktiv}}\ \ \ \ }$  den 3'-Überhang (Matrizenstrang) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{danach}}\ \ \ \ }$  Primase & DNA-Polymerase füllen den Folgestrang auf
+
+<span style="font-size: 8px;">TERT= Telomerase Reverse Transcriptase; TERC = Telomerase RNA Component</span>
 
 ## <u>**Wie schützt die Zelle ihre offenen DNA-Enden vor dem Abbau oder falscher Reparatur?**</u>
 
