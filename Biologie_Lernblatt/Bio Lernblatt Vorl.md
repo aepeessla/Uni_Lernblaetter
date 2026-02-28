@@ -360,11 +360,11 @@ Mutter Pferd ($2n = 64$) + Vater Esel ($2n = 62$) = Maultier
 Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000 \times$
 * $\gt$ 3400 Sorten im Markt
 * DNA-Transfer/Neu/-Rekombination finden bereits auch in d. Natur statt
-* konventionelle Züchtung:
+* **konventionelle Züchtung**:
     * Individuen mit gewünschten Eigenschaften (z. B. besonders große Früchte) miteinander gekreuzt $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Problem}}\ \ \ \ }$ Durch d. Kreuzung werden ungezielt Tausende unterschiedl. Gene neu kombiniert. Man weiß also nicht genau, welche Gene man am Ende erhält, und muss hoffen, dass d. beste Kombination dabei ist
-* Mutagenese
+* **Mutagenese**:
     * d. künstl. Erhöhung d. Mutationsrate durch Radiation, um neue eigenschaften zu erzeugen
-    
+
 ![alt text](image-56.png)
 
 
