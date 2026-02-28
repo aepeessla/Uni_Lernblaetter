@@ -193,7 +193,7 @@
 * `TRF2` = Stabilität
     * hilft T-loop zu bilden
 
-<span style="font-size: 8px">TRF = Telomere Repeat binding Factor</span>
+<span style="font-size: 8px">TRF = Telomere Repeat binding Factor, SHELTERIN-KOMPLEX bei Eukaryoten</span>
 
 ![alt text](image-50.png)
 
