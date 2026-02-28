@@ -223,32 +223,32 @@
 * Zelle könnte v. Außen n. Innen anfangen, d. DNA abzubauen
 
 
-## <u>**Wie erkennen Telomerase-Enzyme, wo sie arbeiten müssen?**</u>
+## <u>**Wie erkennen Telomerase-Enzyme, wann sie abbrechen müssen?**</u>
 
-* Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{prod.}}\ \ \ \ }$  **long non-coding RNA** (<p>
-  <button popovertarget="err" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">
-    TERRA
-  </button>
+* Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{prod. gleichzeitig}}\ \ \ \ }$  **long non-coding RNA** (<p>
+  <button popovertarget="info-einstein" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">
+    Terra
+  </button> 
+  veröffentlicht.
 </p>
 
-<div id="err" popover style="
-    padding: 20px; 
-    border-radius: 8px; 
-    border: 1px solid #ccc; 
-    max-width: 400px;    /* Verhindert, dass es zu breit wird */
-    max-height: 80ch;   /* Erlaubt vertikales Scrollen im Fenster */
-    overflow: auto;      /* Aktiviert Scrollbalken, falls nötig */
-">
-  <ul style="margin: 0; padding-left: 20px;">
-    <li>Sie ist d. RNA, d. v. Telomeren abgelesen wird</li>
-    <li>RNA-Polymerase schreibt diese DNA-Seq &rarr; RNA-Seq um</li>
-    <li>Diese Telomere bleiben hängen & heißen TERRA (Stimme d. Telomere)</li>
-    <li>Sie gehören zu den hoch repetitiven DNA (10%)</li>
-  </ul>
-  <hr>
-  <img src="image-54.png" alt="Telomere Diagramm" style="max-width: 100%; height: auto; display: block; margin-top: 10px;">
-</div>
+<div id="info-einstein" popover style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9em;">
+  Also ist TERRA wie der Manometer bei der Heizung. TERRA wird immer produziert, wenn Telomerase aktiv ist. TERRA wird v. einem RNA-Polymerase synthetisiert. Wenn Telomer so kurz ist, dass sich dann auch TERRA verändert, weiß d. Zelle, dass d. Zeit gekommen ist zu sterben.
+</div>)
 
+1) **Embryonalphase**:
+* Zelle teilt sich rasant $\to$ Telomerase hochaktiv $\implies$ End-Replikations-Problem sofort behoben
+2) **Geburt**:
+* Zelle wandelt sich um zu einer somatischen Zelle \to Gen f. Telomerase wird abgeschaltet $\implies$ Telomerase verschwindet aus d. Zelle
+3) **Erwachsenenleben**:
+* regelmäßige Zellteilung $\to$ jede Replikation = Verust des Endes $\implies$ Telomer immer kürzer
+4) **Das Hayflick-Limit wird erreicht (Kritische Telomerkürze)**:
+* n. 50 bis 70 zellteilungen Limit erreicht $\implies$ Telomer zu kurz, um T-loop zu bilde; SHELTERIN-Komplax verlieren halt
+5) **Zellulär Alarm(TERRA greift ein)**:
+* Zelle = Panik $\to$ fährt TERRA-Prod. drastisch hoch $\to$ nackte Chromosomenende v. Zelle als lebensbedrohlichen DNA-Doppelbruch intepretiert $\to$ DNA-Schaden-Kontrollpunkt wird aktiviert
+6) **Endstsadium**:
+* Seneszenz
+* Apoptose
 
 * verkürzte Telomere $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{nutzen}}\ \ \ \ }$  $TERRA$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{lockt an}}\ \ \ \ }$  `Telomerase` $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{verhindert}}\ \ \ \ }$  vorzeitige Seneszenz
 
