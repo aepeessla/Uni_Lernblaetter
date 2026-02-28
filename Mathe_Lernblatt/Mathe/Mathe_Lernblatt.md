@@ -702,12 +702,20 @@ $f(x,y) = c$
         * $(x - x_0)^2 + (y-y_0)^2 = r^2$
 
 
+# **Die Volumen-Formel für Rotation um die x-Achse**
+
+$$V = \pi \cdot \int_a^b (f(x))^2 \, dx$$
+
+# **Volumen einer Kappe**
+
+$$V = \pi \left(R- \frac{1}{3}h \right)h^2 \, dx$$
+
+# **Zylinderförmige Apfelstecher**
+
+$$V_{Rest} = \frac{4}{3}\pi\sqrt{(R^2 - r^2)^3}$$
 
 
-
-
-
-
+$\int \frac{\,dx}{\sin^2(x)} = \tan(x)$
 
 
 
@@ -820,6 +828,145 @@ $$f(-x) = |-x| = |x| = f(x)$$
 ## **Konvergenz**
 ![alt text](image-12.png)
 ![Meine Berechnung](<WhatsApp Image 2026-01-31 at 15.44.38.jpeg>)
+
+
+
+# Aufgaben:
+## Konvergenz:
+
+### $\sum_{n = 0}^{\infty} \frac{(-1)^n}{n^2+1}$
+
+1) $\frac{1}{n^2 + 1} \approx \frac{1}{n^2}$
+    * $2-0 = 2$ & somit $\gt$ 1 $\implies$ konvergent
+        * d.h. ich brauche das **Majorantenkriterium**
+
+2) <u>Der tatsächl. Beweis </u>:
+* wir betrachten $\left| \sum_{n = 0}^{\infty} \frac{(-1)^n}{n^2+1} \right| = \sum \frac{1}{n^2+1}$
+
+$n^2+1 \gt n^2$
+
+$\frac{1}{n^2+1} \lt \frac{1}{n^2}$
+
+Da $\frac{1}{n^2}$ eine bekannte konvergierende Reihe ist und unseres kleiner ist, ist unsere Folge **absolut konvergent** !
+
+<hr>
+
+### $\sum_{n = 0}^{\infty} \frac{(-1)^n}{n+1}$
+
+$\frac{(-1)^n}{n+1} \approx \frac{1}{n} \implies$ harmonische Reihe
+
+Leibniz-Kriterium:
+* Nullfolge?
+
+    $lim_{n \to \infty} \frac{1}{n+1} = 0$
+
+* Monotonie:
+
+    $$a_{n+1} \le a_n$$
+    $$\frac{1}{n+2} \le \frac{1}{n+1}$$
+
+Somit ist unsere Reihe auf jeden Fall konvergent.
+
+Absolute Konvergenz ?
+
+* $1 - 0 = 1$ und somit divergent \to Minorantenkriterium
+
+* ich muss ein Nenner brauen, dass größer ist als mein n+1:
+$$n + 1 \lt n+n$$
+$$n + 1 \lt 2n$$
+$$\frac{1}{n+1} \gt \frac{1}{2n}$$
+Da sich $\frac{1}{2n}$ so verhaltet wie d. harmonische Reihe & divergier, muss auch meine Reihe divergieren
+
+*Fazit*: Meine Reihe ist bedingt konvergent. 
+
+<hr>
+
+### $\sum_{n = 1}^{\infty} (-1)^n \sqrt[n]{n}$
+
+1) <u>Leibnitz Kriterium</u>
+
+* Nullfolge ?
+    $$\lim_{n \to \infty} \sqrt[n]{n} = 1$$
+
+Da d. erste Bedingung des Leibnitz-Kriterium $\lnot$ stimmt muss unsere Reihe divergieren.
+
+<hr>
+
+### $\sum_{n = 0}^{\infty} (-1)^n \frac{1}{2^n}$
+
+<u>Leibnitz-Kriterium</u>:
+* <u>Nullreihe</u>?
+    $$\lim_{n \to \infty} \frac{1}{2^n} = 0$$
+
+* <u>Monoton fallend?</u>:
+    $$\frac{1}{2^{n+1}} \lt \frac{1}{2^n}$$
+    $$\frac{1}{2^n \cdot 2} \lt \frac{1}{2^n}$$
+
+Somit können wir schon mal sagen, dass unsere Folge konvergiert.
+
+<u>Absolute Konvergenz</u>:
+* Da unser n im Exponenten ist, können wir d. Wurzelkriterium anw.
+
+$$\sqrt[n]{\left| a_n \right|}$$
+$$\sqrt[n]{\left| \frac{1}{2^n} \right|}$$
+$$\sqrt[n]{\frac{1}{2^n}}$$
+$$\frac{\sqrt[n]{1}}{\sqrt[n]{2^n}}$$
+$$\frac{1}{2}$$
+
+Da $\frac{1}{2} \lt 1$ ist, ist unsere Reihe absolut konvergent.
+
+<hr>
+
+### $\sum_{n=0}^{\infty} (-1)^n \frac{n+1}{n+3}$
+
+#### 1) Leibniz-Kriterium:
+* **Nullfolge?**
+    $$\lim_{n \to \infty} \frac{n+1}{n+3} \approx \frac{n}{n} = 1 \neq 0$$
+    $\rightarrow$ Somit handelt es sich um **keine Nullfolge**.
+
+**Fazit:**
+Deswegen handelt es sich hier um eine **divergente Reihe**.
+
+<hr>
+
+### b) $\sum_{n=0}^{\infty} \sin\left(\frac{n\pi}{2}\right)$
+
+* **Innerer Teil:** $\frac{n\pi}{2}$
+    $$\lim_{n \to \infty} \frac{n\pi}{2} = \infty$$
+
+* **$\sin(\infty)$:** Die Folge nimmt folgende Werte an: $0, 1, 0, -1, 0, 1, \dots$
+    $\rightarrow$ Das wiederholt sich unendlich oft.
+
+**Fazit:**
+Die Reihe ist **divergent**.
+
+<hr>
+
+### $\sum_{n=1}^{\infty} \sin\left(\frac{\pi}{2n}\right)$
+
+* **Innerer Teil:** $$\lim_{n \to \infty} \frac{\pi}{2n} \approx \frac{1}{n} = 0$$
+* Da der innere Teil gegen $0$ geht, geht auch unser $\sin()$ gegen $0$, weil $\sin()$ bei sehr kleinen Zahlen mit dem Wert des inneren Teils übereinstimmt.
+
+**Fazit:** Unsere Reihe ist **absolut konvergent**, weil es nur positive Werte annimmt und gegen $0$ konvergiert.
+
+<hr>
+
+### d) $\sum_{n=1}^{\infty} \left(\sin \frac{1}{n}\right)^2$
+
+* **Untere Schranke:** Da $n > 0$ ist und wir $(\dots)^2$ haben, haben wir nur positive Werte:
+    $$0 \leq \sin^2\left(\frac{1}{n}\right)$$
+* **Obere Schranke:**
+    $$\sin^2\left(\frac{1}{n}\right) \approx \left(\frac{1}{n}\right)^2 = \frac{1}{n^2} \rightarrow \text{konvergiert}$$
+
+**Zusammenfassung:**
+$$0 \leq \sin^2\left(\frac{1}{n}\right) \leq \frac{1}{n^2}$$
+
+
+
+$L = \frac{1}{\lim_{n \to \infty} \left( \left| \sqrt[n]{a_n} \right| \right)}$
+
+$L = \lim_{n \to \infty} \left| \frac{a_n}{ a_{n+1}} \right|$
+
 
 
 
