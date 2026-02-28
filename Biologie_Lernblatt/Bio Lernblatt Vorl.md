@@ -98,41 +98,16 @@
 (Replication Protein A) = d. sind d. einzelstrangbindenden Proteine (**ssb-Protein** (Single-Strand Binding Protein)), d. d. Replikationsgabel aufhalten
 * Pol $\epsilon$: $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{synthetisiert}}\ \ \ \ }$ Leitstrang
 * Pol $\delta$: $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{synthetisiert}}\ \ \ \ }$ Folgestrang
+* <span style="background-color: #e6e216; color: #8f8d1a; padding: 0px 5px; border-radius: 2px;">PCNA</span>(Proliferating Cell Nuclear Antigen) $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{gibt Polymeasen}}\ \ \ \ }$ halt
 
+    * <u><b>Warum so wichtig ?</b></u>
+        * nur in aktiven ***teilenden*** Zellen vorhanden
+        * kaum in ruhenden
+            * <span style="color-background: #7abd2d ; color: #7abd2d">Marker f. Tumorenwachstum </span>
+    * <u><b>Was macht es genau ?</b></u>    
+        * ❗sorgt dafür, dass d. Polymerase nicht weg fliegt ❗
 
-<ul>
-  <li>
-    <span style="background-color: #e6e216; color: #8f8d1a; padding: 0px 5px; border-radius: 2px;">PCNA</span> (Proliferating Cell Nuclear Antigen) 
-    <span style="color: #d6b315;">⎯⎯ gibt Polymerasen →</span> halt
-    
-<ul>
-  <li><span style="background-color: #e6e216; color: #8f8d1a; padding: 0px 5px; border-radius: 2px;">PCNA</span> (Proliferating Cell Nuclear Antigen) <span style="color: #d6b315;">⎯⎯ gibt Polymerasen →</span> halt
-    <ul>
-      <li><u><b>Warum Antigen?</b></u>
-        <ul>
-          <li>Bei Patienten (mit Autoimmunerkrankungen, wie Lupus) bilden Antikörper <span style="color: #7abd2d;">⎯⎯ greifen an →</span> PCNA</li>
-        </ul>
-      </li>
-      <li><u><b>Warum so wichtig?</b></u>
-        <ul>
-          <li>nur in aktiven <i><b>teilenden</b></i> Zellen vorhanden</li>
-          <li>kaum in ruhenden
-            <ul>
-              <li style="list-style-type: '❗ ' !important;"><span style="color: #7abd2d;">Marker f. Tumorenwachstum</span></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><u><b>Was macht es genau?</b></u>
-        <ul>
-          <li>sorgt dafür, dass d. Polymerase nicht weg fliegt</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<img src="image-53.png" alt="PCNA Structure" style="width: 150px;">
+    <img src="image-53.png" alt="Girl" style="width: 150px;">
 
     
 * POL $\alpha$-Primase $\underrightarrow{\ \ \ \ \textcolor{#d6b315}{\text{setzt}}\ \ \ \ }$ Primer
