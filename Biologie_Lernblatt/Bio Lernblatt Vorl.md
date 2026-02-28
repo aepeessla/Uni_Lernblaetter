@@ -327,8 +327,10 @@ Das Problem ist nur, dass d. `Telomerase` bei `Somazellen` n. d. ***Geburt abges
 
 * <span style="color: #fc0303; font-family: Courier New">Kinasen aktiviert & Inhibitoren blockieren</span>
 
+## <u>**Zusammenfassung.:**</u>
+DNA-Amplifikation ist im Grunde einf. nur d. gezielte, massenhafte Kopieren eines einzigen DNA-Abschnitts, während d. Rest des Genoms ganz normal bleibt. D. ist wie ein Polysom, nur, dass wir hier DNA-polymerasen haben.
 
-
+![alt text](image-55.png)
 
 <!-- <p>
   Das Gegenteil von Tag ist 
