@@ -22,9 +22,68 @@
     font-size: 13px; /* Verkleinert die Standardschrift von 16px auf 14px */
   }
 </style>
+<!-- Tabelle -->
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse; /* Verbindet die Ränder zu sauberen Linien */
+    font-size: 13px;           /* Schrift verkleinern */
+  }
+
+  /* Linien nur an den Seiten der Zellen (Spaltentrennung) */
+  th, td {
+    border: 1px solid #000;    /* Schwarze Linie um jede Zelle */
+    padding: 10px;
+    text-align: left;
+  }
+
+  /* Bilder skalieren ohne zu schneiden */
+  td img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;       /* Skaliert proportional im Rahmen */
+    display: block;
+  }
+</style>
+
+
 
 
 <!-- Der richtige Lerninhalt -->
+<table>
+  <tr>
+    <th></th>
+    <th>Eukaryoten</th>
+    <th>Prokaryoten</th>
+  </tr>
+  <tr>
+    <td><b>len(Okazaki Fragment)</b></td>
+    <td>100 bis 200 Nt</td>
+    <td>1000 bis 2000 Nt</td>
+  </tr>
+  <tr>
+    <td><b>len(Primer)</b></td>
+    <td>8 bis 11 Nt</td>
+    <td>11 bis 12 Nt</td>
+  </tr>
+  <tr>
+    <td><b>Replikationsgeschwindigkeit</b></td>
+    <td>2500 Nt/min.</td>
+    <td>50.000 Nt/min.</td>
+  </tr>
+  <tr>
+    <td><b>Anzahl pro Replikon</b></td>
+    <td>25.000(Maus)</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td><b>len(Replikons)</b></td>
+    <td>150 kb(Maus)</td>
+    <td>4.700 (E.Coli.)</td>
+  </tr>
+</table>
+
+
 
 # **DNA POL bei Eukaryoten**
 
