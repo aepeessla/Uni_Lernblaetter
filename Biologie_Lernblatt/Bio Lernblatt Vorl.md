@@ -330,7 +330,7 @@ Das Problem ist nur, dass d. `Telomerase` bei `Somazellen` n. d. ***Geburt abges
 <p>
   DNA-Amplifikation ist im Grunde die gezielte, massenhafte Kopierung eines DNA-Abschnitts. 
   Das ist wie eine 
-  <span class="luecke" onclick="this.classList.toggle('offen')">Kettenreaktion</span>, 
+  <span class="luecke" onclick="this.classList.toggle('offen')">Polysom</span>, 
   bei der DNA-Polymerasen den Zielabschnitt exponentiell vervielfältigen.
 </p>
 
