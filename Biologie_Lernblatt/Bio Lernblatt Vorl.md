@@ -189,6 +189,12 @@
 * Telomer-DNA $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{bildet}}\ \ \ \ }$  `T-Loop` (Schleife) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Funktion}}\ \ \ \ }$  versteckt das offene Ende & reguliert Telomerase-Aktivität
 * `SHELTERIN-Komplex` (z.B. $TRF1/TRF2$) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{bindet an}}\ \ \ \ }$  `T-Loop` $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Funktion}}\ \ \ \ }$  versiegelt das Ende & schützt vor unbeabsichtigter DNA-Reparatur
 
+* `TRF1` = reguliert len(Telomere)
+* `TRF2` = Stabilität
+    * hilft T-loop zu bilden
+
+<span style="font-size: 8px">TRF = Telomere Repeat binding Factor</span>
+
 ![alt text](image-50.png)
 
 ## <u>**Wie erkennen Telomerase-Enzyme, wo sie arbeiten müssen?**</u>
