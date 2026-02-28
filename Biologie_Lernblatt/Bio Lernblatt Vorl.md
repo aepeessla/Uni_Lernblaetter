@@ -1,3 +1,4 @@
+<!-- Style:  -->
 <style>
   /* 1. Ebene: Punkt */
   ul { list-style-type: disc; } 
@@ -9,6 +10,15 @@
   ul ul ul { list-style-type: "→ "; }
 </style>
 
+<style>
+  img {
+    width: 300px;  /* Alle Bilder werden 300px breit */
+    height: auto;  /* Die Höhe passt sich automatisch an (keine Verzerrung) */
+  }
+</style>
+
+
+<!-- Der richtige Lerninhalt -->
 
 # **DNA POL bei Eukaryoten**
 
