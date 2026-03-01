@@ -455,14 +455,15 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
 
 ## <u>Zellzyklus Bierhefe</u>:
 * **Knospierung**
-![alt text](image-94.png)
+  
+  ![alt text](image-94.png)
 * Knospunksindex (<span style="color: #fc0303;">budding index</span>)
   * $\frac{\text{Knospen+; Knospen-}}{\text{gesamt}}$
 
 ## <u>Was passiert, wenn d. DNA beschädigt ist ?</u>:
 * <p>
   <button popovertarget="G1-Phase" style="border:none; background:none; color: #1da828ff; text-decoration:underline; cursor:pointer;">
-    bleibt bei G1-Phase stehen
+    bleibt bei G2/M-Phase stehen
   </button>
 </p> 
 
