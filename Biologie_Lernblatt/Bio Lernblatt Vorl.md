@@ -586,12 +586,17 @@ $
 
 * Acetylierung damit TATA-Box frei $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Bindung}}\ \ \ \ }$ $\overset{\text{(TATA-binding protein)}}{\text{TBP}}$ + $TFIID$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{GTF gerufen}}\ \ \ \ }$ $RNA-POL II$ in Komplex eingebunden $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Bildung}}\ \ \ \ }$ ***Präinitiationskomplex*** $\implies$ $RNA-POL II$ nun föllig stabil pos. $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{TFIIH}\ \ \ \ }$ phospholisiert POL-Schwanz $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{RNA-POL II}}\ \ \ \ }$ beginnt ***Elogation***
 
+## <u>Ausschalten d. Gene durch Galaktose</u>:
+* Normal:  Bierhefe; Galaktose $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{wandeln um}}\ \ \ \ }$ Glucose
+* <u>Wie</u>:
+  * ***GAL-Genen***
+  * Galaktose im Medium $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{anschalten}}\ \ \ \ }$ $Gal4$-Transkriptionsfaktoren
+  * $Gal4$ durch $\overset{\text{Repressor}}{Gal80}$  gehemmt
 
+  * $\overset{\text{Induktor f. } Gal3}{Galactose}$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{bindet an}}\ \ \ \ }$ Gal80 $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Konformationsänderung}}\ \ \ \ }$ Gal80 löst sich v. Gal4: <span style="color: #fc0303;">Dissoziation</span> $\implies$ Gen angeschaltet
 
-
-
-
-
+* <span style="color: #fc0303;">LacZ als <b>Reportergen</b></span>
+  * $LacZ \underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{codiert f.}}\ \ \ \ }$ \beta-Galactosidase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{wandelt ONPG um}}\ \ \ \ }$ Gelbe Farbe
 
 
 
