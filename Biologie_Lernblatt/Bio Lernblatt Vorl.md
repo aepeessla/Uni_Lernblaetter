@@ -473,10 +473,20 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
 * <u>Grund</u>: <b><span style="color: #fc0303;">DNA demage checkpoint</span></b> aktiviert $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ermögl.}}\ \ \ \ }$ Zelle **mehr Zeit** DNA-Schaden zu reperieren [reparieren](#homologe_Rekombination) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Verhinderung}}\ \ \ \ }$ Defektweitergabe an Tochterzelle
 
 ## <u>Wie können wir einen DNA-Schaden auslösen?</u>:
-* <u>Verw.</u>: **temperatursensitives**(TS) Allel = $CDC13-Gen$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ermögl.}}\ \ \ \ }$ gezieltes aktivieren v. DNA-Schäden $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Wie ?}}\ \ \ \ }$ normale Temp.(`permissiv`) \to erhöhter Temp.(`restriktiv`)
+* <u>Verw.</u>: **temperatursensitives**(TS) Allel = $CDC13-Gen$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ermögl.}}\ \ \ \ }$ gezieltes aktivieren v. DNA-Schäden $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Wie ?}}\ \ \ \ }$ normale Temp.(`permissiv`) $\to$ erhöhter Temp.(`restriktiv`)
+
+* unsere Hefe $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{hat}}\ \ \ \ }$ $cdc13-1$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{enthält}}\ \ \ \ }$ **Punktmutation** $P371S$
+  * permissiv: $\lt 25°$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{cdc13-1 funktioniert}}\ \ \ \ }$ normal (auch mit Mut.)
+  * restriktiv: $37°$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{cdc13-1 funktioniert}}\ \ \ \ }$ $\lnot$ normal $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Grund}}\ \ \ \ }$ Denaturierung
+* restriktive Temp $\to$ $cdc13$ defekt $\to$ Enden sind nackt $\to$ Zelle denkt, es ist ein DNA-Schaden $\to$ DNA damage checkpoint aktiviert $\implies$ Zellzyklus haltet bei G1-Phase an
   
+## <u>Wie ist d. Paarungsweg v. Bierhefe ?</u>:
+* ***mating pathway***
+* können sich **diploid**($2n$) oder **haploid**($1n§) vermehren
 
-
+* 2 mating types <p>
+  Die Entscheidung der Zelle erfolgt nach dem Prinzip: 
+  $\begin{cases} \text{MATa}\\ \text{MAT}\alpha \end{cases}$</p>
 
 
 
