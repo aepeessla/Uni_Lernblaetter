@@ -483,7 +483,7 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
 
 <span style="font-family: script MT"> Was bedeutet cdc13<b>-1</b>?</span>
 
-<span style="font-family: script MT">D. ist quazi d. Seriennummer d. Mut. </span>
+<span style="font-family: script MT">D. ist quazi d. Seriennummer d. Mut. & ist <b>nicht</b> spezifisch </span>
 
 ## <u>Wie ist d. Paarungsweg v. Bierhefe ?</u>:
 * ***mating pathway***
