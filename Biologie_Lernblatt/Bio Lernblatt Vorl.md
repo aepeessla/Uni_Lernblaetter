@@ -480,7 +480,11 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
   * permissiv: $\lt 25°$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{cdc13-1 funktioniert}}\ \ \ \ }$ normal (auch mit Mut.)
   * restriktiv: $37°$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{cdc13-1 funktioniert}}\ \ \ \ }$ $\lnot$ normal $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Grund}}\ \ \ \ }$ Denaturierung
 * restriktive Temp $\to$ $cdc13$ defekt $\to$ Enden sind nackt $\to$ Zelle denkt, es ist ein DNA-Schaden $\to$ DNA damage checkpoint aktiviert $\implies$ Zellzyklus haltet bei G1-Phase an
-  
+
+<span style="font-family: script MT"> Was bedeutet cdc13<b>-1</b>?</span>
+
+<span style="font-family: script MT">D. ist quazi d. Seriennummer d. Mut. </span>
+
 ## <u>Wie ist d. Paarungsweg v. Bierhefe ?</u>:
 * ***mating pathway***
 * können sich **diploid**($2n$) oder **haploid**($1n$) vermehren
