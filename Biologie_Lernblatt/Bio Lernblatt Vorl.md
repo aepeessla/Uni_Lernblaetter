@@ -507,20 +507,14 @@ $$
 
 * Oberfläche = G-Protein ($G\alpha$; $G\beta$; $G\gamma$) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Kontakt}}\ \ \ \ }$ Pheramon $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Aktivierung}}\ \ \ \ }$ Kinase Signalkaskade
 
+* <u>Was ist PRE</u> ?
+  * Pheromone Reponse Element
+
+
 ## <u>Aus was besteht d. MAPK-Signalweg ?</u>:
 * aus 3 Kinasen:
 
-$ \text{Phosphorylierungskaskade}
-\left\{
-\begin{matrix}
-\text{MAPK (MAP-Kinase)} \\
-\uparrow \\
-\text{MAPKK (MAP-Kinase-Kinase)} \\
-\uparrow \\
-\text{MAPKKK (MAP-Kinase-Kinase-Kinase)}
-\end{matrix}
-\right. 
-$
+MEKK $\to$ MEK $\to$ MAPKs
 
 * Shmoobildung $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{anhalten}}\ \ \ \ }$ G1 $\implies$ ~200 Gene abgeschaltet
 
