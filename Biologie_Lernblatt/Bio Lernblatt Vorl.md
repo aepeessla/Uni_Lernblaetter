@@ -561,19 +561,30 @@ $
 \begin{matrix}
 \text{Prok.} \to & \text{immer an} \\
 \text{Euka.}  \to & \text{immer ausgeschaltet}
-\end{matrix}
+\end{matrix}1^9
 \right. 
 $
 
 ## <u>Wie sehen Gene bei Eukaryoten aus?</u>:
-$$
+* $\overset{\text{(upstream)}}{\text{Promotor}} \ \to \overset{\text{(downstream)}}{\text{Gen}}$
+* Promotor = Hauptregulator
+* Davor muss Thema: Methylierung/Acetylierung; Histone; lineare DNA !
+
+## <u>Was ist d. wichtigste Stelle des Promotors ?</u>:
+* $\overset{\text{ helfen GTF hierhin zu locken, 50 bis 200bp vor...}}{\text{promotor proximal elements}} \to \overset{\text{30bp vor ...}}{\text{TATA-Box}} \to \overset{\text{hier landet RNA-POL II}}{\text{Transkriptionsstart}} \to \text{codierendes Gen}$ 
+
+![alt text](image-100.png)
 
 
+* $\text{GTF: } \
+\begin{matrix}
+TFIIF \\
+TFIIH \\
+TFIII
+\end{matrix}
+$
 
-
-
-
-
+* Acetylierung damit TATA-Box frei $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Bindung}}\ \ \ \ }$ $\overset{\text{(TATA-binding protein)}}{\text{TBP}}$ + $TFIID$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{GTF gerufen}}\ \ \ \ }$ $RNA-POL II$ in Komplex eingebunden $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Bildung}}\ \ \ \ }$ ***Präinitiationskomplex*** $\implies$ $RNA-POL II$ nun föllig stabil pos. $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{TFIIH}\ \ \ \ }$ phospholisiert POL-Schwanz $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{RNA-POL II}}\ \ \ \ }$ beginnt ***Elogation***
 
 
 
