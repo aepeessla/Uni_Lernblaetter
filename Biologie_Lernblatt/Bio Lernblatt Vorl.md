@@ -501,7 +501,7 @@ $$
 ## <u>Wie sagen sie sich gegenseitig wo sie sind ?</u>:
 * đ <b><span style="color: #fc0303;">Pheramone</span></b>
 
-* $ \text{MATa} \xrightleftharpoons[\text{Faktor } \alpha]{\text{Faktor a}} \text{MAT}\alpha $
+* $\text{MATa} \xrightleftharpoons[\text{Faktor } \alpha]{\text{Faktor a}} \text{MAT}\alpha$
 
 ![alt text](image-99.png)
 
