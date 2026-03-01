@@ -471,7 +471,7 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
   D. ist genau so wie bei uns Menschen(GCK(Glucokinase)-Cyclin-Komplex)
 </div>
 
-* <u>Grund</u>: <b><span style="color: #fc0303;">DNA demage checkpoint</span></b> aktiviert $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ermögl.}}\ \ \ \ }$ Zelle **mehr Zeit** DNA-Schaden zu reperieren [reparieren](#homologe_Rekombination) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Verhinderung}}\ \ \ \ }$ Defektweitergabe an Tochterzelle
+* <u>Grund</u>: <b><span style="color: #fc0303;">DNA demage checkpoint</span></b> aktiviert $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ermögl.}}\ \ \ \ }$ Zelle **mehr Zeit** DNA-Schaden zu [reparieren](#homologe_Rekombination) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Verhinderung}}\ \ \ \ }$ Defektweitergabe an Tochterzelle
 
 ## <u>Wie können wir einen DNA-Schaden auslösen?</u>:
 * <u>Verw.</u>: **temperatursensitives**(TS) Allel = $CDC13-Gen$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ermögl.}}\ \ \ \ }$ gezieltes aktivieren v. DNA-Schäden $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Wie ?}}\ \ \ \ }$ normale Temp.(`permissiv`) $\to$ erhöhter Temp.(`restriktiv`)
