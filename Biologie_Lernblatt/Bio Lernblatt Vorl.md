@@ -433,6 +433,7 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
 
 <hr>
 
+<a id="homologe_Rekombination"></a>
 ![alt text](image-82.png)
 ![alt text](image-83.png)
 ![alt text](image-85.png)
@@ -444,10 +445,36 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
 ![alt text](image-92.png)
 ![alt text](image-93.png)
 
+# Kurstag 1:
+## <u>Wrm. Bierhefe so ideal ?</u>
+* Gene seit mehreren Mio. Jahren nahzu unverändert $\implies$ homologe Gene $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ermögl.}}\ \ \ \ }$ Deletion durch homologe Rekombination
+* <span style="color: #fc0303;">Sie ist ein EUKARYOT</span>
+* günstig, klein leicht zu kreizen
+* kleines Genom: 6000 Gene, 16 Chromosomen
+* beinheltet: Knock-out, GFP(<span style="color: #fc0303;">Green Fluorescent Protein</span>), Überexpression
 
+## <u>Zellzyklus Bierhefe</u>:
+* **Knospierung**
+![alt text](image-94.png)
+* Knospunksindex (<span style="color: #fc0303;">budding index</span>)
+  * $\frac{\text{Knospen+; Knospen-}}{\text{gesamt}}$
 
+## <u>Was passiert, wenn d. DNA beschädigt ist ?</u>:
+* <p>
+  <button popovertarget="G1-Phase" style="border:none; background:none; color: #1da828ff; text-decoration:underline; cursor:pointer;">
+    bleibt bei G1-Phase stehen
+  </button>
+</p> 
 
+<div id="G1-Phase" popover style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9em;">
+  D. ist genau so wie bei uns Menschen(GCK(Glucokinase)-Cyclin-Komplex)
+</div>
 
+* <u>Grund</u>: <b><span style="color: #fc0303;">DNA demage checkpoint</span></b> aktiviert $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ermögl.}}\ \ \ \ }$ Zelle **mehr Zeit** DNA-Schaden zu reperieren [reparieren](#homologe_Rekombination) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Verhinderung}}\ \ \ \ }$ Defektweitergabe an Tochterzelle
+
+## <u>Wie können wir einen DNA-Schaden auslösen?</u>:
+* <u>Verw.</u>: **temperatursensitives**(TS) Allel = $CDC13-Gen$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ermögl.}}\ \ \ \ }$ gezieltes aktivieren v. DNA-Schäden $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Wie ?}}\ \ \ \ }$ normale Temp.(`permissiv`) \to erhöhter Temp.(`restriktiv`)
+  
 
 
 
