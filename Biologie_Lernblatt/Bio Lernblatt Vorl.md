@@ -483,7 +483,7 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
   
 ## <u>Wie ist d. Paarungsweg v. Bierhefe ?</u>:
 * ***mating pathway***
-* können sich **diploid**($2n$) oder **haploid**($1n§) vermehren
+* können sich **diploid**($2n$) oder **haploid**($1n$) vermehren
 $$
 \text{2 mating types} = 
 \begin{cases} 
@@ -505,7 +505,8 @@ $$
 
 ## <u>Aus was besteht d. MAPK-Signalweg ?</u>:
 * aus 3 Kinasen:
-$$ \text{Phosphorylierungskaskade}
+
+$ \text{Phosphorylierungskaskade}
 \left\{
 \begin{matrix}
 \text{MAPK (MAP-Kinase)} \\
@@ -515,7 +516,7 @@ $$ \text{Phosphorylierungskaskade}
 \text{MAPKKK (MAP-Kinase-Kinase-Kinase)}
 \end{matrix}
 \right. 
-$$
+$
 
 * Shmoobildung $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{anhalten}}\ \ \ \ }$ G1 $\implies$ ~200 Gene abgeschaltet
 
