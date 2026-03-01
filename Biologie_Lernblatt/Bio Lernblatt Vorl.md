@@ -483,21 +483,90 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
 ## <u>Wie ist d. Paarungsweg v. Bierhefe ?</u>:
 * ***mating pathway***
 * können sich **diploid**($2n$) oder **haploid**($1n§) vermehren
+$$
+\text{2 mating types} = 
+\begin{cases} 
+  MATa\\ 
+  MAT \alpha 
+\end{cases}
+= \text{MATa/MAT}\alpha 
+$$
+![alt text](image-96.png)
 
-* 2 mating types <p>
-  Die Entscheidung der Zelle erfolgt nach dem Prinzip: 
-  $\begin{cases} \text{MATa}\\ \text{MAT}\alpha \end{cases}$</p>
+## <u>Wie sagen sie sich gegenseitig wo sie sind ?</u>:
+* đ <b><span style="color: #fc0303;">Pheramone</span></b>
 
+* $ \text{MATa} \xrightleftharpoons[\text{Faktor } \alpha]{\text{Faktor a}} \text{MAT}\alpha $
 
+![alt text](image-99.png)
 
+* Oberfläche = G-Protein ($G\alpha$; $G\beta$; $G\gamma$) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Kontakt}}\ \ \ \ }$ Pheramon $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Aktivierung}}\ \ \ \ }$ Kinase Signalkaskade
 
+## <u>Aus was besteht d. MAPK-Signalweg ?</u>:
+* aus 3 Kinasen:
+$$ \text{Phosphorylierungskaskade}
+\left\{
+\begin{matrix}
+\text{MAPK (MAP-Kinase)} \\
+\uparrow \\
+\text{MAPKK (MAP-Kinase-Kinase)} \\
+\uparrow \\
+\text{MAPKKK (MAP-Kinase-Kinase-Kinase)}
+\end{matrix}
+\right. 
+$$
 
+* Shmoobildung $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{anhalten}}\ \ \ \ }$ G1 $\implies$ ~200 Gene abgeschaltet
 
+## <u>Was wenn $STE-Gen$ defekt?</u>:
+* Zelle = **steril**
 
+## <u>Wo spielen d. MAPK bei Menschen eine Rolle?</u>:
+* Wachstumskontrolle (Krebs!)
+* Wahrnehmung v. Licht
+* Entzündungsreaktinen
 
+## <u>Was sind d. Ergebnisse bei den Kombinationen?</u>:
+<p>
+  <button popovertarget="Kombi 1" style="border:none; background:none; color: #ff0090ff; text-decoration:underline; cursor:pointer;">
+    Wildtyp MATa + α-Faktor
+  </button>
+</p> 
 
+<div id="Kombi 1" popover style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9em;">
+  Shmoo-Bildung: Alles intakt (G-Protein, MAPK, STE-System)
+</div>
+<p>
+  <button popovertarget="Kombi 2" style="border:none; background:none; color: #ff0090ff; text-decoration:underline; cursor:pointer;">
+    Wildtyp MATα + α-Faktor
+  </button>
+</p> 
 
+<div id="Kombi 2" popover style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9em;">
+  keine Shmoobildung: Besitzt keine Rezeptoren, um sich von seinem eigenen Pheromon angezogen zu werden.
+</div>
+<p>
+  <button popovertarget="Kombi 3" style="border:none; background:none; color: #ff0090ff; text-decoration:underline; cursor:pointer;">
+    ste12 MATa + α-Faktor
+  </button>
+</p> 
 
+<div id="Kombi 3" popover style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9em;">
+  Keine Shmoobildung: Am Ende fehlt d. Stimme, d. das Signal weiter gibt. 
+</div>
+
+## <u>Was ist d. Unters. zw. Genen v. Prok. & Euka.?</u>:
+$
+\left\{
+\begin{matrix}
+\text{Prok.} \to & \text{immer an} \\
+\text{Euka.}  \to & \text{immer ausgeschaltet}
+\end{matrix}
+\right. 
+$
+
+## <u>Wie sehen Gene bei Eukaryoten aus?</u>:
+$$
 
 
 
