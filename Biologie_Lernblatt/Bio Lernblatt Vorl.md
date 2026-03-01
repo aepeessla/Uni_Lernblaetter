@@ -596,7 +596,68 @@ $
   * $\overset{\text{Induktor f. } Gal3}{Galactose}$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{bindet an}}\ \ \ \ }$ Gal80 $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Konformationsänderung}}\ \ \ \ }$ Gal80 löst sich v. Gal4: <span style="color: #fc0303;">Dissoziation</span> $\implies$ Gen angeschaltet
 
 * <span style="color: #fc0303;">LacZ als <b>Reportergen</b></span>
-  * $LacZ \underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{codiert f.}}\ \ \ \ }$ \beta-Galactosidase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{wandelt ONPG um}}\ \ \ \ }$ Gelbe Farbe
+  * $LacZ \underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{codiert f.}}\ \ \ \ }$ $\beta$-Galactosidase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{wandelt ONPG um}}\ \ \ \ }$ Gelbe Farbe
+
+## <u>Mischkreuz-Logik</u>:
+* Formel: $C_1V_1 = C_2V_2$
+  * $C_1$ = Wie stark ist d. Substanz in d. Flasche ? (Bsp.: 20% $\alpha$-Faktor)
+  * $V_1$ = Wie viel muss ich mit d. Pipette aufziehen ? (Anfangskonzentration v. Kolonie + $V_1$)
+  * $C_2$ = Wie stark soll d. Mischung im Reagenzglas am Ende sein? (Bsp.: 2%)
+  * $V_2$ = Wie viel Flüssigkeit ist am Ende im Reagenzglas = (Bsp.: 2%)
+
+## <u>In welcher Zellzyklus hält die DNA-Schaden-KOntrollpunkt die cdc13-1 Zellen bei restriktiver Temperatur an ?</u>:
+* G2/M-Phase
+* 27° Telomer-Enden $\lnot$ richtig geschützt $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Zelle intepretiert}}\ \ \ \ }$ gefährl. DNA-Doppelstrangbruch $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Aktivierung}}\ \ \ \ }$ DNA damage checkpoint $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Gibt mehr Zeit}}\ \ \ \ }$ Mutterzelle kann Fehler beheben $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Tochterzelle}}\ \ \ \ }$ bekommt dann, wenn alles gut gelaufen ist, d. gesunde Gen
+
+## <u>Inwelchem Zellzyklus bilden sie ein Shmoo ?</u>:
+* G1-Phase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Grund}}\ \ \ \ }$ beiden müssen haploid(1n) sein
+ 
+## <u>Welche molekularen Vorgänge liegen d. Zygotebildung zugrunde ? ?</u>:
+1) Erkennung: Pheromon
+2) Bilden einer klebrigen Oberfläche, damit sie zsm.kleben können
+3) Shmooing
+4) Zellwand-Fusion: Zellwand durch Enzyme abgebaut und neu verbunden
+5) Kernverschmelzung: $2n$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
