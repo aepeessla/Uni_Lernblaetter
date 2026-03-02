@@ -73,14 +73,27 @@
 <a id="Mehrdimensionale_Grenzwerte"></a>
 
 # **Mehrdimensionale Grenzwerte**
-* Versuchen d. Werte einzusetzen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{text}}\ \ \ \ }$ 
+## Grenzwert bestimmen
+### <u>1) Einf. einsetzten</u>
+* Versuchen d. Werte einzusetzen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{wenn } \frac{0}{0}}\ \ \ \ }$ d. 3 Fälle
+
+### 1) <u>Achsen</u>
+
+**1) Fall: Achsen**: 
+
+Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
+  * $y=0, x \to \dots$
+  * $x=0, y \to \dots$
+
+**2) Fall: Ursprungsgeraden**: 
 
 
-**1) Fall**: $x = 0$ mit $\lim_{y \to [\text{zur jeweiligen Grenze}]} \  \lor \ y = 0$ mit $\lim_{x \to [\text{zur jeweiligen Grenze}]}$
+* $y = mx \ \lor x = my$
 
-**2) Fall**: $y = mx \ \lor x = my$
+**3) Fall: Kurven**: 
+* wenn **Zähler Pot./Nenner Pot.** sehr unterschliedl.
 
-**3) Fall**: $y = x^2 \ \lor x = y^2$
+* $y = x^2 \ \lor x = y^2$
 
 * man kann auch `Sandwitch-Lemma` anw. 
 
