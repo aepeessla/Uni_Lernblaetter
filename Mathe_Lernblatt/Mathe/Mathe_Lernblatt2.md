@@ -146,7 +146,22 @@ Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
 
 * Wir haben eine Schnittstelle & wir müssen den $\lim$ einfach dort hinschichen
 
+<p>
+  <button popovertarget="Unstelligkeitswerte finden bei mehreren Veränderlichen" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">
+    Aufgaben
+  </button> 
+</p>
 
+<div id="Unstelligkeitswerte finden bei mehreren Veränderlichen" popover style="padding: 15px; border-radius: 15px; border: 1px solid #ff016fff; max-width: 300px; background-color: #edededff">
+  <strong>
+  <u>Übung 8</u>
+  <p>
+
+  Nr. 4a)
+  <img src="image-21.png" alt="Übung 8, Nr. 3a" width="300">
+  Nr. 4b)
+  <img src="image-22.png" alt="Übung 8, Nr. 3a" width="300">
+</div>
 
 
 
