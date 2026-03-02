@@ -137,7 +137,7 @@ Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
   Nr. 3b)
   <img src="image-17.png" alt="Übung 8, Nr. 3a" width="300">
   Nr. 3c)
-  <img src="image-18.png" alt="Übung 8, Nr. 3a" width="300">
+  <img src="image-19.png" alt="Übung 8, Nr. 3a" width="300">
 </div>
 
 
