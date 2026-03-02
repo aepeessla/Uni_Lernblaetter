@@ -73,7 +73,9 @@
 <a id="Mehrdimensionale_Grenzwerte"></a>
 
 # **Mehrdimensionale Grenzwerte**
+
 ## Grenzwert bestimmen
+
 ### <u>1) Einf. einsetzten</u>
 * Versuchen d. Werte einzusetzen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{wenn } \frac{0}{0}}\ \ \ \ }$ d. 3 Fälle
 
