@@ -103,7 +103,7 @@ Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
 
 * man kann auch `Sandwitch-Lemma` anw. 
 
-
+<hr style="height: 3px; border: none; background: linear-gradient(to right, #7abd2d, transparent);">
 
 
 
