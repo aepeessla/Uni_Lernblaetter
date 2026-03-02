@@ -70,16 +70,20 @@
 
 <hr>
 
+
+
 <a id="Mehrdimensionale_Grenzwerte"></a>
 
 # **Mehrdimensionale Grenzwerte**
 
-## Grenzwert bestimmen
+## **Grenzwert bestimmen**
 
 ### <u>1) Einf. einsetzten</u>
 * Versuchen d. Werte einzusetzen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{wenn } \frac{0}{0}}\ \ \ \ }$ d. 3 Fälle
 
-### 1) <u>Achsen</u>
+<hr style="border-color: #d8d8d8ff"></hr>
+
+### 2) <u>Achsen</u>
 
 **1) Fall: Achsen**: 
 
