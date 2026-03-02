@@ -114,16 +114,16 @@ Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
 * <u>Nutzen</u>: $\cos^2(\varphi) + \sin^2(\varphi) = 1$
 * <span style="color: #fc0303;">WICHTIG !!! D. Ergebnis am Ende darf </span>$\color{red}\lnot$ <span style="color: #fc0303;">mehr vom Winkel abhängen</span>
 
-<u>Sandwich-Lemma</u>
+<u><b>Sandwich-Lemma</b></u>
+
 * $|\sin(\dots)| \leq 1$ & $|\cos(\dots)| \leq 1$.
 * Nenner verkleinern macht den Bruch größer: Da $x^2 \geq 0$ ist, gilt z.B. $x^2 + y^2 \geq y^2$.
 * Teilbrüche sind kleiner oder gleich $1$: $\frac{x^2}{x^2+y^2} \leq 1$.
 
-<p>
-  <a href="DEIN_LINK_ZUM_UPLOAD" target="_blank" style="color: #7abd2d; font-weight: bold;">
-    Aufgaben
-  </a>
-</p>
+<div style="border: 2px dashed #7abd2d; padding: 15px; margin-top: 10px;">
+  <strong>Abgabe:</strong><br>
+  <input type="file" accept="image/*,.pdf">
+</div>
 
 
 
