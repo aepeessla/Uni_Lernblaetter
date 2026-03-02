@@ -120,16 +120,22 @@ Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
 * Nenner verkleinern macht den Bruch größer: Da $x^2 \geq 0$ ist, gilt z.B. $x^2 + y^2 \geq y^2$.
 * Teilbrüche sind kleiner oder gleich $1$: $\frac{x^2}{x^2+y^2} \leq 1$.
 
-<div style="border: 2px dashed #7abd2d; padding: 15px; margin-top: 10px;">
-  <strong>Abgabe:</strong><br>
-  <input type="file" accept="image/*,.pdf">
+<p>
+  <button popovertarget="mehrdimensionale Grenzwerte" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">
+    Aufgaben
+  </button> 
+</p>
+
+<div id="mehrdimensionale Grenzwerte" popover style="padding: 15px; border-radius: 8px; border: 1px solid #ff016fff; max-width: 300px; background-color: #edededff">
+  <strong>
+  <u>Übung 8</u>
+  <p>
+
+  Nr. 3a)
+  <img src="image-15.png" alt="Übung 8, Nr. 3a" width="300">
+  Nr. 3b)
+  <img src="image-17.png" alt="Übung 8, Nr. 3a" width="300">
 </div>
-
-
-
-
-
-
 
 
 
