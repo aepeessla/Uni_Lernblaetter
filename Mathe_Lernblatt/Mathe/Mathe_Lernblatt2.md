@@ -93,6 +93,7 @@ Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
 
 **2) Fall: Ursprungsgeraden**: 
 
+<b><span style="color: #fc0303;">D. ist keine fertige Lösung, d. zeigt nur, dass wir kein Grenzwert haben. D.h., wenn hier alle Ergebnisse gleich sind, dann muss ich dennoch die anderen Beweise rechnen (Sandwitch-Lemma, Polarkoordinaten)</span></b>
 
 * $y = mx \ \lor x = my$
 
@@ -135,6 +136,8 @@ Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
   <img src="image-15.png" alt="Übung 8, Nr. 3a" width="300">
   Nr. 3b)
   <img src="image-17.png" alt="Übung 8, Nr. 3a" width="300">
+  Nr. 3c)
+  <img src="image-18.png" alt="Übung 8, Nr. 3a" width="300">
 </div>
 
 
