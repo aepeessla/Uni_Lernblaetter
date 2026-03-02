@@ -138,7 +138,21 @@ Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
   <img src="image-17.png" alt="Übung 8, Nr. 3a" width="300">
   Nr. 3c)
   <img src="image-19.png" alt="Übung 8, Nr. 3a" width="300">
+  Nr. 3d)
+  <img src="image-20.png" alt="Übung 8, Nr. 3a" width="300">
 </div>
+
+## **Unstelligkeitswerte finden bei mehreren Veränderlichen**:
+
+* Wir haben eine Schnittstelle & wir müssen den $\lim$ einfach dort hinschichen
+
+
+
+
+
+
+
+
 
 
 
