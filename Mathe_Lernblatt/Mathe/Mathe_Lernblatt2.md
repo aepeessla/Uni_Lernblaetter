@@ -127,7 +127,7 @@ Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
   </button> 
 </p>
 
-<div id="mehrdimensionale Grenzwerte" popover style="padding: 15px; border-radius: 8px; border: 1px solid #ff016fff; max-width: 300px; background-color: #edededff">
+<div id="mehrdimensionale Grenzwerte" popover style="padding: 15px; border-radius: 15px; border: 1px solid #ff016fff; max-width: 300px; background-color: #edededff">
   <strong>
   <u>Übung 8</u>
   <p>
