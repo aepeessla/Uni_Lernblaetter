@@ -1,3 +1,4 @@
+<!-- Style:  -->
 <style>
   /* 1. Ebene: Punkt */
   ul { list-style-type: disc; } 
@@ -8,9 +9,62 @@
   /* 3. Ebene: Pfeil rechts (identisch zur 2. Ebene) */
   ul ul ul { list-style-type: "→ "; }
 </style>
+<!-- Image -->
+<style>
+  img {
+    width: 400px;  /* Alle Bilder werden 300px breit */
+    height: auto;  /* Die Höhe passt sich automatisch an (keine Verzerrung) */
+  }
+</style>
+<!-- Textgröße -->
+<style>
+  body {
+    font-size: 13px; /* Verkleinert die Standardschrift von 16px auf 14px */
+  }
+</style>
+<!-- Tabelle -->
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse; /* Verbindet die Ränder zu sauberen Linien */
+    font-size: 13px;           /* Schrift verkleinern */
+  }
+
+  /* Linien nur an den Seiten der Zellen (Spaltentrennung) */
+  th, td {
+    border: 1px solid #000;    /* Schwarze Linie um jede Zelle */
+    padding: 10px;
+    text-align: left;
+  }
+
+  /* Bilder skalieren ohne zu schneiden */
+  td img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;       /* Skaliert proportional im Rahmen */
+    display: block;
+  }
+</style>
+<!-- Lückentext -->
+<style>
+  .luecke {
+    border-bottom: 2px solid #000; /* Der Unterstrich */
+    color: transparent;           /* Text am Anfang unsichtbar */
+    cursor: pointer;
+    padding: 0 5px;
+    transition: color 0.3s;       /* Schöner Einblend-Effekt */
+  }
+
+  .luecke.offen {
+    color: black;                 /* Text wird sichtbar */
+    border-bottom: 1px solid #ccc;
+  }
+</style>
+
+
+
 
 1) [Mehrdimensionale Grenzwerte](#Mehrdimensionale_Grenzwerte)
-
 
 
 
@@ -19,8 +73,8 @@
 <a id="Mehrdimensionale_Grenzwerte"></a>
 
 # **Mehrdimensionale Grenzwerte**
+* Versuchen d. Werte einzusetzen $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{text}}\ \ \ \ }$ 
 
-<span style="color: #ec1616ff;">Sobald eine Bedingung $\lnot$ stimmt, existiert d. Grenze $\lnot$</span>
 
 **1) Fall**: $x = 0$ mit $\lim_{y \to [\text{zur jeweiligen Grenze}]} \  \lor \ y = 0$ mit $\lim_{x \to [\text{zur jeweiligen Grenze}]}$
 
@@ -29,6 +83,12 @@
 **3) Fall**: $y = x^2 \ \lor x = y^2$
 
 * man kann auch `Sandwitch-Lemma` anw. 
+
+
+
+
+
+
 
 
 
