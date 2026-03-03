@@ -224,10 +224,11 @@ $$\text{II) }f_y(x,y) = 0$$
 
 ## **KP charakterisieren**:
 * $H_f = \begin{pmatrix} f_{xx} & f_{yx} \\ f_{xy} & f_{yx} \end{pmatrix}$ bilden
+
 * $\det(H_f)$
   * $\det(H_f) \gt 0$: echter Extremum(Max.,Min.)
   * $\det(H_f) = 0$: Keine Aussage
-  * $\det(H_f) \gt 0$: Sattelpunkt
+  * $\det(H_f) \lt 0$: Sattelpunkt
 
 
 <p>
@@ -242,7 +243,10 @@ $$\text{II) }f_y(x,y) = 0$$
 
   <b>Nr. 3a)</b>
   <img src="image-28.png" width="500">
-  
+  <b>Nr. 3b)</b>
+  <img src="image-29.png" width="500">
+  <b>Nr. 3c)</b>
+  <img src="image-30.png" width="500">
 </div>
 
 
