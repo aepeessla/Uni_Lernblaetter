@@ -191,7 +191,26 @@ Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
   <img src="image-25.png" alt="Übung 8, Nr. 3a" width="300">
   <b>Nr. 5b)</b>
   <img src="image-26.png" alt="Übung 8, Nr. 3a" width="300">
+  <b>Nr. 5b)</b>
+  <img src="image-27.png" alt="Übung 8, Nr. 3a" width="300">
 </div>
+
+## **Die Norm**
+
+<u>1. Positive Definitheit</u>:
+* Eine Länge kann $\lnot \lt 0$
+
+<u>2. Homogenität</u>:
+* wenn ich eine Pfeil doppolt so lange ziehe ($\lambda = 2$), dann ist d. Länge v. meinem Pfeil auch 2 $\times$ so lang. Auch wenn ich d. in d. andere Seite ziehe, wie ($\lambda = -3$), dann ist sie immer noch $3 \times$ so lang, also $|\lambda|$
+
+<u>3. Dreiecksungleichung</u>:
+* wenn ich v. $\overset{\to}{AB}$, dann $\nu(x+y)$
+
+<u>Wo ist dies Regel f. mich relevant ?</u>:
+* Sandwich-Lemma: D. Dreieckungleichung hilft und die beiden Grenzen zu bestimmen !
+*Wenn man n. unten abschätzen müssen oder voneinander abziehen müssen: $|\overset{\text{direkte Weg}}{\nu(x) - \nu(y)}| \le \overset{\text{mit Umweg}}{\nu(x - y)}$
+* **NORME SIND IMMER STETIG**
+  * wenn ich einmal bewiesen habe, dass etw. eine Norm ist, dann brauche ich kein $\epsilon$-$\delta$-Beweise oder Limes-Rechnungen
 
 
 
