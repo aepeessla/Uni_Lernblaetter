@@ -177,7 +177,21 @@ Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
   * $\forall$ Werte haben d. gleiche Höhe: $f(x,y)= c$
 
 
+<p>
+  <button popovertarget="Bestimmung der Höhenlinien & Definitionsbereich" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">
+    Aufgaben
+  </button> 
+</p>
 
+<div id="Bestimmung der Höhenlinien & Definitionsbereich" popover style="padding: 15px; border-radius: 15px; border: 1px solid #ff016fff; max-width: 300px; background-color: #edededff">
+  <u><b>Übung 8</b></u>
+  <p>
+
+  <b>Nr. 5a)</b>
+  <img src="image-25.png" alt="Übung 8, Nr. 3a" width="300">
+  <b>Nr. 5b)</b>
+  <img src="image-26.png" alt="Übung 8, Nr. 3a" width="300">
+</div>
 
 
 
