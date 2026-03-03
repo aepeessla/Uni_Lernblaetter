@@ -197,6 +197,8 @@ Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
 
 ## **Die Norm**
 
+* $||x||_{\infty} = max(|x_1|, |x_2|, \dots)$
+
 <u>1. Positive Definitheit</u>:
 * Eine Länge kann $\lnot \lt 0$
 
