@@ -215,6 +215,35 @@ Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
   * wenn ich einmal bewiesen habe, dass etw. eine Norm ist, dann brauche ich kein $\epsilon$-$\delta$-Beweise oder Limes-Rechnungen
 
 
+# **Kurvendiskussion mit mehreren Veränderlichen**
+
+## **Kritischer Punkt**:
+$$\text{I) } f_x(x,y) = 0$$
+$$\text{II) }f_y(x,y) = 0$$
+* $\text{I}$ oder $\text{II}\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{eins.}}\ \ \ \ }$ in d. andere eins & umstellen !
+
+## **KP charakterisieren**:
+* $H_f = \begin{pmatrix} f_{xx} & f_{yx} \\ f_{xy} & f_{yx} \end{pmatrix}$ bilden
+* $\det(H_f)$
+  * $\det(H_f) \gt 0$: echter Extremum(Max.,Min.)
+  * $\det(H_f) = 0$: Keine Aussage
+  * $\det(H_f) \gt 0$: Sattelpunkt
+
+
+<p>
+  <button popovertarget="Kurvendiskussion mit mehreren Veränderlichen" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">
+    Aufgaben
+  </button> 
+</p>
+
+<div id="Kurvendiskussion mit mehreren Veränderlichen" popover style="padding: 15px; border-radius: 15px; border: 1px solid #ff016fff; max-width: 300px; background-color: #edededff">
+  <u><b>Übung 9</b></u>
+  <p>
+
+  <b>Nr. 3a)</b>
+  <img src="image-28.png" width="500">
+  
+</div>
 
 
 
