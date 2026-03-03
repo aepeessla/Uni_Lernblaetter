@@ -128,7 +128,6 @@ Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
 </p>
 
 <div id="mehrdimensionale Grenzwerte" popover style="padding: 15px; border-radius: 15px; border: 1px solid #ff016fff; max-width: 300px; background-color: #edededff">
-  <strong>
   <u>Übung 8</u>
   <p>
 
@@ -146,6 +145,9 @@ Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
 
 * Wir haben eine Schnittstelle & wir müssen den $\lim$ einfach dort hinschichen
 
+<u><b>Wann weiß ich, dass es direkt unstetig ist ?</b>></u>
+* Wenn eine Konstate steht 
+
 <p>
   <button popovertarget="Unstelligkeitswerte finden bei mehreren Veränderlichen" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">
     Aufgaben
@@ -153,14 +155,16 @@ Wir setzen quazi $x=0/y=0$ & setzen dann den $y,x$-Wert des $\lim$ ein
 </p>
 
 <div id="Unstelligkeitswerte finden bei mehreren Veränderlichen" popover style="padding: 15px; border-radius: 15px; border: 1px solid #ff016fff; max-width: 300px; background-color: #edededff">
-  <strong>
-  <u>Übung 8</u>
+  <u><b>Übung 8</b></u>
   <p>
 
-  Nr. 4a)
+  <b>Nr. 4a)</b>
   <img src="image-21.png" alt="Übung 8, Nr. 3a" width="300">
-  Nr. 4b)
+  <b>Nr. 4b)</b>
   <img src="image-22.png" alt="Übung 8, Nr. 3a" width="300">
+  <b>Nr. 4c)</b>
+  <img src="image-23.png" alt="Übung 8, Nr. 3a" width="300">
+  Mein Ergebnis x_0 = $\pm$ 3. Deswegen ist es nicht stetig, weil nur hier bei (3,3), (-3,-3) das ausgeschnitte Stück 9 reinpasst & bei den anderen nicht !
 </div>
 
 
