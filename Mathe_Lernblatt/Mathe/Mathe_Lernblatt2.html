@@ -667,6 +667,33 @@ $$\text{II) }f_y(x,y) = 0$$</p>
 </li>
 </ul>
 <h1 id="fl%C3%A4chen"><strong>Flächen</strong>:</h1>
+<!-- Formelsammlung -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script>
+function zeigeFormel(typ) {
+  const display = document.getElementById('formel-display');
+  let formelText = "";
+
+  if(typ === 'para') {
+    formelText = "\\frac{F_y}{F_x}"; // Wichtig: Doppelte Backslashes in JS!
+  } else if(typ === 'norm') {
+    formelText = "-\\frac{F_x}{F_y}";
+  }
+
+  // Dieser Befehl rendert die Formel direkt in das Element
+  katex.render(formelText, display, {
+    throwOnError: false,
+    displayMode: true // Macht die Formel groß und zentriert
+  });
+}
+</script>
+<div id="formel-display" style="min-height: 50px; border: 1px dashed #ccc; padding: 10px;">
+  <i>Was ist d. Unterschied zw. beiden Vers. ...</i>
+</div>
+<p><button onclick="zeigeFormel('para')">Normale Gleichung</button>
+<button onclick="zeigeFormel('norm')">Parametisierte Gleichung</button></p>
+<!-- Inhalt -->
 <h2 id="tangentialebene">Tangentialebene:</h2>
 <p>Wenn ich Normalenvektor habe: $\nabla(x,y,z) = \begin{pmatrix} F_x \ F_y \ F_z \end{pmatrix}$</p>
 <p>$$\boxed{F_x \cdot (x - x_0) + F_y \cdot (y - y_0) + F_z \cdot (z - z_0) = 0}$$</p>
@@ -703,36 +730,6 @@ $$\text{II) }f_y(x,y) = 0$$</p>
   <p>
 <p><b>Nr.10.5a)</b>
 <img src="image-32.png" width="500"></p>
-</div>
-<div style="border: 1px solid #7abd2d; padding: 15px; border-radius: 10px; font-family: sans-serif;">
-  <p><strong>Darstellungsform wählen:</strong></p>
-<p><button onclick="zeigeFormel('para')" style="cursor:pointer;">Parametrisierung</button>
-<button onclick="zeigeFormel('norm')" style="cursor:pointer;">Normalform</button></p>
-  <div style="margin-top: 15px; padding: 10px; background: #f0fdf0; min-height: 50px;">
-    <div id="formel-display"><i>Bitte eine Form wählen...</i></div>
-  </div>
-</div>
-<script>
-function zeigeFormel(typ) {
-  const display = document.getElementById('formel-display');
-  if(typ === 'para') {
-    display.innerHTML = "$\vec{x} = \vec{a} + r \cdot \vec{u} + s \cdot \vec{v}$";
-  } else if(typ === 'norm') {
-    display.innerHTML = "$$-\frac{F_x}{F_y}$$";
-  }
-  // Falls du KaTeX nutzt, müsste hier noch ein Befehl zum Rendern stehen.
-}
-</script>
-<p>
-  Wähle die Formel für: 
-  <select onchange="document.getElementById('formel-text').innerText = this.value;" style="padding: 5px;">
-    <option value="x = a + r*u + s*v">Parametrisierung</option>
-    <option value="$-\frac{F_x}{F_y}$">Normalform</option>
-    <option value="Ax + By + Cz = D">Koordinatenform</option>
-  </select>
-</p>
-<div style="margin-top: 10px; font-weight: bold; color: #2e7d32;">
-  Lösung: <span id="formel-text">...</span>
 </div>
 <h1 id="trigonometrieidentit%C3%A4ten"><strong>Trigonometrie/Identitäten</strong></h1>
 <!-- Der richtige Lerninhalt -->

@@ -291,6 +291,42 @@ Formel: $\boxed{-\frac{F_x}{F_y}}$
 
 
 # **Flächen**:
+<!-- Formelsammlung -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+
+<script>
+function zeigeFormel(typ) {
+  const display = document.getElementById('formel-display');
+  let formelText = "";
+
+  if(typ === 'para') {
+    formelText = "\\frac{F_y}{F_x}"; // Wichtig: Doppelte Backslashes in JS!
+  } else if(typ === 'norm') {
+    formelText = "-\\frac{F_x}{F_y}";
+  }
+
+  // Dieser Befehl rendert die Formel direkt in das Element
+  katex.render(formelText, display, {
+    throwOnError: false,
+    displayMode: true // Macht die Formel groß und zentriert
+  });
+}
+</script>
+
+<div id="formel-display" style="min-height: 50px; border: 1px dashed #ccc; padding: 10px;">
+  <i>Was ist d. Unterschied zw. beiden Vers. ...</i>
+</div>
+
+<button onclick="zeigeFormel('para')">Normale Gleichung</button>
+<button onclick="zeigeFormel('norm')">Parametisierte Gleichung</button>
+
+
+
+
+
+<!-- Inhalt -->
 ## Tangentialebene:
 
 Wenn ich Normalenvektor habe: $\nabla(x,y,z) = \begin{pmatrix} F_x \\ F_y \\ F_z \end{pmatrix}$ 
@@ -341,49 +377,6 @@ $$\boxed{\vec{n}_{normiert} = \frac{1}{\sqrt{(F_x)^2 + (F_y)^2 + (F_z)^2}} \cdot
 
 
 
-
-
-
-
-
-
-<div style="border: 1px solid #7abd2d; padding: 15px; border-radius: 10px; font-family: sans-serif;">
-  <p><strong>Darstellungsform wählen:</strong></p>
-  
-  <button onclick="zeigeFormel('para')" style="cursor:pointer;">Parametrisierung</button>
-  <button onclick="zeigeFormel('norm')" style="cursor:pointer;">Normalform</button>
-
-  <div style="margin-top: 15px; padding: 10px; background: #f0fdf0; min-height: 50px;">
-    <div id="formel-display"><i>Bitte eine Form wählen...</i></div>
-  </div>
-</div>
-
-<script>
-function zeigeFormel(typ) {
-  const display = document.getElementById('formel-display');
-  if(typ === 'para') {
-    display.innerHTML = "$\vec{x} = \vec{a} + r \cdot \vec{u} + s \cdot \vec{v}$";
-  } else if(typ === 'norm') {
-    display.innerHTML = "$$-\frac{F_x}{F_y}$$";
-  }
-  // Falls du KaTeX nutzt, müsste hier noch ein Befehl zum Rendern stehen.
-}
-</script>
-
-
-
-<p>
-  Wähle die Formel für: 
-  <select onchange="document.getElementById('formel-text').innerText = this.value;" style="padding: 5px;">
-    <option value="x = a + r*u + s*v">Parametrisierung</option>
-    <option value="$-\frac{F_x}{F_y}$">Normalform</option>
-    <option value="Ax + By + Cz = D">Koordinatenform</option>
-  </select>
-</p>
-
-<div style="margin-top: 10px; font-weight: bold; color: #2e7d32;">
-  Lösung: <span id="formel-text">...</span>
-</div>
 
 
 
