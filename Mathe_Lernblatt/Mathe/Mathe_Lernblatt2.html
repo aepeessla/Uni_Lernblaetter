@@ -680,7 +680,14 @@ $$\text{II) }f_y(x,y) = 0$$</p>
 </ul>
 <p>$$\boxed{\vec{n}_{normiert} = \frac{1}{\sqrt{(F_x)^2 + (F_y)^2 + (F_z)^2}} \cdot \begin{pmatrix} F_x \ F_y \ F_z \end{pmatrix}}$$</p>
 <h2 id="tangentialvektoren">Tangentialvektoren:</h2>
+<ul>
+<li>
+<p>$u = const$, $v = const$</p>
+</li>
+<li>
 <p>$\Phi_u, \Phi_v$ berechnen (einf. d. inneren Sachen n. d. Var. ableiten)</p>
+</li>
+</ul>
 <h3 id="unormalverktoru"><u>Normalverktor</u>:</h3>
 <ul>
 <li>Kreuzprodukt berechnen: $\Phi_u \times \Phi_v$
@@ -697,6 +704,25 @@ $$\text{II) }f_y(x,y) = 0$$</p>
 <p><b>Nr.10.5a)</b>
 <img src="image-32.png" width="500"></p>
 </div>
+<div style="border: 1px solid #7abd2d; padding: 15px; border-radius: 10px; font-family: sans-serif;">
+  <p><strong>Darstellungsform wählen:</strong></p>
+<p><button onclick="zeigeFormel('para')" style="cursor:pointer;">Parametrisierung</button>
+<button onclick="zeigeFormel('norm')" style="cursor:pointer;">Normalform</button></p>
+  <div style="margin-top: 15px; padding: 10px; background: #f0fdf0; min-height: 50px;">
+    <div id="formel-display"><i>Bitte eine Form wählen...</i></div>
+  </div>
+</div>
+<script>
+function zeigeFormel(typ) {
+  const display = document.getElementById('formel-display');
+  if(typ === 'para') {
+    display.innerHTML = "$\vec{x} = \vec{a} + r \cdot \vec{u} + s \cdot \vec{v}$";
+  } else if(typ === 'norm') {
+    display.innerHTML = "$(\vec{x} - \vec{a}) \cdot \vec{n} = 0$";
+  }
+  // Falls du KaTeX nutzt, müsste hier noch ein Befehl zum Rendern stehen.
+}
+</script>
 <h1 id="trigonometrieidentit%C3%A4ten"><strong>Trigonometrie/Identitäten</strong></h1>
 <!-- Der richtige Lerninhalt -->
 <table>

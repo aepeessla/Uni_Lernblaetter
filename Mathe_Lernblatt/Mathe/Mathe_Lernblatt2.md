@@ -309,13 +309,11 @@ $$\boxed{\vec{n}_{normiert} = \frac{1}{\sqrt{(F_x)^2 + (F_y)^2 + (F_z)^2}} \cdot
 ## Tangentialvektoren:
 * $u = const$, $v = const$
 
-$\Phi_u, \Phi_v$ berechnen (einf. d. inneren Sachen n. d. Var. ableiten)
+* $\Phi_u, \Phi_v$ berechnen (einf. d. inneren Sachen n. d. Var. ableiten)
 
 ### <u>Normalverktor</u>:
 * Kreuzprodukt berechnen: $\Phi_u \times \Phi_v$
 ![alt text](image-33.png)
-
-### <u>Normalverktor</u>:
 
 <p>
   <button popovertarget="Normalverktor" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">
