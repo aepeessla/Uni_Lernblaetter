@@ -426,8 +426,10 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
 ![alt text](image-77.png)
 ![alt text](image-78.png)
 ![alt text](image-79.png)
+<<<<<<< HEAD
 ## <u>**Gentransfer bei Pflanzen ?**</u>:
 * Agrobakterien: „natürliches“ Gentransfer System!
+=======
 
 ## <u>**Recap**</u>:
 ![alt text](image-80.png)
@@ -435,10 +437,201 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
 
 <hr>
 
+<a id="homologe_Rekombination"></a>
 ![alt text](image-82.png)
+![alt text](image-83.png)
+![alt text](image-85.png)
+![alt text](image-86.png)
+![alt text](image-87.png)
+![alt text](image-88.png)
+![alt text](image-90.png)
+![alt text](image-91.png)
+![alt text](image-92.png)
+![alt text](image-93.png)
+
+# Kurstag 1:
+## <u>Wrm. Bierhefe so ideal ?</u>
+* Gene seit mehreren Mio. Jahren nahzu unverändert $\implies$ homologe Gene $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ermögl.}}\ \ \ \ }$ Deletion durch homologe Rekombination
+* <span style="color: #fc0303;">Sie ist ein EUKARYOT</span>
+* günstig, klein leicht zu kreizen
+* kleines Genom: 6000 Gene, 16 Chromosomen
+* beinheltet: Knock-out, GFP(<span style="color: #fc0303;">Green Fluorescent Protein</span>), Überexpression
+
+## <u>Zellzyklus Bierhefe</u>:
+* **Knospierung**
+  
+  ![alt text](image-94.png)
+* Knospunksindex (<span style="color: #fc0303;">budding index</span>)
+  * $\frac{\text{Knospen+; Knospen-}}{\text{gesamt}}$
+
+## <u>Was passiert, wenn d. DNA beschädigt ist ?</u>:
+* <p>
+  <button popovertarget="G1-Phase" style="border:none; background:none; color: #1da828ff; text-decoration:underline; cursor:pointer;">
+    bleibt bei G2/M-Phase stehen
+  </button>
+</p> 
+
+<div id="G1-Phase" popover style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9em;">
+  D. ist genau so wie bei uns Menschen(GCK(Glucokinase)-Cyclin-Komplex)
+</div>
+
+* <u>Grund</u>: <b><span style="color: #fc0303;">DNA demage checkpoint</span></b> aktiviert $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ermögl.}}\ \ \ \ }$ Zelle **mehr Zeit** DNA-Schaden zu [reparieren](#homologe_Rekombination) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Verhinderung}}\ \ \ \ }$ Defektweitergabe an Tochterzelle
+
+## <u>Wie können wir einen DNA-Schaden auslösen?</u>:
+* <u>Verw.</u>: **temperatursensitives**(TS) Allel = $CDC13-Gen$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{ermögl.}}\ \ \ \ }$ gezieltes aktivieren v. DNA-Schäden $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Wie ?}}\ \ \ \ }$ normale Temp.(`permissiv`) $\to$ erhöhter Temp.(`restriktiv`)
+
+* unsere Hefe $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{hat}}\ \ \ \ }$ $cdc13-1$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{enthält}}\ \ \ \ }$ **Punktmutation** $P371S$
+  * permissiv: $\lt 25°$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{cdc13-1 funktioniert}}\ \ \ \ }$ normal (auch mit Mut.)
+  * restriktiv: $37°$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{cdc13-1 funktioniert}}\ \ \ \ }$ $\lnot$ normal $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Grund}}\ \ \ \ }$ Denaturierung
+* restriktive Temp $\to$ $cdc13$ defekt $\to$ Enden sind nackt $\to$ Zelle denkt, es ist ein DNA-Schaden $\to$ DNA damage checkpoint aktiviert $\implies$ Zellzyklus haltet bei G2-Phase an
+
+<span style="font-family: script MT"> Was bedeutet cdc13<b>-1</b>?</span>
+
+<span style="font-family: script MT">D. ist quazi d. Seriennummer d. Mut. & ist <b>nicht</b> spezifisch </span>
+
+## <u>Wie ist d. Paarungsweg v. Bierhefe ?</u>:
+* ***mating pathway***
+* können sich **diploid**($2n$) oder **haploid**($1n$) vermehren
+$$
+\text{2 mating types} = 
+\begin{cases} 
+  MATa\\ 
+  MAT \alpha 
+\end{cases}
+= \text{MATa/MAT}\alpha 
+$$
+![alt text](image-96.png)
+
+## <u>Wie sagen sie sich gegenseitig wo sie sind ?</u>:
+* đ <b><span style="color: #fc0303;">Pheramone</span></b>
+
+* $\text{MATa} \xrightleftharpoons[\text{Faktor } \alpha]{\text{Faktor a}} \text{MAT}\alpha$
+
+![alt text](image-99.png)
+
+* Oberfläche = G-Protein ($G\alpha$; $G\beta$; $G\gamma$) $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Kontakt}}\ \ \ \ }$ Pheramon $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Aktivierung}}\ \ \ \ }$ Kinase Signalkaskade
+
+* <u>Was ist PRE</u> ?
+  * Pheromone Reponse Element
+>>>>>>> de0571c4b2b6b2fd102c630c0a1dbb2bc590141e
+
+## <u>**Recap**</u>:
+![alt text](image-80.png)
+![alt text](image-81.png)
+
+<<<<<<< HEAD
+<hr>
+
+![alt text](image-82.png)
+=======
+## <u>Aus was besteht d. MAPK-Signalweg ?</u>:
+* aus 3 Kinasen:
+
+MEKK $\to$ MEK $\to$ MAPKs
+
+* Shmoobildung $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{anhalten}}\ \ \ \ }$ G1 $\implies$ ~200 Gene abgeschaltet
+
+## <u>Was wenn $STE-Gen$ defekt?</u>:
+* Zelle = **steril**
+
+## <u>Wo spielen d. MAPK bei Menschen eine Rolle?</u>:
+* Wachstumskontrolle (Krebs!)
+* Wahrnehmung v. Licht
+* Entzündungsreaktinen
+
+## <u>Was sind d. Ergebnisse bei den Kombinationen?</u>:
+<p>
+  <button popovertarget="Kombi 1" style="border:none; background:none; color: #ff0090ff; text-decoration:underline; cursor:pointer;">
+    Wildtyp MATa + α-Faktor
+  </button>
+</p> 
+
+<div id="Kombi 1" popover style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9em;">
+  Shmoo-Bildung: Alles intakt (G-Protein, MAPK, STE-System)
+</div>
+<p>
+  <button popovertarget="Kombi 2" style="border:none; background:none; color: #ff0090ff; text-decoration:underline; cursor:pointer;">
+    Wildtyp MATα + α-Faktor
+  </button>
+</p> 
+
+<div id="Kombi 2" popover style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9em;">
+  keine Shmoobildung: Besitzt keine Rezeptoren, um sich von seinem eigenen Pheromon angezogen zu werden.
+</div>
+<p>
+  <button popovertarget="Kombi 3" style="border:none; background:none; color: #ff0090ff; text-decoration:underline; cursor:pointer;">
+    ste12 MATa + α-Faktor
+  </button>
+</p> 
+
+<div id="Kombi 3" popover style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9em;">
+  Keine Shmoobildung: Am Ende fehlt d. Stimme, d. das Signal weiter gibt. 
+</div>
+
+## <u>Was ist d. Unters. zw. Genen v. Prok. & Euka.?</u>:
+$
+\left\{
+\begin{matrix}
+\text{Prok.} \to & \text{immer an} \\
+\text{Euka.}  \to & \text{immer ausgeschaltet}
+\end{matrix}1^9
+\right. 
+$
+
+## <u>Wie sehen Gene bei Eukaryoten aus?</u>:
+* $\overset{\text{(upstream)}}{\text{Promotor}} \ \to \overset{\text{(downstream)}}{\text{Gen}}$
+* Promotor = Hauptregulator
+* Davor muss Thema: Methylierung/Acetylierung; Histone; lineare DNA !
+
+## <u>Was ist d. wichtigste Stelle des Promotors ?</u>:
+* $\overset{\text{ helfen GTF hierhin zu locken, 50 bis 200bp vor...}}{\text{promotor proximal elements}} \to \overset{\text{30bp vor ...}}{\text{TATA-Box}} \to \overset{\text{hier landet RNA-POL II}}{\text{Transkriptionsstart}} \to \text{codierendes Gen}$ 
+
+![alt text](image-100.png)
 
 
+* $\text{GTF: } \
+\begin{matrix}
+TFIIF \\
+TFIIH \\
+TFIII
+\end{matrix}
+$
+>>>>>>> de0571c4b2b6b2fd102c630c0a1dbb2bc590141e
 
+* Acetylierung damit TATA-Box frei $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Bindung}}\ \ \ \ }$ $\overset{\text{(TATA-binding protein)}}{\text{TBP}}$ + $TFIID$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{GTF gerufen}}\ \ \ \ }$ $RNA-POL II$ in Komplex eingebunden $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Bildung}}\ \ \ \ }$ ***Präinitiationskomplex*** $\implies$ $RNA-POL II$ nun föllig stabil pos. $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{TFIIH}\ \ \ \ }$ phospholisiert POL-Schwanz $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{RNA-POL II}}\ \ \ \ }$ beginnt ***Elogation***
+
+## <u>Ausschalten d. Gene durch Galaktose</u>:
+* Normal:  Bierhefe; Galaktose $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{wandeln um}}\ \ \ \ }$ Glucose
+* <u>Wie</u>:
+  * ***GAL-Genen***
+  * Galaktose im Medium $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{anschalten}}\ \ \ \ }$ $Gal4$-Transkriptionsfaktoren
+  * $Gal4$ durch $\overset{\text{Repressor}}{Gal80}$  gehemmt
+
+  * $\overset{\text{Induktor f. } Gal3}{Galactose}$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{bindet an}}\ \ \ \ }$ Gal80 $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Konformationsänderung}}\ \ \ \ }$ Gal80 löst sich v. Gal4: <span style="color: #fc0303;">Dissoziation</span> $\implies$ Gen angeschaltet
+
+* <span style="color: #fc0303;">LacZ als <b>Reportergen</b></span>
+  * $LacZ \underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{codiert f.}}\ \ \ \ }$ $\beta$-Galactosidase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{wandelt ONPG um}}\ \ \ \ }$ Gelbe Farbe
+
+## <u>Mischkreuz-Logik</u>:
+* Formel: $C_1V_1 = C_2V_2$
+  * $C_1$ = Wie stark ist d. Substanz in d. Flasche ? (Bsp.: 20% $\alpha$-Faktor)
+  * $V_1$ = Wie viel muss ich mit d. Pipette aufziehen ? (Anfangskonzentration v. Kolonie + $V_1$)
+  * $C_2$ = Wie stark soll d. Mischung im Reagenzglas am Ende sein? (Bsp.: 2%)
+  * $V_2$ = Wie viel Flüssigkeit ist am Ende im Reagenzglas = (Bsp.: 2%)
+
+## <u>In welcher Zellzyklus hält die DNA-Schaden-KOntrollpunkt die cdc13-1 Zellen bei restriktiver Temperatur an ?</u>:
+* G2/M-Phase
+* 27° Telomer-Enden $\lnot$ richtig geschützt $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Zelle intepretiert}}\ \ \ \ }$ gefährl. DNA-Doppelstrangbruch $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Aktivierung}}\ \ \ \ }$ DNA damage checkpoint $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Gibt mehr Zeit}}\ \ \ \ }$ Mutterzelle kann Fehler beheben $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Tochterzelle}}\ \ \ \ }$ bekommt dann, wenn alles gut gelaufen ist, d. gesunde Gen
+
+## <u>Inwelchem Zellzyklus bilden sie ein Shmoo ?</u>:
+* G1-Phase $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Grund}}\ \ \ \ }$ beiden müssen haploid(1n) sein
+ 
+## <u>Welche molekularen Vorgänge liegen d. Zygotebildung zugrunde ? ?</u>:
+1) Erkennung: Pheromon
+2) Bilden einer klebrigen Oberfläche, damit sie zsm.kleben können
+3) Shmooing
+4) Zellwand-Fusion: Zellwand durch Enzyme abgebaut und neu verbunden
+5) Kernverschmelzung: $2n$
 
 
 
