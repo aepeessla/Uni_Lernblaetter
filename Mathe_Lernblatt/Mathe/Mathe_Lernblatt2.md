@@ -249,8 +249,9 @@ $$\text{II) }f_y(x,y) = 0$$
   <img src="image-30.png" width="500">
 </div>
 
+# **Kurvendiskussion mit mehreren Veränderlichen und einer Nebenbedingung**
 
-
+![alt text](image-31.png)
 
 
 
