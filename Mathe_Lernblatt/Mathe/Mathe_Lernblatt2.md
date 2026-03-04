@@ -269,35 +269,39 @@ $$\text{II) }f_y(x,y) = 0$$
 <b><span style="color: #fc0303;">Wichtig ist, dass bei F(x,y) am Ende = 0 steht!</span></b>
 
 ## **Normale Gleichung**:
-Formel: $-\frac{F_x}{F_y}$
+Formel: $\boxed{-\frac{F_x}{F_y}}$
 
 ## **Parametische GLeichung**:
-* **Formel**: $y'(x) = \frac{\dot{y}(t)}{\dot{x}(t)}$
+* **Formel**: $\boxed{y'(x) = \frac{\dot{y}(t)}{\dot{x}(t)}}$
 
 ## **Normale Gleichung mit mehreren Veränderlichen**:
-Formel: $-\frac{F_x}{F_y}$
+* **Formel**: $\boxed{-\frac{F_x}{{\underset{d. was gesucht ist}{F_y}}}}$
+
+# **Taylor Polynom**:
+
+## $\mathbb{R}$:
+
+* Formel: $\boxed{T_f^{\text{n}}(x, x_0) = \sum_{k = 0}^n \frac{f(x)^{(k)}}{k}(x-x_0)^k}$ 
+
+## $\mathbb{R^n}$:
+
+* Formel: $\boxed{T_f^{\text{n}}(\overset{x,y,z,\dots}{M}) = \sum_{k = 0}^n \frac{\nabla^k_f}{k}(x,y,z,\dots)^T}$ 
+  * <span style="color: #fc0303;">Hier haben wir kein $()^k$ bei $(x-x_0)$</span>
 
 
 
+# **Flächen**:
 
+## Normalverktor:
+* implizite Fläche:
 
+$\boxed{\vec{n} = \nabla F(x,y,z) = \begin{pmatrix} F_x \\ F_y \\ F_z \end{pmatrix}}$
+  * <span style="color: #fc0303;">Man muss es nicht in den Bruch packen, sondern kann es einfach in $\nabla$ einfügen</span>
 
+## Tangentialebene:
+Wenn ich Normalenvektor habe: $\vec{n} = \begin{pmatrix} n_x \\ n_y \\ n_z \end{pmatrix}$ 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$\boxed{n_x \cdot (x - x_0) + n_y \cdot (y - y_0) + n_z \cdot (z - z_0) = 0}$
 
 
 

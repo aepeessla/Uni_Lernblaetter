@@ -644,13 +644,40 @@ $$\text{II) }f_y(x,y) = 0$$</p>
 <h1 id="implizierte-ableitung"><strong>Implizierte Ableitung</strong></h1>
 <p><b><span style="color: #fc0303;">Wichtig ist, dass bei F(x,y) am Ende = 0 steht!</span></b></p>
 <h2 id="normale-gleichung"><strong>Normale Gleichung</strong>:</h2>
-<p>Formel: $-\frac{F_x}{F_y}$</p>
+<p>Formel: $\boxed{-\frac{F_x}{F_y}}$</p>
 <h2 id="parametische-gleichung"><strong>Parametische GLeichung</strong>:</h2>
 <ul>
-<li><strong>Formel</strong>: $y'(x) = \frac{\dot{y}(t)}{\dot{x}(t)}$</li>
+<li><strong>Formel</strong>: $\boxed{y'(x) = \frac{\dot{y}(t)}{\dot{x}(t)}}$</li>
 </ul>
 <h2 id="normale-gleichung-mit-mehreren-ver%C3%A4nderlichen"><strong>Normale Gleichung mit mehreren Veränderlichen</strong>:</h2>
-<p>Formel: $-\frac{F_x}{F_y}$</p>
+<ul>
+<li><strong>Formel</strong>: $\boxed{-\frac{F_x}{{\underset{d. was gesucht ist}{F_y}}}}$</li>
+</ul>
+<h1 id="taylor-polynom"><strong>Taylor Polynom</strong>:</h1>
+<h2 id="mathbbr">$\mathbb{R}$:</h2>
+<ul>
+<li>Formel: $\boxed{T_f^{\text{n}}(x, x_0) = \sum_{k = 0}^n \frac{f(x)^{(k)}}{k}(x-x_0)^k}$</li>
+</ul>
+<h2 id="mathbbrn">$\mathbb{R^n}$:</h2>
+<ul>
+<li>Formel: $\boxed{T_f^{\text{n}}(\overset{x,y,z,\dots}{M}) = \sum_{k = 0}^n \frac{\nabla^k_f}{k}(x,y,z,\dots)^T}$
+<ul>
+<li><span style="color: #fc0303;">Hier haben wir kein $()^k$ bei $(x-x_0)$</span></li>
+</ul>
+</li>
+</ul>
+<h1 id="fl%C3%A4chen"><strong>Flächen</strong>:</h1>
+<h2 id="normalverktor">Normalverktor:</h2>
+<ul>
+<li>implizite Fläche:</li>
+</ul>
+<p>$\boxed{\vec{n} = \nabla F(x,y,z) = \begin{pmatrix} F_x \ F_y \ F_z \end{pmatrix}}$</p>
+<ul>
+<li><span style="color: #fc0303;">Man muss es nicht in den Bruch packen, sondern kann es einfach in $\nabla$ einfügen</span></li>
+</ul>
+<h2 id="tangentialebene">Tangentialebene:</h2>
+<p>Wenn ich Normalenvektor habe: $\vec{n} = \begin{pmatrix} n_x \ n_y \ n_z \end{pmatrix}$</p>
+<p>$\boxed{n_x \cdot (x - x_0) + n_y \cdot (y - y_0) + n_z \cdot (z - z_0) = 0}$</p>
 <h1 id="trigonometrieidentit%C3%A4ten"><strong>Trigonometrie/Identitäten</strong></h1>
 <!-- Der richtige Lerninhalt -->
 <table>
