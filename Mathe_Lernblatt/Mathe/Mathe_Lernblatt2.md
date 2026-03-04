@@ -293,19 +293,34 @@ Formel: $\boxed{-\frac{F_x}{F_y}}$
 # **Flächen**:
 ## Tangentialebene:
 
-Wenn ich Normalenvektor habe: $F(x,y,z) = \begin{pmatrix} F_x \\ F_y \\ F_z \end{pmatrix}$ 
+Wenn ich Normalenvektor habe: $\nabla(x,y,z) = \begin{pmatrix} F_x \\ F_y \\ F_z \end{pmatrix}$ 
 
 $$\boxed{F_x \cdot (x - x_0) + F_y \cdot (y - y_0) + F_z \cdot (z - z_0) = 0}$$
-  * $x_0, y_0, z_0$ snd d. Punkte, d. geg. sind
+  * $x_0, y_0, z_0$ sind d. Punkte, d. geg. sind
 
 ## Normalverktor:
-* implizite Fläche:
 
-$\boxed{\vec{n} = \nabla F(x,y,z) = \begin{pmatrix} F_x \\ F_y \\ F_z \end{pmatrix}}$
-  * <span style="color: #fc0303;">Man muss es nicht in den Bruch packen, sondern kann es einfach in $\nabla$ einfügen</span>
+$$\boxed{\vec{n} = \nabla F(x,y,z) = \begin{pmatrix} F_x \\ F_y \\ F_z \end{pmatrix}}$$
+
+* <span style="color: #fc0303;">Man muss es nicht in den Bruch packen, sondern kann es einfach in $\nabla$ einfügen</span>
+
+$$\boxed{\vec{n}_{normiert} = \frac{1}{\sqrt{(F_x)^2 + (F_y)^2 + (F_z)^2}} \cdot \begin{pmatrix} F_x \\ F_y \\ F_z \end{pmatrix}}$$
 
 
 
+<p>
+  <button popovertarget="Normalverktor" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">
+    Aufgaben
+  </button> 
+</p>
+
+<div id="Normalverktor" popover style="padding: 15px; border-radius: 15px; border: 1px solid #ff016fff; max-width: 300px; background-color: #edededff">
+  <u><b>Übung 10</b></u>
+  <p>
+
+  <b>Nr.10.5a)</b>
+  <img src="image-32.png" width="500">
+</div>
 
 
 
