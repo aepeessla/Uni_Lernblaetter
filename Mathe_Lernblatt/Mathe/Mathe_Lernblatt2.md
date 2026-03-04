@@ -291,6 +291,13 @@ Formel: $\boxed{-\frac{F_x}{F_y}}$
 
 
 # **Flächen**:
+## Tangentialebene:
+
+Wenn ich Normalenvektor habe: $F(x,y,z) = \begin{pmatrix} F_x \\ F_y \\ F_z \end{pmatrix}$ 
+
+$n_x = \overset{\text{Geg. Punkte}}{F_x(x_0,y_0,z_0)}$ 
+$\boxed{n_x \cdot (x - x_0) + n_y \cdot (y - y_0) + n_z \cdot (z - z_0) = 0}$
+
 
 ## Normalverktor:
 * implizite Fläche:
@@ -298,10 +305,6 @@ Formel: $\boxed{-\frac{F_x}{F_y}}$
 $\boxed{\vec{n} = \nabla F(x,y,z) = \begin{pmatrix} F_x \\ F_y \\ F_z \end{pmatrix}}$
   * <span style="color: #fc0303;">Man muss es nicht in den Bruch packen, sondern kann es einfach in $\nabla$ einfügen</span>
 
-## Tangentialebene:
-Wenn ich Normalenvektor habe: $\vec{n} = \begin{pmatrix} n_x \\ n_y \\ n_z \end{pmatrix}$ 
-
-$\boxed{n_x \cdot (x - x_0) + n_y \cdot (y - y_0) + n_z \cdot (z - z_0) = 0}$
 
 
 
