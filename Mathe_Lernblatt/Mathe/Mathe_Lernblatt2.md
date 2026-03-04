@@ -60,7 +60,19 @@
     border-bottom: 1px solid #ccc;
   }
 </style>
+<!-- Sammlung -->
+<script>
+function universalRender(buttonElement, formel) {
+  // Wir suchen das Display, das im SELBEN Container (formel-box) wie der Button liegt
+  const parent = buttonElement.closest('.formel-box');
+  const display = parent.querySelector('.display');
 
+  katex.render(formel, display, {
+    throwOnError: false,
+    displayMode: true 
+  });
+}
+</script>
 
 
 
@@ -368,40 +380,36 @@ $$\boxed{\vec{n}_{normiert} = \frac{1}{\sqrt{(F_x)^2 + (F_y)^2 + (F_z)^2}} \cdot
 
 
 
-
-
 ## Rotationskörper:
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<div class="formel-box" style="border: 1px solid #cf22c7; padding: 10px; margin-bottom: 20px;">
+  
+  <div class="display" style="min-height: 50px; border: 1px dashed #ccc; margin-bottom: 10px;">
+    <i>Formeln</i>
+  </div>
 
-<script>
-function zeigeFormel(typ) {
-  const display = document.getElementById('formel-display2');
-  let formelText = "";
-
-  if(typ === 'rot') {
-    // Doppelter Backslash vor pi, int und dx! 
-    // Das 'V' braucht keinen Backslash, außer du willst ein spezielles Symbol.
-    formelText = "V = \\pi \\cdot \\int_{a}^{b} [f(x)]^2 \\, dx"; 
-  } else if(typ === 'norm') {
-    // Auch hier: Doppelter Backslash vor frac
-    formelText = "-\\frac{F_x}{F_y}";
-  }
-
-  katex.render(formelText, display, {
-    throwOnError: false,
-    displayMode: true 
-  });
-}
-</script>
-
-<div id="formel-display2" style="min-height: 50px; border: 1px dashed #ccc; padding: 10px;">
-  <i>Formeln</i>
+  <button onclick="universalRender(this, 'V = \\pi \\cdot \\int [f(x)]^2 dx')">Rotation</button>
 </div>
 
-<button onclick="zeigeFormel('rot')">Rotationskörper Formel</button>
-<button onclick="zeigeFormel('norm')">Parametisierte Gleichung</button>
+## Normalbereich:
+
+* <u><b>2 Arten</b></u>:
+  * **Normalbereich bzgl. x-Achse**: $X = \{ (x, y) \in \mathbb{R}^2 \mid a \le x \le b, \, g_1(x) \le y \le g_2(x) \}$
+  * **Normalbereich bzgl. y-Achse**: $X = \{ (x, y) \in \mathbb{R}^2 \mid c \le y \le d, \, h_1(y) \le x \le h_2(y) \}$
+
+### Rechenschritte:
+1. N. Zielvar. umstellen
+2. Schnittstellen berechnen
+3. Intervall festlegen
+
+<div class="formel-box" style="border: 1px solid #22cf56; padding: 10px; margin-bottom: 20px;">
+  
+  <div class="display" style="min-height: 50px; border: 1px dashed #ccc; margin-bottom: 10px;">
+    <i>Formeln</i>
+  </div>
+
+  <button onclick="universalRender(this, 'V = \\pi \\cdot \\int [f(x)]^2 dx')">Rotation</button>
+</div>
 
 
 
