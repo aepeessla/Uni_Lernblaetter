@@ -254,13 +254,263 @@ $$\text{II) }f_y(x,y) = 0$$
 ![alt text](image-31.png)
 
 ## **Lagrange-Funktion**:
-* <u>Allgem. Schritte</u>:
-1) Nebenbedingung
-2) Lagrange-Funktion
-3) 1.Ableitung
-4) KP
-5) 2.Ableitungen
-6) geränderte Matrix
+### <u>**Allgem. Schritte**</u>:
+
+1. <u>Nebenbedingung</u>:
+* $\forall$ auf eine Seite bringen, sodass auf einer Seite = 0 steht
+2. <u>Lagrange-Funktion</u>
+* $L(x,y,\lambda) = f(x,y) + \lambda \cdot (\text{Nebenbedingung})$
+3. <u>1.Ableitung</u>
+4. <u>KP</u>
+5. <u>2.Ableitungen</u>
+6. <u>geränderte Matrix</u>
+
+# **Implizierte Ableitung**
+<b><span style="color: #fc0303;">Wichtig ist, dass bei F(x,y) am Ende = 0 steht!</span></b>
+
+## **Normale Gleichung**:
+Formel: $-\frac{F_x}{F_y}$
+
+## **Parametische GLeichung**:
+* **Formel**: $y'(x) = \frac{\dot{y}(t)}{\dot{x}(t)}$
+
+## **Normale Gleichung mit mehreren Veränderlichen**:
+Formel: $-\frac{F_x}{F_y}$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
