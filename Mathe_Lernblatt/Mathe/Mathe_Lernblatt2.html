@@ -731,6 +731,34 @@ function zeigeFormel(typ) {
 <p><b>Nr.10.5a)</b>
 <img src="image-32.png" width="500"></p>
 </div>
+<h2 id="rotationsk%C3%B6rper">Rotationskörper:</h2>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script>
+function zeigeFormel(typ) {
+  const display = document.getElementById('formel-display');
+  let formelText = "";
+
+  if(typ === 'rot') {
+    // Doppelter Backslash vor pi, int und dx! 
+    // Das 'V' braucht keinen Backslash, außer du willst ein spezielles Symbol.
+    formelText = "V = \\pi \\cdot \\int_{a}^{b} [f(x)]^2 \\, dx"; 
+  } else if(typ === 'norm') {
+    // Auch hier: Doppelter Backslash vor frac
+    formelText = "-\\frac{F_x}{F_y}";
+  }
+
+  katex.render(formelText, display, {
+    throwOnError: false,
+    displayMode: true 
+  });
+}
+</script>
+<div id="formel-display" style="min-height: 50px; border: 1px dashed #ccc; padding: 10px;">
+  <i>Formeln</i>
+</div>
+<p><button onclick="zeigeFormel('rot')">Rotationskörper Formel</button>
+<button onclick="zeigeFormel('norm')">Parametisierte Gleichung</button></p>
 <h1 id="trigonometrieidentit%C3%A4ten"><strong>Trigonometrie/Identitäten</strong></h1>
 <!-- Der richtige Lerninhalt -->
 <table>

@@ -370,7 +370,38 @@ $$\boxed{\vec{n}_{normiert} = \frac{1}{\sqrt{(F_x)^2 + (F_y)^2 + (F_z)^2}} \cdot
 
 
 
+## Rotationskörper:
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+
+<script>
+function zeigeFormel(typ) {
+  const display = document.getElementById('formel-display');
+  let formelText = "";
+
+  if(typ === 'rot') {
+    // Doppelter Backslash vor pi, int und dx! 
+    // Das 'V' braucht keinen Backslash, außer du willst ein spezielles Symbol.
+    formelText = "V = \\pi \\cdot \\int_{a}^{b} [f(x)]^2 \\, dx"; 
+  } else if(typ === 'norm') {
+    // Auch hier: Doppelter Backslash vor frac
+    formelText = "-\\frac{F_x}{F_y}";
+  }
+
+  katex.render(formelText, display, {
+    throwOnError: false,
+    displayMode: true 
+  });
+}
+</script>
+
+<div id="formel-display" style="min-height: 50px; border: 1px dashed #ccc; padding: 10px;">
+  <i>Formeln</i>
+</div>
+
+<button onclick="zeigeFormel('rot')">Rotationskörper Formel</button>
+<button onclick="zeigeFormel('norm')">Parametisierte Gleichung</button>
 
 
 
