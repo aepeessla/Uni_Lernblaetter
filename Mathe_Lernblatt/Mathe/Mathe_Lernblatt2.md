@@ -347,11 +347,44 @@ $$\boxed{\vec{n}_{normiert} = \frac{1}{\sqrt{(F_x)^2 + (F_y)^2 + (F_z)^2}} \cdot
 
 
 
+<div style="border: 1px solid #7abd2d; padding: 15px; border-radius: 10px; font-family: sans-serif;">
+  <p><strong>Darstellungsform wählen:</strong></p>
+  
+  <button onclick="zeigeFormel('para')" style="cursor:pointer;">Parametrisierung</button>
+  <button onclick="zeigeFormel('norm')" style="cursor:pointer;">Normalform</button>
+
+  <div style="margin-top: 15px; padding: 10px; background: #f0fdf0; min-height: 50px;">
+    <div id="formel-display"><i>Bitte eine Form wählen...</i></div>
+  </div>
+</div>
+
+<script>
+function zeigeFormel(typ) {
+  const display = document.getElementById('formel-display');
+  if(typ === 'para') {
+    display.innerHTML = "$\vec{x} = \vec{a} + r \cdot \vec{u} + s \cdot \vec{v}$";
+  } else if(typ === 'norm') {
+    display.innerHTML = "$(\vec{x} - \vec{a}) \cdot \vec{n} = 0$";
+  }
+  // Falls du KaTeX nutzt, müsste hier noch ein Befehl zum Rendern stehen.
+}
+</script>
 
 
 
+<p>
+  Wähle die Formel für: 
+  <select onchange="document.getElementById('formel-text').innerText = this.value;" style="padding: 5px;">
+    <option value="---">bitte wählen</option>
+    <option value="x = a + r*u + s*v">Parametrisierung</option>
+    <option value="(x - a) * n = 0">Normalform</option>
+    <option value="Ax + By + Cz = D">Koordinatenform</option>
+  </select>
+</p>
 
-
+<div style="margin-top: 10px; font-weight: bold; color: #2e7d32;">
+  Lösung: <span id="formel-text">...</span>
+</div>
 
 
 
