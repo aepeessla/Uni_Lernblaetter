@@ -364,7 +364,7 @@ function zeigeFormel(typ) {
   if(typ === 'para') {
     display.innerHTML = "$\vec{x} = \vec{a} + r \cdot \vec{u} + s \cdot \vec{v}$";
   } else if(typ === 'norm') {
-    display.innerHTML = "$(\vec{x} - \vec{a}) \cdot \vec{n} = 0$";
+    display.innerHTML = "$$-\frac{F_x}{F_y}$$";
   }
   // Falls du KaTeX nutzt, müsste hier noch ein Befehl zum Rendern stehen.
 }
@@ -376,7 +376,7 @@ function zeigeFormel(typ) {
   Wähle die Formel für: 
   <select onchange="document.getElementById('formel-text').innerText = this.value;" style="padding: 5px;">
     <option value="x = a + r*u + s*v">Parametrisierung</option>
-    <option value="(x - a) * n = 0">Normalform</option>
+    <option value="$-\frac{F_x}{F_y}$">Normalform</option>
     <option value="Ax + By + Cz = D">Koordinatenform</option>
   </select>
 </p>
