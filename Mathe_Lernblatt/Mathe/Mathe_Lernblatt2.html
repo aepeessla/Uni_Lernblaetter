@@ -723,6 +723,18 @@ function zeigeFormel(typ) {
   // Falls du KaTeX nutzt, müsste hier noch ein Befehl zum Rendern stehen.
 }
 </script>
+<p>
+  Wähle die Formel für: 
+  <select onchange="document.getElementById('formel-text').innerText = this.value;" style="padding: 5px;">
+    <option value="---">bitte wählen</option>
+    <option value="x = a + r*u + s*v">Parametrisierung</option>
+    <option value="(x - a) * n = 0">Normalform</option>
+    <option value="Ax + By + Cz = D">Koordinatenform</option>
+  </select>
+</p>
+<div style="margin-top: 10px; font-weight: bold; color: #2e7d32;">
+  Lösung: <span id="formel-text">...</span>
+</div>
 <h1 id="trigonometrieidentit%C3%A4ten"><strong>Trigonometrie/Identitäten</strong></h1>
 <!-- Der richtige Lerninhalt -->
 <table>
