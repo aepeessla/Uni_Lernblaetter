@@ -295,7 +295,7 @@ Formel: $\boxed{-\frac{F_x}{F_y}}$
 
 Wenn ich Normalenvektor habe: $F(x,y,z) = \begin{pmatrix} F_x \\ F_y \\ F_z \end{pmatrix}$ 
 
-* $\boxed{F_x \cdot (x - x_0) + F_y \cdot (y - y_0) + F_z \cdot (z - z_0) = 0}$
+$$\boxed{F_x \cdot (x - x_0) + F_y \cdot (y - y_0) + F_z \cdot (z - z_0) = 0}$$
   * $x_0, y_0, z_0$ snd d. Punkte, d. geg. sind
 
 ## Normalverktor:
