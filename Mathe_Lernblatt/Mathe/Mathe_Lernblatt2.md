@@ -249,9 +249,18 @@ $$\text{II) }f_y(x,y) = 0$$
   <img src="image-30.png" width="500">
 </div>
 
-# **Kurvendiskussion mit mehreren Veränderlichen und einer Nebenbedingung**
+# **Kurvendiskussion mit mehreren Veränderlichen & einer Nebenbedingung**
 
 ![alt text](image-31.png)
+
+## **Lagrange-Funktion**:
+* <u>Allgem. Schritte</u>:
+1) Nebenbedingung
+2) Lagrange-Funktion
+3) 1.Ableitung
+4) KP
+5) 2.Ableitungen
+6) geränderte Matrix
 
 
 
