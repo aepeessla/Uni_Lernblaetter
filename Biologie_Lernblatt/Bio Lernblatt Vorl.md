@@ -425,10 +425,17 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
 ![alt text](image-76.png)
 ![alt text](image-77.png)
 ![alt text](image-78.png)
+![alt text](image-79.png)
+## <u>**Gentransfer bei Pflanzen ?**</u>:
+* Agrobakterien: „natürliches“ Gentransfer System!
 
+## <u>**Recap**</u>:
+![alt text](image-80.png)
+![alt text](image-81.png)
 
+<hr>
 
-
+![alt text](image-82.png)
 
 
 
