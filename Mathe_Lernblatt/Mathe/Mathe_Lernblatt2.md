@@ -375,7 +375,6 @@ function zeigeFormel(typ) {
 <p>
   Wähle die Formel für: 
   <select onchange="document.getElementById('formel-text').innerText = this.value;" style="padding: 5px;">
-    <option value="---">bitte wählen</option>
     <option value="x = a + r*u + s*v">Parametrisierung</option>
     <option value="(x - a) * n = 0">Normalform</option>
     <option value="Ax + By + Cz = D">Koordinatenform</option>
