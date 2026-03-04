@@ -377,7 +377,7 @@ $$\boxed{\vec{n}_{normiert} = \frac{1}{\sqrt{(F_x)^2 + (F_y)^2 + (F_z)^2}} \cdot
 
 <script>
 function zeigeFormel(typ) {
-  const display = document.getElementById('formel-display');
+  const display = document.getElementById('formel-display2');
   let formelText = "";
 
   if(typ === 'rot') {
@@ -396,7 +396,7 @@ function zeigeFormel(typ) {
 }
 </script>
 
-<div id="formel-display" style="min-height: 50px; border: 1px dashed #ccc; padding: 10px;">
+<div id="formel-display2" style="min-height: 50px; border: 1px dashed #ccc; padding: 10px;">
   <i>Formeln</i>
 </div>
 
