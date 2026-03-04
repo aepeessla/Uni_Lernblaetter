@@ -306,7 +306,16 @@ $$\boxed{\vec{n} = \nabla F(x,y,z) = \begin{pmatrix} F_x \\ F_y \\ F_z \end{pmat
 
 $$\boxed{\vec{n}_{normiert} = \frac{1}{\sqrt{(F_x)^2 + (F_y)^2 + (F_z)^2}} \cdot \begin{pmatrix} F_x \\ F_y \\ F_z \end{pmatrix}}$$
 
+## Tangentialvektoren:
+* $u = const$, $v = const$
 
+$\Phi_u, \Phi_v$ berechnen (einf. d. inneren Sachen n. d. Var. ableiten)
+
+### <u>Normalverktor</u>:
+* Kreuzprodukt berechnen: $\Phi_u \times \Phi_v$
+![alt text](image-33.png)
+
+### <u>Normalverktor</u>:
 
 <p>
   <button popovertarget="Normalverktor" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">
