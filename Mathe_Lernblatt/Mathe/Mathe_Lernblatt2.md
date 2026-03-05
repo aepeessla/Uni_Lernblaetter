@@ -487,10 +487,37 @@ $$\boxed{\vec{n}_{normiert} = \frac{1}{\sqrt{(F_x)^2 + (F_y)^2 + (F_z)^2}} \cdot
 </div>
 
 
+## div $f$, rot $f$:
+* div f = Divergenz
+* rot f = Rotation
+
+<div class="formel-box" style="border: 1px solid #2225cf; padding: 10px; margin-bottom: 20px;">
+  
+  <div class="display" style="min-height: 50px; border: 1px dashed #ccc; margin-bottom: 10px;">
+    <i>Formel</i>
+  </div>
+
+  <button onclick="universalRender(this, 'f(x,y,z) = \\begin{pmatrix} F_1 \\ F_2 \\ F_3 \\end{pmatrix}\\text{div} f = \\frac{\\partial F_1}{\\partial x} + \\frac{\\partial F_2}{\\partial y} + \\frac{\\partial F_3}{\\partial z}')">div f</button>
 
 
 
 
+  <button onclick="universalRender(this, '\\text{rot} f = \\begin{pmatrix} \\frac{\\partial F_3}{\\partial y} - \\frac{\\partial F_2}{\\partial z} \\ \\frac{\\partial F_1}{\\partial z} - \\frac{\\partial F_3}{\\partial x} \\ \\frac{\\partial F_2}{\\partial x} - \\frac{\\partial F_1}{\\partial y} \\end{pmatrix}')">rot f</button>
+</div>
+
+### <u>**div f**</u>:
+* Quellenstärke:
+  * fließt mehr Zeug n. außen (***Quelle***) oder wird mehr Zeug eingesaugt (***Senke***)
+    * $\text{div} f > 0$: Du hast eine Quelle (z. B. ein Wasserhahn unter Wasser oder ein explodierender Luftballon). D. Feld drückt n. außen.
+    * $\text{div} f < 0$: Du hast eine Senke (z. B. d. Abfluss in d. Badewanne). D. Feld zieht n. innen.
+    * $\text{div} f = 0$: Das Feld ist quellenfrei (z. B. ein ruhiger Fluss). Es fließt genau so viel in den Punkt hinein wie auf der anderen Seite wieder herauskommt.
+* Ergebnis immer ein Skalar = `int`
+
+### <u>**div f**</u>:
+* misst Wirbelstärke
+* Vektor $\to$ Vektor
+
+* Wenn $\text{rot} f = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}$ $\implies$ wirbelfrei
 
 
 
