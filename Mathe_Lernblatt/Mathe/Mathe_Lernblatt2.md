@@ -392,6 +392,69 @@ $$\boxed{\vec{n}_{normiert} = \frac{1}{\sqrt{(F_x)^2 + (F_y)^2 + (F_z)^2}} \cdot
 </div>
 
 ## Normalbereich:
+<div class="step-container" style="border: 2px solid #7abd2d; border-radius: 15px; padding: 20px; max-width: 400px; background: #fff; text-align: left;">
+  
+  <div id="steps">
+    <div class="step" style="display: block;">
+      <h4 style="color: #7abd2d;">1) Schnittpunkte berechnen</h4>
+      <p>I) $x = y^2 = y = \sqrt{x}$ </p>
+      <p>II) $y = x-2$</p>
+      <p>Gleichsetzten & n. x umstellen</p>
+      <p>$P_1(4,2), P_2(1,1)$</p>
+      <img src="image-34.png" width="500">
+    </div>
+
+  <div class="step" style="display: none;">
+    <h4 style="color: #7abd2d;">2) Aufteilen</h4>
+    <p>Hierfür werden Schnittstellen verwendet!</p>
+    <p>$0 \le x \le 1$</p>
+    <img src="image-35.png" width="500">
+    <p>D. Gelbe spannt das x auf</p>
+    <p>Wir sehen, dass y nur v. d. Parabel abhängig ist. Dieses ist gespiegelt & deswegen können wir $\pm \sqrt{x}$ als Begrenzung anw.</p>
+    <p>$\left\{ (x,y) \in \mathbb{R}^2 \mid 0 \le x \le 1, -\sqrt{x} \le y \le \sqrt{x} \right\}$</p>
+  </div>
+
+  <div class="step" style="display: none;">
+    <h4 style="color: #7abd2d;">3) D. 2. teil d. Bildes</h4>
+    <p>$1 \le x \le 4$</p>
+    <p>Wir können sehen, dass unsere Flächen v. d. Gerade ($y = x-2$)begrenzt wird, & v. oben aber v. d. Parabel begrenz wird ($x = y^2$)</p>
+    <p>$x-2 \lt y \lt \sqrt{x}$</p>
+    <p>$\left\{ (x,y) \in \mathbb{R}^2 \mid 1 \le x \le 4, x-2 \lt y \lt \sqrt{x} \right\}$</p>
+  </div>
+
+  <div class="step" style="display: none;">
+    <h4 style="color: #7abd2d;">Normalbereiche zsm.fügen</h4>
+    <p>$X = \left\{ (x,y) \in \mathbb{R}^2 \mid 0 \le x \le 1, -\sqrt{x} \le y \le \sqrt{x} \right\} \cup \left\{ (x,y) \in \mathbb{R}^2 \mid 1 \le x \le 4, x-2 \lt y \lt \sqrt{x} \right\}$</p>
+    <img src="image-36.png" width="500">
+  </div>
+  </div>
+
+  <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+    <button onclick="changeStep(-1)" style="cursor:pointer; padding: 5px 15px;">&larr; Zurück</button>
+    <span id="step-counter" style="font-size: 0.8em; color: #666;">Schritt 1 von 4</span>
+    <button onclick="changeStep(1)" style="cursor:pointer; padding: 5px 15px;">Vor &rarr;</button>
+  </div>
+</div>
+
+<script>
+  let currentStep = 0;
+  const steps = document.querySelectorAll('.step');
+  const counter = document.getElementById('step-counter');
+
+  function changeStep(delta) {
+    // Alten Schritt verstecken
+    steps[currentStep].style.display = 'none';
+    
+    // Index berechnen (verhindert Überlauf)
+    currentStep = Math.max(0, Math.min(steps.length - 1, currentStep + delta));
+    
+    // Neuen Schritt zeigen
+    steps[currentStep].style.display = 'block';
+    
+    // Zähler aktualisieren
+    counter.innerText = `Schritt ${currentStep + 1} von ${steps.length}`;
+  }
+</script>
 
 * <u><b>2 Arten</b></u>:
   * **Normalbereich bzgl. x-Achse**: $X = \{ (x, y) \in \mathbb{R}^2 \mid a \le x \le b, \, g_1(x) \le y \le g_2(x) \}$
@@ -411,8 +474,17 @@ $$\boxed{\vec{n}_{normiert} = \frac{1}{\sqrt{(F_x)^2 + (F_y)^2 + (F_z)^2}} \cdot
   <button onclick="universalRender(this, 'V = \\pi \\cdot \\int [f(x)]^2 dx')">Rotation</button>
 </div>
 
+<p>
+  <button popovertarget="Fläsche" style="border:none; background:none; color:blue; text-decoration:underline; cursor:pointer;">
+    Aufgaben
+  </button> 
+</p>
 
-
+<div id="Fläsche" popover style="padding: 15px; border-radius: 15px; border: 1px solid #ff016fff; max-width: 300px; background-color: #edededff">
+  <u><b>Übung 11</b></u>
+  <p>
+  $x = y^2, y = x-2$
+</div>
 
 
 
