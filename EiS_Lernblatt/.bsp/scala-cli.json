@@ -1,0 +1,20 @@
+{
+  "name": "scala-cli",
+  "argv": [
+    "/Users/efeaksoy/Library/Application Support/Coursier/bin/.scala-cli.aux",
+    "bsp",
+    "--json-options",
+    "/Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/EiS_Lernblatt/.scala-build/ide-options-v2.json",
+    "--json-launcher-options",
+    "/Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/EiS_Lernblatt/.scala-build/ide-launcher-options.json",
+    "--envs-file",
+    "/Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/EiS_Lernblatt/.scala-build/ide-envs.json",
+    "/Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/EiS_Lernblatt"
+  ],
+  "version": "1.5.1",
+  "bspVersion": "2.1.1",
+  "languages": [
+    "scala",
+    "java"
+  ]
+}
