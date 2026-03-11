@@ -227,3 +227,31 @@ INFORMATION: Unsupported notification method: $/setTrace
 2026.03.11 09:52:22 INFO  time: compiled EiS_Lernblatt_f4dd477a3a in 0.13s
 2026.03.11 09:52:23 INFO  compiling eis_lernblatt_f4dd477a3a (1 scala source)
 2026.03.11 09:52:23 INFO  time: compiled EiS_Lernblatt_f4dd477a3a in 0.11s
+2026.03.11 10:06:11 WARN  Could not find semantic tokens for: file:///Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/EiS_Lernblatt/Hallo.scala
+2026.03.11 10:06:13 INFO  compiling eis_lernblatt_f4dd477a3a (1 scala source)
+2026.03.11 10:06:13 INFO  time: compiled EiS_Lernblatt_f4dd477a3a in 44ms
+2026.03.11 10:06:13 WARN  Could not find semantic tokens for: file:///Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/EiS_Lernblatt/Hallo.scala
+2026.03.11 10:06:38 WARN  Could not find semantic tokens for: file:///Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/EiS_Lernblatt/Hallo.scala
+2026.03.11 10:06:39 WARN  Could not find semantic tokens for: file:///Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/EiS_Lernblatt/Hallo.scala
+2026.03.11 10:06:40 INFO  compiling eis_lernblatt_f4dd477a3a (1 scala source)
+2026.03.11 10:06:40 INFO  time: compiled EiS_Lernblatt_f4dd477a3a in 0.12s
+2026.03.11 10:06:40 WARN  Could not find semantic tokens for: file:///Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/EiS_Lernblatt/Hallo.scala
+2026.03.11 10:06:40 WARN  Could not find semantic tokens for: file:///Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/EiS_Lernblatt/Hallo.scala
+2026.03.11 10:06:41 INFO  compiling eis_lernblatt_f4dd477a3a (1 scala source)
+2026.03.11 10:06:41 INFO  time: compiled EiS_Lernblatt_f4dd477a3a in 23ms
+2026.03.11 10:06:41 WARN  Could not find semantic tokens for: file:///Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/EiS_Lernblatt/Hallo.scala
+2026.03.11 10:06:46 WARN  Could not find semantic tokens for: file:///Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/EiS_Lernblatt/Hallo.scala
+2026.03.11 10:06:48 INFO  compiling eis_lernblatt_f4dd477a3a (1 scala source)
+2026.03.11 10:06:48 INFO  time: compiled EiS_Lernblatt_f4dd477a3a in 95ms
+2026.03.11 10:06:51 INFO  compiling eis_lernblatt_f4dd477a3a (1 scala source)
+2026.03.11 10:06:51 INFO  time: compiled EiS_Lernblatt_f4dd477a3a in 53ms
+2026.03.11 10:07:38 INFO  compiling eis_lernblatt_f4dd477a3a (1 scala source)
+2026.03.11 10:07:38 INFO  time: compiled EiS_Lernblatt_f4dd477a3a in 0.19s
+März 11, 2026 10:10:44 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMATION: Unsupported notification method: $/setTrace
+März 11, 2026 10:10:46 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMATION: Unsupported notification method: $/setTrace
+März 11, 2026 10:11:01 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMATION: Unsupported notification method: $/setTrace
+März 11, 2026 10:11:01 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMATION: Unsupported notification method: $/setTrace
