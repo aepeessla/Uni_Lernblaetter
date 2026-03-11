@@ -426,6 +426,10 @@ Man erhöht künstl. d. Mut.rate durch radioaktive Strahlen $\implies$ ca. $1000
 ![alt text](image-77.png)
 ![alt text](image-78.png)
 ![alt text](image-79.png)
+<<<<<<< HEAD
+## <u>**Gentransfer bei Pflanzen ?**</u>:
+* Agrobakterien: „natürliches“ Gentransfer System!
+=======
 
 ## <u>**Recap**</u>:
 ![alt text](image-80.png)
@@ -509,8 +513,17 @@ $$
 
 * <u>Was ist PRE</u> ?
   * Pheromone Reponse Element
+>>>>>>> de0571c4b2b6b2fd102c630c0a1dbb2bc590141e
 
+## <u>**Recap**</u>:
+![alt text](image-80.png)
+![alt text](image-81.png)
 
+<<<<<<< HEAD
+<hr>
+
+![alt text](image-82.png)
+=======
 ## <u>Aus was besteht d. MAPK-Signalweg ?</u>:
 * aus 3 Kinasen:
 
@@ -583,6 +596,7 @@ TFIIH \\
 TFIII
 \end{matrix}
 $
+>>>>>>> de0571c4b2b6b2fd102c630c0a1dbb2bc590141e
 
 * Acetylierung damit TATA-Box frei $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Bindung}}\ \ \ \ }$ $\overset{\text{(TATA-binding protein)}}{\text{TBP}}$ + $TFIID$ $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{GTF gerufen}}\ \ \ \ }$ $RNA-POL II$ in Komplex eingebunden $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{Bildung}}\ \ \ \ }$ ***Präinitiationskomplex*** $\implies$ $RNA-POL II$ nun föllig stabil pos. $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{TFIIH}\ \ \ \ }$ phospholisiert POL-Schwanz $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{RNA-POL II}}\ \ \ \ }$ beginnt ***Elogation***
 
