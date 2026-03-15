@@ -804,3 +804,384 @@ WARNUNG: Unmatched cancel notification for request id 3052
 2026.03.11 11:29:43 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 29ms
 2026.03.11 11:30:13 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
 2026.03.11 11:30:13 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.1s
+2026.03.11 21:22:50 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:22:50 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.27s
+2026.03.11 21:22:55 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:22:55 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.12s
+2026.03.11 21:22:56 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:22:56 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 66ms
+2026.03.11 21:23:04 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:23:04 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.17s
+2026.03.11 21:23:24 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:23:24 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 70ms
+2026.03.11 21:25:50 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:25:50 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 70ms
+2026.03.11 21:39:01 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:39:01 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.26s
+2026.03.11 21:39:04 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:39:04 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.29s
+2026.03.11 21:39:16 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:39:16 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 62ms
+2026.03.11 21:39:19 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:39:19 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 82ms
+2026.03.11 21:39:24 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:39:24 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 50ms
+2026.03.11 21:39:27 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:39:27 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 50ms
+2026.03.11 21:39:28 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:39:28 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 42ms
+2026.03.11 21:39:32 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:39:32 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 64ms
+2026.03.11 21:39:34 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:39:34 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 38ms
+2026.03.11 21:40:39 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:40:39 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 81ms
+2026.03.11 21:40:42 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:40:42 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 42ms
+2026.03.11 21:40:48 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:40:48 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.2s
+2026.03.11 21:40:53 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:40:53 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.13s
+2026.03.11 21:40:55 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:40:55 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.12s
+2026.03.11 21:40:57 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:40:57 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.12s
+2026.03.11 21:41:26 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:41:26 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.2s
+2026.03.11 21:41:27 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:41:27 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 66ms
+2026.03.11 21:41:46 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:41:46 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 44ms
+2026.03.11 21:42:01 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:42:01 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.21s
+2026.03.11 21:42:03 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:42:03 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.14s
+2026.03.11 21:42:05 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:42:05 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 40ms
+2026.03.11 21:42:07 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:42:07 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 38ms
+2026.03.11 21:42:09 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:42:09 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 32ms
+2026.03.11 21:42:10 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:42:10 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 37ms
+2026.03.11 21:42:12 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:42:12 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 30ms
+2026.03.11 21:42:14 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:42:14 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 42ms
+2026.03.11 21:42:16 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:42:16 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 39ms
+2026.03.11 21:42:20 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:42:20 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 47ms
+2026.03.11 21:42:23 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:42:23 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 34ms
+2026.03.11 21:42:26 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:42:26 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 37ms
+2026.03.11 21:42:30 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:42:30 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 39ms
+2026.03.11 21:42:42 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:42:42 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 36ms
+2026.03.11 21:43:23 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:43:23 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 53ms
+2026.03.11 21:43:25 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:43:25 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 35ms
+2026.03.11 21:43:29 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:43:29 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 38ms
+2026.03.11 21:45:00 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:45:00 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 57ms
+2026.03.11 21:45:08 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:45:08 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 47ms
+2026.03.11 21:45:34 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:45:34 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 42ms
+2026.03.11 21:45:36 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:45:36 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 32ms
+2026.03.11 21:45:38 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:45:38 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 33ms
+2026.03.11 21:45:45 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:45:45 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 43ms
+2026.03.11 21:45:56 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:45:56 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 37ms
+2026.03.11 21:47:44 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:47:44 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 57ms
+2026.03.11 21:47:52 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:47:52 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 39ms
+2026.03.11 21:47:55 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:47:55 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 32ms
+2026.03.11 21:54:57 INFO  file:///Users/efeaksoy/Desktop/Main%20Scala%20Code.scala:28:26: stale bloop error: end of statement expected but '=' found
+        (this.n, that.n) = (that.n, this.n)
+                         ^
+2026.03.11 21:54:57 INFO  file:///Users/efeaksoy/Desktop/Main%20Scala%20Code.scala:28:26: stale bloop error: end of statement expected but '=' found
+        (this.n, that.n) = (that.n, this.n)
+                         ^
+2026.03.11 21:54:59 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:54:59 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 45ms
+2026.03.11 21:55:33 INFO  Created report: Optional[file:///Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/EiS_Lernblatt/file:/Users/efeaksoy/Desktop/Main%2520Scala%2520Code.scala]
+2026.03.11 21:55:33 INFO  expected identifier; obtained eof (full report at: "/var/folders/ck/zq1lbx296_180yh7g5yw3p3w0000gn/T/fallback-service6564296058960792726/.metals/.reports/metals/2026-03-11/r_scala-toplevel-mtags_21-55-33-807.md")
+2026.03.11 21:55:33 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:55:33 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 56ms
+2026.03.11 21:55:39 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:55:39 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 34ms
+2026.03.11 21:55:40 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:55:40 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 23ms
+2026.03.11 21:55:54 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:55:54 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 36ms
+2026.03.11 21:55:56 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:55:56 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 91ms
+2026.03.11 21:55:58 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:55:58 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 32ms
+2026.03.11 21:56:02 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:02 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 33ms
+2026.03.11 21:56:05 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:05 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 33ms
+2026.03.11 21:56:11 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:11 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 30ms
+2026.03.11 21:56:18 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:18 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 30ms
+2026.03.11 21:56:20 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:20 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 25ms
+2026.03.11 21:56:23 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:23 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 35ms
+2026.03.11 21:56:27 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:27 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 41ms
+2026.03.11 21:56:31 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:31 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 35ms
+2026.03.11 21:56:32 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:32 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 26ms
+2026.03.11 21:56:34 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:34 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.12s
+2026.03.11 21:56:42 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:42 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 39ms
+2026.03.11 21:56:46 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:46 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 32ms
+2026.03.11 21:56:51 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:51 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 38ms
+2026.03.11 21:56:52 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:52 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 27ms
+2026.03.11 21:56:54 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:54 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 29ms
+2026.03.11 21:56:56 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:56 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 21ms
+2026.03.11 21:56:58 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:56:58 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 36ms
+2026.03.11 21:57:04 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:57:04 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 30ms
+2026.03.11 21:57:06 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:57:06 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 98ms
+2026.03.11 21:57:07 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:57:07 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 80ms
+2026.03.11 21:57:22 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:57:22 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 43ms
+2026.03.11 21:57:25 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 1ms
+2026.03.11 21:57:27 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:57:27 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.11s
+2026.03.11 21:57:28 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:57:28 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.14s
+2026.03.11 21:57:32 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:57:32 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 91ms
+2026.03.11 21:57:37 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:57:37 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 46ms
+2026.03.11 21:57:41 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:57:41 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 94ms
+2026.03.11 21:57:46 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:57:46 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.1s
+2026.03.11 21:57:50 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:57:50 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 37ms
+2026.03.11 21:57:53 INFO  Shut down connection with build server.
+2026.03.11 21:57:53 INFO  Cancelling compilation on scala-cli server
+2026.03.11 21:58:20 INFO  Running List(/Users/efeaksoy/Library/Application Support/Coursier/bin/scala-cli, bsp, --workspace, /var/folders/ck/zq1lbx296_180yh7g5yw3p3w0000gn/T/metals-scala-cli8188258335578506208, --semantic-db-source-root, /Users/efeaksoy/Desktop, /Users/efeaksoy/Desktop/Main Scala Code.scala)
+2026.03.11 21:58:20 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/efeaksoy/Desktop/.metals/bsp.trace.json or /Users/efeaksoy/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.03.11 21:58:21 INFO  Connected to Scala CLI server v1.5.1
+2026.03.11 21:58:21 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:58:21 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.16s
+2026.03.11 21:58:21 INFO  time: indexed workspace in 0.93s
+2026.03.11 21:58:22 INFO  Scala CLI started for /Users/efeaksoy/Desktop/Main Scala Code.scala
+2026.03.11 21:58:53 INFO  Scala test classes not supported by server
+java.util.concurrent.TimeoutException: Future timed out after [1 minute]
+	at scala.concurrent.Future$.timeoutError(Future.scala:581)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait0(Promise.scala:258)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:271)
+	at scala.concurrent.Await$.$anonfun$result$1(package.scala:208)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:62)
+	at scala.concurrent.Await$.result(package.scala:125)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionScalaFuture.$anonfun$withTimeout$1(MetalsEnrichments.scala:297)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:691)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2026.03.11 21:58:53 INFO  Scala main classes not supported by server
+java.util.concurrent.TimeoutException: Future timed out after [1 minute]
+	at scala.concurrent.Future$.timeoutError(Future.scala:581)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait0(Promise.scala:258)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:271)
+	at scala.concurrent.Await$.$anonfun$result$1(package.scala:208)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:62)
+	at scala.concurrent.Await$.result(package.scala:125)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionScalaFuture.$anonfun$withTimeout$1(MetalsEnrichments.scala:297)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:691)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2026.03.11 21:59:12 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:59:12 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 41ms
+2026.03.11 21:59:13 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:59:13 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 28ms
+2026.03.11 21:59:18 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:59:18 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 38ms
+2026.03.11 21:59:20 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:59:20 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 24ms
+2026.03.11 21:59:24 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:59:24 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 33ms
+2026.03.11 21:59:27 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:59:27 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 30ms
+2026.03.11 21:59:30 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:59:30 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 22ms
+2026.03.11 21:59:31 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:59:31 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 25ms
+2026.03.11 21:59:33 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 21:59:33 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 31ms
+2026.03.11 21:59:53 INFO  Scala test classes not supported by server
+java.util.concurrent.TimeoutException: Future timed out after [1 minute]
+	at scala.concurrent.Future$.timeoutError(Future.scala:581)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait0(Promise.scala:258)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:271)
+	at scala.concurrent.Await$.$anonfun$result$1(package.scala:208)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:62)
+	at scala.concurrent.Await$.result(package.scala:125)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionScalaFuture.$anonfun$withTimeout$1(MetalsEnrichments.scala:297)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:691)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2026.03.11 21:59:53 INFO  Scala main classes not supported by server
+java.util.concurrent.TimeoutException: Future timed out after [1 minute]
+	at scala.concurrent.Future$.timeoutError(Future.scala:581)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait0(Promise.scala:258)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:271)
+	at scala.concurrent.Await$.$anonfun$result$1(package.scala:208)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:62)
+	at scala.concurrent.Await$.result(package.scala:125)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionScalaFuture.$anonfun$withTimeout$1(MetalsEnrichments.scala:297)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:691)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2026.03.11 22:00:18 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:00:18 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 46ms
+2026.03.11 22:00:21 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:00:21 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 39ms
+2026.03.11 22:00:26 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:00:26 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.11s
+2026.03.11 22:01:34 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:01:34 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 48ms
+2026.03.11 22:01:38 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:01:38 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 49ms
+2026.03.11 22:01:43 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:01:43 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 52ms
+2026.03.11 22:02:04 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:02:04 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.14s
+2026.03.11 22:02:07 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:02:07 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.17s
+2026.03.11 22:02:08 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:02:08 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.12s
+2026.03.11 22:02:48 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:02:48 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 50ms
+2026.03.11 22:02:52 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:02:52 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 51ms
+2026.03.11 22:02:58 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:02:58 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.12s
+2026.03.11 22:03:05 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:03:05 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.13s
+2026.03.11 22:03:08 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:03:08 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.11s
+2026.03.11 22:03:10 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:03:10 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.11s
+2026.03.11 22:03:29 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:03:29 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.13s
+März 11, 2026 10:03:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 7981
+2026.03.11 22:03:55 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:03:55 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.18s
+2026.03.11 22:03:58 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:03:58 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.1s
+2026.03.11 22:04:03 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:04:03 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.12s
+2026.03.11 22:04:05 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:04:05 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.11s
+2026.03.11 22:04:09 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:04:09 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.11s
+2026.03.11 22:04:19 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:04:19 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.14s
+2026.03.11 22:04:30 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:04:30 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.11s
+März 11, 2026 10:05:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 8180
+2026.03.11 22:05:29 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:05:29 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 78ms
+2026.03.11 22:05:32 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:05:32 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.11s
+2026.03.11 22:05:34 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:05:34 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.14s
+2026.03.11 22:05:38 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:05:38 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.12s
+2026.03.11 22:05:40 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:05:40 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.12s
+2026.03.11 22:05:43 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:05:43 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 93ms
+2026.03.11 22:05:47 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:05:47 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.14s
+2026.03.11 22:05:49 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:05:49 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.11s
+2026.03.11 22:05:50 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:05:50 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 98ms
+2026.03.11 22:05:53 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:05:53 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 86ms
+2026.03.11 22:06:08 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:06:08 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.15s
+2026.03.11 22:06:12 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:06:12 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 44ms
+2026.03.11 22:06:15 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:06:15 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.12s
+2026.03.11 22:06:23 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:06:23 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.11s
+2026.03.11 22:06:27 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:06:27 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 99ms
+2026.03.11 22:06:52 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:06:52 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.11s
+2026.03.11 22:06:52 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:06:54 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 95ms
+2026.03.11 22:06:57 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:06:57 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.13s
+2026.03.11 22:07:08 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:07:08 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.17s
+2026.03.11 22:07:09 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:07:09 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.13s
+2026.03.11 22:07:36 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:07:36 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.14s
+2026.03.11 22:07:38 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:07:38 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 99ms
+2026.03.11 22:07:40 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:07:40 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.12s
+2026.03.11 22:07:44 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:07:44 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.1s
+2026.03.11 22:07:46 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:07:46 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 86ms
+2026.03.11 22:07:47 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:07:47 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.1s
+2026.03.11 22:07:54 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:07:54 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.12s
+2026.03.11 22:07:57 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:07:57 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.11s
+2026.03.11 22:08:01 INFO  compiling metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 (1 scala source)
+2026.03.11 22:08:01 INFO  time: compiled metals-scala-cli8188258335578506208_203134f0a9-d6861a0dd3 in 0.11s
+2026.03.11 22:31:35 INFO  Shutting down server
+2026.03.11 22:31:35 INFO  Memory monitor stopped
+2026.03.11 22:31:35 INFO  shutting down Metals
+2026.03.11 22:31:35 INFO  Shut down connection with build server.
+2026.03.11 22:31:35 INFO  Exiting server

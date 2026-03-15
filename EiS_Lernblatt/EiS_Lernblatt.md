@@ -1,3 +1,8 @@
+# **(Un-)Veränderlichkeit**
+## <u>Mutuble</u>
+* `var`
+## <u>Unmutuble</u>
+* `val`
 
 
 # **Typisierung**
@@ -26,7 +31,7 @@ int
 ## <u>Typenumwandlung(Casts)</u>
 
 
-# **Veränderlichkeit & unveränderlichkeit **
+# **Veränderlichkeit & unveränderlichkeit**
 
 
 * Klasse $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{text}}\ \ \ \ }$ rationale Zahlen
