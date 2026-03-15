@@ -54,6 +54,55 @@ $$P(X = \textcolor{red}{k}) = \binom{\textcolor{blue}{n}}{\textcolor{red}{k}} \c
 * <span class="subtitle">Wichtig</span>:
   * <span class="wi1">kürzen</span>
 
+<h2>Vierfeldtafel</h2>
+
+<section class="info">
+    <div>
+        <table style="width: 100%; border-collapse: collapse; background-color: white; color: black; text-align: center; border: 2px solid #333;">
+            <tr style="background-color: rgb(153, 153, 199); color: white;">
+                <th style="border: 1px solid #333; padding: 12px;"></th>
+                <th style="border: 1px solid #333; padding: 12px;">$B$</th>
+                <th style="border: 1px solid #333; padding: 12px;">$\bar{B}$ (Nicht $B$)</th>
+                <th style="border: 1px solid #333; padding: 12px;">Summe</th>
+            </tr>
+            <tr>
+                <th style="border: 1px solid #333; padding: 12px; background-color: rgb(219, 219, 237);">$A$</th>
+                <td style="border: 1px solid #333; padding: 12px;">$P(A \cap B)$</td>
+                <td style="border: 1px solid #333; padding: 12px;">$P(A \cap \bar{B})$</td>
+                <td style="border: 1px solid #333; padding: 12px; font-weight: bold; background-color: #eee;">$P(A)$</td>
+            </tr>
+            <tr>
+                <th style="border: 1px solid #333; padding: 12px; background-color: rgb(219, 219, 237);">$\bar{A}$ (Nicht $A$)</th>
+                <td style="border: 1px solid #333; padding: 12px;">$P(\bar{A} \cap B)$</td>
+                <td style="border: 1px solid #333; padding: 12px;">$P(\bar{A} \cap \bar{B})$</td>
+                <td style="border: 1px solid #333; padding: 12px; font-weight: bold; background-color: #eee;">$P(\bar{A})$</td>
+            </tr>
+            <tr style="font-weight: bold;">
+                <th style="border: 1px solid #333; padding: 12px; background-color: rgb(153, 153, 199); color: white;">Summe</th>
+                <td style="border: 1px solid #333; padding: 12px; background-color: #eee;">$P(B)$</td>
+                <td style="border: 1px solid #333; padding: 12px; background-color: #eee;">$P(\bar{B})$</td>
+                <td style="border: 1px solid #333; padding: 12px; background-color: rgb(219, 219, 237);">$1$ (oder $100\%$)</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
