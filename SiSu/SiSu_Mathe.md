@@ -34,11 +34,12 @@
 
 <h2>Bernoulli-Formel</h2>
 
-$$P(X = k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}$$
+$$P(X = \textcolor{red}{k}) = \binom{\textcolor{blue}{n}}{\textcolor{red}{k}} \cdot \textcolor{purple}{p}^{\textcolor{red}{k}} \cdot (1-\textcolor{purple}{p})^{\textcolor{blue}{n}-{\textcolor{red}{k}}}$$
 
-* $n$ : Anzahl d. Versuche
-* $k$ : Anzahl d. Treffer (Wie viele Erfolge ?)
-* $p$ : Wie <span class="wi1">hoch</span> ist d. Wahrscheinlichkeit auf einen Erfolg
+
+* $\textcolor{blue}{n}$ : Anzahl d. Versuche
+* $\textcolor{red}{k}$ : Anzahl d. Treffer (Wie viele Erfolge ?)
+* $\textcolor{purple}{p}$ : Wie <span class="wi1">hoch</span> ist d. Wahrscheinlichkeit auf einen Erfolg
 * $(1-p)$: Das ist quazi $(100 \% - \text{mein Erfolg})$ $\to$ automatisch d. Rest
 * $\binom{n}{k}$: Wie viele Möglichkeiten gibt es 
 
