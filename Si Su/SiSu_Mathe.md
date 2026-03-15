@@ -8,10 +8,14 @@
         background-color: #d5d9edff
     }
     .wi1 {
-        color: #ca4aaaff
+        color: #ff0051ff
     }
     .wi2 {
-        color: #d5d9edff
+        color: #bd4269ff
+    }
+    .subtitle {
+      text-decoration: underline;
+      font-weight: bold
     }
 
 
@@ -38,7 +42,16 @@ $$P(X = k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}$$
 * $(1-p)$: Das ist quazi $(100 \% - \text{mein Erfolg})$ $\to$ automatisch d. Rest
 * $\binom{n}{k}$: Wie viele Möglichkeiten gibt es 
 
-<h2>Binomialverteilung</h2>
+<h2>Wie berechnet man den Binomialkoeffizienten ?</h2>
+
+* <span class="subtitle">Aussehen</span>:
+  * $\binom{n}{k}$
+
+* <span class="subtitle">Berechnung</span>:
+  *  $\frac{n!}{k! \cdot (n-k)!}$
+
+* <span class="subtitle">Wichtig</span>:
+  * <span class="wi1">kürzen</span>
 
 
 

@@ -375,10 +375,14 @@ code {
         background-color: #d5d9edff
     }
     .wi1 {
-        color: #ca4aaaff
+        color: #ff0051ff
     }
     .wi2 {
-        color: #d5d9edff
+        color: #bd4269ff
+    }
+    .subtitle {
+      text-decoration: underline;
+      font-weight: bold
     }
 
 
@@ -401,6 +405,27 @@ code {
 <li>$p$ : Wie <span class="wi1">hoch</span> ist d. Wahrscheinlichkeit auf einen Erfolg</li>
 <li>$(1-p)$: Das ist quazi $(100 % - \text{mein Erfolg})$ $\to$ automatisch d. Rest</li>
 <li>$\binom{n}{k}$: Wie viele Möglichkeiten gibt es</li>
+</ul>
+<h2>Wie berechnet man den Binomialkoeffizienten ?</h2>
+<ul>
+<li>
+<p><span class="subtitle">Aussehen</span>:</p>
+<ul>
+<li>$\binom{n}{k}$</li>
+</ul>
+</li>
+<li>
+<p><span class="subtitle">Berechnung</span>:</p>
+<ul>
+<li>$\frac{n!}{k! \cdot (n-k)!}$</li>
+</ul>
+</li>
+<li>
+<p><span class="subtitle">Wichtig</span>:</p>
+<ul>
+<li><span class="wi1">kürzen</span></li>
+</ul>
+</li>
 </ul>
 <script>
   MathJax = {
