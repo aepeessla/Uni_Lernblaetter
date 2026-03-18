@@ -87,6 +87,8 @@ $$P(X = \textcolor{red}{k}) = \binom{\textcolor{blue}{n}}{\textcolor{red}{k}} \c
     </div>
 </section>
 
+<h2>Aufgabenstellung</h2>
+
 ![alt text](image.png)
 
 
