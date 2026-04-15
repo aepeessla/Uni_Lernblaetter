@@ -1,0 +1,48 @@
+li {
+    padding-top: 10px;
+}
+
+h1 {
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: #8bda42;
+}
+
+h2 {
+    text-decoration: underline;
+    background-color: #b5df8e;
+}
+
+#bild {
+    height: 450px;
+    width: auto;
+    border: 2px solid black;
+}
+
+.info1{
+    color: red
+}
+.info2{
+    color: rgb(216, 214, 81)
+}
+
+#text1 {
+    background-color: #dadada;
+    border-radius: 3px;
+    padding: 2px;
+    color: #838383;
+}
+
+#objekt {
+    color: #813981;
+    border-radius: 3px;
+    padding: 2px;
+    background-color: #c7adc7;
+}
+
+#prozess{
+    color: #c41d92;
+    background-color: #d396c1;
+    border-radius: 3px;
+    padding: 2px;
+}
