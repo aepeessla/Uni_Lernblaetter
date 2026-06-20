@@ -417,6 +417,15 @@ code {
 }
 </div></code></pre>
 <ul>
+<li>
+<p>Hier wird bei Tabelle A &amp; Tabelle B jeweils d. Einträge geöffnet (Zeilen) &amp; zeilenweise durchiteriert.</p>
+</li>
+<li>
+<p>Da wir <code>numRecords</code> verw. ist es garantiert, dass wir $\lnot$ <span style="color: #81B9DB">out of range</span> sind.  Wir müssen nicht <code>this.numRange</code> &amp; <code>that.numRange</code> bestimmen, weil wir bereits in der ersten Kontrolle d. Längen vergleichen haben. Damit wir bei <code>this.records(i)</code> ankommen können, muss ja d. erste Bedingung schon stimmen, weil wir d. Bedingungen mit <code>&amp;&amp;</code>verbunden haben.</p>
+</li>
+</ul>
+<p>Diese würden dann nicht mehr gleich sein, weshalb wir den hashCode verwenden können. In der Aufgabenstellung wurde gesagt, dass d. Reihenfolge im Inneren der Tabellen egal ist, wobei die Werte stimmen sollten. Das Schema haben wir bereits ein Schritt davor kontrolliert. Deswegen können wie das <code>def hashCode</code> überschreiben &amp; unser eigenen hashCode definieren</p>
+<ul>
 <li><code>0 until 4</code> = Exklusiv $\implies$ <code>0123</code></li>
 <li><code>0 to 4</code> = Inklusiv $\implies$ <code>01234</code></li>
 </ul>

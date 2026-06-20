@@ -42,6 +42,18 @@ override def equals(other: Any): Boolean = other match {
   case _ => false
 }
 ```
+* Hier wird bei Tabelle A & Tabelle B jeweils d. Einträge geöffnet (Zeilen) & zeilenweise durchiteriert.
+
+* Da wir `numRecords` verw. ist es garantiert, dass wir $\lnot$ <span style="color: #81B9DB">out of range</span> sind.  Wir müssen nicht `this.numRange` & `that.numRange` bestimmen, weil wir bereits in der ersten Kontrolle d. Längen vergleichen haben. Damit wir bei `this.records(i)` ankommen können, muss ja d. erste Bedingung schon stimmen, weil wir d. Bedingungen mit `&&`verbunden haben.
+
+Diese würden dann nicht mehr gleich sein, weshalb wir den hashCode verwenden können. In der Aufgabenstellung wurde gesagt, dass d. Reihenfolge im Inneren der Tabellen egal ist, wobei die Werte stimmen sollten. Das Schema haben wir bereits ein Schritt davor kontrolliert. Deswegen können wie das `def hashCode` überschreiben & unser eigenen hashCode definieren
+
+
+
+
+
+
+
 * `0 until 4` = Exklusiv $\implies$ `0123`
 * `0 to 4` = Inklusiv $\implies$ `01234`
 
