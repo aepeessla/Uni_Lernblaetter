@@ -68,7 +68,7 @@ override def hashCode(): Int = {
 * `0 to 4` = Inklusiv $\implies$ `01234`
 
 <details>
-  <summary style="text-size:20px"><b><u>Wie kann man mit `.foreach` eine Schleife v. a bis b erstellen ?</b></u></summary>
+  <summary style="font-size:15px"><b><u>Wie kann man mit `.foreach` eine Schleife v. a bis b erstellen ?</b></u></summary>
   
   ```scala
   (0 until upTo).forall(i => tableA(i) <= tableB(i))
@@ -95,9 +95,10 @@ override def hashCode(): Int = {
 
 # <u><b>Aufgabe 2</u></b>
 
+<details>
+  <summary style="font-size: 20px;"><u><b>Aufgabe:</u></b></summary>
+  <div style="border: black 1px solid">
 
-<details><div style="border: black 1px solid">
-  <summary>Aufgabe:</summary>
   Arbeiten Sie in:
 
   - `src/main/scala/dbms/v2/indexing/HashIndex.scala`
@@ -120,7 +121,36 @@ override def hashCode(): Int = {
   ```
 </div></details>
 
+<details>
+  <summary sytle="font-size: 10px"> HashIndex.scala</summary>
+  <div sytle="border: black 1px solid">
+  
+  ```scala
+  package dbms.v2.indexing
 
+  import dbms.v2.misc.{RecordID, Variant}
+  import dbms.v2.store.Table
+  import scala.collection.mutable
+
+  /** Represents an index that is internally materialized as hash map
+   *
+   * @param table     the table on which the index is built
+   * @param attribute the name of the attribute to build the index on
+   */
+  class HashIndex(table: Table, attribute: String) extends MapBasedIndex(table, attribute) {
+
+      /** The internal data structure (a HashMap) used to represent our index data. */
+      protected val index: mutable.HashMap[Variant, Seq[RecordID]] = getIndexMapping.to(mutable.HashMap)
+
+      /** Returns a string representation of this index. */
+      override def toString: String = index
+          .toSeq
+          .sorted
+          .map((value, idString) => s"value $value occurs in row(s) $idString\n").mkString("")
+  }
+  ```
+  </div>
+</details>
 
 
 

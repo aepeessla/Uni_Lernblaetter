@@ -453,7 +453,7 @@ code {
 <li><code>0 to 4</code> = Inklusiv $\implies$ <code>01234</code></li>
 </ul>
 <details>
-  <summary style="text-size:20px"><b><u>Wie kann man mit `.foreach` eine Schleife v. a bis b erstellen ?</b></u></summary>
+  <summary style="font-size:15px"><b><u>Wie kann man mit `.foreach` eine Schleife v. a bis b erstellen ?</b></u></summary>
 <pre class="hljs"><code><div>(<span class="hljs-number">0</span> until upTo).forall(i =&gt; tableA(i) &lt;= tableB(i))
 </div></code></pre>
 <p>D. ist identisch zu:</p>
@@ -464,9 +464,10 @@ code {
 <p>Mit <code>(0 until upTo).forall(i =&gt; ...)</code>. Somit erstellen wir eine Variabel <code>i</code>, d. d. Werte v. 0 bis upTo einnimmt.</p>
 </details>
 <h1 id="ubaufgabe-2ub"><u><b>Aufgabe 2</u></b></h1>
-<details><div style="border: black 1px solid">
-  <summary>Aufgabe:</summary>
-  Arbeiten Sie in:
+<details>
+  <summary style="font-size: 20px;"><u><b>Aufgabe:</u></b></summary>
+  <div style="border: black 1px solid">
+<p>Arbeiten Sie in:</p>
 <ul>
 <li><code>src/main/scala/dbms/v2/indexing/HashIndex.scala</code></li>
 <li><code>src/main/scala/dbms/v2/indexing/TreeIndex.scala</code></li>
@@ -484,6 +485,34 @@ gibt.</li>
 <pre class="hljs"><code><div>sbt <span class="hljs-string">"testOnly dbms.v2.ScoredIndexRepresentationSuite"</span>
 </div></code></pre>
 </div></details>
+<details>
+  <summary sytle="font-size: 10px"> HashIndex.scala</summary>
+  <div sytle="border: black 1px solid">
+<pre class="hljs"><code><div><span class="hljs-keyword">package</span> dbms.v2.indexing
+
+<span class="hljs-keyword">import</span> dbms.v2.misc.{<span class="hljs-type">RecordID</span>, <span class="hljs-type">Variant</span>}
+<span class="hljs-keyword">import</span> dbms.v2.store.<span class="hljs-type">Table</span>
+<span class="hljs-keyword">import</span> scala.collection.mutable
+
+<span class="hljs-comment">/** Represents an index that is internally materialized as hash map
+ *
+ * @param table     the table on which the index is built
+ * @param attribute the name of the attribute to build the index on
+ */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HashIndex</span>(<span class="hljs-params">table: <span class="hljs-type">Table</span>, attribute: <span class="hljs-type">String</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">MapBasedIndex</span>(<span class="hljs-params">table, attribute</span>) </span>{
+
+    <span class="hljs-comment">/** The internal data structure (a HashMap) used to represent our index data. */</span>
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">val</span> index: mutable.<span class="hljs-type">HashMap</span>[<span class="hljs-type">Variant</span>, <span class="hljs-type">Seq</span>[<span class="hljs-type">RecordID</span>]] = getIndexMapping.to(mutable.<span class="hljs-type">HashMap</span>)
+
+    <span class="hljs-comment">/** Returns a string representation of this index. */</span>
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">toString</span></span>: <span class="hljs-type">String</span> = index
+        .toSeq
+        .sorted
+        .map((value, idString) =&gt; <span class="hljs-string">s"value <span class="hljs-subst">$value</span> occurs in row(s) <span class="hljs-subst">$idString</span>\n"</span>).mkString(<span class="hljs-string">""</span>)
+}
+</div></code></pre>
+  </div>
+</details>
 <h1 id="ubaufgabe-4ub"><u><b>Aufgabe 4</u></b></h1>
 <pre class="hljs"><code><div><span class="hljs-comment">/** Joins two tables sharing exactly one attribute. */</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">naturalJoin</span></span>(other: <span class="hljs-type">Table</span>): <span class="hljs-type">Table</span> = {
