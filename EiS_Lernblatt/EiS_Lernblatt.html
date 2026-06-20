@@ -404,15 +404,22 @@ code {
 </ul>
 </blockquote>
 <hr>
-<pre class="hljs"><code><div><span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">equals</span></span>(that: <span class="hljs-type">Any</span>): <span class="hljs-type">Boolean</span> = {
-        that <span class="hljs-keyword">match</span> {
-            <span class="hljs-comment">// Sind beide Elemete gleich, sind die </span>
-            <span class="hljs-keyword">case</span> thatTable: <span class="hljs-type">Table</span> =&gt; 
-                <span class="hljs-keyword">this</span>.project.numRecords == thatTable.project.numRecords &amp;&amp; <span class="hljs-keyword">this</span>.records.forall(table: <span class="hljs-type">Table</span> =&gt; )
-            <span class="hljs-keyword">case</span> _ =&gt; <span class="hljs-type">False</span>
-        }
+<pre class="hljs"><code><div><span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">equals</span></span>(other: <span class="hljs-type">Any</span>): <span class="hljs-type">Boolean</span> = other <span class="hljs-keyword">match</span> {
+  <span class="hljs-keyword">case</span> thatTable: <span class="hljs-type">Table</span> =&gt;
+    <span class="hljs-comment">//Vgl. Zeilenanzahl</span>
+    <span class="hljs-keyword">this</span>.numRecords == thatTable.numRecords &amp;&amp;
+    <span class="hljs-comment">//Vgl. Schema</span>
+    <span class="hljs-keyword">this</span>.schema == thatTable.schema &amp;&amp;
+    (<span class="hljs-number">0</span> until numRecords).forall { i =&gt;
+      <span class="hljs-keyword">this</span>.records(i) == thatTable.records(i)
     }
+  <span class="hljs-keyword">case</span> _ =&gt; <span class="hljs-literal">false</span>
+}
 </div></code></pre>
+<ul>
+<li><code>0 until 4</code> = Exklusiv $\implies$ <code>0123</code></li>
+<li><code>0 to 4</code> = Inklusiv $\implies$ <code>01234</code></li>
+</ul>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>

@@ -30,15 +30,20 @@
 ---
 
 ```scala
-override def equals(that: Any): Boolean = {
-        that match {
-            // Sind beide Elemete gleich, sind die 
-            case thatTable: Table => 
-                this.project.numRecords == thatTable.project.numRecords && this.records.forall(table: Table => )
-            case _ => False
-        }
+override def equals(other: Any): Boolean = other match {
+  case thatTable: Table =>
+    //Vgl. Zeilenanzahl
+    this.numRecords == thatTable.numRecords &&
+    //Vgl. Schema
+    this.schema == thatTable.schema &&
+    (0 until numRecords).forall { i =>
+      this.records(i) == thatTable.records(i)
     }
+  case _ => false
+}
 ```
+* `0 until 4` = Exklusiv $\implies$ `0123`
+* `0 to 4` = Inklusiv $\implies$ `01234`
 
 
 
