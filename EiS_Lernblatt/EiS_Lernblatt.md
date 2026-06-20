@@ -52,11 +52,12 @@ override def equals(other: Any): Boolean = other match {
 ```scala
 override def hashCode(): Int = {
   //Mein hashCode soll aus den Werten die Summe ausrechnen
-
-  //Hier habe ich jetzt folgendes ü.mittelt: Seq("studentID": Int -> ..., "grade": Double -> ...,"bonus": Double -> ...)
   (schema, records).hashCode
 }
 ```
+* <code style="color: #d35843ff">(schema, records).hashCode</code>: Wenn ich `(a,b).hashCode` aufrufe dann wird autom. zunächst `a.hashCode` aufgerufen, dann `b.hashCode` & <span style="background: #ff0000ff">Scala addiert diese autom. zsm.</span>. 
+
+
 * Beim <span style="color: #8CD4C2">hashCode</span> geht es nur darum, dass wir ein "Ober-Index" verw. d. quazi d. Index einer "Ober-Klasse" ist, d. dann mehrere Tabellen in sich hat (`HashSet[Table[Records[Schema[String, Int|Double]]]]`)
 
 ---

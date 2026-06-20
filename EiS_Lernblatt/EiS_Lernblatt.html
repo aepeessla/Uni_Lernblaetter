@@ -433,13 +433,16 @@ code {
 </ul>
 <pre class="hljs"><code><div><span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hashCode</span></span>(): <span class="hljs-type">Int</span> = {
   <span class="hljs-comment">//Mein hashCode soll aus den Werten die Summe ausrechnen</span>
-
-  <span class="hljs-comment">//Hier habe ich jetzt folgendes ü.mittelt: Seq("studentID": Int -&gt; ..., "grade": Double -&gt; ...,"bonus": Double -&gt; ...)</span>
   (schema, records).hashCode
 }
 </div></code></pre>
 <ul>
-<li>Beim <span style="color: #8CD4C2">hashCode</span> geht es nur darum, dass wir ein &quot;Ober-Index&quot; verw. d. quazi d. Index einer &quot;Ober-Klasse&quot; ist, d. dann mehrere Tabellen in sich hat (<code>HashSet[Table[Records[Schema[String, Int|Double]]]]</code>)</li>
+<li>
+<p><code style="color: #d35843ff">(schema, records).hashCode</code>: Wenn ich <code>(a,b).hashCode</code> aufrufe dann wird autom. zunächst <code>a.hashCode</code> aufgerufen, dann <code>b.hashCode</code> &amp; <span style="background: #ff0000ff">Scala addiert diese autom. zsm.</span>.</p>
+</li>
+<li>
+<p>Beim <span style="color: #8CD4C2">hashCode</span> geht es nur darum, dass wir ein &quot;Ober-Index&quot; verw. d. quazi d. Index einer &quot;Ober-Klasse&quot; ist, d. dann mehrere Tabellen in sich hat (<code>HashSet[Table[Records[Schema[String, Int|Double]]]]</code>)</p>
+</li>
 </ul>
 <hr>
 <ul>
