@@ -411,7 +411,7 @@ code {
     <span class="hljs-comment">//Vgl. Schema</span>
     <span class="hljs-keyword">this</span>.schema == thatTable.schema &amp;&amp;
     (<span class="hljs-number">0</span> until numRecords).forall { i =&gt;
-      <span class="hljs-keyword">this</span>.records(i) == thatTable.records(i)
+    <span class="hljs-keyword">this</span>.records(i) == thatTable.records(i)
     }
   <span class="hljs-keyword">case</span> _ =&gt; <span class="hljs-literal">false</span>
 }
@@ -438,7 +438,10 @@ code {
 </div></code></pre>
 <ul>
 <li>
-<p><code style="color: #d35843ff">(schema, records).hashCode</code>: Wenn ich <code>(a,b).hashCode</code> aufrufe dann wird autom. zunächst <code>a.hashCode</code> aufgerufen, dann <code>b.hashCode</code> &amp; <span style="background: #ff0000ff">Scala addiert diese autom. zsm.</span>.</p>
+<p><code style="color: #d35843ff">(schema, records).hashCode</code>: Wenn ich <code>(a,b).hashCode</code> aufrufe dann wird autom. zunächst <code>a.hashCode</code> aufgerufen, dann <code>b.hashCode</code></p>
+</li>
+<li>
+<p>Scala nutzt f. Tupel eine ausgeklügelte Formel, d. d. Werte miteinander vermischt &amp; multip., damit d. genaue Position wichtig bleibt. So haben <code>(5, 10)</code> &amp; <code>(10, 5)</code> garantiert unterschiedl. Codes!</p>
 </li>
 <li>
 <p>Beim <span style="color: #8CD4C2">hashCode</span> geht es nur darum, dass wir ein &quot;Ober-Index&quot; verw. d. quazi d. Index einer &quot;Ober-Klasse&quot; ist, d. dann mehrere Tabellen in sich hat (<code>HashSet[Table[Records[Schema[String, Int|Double]]]]</code>)</p>
@@ -455,9 +458,12 @@ code {
 </div></code></pre>
 <p>D. ist identisch zu:</p>
 <pre class="hljs"><code><div><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(a,b):
+  <span class="hljs-keyword">if</span> <span class="hljs-literal">False</span>:
+    <span class="hljs-keyword">break</span>
 </div></code></pre>
 <p>Mit <code>(0 until upTo).forall(i =&gt; ...)</code>. Somit erstellen wir eine Variabel <code>i</code>, d. d. Werte v. 0 bis upTo einnimmt.</p>
 </details>
+<h1 id="ubaufgabe-2ub"><u><b>Aufgabe 2</u></b></h1>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>

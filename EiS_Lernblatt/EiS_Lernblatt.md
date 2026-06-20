@@ -1,4 +1,18 @@
 # Meine Gedankengänge f. d. neue Übungsblatt. 
+
+# Meine Gedankengänge f. d. neue Übungsblatt. 
+
+<script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+    };
+</script>
+<script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+
 > Da es zu warm ist & ich nicht all meine Sachen n. unten tragen möchte (es ist schon unordentlich genug) mache ich es hier:
 
 ## <u>Aufgabe 1)</u>
@@ -37,7 +51,7 @@ override def equals(other: Any): Boolean = other match {
     //Vgl. Schema
     this.schema == thatTable.schema &&
     (0 until numRecords).forall { i =>
-      this.records(i) == thatTable.records(i)
+    this.records(i) == thatTable.records(i)
     }
   case _ => false
 }
@@ -55,14 +69,13 @@ override def hashCode(): Int = {
   (schema, records).hashCode
 }
 ```
-* <code style="color: #d35843ff">(schema, records).hashCode</code>: Wenn ich `(a,b).hashCode` aufrufe dann wird autom. zunächst `a.hashCode` aufgerufen, dann `b.hashCode` & <span style="background: #ff0000ff">Scala addiert diese autom. zsm.</span>. 
+* <code style="color: #d35843ff">(schema, records).hashCode</code>: Wenn ich `(a,b).hashCode` aufrufe dann wird autom. zunächst `a.hashCode` aufgerufen, dann `b.hashCode`
+* Scala nutzt f. Tupel eine ausgeklügelte Formel, d. d. Werte miteinander vermischt & multip., damit d. genaue Position wichtig bleibt. So haben `(5, 10)` & `(10, 5)` garantiert unterschiedl. Codes!
 
 
 * Beim <span style="color: #8CD4C2">hashCode</span> geht es nur darum, dass wir ein "Ober-Index" verw. d. quazi d. Index einer "Ober-Klasse" ist, d. dann mehrere Tabellen in sich hat (`HashSet[Table[Records[Schema[String, Int|Double]]]]`)
 
 ---
-
-
 
 * `0 until 4` = Exklusiv $\implies$ `0123`
 * `0 to 4` = Inklusiv $\implies$ `01234`
@@ -77,13 +90,14 @@ override def hashCode(): Int = {
   D. ist identisch zu:
   ```python
   for i in range(a,b):
+    if False:
+      break
   ```
 
   Mit `(0 until upTo).forall(i => ...)`. Somit erstellen wir eine Variabel `i`, d. d. Werte v. 0 bis upTo einnimmt.
 </details>
 
-
-
+# <u><b>Aufgabe 2</u></b>
 
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
