@@ -420,6 +420,15 @@ code {
 <li><code>0 until 4</code> = Exklusiv $\implies$ <code>0123</code></li>
 <li><code>0 to 4</code> = Inklusiv $\implies$ <code>01234</code></li>
 </ul>
+<details>
+  <summary><h2><u>Wie kann man mit `.foreach` eine Schleife v. a bis b erstellen ?</u></h2></summary>
+<pre class="hljs"><code><div>(<span class="hljs-number">0</span> until upTo).forall(i =&gt; tableA(i) &lt;= tableB(i))
+</div></code></pre>
+<p>D. ist identisch zu:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(a,b):
+</div></code></pre>
+<p>Mit <code>(0 until upTo).forall(i =&gt; ...)</code>. Somit erstellen wir eine Variabel <code>i</code>, d. d. Werte v. 0 bis upTo einnimmt.</p>
+</details>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>

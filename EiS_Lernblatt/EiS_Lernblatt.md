@@ -45,7 +45,20 @@ override def equals(other: Any): Boolean = other match {
 * `0 until 4` = Exklusiv $\implies$ `0123`
 * `0 to 4` = Inklusiv $\implies$ `01234`
 
+<details>
+  <summary><h2><u>Wie kann man mit `.foreach` eine Schleife v. a bis b erstellen ?</u></h2></summary>
+  
+  ```scala
+  (0 until upTo).forall(i => tableA(i) <= tableB(i))
+  ```
 
+  D. ist identisch zu:
+  ```python
+  for i in range(a,b):
+  ```
+
+  Mit `(0 until upTo).forall(i => ...)`. Somit erstellen wir eine Variabel `i`, d. d. Werte v. 0 bis upTo einnimmt.
+</details>
 
 
 
