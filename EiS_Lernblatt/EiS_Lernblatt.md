@@ -1,18 +1,5 @@
 # Meine Gedankengänge f. d. neue Übungsblatt. 
 
-# Meine Gedankengänge f. d. neue Übungsblatt. 
-
-<script>
-    window.MathJax = {
-        tex: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']],
-            displayMath: [['$$', '$$'], ['\\[', '\\]']]
-        }
-    };
-</script>
-<script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-
-
 > Da es zu warm ist & ich nicht all meine Sachen n. unten tragen möchte (es ist schon unordentlich genug) mache ich es hier:
 
 ## <u>Aufgabe 1)</u>
@@ -99,6 +86,3 @@ override def hashCode(): Int = {
 
 # <u><b>Aufgabe 2</u></b>
 
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
