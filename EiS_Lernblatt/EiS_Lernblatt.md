@@ -149,6 +149,49 @@ override def hashCode(): Int = {
           .map((value, idString) => s"value $value occurs in row(s) $idString\n").mkString("")
   }
   ```
+  * wenn ich den Code ausführen möchte, steht, dass es ein Fehler bei `.sorted` ist
+    * <u>Grund</u>: Scala weiß $\lnot$ wie es mit `...:Variant`(<i>eigener komplexer Datentyp</i>) umgehen soll, um damit zu vgl.
+    * ```scala
+      object Variant {
+      /** Returns a new IntType for the given Int */
+      def apply(i: Long): Variant = LongType(i)
+
+      /** Returns a new DoubleType for the given Double */
+      def apply(d: Double): Variant = DoubleType(d)
+
+      /** Returns a new StringType for the given String */
+      def apply(s: String): Variant = StringType(s)
+      }
+      ```
+        * `variant` kann 3 Datentypen haben $\implies$ <b>LongType, DoubleType, StringType</b>
+        * Können wir es nicht an equals schicken oder ein neues implementieren, weil wir bei equals einen Parameter mit dem Typen Any erwarten, das alles annimmt. Dann können wir es mit dem case auffangen & weitere Kontrollen implementieren.
+
+  * wenn ich den Code ausführen möchte, steht, dass es ein Fehler bei `.sorted` ist
+    * <u>Grund</u>: Scala weiß $\lnot$ wie es mit `...:Variant`(<i>eigener komplexer Datentyp</i>) umgehen soll, um damit zu vgl.
+    * ```scala
+      object Variant {
+      /** Returns a new IntType for the given Int */
+      def apply(i: Long): Variant = LongType(i)
+
+      /** Returns a new DoubleType for the given Double */
+      def apply(d: Double): Variant = DoubleType(d)
+
+      /** Returns a new StringType for the given String */
+      def apply(s: String): Variant = StringType(s)
+      }
+      ```
+        * `variant` kann 3 Datentypen haben $\implies$ <b>LongType, DoubleType, StringType</b>
+
+        * `def apply(i: <Type>)` nutzen wir, damit autom. eins d. Funktionen aufgerufen, wo d. Datentypen ü.einstimmen. Wir müssen keine komplizierte If-Bedingungen implementieren.
+
+        * wir suchen uns ein Attribut aus $\implies$, dan. soll sortiert werden $=$ Typen untereinander $\lnot$ unterscheiden, weil Typen bei einem Attribut d. gleiche ist. Bei `Schema` wird bereits kontrolliert, ob `Id` zum Bsp. ein `Int` ist. 
+
+        * `.sortBy(_._1.toString)`: dadurch wird d. Problem gelöst
+          * wir vgl. d. String-Repräsentation
+          * `_` = Platzhalter f. Objekt
+          * `_1` = bedeutet, d. wir n. dem ersten Element sortieren
+
+
   </div>
 </details>
 
