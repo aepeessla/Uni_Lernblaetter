@@ -511,8 +511,122 @@ gibt.</li>
         .map((value, idString) =&gt; <span class="hljs-string">s"value <span class="hljs-subst">$value</span> occurs in row(s) <span class="hljs-subst">$idString</span>\n"</span>).mkString(<span class="hljs-string">""</span>)
 }
 </div></code></pre>
+<ul>
+<li>
+<p>wenn ich den Code ausführen möchte, steht, dass es ein Fehler bei <code>.sorted</code> ist</p>
+<ul>
+<li><u>Grund</u>: Scala weiß $\lnot$ wie es mit <code>...:Variant</code>(<i>eigener komplexer Datentyp</i>) umgehen soll, um damit zu vgl.</li>
+<li>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Variant</span> </span>{
+<span class="hljs-comment">/** Returns a new IntType for the given Int */</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>(i: <span class="hljs-type">Long</span>): <span class="hljs-type">Variant</span> = <span class="hljs-type">LongType</span>(i)
+
+<span class="hljs-comment">/** Returns a new DoubleType for the given Double */</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>(d: <span class="hljs-type">Double</span>): <span class="hljs-type">Variant</span> = <span class="hljs-type">DoubleType</span>(d)
+
+<span class="hljs-comment">/** Returns a new StringType for the given String */</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>(s: <span class="hljs-type">String</span>): <span class="hljs-type">Variant</span> = <span class="hljs-type">StringType</span>(s)
+}
+</div></code></pre>
+<ul>
+<li><code>variant</code> kann 3 Datentypen haben $\implies$ <b>LongType, DoubleType, StringType</b></li>
+<li>Können wir es nicht an equals schicken oder ein neues implementieren, weil wir bei equals einen Parameter mit dem Typen Any erwarten, das alles annimmt. Dann können wir es mit dem case auffangen &amp; weitere Kontrollen implementieren.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>wenn ich den Code ausführen möchte, steht, dass es ein Fehler bei <code>.sorted</code> ist</p>
+<ul>
+<li><u>Grund</u>: Scala weiß $\lnot$ wie es mit <code>...:Variant</code>(<i>eigener komplexer Datentyp</i>) umgehen soll, um damit zu vgl.</li>
+<li>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Variant</span> </span>{
+<span class="hljs-comment">/** Returns a new IntType for the given Int */</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>(i: <span class="hljs-type">Long</span>): <span class="hljs-type">Variant</span> = <span class="hljs-type">LongType</span>(i)
+
+<span class="hljs-comment">/** Returns a new DoubleType for the given Double */</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>(d: <span class="hljs-type">Double</span>): <span class="hljs-type">Variant</span> = <span class="hljs-type">DoubleType</span>(d)
+
+<span class="hljs-comment">/** Returns a new StringType for the given String */</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>(s: <span class="hljs-type">String</span>): <span class="hljs-type">Variant</span> = <span class="hljs-type">StringType</span>(s)
+}
+</div></code></pre>
+<ul>
+<li>
+<p><code>variant</code> kann 3 Datentypen haben $\implies$ <b>LongType, DoubleType, StringType</b></p>
+</li>
+<li>
+<p><code>def apply(i: &lt;Type&gt;)</code> nutzen wir, damit autom. eins d. Funktionen aufgerufen, wo d. Datentypen ü.einstimmen. Wir müssen keine komplizierte If-Bedingungen implementieren.</p>
+</li>
+<li>
+<p>wir suchen uns ein Attribut aus $\implies$, dan. soll sortiert werden $=$ Typen untereinander $\lnot$ unterscheiden, weil Typen bei einem Attribut d. gleiche ist. Bei <code>Schema</code> wird bereits kontrolliert, ob <code>Id</code> zum Bsp. ein <code>Int</code> ist.</p>
+</li>
+<li>
+<p><code>.sortBy(_._1.toString)</code>: dadurch wird d. Problem gelöst</p>
+<ul>
+<li>wir vgl. d. String-Repräsentation</li>
+<li><code>_</code> = Platzhalter f. Objekt</li>
+<li><code>_1</code> = bedeutet, d. wir n. dem ersten Element sortieren</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
   </div>
 </details>
+<details>
+  <summary sytle="font-size: 10px">TreeIndex.scala</summary>
+  <div sytle="border: black 1px solid">
+<pre class="hljs"><code><div><span class="hljs-keyword">package</span> dbms.v2.indexing
+
+<span class="hljs-keyword">import</span> dbms.v2.misc.{<span class="hljs-type">RecordID</span>, <span class="hljs-type">Variant</span>}
+<span class="hljs-keyword">import</span> dbms.v2.store.<span class="hljs-type">Table</span>
+<span class="hljs-keyword">import</span> scala.collection.mutable
+
+<span class="hljs-comment">/** Represents an index that is internally materialized as hash map
+ *
+ * @param table     the table on which the index is built
+ * @param attribute the name of the attribute to build the index on
+ */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HashIndex</span>(<span class="hljs-params">table: <span class="hljs-type">Table</span>, attribute: <span class="hljs-type">String</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">MapBasedIndex</span>(<span class="hljs-params">table, attribute</span>) </span>{
+
+    <span class="hljs-comment">/** The internal data structure (a HashMap) used to represent our index data. */</span>
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">val</span> index: mutable.<span class="hljs-type">HashMap</span>[<span class="hljs-type">Variant</span>, <span class="hljs-type">Seq</span>[<span class="hljs-type">RecordID</span>]] = getIndexMapping.to(mutable.<span class="hljs-type">HashMap</span>)
+
+    <span class="hljs-comment">/** Returns a string representation of this index. */</span>
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">toString</span></span>: <span class="hljs-type">String</span> = index
+        .toSeq
+        .sorted
+        .map((value, idString) =&gt; <span class="hljs-string">s"value <span class="hljs-subst">$value</span> occurs in row(s) <span class="hljs-subst">$idString</span>\n"</span>).mkString(<span class="hljs-string">""</span>)
+}
+</div></code></pre>
+<ul>
+<li>hier ist es genau d. Gleiche wie Hashindex.scala</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">package</span> dbms.v2.indexing
+
+<span class="hljs-keyword">import</span> dbms.v2.misc.{<span class="hljs-type">RecordID</span>, <span class="hljs-type">Variant</span>}
+<span class="hljs-keyword">import</span> dbms.v2.store.<span class="hljs-type">Table</span>
+<span class="hljs-keyword">import</span> scala.collection.mutable
+
+<span class="hljs-comment">/** Represents an index that is internally materialized as hash map
+*
+* @param table     the table on which the index is built
+* @param attribute the name of the attribute to build the index on
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HashIndex</span>(<span class="hljs-params">table: <span class="hljs-type">Table</span>, attribute: <span class="hljs-type">String</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">MapBasedIndex</span>(<span class="hljs-params">table, attribute</span>) </span>{
+
+    <span class="hljs-comment">/** The internal data structure (a HashMap) used to represent our index data. */</span>
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">val</span> index: mutable.<span class="hljs-type">HashMap</span>[<span class="hljs-type">Variant</span>, <span class="hljs-type">Seq</span>[<span class="hljs-type">RecordID</span>]] = getIndexMapping.to(mutable.<span class="hljs-type">HashMap</span>)
+
+
+}   
+</div></code></pre>
+  </div>
+</details>
+<hr>
 <h1 id="ubaufgabe-4ub"><u><b>Aufgabe 4</u></b></h1>
 <pre class="hljs"><code><div><span class="hljs-comment">/** Joins two tables sharing exactly one attribute. */</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">naturalJoin</span></span>(other: <span class="hljs-type">Table</span>): <span class="hljs-type">Table</span> = {
