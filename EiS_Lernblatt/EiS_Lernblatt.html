@@ -421,16 +421,33 @@ code {
 <p>Hier wird bei Tabelle A &amp; Tabelle B jeweils d. Einträge geöffnet (Zeilen) &amp; zeilenweise durchiteriert.</p>
 </li>
 <li>
-<p>Da wir <code>numRecords</code> verw. ist es garantiert, dass wir $\lnot$ <span style="color: #81B9DB">out of range</span> sind.  Wir müssen nicht <code>this.numRange</code> &amp; <code>that.numRange</code> bestimmen, weil wir bereits in der ersten Kontrolle d. Längen vergleichen haben. Damit wir bei <code>this.records(i)</code> ankommen können, muss ja d. erste Bedingung schon stimmen, weil wir d. Bedingungen mit <code>&amp;&amp;</code>verbunden haben.</p>
+<p>Da wir <code>numRecords</code> verw. ist es garantiert, dass wir $\lnot$ <span style="color: #81B9DB">out of range</span> sind.</p>
+<ul>
+<li>Wir müssen $\lnot$ <code>this.numRange</code> &amp; <code>that.numRange</code> bestimmen, weil wir bereits in d. ersten Kontrolle d. Längen vergleichen haben.</li>
+<li>Damit wir bei <code>this.records(i)</code> ankommen können, muss ja d. erste Bedingung schon stimmen, weil wir d. Bedingungen mit <code>&amp;&amp;</code> verbunden haben.</li>
+</ul>
+</li>
+<li>
+<p>Diese würden dann $\lnot$ mehr gleich sein, weshalb wir den <code style="color: #D281DB">hashCode</code> verw. können. In der Aufgabenstellung wurde gesagt, dass d. Reihenfolge im inneren d. Tabellen egal ist, wobei d. Werte stimmen sollten. D. Schema haben wir bereits ein Schritt davor kontrolliert. Deswegen können wie das <code>def hashCode</code> überschreiben &amp; unser eigenen hashCode def.</p>
 </li>
 </ul>
-<p>Diese würden dann nicht mehr gleich sein, weshalb wir den hashCode verwenden können. In der Aufgabenstellung wurde gesagt, dass d. Reihenfolge im Inneren der Tabellen egal ist, wobei die Werte stimmen sollten. Das Schema haben wir bereits ein Schritt davor kontrolliert. Deswegen können wie das <code>def hashCode</code> überschreiben &amp; unser eigenen hashCode definieren</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hashCode</span></span>(): <span class="hljs-type">Int</span> = {
+  <span class="hljs-comment">//Mein hashCode soll aus den Werten die Summe ausrechnen</span>
+
+  <span class="hljs-comment">//Hier habe ich jetzt folgendes ü.mittelt: Seq("studentID": Int -&gt; ..., "grade": Double -&gt; ...,"bonus": Double -&gt; ...)</span>
+  (schema, records).hashCode
+}
+</div></code></pre>
+<ul>
+<li>Beim <span style="color: #8CD4C2">hashCode</span> geht es nur darum, dass wir ein &quot;Ober-Index&quot; verw. d. quazi d. Index einer &quot;Ober-Klasse&quot; ist, d. dann mehrere Tabellen in sich hat (<code>HashSet[Table[Records[Schema[String, Int|Double]]]]</code>)</li>
+</ul>
+<hr>
 <ul>
 <li><code>0 until 4</code> = Exklusiv $\implies$ <code>0123</code></li>
 <li><code>0 to 4</code> = Inklusiv $\implies$ <code>01234</code></li>
 </ul>
 <details>
-  <summary><h2><u>Wie kann man mit `.foreach` eine Schleife v. a bis b erstellen ?</u></h2></summary>
+  <summary><b><u>Wie kann man mit `.foreach` eine Schleife v. a bis b erstellen ?</b></u></summary>
 <pre class="hljs"><code><div>(<span class="hljs-number">0</span> until upTo).forall(i =&gt; tableA(i) &lt;= tableB(i))
 </div></code></pre>
 <p>D. ist identisch zu:</p>

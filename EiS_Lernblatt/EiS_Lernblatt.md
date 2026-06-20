@@ -44,13 +44,22 @@ override def equals(other: Any): Boolean = other match {
 ```
 * Hier wird bei Tabelle A & Tabelle B jeweils d. Einträge geöffnet (Zeilen) & zeilenweise durchiteriert.
 
-* Da wir `numRecords` verw. ist es garantiert, dass wir $\lnot$ <span style="color: #81B9DB">out of range</span> sind.  Wir müssen nicht `this.numRange` & `that.numRange` bestimmen, weil wir bereits in der ersten Kontrolle d. Längen vergleichen haben. Damit wir bei `this.records(i)` ankommen können, muss ja d. erste Bedingung schon stimmen, weil wir d. Bedingungen mit `&&`verbunden haben.
+* Da wir `numRecords` verw. ist es garantiert, dass wir $\lnot$ <span style="color: #81B9DB">out of range</span> sind.  
+  * Wir müssen $\lnot$ `this.numRange` & `that.numRange` bestimmen, weil wir bereits in d. ersten Kontrolle d. Längen vergleichen haben.
+  * Damit wir bei `this.records(i)` ankommen können, muss ja d. erste Bedingung schon stimmen, weil wir d. Bedingungen mit `&&` verbunden haben.
+* Diese würden dann $\lnot$ mehr gleich sein, weshalb wir den <code style="color: #D281DB">hashCode</code> verw. können. In der Aufgabenstellung wurde gesagt, dass d. Reihenfolge im inneren d. Tabellen egal ist, wobei d. Werte stimmen sollten. D. Schema haben wir bereits ein Schritt davor kontrolliert. Deswegen können wie das `def hashCode` überschreiben & unser eigenen hashCode def.
 
-Diese würden dann nicht mehr gleich sein, weshalb wir den hashCode verwenden können. In der Aufgabenstellung wurde gesagt, dass d. Reihenfolge im Inneren der Tabellen egal ist, wobei die Werte stimmen sollten. Das Schema haben wir bereits ein Schritt davor kontrolliert. Deswegen können wie das `def hashCode` überschreiben & unser eigenen hashCode definieren
+```scala
+override def hashCode(): Int = {
+  //Mein hashCode soll aus den Werten die Summe ausrechnen
 
+  //Hier habe ich jetzt folgendes ü.mittelt: Seq("studentID": Int -> ..., "grade": Double -> ...,"bonus": Double -> ...)
+  (schema, records).hashCode
+}
+```
+* Beim <span style="color: #8CD4C2">hashCode</span> geht es nur darum, dass wir ein "Ober-Index" verw. d. quazi d. Index einer "Ober-Klasse" ist, d. dann mehrere Tabellen in sich hat (`HashSet[Table[Records[Schema[String, Int|Double]]]]`)
 
-
-
+---
 
 
 
@@ -58,7 +67,7 @@ Diese würden dann nicht mehr gleich sein, weshalb wir den hashCode verwenden k�
 * `0 to 4` = Inklusiv $\implies$ `01234`
 
 <details>
-  <summary><h2><u>Wie kann man mit `.foreach` eine Schleife v. a bis b erstellen ?</u></h2></summary>
+  <summary><b><u>Wie kann man mit `.foreach` eine Schleife v. a bis b erstellen ?</b></u></summary>
   
   ```scala
   (0 until upTo).forall(i => tableA(i) <= tableB(i))
