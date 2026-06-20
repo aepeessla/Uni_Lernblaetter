@@ -84,9 +84,19 @@ override def hashCode(): Int = {
   Mit `(0 until upTo).forall(i => ...)`. Somit erstellen wir eine Variabel `i`, d. d. Werte v. 0 bis upTo einnimmt.
 </details>
 
+
+
+
+
+
+
+
+
+
 # <u><b>Aufgabe 2</u></b>
 
-<details>
+
+<details><div style="border: black 1px solid">
   <summary>Aufgabe:</summary>
   Arbeiten Sie in:
 
@@ -107,9 +117,17 @@ override def hashCode(): Int = {
 
   ```bash
   sbt "testOnly dbms.v2.ScoredIndexRepresentationSuite"
-  ```                 
-  
-</details>
+  ```
+</div></details>
+
+
+
+
+
+
+
+
+
 
 
 
