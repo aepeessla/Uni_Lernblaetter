@@ -68,7 +68,7 @@ override def hashCode(): Int = {
 * `0 to 4` = Inklusiv $\implies$ `01234`
 
 <details>
-  <summary><b><u>Wie kann man mit `.foreach` eine Schleife v. a bis b erstellen ?</b></u></summary>
+  <summary style="text-size:20px"><b><u>Wie kann man mit `.foreach` eine Schleife v. a bis b erstellen ?</b></u></summary>
   
   ```scala
   (0 until upTo).forall(i => tableA(i) <= tableB(i))
@@ -86,6 +86,35 @@ override def hashCode(): Int = {
 
 # <u><b>Aufgabe 2</u></b>
 
+<details>
+  <summary>Aufgabe:</summary>
+  Arbeiten Sie in:
+
+  - `src/main/scala/dbms/v2/indexing/HashIndex.scala`
+  - `src/main/scala/dbms/v2/indexing/TreeIndex.scala`
+  - `src/main/scala/dbms/v2/indexing/MapBasedIndex.scala`
+
+  Das Template enthält `toString`-Implementierungen für `HashIndex` und `TreeIndex`, diese sind aber nicht ganz
+  korrekt.
+
+  Gefordertes Verhalten:
+
+  - Finden und beheben Sie das Problem.
+  - Ändern Sie den Code so, dass es nur noch eine gemeinsame `toString`-Methode für `HashIndex` und `TreeIndex`
+    gibt.
+
+  Relevante Testsuite:
+
+  ```bash
+  sbt "testOnly dbms.v2.ScoredIndexRepresentationSuite"
+  ```                 
+  
+</details>
+
+
+
+# <u><b>Aufgabe 4</u></b>
+
 ```scala
 /** Joins two tables sharing exactly one attribute. */
 def naturalJoin(other: Table): Table = {
@@ -97,6 +126,13 @@ def naturalJoin(other: Table): Table = {
     * <span style="color: #a9a9a9ff">D. Attribute sind in den Schemas gespeichert, also kann ich gucken, ob d. gesuchte Attribut enthalten ist </span>
   * `TableRecord.attributes: Map[String, Variant]`("grade" -> 1.0): Wir können hier d. beiden Strings vgl.
     * Gleich $\implies$ füge d. `Record` in das neue Table mit `.appendRecord`
+    * $\lnot$ Gleich $\implies$ mache weiter
+  
+<details>
+<summary><u>Brauche ich ein Index?</u></summary>
+
+* Weil wir mehrere Tables kontrollieren
+</details>
 
 
 

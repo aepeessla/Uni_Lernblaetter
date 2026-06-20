@@ -453,7 +453,7 @@ code {
 <li><code>0 to 4</code> = Inklusiv $\implies$ <code>01234</code></li>
 </ul>
 <details>
-  <summary><b><u>Wie kann man mit `.foreach` eine Schleife v. a bis b erstellen ?</b></u></summary>
+  <summary style="text-size:20px"><b><u>Wie kann man mit `.foreach` eine Schleife v. a bis b erstellen ?</b></u></summary>
 <pre class="hljs"><code><div>(<span class="hljs-number">0</span> until upTo).forall(i =&gt; tableA(i) &lt;= tableB(i))
 </div></code></pre>
 <p>D. ist identisch zu:</p>
@@ -464,6 +464,27 @@ code {
 <p>Mit <code>(0 until upTo).forall(i =&gt; ...)</code>. Somit erstellen wir eine Variabel <code>i</code>, d. d. Werte v. 0 bis upTo einnimmt.</p>
 </details>
 <h1 id="ubaufgabe-2ub"><u><b>Aufgabe 2</u></b></h1>
+<details>
+  <summary>Aufgabe:</summary>
+  Arbeiten Sie in:
+<ul>
+<li><code>src/main/scala/dbms/v2/indexing/HashIndex.scala</code></li>
+<li><code>src/main/scala/dbms/v2/indexing/TreeIndex.scala</code></li>
+<li><code>src/main/scala/dbms/v2/indexing/MapBasedIndex.scala</code></li>
+</ul>
+<p>Das Template enthält <code>toString</code>-Implementierungen für <code>HashIndex</code> und <code>TreeIndex</code>, diese sind aber nicht ganz
+korrekt.</p>
+<p>Gefordertes Verhalten:</p>
+<ul>
+<li>Finden und beheben Sie das Problem.</li>
+<li>Ändern Sie den Code so, dass es nur noch eine gemeinsame <code>toString</code>-Methode für <code>HashIndex</code> und <code>TreeIndex</code>
+gibt.</li>
+</ul>
+<p>Relevante Testsuite:</p>
+<pre class="hljs"><code><div>sbt <span class="hljs-string">"testOnly dbms.v2.ScoredIndexRepresentationSuite"</span>
+</div></code></pre>
+</details>
+<h1 id="ubaufgabe-4ub"><u><b>Aufgabe 4</u></b></h1>
 <pre class="hljs"><code><div><span class="hljs-comment">/** Joins two tables sharing exactly one attribute. */</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">naturalJoin</span></span>(other: <span class="hljs-type">Table</span>): <span class="hljs-type">Table</span> = {
 ???
@@ -480,11 +501,18 @@ code {
 <li><code>TableRecord.attributes: Map[String, Variant]</code>(&quot;grade&quot; -&gt; 1.0): Wir können hier d. beiden Strings vgl.
 <ul>
 <li>Gleich $\implies$ füge d. <code>Record</code> in das neue Table mit <code>.appendRecord</code></li>
+<li>$\lnot$ Gleich $\implies$ mache weiter</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+<details>
+<summary><u>Brauche ich ein Index?</u></summary>
+<ul>
+<li>Weil wir mehrere Tables kontrollieren</li>
+</ul>
+</details>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
 </body>
