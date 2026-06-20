@@ -1,60 +1,44 @@
-# **(Un-)Veränderlichkeit**
-## <u>Mutuble</u>
-* `var`
-## <u>Unmutuble</u>
-* `val`
+# Meine Gedankengänge f. d. neue Übungsblatt. 
+> Da es zu warm ist & ich nicht all meine Sachen n. unten tragen möchte (es ist schon unordentlich genug) mache ich es hier:
 
+## <u>Aufgabe 1)</u>
 
-# **Typisierung**
-* statisch
+![alt text](image.png)
+* so soll mein Code aussehen !
+
+### <u>Gleichheit</u>
+* <u>Wann gelten 2 tabellen als gleich ?</u>
+  * Records gleich
+  * Records in derselben Reihenfolge vorkommen
+  * die Reihenfolge der Attribute innerhalb des Schemas oder der Records die Gleichheit nicht beeinflusst
+
+* <u>Wie sieht eine Tabelle aus ?</u>
+  ```scala
+  val table1 = new Table(
+    Seq(
+        "studentID": Int -> ...,
+        "grade": Double -> ...,
+        "bonus": Double -> ...
+    )
+  )
+  ```
+
+>* <u>Vorlesung</u>
+![alt text](IMG_2854.jpeg)
+![alt text](IMG_2856.jpeg)
+
+---
+
 ```scala
-@main def start() =
-  var a: Int = 42
-  println(a)
-  println(a.getClass)
-
-// Ausgabe
-
-42
-Int
+override def equals(that: Any): Boolean = {
+        that match {
+            // Sind beide Elemete gleich, sind die 
+            case thatTable: Table => 
+                this.project.numRecords == thatTable.project.numRecords && this.records.forall(table: Table => )
+            case _ => False
+        }
+    }
 ```
-* auch wenn ich $\lnot$ den Typ angebe, wird es autom. ü.nommen -> <b><span style="color: #fc0303;">Typinferenz</span></b>
-```scala
-@main def start() =
-    var a = 42
-    println(a)
-    println(a.getClass)
-// Ausgabe
-42
-int
-```
-## <u>Typenumwandlung(Casts)</u>
-
-
-# **Veränderlichkeit & unveränderlichkeit**
-
-
-* Klasse $\underrightarrow{\ \ \ \ \textcolor{#7abd2d}{\text{text}}\ \ \ \ }$ rationale Zahlen
-* zähler: Int
-* nenner: Int; > 0
-* Operation: Addition, Kürzen
-* 2 Arten: Objekt darf n. Operationen verändern oder $\lnot$ verändern
-
-```
-• Primzahlfaktorzerlegung
-• wenn beide d. gleiche Primzahlen haben, dann damit den Nenner und den Zähler teilen
-
-Primzhal oder nicht ?
-
-ist meine Zahl durch eine Zahl durch [2,sqrt(n) teilbar ?, wenn ja keine Primzahl, wenn ja, dann Primzahl]
-```
-
-
-
-
-
-
-
 
 
 
