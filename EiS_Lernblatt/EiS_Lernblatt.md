@@ -86,6 +86,29 @@ override def hashCode(): Int = {
 
 # <u><b>Aufgabe 2</u></b>
 
+```scala
+/** Joins two tables sharing exactly one attribute. */
+def naturalJoin(other: Table): Table = {
+???
+}
+```
+* <u>Ist Attribut enthalten ?</u>
+  * Attribute vgl.
+    * <span style="color: #a9a9a9ff">D. Attribute sind in den Schemas gespeichert, also kann ich gucken, ob d. gesuchte Attribut enthalten ist </span>
+  * `TableRecord.attributes: Map[String, Variant]`("grade" -> 1.0): Wir können hier d. beiden Strings vgl.
+    * Gleich $\implies$ füge d. `Record` in das neue Table mit `.appendRecord`
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
