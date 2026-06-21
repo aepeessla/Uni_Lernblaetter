@@ -144,7 +144,7 @@ override def hashCode(): Int = {
   import dbms.v2.store.Table
   import scala.collection.mutable
 
-  <code>/** Represents an index that is internally materialized as hash map
+  /** Represents an index that is internally materialized as hash map
    *
    * @param table     the table on which the index is built
    * @param attribute the name of the attribute to build the index on
@@ -202,8 +202,6 @@ override def hashCode(): Int = {
           * wir vgl. d. String-Repräsentation
           * `_` = Platzhalter f. Objekt
           * `_1` = bedeutet, d. wir n. dem ersten Element sortieren
-
-
 </div></details>
 
 <details>
