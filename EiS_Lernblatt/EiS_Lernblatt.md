@@ -144,7 +144,7 @@ override def hashCode(): Int = {
   import dbms.v2.store.Table
   import scala.collection.mutable
 
-  /** Represents an index that is internally materialized as hash map
+  <code>/** Represents an index that is internally materialized as hash map
    *
    * @param table     the table on which the index is built
    * @param attribute the name of the attribute to build the index on
@@ -378,7 +378,6 @@ override def hashCode(): Int = {
   ```
   * Wie schon gesagt, erben `HashMap` & `TreeMap` v. <code style="color: #7C7CBF ">Map</code> $\implies$ haben $\forall$ Funktionen d. auch <code style="color: #7C7CBF ">Map</code> hat
     * somit können wir d. Code <code>override def tostring: Int = ...</code> <span style="color: #ca2828ff">aus den beiden anderen Datein entf.</span>  
-
 
 </div></details>
 
