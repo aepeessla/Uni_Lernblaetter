@@ -368,7 +368,7 @@ override def hashCode(): Int = {
               throw IllegalArgumentException("The datatype of the passed key differs from the datatype of the index.")
 
           index.getOrElse(key, Seq())
-      }</style>
+      }
 
       override def toString: String = 
           index.toSeq.sortBy(_._1.toString).map((value, idString) => s"value $value occurs in row(s) $idString\n").mkString("")    
