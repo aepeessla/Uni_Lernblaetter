@@ -425,11 +425,30 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
 * <u><b>Was soll ü.haupt geschehen ?</b></u>
   * <u>Kontrolle</u>: Wenn `Attribut` $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{nicht nethalten}}\ \ \ \ }$ `IllegalArgumentException`
   * `Attribut` wird ü.geben
-  * danach werden die Tabellen sortiert
+  * danach werden d. Tabelle sortiert
   * <u>Rückgabe</u>: Ein neuen `Table`
   * <span style="color: red">Keine eigenen Sortier-Algorithmus implementieren</span> $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{sondern}}\ \ \ \ }$ aus Scala-StandardMethode !
   
+  ```scala
+  /** Returns a new table that is sorted by the given attribute */
+    def sortBy(attribute: String): Table = {
+        ???
+    }
+  ```
+  * Kontrolle einf.
+    * `Schema.scala` hat `def contains(attribute: String): Boolean = attributes.contains(attribute)`, welches wir benutzen können, ob d. `attribute` enthalten ist oder nicht
+  
+  ```scala
+  if (!schema.contains(attribute))
+    throw new IllegalArgumentExeption("Das Attribut wo nach sortiert werden soll, ist nicht in ihrer Tabelle enthalten.")
+  ```
+  ---
+  * Sortieren
 
+  * `sortBy()`
+  ```scala
+  
+  ```
 </details>
 
 

@@ -787,14 +787,41 @@ existiert.</p>
 <details>
 <summary><b><u>sortBy(attribute: String): Table</u></b></summary>
 <ul>
-<li><u><b>Was soll ü.haupt geschehen ?</b></u>
+<li>
+<p><u><b>Was soll ü.haupt geschehen ?</b></u></p>
 <ul>
 <li><u>Kontrolle</u>: Wenn <code>Attribut</code> $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{nicht nethalten}}\ \ \ \ }$ <code>IllegalArgumentException</code></li>
 <li><code>Attribut</code> wird ü.geben</li>
-<li>danach werden die Tabellen sortiert</li>
+<li>danach werden d. Tabelle sortiert</li>
 <li><u>Rückgabe</u>: Ein neuen <code>Table</code></li>
 <li><span style="color: red">Keine eigenen Sortier-Algorithmus implementieren</span> $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{sondern}}\ \ \ \ }$ aus Scala-StandardMethode !</li>
 </ul>
+<pre class="hljs"><code><div><span class="hljs-comment">/** Returns a new table that is sorted by the given attribute */</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sortBy</span></span>(attribute: <span class="hljs-type">String</span>): <span class="hljs-type">Table</span> = {
+      ???
+  }
+</div></code></pre>
+<ul>
+<li>Kontrolle einf.
+<ul>
+<li><code>Schema.scala</code> hat <code>def contains(attribute: String): Boolean = attributes.contains(attribute)</code>, welches wir benutzen können, ob d. <code>attribute</code> enthalten ist oder nicht</li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">if</span> (!schema.contains(attribute))
+  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalArgumentExeption</span>(<span class="hljs-string">"Das Attribut wo nach sortiert werden soll, ist nicht in ihrer Tabelle enthalten."</span>)
+</div></code></pre>
+<hr>
+<ul>
+<li>
+<p>Sortieren</p>
+</li>
+<li>
+<p><code>sortBy()</code></p>
+</li>
+</ul>
+<pre class="hljs"><code><div>
+</div></code></pre>
 </li>
 </ul>
 </details>
