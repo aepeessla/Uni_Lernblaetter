@@ -475,7 +475,12 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
   * soll n.einander d. Liste n. den ü.ggb. `attributen` sortieren
   
   1) __<u>Kontrolle</u>__:
-  
+  * sind \forall Attribute in Schema ?
+  ```scala
+  //False -> True
+  if (!attributes.forall(a => schema.contains(a)))
+    throw new IllegalargumentException("Die übergebenen Attribute stimmen mit dem Schema nicht überein.")
+  ```
 
 </details>
 

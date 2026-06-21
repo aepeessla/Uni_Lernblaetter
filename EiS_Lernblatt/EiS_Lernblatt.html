@@ -845,6 +845,13 @@ existiert.</p>
 <ol>
 <li><strong><u>Kontrolle</u></strong>:</li>
 </ol>
+<ul>
+<li>sind \forall Attribute in Schema ?</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment">//False -&gt; True</span>
+<span class="hljs-keyword">if</span> (!attributes.forall(a =&gt; schema.contains(a)))
+  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalargumentException</span>(<span class="hljs-string">"Die übergebenen Attribute stimmen mit dem Schema nicht überein."</span>)
+</div></code></pre>
 </li>
 </ul>
 </details>
