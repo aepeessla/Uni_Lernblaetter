@@ -855,6 +855,13 @@ existiert.</p>
 <ol>
 <li><strong><u>Sortieren</u></strong>:</li>
 </ol>
+<ul>
+<li><code>getValue(attribute: String)</code></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">val</span> sortedRecords = records.sortBy(row =&gt; 
+  attributes.foreach(a =&gt; row.getValue(a))
+  )
+</div></code></pre>
 </li>
 </ul>
 </details>
