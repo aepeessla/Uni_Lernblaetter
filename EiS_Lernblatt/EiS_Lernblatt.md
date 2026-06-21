@@ -463,7 +463,6 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
     def this(schema: Schema, initialRecords: Iterable[TableRecord]) = {}
     ```
     * D. ist d. Leitfaden f. jegliche Tabelle mit dem Typen v. `Table`. 
-
 </details>
 
 
@@ -492,7 +491,7 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
   Table(schema, sortedRecords)
   ```
   * wir nutzen <code style="color: #4eb591ff">.map</code> & $\lnot$ <code style="color: #e2a816ff">.forall</code>, weil <code style="color: #e2a816ff">.forall</code> nichts zurückgibt & wir quazi bei `attributes.forall` keine Werte haben, mit dem wir arbeiten können. <code style="color: #4eb591ff">.map</code> jedoch schon. 
-  
+
 </details>
 
 
