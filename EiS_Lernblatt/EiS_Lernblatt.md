@@ -445,10 +445,14 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
   ---
   * Sortieren
 
-  * `sortBy()`
-  ```scala
+  * d. gesamte Inhalt ist in `records: ArrayBuffer[TableRecord]` enthalten
+    * wir müssen also durch `records` iterieren & sortieren
+      * `.sortBy()`?
+        * `_._1` fällt mir jetzt ein, aber d. nimmt das erste Elem. & $\lnot$ d. gewünschte Elem.
+        * `.toString` muss ich verw. weil `Variant` $\begin{cases}Double \\ Int \\ String \end{cases}$
   
-  ```
+
+
 </details>
 
 
