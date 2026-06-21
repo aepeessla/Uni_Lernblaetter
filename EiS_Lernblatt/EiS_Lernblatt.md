@@ -1,8 +1,13 @@
-<css>
-code  {
-  background: 
-}
-</css>
+
+<style>
+  code {
+    background-color: #bcbcbcff;
+    color: #6bc31eff;
+    padding: 2px 6px;          /* Ein bisschen Abstand, damit es gut aussieht */
+    border-radius: 4px;       /* Schicke abgerundete Ecken */
+  }
+</style>
+
 
 
 
