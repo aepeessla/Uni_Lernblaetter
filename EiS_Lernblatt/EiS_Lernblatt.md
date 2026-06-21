@@ -426,7 +426,8 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
   * `Attribut` wird ü.geben
   * danach werden die Tabellen sortiert
   * <u>Rückgabe</u>: Ein neuen `Table`
-  
+  * <span style="color: red">Keine eigenen Sortier-Algorithmus implementieren</span> $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{sondern}}\ \ \ \ }$ aus Scala-StandardMethode !
+  * Kontrolle: Wenn `Attribut` $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{nicht nethalten}}\ \ \ \ }$ `IllegalArgumentException`
 
 </details>
 
