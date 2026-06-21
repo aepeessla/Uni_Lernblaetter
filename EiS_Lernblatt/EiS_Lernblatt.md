@@ -370,13 +370,16 @@ override def hashCode(): Int = {
               throw IllegalArgumentException("The datatype of the passed key differs from the datatype of the index.")
 
           index.getOrElse(key, Seq())
-      }
+      }</style>
 
       override def toString: String = 
           index.toSeq.sortBy(_._1.toString).map((value, idString) => s"value $value occurs in row(s) $idString\n").mkString("")    
   }
   ```
   * Wie schon gesagt, erben `HashMap` & `TreeMap` v. <code style="color: #7C7CBF ">Map</code> $\implies$ haben $\forall$ Funktionen d. auch <code style="color: #7C7CBF ">Map</code> hat
+    * somit können wir d. Code <code>override def tostring: Int = ...</code> <span style="color: #ca2828ff">aus den beiden anderen Datein entf.</span>  
+
+
 </div></details>
 
 

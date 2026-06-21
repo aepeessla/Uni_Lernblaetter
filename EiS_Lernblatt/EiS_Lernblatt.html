@@ -742,14 +742,18 @@ gibt.</li>
             <span class="hljs-keyword">throw</span> <span class="hljs-type">IllegalArgumentException</span>(<span class="hljs-string">"The datatype of the passed key differs from the datatype of the index."</span>)
 
         index.getOrElse(key, <span class="hljs-type">Seq</span>())
-    }
+    }&lt;/style&gt;
 
     <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">toString</span></span>: <span class="hljs-type">String</span> = 
         index.toSeq.sortBy(_._1.toString).map((value, idString) =&gt; <span class="hljs-string">s"value <span class="hljs-subst">$value</span> occurs in row(s) <span class="hljs-subst">$idString</span>\n"</span>).mkString(<span class="hljs-string">""</span>)    
 }
 </div></code></pre>
 <ul>
-<li>Wie schon gesagt, erben <code>HashMap</code> &amp; <code>TreeMap</code> v. <code style="color: #7C7CBF ">Map</code> $\implies$ haben $\forall$ Funktionen d. auch <code style="color: #7C7CBF ">Map</code> hat</li>
+<li>Wie schon gesagt, erben <code>HashMap</code> &amp; <code>TreeMap</code> v. <code style="color: #7C7CBF ">Map</code> $\implies$ haben $\forall$ Funktionen d. auch <code style="color: #7C7CBF ">Map</code> hat
+<ul>
+<li>somit können wir d. Code <code>override def tostring: Int = ...</code> <span style="color: #ca2828ff">aus den beiden anderen Datein entf.</span></li>
+</ul>
+</li>
 </ul>
 </div></details>
 <hr>
