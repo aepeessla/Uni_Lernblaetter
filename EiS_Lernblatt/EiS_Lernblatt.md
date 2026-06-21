@@ -423,6 +423,7 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
 <summary><b><u>sortBy(attribute: String): Table</u></b></summary>
 
 * <u><b>Was soll ü.haupt geschehen ?</b></u>
+
   * <u>Kontrolle</u>: Wenn `Attribut` $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{nicht nethalten}}\ \ \ \ }$ `IllegalArgumentException`
   * `Attribut` wird ü.geben
   * danach werden d. Tabelle sortiert
@@ -443,7 +444,7 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
     throw new IllegalArgumentExeption("Das Attribut wo nach sortiert werden soll, ist nicht in ihrer Tabelle enthalten.")
   ```
   ---
-  * Sortieren
+  __Sortieren__
 
   * d. gesamte Inhalt ist in `records: ArrayBuffer[TableRecord]` enthalten
     * wir müssen also durch `records` iterieren & sortieren
