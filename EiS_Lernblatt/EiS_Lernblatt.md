@@ -420,10 +420,105 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
 </details>
 
 <details>
-<summary><b><u>sortBy</u></b></summary>
+<summary><b><u>sortBy(attribute: String): Table</u></b></summary>
 
+* <u><b>Was soll ü.haupt geschehen ?</b></u>
+  * `Attribut` wird ü.geben
+  * danach werden die Tabellen sortiert
+  * <u>Rückgabe</u>: Ein neuen `Table`
+  
 
 </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
