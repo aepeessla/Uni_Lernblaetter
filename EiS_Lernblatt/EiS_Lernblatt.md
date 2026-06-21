@@ -448,9 +448,12 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
   * d. gesamte Inhalt ist in `records: ArrayBuffer[TableRecord]` enthalten
     * wir müssen also durch `records` iterieren & sortieren
       * `.sortBy()`?
-        * `_._1` fällt mir jetzt ein, aber d. nimmt das erste Elem. & $\lnot$ d. gewünschte Elem.
+        * `_._1` fällt mir jetzt ein, aber d. nimmt d. erste Elem. & $\lnot$ d. gewünschte Elem.
         * `.toString` muss ich verw. weil `Variant` $\begin{cases}Double \\ Int \\ String \end{cases}$
-  
+  * 
+  * `appendRecord()`: Am Ende müssen wir unseren ArrayBuffer in unsere neue Tabelle hinzufügen
+
+
 
 
 </details>
@@ -580,6 +583,13 @@ def naturalJoin(other: Table): Table = {
 
 
 
+
+---
+# __Auf meinen Lernblatt__
+
+* `sortWith()`
+  * vergl. n. $\le$
+  * __<u>Ergebnis</u>__: Liste v. kleinsten n. größten sortiert
 
 
 
