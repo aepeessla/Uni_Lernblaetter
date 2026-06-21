@@ -429,14 +429,14 @@ code {
 <p>Hier wird bei Tabelle A &amp; Tabelle B jeweils d. Einträge geöffnet (Zeilen) &amp; zeilenweise durchiteriert.</p>
 </li>
 <li>
-<p>Da wir <code>numRecords</code> verw. ist es garantiert, dass wir (\lnot) <span style="color: #81B9DB">out of range</span> sind.</p>
+<p>Da wir <code>numRecords</code> verw. ist es garantiert, dass wir $\lnot$ <span style="color: #81B9DB">out of range</span> sind.</p>
 <ul>
-<li>Wir müssen (\lnot) <code>this.numRange</code> &amp; <code>that.numRange</code> bestimmen, weil wir bereits in d. ersten Kontrolle d. Längen vergleichen haben.</li>
+<li>Wir müssen $\lnot$ <code>this.numRange</code> &amp; <code>that.numRange</code> bestimmen, weil wir bereits in d. ersten Kontrolle d. Längen vergleichen haben.</li>
 <li>Damit wir bei <code>this.records(i)</code> ankommen können, muss ja d. erste Bedingung schon stimmen, weil wir d. Bedingungen mit <code>&amp;&amp;</code> verbunden haben.</li>
 </ul>
 </li>
 <li>
-<p>Diese würden dann (\lnot) mehr gleich sein, weshalb wir den <code style="color: #D281DB">hashCode</code> verw. können. In der Aufgabenstellung wurde gesagt, dass d. Reihenfolge im inneren d. Tabellen egal ist, wobei d. Werte stimmen sollten. D. Schema haben wir bereits ein Schritt davor kontrolliert. Deswegen können wie das <code>def hashCode</code> überschreiben &amp; unser eigenen hashCode def.</p>
+<p>Diese würden dann $\lnot$ mehr gleich sein, weshalb wir den <code style="color: #D281DB">hashCode</code> verw. können. In der Aufgabenstellung wurde gesagt, dass d. Reihenfolge im inneren d. Tabellen egal ist, wobei d. Werte stimmen sollten. D. Schema haben wir bereits ein Schritt davor kontrolliert. Deswegen können wie das <code>def hashCode</code> überschreiben &amp; unser eigenen hashCode def.</p>
 </li>
 </ul>
 <pre class="hljs"><code><div><span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hashCode</span></span>(): <span class="hljs-type">Int</span> = {
