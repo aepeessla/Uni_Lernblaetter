@@ -1,11 +1,3 @@
----
-html:
-  embed_local_images: true
-  embed_svg: true
-  offline: true
-export_on_save:
-  html: true
----
 
 
 <style>
