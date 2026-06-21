@@ -5,6 +5,14 @@
     padding: 2px 6px;          /* Ein bisschen Abstand, damit es gut aussieht */
     border-radius: 4px;       /* Schicke abgerundete Ecken */
   }
+  .üschrift1 {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  details {
+    border: black 1px solid
+  }
 </style>
 
 
@@ -379,9 +387,39 @@ override def hashCode(): Int = {
 
 </div></details>
 
+---
 
 
 
+
+
+
+# <span class="üschrift1">Aufgabe 3</span>
+
+<details>
+<summary><b><u>Aufgabe:</u></b></summary>
+
+
+- `src/main/scala/dbms/v2/store/Table.scala`
+
+Implementieren Sie die beiden `sortBy`-Varianten in `Table`:
+
+- `sortBy(attribute: String): Table`
+- `sortBy(attributes: Seq[String]): Table`
+
+Verwenden Sie `sortWith` oder eine andere Sortiermethode aus der Scala-Standardbibliothek. Implementieren Sie
+keinen eigenen Sortieralgorithmus.
+
+Die Methoden sollen eine `IllegalArgumentException` werfen, wenn ein angegebenes Attribut in der Tabelle nicht
+existiert.
+
+Relevante Testsuite:
+
+```bash
+sbt "testOnly dbms.v2.ScoredTableSortSuite"
+```
+
+</details>
 
 
 

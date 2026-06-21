@@ -372,6 +372,14 @@ code {
     padding: 2px 6px;          /* Ein bisschen Abstand, damit es gut aussieht */
     border-radius: 4px;       /* Schicke abgerundete Ecken */
   }
+  .üschrift1 {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  details {
+    border: black 1px solid
+  }
 </style>
 <h1 id="meine-gedankeng%C3%A4nge-f-d-neue-%C3%BCbungsblatt">Meine Gedankengänge f. d. neue Übungsblatt.</h1>
 <blockquote>
@@ -756,6 +764,26 @@ gibt.</li>
 </li>
 </ul>
 </div></details>
+<hr>
+<h1 id="span-class%22%C3%BCschrift1%22aufgabe-3span"><span class="üschrift1">Aufgabe 3</span></h1>
+<details>
+<summary><b><u>Aufgabe:</u></b></summary>
+<ul>
+<li><code>src/main/scala/dbms/v2/store/Table.scala</code></li>
+</ul>
+<p>Implementieren Sie die beiden <code>sortBy</code>-Varianten in <code>Table</code>:</p>
+<ul>
+<li><code>sortBy(attribute: String): Table</code></li>
+<li><code>sortBy(attributes: Seq[String]): Table</code></li>
+</ul>
+<p>Verwenden Sie <code>sortWith</code> oder eine andere Sortiermethode aus der Scala-Standardbibliothek. Implementieren Sie
+keinen eigenen Sortieralgorithmus.</p>
+<p>Die Methoden sollen eine <code>IllegalArgumentException</code> werfen, wenn ein angegebenes Attribut in der Tabelle nicht
+existiert.</p>
+<p>Relevante Testsuite:</p>
+<pre class="hljs"><code><div>sbt <span class="hljs-string">"testOnly dbms.v2.ScoredTableSortSuite"</span>
+</div></code></pre>
+</details>
 <hr>
 <h1 id="ubaufgabe-4ub"><u><b>Aufgabe 4</u></b></h1>
 <pre class="hljs"><code><div><span class="hljs-comment">/** Joins two tables sharing exactly one attribute. */</span>
