@@ -454,7 +454,7 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
     ```
   * Daraus ergibt sich folgernder Code:
     ```scala
-    val sortedRecords = records.sortWith((r1: TableRecord, r2:TableRecord) => r1.getValue(attribute) <= r2.getValue(attribute))
+    val sortedRecords = records.sortWith((r1: TableRecord, r2: TableRecord) => r1.getValue(attribute) <= r2.getValue(attribute))
 
     Table(schema, sortedRecords)
     ```
@@ -492,6 +492,7 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
   Table(schema, sortedRecords)
   ```
   * wir nutzen <code style="color: #4eb591ff">.map</code> & $\lnot$ <code style="color: #e2a816ff">.forall</code>, weil <code style="color: #e2a816ff">.forall</code> nichts zurückgibt & wir quazi bei `attributes.forall` keine Werte haben, mit dem wir arbeiten können. <code style="color: #4eb591ff">.map</code> jedoch schon. 
+  
 </details>
 
 
