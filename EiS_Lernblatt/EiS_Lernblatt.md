@@ -479,17 +479,19 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
     ```scala
     //False -> True
     if (!attributes.forall(a => schema.contains(a)))
-      throw new IllegalargumentException("Die übergebenen Attribute stimmen mit dem Schema nicht überein.")
+      throw new IllegalArgumentException("Die übergebenen Attribute stimmen mit dem Schema nicht überein.")
     ```
 
   1) __<u>Sortieren</u>__:
   * `getValue(attribute: String)`
   ```scala
   val sortedRecords = records.sortBy(row => 
-    attributes.foreach(a => row.getValue(a))
+    attributes.map(a => row.getValue(a))
     )
+
+  Table(schema, sortedRecords)
   ```
-  
+  * wir nutzen <code style="color: #4eb591ff">.map</code> & $\lnot$ <code style="color: #e2a816ff">.forall</code>, weil <code style="color: #e2a816ff">.forall</code> nichts zurückgibt & wir quazi bei `attributes.forall` keine Werte haben, mit dem wir arbeiten können. <code style="color: #4eb591ff">.map</code> jedoch schon. 
 </details>
 
 

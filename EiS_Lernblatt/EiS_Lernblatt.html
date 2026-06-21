@@ -848,7 +848,7 @@ existiert.</p>
 <ul>
 <li>sind $\forall$ Attribute in Schema ?<pre class="hljs"><code><div><span class="hljs-comment">//False -&gt; True</span>
 <span class="hljs-keyword">if</span> (!attributes.forall(a =&gt; schema.contains(a)))
-  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalargumentException</span>(<span class="hljs-string">"Die übergebenen Attribute stimmen mit dem Schema nicht überein."</span>)
+  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalArgumentException</span>(<span class="hljs-string">"Die übergebenen Attribute stimmen mit dem Schema nicht überein."</span>)
 </div></code></pre>
 </li>
 </ul>
@@ -859,9 +859,14 @@ existiert.</p>
 <li><code>getValue(attribute: String)</code></li>
 </ul>
 <pre class="hljs"><code><div><span class="hljs-keyword">val</span> sortedRecords = records.sortBy(row =&gt; 
-  attributes.foreach(a =&gt; row.getValue(a))
+  attributes.map(a =&gt; row.getValue(a))
   )
+
+<span class="hljs-type">Table</span>(schema, sortedRecords)
 </div></code></pre>
+<ul>
+<li>wir nutzen <code style="color: #4eb591ff">.map</code> &amp; $\lnot$ <code style="color: #e2a816ff">.forall</code>, weil <code style="color: #e2a816ff">.forall</code> nichts zurückgibt &amp; wir quazi bei <code>attributes.forall</code> keine Werte haben, mit dem wir arbeiten können. <code style="color: #4eb591ff">.map</code> jedoch schon.</li>
+</ul>
 </li>
 </ul>
 </details>
