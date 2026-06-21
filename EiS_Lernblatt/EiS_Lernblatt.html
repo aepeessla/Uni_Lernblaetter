@@ -809,28 +809,42 @@ existiert.</p>
 </li>
 </ul>
 <pre class="hljs"><code><div><span class="hljs-keyword">if</span> (!schema.contains(attribute))
-  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalArgumentExeption</span>(<span class="hljs-string">"Das Attribut wo nach sortiert werden soll, ist nicht in ihrer Tabelle enthalten."</span>)
+  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalArgumentException</span>(<span class="hljs-string">"Das Attribut wo nach sortiert werden soll, ist nicht in ihrer Tabelle enthalten."</span>)
 </div></code></pre>
 <hr>
 <p><strong>Sortieren</strong></p>
 <ul>
-<li>d. gesamte Inhalt ist in <code>records: ArrayBuffer[TableRecord]</code> enthalten
+<li>Bei <code style="color: #daa922ff">Table.scala</code> erkennt man: <code>records: ArrayBuffer[TableRecord]</code>. D. heißt d. Inhalt d. wir sortieren müssen ist ein <code sytle="color: #63bdd6">TableRecord</code>. Somit muss ich mir angucken, wie <code style="color: #63bdd6">TableRecord</code> aufgebaut ist. <code style="color: #63bdd6">TableRecord</code> besteht aus <code>Iterable[(String, Variant)]</code>, also aus unserem Attributen &amp; dessen Werten. Wenn wir weiter in d. <code style="color: #e03481ff">class TableRecord</code> gucken sehen wir, d. wir eine Methode bekommen, indem wir d. Werte d. einzelnen Attribute zurück bekommen:<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getValue</span></span>(attribute: <span class="hljs-type">String</span>): <span class="hljs-type">Variant</span> = {
+        ...
+    }
+</div></code></pre>
+</li>
+<li>Daraus ergibt sich folgernder Code:<pre class="hljs"><code><div><span class="hljs-keyword">val</span> sortedRecords = records.sortWith((r1: <span class="hljs-type">TableRecord</span>, r2:<span class="hljs-type">TableRecord</span>) =&gt; r1.getValue(attribute) &lt;= r2.getValue(attribute))
+
+<span class="hljs-type">Table</span>(schema, sortedRecords)
+</div></code></pre>
+</li>
+<li><u><strong>Wrm. Table(schema, sortedRecords) ?</strong></u><pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">this</span></span>(schema: <span class="hljs-type">Schema</span>, initialRecords: <span class="hljs-type">Iterable</span>[<span class="hljs-type">TableRecord</span>]) = {}
+</div></code></pre>
 <ul>
-<li>wir müssen also durch <code>records</code> iterieren &amp; sortieren
-<ul>
-<li><code>.sortBy()</code>?
-<ul>
-<li><code>_._1</code> fällt mir jetzt ein, aber d. nimmt d. erste Elem. &amp; $\lnot$ d. gewünschte Elem.</li>
-<li><code>.toString</code> muss ich verw. weil <code>Variant</code> $\begin{cases}Double \ Int \ String \end{cases}$</li>
+<li>D. ist d. Leitfaden f. jegliche Tabelle mit dem Typen v. <code>Table</code>.</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-</li>
-<li></li>
-<li><code>appendRecord()</code>: Am Ende müssen wir unseren ArrayBuffer in unsere neue Tabelle hinzufügen</li>
+</details>
+<details>
+<summary><b><u>sortBy(attributes: String): Table</u></b></summary>
+<ul>
+<li>
+<p><u><b>Was soll ü.haupt geschehen ?</b></u></p>
+<ul>
+<li>soll n.einander d. Liste n. den ü.ggb. <code>attributen</code> sortieren</li>
 </ul>
+<ol>
+<li><strong><u>Kontrolle</u></strong>:</li>
+</ol>
 </li>
 </ul>
 </details>
@@ -867,10 +881,20 @@ existiert.</p>
 <hr>
 <h1 id="auf-meinen-lernblatt"><strong>Auf meinen Lernblatt</strong></h1>
 <ul>
-<li><code>sortWith()</code>
+<li>
+<p><code>sortWith()</code></p>
 <ul>
 <li>vergl. n. $\le$</li>
 <li><strong><u>Ergebnis</u></strong>: Liste v. kleinsten n. größten sortiert</li>
+<li><strong><u>Syntax</u></strong>:<pre class="hljs"><code><div>users.sortWith(_.attribute &gt; _.attribute)
+</div></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><code>.sortBy()</code></p>
+<ul>
+<li>wenn wir <code>_.attribute1.attribute2.attribute3</code> $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{wird autom.}}\ \ \ \ }$ v. links n. rechts sortiert</li>
 </ul>
 </li>
 </ul>

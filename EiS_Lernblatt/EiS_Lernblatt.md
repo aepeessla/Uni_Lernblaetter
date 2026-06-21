@@ -441,27 +441,43 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
   
   ```scala
   if (!schema.contains(attribute))
-    throw new IllegalArgumentExeption("Das Attribut wo nach sortiert werden soll, ist nicht in ihrer Tabelle enthalten.")
+    throw new IllegalArgumentException("Das Attribut wo nach sortiert werden soll, ist nicht in ihrer Tabelle enthalten.")
   ```
   ---
   __Sortieren__
 
-  * d. gesamte Inhalt ist in `records: ArrayBuffer[TableRecord]` enthalten
-    * wir müssen also durch `records` iterieren & sortieren
-      * `.sortBy()`?
-        * `_._1` fällt mir jetzt ein, aber d. nimmt d. erste Elem. & $\lnot$ d. gewünschte Elem.
-        * `.toString` muss ich verw. weil `Variant` $\begin{cases}Double \\ Int \\ String \end{cases}$
-  * 
-  * `appendRecord()`: Am Ende müssen wir unseren ArrayBuffer in unsere neue Tabelle hinzufügen
+  * Bei <code style="color: #daa922ff">Table.scala</code> erkennt man: `records: ArrayBuffer[TableRecord]`. D. heißt d. Inhalt d. wir sortieren müssen ist ein <code sytle="color: #63bdd6">TableRecord</code>. Somit muss ich mir angucken, wie <code style="color: #63bdd6">TableRecord</code> aufgebaut ist. <code style="color: #63bdd6">TableRecord</code> besteht aus `Iterable[(String, Variant)]`, also aus unserem Attributen & dessen Werten. Wenn wir weiter in d. <code style="color: #e03481ff">class TableRecord</code> gucken sehen wir, d. wir eine Methode bekommen, indem wir d. Werte d. einzelnen Attribute zurück bekommen: 
+    ```scala
+    def getValue(attribute: String): Variant = {
+            ...
+        }
+    ```
+  * Daraus ergibt sich folgernder Code:
+    ```scala
+    val sortedRecords = records.sortWith((r1: TableRecord, r2:TableRecord) => r1.getValue(attribute) <= r2.getValue(attribute))
 
-
-
+    Table(schema, sortedRecords)
+    ```
+  * <u>__Wrm. Table(schema, sortedRecords) ?__</u>
+    ```scala
+    def this(schema: Schema, initialRecords: Iterable[TableRecord]) = {}
+    ```
+    * D. ist d. Leitfaden f. jegliche Tabelle mit dem Typen v. `Table`. 
 
 </details>
 
 
 
+<details>
+<summary><b><u>sortBy(attributes: String): Table</u></b></summary>
 
+* <u><b>Was soll ü.haupt geschehen ?</b></u>
+  * soll n.einander d. Liste n. den ü.ggb. `attributen` sortieren
+  
+  1) __<u>Kontrolle</u>__:
+  
+
+</details>
 
 
 
@@ -591,7 +607,13 @@ def naturalJoin(other: Table): Table = {
 * `sortWith()`
   * vergl. n. $\le$
   * __<u>Ergebnis</u>__: Liste v. kleinsten n. größten sortiert
+  * __<u>Syntax</u>__:
+    ```scala
+    users.sortWith(_.attribute > _.attribute)
+    ```
 
+* `.sortBy()`
+  * wenn wir `_.attribute1.attribute2.attribute3` $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{wird autom.}}\ \ \ \ }$ v. links n. rechts sortiert
 
 
 
