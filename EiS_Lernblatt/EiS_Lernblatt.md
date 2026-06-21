@@ -1,3 +1,11 @@
+<css>
+code  {
+  background: 
+}
+</css>
+
+
+
 # Meine Gedankengänge f. d. neue Übungsblatt. 
 
 > Da es zu warm ist & ich nicht all meine Sachen n. unten tragen möchte (es ist schon unordentlich genug) mache ich es hier:
