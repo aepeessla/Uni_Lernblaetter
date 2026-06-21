@@ -1,6 +1,6 @@
 <style>
   code {
-    background-color: #ebebebff;
+    background-color: #dddcdcff;
     color: #6bc31eff;
     padding: 2px 6px;          /* Ein bisschen Abstand, damit es gut aussieht */
     border-radius: 4px;       /* Schicke abgerundete Ecken */
@@ -420,13 +420,8 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
 </details>
 
 <details>
-<summary>
-<b>
-<u>
+<summary><b><u>sortBy</u></b></summary>
 
-</u>
-</b>
-</summary>
 
 </details>
 
