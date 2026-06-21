@@ -11,10 +11,9 @@
   }
 
   details {
-    border: black 1px solid
+    border: #e4e3e3ff 1px solid
   }
 </style>
-
 
 
 
@@ -418,10 +417,18 @@ Relevante Testsuite:
 ```bash
 sbt "testOnly dbms.v2.ScoredTableSortSuite"
 ```
-
 </details>
 
+<details>
+<summary>
+<b>
+<u>
 
+</u>
+</b>
+</summary>
+
+</details>
 
 
 
