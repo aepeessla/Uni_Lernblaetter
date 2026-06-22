@@ -6,22 +6,31 @@
   }
 
   code {
-    background: #e2e2e2ff 2px;
-
+    background: #eaeaeaff 2px;
+    color: #7dc761ff
   }
 
   body {
     background: #ffffffff;
-    color: #000000ff
+    color: #000000ff;
+  }
+
+  h1 {
+    font-weight: bold;
+    text-decoration: underline;
   }
 </style>
 
 
 <style>image-size: 500px</style>
 
-<h1>Viren</h1>
+<h1>Viren & Phagen</h1>
 
+<details>
+ <summary><b><u>Wrm. stellen <code>Viren</code> & <code>Phagen</code> eine Grenzform des Lebens dar ?</u></b></summary>
 
+* sind eigentl. nur eine Kapsel mit `Nukleinsäurenstrang`(R- oder DNA) $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{nicht ü.lebensfähig ohne}}\ \ \ \ }$ <code style="color:red">Wirtszelle</code>
+</details>
 
 <details>
   <summary><b><u>Welche Virenarten gibt es ?</u></b></summary>
@@ -74,7 +83,11 @@
 </details>
 
 
+<details>
+ <summary><b><u>Wodurch entstehen Pandemien ?</u></b></summary>
 
+  
+</details>
 
 
 
