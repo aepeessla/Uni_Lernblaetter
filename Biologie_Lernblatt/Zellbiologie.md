@@ -1,7 +1,7 @@
 
 <style>
   img {
-  width: 500px;
+  width: 200px;
   height: auto;
   }
 
@@ -27,9 +27,9 @@
   <summary><b><u>Welche Virenarten gibt es ?</u></b></summary>
 
   * TMV:
-  * Adenovirus: <img src="image.png" style='width="200" height="auto"'>
-  * HIV: <img src="image-2.png" style='width="200" height="auto"'>
-  * T-Phage:<img src="image-3.png" style='width="200" height="auto"'>
+  * Adenovirus: <img src="image.png">
+  * HIV: <img src="image-2.png">
+  * T-Phage:<img src="image-3.png">
 </details>
 
 <details>
@@ -64,8 +64,9 @@
   1) <u>Lytische Zyklus (Zerstörerisch)</u>
      * Step 1: Virus $\to$ <span style="color: #69dbceff;">dockt an</span> $\to$ Bakterium $\to$ <span style="color: #69dbceff;">injeziert</span> $\to$ DNA
      * Step 2: Bakterien-DNA $=$ zerstört $\implies$ Bakterium muss `Virus-DNA` produzieren
-     * Step 3: Bakterium \to baut \to neue Viren zsm.
+     * Step 3: Bakterium $\to$ baut $\to$ neue Viren zsm.
      * Step 4: Zelle platzt (<b><span style="color: #8e50d0ff;">Lysis</span></b>)
+      <img src="image-6.png">
 
   1) <u>Lysogene Zyklus (schläferich)</u>
       * Step 1: Virus $\to$ <span style="color: #69dbceff;">dockt an</span> $\to$ Bakterium $\to$ <span style="color: #69dbceff;">injeziert</span> $\to$ DNA
