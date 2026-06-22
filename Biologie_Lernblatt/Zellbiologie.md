@@ -1,10 +1,21 @@
-<head>
-    <style>img {
-    width: 500px;
-    height: auto;
-    }
-    </style>
-</head>
+
+<style>
+  img {
+  width: 500px;
+  height: auto;
+  }
+
+  code {
+    background: #e2e2e2ff 2px;
+
+  }
+
+  body {
+    background: #ffffffff;
+    color: #000000ff
+  }
+</style>
+
 
 <style>image-size: 500px</style>
 
@@ -52,7 +63,7 @@
 
   1) <u>Lytische Zyklus (Zerstörerisch)</u>
      * Step 1: Virus $\to$ <span style="color: #69dbceff;">dockt an</span> $\to$ Bakterium $\to$ <span style="color: #69dbceff;">injeziert</span> $\to$ DNA
-     * Step 2: Bakterien-DNA $=$ zerstört $\implies$ Bakterium muss Virus DNA produkzieren
+     * Step 2: Bakterien-DNA $=$ zerstört $\implies$ Bakterium muss `Virus-DNA` produzieren
      * Step 3: Bakterium \to baut \to neue Viren zsm.
      * Step 4: Zelle platzt (<b><span style="color: #8e50d0ff;">Lysis</span></b>)
 
@@ -78,5 +89,13 @@
 
 
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
