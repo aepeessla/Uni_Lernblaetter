@@ -139,7 +139,7 @@
 
 
 
-<h1>Wasser, Kohlenhydrate & Fett</h1>
+<h1>Wasser, Kohlenhydrate & Fette</h1>
 
 <h2>Kovalente Bindung</h2>
 
