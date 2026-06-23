@@ -141,6 +141,8 @@
 
 <h1>Wasser, Kohlenhydrate & Fett</h1>
 
+<h2>Kovalente Bindung</h2>
+
 <details>
  <summary><b><u>Was ist eine <code>kovalente</code> & eine <code>nicht kovalente Bindung</code></u></b></summary>
 
@@ -215,6 +217,347 @@
     ```
   * zentrale C-Atom ist an zwei identische Wasserstoffatome ($H$) gebunden $\implies$ keine $4$ unterschiedl. Partner
 </details>
+
+<h2>Nicht kovalente Bindung</h2>
+
+<details>
+ <summary><b><u>Welche nicht kovalente Bindungen gibt es ?</u></b></summary>
+
+  * Ionen-Bindung
+  * Wasserstoffbrückenbindung
+</details>
+
+<h2>Inonen</h2>
+
+<details>
+ <summary><b><u>Wie entsteht eine Ionenbindung? (z. B. bei Kochsalz)</u></b></summary>
+
+  * Durch die vollständige Übertragung v. Elektronen. 
+  * Ein Atom (`Natrium`) $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{gibt ab}}\ \ \ \ }$ Elektron $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{wird zum}}\ \ \ \ }$ __positiven Kation__ ($Na^+$), d. andere (`Chlor`) nimmt es auf $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{wird zum}}\ \ \ \ }$ __negativen Anion__ ($Cl^-$). <span style="color: red">Die entgegengesetzten Ladungen ziehen sich elektrostatisch an</span>.
+</details>
+
+<details>
+ <summary><b><u>In welcher Struktur liegen die Ionen im festen Zustand vor?</u></b></summary>
+
+  * bilden ein festes, regelmäßiges Kristallgitter (Ionengitter)
+</details>
+
+<details>
+ <summary><b><u>Welche Voraussetzung muss erfüllt sein, damit sich ein Salzkristall in Wasser auflöst?</u></b></summary>
+
+  * $\text{Hydratationsenergie} > \text{Gitterenergie}$
+</details>
+
+<details>
+ <summary><b><u>Was versteht man unter der "Gitterenergie" ?</u></b></summary>
+
+  * Energie, d. Ionen im festen Kristalgitter zsm.hält $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{Überwindung}}\ \ \ \ }$ Zerstörung des Kristalgitters
+</details>
+
+<details>
+ <summary><b><u>Was versteht man unter der "Hydratationsenergie" ?</u></b></summary>
+
+  * Energie, d. freigesetzt wird, wenn sich Wassermoleküle an d. freigewordenen Ionen anlagern.
+</details>
+
+<details>
+ <summary><b><u>Was versteht man unter der "Hydratationsenergie" ?</u></b></summary>
+
+  * Eine Schicht aus Wassermolekülen, d. sich beim Lösen um d. einzelnen Ionen herum anordnet.
+  * Dabei zeigt d. positive Pol des Wassers ($H$) zum negativen Chloridion ($Cl^-$) & d. negative Pol ($O$) zum positiven Natriumion ($Na^+$).
+</details>
+
+
+<h2>Wasserstoffbrückenbindung</h2>
+
+<details>
+ <summary><b><u>Welcher Prozess beschreibt den ersten Schritt beim Lösen eines Salzes (aus energetischer Sicht) ?</u></b></summary>
+
+  * D. __Aufbrechen des Ionengitters__. Die Ionen müssen aus ihrem festen Verband gelöst werden (dafür wird Gitterenergie verbraucht).
+</details>
+
+<details>
+ <summary><b><u>Was ist die Gitterenergie ($U_L$)?</u></b></summary>
+
+  * feste Kristallgitter $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{GItterenergie}}\ \ \ \ }$ gasförmige Ionen
+  * __immer positiv__ (`endotherm`).
+</details>
+
+<details>
+ <summary><b><u>Was ist die Gitterenergie ($U_L$)?</u></b></summary>
+
+  * feste Kristallgitter $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{GItterenergie}}\ \ \ \ }$ gasförmige Ionen
+  * __immer positiv__ (`endotherm`).
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
