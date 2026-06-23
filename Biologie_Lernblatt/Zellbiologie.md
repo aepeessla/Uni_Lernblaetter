@@ -290,19 +290,84 @@
   * __immer positiv__ (`endotherm`).
 </details>
 
+<details>
+ <summary><b><u>
+Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 
+  * `Hydratation`: Ionen $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{umgeben}}\ \ \ \ }$ Wassermoleküle $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{Entstehung}}\ \ \ \ }$ Hydrathülle $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{wird frei}}\ \ \ \ }$ Hydratationsenergie
+</details>
 
+<details>
+ <summary><b><u>Was bestimmt, ob sich ein Salz löst oder nicht ?</u></b></summary>
 
+  * Die `Lösungsenthalpie` ($\Delta H_{sol}$): $Gitterenergie + Hydratationsenergie$
+</details>
 
+<details>
+ <summary><b><u>Wie lautet die Faustformel für die Lösungsenthalpie?</u></b></summary>
 
+  * $\Delta H_{sol} = U_L + \Delta H_{hyd}$
+</details>
 
+<details>
+ <summary><b><u>Was passiert energetisch, wenn sich ein Salz löst (exotherm vs. endotherm)?</u></b></summary>
 
+  1) `Exotherm`: Es wird mehr Energie bei der Hydratation frei, als für das Gitter benötigt wurde ($\Delta H_{sol} < 0$) $\implies$ Glas wird warm.
+  1) `Endotherm`: Es wird mehr Energie benötigt, um das Gitter zu knacken, als bei d. Hydratation frei wird ($\Delta H_{sol} > 0$) $\implies$ Glas kühlt ab.
+</details>
 
+<h2>Aggerarzustände</h2>
 
+<details>
+ <summary><b><u>Wie verhalten sich Wassermoleküle im festen Zustand (Eis)?</u></b></summary>
 
+  * Wassermoleküle $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{durch}}\ \ \ \ }$ Wasserstoffbrückenbindungen $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{gehalten}}\ \ \ \ }$ festen Zustand
+</details>
 
+<details>
+ <summary><b><u>Was passiert mit den Wasserstoffbrücken im flüssigen Zustand?</u></b></summary>
 
+  * Wassermoleküle bewegen sich $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{ständig}}\ \ \ \ }$ brechen Wasserstoffbrücken & bilden sich neu.
+</details>
 
+<details>
+ <summary><b><u>Wie ist die Struktur im gasförmigen Zustand?</u></b></summary>
+
+  * Keine Wasserstoffbrückenbindung
+</details>
+
+<h2>Wasser</h2>
+
+<details>
+ <summary><b><u>Was ist d. Kohäsion ?</u></b></summary>
+
+  * Zsm.halt innerhalb eines Stoffes
+</details>
+
+<details>
+ <summary><b><u>Was ist d. Adhäsion ?</u></b></summary>
+
+  * Anhaftung an fremden Oberflächen
+</details>
+
+<details>
+ <summary><b><u>Was ist die Folge von Kohäsion und Adhäsion bei Wasser?</u></b></summary>
+
+  * `Organismen` sind auf die __Kohäsion__ & __Adhäsion__ v. Wassermolekülen angew.
+</details>
+
+<details>
+ <summary><b><u>Wo zeigt sich d. Oberflächenspannung in der Natur ?</u></b></summary>
+
+  * Bsp.: Bei d. Fortbewegung v. Insekten auf d. Wasseroberfläche.
+</details>
+
+<details>
+ <summary><b><u>Welche Funktion haben Kohäsion und Adhäsion bei Pflanzen ?</u></b></summary>
+
+  * Sie ermöglichen den Wassertransport innerhalb d. Pflanze.
+  ![alt text](image-12.png)
+</details>
 
 
 
