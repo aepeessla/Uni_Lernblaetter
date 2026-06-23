@@ -369,30 +369,139 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
   ![alt text](image-12.png)
 </details>
 
+<h2>Makromoleküle</h2>
+
+<details>
+ <summary><b><u>Was sind d. 4 Klassen der Makromoleküle ?</u></b></summary>
+
+  * Proteine(Polypaptide)
+  * Nukleinsäuren
+  * Kohlenhydrate
+  * Lipide
+
+  ![alt text](image-13.png)
+</details>
+
+<details>
+ <summary><b><u>Monomere -> Polymere</u></b></summary>
+
+  ![alt text](image-14.png)
+</details>
+
+<details>
+ <summary><b><u>Wie lautet d. Chemische Bezichnung v. Kohlenhydraten ?</u></b></summary>
+
+  $(CH_20)_n$
+</details>
+
+![alt text](image-15.png)
+
+<details>
+ <summary><b><u>Was ist ein `Stereoisomer` ?</u></b></summary>
+
+  * gleiche Formel, andere Struktur
+</details>
+
+<details>
+ <summary><b><u><code>Stereoisomer</code>: Wie nennt man d. komplette Spieglung ?</u></b></summary>
+
+  * `Enantiomer`
+</details>
+
+<details>
+ <summary><b><u><code>Stereoisomer</code>: Einzelne Spieglung ?</u></b></summary>
+
+  * `Diastereomere`
+</details>
+
+<details>
+ <summary><b><u><code>Stereoisomer</code>: Diastereomere mit vielen Stereozentren ?</u></b></summary>
+
+  * `Epimere`
+</details>
+
+<details>
+ <summary><b><u><code>Stereoisomer</code>: Unters. mit 1. C-Atom ?</u></b></summary>
+
+  * `Anomere`
+</details>
+
+![alt text](image-16.png)
+![alt text](image-17.png)
+
+<details>
+ <summary><b><u>Was sind Zuckerderivate ?</u></b></summary>
+
+  * Moleküle d. aus einem Monosachharid besteht ?
+</details>
+
+<details>
+ <summary><b><u>Nenne d. 3 Zuckerderivate ?</u></b></summary>
+
+  * <code style="color: #2b42a6ff">N-Acetylglucosamin</code>
+  * <code style="color: #ca77c2ff">Glucoseamin</code>
+  * <code style="color: #5eb796ff">Glucosesäure</code>
+
+  ![alt text](image-19.png)
+</details>
+
+<h2>Apolare Moleküle</h2>
+
+<details>
+ <summary><b><u>Was sind <code>Apolare Moleküle</code> ?</u></b></summary>
+
+  * Keine Ionen
+  * keine permanenter Dipol
+  * Keine Hydrathülle
+    * Wasser<b>un</b>löslich
+  
+  * d. Lösung, um Störfaktor des Wassers zu minimieren
+</details>
+
+<details>
+ <summary><b><u>Was ist der Hydrophobe Effekt ?</u></b></summary>
+
+  * Wasser \to will sich bewegen
+  * apolarer "Dreck" zwingt Wasser starr zu sein $\implies$ energetisch ungünstig + Entropie verringert
+</details>
+
+<details>
+ <summary><b><u>Was beschreibt d. 2. hauptsatz in d. Thermodynamik ?</u></b></summary>
+
+  * Endotropie im geschlossen Raum $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{darf v. allein nicht}}\ \ \ \ }$  sinken
+</details>
+
+<details>
+ <summary><b><u>Was ist die Endotropie?</u></b></summary>
+
+  * d. Unordnung
+
+  * nehmen wir mal an, dass ich ein Zimmer betrete \implies wird autom. unordentl.
+    * je höher d. Endotropie, desto unordentl. ist d. Zimmer
+  * wenn ich d. Endotopie verringern möchte muss ich __Energie aufwenden__
+</details>
+
+<h2>Van-der-Waals-Kräfte</h2>
+
+<details>
+ <summary><b><u>Was ist Van-der-Waals-Kräfte</u></b></summary>
+
+  * Elektronen bewegen sich ständig \to manchmal ungleich verteilt \implies temporärer Dipol \to benachbartes Molekül auch kurzfristig polarisiert \implies kurzlebige Anziehungskraft zw. Molekülen
+
+  * Analogie. Klebstoff v. Molekülen, d. normalerweise nicht zsm.gehören
+</details>
 
 
 
 
+<h2>Peptide</h2>
 
+<details>
 
+ <summary><b><u>Was ist d. Unterschied zw. einer Mizelle, einem Liposom und einer Lamelle ?</u></b></summary>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <img src="/Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/Biologie_Lernblatt/image-18.png">
+</details>
 
 
 
