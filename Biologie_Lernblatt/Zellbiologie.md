@@ -37,7 +37,6 @@
   <summary><b><u>Was ist d. Unterschied zw. einem <code>Virus</code> & einer <code>Phage</code></u></b></summary>
 
   * <code>Phage</code> $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{spezialisiert auf}}\ \ \ \ }$ Bakterien
-  * 
 </details>
 
 <details>
