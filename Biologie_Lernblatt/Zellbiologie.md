@@ -49,7 +49,7 @@
 <details>
   <summary><b><u>Welche Virenarten gibt es ?</u></b></summary>
 
-  * TMV:
+  * TMV: ![alt text](image-10.png)
   * Adenovirus: <img src="image.png">
   * HIV: <img src="image-2.png">
   * T-Phage:<img src="image-3.png">
