@@ -13,6 +13,7 @@
   body {
     background: #ffffffff;
     color: #000000ff;
+    font-size: 20px;
   }
 
   h1 {
