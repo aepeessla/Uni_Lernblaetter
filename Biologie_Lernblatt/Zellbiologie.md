@@ -37,12 +37,10 @@
   <summary><b><u>Was ist d. Unterschied zw. einem <code>Virus</code> & einer <code>Phage</code></u></b></summary>
 
   * <code>Phage</code> $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{spezialisiert auf}}\ \ \ \ }$ Bakterien
-
-  * sind eigentl. nur eine Kapsel mit `Nukleinsäurenstrang`(R- oder DNA) $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{nicht ü.lebensfähig ohne}}\ \ \ \ }$ <code style="color:red">Wirtszelle</code>
 </details>
 
 <details>
-  <summary><b><u>Wonach sind <code>Viruse</code> & <code>Phagen</code> aufgebaut ?</u></b></summary>
+  <summary><b><u>Wonach sind <code>Viren</code> & <code>Phagen</code> aufgebaut ?</u></b></summary>
 
   * N. dem <code style="color:red">Baukastenprinzip</code>
 </details>
@@ -105,7 +103,7 @@
   1) <code>Burst</code>:
   ![alt text](image-8.png)
 
-  1) <code>Pudding</code>: 
+  1) <code>Budding</code>: 
     * Vgl.: Versikel, Lysosomen
   ![alt text](image-7.png)
 
@@ -119,7 +117,7 @@
       \text{Bakteria}
     \end{cases}$
   1) <code>Eucaryoten</code>: Ein - oder Mehrzellig
-    * Bsp.: Algen, Flechten, Pilze
+  * Bsp.: Algen, Flechten, Pilze
 
   > * Archaea: Brücke zw. Euk. & Prok.
   > * Vorkommen = extremen Lebensräume $\begin{cases} \text{extrem thermophil} \\ \text{extrem halophil(Salzkonzentration)} \end{cases}$
