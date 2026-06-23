@@ -19,6 +19,11 @@
     font-weight: bold;
     text-decoration: underline;
   }
+
+  h2 {
+    font-weight: bold;
+    text-decoration: underline;
+  }
 </style>
 
 
@@ -104,8 +109,9 @@
   ![alt text](image-8.png)
 
   1) <code>Budding</code>: 
-    * Vgl.: Versikel, Lysosomen
   ![alt text](image-7.png)
+
+    * Vgl.: Versikel, Lysosomen
 
 </details>
 
@@ -130,6 +136,86 @@
   * Zellkern $\begin{cases} \text{Eukaryoten = Zellkern} \\ \text{Prokaryoten = kein Zellkern} \end{cases}$
   
 </details>
+
+
+
+<h1>Wasser, Kohlenhydrate & Fett</h1>
+
+<details>
+ <summary><b><u>Was ist eine <code>kovalente</code> & eine <code>nicht kovalente Bindung</code></u></b></summary>
+
+  * <code>Kovalente Bindung</code>
+    * Atombindungen
+    * <code style="color: #d91c55ff">Valenzelektronen</code> = geteilt
+      * d. am schwächsten gebundenen Elektronen in d. äußersten Schale eines Atoms
+  * <code>Nicht kovalente Bindung</code>
+    * Zwischenmolekulare Kräfte
+</details>
+
+
+<details>
+ <summary><b><u>Wie nennt man d. am schwächsten gebundenen Elektronen in d. äußeren Schale eines Atoms ? </u></b></summary>
+
+  * <code>Valenzelektronen</code>
+  
+</details>
+
+<details>
+ <summary><b><u>Wodurch ist d. Elektronenverteilung abhängig ? </u></b></summary>
+
+  * <code>Elektronegativität</code>
+  
+</details>
+
+<h2>Geometrie</h2>
+
+<details>
+ <summary><b><u>Was ist die Voraussetzung dafür, dass ein Kohlenstoffatom als "asymmetrisch" bezeichnet wird?</u></b></summary>
+  
+  * Es muss __Bindungen__ zu <span style="color: red">vier völligunterschiedlichen <code style="color: red">Atomen</code> oder <code style="color: red">Atomgruppen</code> besitzen</span>.
+</details>
+
+<details>
+ <summary><b><u>Was entsteht automatisch, wenn ein Molekül ein asymmetrisches C-Atom besitzt?</u></b></summary>
+
+  * Es entstehen <code>Stereoisomere</code>(auch ___optische Isomere___ genannt).
+  
+</details>
+
+
+<details>
+ <summary><b><u>Was bedeutet der Begriff <code>Chiralität</code> (Händigkeit) anschaul. ?</u></b></summary>
+
+  * Dass sich d. Molekül & sein Spiegelbild durch reine Drehung $\lnot$ zur Deckung bringen lassen (genau wie eine linke & rechte Hand).
+</details>
+
+<details>
+ <summary><b><u>Welche biologische Relevanz haben chirale C-Atome ?</u></b></summary>
+
+  * Biologisch wichtige Moleküle besitzen fast immer __mindestens ein__ <code>chirales C-Atom</code>, $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{Grund}}\ \ \ \ }$ dreidimensionale Form $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{entscheidet}}\ \ \ \ }$ wie sie im Körper wirken
+</details>
+
+<details>
+ <summary><b><u>Welche zwei großen Stoffgruppen sind typische Beispiele für Moleküle mit chiralen Zentren?</u></b></summary>
+
+  * <code>Aminosäure</code>
+    * Bausteine d. Proteine
+  * <code>Kohlenhydrate</code>
+</details>
+
+<details>
+ <summary><b><u>Welche Aminosäure bildet eine wichtige Ausnahme & ist nicht chiral? Warum?</u></b></summary>
+
+  * ```text
+        COOH
+          |
+    H₂N — C — H   <-- Das zentrale C hat zwei H-Atome, 
+          |           ist also NICHT asymmetrisch!
+          H
+    ```
+  * zentrale C-Atom ist an zwei identische Wasserstoffatome ($H$) gebunden $\implies$ keine $4$ unterschiedl. Partner
+</details>
+
 
 
 
