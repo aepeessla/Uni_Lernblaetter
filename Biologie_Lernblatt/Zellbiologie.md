@@ -183,10 +183,10 @@
 </details>
 
 <details>
- <summary><b><u>Was entsteht automatisch, wenn ein Molekül ein asymmetrisches C-Atom besitzt?</u></b></summary>
+ <summary><b><u>Was entsteht automa., wenn ein Molekül ein asymmetrisches C-Atom besitzt?</u></b></summary>
 
   * Es entstehen <code>Stereoisomere</code>(auch ___optische Isomere___ genannt).
-  
+    * <span style="font-size: 12px">chemische Verbindungen, d. zwar d. gleiche Summenformel & Verknüpfung d. Atome (Konstitution) besitzen, sich jedoch in d. räuml. Anordnung d. Atome im dreidimensionalen Raum unters.. Man nennt sie daher auch <code>Raumisomere</code></span>
 </details>
 
 
