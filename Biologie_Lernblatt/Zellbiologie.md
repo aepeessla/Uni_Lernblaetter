@@ -179,7 +179,7 @@
 <details>
  <summary><b><u>Was ist die Voraussetzung dafür, dass ein Kohlenstoffatom als "asymmetrisch" bezeichnet wird?</u></b></summary>
   
-  * Es muss __Bindungen__ zu <span style="color: red">vier völligunterschiedlichen <code style="color: red">Atomen</code> oder <code style="color: red">Atomgruppen</code> besitzen</span>.
+  * Es muss __Bindungen__ zu <span style="color: red">vier völlig unterschiedl. <code style="color: red">Atomen</code> oder <code style="color: red">Atomgruppen</code> besitzen</span>.
 </details>
 
 <details>
