@@ -37,8 +37,7 @@
   <summary><b><u>Was ist d. Unterschied zw. einem <code>Virus</code> & einer <code>Phage</code></u></b></summary>
 
   * <code>Phage</code> $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{spezialisiert auf}}\ \ \ \ }$ Bakterien
-
-  * sind eigentl. nur eine Kapsel mit `Nukleinsäurenstrang`(R- oder DNA) $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{nicht ü.lebensfähig ohne}}\ \ \ \ }$ <code style="color:red">Wirtszelle</code>
+  * 
 </details>
 
 <details>
