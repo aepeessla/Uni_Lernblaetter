@@ -24,6 +24,11 @@
     font-weight: bold;
     text-decoration: underline;
   }
+
+  h3 {
+    font-weight: bold;
+    text-decoration: underline;
+  }
 </style>
 
 
@@ -497,13 +502,28 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 <h2>Peptide</h2>
 
 <details>
-
  <summary><b><u>Was ist d. Unterschied zw. einer Mizelle, einem Liposom und einer Lamelle ?</u></b></summary>
 
   <img src="/Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/Biologie_Lernblatt/image-18.png">
 </details>
 
+<h2>Mebran</h2>
 
+<details>
+ <summary><b><u>Wie nennt man den Durchlässigkeitsgrad einer Membran ?</u></b></summary>
+
+  * Permeabilität
+
+  ![alt text](image-20.png)
+</details>
+
+<h3>Osmose</h3>
+
+* Wasserbewegung
+
+<h3>Diffusion</h3>
+
+* Gasbewegung
 
 
 
