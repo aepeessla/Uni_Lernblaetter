@@ -507,7 +507,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
   <img src="/Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/Biologie_Lernblatt/image-18.png">
 </details>
 
-<h2>Mebran</h2>
+<h2>Membran</h2>
 
 <details>
  <summary><b><u>Wie nennt man den Durchlässigkeitsgrad einer Membran ?</u></b></summary>
