@@ -601,11 +601,11 @@ def naturalJoin(other: Table): Table = {
 }
 ```
 * <u>Ist Attribut enthalten ?</u>
-  * Attribute vgl.
-    * <span style="color: #a9a9a9ff">D. Attribute sind in den Schemas gespeichert, also kann ich gucken, ob d. gesuchte Attribut enthalten ist </span>
-  * `TableRecord.attributes: Map[String, Variant]`("grade" -> 1.0): Wir können hier d. beiden Strings vgl.
-    * Gleich $\implies$ füge d. `Record` in das neue Table mit `.appendRecord`
-    * $\lnot$ Gleich $\implies$ mache weiter
+
+  * <code style="color:  #4eb591ff">A</code> & <code style="color:  #a94eb5ff">B</code> = genau eine gemeinsame Spalte
+    * Haben Spalten den gleichen Datentypen ?
+    * Diese Spalte f. Join verw..
+      * Wenn Bedingungen $\lnot$ erfüllt $\to$ <code style="color:  #ff0000ff">IllegalArgumentException</code>
   
 <details>
 <summary><u>Brauche ich ein Index?</u></summary>

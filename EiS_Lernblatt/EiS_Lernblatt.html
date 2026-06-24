@@ -819,7 +819,7 @@ existiert.</p>
     }
 </div></code></pre>
 </li>
-<li>Daraus ergibt sich folgernder Code:<pre class="hljs"><code><div><span class="hljs-keyword">val</span> sortedRecords = records.sortWith((r1: <span class="hljs-type">TableRecord</span>, r2:<span class="hljs-type">TableRecord</span>) =&gt; r1.getValue(attribute) &lt;= r2.getValue(attribute))
+<li>Daraus ergibt sich folgernder Code:<pre class="hljs"><code><div><span class="hljs-keyword">val</span> sortedRecords = records.sortWith((r1: <span class="hljs-type">TableRecord</span>, r2: <span class="hljs-type">TableRecord</span>) =&gt; r1.getValue(attribute) &lt;= r2.getValue(attribute))
 
 <span class="hljs-type">Table</span>(schema, sortedRecords)
 </div></code></pre>
@@ -878,17 +878,17 @@ existiert.</p>
 }
 </div></code></pre>
 <ul>
-<li><u>Ist Attribut enthalten ?</u>
+<li>
+<p><u>Ist Attribut enthalten ?</u></p>
 <ul>
-<li>Attribute vgl.
+<li><code style="color:  #4eb591ff">A</code> &amp; <code style="color:  #a94eb5ff">B</code> = genau eine gemeinsame Spalte
 <ul>
-<li><span style="color: #a9a9a9ff">D. Attribute sind in den Schemas gespeichert, also kann ich gucken, ob d. gesuchte Attribut enthalten ist </span></li>
+<li>Haben Spalten den gleichen Datentypen ?</li>
+<li>Diese Spalte f. Join verw..
+<ul>
+<li>Wenn Bedingungen $\lnot$ erfüllt $\to$ <code style="color:  #ff0000ff">IllegalArgumentException</code></li>
 </ul>
 </li>
-<li><code>TableRecord.attributes: Map[String, Variant]</code>(&quot;grade&quot; -&gt; 1.0): Wir können hier d. beiden Strings vgl.
-<ul>
-<li>Gleich $\implies$ füge d. <code>Record</code> in das neue Table mit <code>.appendRecord</code></li>
-<li>$\lnot$ Gleich $\implies$ mache weiter</li>
 </ul>
 </li>
 </ul>
