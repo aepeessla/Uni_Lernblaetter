@@ -1,7 +1,7 @@
 <style>
   code {
     background-color: #e9e9e9ff;
-    color: #6bc31eff;
+    color: #999999ff;
     padding: 2px 6px;          /* Ein bisschen Abstand, damit es gut aussieht */
     border-radius: 3px;  
        }
@@ -398,7 +398,6 @@ override def hashCode(): Int = {
   ```
   * Wie schon gesagt, erben `HashMap` & `TreeMap` v. <code style="color: #7C7CBF ">Map</code> $\implies$ haben $\forall$ Funktionen d. auch <code style="color: #7C7CBF ">Map</code> hat
     * somit können wir d. Code <code>override def tostring: Int = ...</code> <span style="color: #ca2828ff">aus den beiden anderen Datein entf.</span>  
-
 </div></details>
 
 ---
@@ -571,28 +570,88 @@ def naturalJoin(other: Table): Table = {
 </details>
 
 <details>
-<summary><u><b>Gleicher Datentyp ?</b></u></summary>
+  <summary><u><b>Gleicher Datentyp ?</b></u></summary>
 
-* `getDateType(attribute)`
+  * `getDateType(attribute)`
 
-<h3>Schema zsm.führen</h3>
+  <h3>Schema zsm.führen</h3>
 
-* <code style="color: #c7862bff">TableRecord.attributes:  Map[attribute: String, value: Variant]</code>
-  * mit `++` zsm.führen
-  * `.toMap` entf. autom. identische Tupel
-  * Am Ende zu `class Schema(elems)` schicken, damit wir Datentyp: Schema haben!
+  * <code style="color: #c7862bff">TableRecord.attributes:  Map[attribute: String, value: Variant]</code>
+    * wir müssen d. `Schnittmenge` aus einer d. beiden Tabellen rausfiltern, weil Schema immer sofort untersucht, ob ein Attribut einzigartig ist. Wenn $\lnot \to$ Sofortiges abbrechen
+      * table2 = Symmetrische Differenz($\forall$ Elem. außer Schnittmenge)
+    * mit `++` zsm.führen
+    * `.toMap` entf. autom. identische Tupel
+    * Am Ende zu `class Schema(elems)` schicken, damit wir Datentyp: Schema haben!
 
-```scala
-// 3. Datentyp prüfen
-        if (this.schema.getDataType(joinAttribute) != other.schema.getDataType(joinAttribute)) {
-            throw new IllegalArgumentException("Die gemeinsamen Attribute haben nicht den gleichen Datentypen.")
-        }
+    <details>
+      <summary><u><b>Was passiert beim filter ?</b></u></summary>
+      
+      * `other.schema = Iterable[(String, DBType)]`
+        * <code style="color: #ff00aeff">Iterable[]</code> ist wie eine <span style="color: #ff0000ff">normale Liste</span>
+      * ```scala
+        val otherCleanedTable = other.schema.filter(x => x == joinAttribute)
+        ```
+        * `x`:
+          * (String, DBType)
+          * wir müssen d. erste Elem. zum filtrieren raussuchen: `x._1`
+    </details>
 
-        // --- HIER GEHT ES JETZT WEITER ---
-        val combineSchema = (this.TableRecord.schema ++ other.TableRecord.schema).toMap
-      }
-```
+  <h3>Typen vgl.</h3>
+
+  1) Zeielweise iterieren (`records(i)`)
+  1) Wert d. Schnittmenge f. `Tabelle A` & `Tabelle B` rausholen mit <code style="color: #6426b6ff">.schema.getValue(joinAttribute)</code>
+     * wenn gleich: `Record A` & `Record 2` $\implies$ `new Record()`
+     * wenn nicht: einfach hinzufügen
+
+  <h3>New Schema</h3>
+  
+  ```scala
+  val otherCleanedTable = other.schema.filter(x => x._1 != joinAttribute)
+  // Hier führen wir beie "Mengen" zusammen
+  val combinedSchema = (this.schema ++ otherCleanedTable)
+  //Hier erstellen wir aus den zusammengeführten Schemas eine neues Schema-Objekt
+  val newSchema = new Schema(combinedSchema)
+  ```
+
+  <h3>Fusion</h3>
+
+  * wenn identische Records vorhanden sind, dann werden diese kombiniert
+  <details>
+    <summary><code>records</code></summary>
+
+    * `records: ArrayBuffer[TableRecord]` \to `Iterable[(String, Variant)]`
+  </details>
+
+  ```scala
+  // 1. Die Fabrik: Erzeugt automatisch eine Liste von TableRecords
+  val joinedRecords = for {
+    tableA <- this.records
+    tableB <- other.records
+    if tableA.getValue(joinAttribute) == tableB.getValue(joinAttribute)
+  } yield {
+    // Kombiniere tableA mit tableB (ohne das Join-Attribut aus tableB)
+    val combinedTuples = tableA ++ tableB.filter(x => x._1 != joinAttribute)
+    
+    // yield liefert das fertige Record für die Liste
+    new TableRecord(combinedTuples) 
+  }
+
+  // 2. Erstelle die neue Tabelle außerhalb des for-Blocks
+  new Table(newSchema, joinedRecords)
+  ```
 </details>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -624,6 +683,61 @@ def naturalJoin(other: Table): Table = {
 * `.head`
   * gibt d. aller erste Elem.
   * Set = ungeordnet
+
+<h2>Nested for-loop</h2>
+
+```scala
+for {
+  i <- listeA
+  j <- listeB
+
+  //filter
+  if ()
+} yield {
+  //wie soll das Elem. in d. Liste aussehen
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

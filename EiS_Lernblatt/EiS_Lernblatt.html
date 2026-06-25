@@ -368,7 +368,7 @@ code {
 <style>
   code {
     background-color: #e9e9e9ff;
-    color: #6bc31eff;
+    color: #999999ff;
     padding: 2px 6px;          /* Ein bisschen Abstand, damit es gut aussieht */
     border-radius: 3px;  
        }
@@ -946,28 +946,89 @@ existiert.</p>
 </ul>
 </details>
 <details>
-<summary><u><b>Gleicher Datentyp ?</b></u></summary>
+  <summary><u><b>Gleicher Datentyp ?</b></u></summary>
 <ul>
 <li><code>getDateType(attribute)</code></li>
 </ul>
-<h3>Schema zsm.führen</h3>
+  <h3>Schema zsm.führen</h3>
 <ul>
-<li><code style="color: #c7862bff">TableRecord.attributes:  Map[attribute: String, value: Variant]</code>
+<li>
+<p><code style="color: #c7862bff">TableRecord.attributes:  Map[attribute: String, value: Variant]</code></p>
 <ul>
+<li>wir müssen d. <code>Schnittmenge</code> aus einer d. beiden Tabellen rausfiltern, weil Schema immer sofort untersucht, ob ein Attribut einzigartig ist. Wenn $\lnot \to$ Sofortiges abbrechen
+<ul>
+<li>table2 = Symmetrische Differenz($\forall$ Elem. außer Schnittmenge)</li>
+</ul>
+</li>
 <li>mit <code>++</code> zsm.führen</li>
 <li><code>.toMap</code> entf. autom. identische Tupel</li>
 <li>Am Ende zu <code>class Schema(elems)</code> schicken, damit wir Datentyp: Schema haben!</li>
 </ul>
+<details>
+  <summary><u><b>Was passiert beim filter ?</b></u></summary>
+<ul>
+<li><code>other.schema = Iterable[(String, DBType)]</code>
+<ul>
+<li><code style="color: #ff00aeff">Iterable[]</code> ist wie eine <span style="color: #ff0000ff">normale Liste</span></li>
+</ul>
+</li>
+<li>
+<pre class="hljs"><code><div><span class="hljs-keyword">val</span> otherCleanedTable = other.schema.filter(x =&gt; x == joinAttribute)
+</div></code></pre>
+<ul>
+<li><code>x</code>:
+<ul>
+<li>(String, DBType)</li>
+<li>wir müssen d. erste Elem. zum filtrieren raussuchen: <code>x._1</code></li>
+</ul>
 </li>
 </ul>
-<pre class="hljs"><code><div><span class="hljs-comment">// 3. Datentyp prüfen</span>
-        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.schema.getDataType(joinAttribute) != other.schema.getDataType(joinAttribute)) {
-            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalArgumentException</span>(<span class="hljs-string">"Die gemeinsamen Attribute haben nicht den gleichen Datentypen."</span>)
-        }
+</li>
+</ul>
+</details>
+</li>
+</ul>
+  <h3>Typen vgl.</h3>
+<ol>
+<li>Zeielweise iterieren (<code>records(i)</code>)</li>
+<li>Wert d. Schnittmenge f. <code>Tabelle A</code> &amp; <code>Tabelle B</code> rausholen mit <code style="color: #6426b6ff">.schema.getValue(joinAttribute)</code>
+<ul>
+<li>wenn gleich: <code>Record A</code> &amp; <code>Record 2</code> $\implies$ <code>new Record()</code></li>
+<li>wenn nicht: einfach hinzufügen</li>
+</ul>
+</li>
+</ol>
+  <h3>New Schema</h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">val</span> otherCleanedTable = other.schema.filter(x =&gt; x._1 != joinAttribute)
+<span class="hljs-comment">// Hier führen wir beie "Mengen" zusammen</span>
+<span class="hljs-keyword">val</span> combinedSchema = (<span class="hljs-keyword">this</span>.schema ++ otherCleanedTable)
+<span class="hljs-comment">//Hier erstellen wir aus den zusammengeführten Schemas eine neues Schema-Objekt</span>
+<span class="hljs-keyword">val</span> newSchema = <span class="hljs-keyword">new</span> <span class="hljs-type">Schema</span>(combinedSchema)
+</div></code></pre>
+  <h3>Fusion</h3>
+<ul>
+<li>wenn identische Records vorhanden sind, dann werden diese kombiniert</li>
+</ul>
+  <details>
+    <summary><code>records</code></summary>
+<pre><code>* `records: ArrayBuffer[TableRecord]` \to `Iterable[(String, Variant)]`
+</code></pre>
+  </details>
+<pre class="hljs"><code><div><span class="hljs-comment">// 1. Die Fabrik: Erzeugt automatisch eine Liste von TableRecords</span>
+<span class="hljs-keyword">val</span> joinedRecords = <span class="hljs-keyword">for</span> {
+  tableA &lt;- <span class="hljs-keyword">this</span>.records
+  tableB &lt;- other.records
+  <span class="hljs-keyword">if</span> tableA.getValue(joinAttribute) == tableB.getValue(joinAttribute)
+} <span class="hljs-keyword">yield</span> {
+  <span class="hljs-comment">// Kombiniere tableA mit tableB (ohne das Join-Attribut aus tableB)</span>
+  <span class="hljs-keyword">val</span> combinedTuples = tableA ++ tableB.filter(x =&gt; x._1 != joinAttribute)
+  
+  <span class="hljs-comment">// yield liefert das fertige Record für die Liste</span>
+  <span class="hljs-keyword">new</span> <span class="hljs-type">TableRecord</span>(combinedTuples) 
+}
 
-        <span class="hljs-comment">// --- HIER GEHT ES JETZT WEITER ---</span>
-        <span class="hljs-keyword">val</span> combineSchema = (<span class="hljs-keyword">this</span>.<span class="hljs-type">TableRecord</span>.schema ++ other.<span class="hljs-type">TableRecord</span>.schema).toMap
-      }
+<span class="hljs-comment">// 2. Erstelle die neue Tabelle außerhalb des for-Blocks</span>
+<span class="hljs-keyword">new</span> <span class="hljs-type">Table</span>(newSchema, joinedRecords)
 </div></code></pre>
 </details>
 <hr>
@@ -1006,6 +1067,17 @@ existiert.</p>
 </ul>
 </li>
 </ul>
+<h2>Nested for-loop</h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">for</span> {
+  i &lt;- listeA
+  j &lt;- listeB
+
+  <span class="hljs-comment">//filter</span>
+  <span class="hljs-keyword">if</span> ()
+} <span class="hljs-keyword">yield</span> {
+  <span class="hljs-comment">//wie soll das Elem. in d. Liste aussehen</span>
+}
+</div></code></pre>
 <script>
   window.MathJax = {
     tex: {
