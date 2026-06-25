@@ -1,6 +1,6 @@
 <style>
   code {
-    background-color: #dddcdcff;
+    background-color: #e9e9e9ff;
     color: #6bc31eff;
     padding: 2px 6px;          /* Ein bisschen Abstand, damit es gut aussieht */
     border-radius: 4px;       /* Schicke abgerundete Ecken */
@@ -652,7 +652,8 @@ if (this.schema.getDataType(joinAttribute) != other.schema.getDataType(joinAttri
 ```
 * wenn gleiche `Id`, dann zsm.führen
   * gleiche `Id`: <code style="color: #1c1582ff; background: #d1e7fdff">this Value == other Value</code>
-  * ein `TableRecord`
+  * ein `this.TableRecord(1)` mit \forall Werten aus `other.records(n)`
+  
 ```scala
 } else {
   //Tabellen Inhalt. fussionieren
