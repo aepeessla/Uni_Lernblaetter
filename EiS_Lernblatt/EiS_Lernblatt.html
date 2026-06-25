@@ -1014,18 +1014,17 @@ existiert.</p>
 <pre><code>* `records: ArrayBuffer[TableRecord]` \to `Iterable[(String, Variant)]`
 </code></pre>
   </details>
-<pre class="hljs"><code><div><span class="hljs-comment">// 1. Die Fabrik: Erzeugt automatisch eine Liste von TableRecords</span>
-<span class="hljs-keyword">val</span> joinedRecords = <span class="hljs-keyword">for</span> {
+<pre class="hljs"><code><div><span class="hljs-keyword">val</span> joinedRecords = <span class="hljs-keyword">for</span> {
   tableA &lt;- <span class="hljs-keyword">this</span>.records
   tableB &lt;- other.records
   <span class="hljs-keyword">if</span> tableA.getValue(joinAttribute) == tableB.getValue(joinAttribute)
-} <span class="hljs-keyword">yield</span> {
-  <span class="hljs-comment">// Kombiniere tableA mit tableB (ohne das Join-Attribut aus tableB)</span>
-  <span class="hljs-keyword">val</span> combinedTuples = tableA ++ tableB.filter(x =&gt; x._1 != joinAttribute)
-  
-  <span class="hljs-comment">// yield liefert das fertige Record für die Liste</span>
-  <span class="hljs-keyword">new</span> <span class="hljs-type">TableRecord</span>(combinedTuples) 
-}
+  } <span class="hljs-keyword">yield</span> {
+    <span class="hljs-comment">// Kombiniere tableA mit tableB (ohne das Join-Attribut aus tableB)</span>
+    <span class="hljs-keyword">val</span> combinedTuples = tableA ++ tableB.filter(x =&gt; x._1 != joinAttribute)
+    
+    <span class="hljs-comment">// yield liefert das fertige Record für die Liste</span>
+    <span class="hljs-keyword">new</span> <span class="hljs-type">TableRecord</span>(combinedTuples) 
+  }
 
 <span class="hljs-comment">// 2. Erstelle die neue Tabelle außerhalb des for-Blocks</span>
 <span class="hljs-keyword">new</span> <span class="hljs-type">Table</span>(newSchema, joinedRecords)

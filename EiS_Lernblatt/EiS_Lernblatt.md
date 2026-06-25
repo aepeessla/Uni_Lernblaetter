@@ -623,18 +623,17 @@ def naturalJoin(other: Table): Table = {
   </details>
 
   ```scala
-  // 1. Die Fabrik: Erzeugt automatisch eine Liste von TableRecords
   val joinedRecords = for {
     tableA <- this.records
     tableB <- other.records
     if tableA.getValue(joinAttribute) == tableB.getValue(joinAttribute)
-  } yield {
-    // Kombiniere tableA mit tableB (ohne das Join-Attribut aus tableB)
-    val combinedTuples = tableA ++ tableB.filter(x => x._1 != joinAttribute)
-    
-    // yield liefert das fertige Record für die Liste
-    new TableRecord(combinedTuples) 
-  }
+    } yield {
+      // Kombiniere tableA mit tableB (ohne das Join-Attribut aus tableB)
+      val combinedTuples = tableA ++ tableB.filter(x => x._1 != joinAttribute)
+      
+      // yield liefert das fertige Record für die Liste
+      new TableRecord(combinedTuples) 
+    }
 
   // 2. Erstelle die neue Tabelle außerhalb des for-Blocks
   new Table(newSchema, joinedRecords)
