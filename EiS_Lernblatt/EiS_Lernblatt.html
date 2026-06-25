@@ -380,6 +380,11 @@ code {
   details {
     border: #e4e3e3ff 1px solid
   }
+
+  h1 {
+    text-decoration: underline;
+    font-weight: bold;
+  }
 </style>
 <h1 id="meine-gedankeng%C3%A4nge-f-d-neue-%C3%BCbungsblatt">Meine Gedankengänge f. d. neue Übungsblatt.</h1>
 <blockquote>
@@ -393,7 +398,7 @@ code {
 <h3 id="ugleichheitu"><u>Gleichheit</u></h3>
 <ul>
 <li>
-<p><u>Wann gelten 2 tabellen als gleich ?</u></p>
+<p><u>Wann gelten 2 Tabellen als gleich ?</u></p>
 <ul>
 <li>Records gleich</li>
 <li>Records in derselben Reihenfolge vorkommen</li>
@@ -895,10 +900,54 @@ existiert.</p>
 </li>
 </ul>
 <details>
-<summary><u>Brauche ich ein Index?</u></summary>
+<summary><u><b>Gleiche Attribute ?</b></u></summary>
 <ul>
-<li>Weil wir mehrere Tables kontrollieren</li>
+<li><code>attribut: String</code>
+<ul>
+<li>liegt in <code>Schema:(attribute: String, value: Variant)</code></li>
 </ul>
+<pre class="hljs"><code><div><span class="hljs-comment">//1. durch Schema iterieren</span>
+<span class="hljs-comment">//2. A_Schema(1) ?= B_Schema(2)</span>
+<span class="hljs-keyword">if</span> (!other.schema.contrins(<span class="hljs-keyword">this</span>.schema))
+  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalArgumentException</span>(<span class="hljs-string">"Beide Tabellen teilen keinen gleichen Attributen"</span>)
+</div></code></pre>
+</li>
+<li><code>Attribute</code> -&gt; <code>.toSet </code>-&gt; <code>.intersect()</code>
+<ul>
+<li>wenn <code>.size == 1</code>, dann geeignet<pre class="hljs"><code><div><span class="hljs-keyword">val</span> commonElements:  <span class="hljs-type">Set</span>[<span class="hljs-type">Variant</span>] = other.schema.attribute.toSet.intersect(<span class="hljs-keyword">this</span>.schema.attribute.toSet)
+
+<span class="hljs-comment">//Nur ein Element in der Schnittmenge ?</span>
+<span class="hljs-keyword">if</span> (commonElements.size == <span class="hljs-number">1</span>) {
+    <span class="hljs-comment">//Rausholen des reinen Elements aus dem Set</span>
+    <span class="hljs-keyword">val</span> commentElement: <span class="hljs-type">Variant</span> = commonElements(<span class="hljs-number">1</span>)
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalArgumentException</span>(<span class="hljs-string">"The given tables are not sharing any common attributes!"</span>)
+}
+</div></code></pre>
+<ul>
+<li>Aus dem Schema v. A &amp; B müssen wir ein Schema machen</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment">//Zsm.führen beider Schemas</span>
+<span class="hljs-keyword">this</span>.schema.attributes ++ other.schema.attributes
+</div></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Gleicher Datentyp ?</b></u></summary>
+<ul>
+<li><code>getValue(attribute)</code></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.schema.getDataType(joinAttribute) != other.schema.getDataType(joinAttribute)) {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalArgumentException</span>(<span class="hljs-string">"Die gemeinsamen Attribute haben nicht den gleichen Datentypen."</span>)
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-comment">//Erwartet eine Liste -&gt; </span>
+  <span class="hljs-keyword">val</span> tableA = <span class="hljs-keyword">this</span>.getSubsetOfAttributes(joinAttribute)
+  <span class="hljs-keyword">val</span> tableB = other.getSubsetOfAttributes(joinAttribute)
+}
+</div></code></pre>
 </details>
 <hr>
 <h1 id="auf-meinen-lernblatt"><strong>Auf meinen Lernblatt</strong></h1>
@@ -917,6 +966,22 @@ existiert.</p>
 <p><code>.sortBy()</code></p>
 <ul>
 <li>wenn wir <code>_.attribute1.attribute2.attribute3</code> $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{wird autom.}}\ \ \ \ }$ v. links n. rechts sortiert</li>
+</ul>
+</li>
+</ul>
+<h2>Set</h2>
+<ul>
+<li>
+<p><code>.intersect()</code></p>
+<ul>
+<li>Schnittmenge</li>
+</ul>
+</li>
+<li>
+<p><code>.head</code></p>
+<ul>
+<li>gibt d. aller erste Elem.</li>
+<li>Set = ungeordnet</li>
 </ul>
 </li>
 </ul>
