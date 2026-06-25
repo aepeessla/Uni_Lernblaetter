@@ -649,8 +649,13 @@ def naturalJoin(other: Table): Table = {
 ```scala
 if (this.schema.getDataType(joinAttribute) != other.schema.getDataType(joinAttribute)) {
     throw new IllegalArgumentException("Die gemeinsamen Attribute haben nicht den gleichen Datentypen.")
+```
+* wenn gleiche `Id`, dann zsm.führen
+  * gleiche `Id`: <code style="color: #1c1582ff; background: #d1e7fdff">this Value == other Value</code>
+  * ein `TableRecord`
+```scala
 } else {
-  //Erwartet eine Liste -> 
+  //Tabellen Inhalt. fussionieren
   val tableA = this.getSubsetOfAttributes(joinAttribute)
   val tableB = other.getSubsetOfAttributes(joinAttribute)
 }

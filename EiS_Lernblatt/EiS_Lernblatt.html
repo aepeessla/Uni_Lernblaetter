@@ -942,8 +942,17 @@ existiert.</p>
 </ul>
 <pre class="hljs"><code><div><span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.schema.getDataType(joinAttribute) != other.schema.getDataType(joinAttribute)) {
     <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalArgumentException</span>(<span class="hljs-string">"Die gemeinsamen Attribute haben nicht den gleichen Datentypen."</span>)
-} <span class="hljs-keyword">else</span> {
-  <span class="hljs-comment">//Erwartet eine Liste -&gt; </span>
+</div></code></pre>
+<ul>
+<li>wenn gleiche <code>Id</code>, dann zsm.führen
+<ul>
+<li>gleiche <code>Id</code>: <code style="color: #1c1582ff; background: #d1e7fdff">this Value == other Value</code></li>
+<li>ein <code>TableRecord</code></li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code><div>} <span class="hljs-keyword">else</span> {
+  <span class="hljs-comment">//Tabellen Inhalt. fussionieren</span>
   <span class="hljs-keyword">val</span> tableA = <span class="hljs-keyword">this</span>.getSubsetOfAttributes(joinAttribute)
   <span class="hljs-keyword">val</span> tableB = other.getSubsetOfAttributes(joinAttribute)
 }
