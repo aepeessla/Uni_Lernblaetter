@@ -3,18 +3,23 @@
     background-color: #e9e9e9ff;
     color: #6bc31eff;
     padding: 2px 6px;          /* Ein bisschen Abstand, damit es gut aussieht */
-    border-radius: 4px;       /* Schicke abgerundete Ecken */
-  }
-  .üschrift1 {
-    text-decoration: underline;
-    font-weight: bold;
-  }
-
+    border-radius: 3px;  
+       }
   details {
     border: #e4e3e3ff 1px solid
   }
 
   h1 {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  h2 {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  h3 {
     text-decoration: underline;
     font-weight: bold;
   }
@@ -398,7 +403,7 @@ override def hashCode(): Int = {
 
 
 
-# <span class="üschrift1">Aufgabe 3</span>
+# <h1>>Aufgabe 3</h1>
 
 <details>
 <summary><b><u>Aufgabe:</u></b></summary>
@@ -467,7 +472,7 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
     ```scala
     def this(schema: Schema, initialRecords: Iterable[TableRecord]) = {}
     ```
-    * D. ist d. Leitfaden f. jegliche Tabelle mit dem Typen v. `Table`. 
+    * D. ist d. Leitfaden f. jegl. Tabelle mit dem Typen v. `Table`. 
 </details>
 
 <details>
@@ -494,88 +499,7 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
   Table(schema, sortedRecords)
   ```
   * wir nutzen <code style="color: #4eb591ff">.map</code> & $\lnot$ <code style="color: #e2a816ff">.forall</code>, weil <code style="color: #e2a816ff">.forall</code> nichts zurückgibt & wir quazi bei `attributes.forall` keine Werte haben, mit dem wir arbeiten können. <code style="color: #4eb591ff">.map</code> jedoch schon. 
-
 </details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -624,15 +548,15 @@ def naturalJoin(other: Table): Table = {
 * `Attribute` -> `.toSet `-> `.intersect()`
   * wenn `.size == 1`, dann geeignet 
     ```scala
-    val commonElements:  Set[Variant] = other.schema.attribute.toSet.intersect(this.schema.attribute.toSet)
+    val commonElements: Set[String] = this.schema.attributes.toSet.intersect(other.schema.attributes.toSet)
 
-    //Nur ein Element in der Schnittmenge ?
-    if (commonElements.size == 1) {
-        //Rausholen des reinen Elements aus dem Set
-        val commentElement: Variant = commonElements(1)
-    } else {
-        throw new IllegalArgumentException("The given tables are not sharing any common attributes!")
+    if (commonElements.size != 1) {
+      throw new IllegalArgumentException("Die Tabellen müssen exakt ein gemeinsames Attribut teilen!")
     }
+
+    // 2. Den Attributnamen als String herausholen
+    val joinAttribute: String = commonElements.head
+
     ```  
     * Aus dem Schema v. A & B müssen wir ein Schema machen
     ```scala
@@ -644,27 +568,27 @@ def naturalJoin(other: Table): Table = {
 <details>
 <summary><u><b>Gleicher Datentyp ?</b></u></summary>
 
-* `getValue(attribute)`
+* `getDateType(attribute)`
+
+<h3>Schema zsm.führen</h3>
+
+* TableRecord.schema = Tuple2(attribute: String, value: Variant)
+  * mit `++` zusammenfügen
+  * Am Ende zu `class Schema(elems)` schicken, damit wir Datentyp: Schema haben!
 
 ```scala
-if (this.schema.getDataType(joinAttribute) != other.schema.getDataType(joinAttribute)) {
-    throw new IllegalArgumentException("Die gemeinsamen Attribute haben nicht den gleichen Datentypen.")
+// 3. Datentyp prüfen
+        if (this.schema.getDataType(joinAttribute) != other.schema.getDataType(joinAttribute)) {
+            throw new IllegalArgumentException("Die gemeinsamen Attribute haben nicht den gleichen Datentypen.")
+        }
+
+        // --- HIER GEHT ES JETZT WEITER ---
+      }
 ```
 * wenn gleiche `Id`, dann zsm.führen
   * gleiche `Id`: <code style="color: #1c1582ff; background: #d1e7fdff">this Value == other Value</code>
-  * ein `this.TableRecord(1)` mit \forall Werten aus `other.records(n)`
-  
-```scala
-} else {
-  //Tabellen Inhalt. fussionieren
-  val tableA = this.getSubsetOfAttributes(joinAttribute)
-  val tableB = other.getSubsetOfAttributes(joinAttribute)
-}
-```
+  * ein `this.TableRecord(1)` mit $\forall$ Werten aus `other.records(n)`
 </details>
-
-
-
 
 
 
@@ -688,7 +612,6 @@ if (this.schema.getDataType(joinAttribute) != other.schema.getDataType(joinAttri
 * `.sortBy()`
   * wenn wir `_.attribute1.attribute2.attribute3` $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{wird autom.}}\ \ \ \ }$ v. links n. rechts sortiert
 
-
 <h2>Set</h2>
 
 * `.intersect()`
@@ -697,6 +620,19 @@ if (this.schema.getDataType(joinAttribute) != other.schema.getDataType(joinAttri
 * `.head`
   * gibt d. aller erste Elem.
   * Set = ungeordnet
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
