@@ -23,6 +23,11 @@
     text-decoration: underline;
     font-weight: bold;
   }
+
+  body{
+    background: #ffffff;
+    color: black;
+  }
 </style>
 
 
@@ -572,8 +577,9 @@ def naturalJoin(other: Table): Table = {
 
 <h3>Schema zsm.führen</h3>
 
-* TableRecord.schema = Tuple2(attribute: String, value: Variant)
-  * mit `++` zusammenfügen
+* <code style="color: #c7862bff">TableRecord.attributes:  Map[attribute: String, value: Variant]</code>
+  * mit `++` zsm.führen
+  * `.toMap` entf. autom. identische Tupel
   * Am Ende zu `class Schema(elems)` schicken, damit wir Datentyp: Schema haben!
 
 ```scala
@@ -583,11 +589,9 @@ def naturalJoin(other: Table): Table = {
         }
 
         // --- HIER GEHT ES JETZT WEITER ---
+        val combineSchema = (this.TableRecord.schema ++ other.TableRecord.schema).toMap
       }
 ```
-* wenn gleiche `Id`, dann zsm.führen
-  * gleiche `Id`: <code style="color: #1c1582ff; background: #d1e7fdff">this Value == other Value</code>
-  * ein `this.TableRecord(1)` mit $\forall$ Werten aus `other.records(n)`
 </details>
 
 

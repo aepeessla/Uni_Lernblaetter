@@ -390,6 +390,11 @@ code {
     text-decoration: underline;
     font-weight: bold;
   }
+
+  body{
+    background: #ffffff;
+    color: black;
+  }
 </style>
 <h1 id="meine-gedankeng%C3%A4nge-f-d-neue-%C3%BCbungsblatt">Meine Gedankengänge f. d. neue Übungsblatt.</h1>
 <blockquote>
@@ -947,9 +952,10 @@ existiert.</p>
 </ul>
 <h3>Schema zsm.führen</h3>
 <ul>
-<li>TableRecord.schema = Tuple2(attribute: String, value: Variant)
+<li><code style="color: #c7862bff">TableRecord.attributes:  Map[attribute: String, value: Variant]</code>
 <ul>
-<li>mit <code>++</code> zusammenfügen</li>
+<li>mit <code>++</code> zsm.führen</li>
+<li><code>.toMap</code> entf. autom. identische Tupel</li>
 <li>Am Ende zu <code>class Schema(elems)</code> schicken, damit wir Datentyp: Schema haben!</li>
 </ul>
 </li>
@@ -960,16 +966,9 @@ existiert.</p>
         }
 
         <span class="hljs-comment">// --- HIER GEHT ES JETZT WEITER ---</span>
+        <span class="hljs-keyword">val</span> combineSchema = (<span class="hljs-keyword">this</span>.<span class="hljs-type">TableRecord</span>.schema ++ other.<span class="hljs-type">TableRecord</span>.schema).toMap
       }
 </div></code></pre>
-<ul>
-<li>wenn gleiche <code>Id</code>, dann zsm.führen
-<ul>
-<li>gleiche <code>Id</code>: <code style="color: #1c1582ff; background: #d1e7fdff">this Value == other Value</code></li>
-<li>ein <code>this.TableRecord(1)</code> mit $\forall$ Werten aus <code>other.records(n)</code></li>
-</ul>
-</li>
-</ul>
 </details>
 <hr>
 <h1 id="auf-meinen-lernblatt"><strong>Auf meinen Lernblatt</strong></h1>
