@@ -408,7 +408,7 @@ override def hashCode(): Int = {
 
 
 
-# <h1>>Aufgabe 3</h1>
+# <h1>Aufgabe 3</h1>
 
 <details>
 <summary><b><u>Aufgabe:</u></b></summary>
