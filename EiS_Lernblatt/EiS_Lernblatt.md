@@ -13,6 +13,11 @@
   details {
     border: #e4e3e3ff 1px solid
   }
+
+  h1 {
+    text-decoration: underline;
+    font-weight: bold;
+  }
 </style>
 
 
@@ -27,7 +32,7 @@
 * so soll mein Code aussehen !
 
 ### <u>Gleichheit</u>
-* <u>Wann gelten 2 tabellen als gleich ?</u>
+* <u>Wann gelten 2 Tabellen als gleich ?</u>
   * Records gleich
   * Records in derselben Reihenfolge vorkommen
   * die Reihenfolge der Attribute innerhalb des Schemas oder der Records die Gleichheit nicht beeinflusst
@@ -465,8 +470,6 @@ sbt "testOnly dbms.v2.ScoredTableSortSuite"
     * D. ist d. Leitfaden f. jegliche Tabelle mit dem Typen v. `Table`. 
 </details>
 
-
-
 <details>
 <summary><b><u>sortBy(attributes: String): Table</u></b></summary>
 
@@ -608,10 +611,59 @@ def naturalJoin(other: Table): Table = {
       * Wenn Bedingungen $\lnot$ erfüllt $\to$ <code style="color:  #ff0000ff">IllegalArgumentException</code>
   
 <details>
-<summary><u>Brauche ich ein Index?</u></summary>
+<summary><u><b>Gleiche Attribute ?</b></u></summary>
 
-* Weil wir mehrere Tables kontrollieren
+* `attribut: String`
+  * liegt in `Schema:(attribute: String, value: Variant)`
+  ```scala
+  //1. durch Schema iterieren
+  //2. A_Schema(1) ?= B_Schema(2)
+  if (!other.schema.contrins(this.schema))
+    throw new IllegalArgumentException("Beide Tabellen teilen keinen gleichen Attributen")
+  ```
+* `Attribute` -> `.toSet `-> `.intersect()`
+  * wenn `.size == 1`, dann geeignet 
+    ```scala
+    val commonElements:  Set[Variant] = other.schema.attribute.toSet.intersect(this.schema.attribute.toSet)
+
+    //Nur ein Element in der Schnittmenge ?
+    if (commonElements.size == 1) {
+        //Rausholen des reinen Elements aus dem Set
+        val commentElement: Variant = commonElements(1)
+    } else {
+        throw new IllegalArgumentException("The given tables are not sharing any common attributes!")
+    }
+    ```  
+    * Aus dem Schema v. A & B müssen wir ein Schema machen
+    ```scala
+    //Zsm.führen beider Schemas
+    this.schema.attributes ++ other.schema.attributes
+    ```
 </details>
+
+<details>
+<summary><u><b>Gleicher Datentyp ?</b></u></summary>
+
+* `getValue(attribute)`
+
+```scala
+if (this.schema.getDataType(joinAttribute) != other.schema.getDataType(joinAttribute)) {
+    throw new IllegalArgumentException("Die gemeinsamen Attribute haben nicht den gleichen Datentypen.")
+} else {
+  //Erwartet eine Liste -> 
+  val tableA = this.getSubsetOfAttributes(joinAttribute)
+  val tableB = other.getSubsetOfAttributes(joinAttribute)
+}
+```
+</details>
+
+
+
+
+
+
+
+
 
 
 
@@ -630,6 +682,15 @@ def naturalJoin(other: Table): Table = {
 * `.sortBy()`
   * wenn wir `_.attribute1.attribute2.attribute3` $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{wird autom.}}\ \ \ \ }$ v. links n. rechts sortiert
 
+
+<h2>Set</h2>
+
+* `.intersect()`
+  * Schnittmenge
+
+* `.head`
+  * gibt d. aller erste Elem.
+  * Set = ungeordnet
 
 
 
