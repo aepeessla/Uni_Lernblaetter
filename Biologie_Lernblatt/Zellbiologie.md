@@ -262,6 +262,7 @@
 
   * Ionen-Bindung
   * Wasserstoffbrückenbindung
+  * Van-der-Waals-Kräfte
 </details>
 
 <h2>Inonen</h2>
