@@ -162,7 +162,7 @@
 <details>
  <summary><b><u>Was ist d. Hauptunterschied zw. <code>Eukaryoten</code> & <code>Prokaryoten</code> ?</u></b></summary>
 
-  * Zellkern $\begin{cases} \text{Eukaryoten = Zellkern} \\ \text{Prokaryoten = kein Zellkern} \end{cases}$
+  * Zellkern Zellkern $ \begin{cases} \text{Eukaryoten = Zellkern} \\ \text{Prokaryoten = kein Zellkern} \end{cases} $
 
   
   
