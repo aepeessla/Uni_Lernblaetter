@@ -43,28 +43,6 @@
   blockquote ul {
     list-style-type: square;
   }
-
-
-
-
-
-  /* Standard-Design für den Button */
-  .toggle-btn {
-    cursor: pointer;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #f0f0f0;
-    transition: background 0.3s;
-    display: inline-block;
-    width: 100%;
-  }
-
-  /* Rote Farbe, wenn die Klasse "marked" gesetzt ist */
-  .toggle-btn.marked {
-    background-color: #daecb3ff; /* Hellrot */
-    border-color: #80ff00ff;
-  }
-
 </style>
 
 
@@ -238,7 +216,7 @@
 <h2>Geometrie</h2>
 
 <details>
- <summary class="toggle-btn" id="q1" onclick="toggleMark(this)"><b><u>Was ist die Voraussetzung dafür, dass ein Kohlenstoffatom als "asymmetrisch" bezeichnet wird?</u></b></summary>
+ <summary><b><u>Was ist die Voraussetzung dafür, dass ein Kohlenstoffatom als "asymmetrisch" bezeichnet wird?</u></b></summary>
   
   * Es muss __Bindungen__ zu <span style="color: red">vier völlig unterschiedl. <code style="color: red">Atomen</code> oder <code style="color: red">Atomgruppen</code> besitzen</span>.
 </details>
@@ -247,7 +225,7 @@
 
 
 <details>
- <summary class="toggle-btn" id="q1" onclick="toggleMark(this)"><b><u>Was entsteht automa., wenn ein Molekül ein asymmetrisches C-Atom besitzt?</u></b></summary>
+ <summary><b><u>Was entsteht automa., wenn ein Molekül ein asymmetrisches C-Atom besitzt?</u></b></summary>
 
   * Es entstehen <code>Stereoisomere</code>(auch ___optische Isomere___ genannt).
     * <span style="font-size: 12px">chemische Verbindungen, d. zwar d. gleiche Summenformel & Verknüpfung d. Atome (Konstitution) besitzen, sich jedoch in d. räuml. Anordnung d. Atome im dreidimensionalen Raum unters.. Man nennt sie daher auch <code>Raumisomere</code></span>
@@ -257,7 +235,7 @@
 
 
 <details>
- <summary class="toggle-btn" id="q3" onclick="toggleMark(this)"><b><u>Was bedeutet der Begriff <code>Chiralität</code> (Händigkeit) anschaul. ?</u></b></summary>
+ <summary><b><u>Was bedeutet der Begriff <code>Chiralität</code> (Händigkeit) anschaul. ?</u></b></summary>
 
   * Dass sich d. Molekül & sein Spiegelbild durch reine Drehung $\lnot$ zur Deckung bringen lassen (genau wie eine linke & rechte Hand).
 </details>
@@ -825,23 +803,6 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 
 
 <script>
-  // Funktion zum Speichern des Status
-  function toggleMark(el) {
-    el.classList.toggle('marked');
-    const isMarked = el.classList.contains('marked');
-    // Speichert den Status (true/false) unter der ID des Elements
-    localStorage.setItem(el.id, isMarked);
-  }
-
-  // Beim Laden der Seite den gespeicherten Status wiederherstellen
-  document.querySelectorAll('.toggle-btn').forEach(btn => {
-    if (localStorage.getItem(btn.id) === 'true') {
-      btn.classList.add('marked');
-    }
-  });
-
-
-
   window.MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']]
