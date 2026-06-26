@@ -1,6 +1,6 @@
 <style>
   img {
-  width: 200px;
+  width: 300px;
   height: auto;
   }
 
@@ -233,12 +233,13 @@
     <img src="image-21.png" style="heigth: 500px; width:auto ">
 </details>
 
-
 <details>
  <summary><b><u>Was bedeutet der Begriff <code>Chiralität</code> (Händigkeit) anschaul. ?</u></b></summary>
 
   * Dass sich d. Molekül & sein Spiegelbild durch reine Drehung $\lnot$ zur Deckung bringen lassen (genau wie eine linke & rechte Hand).
   * Vorraussetzung ist ein `asyymetrisches C-Atom`
+
+  ![alt text](image-22.png)
 </details>
 
 <details>
