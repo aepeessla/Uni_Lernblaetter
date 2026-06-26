@@ -1,4 +1,3 @@
-
 <style>
   img {
   width: 200px;
@@ -51,7 +50,7 @@
 </details>
 
 <details>
-  <summary><b><u>Wonach sind <code>Viren</code> & <code>Phagen</code> aufgebaut ?</u></b></summary>
+  <summary><b><u>Nach welches Prinzip sind <code>Viren</code> & <code>Phagen</code> aufgebaut ?</u></b></summary>
 
   * N. dem <code style="color:red">Baukastenprinzip</code>
 </details>
