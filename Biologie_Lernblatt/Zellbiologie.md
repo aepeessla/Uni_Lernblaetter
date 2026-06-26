@@ -251,6 +251,8 @@
 
   * Es entstehen <code>Stereoisomere</code>(auch ___optische Isomere___ genannt).
     * <span style="font-size: 12px">chemische Verbindungen, d. zwar d. gleiche Summenformel & Verknüpfung d. Atome (Konstitution) besitzen, sich jedoch in d. räuml. Anordnung d. Atome im dreidimensionalen Raum unters.. Man nennt sie daher auch <code>Raumisomere</code></span>
+
+    <img src="image-21.png" style="heigth: 500px; width:auto ">
 </details>
 
 
