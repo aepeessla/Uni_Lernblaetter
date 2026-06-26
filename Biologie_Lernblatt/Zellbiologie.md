@@ -528,7 +528,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 <details>
  <summary><b><u>Was ist Van-der-Waals-Kräfte</u></b></summary>
 
-  * Elektronen bewegen sich ständig \to manchmal ungleich verteilt \implies temporärer Dipol \to benachbartes Molekül auch kurzfristig polarisiert \implies kurzlebige Anziehungskraft zw. Molekülen
+  * Elektronen bewegen sich ständig $\to$ manchmal ungleich verteilt $\implies$ temporärer Dipol $\to$ benachbartes Molekül auch kurzfristig polarisiert $\implies$ kurzlebige Anziehungskraft zw. Molekülen
 
   * Analogie. Klebstoff v. Molekülen, d. normalerweise nicht zsm.gehören
 </details>
