@@ -216,31 +216,17 @@
 <h2>Geometrie</h2>
 
 <details>
- <summary><b><u>Was ist die Voraussetzung dafür, dass ein Kohlenstoffatom als "asymmetrisch" bezeichnet wird?</u></b></summary>
+ <summary><b><u>Was ist ein assymetrisches C-Atom, Wie nennt man das Molekühl & welche Eigenschaft hat dieses ?</u></b></summary>
   
-  * Es muss __Bindungen__ zu <span style="color: red">vier völlig unterschiedl. <code style="color: red">Atomen</code> oder <code style="color: red">Atomgruppen</code> besitzen</span>.
+  * Ein asymmetrisches C-Atom ist ein Kohlenstoffatom, dass mit  <span style="color: red">vier völlig unterschiedl. <code style="color: red">Atomen</code> oder <code style="color: red">Atomgruppen</code> eine __Bindung__ hat</span>.
+  * Daraus entstehen <code>Stereoisomere</code>
+    * diese weisen eine <code>Chiralität</code> n.
+      * das bedeutet egal wie man solch ein Moleküle dreht, sie kann man nie perfekt ü.einander legen (= sie sind `chiral`), <span style="color: green">wie unsere Hände</span>
+
+  <img src="image-21.png" style="heigth: 500px; width:auto ">
 </details>
 
 
-
-
-<details>
- <summary><b><u>Was entsteht automa., wenn ein Molekül ein asymmetrisches C-Atom besitzt?</u></b></summary>
-
-  * Es entstehen <code>Stereoisomere</code>(auch ___optische Isomere___ genannt).
-    * <span style="font-size: 12px">chemische Verbindungen, d. zwar d. gleiche Summenformel & Verknüpfung d. Atome (Konstitution) besitzen, sich jedoch in d. räuml. Anordnung d. Atome im dreidimensionalen Raum unters.. Man nennt sie daher auch <code>Raumisomere</code></span>
-
-    <img src="image-21.png" style="heigth: 500px; width:auto ">
-</details>
-
-<details>
- <summary><b><u>Was bedeutet der Begriff <code>Chiralität</code> (Händigkeit) anschaul. ?</u></b></summary>
-
-  * Dass sich d. Molekül & sein Spiegelbild durch reine Drehung $\lnot$ zur Deckung bringen lassen (genau wie eine linke & rechte Hand).
-  * Vorraussetzung ist ein `asyymetrisches C-Atom`
-
-  ![alt text](image-22.png)
-</details>
 
 <details>
  <summary><b><u>Welche biologische Relevanz haben chirale C-Atome ?</u></b></summary>
