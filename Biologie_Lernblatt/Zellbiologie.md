@@ -230,9 +230,8 @@
 <details>
  <summary><b><u>Welche biologische Relevanz haben chirale C-Atome ?</u></b></summary>
 
-  Ein wichtiges Beispiel ist die <code>Glucose</code>. In wässriger Lösung unterliegt sie der <code>Mutarotation</code>, wobei sich ein <code>chemisches Gleichgewicht</code> zwischen <span style="color: red">α-Glucose</span> und <span style="color: red">β-Glucose</span> einstellt, das etwa im Verhältnis 1/3 zu 2/3 liegt. 
-  Zudem können Zucker zu <code>Zuckerderivaten</code> modifiziert werden, wie etwa <code>Desoxyzucker</code>, die essenziell für die <code>Stabilität der DNA</code> sind. 
-  Gegenüber dem "Chaos" strebt die Natur durch den <code>hydrophoben Effekt</code> nach Ordnung: <code>Apolare Moleküle</code> lagern sich zusammen, um die <span style="color: red">Beweglichkeit der Wassermoleküle zu maximieren</span>, da eine erzwungene <code>Starrheit</code> energetisch ungünstig wäre.
+  * <u>__Molekül-Vielfalt__</u>: chirales Zentrum $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{verdoppelt}}\ \ \ \ }$ Anzahl verfügbarer räuml. Formen
+  * <u>__Biol. Aufgabe__</u>: Spiegelbilder $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{völlig andere}}\ \ \ \ }$ Funktionen $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{Grund}}\ \ \ \ }$ `Schlüssel-Schloss-Prinzip`
 </details>
 
 <details>
