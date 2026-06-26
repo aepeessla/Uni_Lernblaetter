@@ -400,11 +400,6 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
   * natürl. `Klebestoff` $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{zsm.kleben v. Stoffen}}\ \ \ \ }$ wichtig f. <span style="color: red;">Stofftransport in biologischen Systemen <span>
 </details>
 
-<details>
- <summary><b><u>Wo zeigt sich d. Oberflächenspannung in der Natur ?</u></b></summary>
-
-  * Bsp.: Bei d. Fortbewegung v. Insekten auf d. Wasseroberfläche.
-</details>
 
 <details>
  <summary><b><u>Welche Funktion haben Kohäsion und Adhäsion bei Pflanzen ?</u></b></summary>
