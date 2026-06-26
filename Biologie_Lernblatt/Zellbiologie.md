@@ -246,7 +246,18 @@
   >  <summary><b><u><code>Stereoisomer</code>: Unters. mit 1. C-Atom ?</u></b></summary>
   >  
   >    * `Anomere`
+  > 
   >  </details>
+  <details>
+  >  <summary><b><u>Wie lautet d. Hierarchie ?</u></b></summary>
+  >  
+  >    * `Stereoisomere` = Ü.begriff
+  >     * `Diastereomere` = Sammelbegriff f. „teilweise verschieden“
+  >       * `Epimere` = „sehr eng verwandt“ (nur ein einziger Punkt ist anders).
+  >       * `Anomere` = „Ring-Spezialisten“ (nur die Position am Ring-C-Atom ist anders)
+  >     * `Enantiomere` = „kompletten Gegenteile“ (alle Zentren gespiegelt)
+  >  </details>
+  
 </details>
 
 
