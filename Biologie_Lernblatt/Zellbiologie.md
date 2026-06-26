@@ -216,7 +216,7 @@
 <h2>Geometrie</h2>
 
 <details>
- <summary><b><u>Was ist ein assymetrisches C-Atom, Wie nennt man das Molekühl & welche Eigenschaft hat dieses ?</u></b></summary>
+ <summary><b><u>Was ist ein assymetrisches C-Atom, Wie nennt man das Molekül & welche Eigenschaft hat dieses ?</u></b></summary>
   
   * Die <code>Chiralität</code>, oft als <code>Händigkeit</code> bezeichnet, beschreibt das Prinzip, dass ein <code>Molekül</code> und sein <code>Spiegelbild</code> sich nicht durch einfache Drehung zur Deckung bringen lassen. 
   Die Voraussetzung hierfür ist ein <code>asymmetrisches C-Atom</code>, das an vier völlig verschiedene <code>Atomgruppen</code> gebunden ist. Diese räumliche Anordnung führt zu <code>Stereoisomeren</code>, die sich in ihrer <code>biologischen Funktion</code> unterscheiden können. 
