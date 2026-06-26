@@ -512,6 +512,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 
   * Wasser $\to$ will sich bewegen
   * apolarer "Dreck" zwingt Wasser starr zu sein $\implies$ energetisch ungünstig + Entropie verringert
+  * ohne ihn könnten Zellen keine `Kompartimente` bilden! 
 </details>
 
 <details>
