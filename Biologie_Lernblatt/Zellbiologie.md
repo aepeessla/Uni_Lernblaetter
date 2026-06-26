@@ -277,7 +277,9 @@
 <details>
  <summary><b><u>In welcher Struktur liegen die Ionen im festen Zustand vor?</u></b></summary>
 
-  * bilden ein festes, regelmäßiges Kristallgitter (Ionengitter)
+  * bilden ein festes, regelmäßiges `Kristallgitter` (Ionengitter)
+
+  ![alt text](image-23.png)
 </details>
 
 <details>
