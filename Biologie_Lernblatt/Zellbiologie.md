@@ -83,7 +83,7 @@
   <details>
     <summary><b><u>Was sind die beiden Virenstrukturen</u></b></summary>
 
-  > <img src="image-4.png">
+  > <img src="image-4.png" style="width: 500px; height: auto;">
   >
   > <details>
   >   <summary>Lösung</summary>
@@ -96,7 +96,7 @@
   >   </ol>
   > </details>
   >
-  > <img src="image-5.png">
+  > <img src="image-5.png" style="width: 500px; height: auto;">
   >
   > <details>
   >   <summary>Lösung</summary>
@@ -183,7 +183,7 @@
   A7)2
 
   A8)9
-  
+
   A9)2
 </div>
 
