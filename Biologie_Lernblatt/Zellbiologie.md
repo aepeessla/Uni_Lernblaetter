@@ -226,7 +226,6 @@
 </details>
 
 
-
 <details>
  <summary><b><u>Welche biologische Relevanz haben chirale C-Atome ?</u></b></summary>
 
