@@ -238,6 +238,7 @@
  <summary><b><u>Was bedeutet der Begriff <code>Chiralität</code> (Händigkeit) anschaul. ?</u></b></summary>
 
   * Dass sich d. Molekül & sein Spiegelbild durch reine Drehung $\lnot$ zur Deckung bringen lassen (genau wie eine linke & rechte Hand).
+  * Vorraussetzung ist ein `asyymetrisches C-Atom`
 </details>
 
 <details>
