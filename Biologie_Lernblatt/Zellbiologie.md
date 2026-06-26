@@ -395,7 +395,9 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 <details>
  <summary><b><u>Was ist die Folge von Kohäsion und Adhäsion bei Wasser?</u></b></summary>
 
-  * `Organismen` sind auf die __Kohäsion__ & __Adhäsion__ v. Wassermolekülen angew.
+  * Wasser kann in `engen Röhren` <span style="color: red;">aufsteigen<span> $\implies$ wichtig f. Pflanzen/Bäume
+  * `Wasseroberflächenspannung` $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{ermögl. Insekten}}\ \ \ \ }$ Auf Wasser zu laufen
+  * natürl. `Klebestoff` $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{zsm.kleben v. Stoffen}}\ \ \ \ }$ wichtig f. <span style="color: red;">Stofftransport in biologischen Systemen <span>
 </details>
 
 <details>
@@ -416,10 +418,10 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 <details>
  <summary><b><u>Was sind d. 4 Klassen der Makromoleküle ?</u></b></summary>
 
-  * Proteine(Polypaptide)
-  * Nukleinsäuren
-  * Kohlenhydrate
-  * Lipide
+  * Proteine(Polypaptide) <span style="color:red">60%</span>
+  * Nukleinsäuren <span style="color:red">20</span>
+  * Kohlenhydrate <span style="color:red">10</span>
+  * Lipide <span style="color:red">10</span>
 
   ![alt text](image-13.png)
 </details>
@@ -474,7 +476,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 <details>
  <summary><b><u>Was sind Zuckerderivate ?</u></b></summary>
 
-  * Moleküle d. aus einem Monosachharid besteht ?
+  * chem. Verbindungen, d. v. einf. Zuckern (Monosacchariden) abstammen
 </details>
 
 <details>
