@@ -487,6 +487,16 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 <h2>Apolare Moleküle</h2>
 
 <details>
+ <summary><b><u>Was ist die Endotropie?</u></b></summary>
+
+  * d. Unordnung
+
+  * nehmen wir mal an, dass ich ein Zimmer betrete \implies wird autom. unordentl.
+    * je höher d. Endotropie, desto unordentl. ist d. Zimmer
+  * wenn ich d. Endotopie verringern möchte muss ich __Energie aufwenden__
+</details>
+
+<details>
  <summary><b><u>Was sind <code>Apolare Moleküle</code> ?</u></b></summary>
 
   * Keine Ionen
@@ -500,7 +510,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 <details>
  <summary><b><u>Was ist der Hydrophobe Effekt ?</u></b></summary>
 
-  * Wasser \to will sich bewegen
+  * Wasser $\to$ will sich bewegen
   * apolarer "Dreck" zwingt Wasser starr zu sein $\implies$ energetisch ungünstig + Entropie verringert
 </details>
 
@@ -510,15 +520,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
   * Endotropie im geschlossen Raum $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{darf v. allein nicht}}\ \ \ \ }$  sinken
 </details>
 
-<details>
- <summary><b><u>Was ist die Endotropie?</u></b></summary>
 
-  * d. Unordnung
-
-  * nehmen wir mal an, dass ich ein Zimmer betrete \implies wird autom. unordentl.
-    * je höher d. Endotropie, desto unordentl. ist d. Zimmer
-  * wenn ich d. Endotopie verringern möchte muss ich __Energie aufwenden__
-</details>
 
 <h2>Van-der-Waals-Kräfte</h2>
 
