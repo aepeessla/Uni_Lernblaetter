@@ -244,22 +244,7 @@
 </details>
 
 
-<script>
-  // Funktion zum Speichern des Status
-  function toggleMark(el) {
-    el.classList.toggle('marked');
-    const isMarked = el.classList.contains('marked');
-    // Speichert den Status (true/false) unter der ID des Elements
-    localStorage.setItem(el.id, isMarked);
-  }
 
-  // Beim Laden der Seite den gespeicherten Status wiederherstellen
-  document.querySelectorAll('.toggle-btn').forEach(btn => {
-    if (localStorage.getItem(btn.id) === 'true') {
-      btn.classList.add('marked');
-    }
-  });
-</script>
 
 <details>
  <summary><b><u>Was entsteht automa., wenn ein Molekül ein asymmetrisches C-Atom besitzt?</u></b></summary>
@@ -837,15 +822,24 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 
 
 
-
-
-
-
-
-
-
-
 <script>
+  // Funktion zum Speichern des Status
+  function toggleMark(el) {
+    el.classList.toggle('marked');
+    const isMarked = el.classList.contains('marked');
+    // Speichert den Status (true/false) unter der ID des Elements
+    localStorage.setItem(el.id, isMarked);
+  }
+
+  // Beim Laden der Seite den gespeicherten Status wiederherstellen
+  document.querySelectorAll('.toggle-btn').forEach(btn => {
+    if (localStorage.getItem(btn.id) === 'true') {
+      btn.classList.add('marked');
+    }
+  });
+
+
+
   window.MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']]
