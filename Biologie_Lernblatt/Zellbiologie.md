@@ -224,32 +224,8 @@
 
   <img src="image-21.png" style="heigth: 500px; width:auto ">
 
-  >  <details>
-  >  <summary><b><u><code>Stereoisomer</code>: Wie nennt man d. komplette Spieglung ?</u></b></summary>
-  >  
-  >   * `Enantiomer`
-  >  </details>
-  >  
-  >  <details>
-  >  <summary><b><u><code>Stereoisomer</code>: Einzelne Spieglung ?</u></b></summary>
-  >  
-  >    * `Diastereomere`
-  >  </details>
-  >  
-  >  <details>
-  >  <summary><b><u><code>Stereoisomer</code>: Diastereomere mit vielen Stereozentren ?</u></b></summary>
-  >  
-  >    * `Epimere`
-  >  </details>
-  >  
-  >  <details>
-  >  <summary><b><u><code>Stereoisomer</code>: Unters. mit 1. C-Atom ?</u></b></summary>
-  >  
-  >    * `Anomere`
-  > 
-  >  </details>
   > <details>
-  >   <summary><b><u>Wie lautet d. Hierarchie ?</u></b></summary>
+  >   <summary><b><u>Wie lautet d. Hierarchie der Stereoisomere & was bedeuten diese?</u></b></summary>
   >   
   >    * `Stereoisomere` = Ü.begriff
   >       * `Diastereomere` = Sammelbegriff f. „teilweise verschieden“
