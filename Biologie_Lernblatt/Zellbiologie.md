@@ -223,6 +223,30 @@
   Da biologische Systeme nach dem <code>Schlüssel-Schloss-Prinzip</code> arbeiten, erkennt die Zelle spezifische <code>chirale Formen</code>, während ihr Spiegelbild oft nicht „andocken“ kann.
 
   <img src="image-21.png" style="heigth: 500px; width:auto ">
+
+  >  <details>
+  >  <summary><b><u><code>Stereoisomer</code>: Wie nennt man d. > > komplette Spieglung ?</u></b></summary>
+  >  
+  >   * `Enantiomer`
+  >  </details>
+  >  
+  >  <details>
+  >  <summary><b><u><code>Stereoisomer</code>: Einzelne Spieglung ?</u></b></summary>
+  >  
+  >    * `Diastereomere`
+  >  </details>
+  >  
+  >  <details>
+  >  <summary><b><u><code>Stereoisomer</code>: Diastereomere mit vielen Stereozentren ?</u></b></summary>
+  >  
+  >    * `Epimere`
+  >  </details>
+  >  
+  >  <details>
+  >  <summary><b><u><code>Stereoisomer</code>: Unters. mit 1. C-Atom ?</u></b></summary>
+  >  
+  >    * `Anomere`
+  >  </details>
 </details>
 
 
@@ -436,35 +460,8 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 
 <img src="image-15.png" style="height: 800px; width: auto">
 
-<details>
- <summary><b><u>Was ist ein `Stereoisomer` ?</u></b></summary>
 
-  * gleiche Formel, andere Struktur
-</details>
 
-<details>
- <summary><b><u><code>Stereoisomer</code>: Wie nennt man d. komplette Spieglung ?</u></b></summary>
-
-  * `Enantiomer`
-</details>
-
-<details>
- <summary><b><u><code>Stereoisomer</code>: Einzelne Spieglung ?</u></b></summary>
-
-  * `Diastereomere`
-</details>
-
-<details>
- <summary><b><u><code>Stereoisomer</code>: Diastereomere mit vielen Stereozentren ?</u></b></summary>
-
-  * `Epimere`
-</details>
-
-<details>
- <summary><b><u><code>Stereoisomer</code>: Unters. mit 1. C-Atom ?</u></b></summary>
-
-  * `Anomere`
-</details>
 
 ![alt text](image-16.png)
 ![alt text](image-17.png)
