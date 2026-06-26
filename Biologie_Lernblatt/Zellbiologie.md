@@ -61,8 +61,8 @@
 
   /* Rote Farbe, wenn die Klasse "marked" gesetzt ist */
   .toggle-btn.marked {
-    background-color: #ffcccc; /* Hellrot */
-    border-color: #ff0000;
+    background-color: #daecb3ff; /* Hellrot */
+    border-color: #80ff00ff;
   }
 
 </style>
@@ -247,7 +247,7 @@
 
 
 <details>
- <summary><b><u>Was entsteht automa., wenn ein Molekül ein asymmetrisches C-Atom besitzt?</u></b></summary>
+ <summary class="toggle-btn" id="q1" onclick="toggleMark(this)"><b><u>Was entsteht automa., wenn ein Molekül ein asymmetrisches C-Atom besitzt?</u></b></summary>
 
   * Es entstehen <code>Stereoisomere</code>(auch ___optische Isomere___ genannt).
     * <span style="font-size: 12px">chemische Verbindungen, d. zwar d. gleiche Summenformel & Verknüpfung d. Atome (Konstitution) besitzen, sich jedoch in d. räuml. Anordnung d. Atome im dreidimensionalen Raum unters.. Man nennt sie daher auch <code>Raumisomere</code></span>
@@ -257,7 +257,7 @@
 
 
 <details>
- <summary><b><u>Was bedeutet der Begriff <code>Chiralität</code> (Händigkeit) anschaul. ?</u></b></summary>
+ <summary class="toggle-btn" id="q3" onclick="toggleMark(this)"><b><u>Was bedeutet der Begriff <code>Chiralität</code> (Händigkeit) anschaul. ?</u></b></summary>
 
   * Dass sich d. Molekül & sein Spiegelbild durch reine Drehung $\lnot$ zur Deckung bringen lassen (genau wie eine linke & rechte Hand).
 </details>
