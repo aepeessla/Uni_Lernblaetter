@@ -434,7 +434,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
   * wenn $n = 3$: $C_{1 \times 3}H_{2 \times 3}O_{1 \times 3} = C_3H_6O_3$
 </details>
 
-![alt text](image-15.png)
+<img src="image-15.png" style="height: 800px; width: auto">
 
 <details>
  <summary><b><u>Was ist ein `Stereoisomer` ?</u></b></summary>
