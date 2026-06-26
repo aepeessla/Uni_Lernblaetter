@@ -424,7 +424,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 <details>
  <summary><b><u>Monomere -> Polymere</u></b></summary>
 
-  ![alt text](image-14.png)
+  <img src="image-14.png" style="width:800px; height:auto">
 </details>
 
 <details>
