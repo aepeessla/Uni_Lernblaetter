@@ -164,9 +164,28 @@
 
   * Zellkern Zellkern $ \begin{cases} \text{Eukaryoten = Zellkern} \\ \text{Prokaryoten = kein Zellkern} \end{cases} $
 
-  
-  
 </details>
+
+
+<div style="border: #dadadaff 0.5px solid">
+  A1)2
+
+  A2)1
+
+  A3)1
+
+  A4)4
+
+  A5)12
+
+  A6)4
+
+  A7)2
+
+  A8)9
+  
+  A9)2
+</div>
 
 <div style="border: 1px solid #ccc; padding: 20px; border-radius: 8px; max-width: 400px;">
   <h3>Punkte-Rechner</h3>
