@@ -43,6 +43,28 @@
   blockquote ul {
     list-style-type: square;
   }
+
+
+
+
+
+  /* Standard-Design für den Button */
+  .toggle-btn {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    transition: background 0.3s;
+    display: inline-block;
+    width: 100%;
+  }
+
+  /* Rote Farbe, wenn die Klasse "marked" gesetzt ist */
+  .toggle-btn.marked {
+    background-color: #ffcccc; /* Hellrot */
+    border-color: #ff0000;
+  }
+
 </style>
 
 
@@ -167,53 +189,6 @@
 </details>
 
 
-<div style="border: #dadadaff 0.5px solid">
-  A1)2
-
-  A2)1
-
-  A3)1
-
-  A4)4
-
-  A5)12
-
-  A6)4
-
-  A7)2
-
-  A8)9
-
-  A9)2
-</div>
-
-<div style="border: 1px solid #ccc; padding: 20px; border-radius: 8px; max-width: 400px;">
-  <h3>Punkte-Rechner</h3>
-  
-  <label for="pointsInput">Deine erreichten Punkte (von 33):</label>
-  <input type="number" id="pointsInput" min="0" max="33" oninput="calculateScore()">
-  
-  <div style="margin-top: 15px;">
-    <p>Erreichte Punkte: <span id="displayReached">0</span> / 33</p>
-    <p>Prozentualer Erfolg: <strong id="displayPercent">0%</strong></p>
-  </div>
-</div>
-
-<script>
-  function calculateScore() {
-    const maxPoints = 33;
-    const input = document.getElementById('pointsInput').value;
-    const reached = parseFloat(input) || 0;
-    
-    // Berechnung
-    const percentage = (reached / maxPoints) * 100;
-    
-    // Anzeige aktualisieren
-    document.getElementById('displayReached').innerText = reached;
-    document.getElementById('displayPercent').innerText = percentage.toFixed(1) + '%';
-  }
-</script>
-
 
 
 
@@ -263,10 +238,28 @@
 <h2>Geometrie</h2>
 
 <details>
- <summary><b><u>Was ist die Voraussetzung dafür, dass ein Kohlenstoffatom als "asymmetrisch" bezeichnet wird?</u></b></summary>
+ <summary class="toggle-btn" id="q1" onclick="toggleMark(this)"><b><u>Was ist die Voraussetzung dafür, dass ein Kohlenstoffatom als "asymmetrisch" bezeichnet wird?</u></b></summary>
   
   * Es muss __Bindungen__ zu <span style="color: red">vier völlig unterschiedl. <code style="color: red">Atomen</code> oder <code style="color: red">Atomgruppen</code> besitzen</span>.
 </details>
+
+
+<script>
+  // Funktion zum Speichern des Status
+  function toggleMark(el) {
+    el.classList.toggle('marked');
+    const isMarked = el.classList.contains('marked');
+    // Speichert den Status (true/false) unter der ID des Elements
+    localStorage.setItem(el.id, isMarked);
+  }
+
+  // Beim Laden der Seite den gespeicherten Status wiederherstellen
+  document.querySelectorAll('.toggle-btn').forEach(btn => {
+    if (localStorage.getItem(btn.id) === 'true') {
+      btn.classList.add('marked');
+    }
+  });
+</script>
 
 <details>
  <summary><b><u>Was entsteht automa., wenn ein Molekül ein asymmetrisches C-Atom besitzt?</u></b></summary>
