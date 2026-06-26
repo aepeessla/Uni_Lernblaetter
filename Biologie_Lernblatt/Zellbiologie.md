@@ -244,6 +244,7 @@
 <details>
  <summary><b><u>Welche Aminosäure bildet eine wichtige Ausnahme & ist nicht chiral? Warum?</u></b></summary>
 
+  * `Glycin`
   * ```text
         COOH
           |
