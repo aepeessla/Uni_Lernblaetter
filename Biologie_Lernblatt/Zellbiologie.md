@@ -431,6 +431,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
  <summary><b><u>Wie lautet d. Chemische Bezichnung v. Kohlenhydraten ?</u></b></summary>
 
   $(CH_20)_n$
+  * wenn $n = 3$: $C_{1 \times 3}H_{2 \times 3}O_{1 \times 3} = C_3H_6O_3$
 </details>
 
 ![alt text](image-15.png)
