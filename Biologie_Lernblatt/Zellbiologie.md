@@ -301,10 +301,12 @@
 </details>
 
 <details>
- <summary><b><u>Was versteht man unter der "Hydratationsenergie" ?</u></b></summary>
+ <summary><b><u>Was versteht man unter einer "Hydrathülle" ?</u></b></summary>
 
   * Eine Schicht aus Wassermolekülen, d. sich beim Lösen um d. einzelnen Ionen herum anordnet.
   * Dabei zeigt d. positive Pol des Wassers ($H$) zum negativen Chloridion ($Cl^-$) & d. negative Pol ($O$) zum positiven Natriumion ($Na^+$).
+
+  ![alt text](image-24.png)
 </details>
 
 
