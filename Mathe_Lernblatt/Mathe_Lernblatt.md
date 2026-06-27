@@ -28,6 +28,11 @@
     padding: 8px; /* Fügt etwas Luft zwischen Text und Rahmen ein */
     text-align: center;
   }
+
+  .ÜSchrift{
+    font-weight: bold;
+    text-decoration: underline
+  }
 </style> 
 </style>
 
@@ -36,8 +41,17 @@
 <h2> Was ist eine Normalform ?</h2>
 
 * `allgemeine Form` = $ax^2 + 2bxy + cy^2 + dx + ey + f = 0$
-* Durch __Drehung d. Koordinate__ wird  d. __Term xy eliminiert__ $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Normalform sieht dann so aus}}\ \ \ \ }$ $\lambda_1 u^2 + \lambda_2 v^2 + g = 0$
+* Durch __Drehung d. Koordinate__ wird  d. __Term xy eliminiert__ $\xRightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Normalform sieht dann so aus}}\ \ \ \ }$ $\lambda_1 u^2 + \lambda_2 v^2 + g = 0$
     * $\lambda_1$ & $\lambda_2$ = Eigenwerte d. Matrix $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{repräsentiert}}\ \ \ \ }$  quadratischen Teil d. Gleichung
+
+<details>
+    <summary class="ÜSchrift">Wie Normalform bestimmen ?</summary>
+
+* 3 Schritte
+    1) Matrix aufstellen
+    1) Eigenwerte bestimmen
+    1) Einsetzten in d. Normalform
+</details>
 
 
 <table>
