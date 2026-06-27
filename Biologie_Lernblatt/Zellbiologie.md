@@ -456,6 +456,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
  <summary><b><u>Was sind Zuckerderivate ?</u></b></summary>
 
   * chem. Verbindungen, d. v. einf. Zuckern (Monosacchariden) abstammen
+    * Also, quazi `modifizierte Zuckermoleküle`
 </details>
 
 <details>
