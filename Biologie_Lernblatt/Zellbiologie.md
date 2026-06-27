@@ -487,7 +487,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 
   * d. Unordnung
 
-  * nehmen wir mal an, dass ich ein Zimmer betrete \implies wird autom. unordentl.
+  * nehmen wir mal an, dass ich ein Zimmer betrete $\implies$ wird autom. unordentl.
     * je höher d. Endotropie, desto unordentl. ist d. Zimmer
   * wenn ich d. Endotopie verringern möchte muss ich __Energie aufwenden__
 </details>
