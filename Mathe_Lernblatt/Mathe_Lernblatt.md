@@ -33,6 +33,10 @@
     font-weight: bold;
     text-decoration: underline
   }
+
+  details {
+    border: 1px black solid 
+  }
 </style> 
 </style>
 
