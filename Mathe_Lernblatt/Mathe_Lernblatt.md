@@ -61,10 +61,7 @@
 * <u>__3 Schritte__</u>
     1) Matrix aufstellen
 
-        $\begin{pmatrix}
-        a & b \\
-        b & c
-        \end{pmatrix}$
+        $\begin{pmatrix} a & b \\ b & c \end{pmatrix}$
         
     1) Eigenwerte bestimmen
     1) Einsetzten in d. Normalform
