@@ -50,6 +50,10 @@
   blockquote ul {
     list-style-type: square;
   }
+
+  li {
+    margin-bottom: 0.3em;
+  }
 </style>
 
 
