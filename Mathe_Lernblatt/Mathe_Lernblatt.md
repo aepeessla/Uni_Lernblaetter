@@ -38,7 +38,12 @@
     border: 1px black solid;
     padding: 5px
   }
-</style> 
+
+  code {
+    background: #eaeaeaff;
+    color: #7778b8ff;
+    padding:3px
+  }
 </style>
 
 <h1>Normalenformen</h1>
