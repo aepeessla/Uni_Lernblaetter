@@ -500,7 +500,10 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
   * Keine Hydrathülle
     * Wasser<b>un</b>löslich
   
-  * d. Lösung, um Störfaktor des Wassers zu minimieren
+  * __Störfaktor__ des Wassers: Wasser ist ein __polares Lösungsmittel__ aus starken __Wasserstoffbrückenbindungen__.
+    * Wenn nun ein <code style="color: #a0bb74ff">unpolares Molekül</code> in d. Wasser gelangt $\implies$ keine Bindung mit <code style="color: #749dbbff">Wassermolekülen</code>
+      * D. <code style="color: #a0bb74ff">unpolares Molekül</code> verdrängt d. <code style="color: #749dbbff">Wassermolekülen</code> $\to$ zwingt sie in eine __käfigartige Struktur__, um drumherum zu bauen $\leftarrow$ Wasser möchte aber flexibel sein
+        * Bewegung d. <code style="color: #749dbbff">Wassermolekülen</code> in diesem Käfig = stark eingeschränkt. <span style="color: red">D. System verliert an __Entropie__<span> $\implies$ energetisch & thermodynamisch ungünstig
 </details>
 
 <details>
