@@ -6,7 +6,9 @@
 
   code {
     background: #eaeaeaff 2px;
-    color: #7dc761ff
+    color: #7dc761ff;
+    padding: 2px 5px 2px 5px;
+    border-radius: 6px
   }
 
   body {
@@ -456,7 +458,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
  <summary><b><u>Was sind Zuckerderivate ?</u></b></summary>
 
   * chem. Verbindungen, d. v. einf. Zuckern (Monosacchariden) abstammen
-    * Also, quazi `modifizierte Zuckermoleküle`
+    * Also, quazi <code style="color: #7dc761ff">modifizierte Zuckermoleküle</code>
 </details>
 
 <details>
