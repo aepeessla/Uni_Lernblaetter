@@ -493,7 +493,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 </details>
 
 <details>
- <summary><b><u>Was sind <code>Apolare Moleküle</code> ?</u></b></summary>
+ <summary><b><u>Was sind <code>Apolare/Unpolare Moleküle</code> ?</u></b></summary>
 
   * Keine Ionen
   * keine permanenter Dipol
