@@ -49,6 +49,12 @@
 
 * 3 Schritte
     1) Matrix aufstellen
+
+        $\begin{pmatrix}
+        a & b \\
+        b & c
+        \end{pmatrix}$
+        
     1) Eigenwerte bestimmen
     1) Einsetzten in d. Normalform
 </details>
