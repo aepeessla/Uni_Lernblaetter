@@ -1,4 +1,16 @@
 <style>
+    @page {
+        size: A4;
+        margin: 20mm;
+    }
+
+    body {
+        width: 210mm;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
     body {
         background: #ffffffff;
         color: #000000ff;
