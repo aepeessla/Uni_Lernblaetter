@@ -35,7 +35,8 @@
   }
 
   details {
-    border: 1px black solid 
+    border: 1px black solid;
+    padding: 5px
   }
 </style> 
 </style>
@@ -51,7 +52,7 @@
 <details>
     <summary class="ÜSchrift">Wie Normalform bestimmen ?</summary>
 
-* 3 Schritte
+* <u>__3 Schritte__</u>
     1) Matrix aufstellen
 
         $\begin{pmatrix}
