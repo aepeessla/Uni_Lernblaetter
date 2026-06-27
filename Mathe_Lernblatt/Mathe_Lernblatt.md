@@ -42,7 +42,8 @@
   code {
     background: #eaeaeaff;
     color: #7778b8ff;
-    padding:3px
+    padding:3px;
+    border-radius: 5px
   }
 </style>
 
