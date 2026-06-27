@@ -1,4 +1,9 @@
 <style>
+  details {
+    margin-bottom: 0.2em  ;
+    border: lightgrey 1px solid;
+    padding: 3px
+}
   img {
   width: 300px;
   height: auto;
