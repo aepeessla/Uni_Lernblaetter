@@ -477,7 +477,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
   * <code style="color: #ca77c2ff">Glucoseamin</code>
   * <code style="color: #5eb796ff">Glucosesäure</code>
 
-  ![alt text](image-19.png)
+  <img src="image-19.png" style="width: 500px; height: auto">
 </details>
 
 <h2>Apolare Moleküle</h2>
