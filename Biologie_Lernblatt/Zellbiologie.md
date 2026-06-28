@@ -860,7 +860,16 @@ Durch __spezifische Import-Signale__, d. d. Protein direkt zum entsprechenden Or
   * $\forall$ anderen `natürl. Systeme` sind im Prinzip __offen__. Im `Labor` werden __geschlossene Systeme hergestellt__, um `thermodynamische Gleichgewichte` zu __untersuchen__
 </details> 
 
+<details>
+<summary><u><b>Was ist der Hauptsatz der Thermodynamik?</b></u></summary>
 
+* $\Delta H = H \text{Anfang} - H \text{Ende} = q - w$
+  * $H$ = Gesamtenergie
+  * $q$ = Wärme  $\leftarrow$ System $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{absorbiert aus}}\ \ \ \ }$ Umgebung
+  * $w$ = Arbeit $\leftarrow$ System $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{ausgeübt auf}}\ \ \ \ }$ Umgebung
+
+  * $\boxed{q \lt 0 = \text{exotherme Reaktion} \\ q \gt 0 = \text{endotherme Reaktion}}$
+</details> 
 
 
 
