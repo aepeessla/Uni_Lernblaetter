@@ -564,7 +564,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 <h1>Nukleinsäuren & Proteine</h1>
 
 <details>
-<summary> Aus was bestehen Bakterienzellen ?</summary>
+<summary>Was sind die Bestandteile der Bkterien und deren prozentuale Anteil ?</summary>
 
 * `70%`= Wasser
 * `30%` = Trockenmasse
