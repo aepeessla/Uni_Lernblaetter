@@ -599,27 +599,128 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 * `poly-cistronische RNA`
 </details>
 
+<h2>Hershey & Chase</h2>
 
+<details>
+<summary><u><b>Was ist das Experiment? </b></u></summary>
 
+* `T-Phagen` werden radioaktiv makiert
+  * __Proteinhplle__: $^{35}S$
+  * __DNA-Kern__: $^{32}P$
 
+* Phagen $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{infizieren}}\ \ \ \ }$ Bakterien
+* leere Virushüllen $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{getrennt}}\ \ \ \ }$ v. Bakterien
 
+__<u>Ergebnis</u>__:
+* radioaktive Proteinhülle $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{bleiben}}\ \ \ \ }$ __außerhalb__
+* radiaktive DNA $\underrightarrow{\ \ \ \ \textcolor{red}{\text{im Inneren}}\ \ \ \ }$   Bakterien
+</details>
 
+<h2>DNA</h2>
 
+<details>
+<summary><u><b>Wie sind die beiden Pentosen ?</b></u></summary>
 
+![alt text](image-25.png)
+</details>
 
+<details>
+<summary><u><b>Was ist das 5` & das 3-Ende ?</b></u></summary>
 
+* `5-Ende`: Phosphatgruppe
+* `3-Ende`: Hydroxgruppe
 
+![alt text](image-26.png)
+</details>
 
+<details>
+<summary><u><b>Wie viele Wasserstoffbrückenbindungen haben A-T und C-G ?</b></u></summary>
 
+* `A-T`: 2
+* `G-C`: 3
+</details>
 
+<details>
+<summary><u><b>Wie lautet der Aufbau eines Chromosoms ?</b></u></summary>
 
+![alt text](image-27.png)
+</details>
 
+<details>
+<summary><u><b>Wie ist eine Histone aufgebaut ?</b></u></summary>
 
+![alt text](image-28.png)
+</details>
 
+<details>
+<summary><u><b>Wie wird d. DNA aufeglockert und wie wird es verfestigt ?</b></u></summary>
 
+<u>__Lockerung__</u>
 
+* (De-)Acetylierung 
 
+<u>__Verfestigung__</u>
 
+* (De-)Methylierung
+</details>
+
+<details>
+<summary><u><b>Wie wird die DNA repliziert ?</b></u></summary>
+
+* semikonservativ
+</details>
+
+<details>
+<summary><u><b>Wie lautet die allgemeine Form einer Aminosäure ?</b></u></summary>
+
+![alt text](image-29.png)
+</details>
+
+<details>
+<summary><u><b>Was sind die Schritte der Ribosomen ?</b></u></summary>
+
+1) Initiation
+2) Elogation
+3) Termination
+</details>
+
+<details>
+<summary><u><b>Was bestimmt den Zielort eines Proteins ?</b></u></summary>
+
+* seine __spezifische__ `Signalsequenz` (Aminosäure-Abfolge)
+</details>
+
+<details>
+<summary><u><b>Wo bleiben Proteine ohne Signal ?</b></u></summary>
+
+* im `Cytosol`
+</details>
+
+<details>
+<summary><u><b>Was passiert bei einer Signalsequenz für das ER ?</b></u></summary>
+
+* Protein $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{geschleucht}}\ \ \ \ }$ ER $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{wandert zum}}\ \ \ \ }$ `Golgi-Komplex` $\to$ Membran $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{anhand von}}\ \ \ \ }$ Lysosomen oder n. außerhalb d. Zelle (`Sekretion`).
+</details>
+
+<details>
+<summary><u><b>Wie gelangen Proteine in Organellen wie Mitochondrien ?</b></u></summary>
+
+Durch __spezifische Import-Signale__, d. d. Protein direkt zum entsprechenden Organell leiten
+</details>
+
+<details>
+<summary><u><b>Was sind die posttranslationalen Modifikationen ?</b></u></summary>
+
+* Proteolyse
+  * Enzym $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{schneidet ab}}\ \ \ \ }$ Teile d. Kette $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{jzt. mögl.}}\ \ \ \ }$ Protein kann sich in seine __aktive 3D-Form__ falten
+* Glykosylierung
+  * Zuckerketten angehängt
+    * Wichtig f. Erkennung & Transport
+
+* Phsophorylierung
+  * Phosphatgruppen angehängt
+    * Denaturierung $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Protein}}\ \ \ \ }$ aktiver oder deaktiviert
+</details>
 
 
 
