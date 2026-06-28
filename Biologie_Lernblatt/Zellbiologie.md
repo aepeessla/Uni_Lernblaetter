@@ -787,7 +787,11 @@ Durch __spezifische Import-Signale__, d. d. Protein direkt zum entsprechenden Or
 
 ![alt text](image-32.png)
 
+<details>
+<summary><u><b>Was ist das Redoxpotenzial ?</b></u></summary>
 
+* Es bildet eine `elektronische Reihe`, d. anzeigt, wie stark <code style="color: #a274bbff">Verbindungen</code> `Elektronen` __abgeben__ oder __aufnehmen__ <span style="color: red">wollen<span>
+</details> 
 
 
 
