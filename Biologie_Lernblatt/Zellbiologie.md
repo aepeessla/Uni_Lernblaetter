@@ -614,7 +614,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 <h1>Nukleinsäuren & Proteine</h1>
 
 <details>
-<summary>Was sind die Bestandteile der Bkterien und deren prozentuale Anteil ?</summary>
+<summary><u><b>Was sind die Bestandteile der Bkterien und deren prozentuale Anteil ?</b></u></summary>
 
 * `70%`= Wasser
 * `30%` = Trockenmasse
@@ -628,7 +628,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 </details>
 
 <details>
-<summary>Was ist bei der replikation v. Eukaryoten & Prokaryoten anders?</summary>
+<summary><u><b>Was ist bei der replikation v. Eukaryoten & Prokaryoten anders?</u></b></summary>
 
 <u>__Prokaryoten__</u>
 * `Transkription` & `Translation`räuml. $\lnot$ getrennt
@@ -640,7 +640,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 </details>
 
 <details>
-<summary>Wie nennt man die Eigenschaft d. prokaryotischen & d. eukaryotischen RNA ?</summary>
+<summary><u><b>Wie nennt man die Eigenschaft d. prokaryotischen & d. eukaryotischen RNA ?</u></b></summary>
 
 <u>__Eukaryoten__</u>
 * `mono-cistronische RNA`
