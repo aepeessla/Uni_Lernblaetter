@@ -51,8 +51,9 @@
     list-style-type: square;
   }
 
-  li {
-    margin-bottom: 10px;
+
+  ul li, ol li {
+    margin-top: 20px; /* Gewünschten Abstand hier anpassen */
   }
 </style>
 
