@@ -568,13 +568,13 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 
 * `70%`= Wasser
 * `30%` = Trockenmasse
-  * Makromoleküle(26%)
-    * Proteine = 15%
-    * Nukleinäuren = 7% 
-    * Phospholipide = 2%
-    * Polysaccharide = 2%
-  * Kleine Moleküle (4%)
-    * dazu gehören auch Ionen
+  * Makromoleküle(`26%`)
+    * Proteine = `15%`
+    * Nukleinäuren = `7%`
+    * Phospholipide = `2%`
+    * Polysaccharide = `2%`
+  * Kleine Moleküle (`4%`)
+    * <span style="color: ">dazu gehören auch Ionen<span>
 </details>
 
 <details>
