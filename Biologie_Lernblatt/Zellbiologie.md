@@ -871,7 +871,13 @@ Durch __spezifische Import-Signale__, d. d. Protein direkt zum entsprechenden Or
   * $\boxed{q \lt 0 = \text{exotherme Reaktion} \\ q \gt 0 = \text{endotherme Reaktion}}$
 </details> 
 
+<h2>2. Hauptsatz der Thermodynamik</h2>
 
+<details>
+<summary><u><b>Was besagt dieses ?</b></u></summary>
+
+* In einem `abgeschlossenen System` nimmt d. `Entropie` bei `freiwillig ablaufenden Prozessen` <span style="color: red">__niemals__</span> ab, sondern __nimmt ständig zu__ oder __bleibt im Gleichgewicht__
+</details> 
 
 
 
