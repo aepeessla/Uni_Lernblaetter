@@ -711,20 +711,40 @@ Durch __spezifische Import-Signale__, d. d. Protein direkt zum entsprechenden Or
 <details>
 <summary><u><b>Was sind die posttranslationalen Modifikationen ?</b></u></summary>
 
-* Proteolyse
+* <u>__Proteolyse__</u>
   * Enzym $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{schneidet ab}}\ \ \ \ }$ Teile d. Kette $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{jzt. mögl.}}\ \ \ \ }$ Protein kann sich in seine __aktive 3D-Form__ falten
-* Glykosylierung
+* <u>__Glykosylierung__</u>
   * Zuckerketten angehängt
     * Wichtig f. Erkennung & Transport
 
-* Phsophorylierung
+* <u>__Phsophorylierung__</u>
   * Phosphatgruppen angehängt
     * Denaturierung $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Protein}}\ \ \ \ }$ aktiver oder deaktiviert
 </details>
 
+<details>
+<summary><u><b>Was ist der Chaperonin-Zyklus ?</b></u></summary>
 
+* d. Rettung falsch gefalteten proteine
+</details>
 
+<details>
+<summary><u><b>Was sind die Schritte des Chaperonin-Zyklus ?</b></u></summary>
 
+1) __Erkennung__
+  * `Chaperonin-Komplex` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erkennt}}\ \ \ \ }$ falsch gefaltetes Protein $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{an}}\ \ \ \ }$  __hydrophoben__, __herausragenden__ 
+2) __Einschließung__ Bereichen
+  * Protein  $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{aufgenommen}}\ \ \ \ }$ hohe Kammer des Proteinkomplexes
+    * Kammer = hydrophil $\implies$ geschützter Raum
+3) __Versiegeln__
+  * `GroES-Deckel` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{schließt ab}}\ \ \ \ }$ Kammer + __ATP-Verbrauch__
+4) __Faltung__ 
+  * Im Inneren d. geschlossenen Kammer kann sich d. Protein ungestört v. anderen zellulären Komponenten korrekt falten.
+5) __Freisetzung__ 
+  * N. d. Spaltung v. ATP (zu ADP) öffnet sich d. Deckel & d. nun korrekt gefaltete Protein wird freigesetzt.
+
+![alt text](image-30.png)
+</details>
 
 
 
