@@ -1,6 +1,6 @@
 <style>
   details {
-    margin-bottom: 20px  ;
+    margin-bottom: 7px  ;
     border: lightgrey 1px solid;
     padding: 3px
 }
@@ -12,7 +12,7 @@
   code {
     background: #eaeaeaff 2px;
     color: #7dc761ff;
-    padding: 2px 5px 2px 5px;
+    padding: 2px 2px 2px 2px;
     border-radius: 6px
   }
 
