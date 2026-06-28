@@ -57,6 +57,55 @@
 </style>
 
 
+#### 1. Chemisches Fundament (Die "Spielregeln")
+
+* **Atomare Bindungen:**
+* **Kovalente Bindungen:** Das "Stahlgerüst" (stabil, Elektronenteilung).
+* **Nicht-kovalente Bindungen:** Der "Klettverschluss" (dynamisch, steuerbar).
+* *Wasserstoffbrücken, Ionenbindungen (Salzbrücken), Van-der-Waals-Kräfte.*
+
+
+
+
+* **Energetik:**
+* **2. Hauptsatz der Thermodynamik:** Zunahme der Entropie (Chaos), Leben als aktiver Entropie-Export.
+* **Redoxpotential:** Elektronenfluss als Motor für ATP (vom negativen zum positiven Potential).
+* **Gitter- vs. Hydratationsenergie:** Warum Salze sich in Wasser lösen (Bildung der Hydrathülle).
+
+
+
+#### 2. Molekulare Bausteine (Die "LEGO-Steine")
+
+* **Kohlenhydrate (Zucker):**
+* Summenformel $(CH_2O)_n$.
+* **Chiralität:** Asymmetrische C-Atome (Spiegelbild-Strukturen).
+* **Isomerie-Hierarchie:** Enantiomere vs. Diastereomere (inkl. Epimere & Anomere).
+* **Zuckerderivate:** Chemische "Upgrades" (z.B. Desoxyribose in DNA).
+
+
+* **Proteine:**
+* **Struktur:** Faltung durch Chaperonine (Schutz vor "hydrophobem Zusammenkleben").
+* **Modifikation:** Posttranslationale Änderungen (z.B. Acetylierung, Phosphorylierung).
+
+
+
+#### 3. Zelluläre Organisation (Das "Funktions-Prinzip")
+
+* **Protein-Sorting:** Signalsequenzen als "Adressaufkleber" für den Zielort (ER, Kern, Mitochondrien).
+* **Membranen & Kompartimente:**
+* **Hydrophober Effekt:** Der fundamentale "Baumeister" für Lipid-Doppelschichten (Vesikel, Peroxisomen).
+* **Spezialisten:** Sekretorische Vesikel (Export) vs. Peroxisomen (Entgiftung).
+
+
+* **Evolution:**
+* **Chemische Evolution:** Urey-Miller-Versuch (Entstehung organischer Bausteine aus anorganischen Gasen).
+* **Das Basale Minimum:** Die ~500 essenziellen Gene für das Überleben einer Zelle.
+
+
+
+
+
+
 
 
 <h1>Viren & Phagen</h1>
