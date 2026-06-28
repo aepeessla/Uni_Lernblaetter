@@ -828,13 +828,37 @@ Durch __spezifische Import-Signale__, d. d. Protein direkt zum entsprechenden Or
   * wirkt als `Elektronenakzeptor`
 </details> 
 
+<h1>Thermodynamic</h1>
 
+<h2>Begriffe:</h2>
 
+<details>
+<summary><u><b>Was ist ein System ?</b></u></summary>
 
+* bestimmter Teil des Universums
+  * Bsp.:
+    * Reaktionsgefäß
+    * lebender Organismus
+</details> 
 
+<details>
+<summary><u><b>Was ist ein offenes Systeme ?</b></u></summary>
 
+* __lebende Systeme__, d. `Nahrung` aufnehmen, `Abfall` abgeben, `Wäre` & `Arbeit` produz.
+</details> 
 
+<details>
+<summary><u><b>Was ist ein geschlossenes Systeme ?</b></u></summary>
 
+* __Austausch__ v. `Energie` mit `Umgebung`, <span style="color: red">aber keine Materie</span> 
+</details> 
+
+<details>
+<summary><u><b>Was ist ein abgeschlossenes(isoliertes) System?</b></u></summary>
+
+* d. Universum
+  * $\forall$ anderen `natürl. Systeme` sind im Prinzip __offen__. Im `Labor` werden __geschlossene Systeme hergestellt__, um `thermodynamische Gleichgewichte` zu __untersuchen__
+</details> 
 
 
 
