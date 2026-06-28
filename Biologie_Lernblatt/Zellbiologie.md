@@ -746,11 +746,23 @@ Durch __spezifische Import-Signale__, d. d. Protein direkt zum entsprechenden Or
 ![alt text](image-30.png)
 </details>
 
+<h1>Energie & Enzyme</h1>
 
+<h2>Urey-Miller-Experiment</h2>
 
+<details>
+<summary><u><b>Was hat es bewiesen ?</b></u></summary>
 
+* Durch Zufuhr v. `Energie`(Blitze) sind aus einfachen, unlebenden Stoffen `Aminosäuren` entstanden
+</details>
 
+<h2>ATP</h2>
 
+<details>
+<summary><u><b>Wie ist ATP aufgebaut?</b></u></summary>
+
+![alt text](image-31.png)
+</details>
 
 
 
