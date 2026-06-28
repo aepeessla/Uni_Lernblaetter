@@ -790,18 +790,43 @@ Durch __spezifische Import-Signale__, d. d. Protein direkt zum entsprechenden Or
 <details>
 <summary><u><b>Was ist das Redoxpotenzial ?</b></u></summary>
 
-* Es bildet eine `elektronische Reihe`, d. anzeigt, wie stark <code style="color: #a274bbff">Verbindungen</code> `Elektronen` __abgeben__ oder __aufnehmen__ <span style="color: red">wollen<span>
+* Es beschreibt d. __Tendez__ eines Stoffes zu __oxidieren__ oder zu __reduzieren__
 </details> 
 
+<details>
+<summary><u><b>In welche Richtung fließen Elektronen ?</b></u></summary>
 
+* Elektronen fließen immer v. `Verbindungen` mit <code style="color: #ff0000ff">negativem Redoxpotenzial</code> zu Verbindungen mit <code style="color: #62d353ff">positivem Potenzial</code> 
+</details> 
 
+<details>
+<summary><u><b>Was ist die Bezugsspannung ?</b></u></summary>
 
+* Sie ist d. `Standardpotential`: $E^0$
+</details> 
 
+<details>
+<summary><u><b>Warum werden absolute elektronische Potentiale zu ihrem definierten Nullpunkt gemessen und was ist die Lösung dazu ?</b></u></summary>
 
+* Weil sie nicht messbar sind 
 
+* Lösung:
+  * Normalwasserstoffelektrode, welches als Standard-Nullpunkt dient ($E^{0^{'}} = 0.00 V$)
+</details> 
 
+<details>
+<summary><u><b>Was bedeutet ein negatives $E^{0^{'}}$ ?</b></u></summary>
 
+* Verbindung $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{gibt ab}}\ \ \ \ }$ Elektronen v. $H_2$
+  * wirkt als `Elektronendonator`
+</details> 
 
+<details>
+<summary><u><b>Was bedeutet ein positives $E^{0^{'}}$ ?</b></u></summary>
+
+* Verbindung $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{nimmt auf}}\ \ \ \ }$ Elektronen v. $H_2$
+  * wirkt als `Elektronenakzeptor`
+</details> 
 
 
 
