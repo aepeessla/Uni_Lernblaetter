@@ -1,6 +1,6 @@
 <style>
   details {
-    margin-bottom: 0.2em  ;
+    margin-bottom: 20px  ;
     border: lightgrey 1px solid;
     padding: 3px
 }
