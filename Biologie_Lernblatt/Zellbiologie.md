@@ -60,32 +60,32 @@
 #### 1. Chemisches Fundament (Die "Spielregeln")
 
 * **Atomare Bindungen:**
-* **Kovalente Bindungen:** Das "Stahlgerüst" (stabil, Elektronenteilung).
-* **Nicht-kovalente Bindungen:** Der "Klettverschluss" (dynamisch, steuerbar).
-* *Wasserstoffbrücken, Ionenbindungen (Salzbrücken), Van-der-Waals-Kräfte.*
+  * **Kovalente Bindungen:** Das "Stahlgerüst" (stabil, Elektronenteilung).
+  * **Nicht-kovalente Bindungen:** Der "Klettverschluss" (dynamisch, steuerbar).
+  * **Wasserstoffbrücken, Ionenbindungen(Salzbrücken),Van-der-Waals-Kräfte.**
 
 
 
 
 * **Energetik:**
-* **2. Hauptsatz der Thermodynamik:** Zunahme der Entropie (Chaos), Leben als aktiver Entropie-Export.
-* **Redoxpotential:** Elektronenfluss als Motor für ATP (vom negativen zum positiven Potential).
-* **Gitter- vs. Hydratationsenergie:** Warum Salze sich in Wasser lösen (Bildung der Hydrathülle).
+  * **2. Hauptsatz der Thermodynamik:** Zunahme der Entropie (Chaos), Leben als aktiver Entropie-Export.
+  * **Redoxpotential:** Elektronenfluss als Motor für ATP (vom negativen zum positiven Potential).
+  * **Gitter- vs. Hydratationsenergie:** Warum Salze sich in Wasser lösen (Bildung der Hydrathülle).
 
 
 
 #### 2. Molekulare Bausteine (Die "LEGO-Steine")
 
 * **Kohlenhydrate (Zucker):**
-* Summenformel $(CH_2O)_n$.
-* **Chiralität:** Asymmetrische C-Atome (Spiegelbild-Strukturen).
-* **Isomerie-Hierarchie:** Enantiomere vs. Diastereomere (inkl. Epimere & Anomere).
-* **Zuckerderivate:** Chemische "Upgrades" (z.B. Desoxyribose in DNA).
+  * Summenformel $(CH_2O)_n$.
+  * **Chiralität:** Asymmetrische C-Atome (Spiegelbild-Strukturen).
+  * **Isomerie-Hierarchie:** Enantiomere vs. Diastereomere (inkl. Epimere & Anomere).
+  * **Zuckerderivate:** Chemische "Upgrades" (z.B. Desoxyribose in DNA).
 
 
 * **Proteine:**
-* **Struktur:** Faltung durch Chaperonine (Schutz vor "hydrophobem Zusammenkleben").
-* **Modifikation:** Posttranslationale Änderungen (z.B. Acetylierung, Phosphorylierung).
+  * **Struktur:** Faltung durch Chaperonine (Schutz vor "hydrophobem Zusammenkleben").
+  * **Modifikation:** Posttranslationale Änderungen (z.B. Acetylierung, Phosphorylierung).
 
 
 
@@ -98,8 +98,8 @@
 
 
 * **Evolution:**
-* **Chemische Evolution:** Urey-Miller-Versuch (Entstehung organischer Bausteine aus anorganischen Gasen).
-* **Das Basale Minimum:** Die ~500 essenziellen Gene für das Überleben einer Zelle.
+  * **Chemische Evolution:** Urey-Miller-Versuch (Entstehung organischer Bausteine aus anorganischen Gasen).
+  * **Das Basale Minimum:** Die ~500 essenziellen Gene für das Überleben einer Zelle.
 
 
 
@@ -926,7 +926,48 @@ Durch __spezifische Import-Signale__, d. d. Protein direkt zum entsprechenden Or
 <summary><u><b>Was besagt dieses ?</b></u></summary>
 
 * In einem `abgeschlossenen System` nimmt d. `Entropie` bei `freiwillig ablaufenden Prozessen` <span style="color: red">__niemals__</span> ab, sondern __nimmt ständig zu__ oder __bleibt im Gleichgewicht__
+  <details>
+  <summary><u><b>Was bedeutet das für Lebende Systeme ?</b></u></summary>
+
+  * __Energetische Richtung__:
+    * `spontane(freiwillige) Prozesse` laufen __immer__ in Richtung d. __größeren__ `Ethropie` ($Energie \to Wärme$)
+  * <u>Wärme-Gefälle</u>
+    * `Wärme` fließt <span style="color: #a972caff">physikalisch bedingt</span> ausschließlich vom `heißen` $\to$ `kalten Körper`
+  * <u>Biologische Relevanz</u>:
+    * Damit `Zellen` d. __notw. Ordnung aufrechthalten__ können $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Zellen müssen}}\ \ \ \ }$  `freie Energie` aus der Umgebung __aufnehmen__ $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Grund}}\ \ \ \ }$ `lokal sinkende Entropie `__ausgleichen__ durch Entropie-Anstieg in d. Umwelt 
+  </details> 
 </details> 
+
+<details>
+<summary><u><b>Wonach strebt der Zustand des Universums IMMER ?</b></u></summary>
+
+* N. d. max. Unordnung
+</details> 
+
+<details>
+<summary><u><b>Was dient als Kriterium, ob ein Prozess freiwillig war ?</b></u></summary>
+
+* D. `Spontanität`
+</details> 
+
+<details>
+<summary><u><b>Wie kann thermische Energie in andere Energieformen umgewandelt werden ?</b></u></summary>
+
+* Sie kann $\lnot$ `verlustfrei` umgewandelt werden
+  * immer Energieentwertung in Form von Wärme
+</details> 
+
+<details>
+<summary><u><b>Was ist das Leben ?</b></u></summary>
+
+* Ein `Ordnungszustand` d. durch __ständigen Energie-import__ (Entropie-Export) erkauft wird
+</details> 
+
+
+
+
+
+
 
 
 
