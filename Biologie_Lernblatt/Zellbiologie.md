@@ -577,9 +577,27 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
     * dazu gehören auch Ionen
 </details>
 
+<details>
+<summary>Was ist bei der replikation v. Eukaryoten & Prokaryoten anders?</summary>
 
+<u>__Prokaryoten__</u>
+* `Transkription` & `Translation`räuml. $\lnot$ getrennt
+  * beides kann __gleichzeitig__ statt finden
 
+<u>__Eukaryoten__</u>
+* Transkription $\to$ Zellkern
+* Translation $\to$ Cytoplasma
+</details>
 
+<details>
+<summary>Wie nennt man die Eigenschaft d. prokaryotischen & d. eukaryotischen RNA ?</summary>
+
+<u>__Eukaryoten__</u>
+* `mono-cistronische RNA`
+
+<u>__Prokaryoten__</u>
+* `poly-cistronische RNA`
+</details>
 
 
 
