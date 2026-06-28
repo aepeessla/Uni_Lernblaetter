@@ -764,12 +764,28 @@ Durch __spezifische Import-Signale__, d. d. Protein direkt zum entsprechenden Or
 ![alt text](image-31.png)
 </details>
 
+<details>
+<summary><u><b>Was ist eine Redoxreaktion ?</b></u></summary>
 
+* hierbei handelt es sich um einen __Elektronentransfer__
+* `Molekül` gibt __Elektronen__ ab, welches v. anderen aufgenommen wird
+  * finden immer __gleichzeitig__ statt
+</details>
 
+<details>
+<summary><u><b>Wie nennt man d. Abgabe und die Aufnahme eines Elektrons ?</b></u></summary>
 
+* Abgabe = Oxidation
+* Aufnahme = Reduktion
+</details>
 
+<details>
+<summary><u><b>Warum sind sie im Stoffwechsel so wichtig ?</b></u></summary>
 
+* sie nutzen kleine <code style="color: #a274bbff">Redox-Schritte</code>, um <span style="color: red">__Energie__ zu ü.tragen</span> anstatt `Energie` direkt aus `Zucker` zu __verbrennen__
+</details> 
 
+![alt text](image-32.png)
 
 
 
