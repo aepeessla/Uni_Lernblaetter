@@ -765,13 +765,13 @@ __<u>Ergebnis</u>__:
   >
   >... <code style="color: #b266c0ff">Membran</code>. Wenn sie als Membranproteine eingebaut werden sollen
   >
-  >... <code style="color: #ff6a00ff">Membran</code>Sekretion: Wenn sie als `Hormone` oder `Signalstoffe` __ausgeschüttet__ werden sollen
+  >... <code style="color: #ff6a00ff">Sekretion</code>: Wenn sie als `Hormone` oder `Signalstoffe` __ausgeschüttet__ werden sollen
 </details>
 
 <details>
 <summary><u><b>Wie gelangen Proteine in Organellen wie Mitochondrien ?</b></u></summary>
 
-Durch __spezifische Import-Signale__, d. d. Protein direkt zum entsprechenden Organell leiten
+Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden Organell leiten
 </details>
 
 <details>
