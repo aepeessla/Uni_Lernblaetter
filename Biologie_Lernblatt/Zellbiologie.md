@@ -614,7 +614,7 @@ D. <code style="color: #6879c4ff">Wasser</code> versucht den Störfaktor so klei
 <h1>Nukleinsäuren & Proteine</h1>
 
 <details>
-<summary><u><b>Was sind die Bestandteile der Bkterien und deren prozentuale Anteil ?</b></u></summary>
+<summary><u><b>Was sind die Bestandteile der Bakterien & deren prozentuale Anteil ?</b></u></summary>
 
 * `70%`= Wasser
 * `30%` = Trockenmasse
