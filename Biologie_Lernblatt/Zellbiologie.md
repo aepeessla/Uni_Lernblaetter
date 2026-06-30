@@ -577,21 +577,12 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 <details>
  <summary><b><u>Was ist Van-der-Waals-Kräfte</u></b></summary>
 
-  * Elektronen bewegen sich ständig $\to$ manchmal ungleich verteilt $\implies$ temporärer Dipol $\to$ benachbartes Molekül auch kurzfristig polarisiert $\implies$ kurzlebige Anziehungskraft zw. Molekülen
-
-  * Analogie. Klebstoff v. Molekülen, d. normalerweise nicht zsm.gehören
+* Sie ist d. "Wiedergutmachung" d. Natur, weil `apolare Moleküle` __keinen Dipol__ haben & somit einen `hydrophoben Effekt` verursachen. Diese <code style="color: #c4689eff">Hydrophobie</code> sorgt dafür, dass sich d. Wassermoleküle $\lnot$ frei bewegen können $$ \text{Entropie} \downarrow$$
+D. <code style="color: #6879c4ff">Wasser</code> versucht den Störfaktor so klein wie mögl. zu halten $\to$ Entstehung v. <code style="color: #68c46dff">Membranen</code>. Bei den Membranen sorgt d. f. d. `Flüssig-Mosaik-Modell`. Dies ermögl. d. Kompartimentierung. 
 </details>
 
 
 
-
-<h2>Peptide</h2>
-
-<details>
- <summary><b><u>Was ist d. Unterschied zw. einer Mizelle, einem Liposom und einer Lamelle ?</u></b></summary>
-
-  <img src="/Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/Biologie_Lernblatt/image-18.png">
-</details>
 
 <h2>Membran</h2>
 
@@ -601,6 +592,14 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
   * Permeabilität
 
   ![alt text](image-20.png)
+
+  <h2>Peptide</h2>
+
+<details>
+ <summary><b><u>Was ist d. Unterschied zw. einer Mizelle, einem Liposom und einer Lamelle ?</u></b></summary>
+
+  <img src="/Users/efeaksoy/Documents/GitHub/Uni_Lernblaetter/Biologie_Lernblatt/image-18.png">
+</details>
 </details>
 
 <h3>Osmose</h3>
@@ -955,7 +954,7 @@ Durch __spezifische Import-Signale__, d. d. Protein direkt zum entsprechenden Or
 <summary><u><b>Wie kann thermische Energie in andere Energieformen umgewandelt werden ?</b></u></summary>
 
 * Sie kann $\lnot$ `verlustfrei` umgewandelt werden
-  * immer Energieentwertung in Form von Wärme
+  * immer __Energieentwertung__ in Form v. `Wärme`
 </details> 
 
 <details>
@@ -964,14 +963,44 @@ Durch __spezifische Import-Signale__, d. d. Protein direkt zum entsprechenden Or
 * Ein `Ordnungszustand` d. durch __ständigen Energie-import__ (Entropie-Export) erkauft wird
 </details> 
 
+* $\Delta S \ System + \Delta S \ Umgebung = \Delta S \ Universum \gt 0$
 
+<details>
+<summary><u><b>Wie lautet d. Formel für freie Energie ?</b></u></summary>
 
+* $\Delta G = \Delta H - T\Delta S$ 
+  * $T\Delta S$ = gebundene Energie
+  * $\Delta H$ = Gesamtenergie 
 
+  * Reaktion läuft freiwillig ab, wenn $$\boxed{\Delta H \lt 0 \text{ or } \Delta S \gt 0 \text{ or beides True}}$$
 
+  ![alt text](image-33.png)
+</details>
 
+<details>
+<summary><u><b>Was passiert im Gleichgewicht ?</b></u></summary>
 
+* Zellen $\implies$ praktisch tot
+* Gleichgewicht soll angestrebt, aber $\lnot$ erreicht werden
+* Leben $\lnot$ `steady state` sondern `Fließgleichgewicht`
 
+![alt text](image-34.png)
+</details>
 
+<details>
+<summary><u><b>Was besagt die RGT-Regel ?</b></u></summary>
+
+* Reaktionsgeschwindigkeit-Temperatur-Regel
+* + 10°C __verdoppelt__ <code style="color: #505a8aff">Geschwindigkeit</code> `biochemischer Reaktionen`
+</details>
+
+<h2>Enzyme</h2>
+
+<details>
+<summary><u><b>Was sind die Enzymklassifikation ?</b></u></summary>
+
+1) Oxidoredukteasen
+</details>
 
 
 
