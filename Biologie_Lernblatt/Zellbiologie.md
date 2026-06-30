@@ -797,18 +797,12 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 <details>
 <summary><u><b>Was sind die Schritte des Chaperonin-Zyklus ?</b></u></summary>
 
-1) __Erkennung__
-  * `Chaperonin-Komplex` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erkennt}}\ \ \ \ }$ falsch gefaltetes Protein $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{an}}\ \ \ \ }$  __hydrophoben__, __herausragenden__ Bereichen
-    * D. Rausragen d. hydrophoben Bereiche des Proteins kann gefährlich sein, weil diese hydrophoben Berecihe zu einem großen Haufen verklumpen können 
-2) __Einschließung__ 
-  * Protein  $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{aufgenommen}}\ \ \ \ }$ hohe Kammer des Proteinkomplexes
-    * Kammer = hydrophil $\implies$ geschützter Raum
-3) __Versiegeln__
-  * `GroES-Deckel` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{schließt ab}}\ \ \ \ }$ Kammer + __ATP-Verbrauch__
-4) __Faltung__ 
-  * Im Inneren d. geschlossenen Kammer kann sich d. Protein ungestört v. anderen zellulären Komponenten korrekt falten.
-5) __Freisetzung__ 
-  * N. d. Spaltung v. ATP (zu ADP) öffnet sich d. Deckel & d. nun korrekt gefaltete Protein wird freigesetzt.
+* `Falsch gefaltete Proteine` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{haben}}\ \ \ \ }$ __rausragende hydrophobe Bereiche__ , d. gefählich sein können (Entropie, Hydrophobe Effekt, Verklmupung)
+* `kaputtes Protein` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{hineingezogen}}\ \ \ \ }$ <code style="color: #00ff2fff">GroEL</code> , welches d. __obere Öffnung des Chaperon-Koplexes__ ist. Dessen `Wand` zieht d. `hydrophilen Ränder` an
+* Das __Deckel lagert__ sich unter `ATP` __Verbrauch__ dran (<code style="color: #cc00ffff">GroES cap</code>) $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{schlagartige Veränderung}}\ \ \ \ }$ des Innenraums($hydrophob \to hydrophil$) $\implies$ Dadruch ist d. `kaputte Protein` komplett isoliert, als würde es in einem Vakuum liegen & kann sich jzt. komplett frei falten
+* D. <code style="color: #cc00ffff">GroES cap</code> öffnet sich ernst, wenn das `kaputte Protein` richtig gefaltet hat.
+
+
 
 ![alt text](image-30.png)
 </details>
