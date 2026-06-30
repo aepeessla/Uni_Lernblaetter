@@ -55,6 +55,11 @@
   ul li, ol li {
     margin-top: 20px; /* Gewünschten Abstand hier anpassen */
   }
+
+  .a1 {
+    font-weight: bold;
+    text-decoration: underline;
+  }
 </style>
 
 
@@ -737,7 +742,13 @@ __<u>Ergebnis</u>__:
 <details>
 <summary><u><b>Was bestimmt den Zielort eines Proteins ?</b></u></summary>
 
-* seine __spezifische__ `Signalsequenz` (Aminosäure-Abfolge)
+* <span class="a1">Signalsequenz</span>:
+  * Wenn `Protein` im Ribosom hergestellt $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{bestimmter teil d. Aminosäure}}\ \ \ \ }$ __Signalseqzenz__ $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{ist wie}}\ \ \ \ }$ Postleitzahl-Code $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{eingebaut}}\ \ \ \ }$ Aminosäurenabfolge
+* <span class="a1">Rezeptoren</span>:
+  * Zelle $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{besitzt}}\ \ \ \ }$ `Transport-Proteine` oder `Rezeptoren` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erkennen sofort}}\ \ \ \ }$ Signalsequenz
+* <span class="a1">Transport</span>:
+  * Sobald `Rezeptor` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erkennt}}\ \ \ \ }$ schleußt Protein ein $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{bringt}}\ \ \ \ }$ richtigen Ort (__Bsp__.: Durch zellkernporen, Membranen des Organells)
+
 </details>
 
 <details>
