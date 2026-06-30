@@ -743,7 +743,7 @@ __<u>Ergebnis</u>__:
 <summary><u><b>Was bestimmt den Zielort eines Proteins ?</b></u></summary>
 
 * <span class="a1">Signalsequenz</span>:
-  * Wenn `Protein` im Ribosom hergestellt $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{bestimmter Teil d. Aminosäure}}\ \ \ \ }$ __Signalseqzenz__ $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{ist wie}}\ \ \ \ }$ Postleitzahl-Code $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{eingebaut}}\ \ \ \ }$ Aminosäurenabfolge
+  * Wenn `Protein` im Ribosom hergestellt $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{bestimmter Teil d. Aminosäure}}\ \ \ \ }$ __Signalseqzenz__ $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{ist wie}}\ \ \ \ }$ Postleitzahl-Code $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{eingebaut}}\ \ \ \ }$ <code style="color: #b0b172ff">Aminosäurenabfolge</code>
 * <span class="a1">Rezeptoren</span>:
   * Zelle $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{besitzt}}\ \ \ \ }$ `Transport-Proteine` oder `Rezeptoren` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erkennen sofort}}\ \ \ \ }$ Signalsequenz
 * <span class="a1">Transport</span>:
