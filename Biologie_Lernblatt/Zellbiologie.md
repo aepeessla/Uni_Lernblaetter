@@ -791,15 +791,16 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 <details>
 <summary><u><b>Was ist der Chaperonin-Zyklus ?</b></u></summary>
 
-* d. Rettung falsch gefalteten proteine
+* d. Rettung falsch gefalteten Proteine
 </details>
 
 <details>
 <summary><u><b>Was sind die Schritte des Chaperonin-Zyklus ?</b></u></summary>
 
 1) __Erkennung__
-  * `Chaperonin-Komplex` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erkennt}}\ \ \ \ }$ falsch gefaltetes Protein $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{an}}\ \ \ \ }$  __hydrophoben__, __herausragenden__ 
-2) __Einschließung__ Bereichen
+  * `Chaperonin-Komplex` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erkennt}}\ \ \ \ }$ falsch gefaltetes Protein $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{an}}\ \ \ \ }$  __hydrophoben__, __herausragenden__ Bereichen
+    * D. Rausragen d. hydrophoben Bereiche des Proteins kann gefährlich sein, weil diese hydrophoben Berecihe zu einem großen Haufen verklumpen können 
+2) __Einschließung__ 
   * Protein  $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{aufgenommen}}\ \ \ \ }$ hohe Kammer des Proteinkomplexes
     * Kammer = hydrophil $\implies$ geschützter Raum
 3) __Versiegeln__
