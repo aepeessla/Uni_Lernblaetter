@@ -759,7 +759,13 @@ __<u>Ergebnis</u>__:
 <details>
 <summary><u><b>Was passiert bei einer Signalsequenz für das ER ?</b></u></summary>
 
-* Protein $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{geschleucht}}\ \ \ \ }$ ER $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{wandert zum}}\ \ \ \ }$ `Golgi-Komplex` $\to$ Membran $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{anhand von}}\ \ \ \ }$ Lysosomen oder n. außerhalb d. Zelle (`Sekretion`).
+* `Proteine` mit Signalsequenz werden bei <code>Translation</code> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Eingeschleußt in}}\ \ \ \ }$ <code style="color: #69c99fff">ER</code>
+* <code style="color: #e463dfff">Golgi-Apparat</code> fungiert als Versadtszentrum. `Proteine` werden in <code style="color: #b1c03cff">Versikel</code> verpackt & zum <code style="color: #e463dfff">Golgi-Apparat</code> __transportiert__. Dort bekomemn sie eine `Addresse` (Bsp.: Glykosylierung). Dannach werden sie __verschickt__. Sie kommen in ...
+  >... <code style="color: #8cb2d4ff">Lysosomen</code>, wenn die als Verdauungsenzyme gebracuht werden 
+  >
+  >... <code style="color: #b266c0ff">Membran</code>. Wenn sie als Membranproteine eingebaut werden sollen
+  >
+  >... Sekretion: Wenn sie als `Hormone` oder `Signalstoffe` __ausgeschüttet__ werden sollen
 </details>
 
 <details>
