@@ -747,8 +747,7 @@ __<u>Ergebnis</u>__:
 * <span class="a1">Rezeptoren</span>:
   * Zelle $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{besitzt}}\ \ \ \ }$ `Transport-Proteine` oder `Rezeptoren` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erkennen sofort}}\ \ \ \ }$ Signalsequenz
 * <span class="a1">Transport</span>:
-  * Sobald `Rezeptor` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erkennt}}\ \ \ \ }$ schleußt Protein ein $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{bringt}}\ \ \ \ }$ richtigen Ort (__Bsp__.: Durch zellkernporen, Membranen des Organells)
-
+  * Sobald `Rezeptor` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erkennt}}\ \ \ \ }$ schleußt Protein ein $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{bringt}}\ \ \ \ }$ richtigen Ort (__Bsp__.: Durch Zellkernporen, Membranen des Organells)
 </details>
 
 <details>
