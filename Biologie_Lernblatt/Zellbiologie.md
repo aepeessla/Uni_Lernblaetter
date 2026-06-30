@@ -797,7 +797,7 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 <summary><u><b>Was sind die Schritte des Chaperonin-Zyklus ?</b></u></summary>
 
 * `Falsch gefaltete Proteine` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{haben}}\ \ \ \ }$ __rausragende hydrophobe Bereiche__ , d. gefählich sein können (Entropie, Hydrophobe Effekt, Verklumpung)
-* `kaputtes Protein` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{hineingezogen}}\ \ \ \ }$ <code style="color: #00ff2fff">GroEL</code> , welches d. __obere Öffnung des Chaperon-Koplexes__ ist. Dessen `Wand` zieht d. `hydrophilen Ränder` an
+* `kaputtes Protein` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{hineingezogen}}\ \ \ \ }$ vom <code style="color: #ff6a00ff">HSP60</code> in die obere Kammer <code style="color: #00ff2fff">GroEL</code> , welches d. __obere Öffnung des Chaperon-Koplexes__ ist. Dessen `Wand` zieht d. `hydrophilen Ränder` an
 * Das __Deckel lagert__ sich unter `ATP` __Verbrauch__ dran (<code style="color: #cc00ffff">GroES cap</code>) $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{schlagartige Veränderung}}\ \ \ \ }$ des ___Innenraums___($hydrophob \to hydrophil$) $\implies$ Dadruch ist d. `kaputte Protein` komplett isoliert, als würde es in einem Vakuum liegen & kann sich jzt. komplett frei falten
 * D. <code style="color: #cc00ffff">GroES cap</code> öffnet sich ernst, wenn das `kaputte Protein` richtig gefaltet hat.
 
