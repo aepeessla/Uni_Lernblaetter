@@ -788,7 +788,7 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 </details>
 
 <details>
-<summary><u><b>Was ist der Chaperonin-Zyklus ?</b></u></summary>
+<summary><u><b>Was ist d. Hauptaufgabe des Chaperonin-Zyklus ?</b></u></summary>
 
 * d. Rettung falsch gefalteten Proteine
 </details>
