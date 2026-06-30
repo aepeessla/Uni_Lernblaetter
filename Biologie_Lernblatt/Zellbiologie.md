@@ -547,8 +547,9 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 
   * Keine Ionen
   * keine permanenter Dipol
-  * Keine Hydrathülle
-    * Wasser<b>un</b>löslich
+    * Keine Hydrathülle
+      * Wasser<b>un</b>löslich
+      * hydrophob
   
   * __Störfaktor__ des Wassers: Wasser ist ein __polares Lösungsmittel__ aus starken __Wasserstoffbrückenbindungen__.
     * Wenn nun ein <code style="color: #a0bb74ff">unpolares Molekül</code> in d. Wasser gelangt $\implies$ keine Bindung mit <code style="color: #749dbbff">Wassermolekülen</code>
