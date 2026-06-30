@@ -10,7 +10,7 @@
   }
 
   code {
-    background: #eaeaeaff 2px;
+    background: #eeeeeeff 2px;
     color: #7dc761ff;
     padding: 2px 2px 2px 2px;
     border-radius: 6px
