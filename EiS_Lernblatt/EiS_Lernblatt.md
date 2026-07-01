@@ -407,7 +407,7 @@ override def hashCode(): Int = {
 
 
 
-# <h1>Aufgabe 3</h1>
+<h1>Aufgabe 3</h1>
 
 <details>
 <summary><b><u>Aufgabe:</u></b></summary>
@@ -694,8 +694,25 @@ def knownExams(students: Table, exams: Table): Table = {
 
 <h2>Mein Plan ?</h2>
 
-* Ist EiS in Klausuren ? 
-* 
+* von students $\to$ StudentID raussuchen
+* von Exam $\to$ result von student gucken
+* ist == 1.0 
+
+* <code style= "color: grey">def filterByScan(selectionAttribute: String, requiredValue: Variant): Table</code>
+
+
+
+
+```scala
+/** Returns a [[Table]] containing all students scoring the highest grade on the software design exam.
+ *
+ * @param students a [[Table]] containing student info
+ * @param exams    a [[Table]] containing a list of exam results
+ */
+def topStudents(students: Table, exams: Table): Table = {
+  exam
+}
+```
 
 </details>
 
