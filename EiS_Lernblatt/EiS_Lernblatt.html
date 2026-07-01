@@ -373,7 +373,7 @@ code {
     border-radius: 3px;  
        }
   details {
-    border: #e4e3e3ff 1px solid
+    border: #e4e3e3ff 1px solid;
   }
 
   h1 {
@@ -1029,6 +1029,60 @@ existiert.</p>
 <span class="hljs-comment">// 2. Erstelle die neue Tabelle außerhalb des for-Blocks</span>
 <span class="hljs-keyword">new</span> <span class="hljs-type">Table</span>(newSchema, joinedRecords)
 </div></code></pre>
+</details>
+<h1>Aufgabe 5</h1>
+<details>
+<summary><code>def knownExams(students: Table, exams: Table): Table</code></summary>
+<h2>Was soll geschehen ?</h2>
+<ul>
+<li>return Tabelle mit Spalten(<code>examDate</code>, <code>examSubject</code>)</li>
+<li>enthält $\forall$ bekannten Klausuren</li>
+<li>keine Duplikate: <code>distinct: Table = Table(schema, records.distinct)</code></li>
+</ul>
+<h2>Mein Plan ?</h2>
+<p>Wir haben <code>Table(val schema: Schema) extends Iterable[TableRecord]</code> &amp; da kann man erkennen, dass ein <code style="color: #ff6a00ff">Schema</code> &amp; ein <code style="color: #ff6a00ff">Iterable[TableRecord]</code> benötigt wird.</p>
+<h3>Schema</h3>
+<ul>
+<li><code style="color: grey">Schema(elems: Iterable[(String, DBType)])</code></li>
+<li><code style="color: grey">def getSubsetOfAttributes(subsetOfAttributes: Seq[String]): Schema</code></li>
+</ul>
+<h3>Record</h3>
+<ul>
+<li><code style="color: grey">class TableRecord(elems: Iterable[(String, Variant)])</code></li>
+<li>Tupel erstellen
+<ul>
+<li><code>String</code> = [&quot;examDate&quot;, &quot;examSubject&quot;]; <code>Variant</code> = .getValue()</li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment">// Table(val schema: Schema) extends Iterable[TableRecord]</span>
+<span class="hljs-comment">// TableRecord(elems: Iterable[(String, Variant)])</span>
+<span class="hljs-comment">// Table(examDate -&gt; String, examSubject -&gt; String)</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">knownExams</span></span>(students: <span class="hljs-type">Table</span>, exams: <span class="hljs-type">Table</span>): <span class="hljs-type">Table</span> = {
+    <span class="hljs-keyword">val</span> examSchema = exams.schema.getSubsetOfAttributes(<span class="hljs-type">Seq</span>(<span class="hljs-string">"examDate"</span>,<span class="hljs-string">"examSubject"</span>))
+    
+    <span class="hljs-keyword">val</span> examRecords = exams.map(r =&gt; {
+        <span class="hljs-keyword">val</span> tuples = examSchema.map(s =&gt; (s._1, r.getValue(s._1)))
+        <span class="hljs-keyword">new</span> <span class="hljs-type">TableRecord</span>(tuples)
+    })
+
+    <span class="hljs-type">Table</span>(examSchema, examRecords).distinct
+}
+</div></code></pre>
+</details>
+<details>
+<summary><code>def topStudents(students: Table, exams: Table): Table</code></summary>
+<h2>Was soll geschehen ?</h2>
+<ul>
+<li>@return Tabelle mit nur einer Spalte</li>
+<li>Alle Studenten, die in EiS eine 1.0 geschieben haben</li>
+</ul>
+<h2>Mein Plan ?</h2>
+<ul>
+<li>Ist EiS in Klausuren ?</li>
+<li></li>
+</ul>
 </details>
 <hr>
 <h1 id="auf-meinen-lernblatt"><strong>Auf meinen Lernblatt</strong></h1>

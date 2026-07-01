@@ -6,7 +6,7 @@
     border-radius: 3px;  
        }
   details {
-    border: #e4e3e3ff 1px solid
+    border: #e4e3e3ff 1px solid;
   }
 
   h1 {
@@ -653,26 +653,51 @@ def naturalJoin(other: Table): Table = {
 
 <h2>Mein Plan ?</h2>
 
+Wir haben `Table(val schema: Schema) extends Iterable[TableRecord]` & da kann man erkennen, dass ein <code style="color: #ff6a00ff">Schema</code> & ein <code style="color: #ff6a00ff">Iterable[TableRecord]</code> benötigt wird.
+
+<h3>Schema</h3>
+
+  * <code style="color: grey">Schema(elems: Iterable[(String, DBType)])</code>
+  * <code style="color: grey">def getSubsetOfAttributes(subsetOfAttributes: Seq[String]): Schema</code>
+
+<h3>Record</h3>
+
+  * <code style="color: grey">class TableRecord(elems: Iterable[(String, Variant)])</code>
+  * Tupel erstellen
+    * `String` = ["examDate", "examSubject"]; `Variant` = .getValue()
+
 ```scala
 // Table(val schema: Schema) extends Iterable[TableRecord]
 // TableRecord(elems: Iterable[(String, Variant)])
 // Table(examDate -> String, examSubject -> String)
 
-TableRecord(Iterable[(String, Varient)])
+def knownExams(students: Table, exams: Table): Table = {
+    val examSchema = exams.schema.getSubsetOfAttributes(Seq("examDate","examSubject"))
+    
+    val examRecords = exams.map(r => {
+        val tuples = examSchema.map(s => (s._1, r.getValue(s._1)))
+        new TableRecord(tuples)
+    })
 
-val newTable: Table = for {
-  students <- student
-  exams <- exam
-} yield {
-  
+    Table(examSchema, examRecords).distinct
 }
-
-Table(examDate, examSubject)
 ```
-
 </details>
 
+<details>
+<summary><code>def topStudents(students: Table, exams: Table): Table</code></summary>
 
+<h2>Was soll geschehen ?</h2>
+
+* @return Tabelle mit nur einer Spalte
+* Alle Studenten, die in EiS eine 1.0 geschieben haben
+
+<h2>Mein Plan ?</h2>
+
+* Ist EiS in Klausuren ? 
+* 
+
+</details>
 
 
 
