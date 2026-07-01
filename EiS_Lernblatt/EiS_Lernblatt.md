@@ -640,8 +640,37 @@ def naturalJoin(other: Table): Table = {
   ```
 </details>
 
+<h1>Aufgabe 5</h1>
 
+<details>
+<summary><code>def knownExams(students: Table, exams: Table): Table</code></summary>
 
+<h2>Was soll geschehen ?</h2>
+
+* return Tabelle mit Spalten(`examDate`, `examSubject`)
+* enthält $\forall$ bekannten Klausuren
+* keine Duplikate: `distinct: Table = Table(schema, records.distinct)`
+
+<h2>Mein Plan ?</h2>
+
+```scala
+// Table(val schema: Schema) extends Iterable[TableRecord]
+// TableRecord(elems: Iterable[(String, Variant)])
+// Table(examDate -> String, examSubject -> String)
+
+TableRecord(Iterable[(String, Varient)])
+
+val newTable: Table = for {
+  students <- student
+  exams <- exam
+} yield {
+  
+}
+
+Table(examDate, examSubject)
+```
+
+</details>
 
 
 
