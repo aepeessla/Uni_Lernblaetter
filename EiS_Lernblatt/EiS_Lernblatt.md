@@ -28,6 +28,11 @@
     background: #ffffff;
     color: black;
   }
+
+  .sub {
+    font-weight: bold;
+    text-decoration: underline
+  }
 </style>
 
 
@@ -640,6 +645,7 @@ def naturalJoin(other: Table): Table = {
   ```
 </details>
 
+---
 <h1>Aufgabe 5</h1>
 
 <details>
@@ -694,8 +700,8 @@ def knownExams(students: Table, exams: Table): Table = {
 
 <h2>Mein Plan ?</h2>
 
-* von students $\to$ StudentID raussuchen
-* von Exam $\to$ result von student gucken
+* v. `students` $\to$ StudentID raussuchen
+
 * ist == 1.0 
 
 * <code style= "color: grey">def filterByScan(selectionAttribute: String, requiredValue: Variant): Table</code>
@@ -704,18 +710,25 @@ def knownExams(students: Table, exams: Table): Table = {
 
 
 ```scala
+val students = Table(TableRecord(Seq(
+            "examDate" -> Variant("2023-04-17"),
+            "matriculationNumber" -> Variant(133676),
+            "examSubject" -> Variant("EIS"),
+            "examGrade" -> Variant(1.3)
+        )), ...
+)
+
 /** Returns a [[Table]] containing all students scoring the highest grade on the software design exam.
  *
  * @param students a [[Table]] containing student info
  * @param exams    a [[Table]] containing a list of exam results
  */
 def topStudents(students: Table, exams: Table): Table = {
-  exam
+  
 }
 ```
 
 </details>
-
 
 
 
@@ -768,20 +781,104 @@ for {
 }
 ```
 
+---
+
+<h1>Generische Typen</h1>
+
+* Wir haben es bereits benutzt: `Collections`(Bsp.: ArrayBuffer, Seq) $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{mitgegeben}}\ \ \ \ }$ `Typenparameter` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{instanziert}}\ \ \ \ }$ genereische Typen
+  * ```scala
+    val s: Seq[Int] = Seq(1,2,3) //type parameter "Int"
+    val a: ArrayBuffer[String] = ArrayBuffer("a", "b", "c") //type parameter "String"
+    ```
+<h2>Warteschalange</h2>
+
+* Funltioniert n. `FIFO Prinzip`(First In, First Out)
+  * Als erstes hinzugefügtes Elem. $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{return}}\ \ \ \ }$ als erstes
+    * `enqueue` = Elem. am <span style="color: red">Ende</span> d. Warteschlange hinzugefügt
+    * `denqueue` = Elem. am <span style="color: red">Anfang</span> d. Warteschlange __entnommen__ & __returned__
+    * ![alt text](image-1.png)
+* `collection.mutable.Queue`
+* Wir wollen ein `Timestap` implementieren $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erstellt}}\ \ \ \ }$ __Zeitstempel__ des Eingabezeitpunktes $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Implementierung}}\ \ \ \ }$ `class QueueWithTimeStamp` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{verw. intern}}\ \ \ \ }$ `collection.mutable.Queue`
+
+```scala 
+/** Represents a pair of an element and a timestamp */
+class ElementWithTimestamp(val elem: Int, val timestamp: Timestamp)
+```
+* Wir erstellen einen __Typ-Alias__: 
+  * ```scala
+    type Timestamp = java.time.LocalDateTime
+    ```
+     * mit `LocalDateTime.now` bekommen wir den __aktuellen Zeitstempel__
 
 
+* <span class="sub">Problem</span>:
+  * Es ist nur auf ein `Int` spezialisiert $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Lösung}}\ \ \ \ }$ Neue Klasse def.: `class ElementWithTimestamp(val elem: Int, val timestamp: Timestamp)`
+  * Hinzufügen v. `[A]` n. dem Klassenbezeichner $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Einfügung}}\ \ \ \ }$
+
+  * <span style="color: red">generischer Typ A</span> als __Typenparameter__ ein $\to$ `class ElementWithTimestamp[A](val elem: Int, val timestamp: Timestamp)` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{diese Klasse ist somit}}\ \ \ \ }$ <code style="color: #ff00b3ff">Generische Klasse</code>
+    * man kann auch mehrere Typenparameter einf. `class ElementWithTimestamp[A,B,C](val elem: Int, val timestamp: Timestamp)`
+
+<h3>Die Verwendung</h3>
+
+```scala
+/** Represents a pair of an element and a timestamp */
+class ElementWithTimestamp[A](val elem: A, val timestamp: Timestamp)
+```
+* <span>Mögl.</span> = mit unters. Typen instanzieren
+   ```scala
+    val e1: ElementWithTimestamp[Int] = ElementWithTimestamp(42, LocalDateTime.now)
+    val e2: ElementWithTimestamp[String] = ElementWithTimestamp("hello", LocalDateTime.now)
+   ```
 
 
+```scala
+import collection.mutable.Queue
+
+/** First-in-first-out (FIFO) queue that keeps a timestamp for each element */
+class QueueWithTimestamp[A] {
+
+  /** Uses the mutable queue as data structure */
+  val queue: Queue[ElementWithTimestamp[A]] = Queue()
+
+  /** Returns the current size of the queue */
+  def size: Int = queue.size
+
+  /** Dequeues an element and returns it with its timestamp */
+  def dequeue: ElementWithTimestamp[A] = queue.dequeue
+
+  /** Removes all elements from the queue */
+  def clear: Unit = queue.clear
+
+  /** Adds an element to the queue with the current timestamp and returns that*/
+  def enqueue(elem: A): ElementWithTimestamp[A] = {
+    val e = ElementWithTimestamp[A](elem, LocalDateTime.now)
+    queue.enqueue(e)
+    e
+  }
+}
+```
+
+* Mit einer Warteschlage wollen wir __Anfragen verwalten__
+![alt text](image-2.png)
+* <span class="sub">Unsere Unterklasse<span>
+![alt text](image-3.png)
+
+* <span class="sub">Execute<span>
+  * __unterscheidet__, ob `Index` auf `SelectionAttribute` existiert oder $\lnot$
+![alt text](image-4.png)
+
+* <span class="sub">Anwendung v. Queue<span>
+   ![alt text](image-5.png)
+
+* <span class="sub">Ausf.<span>
+  ![alt text](image-6.png)
+  ![alt text](image-7.png)
 
 
+<h1>Schnittstellen</h1>
 
-
-
-
-
-
-
-
+* `trait`
+* * <code style="color: #924ebfff">Klassen</code> können mehrere `traits` erben
 
 
 

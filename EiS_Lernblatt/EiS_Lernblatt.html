@@ -780,7 +780,7 @@ gibt.</li>
 </ul>
 </div></details>
 <hr>
-<h1 id="h1aufgabe-3h1"><h1>Aufgabe 3</h1></h1>
+<h1>Aufgabe 3</h1>
 <details>
 <summary><b><u>Aufgabe:</u></b></summary>
 <ul>
@@ -1030,6 +1030,7 @@ existiert.</p>
 <span class="hljs-keyword">new</span> <span class="hljs-type">Table</span>(newSchema, joinedRecords)
 </div></code></pre>
 </details>
+<hr>
 <h1>Aufgabe 5</h1>
 <details>
 <summary><code>def knownExams(students: Table, exams: Table): Table</code></summary>
@@ -1080,9 +1081,33 @@ existiert.</p>
 </ul>
 <h2>Mein Plan ?</h2>
 <ul>
-<li>Ist EiS in Klausuren ?</li>
-<li></li>
+<li>
+<p>v. <code>students</code> $\to$ StudentID raussuchen</p>
+</li>
+<li>
+<p>ist == 1.0</p>
+</li>
+<li>
+<p><code style= "color: grey">def filterByScan(selectionAttribute: String, requiredValue: Variant): Table</code></p>
+</li>
 </ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">val</span> students = <span class="hljs-type">Table</span>(<span class="hljs-type">TableRecord</span>(<span class="hljs-type">Seq</span>(
+            <span class="hljs-string">"examDate"</span> -&gt; <span class="hljs-type">Variant</span>(<span class="hljs-string">"2023-04-17"</span>),
+            <span class="hljs-string">"matriculationNumber"</span> -&gt; <span class="hljs-type">Variant</span>(<span class="hljs-number">133676</span>),
+            <span class="hljs-string">"examSubject"</span> -&gt; <span class="hljs-type">Variant</span>(<span class="hljs-string">"EIS"</span>),
+            <span class="hljs-string">"examGrade"</span> -&gt; <span class="hljs-type">Variant</span>(<span class="hljs-number">1.3</span>)
+        )), ...
+)
+
+<span class="hljs-comment">/** Returns a [[Table]] containing all students scoring the highest grade on the software design exam.
+ *
+ * @param students a [[Table]] containing student info
+ * @param exams    a [[Table]] containing a list of exam results
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">topStudents</span></span>(students: <span class="hljs-type">Table</span>, exams: <span class="hljs-type">Table</span>): <span class="hljs-type">Table</span> = {
+  
+}
+</div></code></pre>
 </details>
 <hr>
 <h1 id="auf-meinen-lernblatt"><strong>Auf meinen Lernblatt</strong></h1>
@@ -1131,6 +1156,35 @@ existiert.</p>
   <span class="hljs-comment">//wie soll das Elem. in d. Liste aussehen</span>
 }
 </div></code></pre>
+<hr>
+<h1>Generische Typen</h1>
+<ul>
+<li>Wir haben es bereits benutzt: <code>Collections</code>(Bsp.: ArrayBuffer, Seq) $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{mitgegeben}}\ \ \ \ }$ <code>Typenparameter</code> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{instanziert}}\ \ \ \ }$ genereische Typen
+<ul>
+<li>
+<pre class="hljs"><code><div><span class="hljs-keyword">val</span> s: <span class="hljs-type">Seq</span>[<span class="hljs-type">Int</span>] = <span class="hljs-type">Seq</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>) <span class="hljs-comment">//type parameter "Int"</span>
+<span class="hljs-keyword">val</span> a: <span class="hljs-type">ArrayBuffer</span>[<span class="hljs-type">String</span>] = <span class="hljs-type">ArrayBuffer</span>(<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>) <span class="hljs-comment">//type parameter "String"</span>
+</div></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Warteschalange</h2>
+<ul>
+<li>Funltioniert n. <code>FIFO Prinzip</code>(First In, First Out)
+<ul>
+<li>Als erstes hinzugefügtes Elem. $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{return}}\ \ \ \ }$ als erstes
+<ul>
+<li><code>enqueue</code> = Elem. am <span style="color: red">Ende</span> d. Warteschlange hinzugefügt</li>
+<li><code>denqueue</code> = Elem. am <span style="color: red">Anfang</span> d. Warteschlange <strong>entnommen</strong> &amp; <strong>returned</strong></li>
+<li><img src="image-1.png" alt="alt text"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>collection.mutable.Queue</code></li>
+<li>Wir wollen ein <code>Timestap</code> implementieren $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erstellt}}\ \ \ \ }$ <strong>Zeitstempel</strong> des Eingabezeitpunktes</li>
+</ul>
 <script>
   window.MathJax = {
     tex: {

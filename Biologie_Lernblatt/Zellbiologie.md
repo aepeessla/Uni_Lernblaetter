@@ -1008,13 +1008,32 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 <h2>Enzyme</h2>
 
 <details>
-<summary><u><b>Was sind die Enzymklassifikation ?</b></u></summary>
+<summary><u><b>Was sind die Enzymklassifikation & deren Aufgaben ?</b></u></summary>
 
-1) Oxidoredukteasen
+1) Oxidoreduktease $\to$ __Oxidation & Reduktionsreaktionen__
+1) Transferase $\to$ __Ü.tragung__ _funktionaler Gruppen_
+1) Hydrolase $\to$ __Hydrolyse__ (Zerlegung des Wassermoleküls in $OH^- \& H^+$)
+1) Lyase $\to$ __Eliminierungsreaktionen__
+1) Isomerase $\to$ __Isomerisierung__
+1) Ligase $\to$ __Bindungsaufbeu__ unter _ATP-Verbrauch_
+1) Translokase $\to$ Carrier
 </details>
 
+<details>
+<summary><u><b>Wie lautet d. EnzymCommissionnummer(EC Nummer) ?</b></u></summary>
 
+* EC 3.4.17.1
+  * 3 = Enzymklasse
+  * 4 = Unterklasse
+  * 17 = Unterunterklasse
+  * 1 = Nummer des Enzyms in der Unterklasse
+</details>
 
+<details>
+<summary><u><b>Erkläre das Enzym-Substrak.Komplex anhand der Hexokinase.</b></u></summary>
+
+* <code style="color: #ff6a00ff">Hexokinase</code> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{trifft auf}}\ \ \ \ }$ __Substrat__(<code style="color: #674026ff">Glucose</code> &  <code style="color: #9bb832ff">ATP</code>) $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Anpassung}}\ \ \ \ }$ Substrat trifft auf <span style="color: red">aktive Zentrum</span> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Denaturierung}}\ \ \ \ }$ <span style="color: red">Schlüssel-Schloss-Prinzip</span> mögl. $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Enzym katalysiert Reaktion}}\ \ \ \ }$ __neue Produkte__ $=$ <code style="color: #3b2415ff">Glucose-6-Phosphat</code> & <code style="color: #5b6c1dff">ADP</code> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{&lnot Schlüssel-Schloss-Prinzip}}\ \ \ \ }$ neue Produkte lösen sich ab $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Ennzym wieder}}\ \ \ \ }$ __Ursprüngl. Form__ f. nächsten Durchgang
+</details>
 
 
 
