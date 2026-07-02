@@ -1072,10 +1072,16 @@ $$\boxed{1/v = \frac{K_m}{V_{max}} \cdot \frac{1}{[S]}+ \frac{1}{V_{max}}}$$
 </details>
 
 <details>
-<summary><u><b>Was ist & bedeutet $k_{cal}$, $K_m &$ $\frac{k_{cat}}{K_m}$</b></u></summary>
+<summary><u><b>Was ist $k_{cal}$, $K_m$ & $\frac{k_{cat}}{K_m}$, was bedeutet es & wie lautet d. Formel zur Berechnung ?</b></u></summary>
 
-
+1) $k_{cat}$:
+  * __Umsatzzahl__: Gibt an, wie viele __Substratmoleküle__ ein einzelnes Enzym __pro Sekunde__ max. in __Profukt umwandeln__ kann(bei Sättigung)
+1) $K_{m}$:
+  * je __kleiner d. Wert__, desto __effizeienter__ d. Enzym bei _geringer Substratkonzentration_
+1) $\frac{k_{cat}}{K_m}$:
+  * __Gesamt katalytische Effizienz__. Kombiniert <span style="color: red">wie schnell</span> d. __Enzym__ ist & <span style="color: red">wie gut</span> an __Substrat__ <span style="color: red">bindet</span>
 </details>
+
 
 
 
