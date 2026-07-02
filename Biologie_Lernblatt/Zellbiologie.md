@@ -904,13 +904,13 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 <details>
 <summary><u><b>Was ist ein offenes Systeme ?</b></u></summary>
 
-* __lebende Systeme__, d. `Nahrung` aufnehmen, `Abfall` abgeben, `Wäre` & `Arbeit` produz.
+* Energie- & Materieaustausch
 </details> 
 
 <details>
 <summary><u><b>Was ist ein geschlossenes Systeme ?</b></u></summary>
 
-* __Austausch__ v. `Energie` mit `Umgebung`, <span style="color: red">aber keine Materie</span> 
+* __Nur__ Energieaustausch
 </details> 
 
 <details>
