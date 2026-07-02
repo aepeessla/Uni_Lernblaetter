@@ -1035,16 +1035,47 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 * <code style="color: #ff6a00ff">Hexokinase</code> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{trifft auf}}\ \ \ \ }$ __Substrat__(<code style="color: #674026ff">Glucose</code> &  <code style="color: #9bb832ff">ATP</code>) $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Anpassung}}\ \ \ \ }$ Substrat trifft auf <span style="color: red">aktive Zentrum</span> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Denaturierung}}\ \ \ \ }$ <span style="color: red">Schlüssel-Schloss-Prinzip</span> mögl. $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Enzym katalysiert Reaktion}}\ \ \ \ }$ __neue Produkte__ $=$ <code style="color: #3b2415ff">Glucose-6-Phosphat</code> & <code style="color: #5b6c1dff">ADP</code> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{&lnot Schlüssel-Schloss-Prinzip}}\ \ \ \ }$ neue Produkte lösen sich ab $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Ennzym wieder}}\ \ \ \ }$ __Ursprüngl. Form__ f. nächsten Durchgang
 </details>
 
+<details>
+<summary><u><b>Wie nennt man d. Eigenschaften d. Enzyme ?</b></u></summary>
+
+* `Substratspezifität`
+* `Wirkungsspezifität`
+</details>
+
+<details>
+<summary><u><b>Was kann d. Fähigkeit eines Enzyms verändern ?</b></u></summary>
+
+* Temperatur
+* pH-Wert
+</details>
+
+<h2>Enzymkinetik</h2>
+
+$E + S \rightleftharpoons ES \rightleftharpoons EP \rightleftharpoons E + P$
+
+<details>
+<summary><u><b>Wie lautet d. Formel v. Michealis-Menten Diagramm & wie sieht d. Kurve aus ?</b></u></summary>
+
+* <span class="a1">Formel</span>:
+  $$\boxed{\text{v} = \frac{V_{max}[S]}{K_m + [S]}}$$
+* <span class="a1">Kurve</span>:
+  * ![alt text](image-36.png)
+</details>
+
+<details>
+<summary><u><b>Wie lautet d. Formel v. Lineweaver-Burk Diagramm & wie sieht d. Kurve aus ?</b></u></summary>
+
+* <span class="a1">Formel</span>:
+$$\boxed{1/v = \frac{K_m}{V_{max}} \cdot \frac{1}{[S]}+ \frac{1}{V_{max}}}$$
+* <span class="a1">Kurve</span>:
+  * ![alt text](image-35.png)
+</details>
+
+<details>
+<summary><u><b>Was ist & bedeutet $k_{cal}$, $K_m &$ $\frac{k_{cat}}{K_m}$</b></u></summary>
 
 
-
-
-
-
-
-
-
-
+</details>
 
 
 
