@@ -1104,7 +1104,18 @@ $$\boxed{1/v = \frac{K_m}{V_{max}} \cdot \frac{1}{[S]}+ \frac{1}{V_{max}}}$$
 * `kompetetive Hemmung`
 * `allostretische Hemmung`
 
-![alt text](image-38.png)
+  <details>
+  <summary><u><b>Was ist d. kompetetive & d. allostretische Hemmung ?</b></u></summary>
+
+  * <span class="a1">Kompetetive Hemmung</span>
+    * <code style="color: #ff6a00ff">Inhibitor</code> __konkoriert__ mit <code style="color: #a664a4ff">Substrat</code>
+    * <span style="color: red">am aktiven Zentrum</span>
+  * <span class="a1">allostretische Hemmung</span>
+    * <code style="color: #ca3173ff">allostretische Inhibior</code> __denaturiert__ <code style="color: #b0e0a2ff">Enzym</code> $\implies$ <code style="color: #a664a4ff">Substrat</code> kann $\lnot$ binden
+    * <span style="color: red">nicht am aktiven Zentrum</span>
+
+  ![alt text](image-38.png)
+  </details>
 </details>
 
 
