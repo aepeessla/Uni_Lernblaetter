@@ -1075,15 +1075,37 @@ $$\boxed{1/v = \frac{K_m}{V_{max}} \cdot \frac{1}{[S]}+ \frac{1}{V_{max}}}$$
 <summary><u><b>Was ist $k_{cal}$, $K_m$ & $\frac{k_{cat}}{K_m}$, was bedeutet es & wie lautet d. Formel zur Berechnung ?</b></u></summary>
 
 1) $k_{cat}$:
-  * __Umsatzzahl__: Gibt an, wie viele __Substratmoleküle__ ein einzelnes Enzym __pro Sekunde__ max. in __Profukt umwandeln__ kann(bei Sättigung)
+    * $k_{cat} = \frac{V_(max)}{[E]_t}$
+    * __Umsatzzahl__: Gibt an, wie viele __Substratmoleküle__ ein einzelnes Enzym __pro Sekunde__ max. in __Produkt umwandeln__ kann(bei Sättigung)
 1) $K_{m}$:
-  * je __kleiner d. Wert__, desto __effizeienter__ d. Enzym bei _geringer Substratkonzentration_
+    * $K_{m} = \frac{k_{-1}+k_2}{k_1}$:
+    * je __kleiner d. Wert__, desto __effizeienter__ d. Enzym bei _geringer Substratkonzentration_
 1) $\frac{k_{cat}}{K_m}$:
-  * __Gesamt katalytische Effizienz__. Kombiniert <span style="color: red">wie schnell</span> d. __Enzym__ ist & <span style="color: red">wie gut</span> an __Substrat__ <span style="color: red">bindet</span>
+    * $\text{v} = \frac{k_{cat}}{K_m}\cdot [S] \cdot [E]_t$
+    * __Gesamt katalytische Effizienz__. Kombiniert <span style="color: red">wie schnell</span> d. __Enzym__ ist & <span style="color: red">wie gut</span> an __Substrat__ <span style="color: red">bindet</span>
+
+> $[E]_t =$ Gesamtkonzentration des Enzyms
+>
+> $[S] =$ Gesamtkonzentration des Substrats
+> ![alt text](image-37.png)
 </details>
 
+<h2>Enzymregulation</h2>
 
+<details>
+<summary><u><b>Wie nennt man d. Hemmstoffe fachlich ?</b></u></summary>
 
+* `Inhibitoren`
+</details>
+
+<details>
+<summary><u><b>Nenne die Hemmstoff-Arten ?</b></u></summary>
+
+* `kompetetive Hemmung`
+* `allostretische Hemmung`
+
+![alt text](image-38.png)
+</details>
 
 
 
