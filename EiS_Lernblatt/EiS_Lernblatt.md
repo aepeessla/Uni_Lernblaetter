@@ -629,7 +629,7 @@ def naturalJoin(other: Table): Table = {
   <details>
     <summary><code>records</code></summary>
 
-    * `records: ArrayBuffer[TableRecord]` \to `Iterable[(String, Variant)]`
+    * `records: ArrayBuffer[TableRecord]` $\to$ `Iterable[(String, Variant)]`
   </details>
 
   ```scala
@@ -874,19 +874,57 @@ def getCount(key: A): Long = {
     counts.getOrElse(key, 0L)
 }
 ```
-* <code style="color: #ff6a00ff">0L</code>: 
+* <code style="color: #ff6a00ff">0L</code>= 0: Long
 </details>
 
+<details>
+<summary><u><b><code>def incrementCounts(keys: Iterable[A]): Unit = ???</code></b></u></summary>
+
+```scala
+/** Increments the count by one for each of the specified keys. */
+def incrementCounts(keys: Iterable[A]): Unit = {
+    for (key <- keys) {
+        modifyCount(key, 1)
+    }
+}
+```
+* wir rufen einf. `modifyCount` auf, weil man hier bereits eine Addition durchführt
+* zudem wird hier schon überprüft, ob `count` $\lt 0$ ist
+</details>
+
+<details>
+<summary><u><b><code>def decrementCounts(keys: Iterable[A]): Unit = ???</code></b></u></summary>
+
+```scala
+/** Decrements the count by one for each of the specified keys. Counts cannot drop below zero. */
+def decrementCounts(keys: Iterable[A]): Unit = {
+    for (key <- keys) {
+        modifyCount(key, -1)
+    }
+}
+```
+* wir rufen einf. `modifyCount` auf, weil man hier bereits eine Addition durchführt
+* zudem wird hier schon überprüft, ob `count` $\lt 0$ ist
+</details>
+
+<details>
+<summary><u><b><code>override def toString: String = ???</code></b></u></summary>
+
+```scala
+override def toString: String = {
+  // Anstatt k zu verwenden, kannst du das Paar direkt entpacken
+  val toString = counts.map{ 
+      case (key, value) => s"($key: $value)"}.mkString
+  "[" + toString + "]"
+}
+```
+</details>
+
+<details>
+<summary><u><b><code>override def equals(obj: Any): Boolean = ???</code></b></u></summary>
 
 
-
-
-
-
-
-
-
-
+</details>
 
 
 
@@ -1046,7 +1084,16 @@ class QueueWithTimestamp[A] {
 * `trait`
 * * <code style="color: #924ebfff">Klassen</code> können mehrere `traits` erben
 
+<details>
+<summary><u><b>Wann kann ich <pre><code>myVar <span style="color: #b24ab4ff">match</span> {
+  <span style="color: #b24ab4ff">case</span> (k, v) => println(s"Key ist $k, Value ist $v")
+  <span style="color: #b24ab4ff">case</span> _      => println("Kein Paar")
+}
+</code></pre> verwenden ?
+</b></u></summary>
 
+* Bei `map` oder `foreach` auf Samllungen v. Paaren $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Beispiel}}\ \ \ \ }$ HashMap 
+</details>
 
 
 

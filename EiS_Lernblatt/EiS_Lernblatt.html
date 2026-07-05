@@ -1021,7 +1021,7 @@ existiert.</p>
 </ul>
   <details>
     <summary><code>records</code></summary>
-<pre><code>* `records: ArrayBuffer[TableRecord]` \to `Iterable[(String, Variant)]`
+<pre><code>* `records: ArrayBuffer[TableRecord]` $\to$ `Iterable[(String, Variant)]`
 </code></pre>
   </details>
 <pre class="hljs"><code><div><span class="hljs-keyword">val</span> joinedRecords = <span class="hljs-keyword">for</span> {
@@ -1228,6 +1228,73 @@ existiert.</p>
 </li>
 </ul>
 </details>
+<details>
+<summary><u><b><code>modifyCount(key: A, amount: Long): Unit = ???</code></b></u></summary>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">modifyCount</span></span>(key: <span class="hljs-type">A</span>, amount: <span class="hljs-type">Long</span>): <span class="hljs-type">Unit</span> = {
+    <span class="hljs-keyword">val</span> newCount = getCount(key) + amount
+    <span class="hljs-keyword">if</span> (newCount &lt; <span class="hljs-number">0</span>) {
+        counts(key) = <span class="hljs-number">0</span>
+    } <span class="hljs-keyword">else</span> {
+        counts(key) = newCount
+    }
+}
+</div></code></pre>
+<ul>
+<li>wenn $\boxed{key.value + amount &lt; 0 = 0}$</li>
+<li>ansonsten $key \to amount$</li>
+</ul>
+</details>
+<details>
+<summary><u><b><code>def getCount(key: A): Long = ???</code></b></u></summary>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getCount</span></span>(key: <span class="hljs-type">A</span>): <span class="hljs-type">Long</span> = {
+    counts.getOrElse(key, <span class="hljs-number">0</span>L)
+}
+</div></code></pre>
+<ul>
+<li><code style="color: #ff6a00ff">0L</code>= 0: Long</li>
+</ul>
+</details>
+<details>
+<summary><u><b><code>def incrementCounts(keys: Iterable[A]): Unit = ???</code></b></u></summary>
+<pre class="hljs"><code><div><span class="hljs-comment">/** Increments the count by one for each of the specified keys. */</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">incrementCounts</span></span>(keys: <span class="hljs-type">Iterable</span>[<span class="hljs-type">A</span>]): <span class="hljs-type">Unit</span> = {
+    <span class="hljs-keyword">for</span> (key &lt;- keys) {
+        modifyCount(key, <span class="hljs-number">1</span>)
+    }
+}
+</div></code></pre>
+<ul>
+<li>wir rufen einf. <code>modifyCount</code> auf, weil man hier bereits eine Addition durchführt</li>
+<li>zudem wird hier schon überprüft, ob <code>count</code> $\lt 0$ ist</li>
+</ul>
+</details>
+<details>
+<summary><u><b><code>def decrementCounts(keys: Iterable[A]): Unit = ???</code></b></u></summary>
+<pre class="hljs"><code><div><span class="hljs-comment">/** Decrements the count by one for each of the specified keys. Counts cannot drop below zero. */</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">decrementCounts</span></span>(keys: <span class="hljs-type">Iterable</span>[<span class="hljs-type">A</span>]): <span class="hljs-type">Unit</span> = {
+    <span class="hljs-keyword">for</span> (key &lt;- keys) {
+        modifyCount(key, <span class="hljs-number">-1</span>)
+    }
+}
+</div></code></pre>
+<ul>
+<li>wir rufen einf. <code>modifyCount</code> auf, weil man hier bereits eine Addition durchführt</li>
+<li>zudem wird hier schon überprüft, ob <code>count</code> $\lt 0$ ist</li>
+</ul>
+</details>
+<details>
+<summary><u><b><code>override def toString: String = ???</code></b></u></summary>
+<pre class="hljs"><code><div><span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">toString</span></span>: <span class="hljs-type">String</span> = {
+  <span class="hljs-comment">// Anstatt k zu verwenden, kannst du das Paar direkt entpacken</span>
+  <span class="hljs-keyword">val</span> toString = counts.map{ 
+      <span class="hljs-keyword">case</span> (key, value) =&gt; <span class="hljs-string">s"(<span class="hljs-subst">$key</span>: <span class="hljs-subst">$value</span>)"</span>}.mkString
+  <span class="hljs-string">"["</span> + toString + <span class="hljs-string">"]"</span>
+}
+</div></code></pre>
+</details>
+<details>
+<summary><u><b><code>override def equals(obj: Any): Boolean = ???</code></b></u></summary>
+</details>
 </details>
 <hr>
 <h1 id="auf-meinen-lernblatt"><strong>Auf meinen Lernblatt</strong></h1>
@@ -1409,6 +1476,17 @@ existiert.</p>
 </ul>
 </li>
 </ul>
+<details>
+<summary><u><b>Wann kann ich <pre><code>myVar <span style="color: #b24ab4ff">match</span> {
+  <span style="color: #b24ab4ff">case</span> (k, v) => println(s"Key ist $k, Value ist $v")
+  <span style="color: #b24ab4ff">case</span> _      => println("Kein Paar")
+}
+</code></pre> verwenden ?
+</b></u></summary>
+<ul>
+<li>Bei <code>map</code> oder <code>foreach</code> auf Samllungen v. Paaren $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Beispiel}}\ \ \ \ }$ HashMap</li>
+</ul>
+</details>
 <script>
   window.MathJax = {
     tex: {
