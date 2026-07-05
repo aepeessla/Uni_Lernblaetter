@@ -849,9 +849,33 @@ class Counter[A](initialElements: Iterable[A]) {
     ```
 </details>
 
+<details>
+<summary><u><b><code>modifyCount(key: A, amount: Long): Unit = ???</code></b></u></summary>
 
+```scala
+def modifyCount(key: A, amount: Long): Unit = {
+    val newCount = getCount(key) + amount
+    if (newCount < 0) {
+        counts(key) = 0
+    } else {
+        counts(key) = newCount
+    }
+}
+```
+* wenn $\boxed{key.value + amount < 0 = 0}$
+* ansonsten $key \to amount$
+</details>
 
+<details>
+<summary><u><b><code>def getCount(key: A): Long = ???</code></b></u></summary>
 
+```scala
+def getCount(key: A): Long = {
+    counts.getOrElse(key, 0L)
+}
+```
+* <code style="color: #ff6a00ff">0L</code>: 
+</details>
 
 
 
