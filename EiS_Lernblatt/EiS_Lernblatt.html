@@ -400,6 +400,11 @@ code {
     font-weight: bold;
     text-decoration: underline
   }
+
+  .dimmed {
+    color: #888; /* Ein dezentes Grau */
+    opacity: 0.6;
+  }
 </style>
 <h1 id="meine-gedankeng%C3%A4nge-f-d-neue-%C3%BCbungsblatt">Meine Gedankengänge f. d. neue Übungsblatt.</h1>
 <blockquote>
@@ -1178,10 +1183,52 @@ existiert.</p>
 <li>gehe durch die Liste
 <ul>
 <li>wenn Elem. $\lnot$ in counts, dann $$A = key \ | \ count = \text{Anzahl v. key in Iterable}$$</li>
-<li></li>
+<li><strong>in counts</strong>: <code>HashMap[(A -&gt; Long)]</code> hinzufügen</li>
 </ul>
 </li>
 </ul>
+<pre class="hljs"><code><div><span class="hljs-deletion">-package datastructures</span>
+<span class="hljs-deletion">-</span>
+<span class="hljs-deletion">-class Counter[A](initialElements: Iterable[A]) {</span>
+<span class="hljs-deletion">-</span>
+<span class="hljs-deletion">-    private val counts = scala.collection.mutable.HashMap[A, Long]()</span>
+<span class="hljs-deletion">-    </span>
+<span class="hljs-deletion">-    /** Sets the count for the specified key to the specified value.</span>
+<span class="hljs-deletion">-     *</span>
+<span class="hljs-deletion">-     * @throws IllegalArgumentException if the specified count is negative</span>
+<span class="hljs-deletion">-     */</span>
+<span class="hljs-deletion">-    def setCount(key: A, count: Long): Unit = {</span>
+<span class="hljs-deletion">-        if (count &lt; 0) {</span>
+<span class="hljs-deletion">-            throw new IllegalArgumentException("Der count darf nicht negativ sein !")</span>
+<span class="hljs-deletion">-        }</span>
+<span class="hljs-addition">+        </span>
+<span class="hljs-addition">+        // wenn nicht enthalten -&gt; füge als neues Element</span>
+<span class="hljs-addition">+        if (!counts.contains(key)){</span>
+<span class="hljs-addition">+          // Elem. Anzahl zählen</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-deletion">-    }</span>
+<span class="hljs-deletion">-</span>
+<span class="hljs-deletion">-    /** Modifies the count for the specified key by adding the specified amount. Count cannot drop below zero. */</span>
+<span class="hljs-deletion">-    def modifyCount(key: A, amount: Long): Unit = ???</span>
+<span class="hljs-deletion">-</span>
+<span class="hljs-deletion">-    /** Returns the count for the specified key. */</span>
+<span class="hljs-deletion">-    def getCount(key: A): Long = ???</span>
+<span class="hljs-deletion">-</span>
+<span class="hljs-deletion">-    /** Increments the count by one for each of the specified keys. */</span>
+<span class="hljs-deletion">-    def incrementCounts(keys: Iterable[A]): Unit = ???</span>
+<span class="hljs-deletion">-</span>
+<span class="hljs-deletion">-    /** Decrements the count by one for each of the specified keys. Counts cannot drop below zero. */</span>
+<span class="hljs-deletion">-    def decrementCounts(keys: Iterable[A]): Unit = ???</span>
+<span class="hljs-deletion">-</span>
+<span class="hljs-deletion">-    override def toString: String = ???</span>
+<span class="hljs-deletion">-</span>
+<span class="hljs-deletion">-    override def equals(obj: Any): Boolean = ???</span>
+<span class="hljs-deletion">-</span>
+<span class="hljs-deletion">-     override def hashCode: Int = ???</span>
+<span class="hljs-deletion">- }</span>
+</div></code></pre>
 </details>
 <hr>
 <h1 id="auf-meinen-lernblatt"><strong>Auf meinen Lernblatt</strong></h1>

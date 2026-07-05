@@ -33,6 +33,11 @@
     font-weight: bold;
     text-decoration: underline
   }
+
+  .dimmed {
+    color: #888; /* Ein dezentes Grau */
+    opacity: 0.6;
+  }
 </style>
 
 
@@ -803,7 +808,62 @@ class Counter[A](initialElements: Iterable[A]) {
 
 * gehe durch die Liste
   * wenn Elem. $\lnot$ in counts, dann $$A = key \ | \ count = \text{Anzahl v. key in Iterable}$$
-  * 
+  * __in counts__: `HashMap[(A -> Long)]` hinzufügen
+
+```diff
+-package datastructures
+-
+-class Counter[A](initialElements: Iterable[A]) {
+-
+-    private val counts = scala.collection.mutable.HashMap[A, Long]()
+-    
+-    /** Sets the count for the specified key to the specified value.
+-     *
+-     * @throws IllegalArgumentException if the specified count is negative
+-     */
+-    def setCount(key: A, count: Long): Unit = {
+-        if (count < 0) {
+-            throw new IllegalArgumentException("Der count darf nicht negativ sein !")
+-        }
++        
++        // wenn nicht enthalten -> füge als neues Element
++        if (!counts.contains(key)){
++          // Elem. Anzahl zählen
++
++        }
++
+-    }
+-
+-    /** Modifies the count for the specified key by adding the specified amount. Count cannot drop below zero. */
+-    def modifyCount(key: A, amount: Long): Unit = ???
+-
+-    /** Returns the count for the specified key. */
+-    def getCount(key: A): Long = ???
+-
+-    /** Increments the count by one for each of the specified keys. */
+-    def incrementCounts(keys: Iterable[A]): Unit = ???
+-
+-    /** Decrements the count by one for each of the specified keys. Counts cannot drop below zero. */
+-    def decrementCounts(keys: Iterable[A]): Unit = ???
+-
+-    override def toString: String = ???
+-
+-    override def equals(obj: Any): Boolean = ???
+-
+-     override def hashCode: Int = ???
+- }
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -965,8 +1025,6 @@ class QueueWithTimestamp[A] {
 
 * `trait`
 * * <code style="color: #924ebfff">Klassen</code> können mehrere `traits` erben
-
-
 
 
 
