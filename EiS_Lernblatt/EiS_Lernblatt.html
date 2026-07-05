@@ -395,6 +395,11 @@ code {
     background: #ffffff;
     color: black;
   }
+
+  .sub {
+    font-weight: bold;
+    text-decoration: underline
+  }
 </style>
 <h1 id="meine-gedankeng%C3%A4nge-f-d-neue-%C3%BCbungsblatt">Meine Gedankengänge f. d. neue Übungsblatt.</h1>
 <blockquote>
@@ -1109,6 +1114,46 @@ existiert.</p>
 }
 </div></code></pre>
 </details>
+<h1>Übung 5</h1>
+<h2>Aufgabe 1</h2>
+<details>
+<summary><u><b>Aufgabe 1</b></u></summary>
+<h3>Geg. Code:</h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">package</span> datastructures
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Counter</span>[<span class="hljs-type">A</span>](<span class="hljs-params">initialElements: <span class="hljs-type">Iterable</span>[<span class="hljs-type">A</span>]</span>) </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> counts = scala.collection.mutable.<span class="hljs-type">HashMap</span>[<span class="hljs-type">A</span>, <span class="hljs-type">Long</span>]()
+    
+    <span class="hljs-comment">/** Sets the count for the specified key to the specified value.
+     *
+     * @throws IllegalArgumentException if the specified count is negative
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setCount</span></span>(key: <span class="hljs-type">A</span>, count: <span class="hljs-type">Long</span>): <span class="hljs-type">Unit</span> = ???
+
+    <span class="hljs-comment">/** Modifies the count for the specified key by adding the specified amount. Count cannot drop below zero. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">modifyCount</span></span>(key: <span class="hljs-type">A</span>, amount: <span class="hljs-type">Long</span>): <span class="hljs-type">Unit</span> = ???
+
+    <span class="hljs-comment">/** Returns the count for the specified key. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getCount</span></span>(key: <span class="hljs-type">A</span>): <span class="hljs-type">Long</span> = ???
+
+    <span class="hljs-comment">/** Increments the count by one for each of the specified keys. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">incrementCounts</span></span>(keys: <span class="hljs-type">Iterable</span>[<span class="hljs-type">A</span>]): <span class="hljs-type">Unit</span> = ???
+
+    <span class="hljs-comment">/** Decrements the count by one for each of the specified keys. Counts cannot drop below zero. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">decrementCounts</span></span>(keys: <span class="hljs-type">Iterable</span>[<span class="hljs-type">A</span>]): <span class="hljs-type">Unit</span> = ???
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">toString</span></span>: <span class="hljs-type">String</span> = ???
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">equals</span></span>(obj: <span class="hljs-type">Any</span>): <span class="hljs-type">Boolean</span> = ???
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hashCode</span></span>: <span class="hljs-type">Int</span> = ???
+}
+</div></code></pre>
+<blockquote>
+<p>setCount setzt den Zählwert eines Elements und wirft bei negativen Werten eine IllegalArgumentException.</p>
+</blockquote>
+</details>
 <hr>
 <h1 id="auf-meinen-lernblatt"><strong>Auf meinen Lernblatt</strong></h1>
 <ul>
@@ -1183,7 +1228,111 @@ existiert.</p>
 </ul>
 </li>
 <li><code>collection.mutable.Queue</code></li>
-<li>Wir wollen ein <code>Timestap</code> implementieren $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erstellt}}\ \ \ \ }$ <strong>Zeitstempel</strong> des Eingabezeitpunktes</li>
+<li>Wir wollen ein <code>Timestap</code> implementieren $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erstellt}}\ \ \ \ }$ <strong>Zeitstempel</strong> des Eingabezeitpunktes $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Implementierung}}\ \ \ \ }$ <code>class QueueWithTimeStamp</code> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{verw. intern}}\ \ \ \ }$ <code>collection.mutable.Queue</code></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment">/** Represents a pair of an element and a timestamp */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ElementWithTimestamp</span>(<span class="hljs-params">val elem: <span class="hljs-type">Int</span>, val timestamp: <span class="hljs-type">Timestamp</span></span>)</span>
+</div></code></pre>
+<ul>
+<li>
+<p>Wir erstellen einen <strong>Typ-Alias</strong>:</p>
+<ul>
+<li>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Timestamp</span> </span>= java.time.<span class="hljs-type">LocalDateTime</span>
+</div></code></pre>
+<ul>
+<li>mit <code>LocalDateTime.now</code> bekommen wir den <strong>aktuellen Zeitstempel</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="sub">Problem</span>:</p>
+<ul>
+<li>
+<p>Es ist nur auf ein <code>Int</code> spezialisiert $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Lösung}}\ \ \ \ }$ Neue Klasse def.: <code>class ElementWithTimestamp(val elem: Int, val timestamp: Timestamp)</code></p>
+</li>
+<li>
+<p>Hinzufügen v. <code>[A]</code> n. dem Klassenbezeichner $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Einfügung}}\ \ \ \ }$</p>
+</li>
+<li>
+<p><span style="color: red">generischer Typ A</span> als <strong>Typenparameter</strong> ein $\to$ <code>class ElementWithTimestamp[A](val elem: Int, val timestamp: Timestamp)</code> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{diese Klasse ist somit}}\ \ \ \ }$ <code style="color: #ff00b3ff">Generische Klasse</code></p>
+<ul>
+<li>man kann auch mehrere Typenparameter einf. <code>class ElementWithTimestamp[A,B,C](val elem: Int, val timestamp: Timestamp)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Die Verwendung</h3>
+<pre class="hljs"><code><div><span class="hljs-comment">/** Represents a pair of an element and a timestamp */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ElementWithTimestamp</span>[<span class="hljs-type">A</span>](<span class="hljs-params">val elem: <span class="hljs-type">A</span>, val timestamp: <span class="hljs-type">Timestamp</span></span>)</span>
+</div></code></pre>
+<ul>
+<li><span>Mögl.</span> = mit unters. Typen instanzieren<pre class="hljs"><code><div> <span class="hljs-keyword">val</span> e1: <span class="hljs-type">ElementWithTimestamp</span>[<span class="hljs-type">Int</span>] = <span class="hljs-type">ElementWithTimestamp</span>(<span class="hljs-number">42</span>, <span class="hljs-type">LocalDateTime</span>.now)
+ <span class="hljs-keyword">val</span> e2: <span class="hljs-type">ElementWithTimestamp</span>[<span class="hljs-type">String</span>] = <span class="hljs-type">ElementWithTimestamp</span>(<span class="hljs-string">"hello"</span>, <span class="hljs-type">LocalDateTime</span>.now)
+</div></code></pre>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> collection.mutable.<span class="hljs-type">Queue</span>
+
+<span class="hljs-comment">/** First-in-first-out (FIFO) queue that keeps a timestamp for each element */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">QueueWithTimestamp</span>[<span class="hljs-type">A</span>] </span>{
+
+  <span class="hljs-comment">/** Uses the mutable queue as data structure */</span>
+  <span class="hljs-keyword">val</span> queue: <span class="hljs-type">Queue</span>[<span class="hljs-type">ElementWithTimestamp</span>[<span class="hljs-type">A</span>]] = <span class="hljs-type">Queue</span>()
+
+  <span class="hljs-comment">/** Returns the current size of the queue */</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">size</span></span>: <span class="hljs-type">Int</span> = queue.size
+
+  <span class="hljs-comment">/** Dequeues an element and returns it with its timestamp */</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dequeue</span></span>: <span class="hljs-type">ElementWithTimestamp</span>[<span class="hljs-type">A</span>] = queue.dequeue
+
+  <span class="hljs-comment">/** Removes all elements from the queue */</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">clear</span></span>: <span class="hljs-type">Unit</span> = queue.clear
+
+  <span class="hljs-comment">/** Adds an element to the queue with the current timestamp and returns that*/</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">enqueue</span></span>(elem: <span class="hljs-type">A</span>): <span class="hljs-type">ElementWithTimestamp</span>[<span class="hljs-type">A</span>] = {
+    <span class="hljs-keyword">val</span> e = <span class="hljs-type">ElementWithTimestamp</span>[<span class="hljs-type">A</span>](elem, <span class="hljs-type">LocalDateTime</span>.now)
+    queue.enqueue(e)
+    e
+  }
+}
+</div></code></pre>
+<ul>
+<li>
+<p>Mit einer Warteschlage wollen wir <strong>Anfragen verwalten</strong>
+<img src="image-2.png" alt="alt text"></p>
+</li>
+<li>
+<p><span class="sub">Unsere Unterklasse<span>
+<img src="image-3.png" alt="alt text"></p>
+</li>
+<li>
+<p><span class="sub">Execute<span></p>
+<ul>
+<li><strong>unterscheidet</strong>, ob <code>Index</code> auf <code>SelectionAttribute</code> existiert oder $\lnot$
+<img src="image-4.png" alt="alt text"></li>
+</ul>
+</li>
+<li>
+<p><span class="sub">Anwendung v. Queue<span>
+<img src="image-5.png" alt="alt text"></p>
+</li>
+<li>
+<p><span class="sub">Ausf.<span>
+<img src="image-6.png" alt="alt text">
+<img src="image-7.png" alt="alt text"></p>
+</li>
+</ul>
+<h1>Schnittstellen</h1>
+<ul>
+<li><code>trait</code></li>
+<li>
+<ul>
+<li><code style="color: #924ebfff">Klassen</code> können mehrere <code>traits</code> erben</li>
+</ul>
+</li>
 </ul>
 <script>
   window.MathJax = {
