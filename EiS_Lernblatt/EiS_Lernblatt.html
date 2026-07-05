@@ -1155,6 +1155,8 @@ existiert.</p>
     <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hashCode</span></span>: <span class="hljs-type">Int</span> = ???
 }
 </div></code></pre>
+<details>
+<summary><u><b><code>def setCount(key: A, count: Long): Unit = ???</code></b></u></summary>
 <blockquote>
 <p>setCount setzt den Zählwert eines Elements &amp; wirft bei negativen Werten eine IllegalArgumentException.</p>
 </blockquote>
@@ -1187,13 +1189,7 @@ existiert.</p>
 </ul>
 </li>
 </ul>
-<pre class="hljs"><code><div><span class="hljs-keyword">package</span> datastructures
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Counter</span>[<span class="hljs-type">A</span>](<span class="hljs-params">initialElements: <span class="hljs-type">Iterable</span>[<span class="hljs-type">A</span>]</span>) </span>{
-
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> counts = scala.collection.mutable.<span class="hljs-type">HashMap</span>[<span class="hljs-type">A</span>, <span class="hljs-type">Long</span>]()
-    
-    <span class="hljs-comment">/** Sets the count for the specified key to the specified value.
+<pre class="hljs"><code><div>    <span class="hljs-comment">/** Sets the count for the specified key to the specified value.
      *
      * @throws IllegalArgumentException if the specified count is negative
      */</span>
@@ -1205,94 +1201,72 @@ existiert.</p>
         <span class="hljs-comment">// wenn nicht enthalten -&gt; füge als neues Element</span>
         <span class="hljs-keyword">if</span> (!counts.contains(key)){
           <span class="hljs-comment">// Elem. Anzahl zählen</span>
-
+          count(key) = count
         }
-
     }
-
-    <span class="hljs-comment">/** Modifies the count for the specified key by adding the specified amount. Count cannot drop below zero. */</span>
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">modifyCount</span></span>(key: <span class="hljs-type">A</span>, amount: <span class="hljs-type">Long</span>): <span class="hljs-type">Unit</span> = ???
-
-    <span class="hljs-comment">/** Returns the count for the specified key. */</span>
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getCount</span></span>(key: <span class="hljs-type">A</span>): <span class="hljs-type">Long</span> = ???
-
-    <span class="hljs-comment">/** Increments the count by one for each of the specified keys. */</span>
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">incrementCounts</span></span>(keys: <span class="hljs-type">Iterable</span>[<span class="hljs-type">A</span>]): <span class="hljs-type">Unit</span> = ???
-
-    <span class="hljs-comment">/** Decrements the count by one for each of the specified keys. Counts cannot drop below zero. */</span>
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">decrementCounts</span></span>(keys: <span class="hljs-type">Iterable</span>[<span class="hljs-type">A</span>]): <span class="hljs-type">Unit</span> = ???
-
-    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">toString</span></span>: <span class="hljs-type">String</span> = ???
-
-    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">equals</span></span>(obj: <span class="hljs-type">Any</span>): <span class="hljs-type">Boolean</span> = ???
-
-     <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hashCode</span></span>: <span class="hljs-type">Int</span> = ???
- }
-``&lt;/code&gt;&lt;/pre&gt;``
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;/details&gt;
-
-
-
-
-
-
----
-# __Auf meinen <span class="hljs-type">Lernblatt__</span>
-
-* `sortWith()`
-  * vergl. n. $\le$
-  * __&lt;u&gt;<span class="hljs-type">Ergebnis</span>&lt;/u&gt;__: <span class="hljs-type">Liste</span> v. kleinsten n. größten sortiert
-  * __&lt;u&gt;<span class="hljs-type">Syntax</span>&lt;/u&gt;__:
-    ```scala
-    users.sortWith(_.attribute &gt; _.attribute)
-    ```
-
-* `.sortBy()`
-  * wenn wir `_.attribute1.attribute2.attribute3` $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{wird autom.}}\ \ \ \ }$ v. links n. rechts sortiert
-
-&lt;h2&gt;<span class="hljs-type">Set</span>&lt;/h2&gt;
-
-* `.intersect()`
-  * <span class="hljs-type">Schnittmenge</span>
-
-* `.head`
-  * gibt d. aller erste <span class="hljs-type">Elem</span>.
-  * <span class="hljs-type">Set</span> = ungeordnet
-
-&lt;h2&gt;<span class="hljs-type">Nested</span> <span class="hljs-keyword">for</span>-loop&lt;/h2&gt;
-
-```scala
-<span class="hljs-keyword">for</span> {
+</div></code></pre>
+<h3><span style ="color: red">Korrektur</span></h3>
+<ul>
+<li>HashMap ü.schriebt autom. $\implies$ kein if (!counts.contains(key)) notw.
+<ul>
+<li>
+<pre class="hljs"><code><div><span class="hljs-comment">/** Sets the count for the specified key to the specified value.
+ *
+ * @throws IllegalArgumentException if the specified count is negative
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setCount</span></span>(key: <span class="hljs-type">A</span>, count: <span class="hljs-type">Long</span>): <span class="hljs-type">Unit</span> = {
+    <span class="hljs-keyword">if</span> (count &lt; <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalArgumentException</span>(<span class="hljs-string">"Der count darf nicht negativ sein !"</span>)
+    }
+    
+    <span class="hljs-comment">// wenn nicht enthalten -&gt; füge als neues Element</span>
+      counts(key) = count
+}
+</div></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</details>
+</details>
+<hr>
+<h1 id="auf-meinen-lernblatt"><strong>Auf meinen Lernblatt</strong></h1>
+<ul>
+<li>
+<p><code>sortWith()</code></p>
+<ul>
+<li>vergl. n. $\le$</li>
+<li><strong><u>Ergebnis</u></strong>: Liste v. kleinsten n. größten sortiert</li>
+<li><strong><u>Syntax</u></strong>:<pre class="hljs"><code><div>users.sortWith(_.attribute &gt; _.attribute)
+</div></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><code>.sortBy()</code></p>
+<ul>
+<li>wenn wir <code>_.attribute1.attribute2.attribute3</code> $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{wird autom.}}\ \ \ \ }$ v. links n. rechts sortiert</li>
+</ul>
+</li>
+</ul>
+<h2>Set</h2>
+<ul>
+<li>
+<p><code>.intersect()</code></p>
+<ul>
+<li>Schnittmenge</li>
+</ul>
+</li>
+<li>
+<p><code>.head</code></p>
+<ul>
+<li>gibt d. aller erste Elem.</li>
+<li>Set = ungeordnet</li>
+</ul>
+</li>
+</ul>
+<h2>Nested for-loop</h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">for</span> {
   i &lt;- listeA
   j &lt;- listeB
 

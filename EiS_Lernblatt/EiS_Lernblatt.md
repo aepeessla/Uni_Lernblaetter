@@ -783,6 +783,8 @@ class Counter[A](initialElements: Iterable[A]) {
     override def hashCode: Int = ???
 }
 ```
+<details>
+<summary><u><b><code>def setCount(key: A, count: Long): Unit = ???</code></b></u></summary>
 
 > setCount setzt den Zählwert eines Elements & wirft bei negativen Werten eine IllegalArgumentException.
 
@@ -827,6 +829,7 @@ class Counter[A](initialElements: Iterable[A]) {
         }
     }
 ```
+
 <h3><span style ="color: red">Korrektur</span></h3>
 
 * HashMap ü.schriebt autom. $\implies$ kein if (!counts.contains(key)) notw.
@@ -844,6 +847,9 @@ class Counter[A](initialElements: Iterable[A]) {
           counts(key) = count
     }
     ```
+</details>
+
+
 
 
 
