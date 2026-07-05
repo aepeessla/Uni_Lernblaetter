@@ -779,7 +779,48 @@ class Counter[A](initialElements: Iterable[A]) {
 }
 ```
 
->setCount setzt den Zählwert eines Elements und wirft bei negativen Werten eine IllegalArgumentException.
+> setCount setzt den Zählwert eines Elements & wirft bei negativen Werten eine IllegalArgumentException.
+
+* meine Kontrolle, ob `count < 0`
+  ```scala
+  def setCount(key: A, count: Long): Unit = {
+      if (count < 0) {
+          throw new IllegalArgumentException("Der count darf nicht negativ sein !")
+      }
+  }
+  ```
+
+<h3>Wie speichern wir die Counts ?</h3>
+
+<code>private val counts = scala.<code style="color: #ff6a00ff">collection.mutable.</code><code style="color: #a356a5ff">HashMap</code><code style="color: #49a3d6ff">[A, Long]</code>()</code>
+
+* `collection.mutable.HashMap[A, Long]` hier def. wir den Datentyp 
+  * <code style="color: #a356a5ff">HashMap</code> $\implies$ key: A $\to$ Value: Long
+  * <code style="color: #49a3d6ff">[A, Long]</code> $\implies$ Datentypen für Key und Value
+* `()` $\implies$ ruft Konstruktor d. HashMap auf $\to$ erzeugt eine neue, leere Instanz
+
+<h3>Wie Werte zählen ?</h3>
+
+* gehe durch die Liste
+  * wenn Elem. $\lnot$ in counts, dann $$A = key \ | \ count = \text{Anzahl v. key in Iterable}$$
+  * 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </details>

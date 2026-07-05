@@ -1151,8 +1151,37 @@ existiert.</p>
 }
 </div></code></pre>
 <blockquote>
-<p>setCount setzt den Zählwert eines Elements und wirft bei negativen Werten eine IllegalArgumentException.</p>
+<p>setCount setzt den Zählwert eines Elements &amp; wirft bei negativen Werten eine IllegalArgumentException.</p>
 </blockquote>
+<ul>
+<li>meine Kontrolle, ob <code>count &lt; 0</code><pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setCount</span></span>(key: <span class="hljs-type">A</span>, count: <span class="hljs-type">Long</span>): <span class="hljs-type">Unit</span> = {
+    <span class="hljs-keyword">if</span> (count &lt; <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalArgumentException</span>(<span class="hljs-string">"Der count darf nicht negativ sein !"</span>)
+    }
+}
+</div></code></pre>
+</li>
+</ul>
+<h3>Wie speichern wir die Counts ?</h3>
+<p><code>private val counts = scala.<code style="color: #ff6a00ff">collection.mutable.</code><code style="color: #a356a5ff">HashMap</code><code style="color: #49a3d6ff">[A, Long]</code>()</code></p>
+<ul>
+<li><code>collection.mutable.HashMap[A, Long]</code> hier def. wir den Datentyp
+<ul>
+<li><code style="color: #a356a5ff">HashMap</code> $\implies$ key: A $\to$ Value: Long</li>
+<li><code style="color: #49a3d6ff">[A, Long]</code> $\implies$ Datentypen für Key und Value</li>
+</ul>
+</li>
+<li><code>()</code> $\implies$ ruft Konstruktor d. HashMap auf $\to$ erzeugt eine neue, leere Instanz</li>
+</ul>
+<h3>Wie Werte zählen ?</h3>
+<ul>
+<li>gehe durch die Liste
+<ul>
+<li>wenn Elem. $\lnot$ in counts, dann $$A = key \ | \ count = \text{Anzahl v. key in Iterable}$$</li>
+<li></li>
+</ul>
+</li>
+</ul>
 </details>
 <hr>
 <h1 id="auf-meinen-lernblatt"><strong>Auf meinen Lernblatt</strong></h1>
