@@ -152,7 +152,8 @@
 <summary><u><b>Bezeichne die einzelnen Bestandteile: $\begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} + s \cdot \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} + t \cdot \begin{pmatrix} 0 \\ 1 \\ 3 \end{pmatrix}$</b></u></summary>
 
 * $\begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix}$ = `Stützvektor`
-* $\begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} \& \begin{pmatrix} 0 \\ 1 \\ 3 \end{pmatrix}$ = `Spannvektoren`
+
+* $\begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix}$ & $\begin{pmatrix} 0 \\ 1 \\ 3 \end{pmatrix}$ = `Spannvektoren`
 </details>
 
 <details>
