@@ -1,25 +1,23 @@
 <style>
-    @page {
-        size: A4;
-        margin: 20mm;
-    }
+  @page {
+      size: A4;
+      margin: 20mm;
+  }
 
-    body {
-        background: #ffffffff;
-        color: #000000ff;
-    }
+  body {
+      background: #ffffffff;
+      color: #000000ff;
+  }
 
-    h1{
-        font-weight: bold;
-        text-decoration: underline;
-    }
+  h1{
+      font-weight: bold;
+      text-decoration: underline;
+  }
 
-    h2{
-        font-weight: bold;
-        text-decoration: underline;
-    }
-
-    <style>
+  h2{
+      font-weight: bold;
+      text-decoration: underline;
+  }
   table {
     border-collapse: collapse; /* Verhindert doppelte Rahmenlinien */
     width: 100%;
@@ -151,6 +149,14 @@
 </table>
 
 <details>
+<summary><u><b>Bezeichne die einzelnen Bestandteile: $\begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} + s \cdot \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} + t \cdot \begin{pmatrix} 0 \\ 1 \\ 3 \end{pmatrix}$</b></u></summary>
+
+* $\begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix}$ = `Stützvektor`
+* $\begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} \& \begin{pmatrix} 0 \\ 1 \\ 3 \end{pmatrix}$ = `Spannvektoren`
+</details>
+
+
+<details>
 <summary><u><b>Was muss ich verw., wenn ich zeigen möchte, ob 2 Vektoren orthogonal zu einander sind ?</b></u></summary>
 
 * `Skalarprodukt`
@@ -163,8 +169,32 @@
 * $\frac{<a,b>}{|a| \cdot |b|}$
 </details>
 
+<details>
+<summary><u><b>Mit was kann ich 2 Vektoren fussieren ?</b></u></summary>
 
+* `Vektorprodukt`
+  * $|a \times b| = \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} \times \begin{pmatrix} b_1 \\ b_2 \\ b_3 \end{pmatrix}$
+</details>
 
+<details>
+<summary><u><b>Was ist der Normalvektor ?</b></u></summary>
+
+* `Vektorprodukt`
+  * $|a \times b| = \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} \times \begin{pmatrix} b_1 \\ b_2 \\ b_3 \end{pmatrix}$
+</details>
+
+<details>
+<summary><u><b>Wie bestimmt man die Normalform von Ebenen ?</b></u></summary>
+
+* $E: (\vec{x} - \vec{c}) \cdot (\vec{a} \times \vec{b}) = 0$
+* $[x - \text{Stütztvektor}] \cdot \text{Normalvektor} = 0$
+
+  <details>
+  <summary><u><b>Was bedeutet es, wenn das Ergebnis $E \ne 0$ ist?</b></u></summary>
+
+  * Punkt liegt $\lnot$ auf d. Ebene
+  </details>
+</details>
 
 
 
