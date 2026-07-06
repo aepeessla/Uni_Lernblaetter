@@ -155,7 +155,6 @@
 * $\begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} \& \begin{pmatrix} 0 \\ 1 \\ 3 \end{pmatrix}$ = `Spannvektoren`
 </details>
 
-
 <details>
 <summary><u><b>Was muss ich verw., wenn ich zeigen möchte, ob 2 Vektoren orthogonal zu einander sind ?</b></u></summary>
 
@@ -195,6 +194,23 @@
   * Punkt liegt $\lnot$ auf d. Ebene
   </details>
 </details>
+
+<details>
+<summary><u><b>Gegeben ist $A = \begin{pmatrix} 2 \\ 1 \\ 3 \end{pmatrix}, \quad B = \begin{pmatrix} 4 \\ 1 \\ 4 \end{pmatrix}, \quad C = \begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix}$. Wie bestimmt man die Spannvektor ?
+</b></u></summary>
+
+* u = AB = B-A
+* v = AC = C-A
+</details>
+
+<details>
+<summary><u><b>Gegeben ist $A = \begin{pmatrix} 2 \\ 1 \\ 3 \end{pmatrix}, \quad B = \begin{pmatrix} 4 \\ 1 \\ 4 \end{pmatrix}, \quad C = \begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix}$. Bestimme d. Ebenengleichung ?
+</b></u></summary>
+
+![alt text](image.png)
+</details>
+
+
 
 
 
