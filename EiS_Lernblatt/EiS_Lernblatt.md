@@ -923,6 +923,20 @@ override def toString: String = {
 <details>
 <summary><u><b><code>override def equals(obj: Any): Boolean = ???</code></b></u></summary>
 
+```scala
+override def equals(obj: Any): Boolean = {
+    obj match{
+        case counter: Counter[_] => this.counts == counter.counts
+        case _ => false
+    }
+}
+```
+* <code style="color: #ff6a00ff">case counter: Counter[_]</code>: Damit überp. wir, ob `counter` v. Typ `Counter` ist
+* <code style="color: #43ad5cff">case counter: Counter[_]</code>: `HashMaps` werden autom. auf `key` & `value` __kontrolliert__
+</details>
+
+
+
 
 </details>
 
@@ -941,7 +955,65 @@ override def toString: String = {
 
 
 
-</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

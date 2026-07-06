@@ -150,7 +150,18 @@
   </tbody>
 </table>
 
+<details>
+<summary><u><b>Was muss ich verw., wenn ich zeigen möchte, ob 2 Vektoren orthogonal zu einander sind ?</b></u></summary>
 
+* `Skalarprodukt`
+  * $<a,b> = 0$
+</details>
+
+<details>
+<summary><u><b>Wie lautet d. Formel zur Berechnung v. Winkeln ?</b></u></summary>
+
+* $\frac{<a,b>}{|a| \cdot |b|}$
+</details>
 
 
 
