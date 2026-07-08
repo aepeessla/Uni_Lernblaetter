@@ -59,6 +59,13 @@
     font-weight: bold;
     text-decoration: underline;
   }
+
+  .mermaid {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
 </style>
 
 
@@ -1247,19 +1254,17 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 <div class="mermaid">
   graph TD
-    A[Stereoisomere]
-    A -- B{Diasterisomer} --> C[Epimere]
-    A -- B --> D[Anamere]
-    A --> E[Anamere]
-</div>
+    A[stereoisomere] --> B[- Diastereoisomer]
+    A --> C[- Enantiomere]
+    B --> D[Anamere]
+    B --> E[- Epimere]
 
-<div class="mermaid">
-  graph TD
-    A[Start] --> B{Ist die Zahl gerade?}
-    B -- Ja --> C[Teile durch 2]
-    B -- Nein --> D[Multipliziere mit 3 und addiere 1]
-    C --> E[Ende]
-    D --> E
+    %% Styling für abgerundete Ecken und Schriftgrößen
+    style A rx:10,ry:10,font-size:16px
+    style B rx:10,ry:10,font-size:16px
+    style C rx:10,ry:10,font-size:16px
+    style D rx:10,ry:10,font-size:16px
+    style E rx:10,ry:10,font-size:16px
 </div>
 
 
