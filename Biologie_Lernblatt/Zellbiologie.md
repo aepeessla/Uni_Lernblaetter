@@ -928,7 +928,11 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
   * $q$ = Wärme  $\leftarrow$ System $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{absorbiert aus}}\ \ \ \ }$ Umgebung
   * $w$ = Arbeit $\leftarrow$ System $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{ausgeübt auf}}\ \ \ \ }$ Umgebung
 
-  * $\boxed{q \lt 0 = \text{exotherme Reaktion} \\ q \gt 0 = \text{endotherme Reaktion}}$
+  * $\boxed{q \lt 0 = \text{exotherme Reaktion}}$
+    * Reaktion <span style="color: red">gibt Wärme ab</span>, weil, d. `Wärme` __immer mehr abnimmt__
+  
+  * $\boxed{q \gt 0 = \text{endotherme Reaktion}}$
+    * Reaktion <span style="color: red">nimmt Wärme auf</span>, weil d. `Wärme` __immer mehr wächst__
 </details> 
 
 <h2>2. Hauptsatz der Thermodynamik</h2>
@@ -936,7 +940,10 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 <details>
 <summary><u><b>Was besagt dieses ?</b></u></summary>
 
-* In einem `abgeschlossenen System` nimmt d. `Entropie` bei `freiwillig ablaufenden Prozessen` <span style="color: red">__niemals__</span> ab, sondern __nimmt ständig zu__ oder __bleibt im Gleichgewicht__
+* In einem `abgeschlossenen System` 
+  * `Entropie` nimmt bei `spontanen Prozessen` <span style="color: red">__niemals__</span> ab, sondern __nimmt ständig zu__ oder __bleibt im Gleichgewicht__
+* Da d. Leben in offenen Systemen(wie Zellen) stattfindet $\to$ <span style="color: red">endergonische Reaktionen können</span> $\lnot$ <span style="color: red">freiwillig stattfinden</span> ohne, dass sie an __<code style="color: #ff6a00ff">exergonischen Prozesse</code> gekoppelt werden__ $\to$ erhöhen Entropie in d. Umgebung 
+
   <details>
   <summary><u><b>Was bedeutet das für Lebende Systeme ?</b></u></summary>
 
@@ -959,7 +966,41 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 <summary><u><b>Was dient als Kriterium, ob ein Prozess freiwillig war ?</b></u></summary>
 
 * D. `Spontanität`
+* freie Energie $(\Delta G) < 0$
+
+<details>
+<summary><u><b>Was bedeutet d. ?</b></u></summary>
+
+* Wie __freiwillig__ findet eine Reaktion statt
+</details>
+
+<details>
+<summary><u><b>Wann ist eine Reaktion spontan ?</b></u></summary>
+
+* Wenn Reaktion __ohne__ <span style="color: red">dauerhafte Energiezufuhr v. Außerhalb</span> ___ablaufen kann___ $\implies \Delta G < 0$
+</details>
+
+<details>
+<summary><u><b>Reaktionen können eine hohe Aktivierungsenergie benötigen. Welche Einheit kann diese Aktivierungsenergie senken ?</b></u></summary>
+
+* `Enzyme`
+</details>
+
+<details>
+<summary><u><b>Was genau ist die Aktivierungsenergie ?</b></u></summary>
+
+* `Energiebarriere`, d. jedes Molekül __ü.winden__ muss \to damit es reagieren kann
+* `Enzyme` -> __senken__ "Hürde" -> damit <span style="color: red">Reaktion bei Körpertemperatur stattfinden kann</span> , ohne dass man d. Molekül erst erhitzen muss
+</details>
 </details> 
+
+<details>
+<summary><u><b>Wie nennt man eine un- & frewiwillige Reaktion ?</b></u></summary>
+
+* <span style="color: red">Exer</span>gonische Reaktionen ($\Delta G < 0$)
+* <span style="color: red">Ender</span>gonische Reaktionen ($\Delta G > 0$)
+</details>
+
 
 <details>
 <summary><u><b>Wie kann thermische Energie in andere Energieformen umgewandelt werden ?</b></u></summary>
@@ -1004,6 +1045,15 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 * Reaktionsgeschwindigkeit-Temperatur-Regel
 * + 10°C __verdoppelt__ <code style="color: #505a8aff">Geschwindigkeit</code> `biochemischer Reaktionen`
 </details>
+
+
+<details>
+<summary><u><b>Wenn Enzyme die Aktivierungsenergie senken, aber nicht das $\Delta G$ der Reaktion verändern – was bedeutet das für die Frage, ob eine Reaktion grundsätzlich möglich ist, im Vergleich dazu, wie schnell sie abläuft?</b></u></summary>
+
+* wenn eine keine Enzyme
+</details>
+
+
 
 <h2>Enzyme</h2>
 
