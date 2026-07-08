@@ -1192,7 +1192,7 @@ $$K_m = \frac{(k_2 + k_{-1})}{k_1} = \frac{E+S}{ES} = \left(\frac{\text{Zerfall}
 
 * <span class="a1">Einheit<span>: $\frac{mol}{l}$
 
-`Michaelis-Menten-Gleichung``
+`Michaelis-Menten-Gleichung`
 
 $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
