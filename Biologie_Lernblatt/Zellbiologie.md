@@ -296,15 +296,32 @@
 
   <img src="image-21.png" style="heigth: 500px; width:auto ">
 
-  > <details>
-  >   <summary><b><u>Wie lautet d. Hierarchie der Stereoisomere & was bedeuten diese?</u></b></summary>
-  >   
-  >    * `Stereoisomere` = Ü.begriff
-  >       * `Diastereomere` = Sammelbegriff f. „teilweise verschieden“
-  >          * `Epimere` = „sehr eng verwandt“ (nur ein einziger Punkt ist anders).
-  >          * `Anomere` = „Ring-Spezialisten“ (nur die Position am Ring-C-Atom ist anders)
-  >       * `Enantiomere` = „kompletten Gegenteile“ (alle Zentren gespiegelt)
-  >  </details>
+  <details>
+    <summary><b><u>Wie lautet d. Hierarchie der Stereoisomere & was bedeuten diese?</u></b></summary>
+  
+     <script type="module">
+        import mermaid from 'https://jsdelivr.net';
+        mermaid.initialize({ 
+          startOnLoad: true,
+          theme: 'base',
+          themeVariables: {
+            primaryColor: '#ffffff',
+            primaryTextColor: '#1a237e',
+            lineColor: '#000000',
+            nodeBorder: '#000000'
+          }
+        });
+      </script>
+
+
+      <div class="mermaid">
+        graph TD
+          A[stereoisomere] --> B[Diastereoisomer]
+          A --> C[Enantiomere]
+          B --> D[Anamere]
+          B --> E[Epimere]
+      </div>
+  </details>
 </details>
 
 
@@ -1240,28 +1257,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 
 
-<script type="module">
-  import mermaid from 'https://jsdelivr.net';
-  mermaid.initialize({ 
-    startOnLoad: true,
-    theme: 'base',
-    themeVariables: {
-      primaryColor: '#ffffff',
-      primaryTextColor: '#1a237e',
-      lineColor: '#000000',
-      nodeBorder: '#000000'
-    }
-  });
-</script>
 
-
-<div class="mermaid">
-  graph TD
-    A[stereoisomere] --> B[- Diastereoisomer]
-    A --> C[- Enantiomere]
-    B --> D[Anamere]
-    B --> E[- Epimere]
-</div>
 
 
 

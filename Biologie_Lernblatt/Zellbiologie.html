@@ -662,24 +662,32 @@ Die Voraussetzung hierfür ist ein <code>asymmetrisches C-Atom</code>, das an vi
 Da biologische Systeme nach dem <code>Schlüssel-Schloss-Prinzip</code> arbeiten, erkennt die Zelle spezifische <code>chirale Formen</code>, während ihr Spiegelbild oft nicht „andocken“ kann.</li>
 </ul>
   <img src="image-21.png" style="heigth: 500px; width:auto ">
-<blockquote>
-<details>
-  <summary><b><u>Wie lautet d. Hierarchie der Stereoisomere & was bedeuten diese?</u></b></summary>
-<ul>
-<li><code>Stereoisomere</code> = Ü.begriff
-<ul>
-<li><code>Diastereomere</code> = Sammelbegriff f. „teilweise verschieden“
-<ul>
-<li><code>Epimere</code> = „sehr eng verwandt“ (nur ein einziger Punkt ist anders).</li>
-<li><code>Anomere</code> = „Ring-Spezialisten“ (nur die Position am Ring-C-Atom ist anders)</li>
-</ul>
-</li>
-<li><code>Enantiomere</code> = „kompletten Gegenteile“ (alle Zentren gespiegelt)</li>
-</ul>
-</li>
-</ul>
- </details>
-</blockquote>
+  <details>
+    <summary><b><u>Wie lautet d. Hierarchie der Stereoisomere & was bedeuten diese?</u></b></summary>
+<pre><code> &lt;script type=&quot;module&quot;&gt;
+    import mermaid from 'https://jsdelivr.net';
+    mermaid.initialize({ 
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        primaryColor: '#ffffff',
+        primaryTextColor: '#1a237e',
+        lineColor: '#000000',
+        nodeBorder: '#000000'
+      }
+    });
+  &lt;/script&gt;
+
+
+  &lt;div class=&quot;mermaid&quot;&gt;
+    graph TD
+      A[stereoisomere] --&gt; B[Diastereoisomer]
+      A --&gt; C[Enantiomere]
+      B --&gt; D[Anamere]
+      B --&gt; E[Epimere]
+  &lt;/div&gt;
+</code></pre>
+  </details>
 </details>
 <details>
  <summary><b><u>Welche biologische Relevanz haben chirale C-Atome ?</u></b></summary>
@@ -1697,26 +1705,6 @@ $$K_m = \frac{(k_2 + k_{-1})}{k_1} = \frac{E+S}{ES} = \left(\frac{\text{Zerfall}
 </ul>
 <p><code>Michaelis-Menten-Gleichung</code></p>
 <p>$$v = \frac{V_{max}[S]}{K_m + [S]}$$</p>
-<script type="module">
-  import mermaid from 'https://jsdelivr.net';
-  mermaid.initialize({ 
-    startOnLoad: true,
-    theme: 'base',
-    themeVariables: {
-      primaryColor: '#ffffff',
-      primaryTextColor: '#1a237e',
-      lineColor: '#000000',
-      nodeBorder: '#000000'
-    }
-  });
-</script>
-<div class="mermaid">
-  graph TD
-    A[stereoisomere] --> B[- Diastereoisomer]
-    A --> C[- Enantiomere]
-    B --> D[Anamere]
-    B --> E[- Epimere]
-</div>
 <script>
   window.MathJax = {
     tex: {
