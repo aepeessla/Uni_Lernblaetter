@@ -298,8 +298,8 @@
 
   <details>
     <summary><b><u>Wie lautet d. Hierarchie der Stereoisomere & was bedeuten diese?</u></b></summary>
-  
-     <script type="module">
+
+      <script type="module">
         import mermaid from 'https://jsdelivr.net';
         mermaid.initialize({ 
           startOnLoad: true,
@@ -312,8 +312,7 @@
           }
         });
       </script>
-
-
+    
       <div class="mermaid">
         graph TD
           A[stereoisomere] --> B[Diastereoisomer]
