@@ -423,12 +423,6 @@
   * __immer positiv__ (`endotherm`).
 </details>
 
-<details>
- <summary><b><u>Was ist die Gitterenergie ($U_L$)?</u></b></summary>
-
-  * feste Kristallgitter $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{GItterenergie}}\ \ \ \ }$ gasförmige Ionen
-  * __immer positiv__ (`endotherm`).
-</details>
 
 <details>
  <summary><b><u>
