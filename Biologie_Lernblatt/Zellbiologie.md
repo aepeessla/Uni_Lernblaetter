@@ -61,11 +61,11 @@
   }
 
   .mermaid {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
 </style>
 
 
@@ -1261,13 +1261,6 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
     A --> C[- Enantiomere]
     B --> D[Anamere]
     B --> E[- Epimere]
-
-    %% Styling für abgerundete Ecken und Schriftgrößen
-    style A rx:10,ry:10,font-size:16px
-    style B rx:10,ry:10,font-size:16px
-    style C rx:10,ry:10,font-size:16px
-    style D rx:10,ry:10,font-size:16px
-    style E rx:10,ry:10,font-size:16px
 </div>
 
 
