@@ -1254,10 +1254,10 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 <div class="mermaid">
   graph TD
-    A[stereoisomere] --> B[- Diastereoisomer]
-    A --> C[- Enantiomere]
+    A[stereoisomere] --> B[Diastereoisomer]
+    A --> C[Enantiomere]
     B --> D[Anamere]
-    B --> E[- Epimere]
+    B --> E[Epimere]
 
     %% Styling für abgerundete Ecken und Schriftgrößen
     style A rx:10,ry:10,font-size:16px
