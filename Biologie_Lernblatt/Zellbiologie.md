@@ -1245,6 +1245,13 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 </script>
 
 
+<div class="mermaid">
+  graph TD
+    A[Stereoisomere]
+    A -- B{Diasterisomer} --> C[Epimere]
+    A -- B --> D[Anamere]
+    A --> E[Anamere]
+</div>
 
 <div class="mermaid">
   graph TD

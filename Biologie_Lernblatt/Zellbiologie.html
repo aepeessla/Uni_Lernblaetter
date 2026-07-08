@@ -1699,6 +1699,13 @@ $$K_m = \frac{(k_2 + k_{-1})}{k_1} = \frac{E+S}{ES} = \left(\frac{\text{Zerfall}
 </script>
 <div class="mermaid">
   graph TD
+    A[Stereoisomere]
+    A -- B{Diasterisomer} --> C[Epimere]
+    A -- B --> D[Anamere]
+    A --> E[Anamere]
+</div>
+<div class="mermaid">
+  graph TD
     A[Start] --> B{Ist die Zahl gerade?}
     B -- Ja --> C[Teile durch 2]
     B -- Nein --> D[Multipliziere mit 3 und addiere 1]
