@@ -1023,7 +1023,7 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 * $\Delta G = \Delta H - T\Delta S$ 
   * $T\Delta S$ = gebundene Energie
   * $\Delta H$ = Gesamtenergie 
-
+  * $T = °C + 273.15$
   * Reaktion läuft freiwillig ab, wenn $$\boxed{\Delta H \lt 0 \text{ or } \Delta S \gt 0 \text{ or beides True}}$$
 
   ![alt text](image-33.png)
@@ -1108,6 +1108,11 @@ $E + S \rightleftharpoons ES \rightleftharpoons EP \rightleftharpoons E + P$
 
 * <span class="a1">Formel</span>:
   $$\boxed{\text{v} = \frac{V_{max}[S]}{K_m + [S]}}$$
+  * $v$ = Reaktiongeschwindigkeit: __Geschwindigkeit__ `Enzym` $\to$ `Produkt` 
+  * $V_{max}$ = Max. Geschwindigkeit v. Enzym bei gesättigter Substratkonzentration
+  * $[S]$ = Substratkonzentration
+  * $K_m$ = gibt an, __wie "gerne"__ oder __fest__ ein `Enzym` an sein `Substrat` __bindet__:
+    * __niedriger__ $K_m$ = Enzym erreicht schon bei __geringer Substratkonzentration__ d. <span style="color: red"><b>halbe</b> Maximalgeschwindigkeit</span> $\implies$ ___hohe Affinität zum Substrat &  Bindung ist stark___.
 * <span class="a1">Kurve</span>:
   * ![alt text](image-36.png)
 </details>
@@ -1117,6 +1122,7 @@ $E + S \rightleftharpoons ES \rightleftharpoons EP \rightleftharpoons E + P$
 
 * <span class="a1">Formel</span>:
 $$\boxed{1/v = \frac{K_m}{V_{max}} \cdot \frac{1}{[S]}+ \frac{1}{V_{max}}}$$
+  * Form entspricht: $y = m \cdot x + c$
 * <span class="a1">Kurve</span>:
   * ![alt text](image-35.png)
 </details>
@@ -1169,6 +1175,26 @@ $$\boxed{1/v = \frac{K_m}{V_{max}} \cdot \frac{1}{[S]}+ \frac{1}{V_{max}}}$$
 </details>
 
 
+---
+<h1>Probe</h1>
+
+$E + S \xrightleftharpoons[k_{-1}]{k_1} ES \rightleftharpoons EP \xrightleftharpoons{k_2} E + P$
+
+* $k_1$ = Geschwindigkeit E mit Sybstrat bindet: `Affinität`
+* $k_1$ = Geschwindigkeit d. Produktbildung
+* $k_{-1}$ = Geschwidigkeit des Zerfalls des Enzyms & Substrats ohne Reaktion
+
+* k_1, k_2 & k_{-1} = Geschwindigkeits<span style="color: red">konstanten</span>
+
+$$\overbrace{k_1 [E][S]}^{\text{Bindung}} = \overbrace{k_{-1}[ES] + k_2 [ES]}^{\text{Zerfall des ES-Komplexes}}$$
+* Umstellung $\implies$ `Michaelis-Menten-Konstante`
+$$K_m = \frac{(k_2 + k_{-1})}{k_1} = \frac{E+S}{ES} = \left(\frac{\text{Zerfall}}{\text{Bildung}}\right)$$
+
+* <span class="a1">Einheit<span>: $\frac{mol}{l}$
+
+`Michaelis-Menten-Gleichung``
+
+$$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 
 
@@ -1210,17 +1236,24 @@ $$\boxed{1/v = \frac{K_m}{V_{max}} \cdot \frac{1}{[S]}+ \frac{1}{V_{max}}}$$
 
 
 
+<script>
+<meta charset="UTF-8">
+<title>Mein Flussdiagramm</title>
+<script type="module">
+  import mermaid from 'https://jsdelivr.net';
+  mermaid.initialize({ startOnLoad: true });
+</script>
 
 
 
-
-
-
-
-
-
-
-
+<div class="mermaid">
+  graph TD
+    A[Start] --> B{Ist die Zahl gerade?}
+    B -- Ja --> C[Teile durch 2]
+    B -- Nein --> D[Multipliziere mit 3 und addiere 1]
+    C --> E[Ende]
+    D --> E
+</div>
 
 
 

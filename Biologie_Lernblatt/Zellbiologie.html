@@ -1475,15 +1475,10 @@ D. <code style="color: #6879c4ff">Wasser</code> versucht den Störfaktor so klei
 <li>
 <p>$\Delta G = \Delta H - T\Delta S$</p>
 <ul>
-<li>
-<p>$T\Delta S$ = gebundene Energie</p>
-</li>
-<li>
-<p>$\Delta H$ = Gesamtenergie</p>
-</li>
-<li>
-<p>Reaktion läuft freiwillig ab, wenn $$\boxed{\Delta H \lt 0 \text{ or } \Delta S \gt 0 \text{ or beides True}}$$</p>
-</li>
+<li>$T\Delta S$ = gebundene Energie</li>
+<li>$\Delta H$ = Gesamtenergie</li>
+<li>$T = °C + 273.15$</li>
+<li>Reaktion läuft freiwillig ab, wenn $$\boxed{\Delta H \lt 0 \text{ or } \Delta S \gt 0 \text{ or beides True}}$$</li>
 </ul>
 <p><img src="image-33.png" alt="alt text"></p>
 </li>
@@ -1567,7 +1562,18 @@ D. <code style="color: #6879c4ff">Wasser</code> versucht den Störfaktor so klei
 <summary><u><b>Wie lautet d. Formel v. Michealis-Menten Diagramm & wie sieht d. Kurve aus ?</b></u></summary>
 <ul>
 <li><span class="a1">Formel</span>:
-$$\boxed{\text{v} = \frac{V_{max}[S]}{K_m + [S]}}$$</li>
+$$\boxed{\text{v} = \frac{V_{max}[S]}{K_m + [S]}}$$
+<ul>
+<li>$v$ = Reaktiongeschwindigkeit: <strong>Geschwindigkeit</strong> <code>Enzym</code> $\to$ <code>Produkt</code></li>
+<li>$V_{max}$ = Max. Geschwindigkeit v. Enzym bei gesättigter Substratkonzentration</li>
+<li>$[S]$ = Substratkonzentration</li>
+<li>$K_m$ = gibt an, <strong>wie &quot;gerne&quot;</strong> oder <strong>fest</strong> ein <code>Enzym</code> an sein <code>Substrat</code> <strong>bindet</strong>:
+<ul>
+<li><strong>niedriger</strong> $K_m$ = Enzym erreicht schon bei <strong>geringer Substratkonzentration</strong> d. <span style="color: red"><b>halbe</b> Maximalgeschwindigkeit</span> $\implies$ <em><strong>hohe Affinität zum Substrat &amp;  Bindung ist stark</strong></em>.</li>
+</ul>
+</li>
+</ul>
+</li>
 <li><span class="a1">Kurve</span>:
 <ul>
 <li><img src="image-36.png" alt="alt text"></li>
@@ -1579,7 +1585,11 @@ $$\boxed{\text{v} = \frac{V_{max}[S]}{K_m + [S]}}$$</li>
 <summary><u><b>Wie lautet d. Formel v. Lineweaver-Burk Diagramm & wie sieht d. Kurve aus ?</b></u></summary>
 <ul>
 <li><span class="a1">Formel</span>:
-$$\boxed{1/v = \frac{K_m}{V_{max}} \cdot \frac{1}{[S]}+ \frac{1}{V_{max}}}$$</li>
+$$\boxed{1/v = \frac{K_m}{V_{max}} \cdot \frac{1}{[S]}+ \frac{1}{V_{max}}}$$
+<ul>
+<li>Form entspricht: $y = m \cdot x + c$</li>
+</ul>
+</li>
 <li><span class="a1">Kurve</span>:
 <ul>
 <li><img src="image-35.png" alt="alt text"></li>
@@ -1651,6 +1661,50 @@ $$\boxed{1/v = \frac{K_m}{V_{max}} \cdot \frac{1}{[S]}+ \frac{1}{V_{max}}}$$</li
 </li>
 </ul>
 </details>
+<hr>
+<h1>Probe</h1>
+<p>$E + S \xrightleftharpoons[k_{-1}]{k_1} ES \rightleftharpoons EP \xrightleftharpoons{k_2} E + P$</p>
+<ul>
+<li>
+<p>$k_1$ = Geschwindigkeit E mit Sybstrat bindet: <code>Affinität</code></p>
+</li>
+<li>
+<p>$k_1$ = Geschwindigkeit d. Produktbildung</p>
+</li>
+<li>
+<p>$k_{-1}$ = Geschwidigkeit des Zerfalls des Enzyms &amp; Substrats ohne Reaktion</p>
+</li>
+<li>
+<p>k_1, k_2 &amp; k_{-1} = Geschwindigkeits<span style="color: red">konstanten</span></p>
+</li>
+</ul>
+<p>$$\overbrace{k_1 [E][S]}^{\text{Bindung}} = \overbrace{k_{-1}[ES] + k_2 [ES]}^{\text{Zerfall des ES-Komplexes}}$$</p>
+<ul>
+<li>
+<p>Umstellung $\implies$ <code>Michaelis-Menten-Konstante</code>
+$$K_m = \frac{(k_2 + k_{-1})}{k_1} = \frac{E+S}{ES} = \left(\frac{\text{Zerfall}}{\text{Bildung}}\right)$$</p>
+</li>
+<li>
+<p><span class="a1">Einheit<span>: $\frac{mol}{l}$</p>
+</li>
+</ul>
+<p>`Michaelis-Menten-Gleichung``</p>
+<p>$$v = \frac{V_{max}[S]}{K_m + [S]}$$</p>
+<script>
+<meta charset="UTF-8">
+<title>Mein Flussdiagramm</title>
+<script type="module">
+  import mermaid from 'https://jsdelivr.net';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+<div class="mermaid">
+  graph TD
+    A[Start] --> B{Ist die Zahl gerade?}
+    B -- Ja --> C[Teile durch 2]
+    B -- Nein --> D[Multipliziere mit 3 und addiere 1]
+    C --> E[Ende]
+    D --> E
+</div>
 <script>
   window.MathJax = {
     tex: {
