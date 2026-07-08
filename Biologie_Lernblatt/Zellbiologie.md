@@ -997,8 +997,8 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 <details>
 <summary><u><b>Wie nennt man eine un- & frewiwillige Reaktion ?</b></u></summary>
 
-* <span style="color: red">Exer</span>gonische Reaktionen ($\Delta G < 0$)
-* <span style="color: red">Ender</span>gonische Reaktionen ($\Delta G > 0$)
+* freiwillig $\implies$ <span style="color: red">Exer</span>gonische Reaktionen ($\Delta G < 0$)
+* unfreiwillig $\implies$ <span style="color: red">Ender</span>gonische Reaktionen ($\Delta G > 0$)
 </details>
 
 
