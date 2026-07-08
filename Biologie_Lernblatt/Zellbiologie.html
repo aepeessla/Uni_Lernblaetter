@@ -1697,19 +1697,25 @@ $$K_m = \frac{(k_2 + k_{-1})}{k_1} = \frac{E+S}{ES} = \left(\frac{\text{Zerfall}
 </ul>
 <p><code>Michaelis-Menten-Gleichung</code></p>
 <p>$$v = \frac{V_{max}[S]}{K_m + [S]}$$</p>
-<script>
-<meta charset="UTF-8">
-<title>Mein Flussdiagramm</title>
 <script type="module">
   import mermaid from 'https://jsdelivr.net';
-  mermaid.initialize({ startOnLoad: true });
+  mermaid.initialize({ 
+    startOnLoad: true,
+    theme: 'base',
+    themeVariables: {
+      primaryColor: '#ffffff',
+      primaryTextColor: '#1a237e',
+      lineColor: '#000000',
+      nodeBorder: '#000000'
+    }
+  });
 </script>
 <div class="mermaid">
   graph TD
-    A[stereoisomere] --> B[Diastereoisomer]
-    A --> C[Enantiomere]
+    A[stereoisomere] --> B[- Diastereoisomer]
+    A --> C[- Enantiomere]
     B --> D[Anamere]
-    B --> E[Epimere]
+    B --> E[- Epimere]
 <pre><code>%% Styling für abgerundete Ecken und Schriftgrößen
 style A rx:10,ry:10,font-size:16px
 style B rx:10,ry:10,font-size:16px

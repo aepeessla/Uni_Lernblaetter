@@ -1240,24 +1240,27 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 
 
-
-
-
-<script>
-<meta charset="UTF-8">
-<title>Mein Flussdiagramm</title>
 <script type="module">
   import mermaid from 'https://jsdelivr.net';
-  mermaid.initialize({ startOnLoad: true });
+  mermaid.initialize({ 
+    startOnLoad: true,
+    theme: 'base',
+    themeVariables: {
+      primaryColor: '#ffffff',
+      primaryTextColor: '#1a237e',
+      lineColor: '#000000',
+      nodeBorder: '#000000'
+    }
+  });
 </script>
 
 
 <div class="mermaid">
   graph TD
-    A[stereoisomere] --> B[Diastereoisomer]
-    A --> C[Enantiomere]
+    A[stereoisomere] --> B[- Diastereoisomer]
+    A --> C[- Enantiomere]
     B --> D[Anamere]
-    B --> E[Epimere]
+    B --> E[- Epimere]
 
     %% Styling für abgerundete Ecken und Schriftgrößen
     style A rx:10,ry:10,font-size:16px
@@ -1266,6 +1269,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
     style D rx:10,ry:10,font-size:16px
     style E rx:10,ry:10,font-size:16px
 </div>
+
 
 
 
