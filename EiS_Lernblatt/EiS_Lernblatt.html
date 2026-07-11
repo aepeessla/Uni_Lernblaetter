@@ -1150,6 +1150,10 @@ existiert.</p>
 */</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setCount</span></span>(key: <span class="hljs-type">A</span>, count: <span class="hljs-type">Long</span>): <span class="hljs-type">Unit</span> = ???
 </div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-keyword">if</span> (count &lt; <span class="hljs-number">0</span>) {
+  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span>  <span class="hljs-type">IllegalArgumentException</span>(<span class="hljs-string">&quot;Der count muss positiv sein !&quot;</span>)
+}
+</div></code></pre>
   </details>
   </details>
 </details>
