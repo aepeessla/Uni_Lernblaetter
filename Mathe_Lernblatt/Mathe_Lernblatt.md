@@ -48,6 +48,7 @@
     padding:3px;
     border-radius: 5px
   }
+  
   img {
     width: 500px;
     height: auto
@@ -215,10 +216,15 @@
 ![alt text](image.png)
 </details>
 
+<details>
+<summary><u><b></b></u></summary>
+
+
+</details>
 
 
 
-$$\left( x - \begin{pmatrix} -2 \\ 1 \\ 3 \end{pmatrix} \right) \cdot \begin{pmatrix} 5 \\ -15 \\ 6 \end{pmatrix}$$
+
 
 
 
