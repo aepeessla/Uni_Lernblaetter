@@ -385,6 +385,37 @@ code {
 </li>
 </ul>
 </details>
+<details>
+<summary><u><b>Du hast eine Liste: <code>scala.collection.mutable.Map[A]</code> & möchtest den Wert bekommen, wenn es nicht vorhanden ist, dann soll (0: Long) zurückgegeben werden, wann es vorhanden ist, dann soll der Wert zurückgegeben werden.</b></u></summary>
+<ul>
+<li><code>val current_count = &lt;list&gt;.getOrElse(key, 0L)</code></li>
+</ul>
+</details>
+<details>
+<summary><u><b>Entpackt .getOrElse() automatisch oder muss muss ich es mit .head extrahieren ?</b></u></summary>
+<ul>
+<li>Ja, d- Elem. wird als &quot;nacktes&quot; Elem. extrahiert</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Wie macht man aus einer Liste eine String-Repräsentation ?</b></u></summary>
+<ul>
+<li><code>&lt;list&gt;.mkString(&lt;Was soll am Angfang stehen&gt;, &lt;Wie sollen die Elemente getrennt werden&gt;, &lt;was soll am Ende stehen&gt;)</code></li>
+</ul>
+</details>
+<details>
+<summary><u><b>Wie funktioniert <code>override def equals(obj: any): Boolean = ???</code> ?</b></u></summary>
+<ul>
+<li>
+<p>Wir vgl. unser aktuelle Objekt(<code>this</code>) mit einer anderen(<code>obj</code>)</p>
+<details>
+<summary><u><b>Wie wird `equals` aufgerufen ?</b></u></summary>
+<pre class="hljs"><code><div>&lt;obj1&gt;.equals(&lt;obj2&gt;)
+</div></code></pre>
+</details>
+</li>
+</ul>
+</details>
 &lt;script>
   window.MathJax = {
     tex: {
