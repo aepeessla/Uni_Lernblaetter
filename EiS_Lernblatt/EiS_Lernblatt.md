@@ -798,7 +798,11 @@ def topStudents(students: Table, exams: Table): Table = {
   */
   def setCount(key: A, count: Long): Unit = ???
   ```
-
+  ```scala
+  if (count < 0) {
+    throw new  IllegalArgumentException("Der count muss positiv sein !")
+  }
+  ```
   </details>
   </details>
 
