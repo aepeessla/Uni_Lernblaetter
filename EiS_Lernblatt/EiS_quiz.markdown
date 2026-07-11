@@ -1,8 +1,43 @@
 <style>
-    body {
-        color: black;
-        background: white
-    }
+  code {
+    background-color: #e9e9e9ff;
+    color: #999999ff;
+    padding: 2px 6px;          /* Ein bisschen Abstand, damit es gut aussieht */
+    border-radius: 3px;  
+       }
+  details {
+    border: #e4e3e3ff 1px solid;
+  }
+
+  h1 {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  h2 {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  h3 {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  body{
+    background: #ffffff;
+    color: black;
+  }
+
+  .sub {
+    font-weight: bold;
+    text-decoration: underline
+  }
+
+  .dimmed {
+    color: #888; /* Ein dezentes Grau */
+    opacity: 0.6;
+  }
 </style>
 
 
@@ -42,11 +77,24 @@
 * Wir vgl. unser aktuelle Objekt(`this`) mit einer anderen(`obj`)
   <details>
   <summary><u><b>Wie wird `equals` aufgerufen ?</b></u></summary>
-  
+
   ```scala
   <obj1>.equals(<obj2>)
   ```
+  </details>
 
+  <details>
+  <summary><u><b>Wie guckt man, ob das ü.geb. Objekt den gleichen Typ hat ?</b></u></summary>
+  
+  * Bsp.: wir haben eine class Counter(inhalt: Iterable[A])
+    * wir haben also eine Objekt mit dem Typen Counter
+  * Kontrolle:
+    ```scala
+    obj match {
+      case other: Counter[_] => <tatsächl. Vgl.>
+      case _ => false
+    }
+    ```
   </details>
 </details>
 

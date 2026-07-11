@@ -366,10 +366,45 @@ code {
     });
   </script>
 &lt;style>
-    body {
-        color: black;
-        background: white
-    }
+  code {
+    background-color: #e9e9e9ff;
+    color: #999999ff;
+    padding: 2px 6px;          /* Ein bisschen Abstand, damit es gut aussieht */
+    border-radius: 3px;  
+       }
+  details {
+    border: #e4e3e3ff 1px solid;
+  }
+
+  h1 {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  h2 {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  h3 {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  body{
+    background: #ffffff;
+    color: black;
+  }
+
+  .sub {
+    font-weight: bold;
+    text-decoration: underline
+  }
+
+  .dimmed {
+    color: #888; /* Ein dezentes Grau */
+    opacity: 0.6;
+  }
 &lt;/style>
 <details>
 <summary><u><b>Was muss ich verwenden, wenn ich eine Liste für Key-Value-Parre verwenden möchte ? </b></u></summary>
@@ -412,6 +447,22 @@ code {
 <summary><u><b>Wie wird `equals` aufgerufen ?</b></u></summary>
 <pre class="hljs"><code><div>&lt;obj1&gt;.equals(&lt;obj2&gt;)
 </div></code></pre>
+</details>
+<details>
+<summary><u><b>Wie guckt man, ob das ü.geb. Objekt den gleichen Typ hat ?</b></u></summary>
+<ul>
+<li>Bsp.: wir haben eine class Counter(inhalt: Iterable[A])
+<ul>
+<li>wir haben also eine Objekt mit dem Typen Counter</li>
+</ul>
+</li>
+<li>Kontrolle:<pre class="hljs"><code><div>obj <span class="hljs-keyword">match</span> {
+  <span class="hljs-keyword">case</span> other: <span class="hljs-type">Counter</span>[_] =&gt; &lt;tatsächl. <span class="hljs-type">Vgl</span>.&gt;
+  <span class="hljs-keyword">case</span> _ =&gt; <span class="hljs-literal">false</span>
+}
+</div></code></pre>
+</li>
+</ul>
 </details>
 </li>
 </ul>
