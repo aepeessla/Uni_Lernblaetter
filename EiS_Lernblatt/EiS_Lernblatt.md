@@ -651,6 +651,7 @@ def naturalJoin(other: Table): Table = {
 </details>
 
 ---
+
 <h1>Aufgabe 5</h1>
 
 <details>
@@ -736,6 +737,44 @@ def topStudents(students: Table, exams: Table): Table = {
 </details>
 
 
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -744,202 +783,29 @@ def topStudents(students: Table, exams: Table): Table = {
 
 <h1>Übung 5</h1>
 
-<h2>Aufgabe 1</h2>
-
 <details>
-<summary><u><b>Aufgabe 1</b></u></summary>
+<summary><u><b>Übung 5</b></u></summary>
+  
+  <details>
+  <summary><u><b>Aufgabe 1</b></u></summary>
+  <details>
+  <summary><u><b><code>def setCount(key: A, count: Long): Unit = ???</code></b></u></summary>
 
-<h3>Geg. Code:</h3>
-
-```scala
-package datastructures
-
-class Counter[A](initialElements: Iterable[A]) {
-
-    private val counts = scala.collection.mutable.HashMap[A, Long]()
-    
-    /** Sets the count for the specified key to the specified value.
-     *
-     * @throws IllegalArgumentException if the specified count is negative
-     */
-    def setCount(key: A, count: Long): Unit = ???
-
-    /** Modifies the count for the specified key by adding the specified amount. Count cannot drop below zero. */
-    def modifyCount(key: A, amount: Long): Unit = ???
-
-    /** Returns the count for the specified key. */
-    def getCount(key: A): Long = ???
-
-    /** Increments the count by one for each of the specified keys. */
-    def incrementCounts(keys: Iterable[A]): Unit = ???
-
-    /** Decrements the count by one for each of the specified keys. Counts cannot drop below zero. */
-    def decrementCounts(keys: Iterable[A]): Unit = ???
-
-    override def toString: String = ???
-
-    override def equals(obj: Any): Boolean = ???
-
-    override def hashCode: Int = ???
-}
-```
-<details>
-<summary><u><b><code>def setCount(key: A, count: Long): Unit = ???</code></b></u></summary>
-
-> setCount setzt den Zählwert eines Elements & wirft bei negativen Werten eine IllegalArgumentException.
-
-* meine Kontrolle, ob `count < 0`
   ```scala
-  def setCount(key: A, count: Long): Unit = {
-      if (count < 0) {
-          throw new IllegalArgumentException("Der count darf nicht negativ sein !")
-      }
-  }
+  /** Sets the count for the specified key to the specified value.
+  *
+  * @throws IllegalArgumentException if the specified count is negative
+  */
+  def setCount(key: A, count: Long): Unit = ???
   ```
 
-<h3>Wie speichern wir die Counts ?</h3>
-
-<code>private val counts = scala.<code style="color: #ff6a00ff">collection.mutable.</code><code style="color: #a356a5ff">HashMap</code><code style="color: #49a3d6ff">[A, Long]</code>()</code>
-
-* `collection.mutable.HashMap[A, Long]` hier def. wir den Datentyp 
-  * <code style="color: #a356a5ff">HashMap</code> $\implies$ key: A $\to$ Value: Long
-  * <code style="color: #49a3d6ff">[A, Long]</code> $\implies$ Datentypen für Key und Value
-* `()` $\implies$ ruft Konstruktor d. HashMap auf $\to$ erzeugt eine neue, leere Instanz
-
-<h3>Wie Werte zählen ?</h3>
-
-* gehe durch die Liste
-  * wenn Elem. $\lnot$ in counts, dann $$A = key \ | \ count = \text{Anzahl v. key in Iterable}$$
-  * __in counts__: `HashMap[(A -> Long)]` hinzufügen
-
-```scala
-    /** Sets the count for the specified key to the specified value.
-     *
-     * @throws IllegalArgumentException if the specified count is negative
-     */
-    def setCount(key: A, count: Long): Unit = {
-        if (count < 0) {
-            throw new IllegalArgumentException("Der count darf nicht negativ sein !")
-        }
-        
-        // wenn nicht enthalten -> füge als neues Element
-        if (!counts.contains(key)){
-          // Elem. Anzahl zählen
-          count(key) = count
-        }
-    }
-```
-
-<h3><span style ="color: red">Korrektur</span></h3>
-
-* HashMap ü.schriebt autom. $\implies$ kein if (!counts.contains(key)) notw.
-  * ```scala 
-    /** Sets the count for the specified key to the specified value.
-     *
-     * @throws IllegalArgumentException if the specified count is negative
-     */
-    def setCount(key: A, count: Long): Unit = {
-        if (count < 0) {
-            throw new IllegalArgumentException("Der count darf nicht negativ sein !")
-        }
-        
-        // wenn nicht enthalten -> füge als neues Element
-          counts(key) = count
-    }
-    ```
-</details>
-
-<details>
-<summary><u><b><code>modifyCount(key: A, amount: Long): Unit = ???</code></b></u></summary>
-
-```scala
-def modifyCount(key: A, amount: Long): Unit = {
-    val newCount = getCount(key) + amount
-    if (newCount < 0) {
-        counts(key) = 0
-    } else {
-        counts(key) = newCount
-    }
-}
-```
-* wenn $\boxed{key.value + amount < 0 = 0}$
-* ansonsten $key \to amount$
-</details>
-
-<details>
-<summary><u><b><code>def getCount(key: A): Long = ???</code></b></u></summary>
-
-```scala
-def getCount(key: A): Long = {
-    counts.getOrElse(key, 0L)
-}
-```
-* <code style="color: #ff6a00ff">0L</code>= 0: Long
-</details>
-
-<details>
-<summary><u><b><code>def incrementCounts(keys: Iterable[A]): Unit = ???</code></b></u></summary>
-
-```scala
-/** Increments the count by one for each of the specified keys. */
-def incrementCounts(keys: Iterable[A]): Unit = {
-    for (key <- keys) {
-        modifyCount(key, 1)
-    }
-}
-```
-* wir rufen einf. `modifyCount` auf, weil man hier bereits eine Addition durchführt
-* zudem wird hier schon überprüft, ob `count` $\lt 0$ ist
-</details>
-
-<details>
-<summary><u><b><code>def decrementCounts(keys: Iterable[A]): Unit = ???</code></b></u></summary>
-
-```scala
-/** Decrements the count by one for each of the specified keys. Counts cannot drop below zero. */
-def decrementCounts(keys: Iterable[A]): Unit = {
-    for (key <- keys) {
-        modifyCount(key, -1)
-    }
-}
-```
-* wir rufen einf. `modifyCount` auf, weil man hier bereits eine Addition durchführt
-* zudem wird hier schon überprüft, ob `count` $\lt 0$ ist
-</details>
-
-<details>
-<summary><u><b><code>override def toString: String = ???</code></b></u></summary>
-
-```scala
-override def toString: String = {
-  // Anstatt k zu verwenden, kannst du das Paar direkt entpacken
-  val toString = counts.map{ 
-      case (key, value) => s"($key: $value)"}.mkString
-  "[" + toString + "]"
-}
-```
-</details>
-
-<details>
-<summary><u><b><code>override def equals(obj: Any): Boolean = ???</code></b></u></summary>
-
-```scala
-override def equals(obj: Any): Boolean = {
-    obj match{
-        case counter: Counter[_] => this.counts == counter.counts
-        case _ => false
-    }
-}
-```
-* <code style="color: #ff6a00ff">case counter: Counter[_]</code>: Damit überp. wir, ob `counter` v. Typ `Counter` ist
-* <code style="color: #43ad5cff">case counter: Counter[_]</code>: `HashMaps` werden autom. auf `key` & `value` __kontrolliert__
-</details>
+  </details>
+  </details>
 
 
 
 
 </details>
-
 
 
 
