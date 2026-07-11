@@ -94,7 +94,36 @@
 </details>
 
 
+<details>
+<summary><u><b>Wie erstelle ich meinen eigenen <code>hashCode</code> ?</b></u></summary>
 
+* wir packen d. __einzelnen Parameter__ d. Klasse oder jegliches <span style="color: red">in einen Tupel</span> & fügen am Ende `.##` hinzu
+  
+  * <span class="sub">Bsp.</span>:
+    ```scala
+    class Person(val vorname: String, val nachname: String, val alter: Int) {
+      override def equals(obj: Any): Boolean = {
+          obj match {
+              case p: Person => vorname == p.vorname && nachname == p.nachname && alter == p.alter
+              case _         => false
+          }
+      }
+      // TODO: Implementiere hashCode
+      override def hashCode: Int = (vorname, nachname, alter).##
+    }
+    ```
+    <details>
+    <summary><u><b>Worauf muss ich achten, wenn ich Parameter für den hashCode verwenden möchte ?</b></u></summary>
+    
+    * $parameterEquals \equiv parameterHashCode$ 
+    </details>
+
+    <details>
+    <summary><u><b>Was währe empfehlenswert, wenn wir etwas f. den hashCode verwenden möchten ?</b></u></summary>
+
+    * Das verw. eines Objekts, dass unveränderl. ist
+    </details>
+</details>
 
 
 
