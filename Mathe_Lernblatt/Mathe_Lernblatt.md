@@ -48,6 +48,10 @@
     padding:3px;
     border-radius: 5px
   }
+  img {
+    width: 500px;
+    height: auto
+  }
 </style>
 
 <h1>Normalenformen</h1>
@@ -214,7 +218,7 @@
 
 
 
-
+$$\left( x - \begin{pmatrix} -2 \\ 1 \\ 3 \end{pmatrix} \right) \cdot \begin{pmatrix} 5 \\ -15 \\ 6 \end{pmatrix}$$
 
 
 
