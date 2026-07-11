@@ -33,11 +33,6 @@
     font-weight: bold;
     text-decoration: underline
   }
-
-  .dimmed {
-    color: #888; /* Ein dezentes Grau */
-    opacity: 0.6;
-  }
 </style>
 
 
@@ -86,9 +81,9 @@
   <details>
   <summary><u><b>Wie guckt man, ob das ü.geb. Objekt den gleichen Typ hat ?</b></u></summary>
   
-  * Bsp.: wir haben eine class Counter(inhalt: Iterable[A])
+  * <span class="sub">Bsp.</span>: wir haben eine `class Counter(inhalt: Iterable[A])`
     * wir haben also eine Objekt mit dem Typen Counter
-  * Kontrolle:
+  * <span class="sub">Kontrolle</span>:
     ```scala
     obj match {
       case other: Counter[_] => <tatsächl. Vgl.>
