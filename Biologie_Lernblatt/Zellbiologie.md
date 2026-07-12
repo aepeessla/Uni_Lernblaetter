@@ -1095,7 +1095,7 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 
 <h2>Enzyme</h2>
 
-<details>
+<details class="f">
 <summary><u><b>Was sind die Enzymklassifikation & deren Aufgaben ?</b></u></summary>
 
 1) Oxidoreduktease $\to$ __Oxidation & Reduktionsreaktionen__
@@ -1107,7 +1107,7 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 1) Translokase $\to$ Carrier
 </details>
 
-<details>
+<details class="r">
 <summary><u><b>Wie lautet d. EnzymCommissionnummer(EC Nummer) ?</b></u></summary>
 
 * EC 3.4.17.1
@@ -1117,20 +1117,20 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
   * 1 = Nummer des Enzyms in der Unterklasse
 </details>
 
-<details>
+<details class="f">
 <summary><u><b>Erkläre das Enzym-Substrak.Komplex anhand der Hexokinase.</b></u></summary>
 
-* <code style="color: #ff6a00ff">Hexokinase</code> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{trifft auf}}\ \ \ \ }$ __Substrat__(<code style="color: #674026ff">Glucose</code> &  <code style="color: #9bb832ff">ATP</code>) $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Anpassung}}\ \ \ \ }$ Substrat trifft auf <span style="color: red">aktive Zentrum</span> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Denaturierung}}\ \ \ \ }$ <span style="color: red">Schlüssel-Schloss-Prinzip</span> mögl. $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Enzym katalysiert Reaktion}}\ \ \ \ }$ __neue Produkte__ $=$ <code style="color: #3b2415ff">Glucose-6-Phosphat</code> & <code style="color: #5b6c1dff">ADP</code> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{&lnot Schlüssel-Schloss-Prinzip}}\ \ \ \ }$ neue Produkte lösen sich ab $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Ennzym wieder}}\ \ \ \ }$ __Ursprüngl. Form__ f. nächsten Durchgang
+* <code style="color: #ff6a00ff">Hexokinase</code> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{trifft auf}}\ \ \ \ }$ __Substrat__(<code style="color: #674026ff">Glucose</code> &  <code style="color: #9bb832ff">ATP</code>) $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Anpassung}}\ \ \ \ }$ Substrat trifft auf <span style="color: red">aktive Zentrum</span> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Denaturierung}}\ \ \ \ }$ <span style="color: red">Schlüssel-Schloss-Prinzip</span> mögl. $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Enzym katalysiert Reaktion}}\ \ \ \ }$ __neue Produkte__ $=$ <code style="color: #3b2415ff">Glucose-6-Phosphat</code> & <code style="color: #5b6c1dff">ADP</code> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{kein Schlüssel-Schloss-Prinzip}}\ \ \ \ }$ neue Produkte lösen sich ab $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Ennzym wieder}}\ \ \ \ }$ __Ursprüngl. Form__ f. nächsten Durchgang
 </details>
 
-<details>
+<details class="r">
 <summary><u><b>Wie nennt man d. Eigenschaften d. Enzyme ?</b></u></summary>
 
 * `Substratspezifität`
 * `Wirkungsspezifität`
 </details>
 
-<details>
+<details class="r">
 <summary><u><b>Was kann d. Fähigkeit eines Enzyms verändern ?</b></u></summary>
 
 * Temperatur
@@ -1237,10 +1237,42 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 
 
+# Zellorganellen
+
+## Zilien
+
+<details>
+<summary><u><b>Was sind d. Zilien ?</b></u></summary>
+
+Das sind `kleine Härrchen` d, aus `Mikrotubuli` bestehen & f. den Transport zuständig sind
+  * <span class="sub">Beispiel:</span>
+    * Eileiter (um die Eizelle zu transportieren)
+    * Atemwege (Schleim raustranportieren)
+</details>
+
+
+## Mikroskop
+
+<details>
+<summary><u><b> Wie wird bei gewöhnl. Mikroskopen & bei Elektromikroskopen d. heranzommen ermögl. ?</b></u></summary>
+
+* <span class="sub">gewöhnlicher Mikroskop</span>
+  * `Glaslinsen` __biegen__ oder __brechen__ <code style="color: #56a6bcff">Lichtstrahlen</code> 
+* <span class="sub">Elektromikroskop</span>
+  * statt `Licht` $\to$ `Elektronen`
+  * `Probe` muss __speziell präpariert__ werden + im __Vakkum__ sein
+  * statt `Linsen` $\to$ `spulenförm. Elektromagnete` (hierdurch laufen Elektronenstrahlen)
+  * Bild als Foto auf Bildschirm erzeugt
+</details>
 
 
 
+<details>
+<summary><u><b>Was sind die einzelnen Ebenen eines Transmissions-Elektronenmikroskops(TEM) & eines Lichtmikroskops(LM) ?</b></u></summary>
 
+* <span class="sub">TEM</span>
+  * ![alt text](image-39.png)
+</details>
 
 
 
