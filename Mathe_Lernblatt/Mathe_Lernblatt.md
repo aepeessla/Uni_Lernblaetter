@@ -48,6 +48,11 @@
     padding:3px;
     border-radius: 5px
   }
+
+  img {
+    width: 500px;
+    height: auto
+  }
 </style>
 
 <h1>Normalenformen</h1>
@@ -211,7 +216,28 @@
 ![alt text](image.png)
 </details>
 
+<details>
+<summary><u><b>Wie berechne ich die parametrische Form von Ebenen ?</b></u></summary>
 
+$\boxed{x_1 + x_2 + x_3 = 4}$
+1) Punkte finden
+   * $A(4, 0, 0)$ (für $x_1=4, x_2=0, x_3=0$)
+   * $B(0, 4, 0)$ (für $x_1=0, x_2=4, x_3=0$)
+   * $C(0, 0, 4)$ (für $x_1=0, x_2=0, x_3=4$)
+2) Vektoren bilden
+  * Richtungsvektoren berechnen:
+    * $u = AB = B - A= \begin{pmatrix} 0-4 \\ 4-0 \\ 0-0 \end{pmatrix} = \begin{pmatrix} -4 \\ 4 \\ 0 \end{pmatrix}$
+
+    * $v = AC = C - A= \begin{pmatrix} 0-4 \\ 0-0 \\ 4-0 \end{pmatrix} = \begin{pmatrix} -4 \\ 0 \\ 4 \end{pmatrix}$
+1) Parameterform:
+   * $\vec{x} = \begin{pmatrix} 4 \\ 0 \\ 0 \end{pmatrix} + r \cdot \begin{pmatrix} -4 \\ 4 \\ 0 \end{pmatrix} + s \cdot \begin{pmatrix} -4 \\ 0 \\ 4 \end{pmatrix} \quad (r, s \in \mathbb{R})$
+</details>
+
+<details>
+<summary><u><b>Wie berechnet man den Schnittpunkt 2er Ebenen ?</b></u></summary>
+
+1) 
+</details>
 
 
 

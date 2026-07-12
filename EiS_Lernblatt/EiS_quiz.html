@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Mathe_Lernblatt.md</title>
+<title>EiS_quiz.markdown</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
 <style>
@@ -371,391 +371,720 @@ code {
     });
   </script>
 &lt;style>
-  @page {
-      size: A4;
-      margin: 20mm;
+  code {
+    background-color: #e9e9e9ff;
+    color: #999999ff;
+    padding: 2px 6px;          /* Ein bisschen Abstand, damit es gut aussieht */
+    border-radius: 3px;  
   }
 
-  body {
-      background: #ffffffff;
-      color: #000000ff;
+  details {
+    border: #e4e3e3ff 1px solid;
+    padding: 8px
   }
 
-  h1{
-      font-weight: bold;
-      text-decoration: underline;
+  h1 {
+    text-decoration: underline;
+    font-weight: bold;
   }
 
-  h2{
-      font-weight: bold;
-      text-decoration: underline;
-  }
-  table {
-    border-collapse: collapse; /* Verhindert doppelte Rahmenlinien */
-    width: 100%;
+  h2 {
+    text-decoration: underline;
+    font-weight: bold;
   }
 
-  table, th, td {
-    border: 1px solid black; /* Setzt einen schwarzen, ein Pixel breiten Rahmen */
+  h3 {
+    text-decoration: underline;
+    font-weight: bold;
   }
 
-  th, td {
-    padding: 8px; /* Fügt etwas Luft zwischen Text und Rahmen ein */
-    text-align: center;
+  body{
+    background: #ffffff;
+    color: black;
   }
 
-  .ÜSchrift{
+  .sub {
     font-weight: bold;
     text-decoration: underline
   }
 
-  details {
-    border: 1px black solid;
-    padding: 5px
-  }
 
-  code {
-    background: #eaeaeaff;
-    color: #7778b8ff;
-    padding:3px;
-    border-radius: 5px
-  }
-  
-  img {
-    width: 500px;
-    height: auto
-  }
+
+  .richtig { color: green; font-weight: bold; }
+  .falsch { color: red; font-weight: bold; }
 &lt;/style>
-<h1>Normalenformen</h1>
-<h2> Was ist eine Normalform ?</h2>
+<details>
+<summary><u><b>Was muss ich verwenden, wenn ich eine Liste für Key-Value-Parre verwenden möchte ? </b></u></summary>
 <ul>
-<li><code>allgemeine Form</code> = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>b</mi><mi>x</mi><mi>y</mi><mo>+</mo><mi>c</mi><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><mi>d</mi><mi>x</mi><mo>+</mo><mi>e</mi><mi>y</mi><mo>+</mo><mi>f</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">ax^2 + 2bxy + cy^2 + dx + ey + f = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">2</span><span class="mord mathnormal">b</span><span class="mord mathnormal">x</span><span class="mord mathnormal" style="margin-right:0.0359em;">y</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0085em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">c</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">ey</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></li>
-<li>Durch <strong>Drehung d. Koordinate</strong> wird  d. <strong>Term xy eliminiert</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder accentunder="true"><mrow><mtext>    </mtext><mstyle mathcolor="#83b7ea"><mtext>Normalform sieht dann so aus</mtext></mstyle><mtext>    </mtext></mrow><mo stretchy="true">→</mo></munder></mrow><annotation encoding="application/x-tex">\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Normalform sieht dann so aus}}\ \ \ \ }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2164em;vertical-align:-0.522em;"></span><span class="mord accentunder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span class="svg-align" style="top:-2.478em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.522em" viewBox="0 0 400000 522" preserveAspectRatio="xMaxYMin slice"><path d="M0 241v40h399891c-47.3 35.3-84 78-110 128
+<li>
+<p><code>Map</code></p>
+  <details>
+  <summary><u><b>Wie mache ich sie veränderlich ?</b></u></summary>
+<ul>
+<li>
+<input type="text" id="eingabe" placeholder="Wort eingeben...">
+<div id="ergebnis"></div>
+&lt;script>
+const musterloesung = "scala.collection.mutable.Map"; // Hier das Zielwort definieren
+const inputFeld = document.getElementById("eingabe");
+const ergebnisDiv = document.getElementById("ergebnis");
+<p>inputFeld.addEventListener(&quot;keypress&quot;, function(event) {
+if (event.key === &quot;Enter&quot;) {
+const nutzerEingabe = inputFeld.value;</p>
+<pre><code>    if (nutzerEingabe === musterloesung) {
+        ergebnisDiv.innerHTML = `&lt;span class=&quot;richtig&quot;&gt;Richtig!&lt;/span&gt;`;
+    } else {
+        ergebnisDiv.innerHTML = `&lt;span class=&quot;falsch&quot;&gt;Falsch!&lt;/span&gt; Das Wort war nicht &quot;${nutzerEingabe}&quot;.`;
+    }
+</code></pre>
+<p>}
+});
+&lt;/script></p>
+</li>
+</ul>
+  </details>
+</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Du hast eine Liste: <code>scala.collection.mutable.Map[A]</code> & möchtest den Wert bekommen, wenn es nicht vorhanden ist, dann soll (0: Long) zurückgegeben werden, wann es vorhanden ist, dann soll der Wert zurückgegeben werden.</b></u></summary>
+<ul>
+<li><code>val current_count = &lt;list&gt;.getOrElse(key, 0L)</code></li>
+</ul>
+</details>
+<details>
+<summary><u><b>Entpackt .getOrElse() automatisch oder muss muss ich es mit .head extrahieren ?</b></u></summary>
+<ul>
+<li><code>.getOrElse()</code> entpackt autom.</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Wie macht man aus einer Liste eine String-Repräsentation ?</b></u></summary>
+<ul>
+<li><code>&lt;list&gt;.mkString(&lt;Was soll am Angfang stehen&gt;, &lt;Wie sollen die Elemente getrennt werden&gt;, &lt;was soll am Ende stehen&gt;)</code></li>
+</ul>
+</details>
+<details>
+<summary><u><b>Wie funktioniert <code>override def equals(obj: any): Boolean = ???</code> ?</b></u></summary>
+<ul>
+<li>
+<p>Wir vgl. unser aktuelle Objekt(<code>this</code>) mit einem anderen(<code>obj</code>)</p>
+<details>
+<summary><u><b>Wie wird `equals` aufgerufen ?</b></u></summary>
+<pre class="hljs"><code><div>&lt;obj1&gt;.equals(&lt;obj2&gt;)
+</div></code></pre>
+</details>
+<details>
+<summary><u><b>Wie guckt man, ob das ü.geb. Objekt den gleichen Typ hat ?</b></u></summary>
+<ul>
+<li><span class="sub">Bsp.</span>: wir haben eine <code>class Counter(inhalt: Iterable[A])</code>
+<ul>
+<li>wir haben also eine Objekt mit dem Typen Counter</li>
+</ul>
+</li>
+<li><span class="sub">Kontrolle</span>:<pre class="hljs"><code><div>obj <span class="hljs-keyword">match</span> {
+  <span class="hljs-keyword">case</span> other: <span class="hljs-type">Counter</span>[_] =&gt; &lt;tatsächl. <span class="hljs-type">Vgl</span>.&gt;
+  <span class="hljs-keyword">case</span> _ =&gt; <span class="hljs-literal">false</span>
+}
+</div></code></pre>
+</li>
+</ul>
+</details>
+</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Wie erstelle ich meinen eigenen <code>hashCode</code> ?</b></u></summary>
+<ul>
+<li>
+<p>wir packen d. <strong>einzelnen Parameter</strong> d. Klasse oder jegliches <span style="color: red">in einen Tupel</span> &amp; fügen am Ende <code>.##</code> hinzu</p>
+<ul>
+<li>
+<p><span class="sub">Bsp.</span>:</p>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>(<span class="hljs-params">val vorname: <span class="hljs-type">String</span>, val nachname: <span class="hljs-type">String</span>, val alter: <span class="hljs-type">Int</span></span>) </span>{
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">equals</span></span>(obj: <span class="hljs-type">Any</span>): <span class="hljs-type">Boolean</span> = {
+      obj <span class="hljs-keyword">match</span> {
+          <span class="hljs-keyword">case</span> p: <span class="hljs-type">Person</span> =&gt; vorname == p.vorname &amp;&amp; nachname == p.nachname &amp;&amp; alter == p.alter
+          <span class="hljs-keyword">case</span> _         =&gt; <span class="hljs-literal">false</span>
+      }
+  }
+  <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> Implementiere hashCode</span>
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hashCode</span></span>: <span class="hljs-type">Int</span> = (vorname, nachname, alter).##
+}
+</div></code></pre>
+<details>
+<summary><u><b>Worauf muss ich achten, wenn ich Parameter für den hashCode verwenden möchte ?</b></u></summary>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi>a</mi><mi>r</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>E</mi><mi>q</mi><mi>u</mi><mi>a</mi><mi>l</mi><mi>s</mi><mo>≡</mo><mi>p</mi><mi>a</mi><mi>r</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>H</mi><mi>a</mi><mi>s</mi><mi>h</mi><mi>C</mi><mi>o</mi><mi>d</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">parameterEquals \equiv parameterHashCode</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="mord mathnormal">am</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.0278em;">er</span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mord mathnormal" style="margin-right:0.0359em;">q</span><span class="mord mathnormal">u</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="mord mathnormal">am</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.0278em;">er</span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mord mathnormal">a</span><span class="mord mathnormal">s</span><span class="mord mathnormal">h</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mord mathnormal">o</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span></span></span></span></li>
+</ul>
+</details>
+<details>
+<summary><u><b>Was währe empfehlenswert, wenn wir etwas f. den hashCode verwenden möchten ?</b></u></summary>
+<ul>
+<li>Das <strong>verw. eines Objekts</strong>, dass <span style="color: red">unveränderl.</span> ist</li>
+</ul>
+</details>
+</li>
+</ul>
+</li>
+</ul>
+</details>
+<h1 id="object">Object</h1>
+<details>
+<summary><u><b>Wie wird ein Object noch genannt ?</b></u></summary>
+<ul>
+<li>
+<p>Singleton</p>
+<details>
+<summary><u><b>Was ist die Eigenschaft eines Singletons ?</b></u></summary>
+<ul>
+<li>
+<p><em>Während d. Laufzeit</em> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder accentunder="true"><mrow><mtext>    </mtext><mstyle mathcolor="#83b7ea"><mtext>Erstellung einer einizigen</mtext></mstyle><mtext>    </mtext></mrow><mo stretchy="true">→</mo></munder></mrow><annotation encoding="application/x-tex">\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Erstellung einer einizigen}}\ \ \ \ }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4109em;vertical-align:-0.7164em;"></span><span class="mord accentunder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span class="svg-align" style="top:-2.2836em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.522em" viewBox="0 0 400000 522" preserveAspectRatio="xMaxYMin slice"><path d="M0 241v40h399891c-47.3 35.3-84 78-110 128
 -16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
  11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
  39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
 -40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
 -12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
- 151.7 139 205zm0 0v40h399900v-40z"/></svg></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mord text" style="color:#83b7ea;"><span class="mord" style="color:#83b7ea;">Normalform sieht dann so aus</span></span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.522em;"><span></span></span></span></span></span></span></span></span> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>1</mn></msub><msup><mi>u</mi><mn>2</mn></msup><mo>+</mo><msub><mi>λ</mi><mn>2</mn></msub><msup><mi>v</mi><mn>2</mn></msup><mo>+</mo><mi>g</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda_1 u^2 + \lambda_2 v^2 + g = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9641em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9641em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>
+ 151.7 139 205zm0 0v40h399900v-40z"/></svg></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mord text" style="color:#83b7ea;"><span class="mord" style="color:#83b7ea;">Erstellung einer einizigen</span></span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7164em;"><span></span></span></span></span></span></span></span></span> <span style="color: red"><strong>Instanz</strong></span></p>
+</li>
+<li>
+<p><b><span style="color: red">kann keine Parameter bekommen</span></b></p>
+<details>
+<summary><u><b>Wann genau wird eine Instanz für dieses Object erstellt ?</b></u></summary>
 <ul>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\lambda_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> &amp; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\lambda_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> = Eigenwerte d. Matrix <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder accentunder="true"><mrow><mtext>    </mtext><mstyle mathcolor="#83b7ea"><mrow><mtext>repr</mtext><mover accent="true"><mtext>a</mtext><mo>¨</mo></mover><mtext>sentiert</mtext></mrow></mstyle><mtext>    </mtext></mrow><mo stretchy="true">→</mo></munder></mrow><annotation encoding="application/x-tex">\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{repräsentiert}}\ \ \ \ }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3843em;vertical-align:-0.7164em;"></span><span class="mord accentunder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span class="svg-align" style="top:-2.2836em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.522em" viewBox="0 0 400000 522" preserveAspectRatio="xMaxYMin slice"><path d="M0 241v40h399891c-47.3 35.3-84 78-110 128
+<li>Wenn es <em>im Code</em> <strong>zum ersten Mal aufgerufen</strong> wird</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Was schreiben wir in ein <code>object</code> & wie verwenden wir eine <code>class</code> mit dem object ?</b></u></summary>
+<ul>
+<li><span class="sub">Was schreiben wir in einem object ?</span>
+<ul>
+<li><code style="color: rgb(203, 52, 175)">Variabeln</code> oder <code style="color: rgb(69, 201, 159)">Methoden</code>, d. f. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∀</mi></mrow><annotation encoding="application/x-tex">\forall</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">∀</span></span></span></span> Objekte des <strong>gleichen Typs</strong> gelten sollen</li>
+<li>wenn wir aber <em>mehrere Objekte</em> erstellen wollen, dann def. wir ein <code>class</code> mit dem <strong>gleichen Namen</strong> wie das <code>object</code> = <code style="color: rgb(255, 0, 111)">Companion-Klasse</code></li>
+</ul>
+</li>
+</ul>
+<details>
+<summary><u><b>Welche Eigenschaften haben diese "best friends" ?</b></u></summary>
+<ul>
+<li>
+<p>gegenseitiger Zugriff auf <code style="color: #ff6a00ff">private</code> Felder</p>
+<details>
+<summary><u><b>Mit was kann ich "Fabrik-Methoden" erstellen, die bequem Objekte erstellt ohne die Verwendung von <code>new</code> ?</b></u></summary>
+<ul>
+<li><code style="color: rgb(83, 201, 67)">def apply()</code></li>
+</ul>
+<details>
+<summary><u><b>Wie funktioniert <code style="color: rgb(83, 201, 67)">def apply()</code> ?</b></u></summary>
+<ul>
+<li>ist nur eine gewöhnl. Methode <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> man kann mehrere hintereinander erstellen (ist bisschen wwie d. pattern-matching)
+<ul>
+<li>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Counter</span>[<span class="hljs-type">A</span>](<span class="hljs-params">initialElements: <span class="hljs-type">Iterable</span>[<span class="hljs-type">A</span>]</span>) </span>{ 
+  <span class="hljs-comment">// ... Implementierung ... </span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Counter</span> </span>{
+  <span class="hljs-comment">// 1. Die &quot;Standard-Fabrik&quot; (wie der Konstruktor)</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>[<span class="hljs-type">A</span>](elements: <span class="hljs-type">Iterable</span>[<span class="hljs-type">A</span>]): <span class="hljs-type">Counter</span>[<span class="hljs-type">A</span>] = <span class="hljs-keyword">new</span> <span class="hljs-type">Counter</span>(elements)
+
+  <span class="hljs-comment">// 2. Eine &quot;Spezial-Fabrik&quot; für einen leeren Counter</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>[<span class="hljs-type">A</span>](): <span class="hljs-type">Counter</span>[<span class="hljs-type">A</span>] = <span class="hljs-keyword">new</span> <span class="hljs-type">Counter</span>(<span class="hljs-type">Iterable</span>.empty)
+}
+</div></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Steht apply immer nur in einem Objekt ?</b></u></summary>
+<ul>
+<li><strong>Nein</strong>, sie ist <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">¬</mi></mrow><annotation encoding="application/x-tex">\lnot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord">¬</span></span></span></span> spezifisch f. ein <code>object</code>
+<ul>
+<li><span class="sub">Normal class</span>:<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Multiplizierer</span>(<span class="hljs-params">faktor: <span class="hljs-type">Int</span></span>) </span>{
+  <span class="hljs-comment">// Wenn ich eine Instanz &quot;m&quot; habe, kann ich schreiben: m(5)</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>(x: <span class="hljs-type">Int</span>): <span class="hljs-type">Int</span> = x * faktor
+}
+
+<span class="hljs-keyword">val</span> malZwei = <span class="hljs-keyword">new</span> <span class="hljs-type">Multiplizierer</span>(<span class="hljs-number">2</span>)
+println(malZwei(<span class="hljs-number">5</span>)) <span class="hljs-comment">// Gibt 10 aus. Hier wird intern malZwei.apply(5) aufgerufen.</span>
+</div></code></pre>
+</li>
+<li><span class="sub">object</span>:
+<ul>
+<li>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Counter</span> </span>{
+  <span class="hljs-comment">// Hier wird das Object wie eine Funktion aufgerufen, um eine Klasse zu bauen</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>[<span class="hljs-type">A</span>](elements: <span class="hljs-type">Iterable</span>[<span class="hljs-type">A</span>]): <span class="hljs-type">Counter</span>[<span class="hljs-type">A</span>] = <span class="hljs-keyword">new</span> <span class="hljs-type">Counter</span>(elements)
+}
+<span class="hljs-keyword">val</span> c = <span class="hljs-type">Counter</span>(<span class="hljs-type">Iterable</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)) <span class="hljs-comment">// Aufruf von Counter.apply(...)</span>
+</div></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</details>
+</details>
+</li>
+</ul>
+</details>
+</details>
+</li>
+</ul>
+</details> 
+<ul>
+<li><span class="sub">Beispiel: </span>
+<ul>
+<li>
+<pre class="hljs"><code><div><span class="hljs-comment">// 1. Die Klasse für die individuellen Personen</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>(<span class="hljs-params">val name: <span class="hljs-type">String</span></span>)</span>
+
+<span class="hljs-comment">// 2. Das Companion Object für die &quot;allgemeinen&quot; Dinge</span>
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Person</span> </span>{
+  <span class="hljs-comment">// Eine Konstante, die für alle gilt</span>
+  <span class="hljs-keyword">val</span> spezies = <span class="hljs-string">&quot;Mensch&quot;</span>
+  
+  <span class="hljs-comment">// Eine Hilfsmethode, die nicht an einer speziellen Person klebt</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">printSpezies</span></span>(): <span class="hljs-type">Unit</span> = println(<span class="hljs-string">s&quot;Alle Personen sind vom Typ <span class="hljs-subst">$spezies</span>&quot;</span>)
+  
+  <span class="hljs-comment">// Die &quot;Fabrik&quot;-Methode (apply)</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>(name: <span class="hljs-type">String</span>): <span class="hljs-type">Person</span> = <span class="hljs-keyword">new</span> <span class="hljs-type">Person</span>(name)
+}
+
+<span class="hljs-comment">// Benutzung im Code:</span>
+<span class="hljs-meta">@main</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span></span>(): <span class="hljs-type">Unit</span> = {
+  <span class="hljs-comment">// Individuelle Personen (Instanzen)</span>
+  <span class="hljs-keyword">val</span> p1 = <span class="hljs-type">Person</span>(<span class="hljs-string">&quot;Efe&quot;</span>) 
+  <span class="hljs-keyword">val</span> p2 = <span class="hljs-type">Person</span>(<span class="hljs-string">&quot;Sude&quot;</span>)
+  
+  <span class="hljs-comment">// Aufruf von globaler Logik aus dem Companion Object</span>
+  <span class="hljs-type">Person</span>.printSpezies() 
+}
+</div></code></pre>
+</li>
+<li>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">A</span> </span>{
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> count: <span class="hljs-type">Int</span> = <span class="hljs-number">0</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">numberOfObjects</span></span>: <span class="hljs-type">Int</span> = count
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span> </span>{
+<span class="hljs-type">A</span>.count += <span class="hljs-number">1</span>
+}
+
+<span class="hljs-keyword">val</span> a1 = <span class="hljs-type">A</span>()
+<span class="hljs-keyword">val</span> a2 = <span class="hljs-type">A</span>()
+<span class="hljs-keyword">val</span> a3 = <span class="hljs-type">A</span>()
+println(<span class="hljs-type">A</span>.numberOfObjects) <span class="hljs-comment">// 3     </span>
+</div></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</details>
+<h1 id="traits">Traits</h1>
+<details>
+<summary><u><b>Was sind traits ?</b></u></summary>
+<ul>
+<li>Schnittstellen</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Wie viele traits kann eine Klasse erben ?</b></u></summary>
+<ul>
+<li>mehrere</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Wir haben folgendes
+<pre><code>trait CanBark {
+  def bark: String = "Wau"
+}
+<p>trait CanHowl {
+def howl: String = &quot;Awooo&quot;
+}
+</code></pre></b></u></summary></p>
+  <details>
+  <summary><u><b>Wie können wir sie jzt. in die Klassen Dog und Wolf einmixen ?</b></u></summary>
+<ul>
+<li>wir können sie einzeln oder kombiniert einmixen</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CanBark</span></span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Wolf</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CanBark</span>, <span class="hljs-title">CanHowl</span></span>
+
+<span class="hljs-keyword">val</span> dog = <span class="hljs-type">Dog</span>()
+println(dog.bark) <span class="hljs-comment">// Wau</span>
+
+<span class="hljs-keyword">val</span> wolf = <span class="hljs-type">Wolf</span>()
+println(wolf.bark) <span class="hljs-comment">//Wau</span>
+println(wolf.howl) <span class="hljs-comment">// Awooo</span>
+</div></code></pre>
+  </details>
+  <details>
+  <summary><u><b>Kann man ein trait überschreiben ?</b></u></summary>
+<ul>
+<li>
+<p>Ja. man kann es mit <input type="text" id="eingabe1" placeholder="Wort eingeben..."><div id="ergebnis1"></div> ü. schrieben</p>
+</li>
+<li>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanBark</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wau&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanHowl</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">howl</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Awooo&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CanBark</span> </span>{
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wuff&quot;</span>
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Wolf</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CanBark</span> <span class="hljs-keyword">with</span> <span class="hljs-title">CanHowl</span></span>
+
+<span class="hljs-keyword">val</span> dog = <span class="hljs-type">Dog</span>()
+println(dog.bark)
+
+<span class="hljs-keyword">val</span> wolf = <span class="hljs-type">Wolf</span>() <span class="hljs-comment">//Wuff</span>
+println(wolf.bark) <span class="hljs-comment">//Wau</span>
+</div></code></pre>
+</li>
+</ul>
+  </details>
+<details>
+<summary><u><b>Können traits Felder haben ?</b></u></summary>
+<ul>
+<li>
+<p>Ja</p>
+<ul>
+<li>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanBark</span> </span>{
+  <span class="hljs-keyword">val</span> barkVolume: <span class="hljs-type">Int</span> = <span class="hljs-number">30</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wau&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanHowl</span> </span>{
+  <span class="hljs-keyword">val</span> howlVolume: <span class="hljs-type">Int</span> = <span class="hljs-number">100</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">howl</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Awooo&quot;</span>
+}
+</div></code></pre>
+</li>
+</ul>
+<details>
+<summary><u><b>Worauf müssen wir hier beim einmixen beachten ?</b></u></summary>
+<ul>
+<li>es dürfen keine <code>traits</code> zsm. eingemixt werden, d. <strong>gleiche benannte Felder</strong> oder <strong>Methoden</strong> haben !</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanBark</span> </span>{
+  <span class="hljs-keyword">val</span> volume: <span class="hljs-type">Int</span> = <span class="hljs-number">30</span> <span class="hljs-comment">// conflicting field</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wau&quot;</span>
+}
+  
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanHowl</span> </span>{
+  <span class="hljs-keyword">val</span> volume: <span class="hljs-type">Int</span> = <span class="hljs-number">100</span> <span class="hljs-comment">// conflicting field</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">howl</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Awooo&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Wolf</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CanBark</span>, <span class="hljs-title">CanHowl</span> <span class="hljs-comment">// error</span></span>
+</div></code></pre>
+</details>
+<details>
+<summary><u><b>Wir wollen, dass eine Klasse von einem trait und von Klassen erbt. Was ist das Verhältnis der Erbung ? </b></u></summary>
+<ul>
+<li>max. eine Klasse</li>
+<li>mehrere Traits</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanBark</span> </span>{
+ <span class="hljs-keyword">val</span> barkVolume: <span class="hljs-type">Int</span> = <span class="hljs-number">30</span>
+ <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wau&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanHowl</span> </span>{
+  <span class="hljs-keyword">val</span> howlVolume: <span class="hljs-type">Int</span> = <span class="hljs-number">100</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">howl</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Awooo&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Canine</span> </span>{ <span class="hljs-comment">// &quot;hundeartig&quot;</span>
+  <span class="hljs-keyword">val</span> cuteAsAPuppy: <span class="hljs-type">Boolean</span> = <span class="hljs-literal">true</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Canine</span>, <span class="hljs-title">CanBark</span> <span class="hljs-comment">// inherits from Canine, mixes in CanBark</span></span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Wolf</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Canine</span>, <span class="hljs-title">CanBark</span>, <span class="hljs-title">CanHowl</span></span>
+</div></code></pre>
+</details>
+</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Können traits Sachen erben ?</b></u></summary>
+<ul>
+<li>
+<p><code style="color: rgb(91, 218, 120)">Ja</code></p>
+<details>
+<summary><u><b>Wie können wir sicherstellen, dass mansche traits nur in bestimmten Klassen eingemixt werden können ? </b></u></summary>
+<ul>
+<li>Wir lassen das <code>trait</code> v. <strong>einer Klasse erben</strong>
+<ul>
+<li>wenn wir jzt. unsere Klasse v. diesem <code>trait</code> erben lassen &amp; eine weitere Klasse erben möchten, dann geht es <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">¬</mi></mrow><annotation encoding="application/x-tex">\lnot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord">¬</span></span></span></span>, weil wir bereits in unserem <code>trait</code> eine Klasse geerbt haben (Wir dürfen nur von einem <code>class</code> erben)</li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Canine</span> </span>{ <span class="hljs-comment">// &quot;hundeartig&quot;</span>
+  <span class="hljs-keyword">val</span> cuteAsAPuppy: <span class="hljs-type">Boolean</span> = <span class="hljs-literal">true</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanBark</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Canine</span> </span>{ <span class="hljs-comment">// inherits from Canine</span>
+  <span class="hljs-keyword">val</span> barkVolume: <span class="hljs-type">Int</span> = <span class="hljs-number">30</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wau&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanHowl</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Canine</span> </span>{ <span class="hljs-comment">// inherits from Canine</span>
+  <span class="hljs-keyword">val</span> howlVolume: <span class="hljs-type">Int</span> = <span class="hljs-number">100</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">howl</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Awooo&quot;</span>
+}
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Feline</span> </span>{ <span class="hljs-comment">// katzenartig</span>
+  <span class="hljs-keyword">val</span> sevenLifes: <span class="hljs-type">Boolean</span> = <span class="hljs-literal">true</span>
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Feline</span>, <span class="hljs-title">CanBark</span> <span class="hljs-comment">//Cat -&gt; Feline: class -&gt; CanBark -&gt; Canine(class) &lt;- error</span></span>
+</div></code></pre>
+</details>
+<details>
+<summary><u><b>Was ist eine andere Methode, die das einmixen in bestimmten Objekt-Typen ermöglicht ?</b></u></summary>
+<ul>
+<li><code style="color: rgb(77, 152, 195)">Self-Type Annotations</code></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanBark</span> </span>{
+  <span class="hljs-keyword">this</span>: <span class="hljs-type">Canine</span> =&gt; <span class="hljs-comment">// Self-Type: Dieser Trait darf nur in Instanzen von Canine eingemixt werden</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wau&quot;</span>
+}
+</div></code></pre>
+</details>
+<details>
+<summary><u><b>Wir haben folgendes <code>class C extends A with B with C</code>. Nach welcher Reihenfolge werden die traits ausgeführt ? </b></u></summary>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>→</mo><mi>B</mi><mo>→</mo><mi>A</mi><mo>→</mo><mo stretchy="false">(</mo><mi>S</mi><mi>u</mi><mi>p</mi><mi>e</mi><mi>r</mi><mi>k</mi><mi>l</mi><mi>a</mi><mi>s</mi><mi>s</mi><mi>e</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">C \to B \to A \to (Superklasse)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mord mathnormal">u</span><span class="mord mathnormal">p</span><span class="mord mathnormal" style="margin-right:0.0278em;">er</span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">a</span><span class="mord mathnormal">sse</span><span class="mclose">)</span></span></span></span></li>
+</ul>
+</details>
+</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Was erzeugt ein trait autom. & was ermögl. es uns ?</b></u></summary>
+<ul>
+<li><code>trait</code> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder accentunder="true"><mrow><mtext>    </mtext><mstyle mathcolor="#83b7ea"><mtext>erzeugt</mtext></mstyle><mtext>    </mtext></mrow><mo stretchy="true">→</mo></munder></mrow><annotation encoding="application/x-tex">\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erzeugt}}\ \ \ \ }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3315em;vertical-align:-0.7164em;"></span><span class="mord accentunder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6151em;"><span class="svg-align" style="top:-2.2836em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.522em" viewBox="0 0 400000 522" preserveAspectRatio="xMaxYMin slice"><path d="M0 241v40h399891c-47.3 35.3-84 78-110 128
 -16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
  11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
  39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
 -40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
 -12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
- 151.7 139 205zm0 0v40h399900v-40z"/></svg></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mord text" style="color:#83b7ea;"><span class="mord" style="color:#83b7ea;">repr</span><span class="mord accent" style="color:#83b7ea;"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="color:#83b7ea;">a</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord" style="color:#83b7ea;">¨</span></span></span></span></span></span></span><span class="mord" style="color:#83b7ea;">sentiert</span></span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7164em;"><span></span></span></span></span></span></span></span></span>  quadratischen Teil d. Gleichung</li>
+ 151.7 139 205zm0 0v40h399900v-40z"/></svg></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mord text" style="color:#83b7ea;"><span class="mord" style="color:#83b7ea;">erzeugt</span></span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7164em;"><span></span></span></span></span></span></span></span></span> <strong>Typ</strong></li>
 </ul>
-</li>
-</ul>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Canine</span> </span>{ <span class="hljs-comment">// &quot;hundeartig&quot;</span>
+    <span class="hljs-keyword">val</span> cuteAsAPuppy: <span class="hljs-type">Boolean</span> = <span class="hljs-literal">true</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanBark</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Canine</span> </span>{ <span class="hljs-comment">// inherits from Canine</span>
+  <span class="hljs-keyword">val</span> barkVolume: <span class="hljs-type">Int</span> = <span class="hljs-number">30</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wau&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Canine</span>, <span class="hljs-title">CanBark</span> </span>{
+  <span class="hljs-keyword">val</span> trustful: <span class="hljs-type">Boolean</span> = <span class="hljs-literal">true</span>
+}
+
+<span class="hljs-keyword">val</span> barker: <span class="hljs-type">CanBark</span> = <span class="hljs-type">Dog</span>()
+<span class="hljs-comment">// Wir können über barker nun auch wieder nur auf die Felder und Methoden zugreifen, die im CanBark (und dessen Oberklasse Canine) bekannt sind:</span>
+println(barker.bark) <span class="hljs-comment">// ok</span>
+println(barker.cuteAsAPuppy) <span class="hljs-comment">// ok</span>
+println(barker.trustful) <span class="hljs-comment">// error</span>
+</div></code></pre>
+</details>
 <details>
-    <summary class="ÜSchrift">Wie Normalform bestimmen ?</summary>
+<summary><u><b>Was sind die wichtigsten Unterschiede zu einer abstrakten Klasse ? </b></u></summary>
 <ul>
-<li><u><strong>3 Schritte</strong></u>
-<ol>
-<li>
-<p>Matrix aufstellen</p>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo fence="true">(</mo><mtable rowspacing="0.16em" columnalign="center center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>a</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>b</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>b</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>c</mi></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow><annotation encoding="application/x-tex">\begin{pmatrix} a &amp; b \\ b &amp; c \end{pmatrix}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">a</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">b</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span></span></span></span></p>
-</li>
-<li>
-<p>Eigenwerte bestimmen</p>
-</li>
-<li>
-<p>Einsetzten in d. Normalform</p>
-</li>
-</ol>
-</li>
+<li>es lassen sich mehrere traits einmixen <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo><mover><mo><mo>=</mo></mo><mo stretchy="false" lspace="0em" rspace="0em">!</mo></mover></mo></mrow><annotation encoding="application/x-tex">\overset{!}{=}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.153em;"></span><span class="mrel"><span class="mop op-limits"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.153em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">=</span></span></span><span style="top:-3.5669em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mclose mtight">!</span></span></span></span></span></span></span></span></span></span></span></span> man kann nur v. einer abstrakten Klasse erben</li>
 </ul>
 </details>
-<table>
-  <thead>
-    <tr>
-      <th>&lambda;<sub>1</sub></th>
-      <th>&lambda;<sub>2</sub></th>
-      <th>h</th>
-      <th>Typ</th>
-      <th>Beispiel</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>+</td>
-      <td>+</td>
-      <td>+</td>
-      <td>leere Menge</td>
-      <td>u² + v² + 1 = 0</td>
-    </tr>
-    <tr>
-      <td>+</td>
-      <td>+</td>
-      <td>0</td>
-      <td>Punkt</td>
-      <td>u² + v² = 0</td>
-    </tr>
-    <tr>
-      <td>+</td>
-      <td>+</td>
-      <td>-</td>
-      <td>Ellipse</td>
-      <td>u² + v² = 1</td>
-    </tr>
-    <tr>
-      <td>+</td>
-      <td>0</td>
-      <td>+</td>
-      <td>leere Menge</td>
-      <td>u² + 1 = 0</td>
-    </tr>
-    <tr>
-      <td>+</td>
-      <td>0</td>
-      <td>0</td>
-      <td>Gerade (Doppelgerade)</td>
-      <td>u² = 0</td>
-    </tr>
-    <tr>
-      <td>+</td>
-      <td>0</td>
-      <td>-</td>
-      <td>zwei parallele Geraden</td>
-      <td>u² - 1 = 0</td>
-    </tr>
-    <tr>
-      <td>+</td>
-      <td>-</td>
-      <td>+</td>
-      <td>Hyperbel</td>
-      <td>u² - v² = -1</td>
-    </tr>
-    <tr>
-      <td>+</td>
-      <td>-</td>
-      <td>0</td>
-      <td>zwei sich schneidende Geraden</td>
-      <td>u² - v² = 0</td>
-    </tr>
-    <tr>
-      <td>+</td>
-      <td>-</td>
-      <td>-</td>
-      <td>Hyperbel</td>
-      <td>u² - v² = 1</td>
-    </tr>
-  </tbody>
-</table>
+&lt;script>
+const musterloesung = "override"; // Hier das Zielwort definieren
+const inputFeld = document.getElementById("eingabe1");
+const ergebnisDiv = document.getElementById("ergebnis1");
+
+inputFeld.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        const nutzerEingabe = inputFeld.value;
+        
+        if (nutzerEingabe === musterloesung) {
+            ergebnisDiv.innerHTML = `<span class="richtig">Richtig!</span>`;
+        } else {
+            ergebnisDiv.innerHTML = `<span class="falsch">Falsch!</span> Das Wort war nicht "${nutzerEingabe}".`;
+        }
+  }
+});
+&lt;/script>
+</details>
+<h1 id="calacollectionmutable">cala.collection.mutable</h1>
 <details>
-<summary><u><b>Bezeichne die einzelnen Bestandteile: $\begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} + s \cdot \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} + t \cdot \begin{pmatrix} 0 \\ 1 \\ 3 \end{pmatrix}$</b></u></summary>
+<summary><u><b>Wie sieht d. Hierarchie v. <code>scala.collection</code> aus ?</b></u></summary>
+<p><img src="image-8.png" alt="alt text"></p>
+</details>
+<details>
+<summary><u><b>Wie werden collection-Schnittstellen implementiert ?</b></u></summary>
 <ul>
 <li>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo fence="true">(</mo><mtable rowspacing="0.16em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>2</mn></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow><annotation encoding="application/x-tex">\begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.6em;vertical-align:-1.55em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.875em;height:3.6em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="3.6em" viewBox="0 0 875 3600"><path d="M863,9c0,-2,-2,-5,-6,-9c0,0,-17,0,-17,0c-12.7,0,-19.3,0.3,-20,1
-c-5.3,5.3,-10.3,11,-15,17c-242.7,294.7,-395.3,682,-458,1162c-21.3,163.3,-33.3,349,
--36,557 l0,84c0.2,6,0,26,0,60c2,159.3,10,310.7,24,454c53.3,528,210,
-949.7,470,1265c4.7,6,9.7,11.7,15,17c0.7,0.7,7,1,19,1c0,0,18,0,18,0c4,-4,6,-7,6,-9
-c0,-2.7,-3.3,-8.7,-10,-18c-135.3,-192.7,-235.5,-414.3,-300.5,-665c-65,-250.7,-102.5,
--544.7,-112.5,-882c-2,-104,-3,-167,-3,-189
-l0,-92c0,-162.7,5.7,-314,17,-454c20.7,-272,63.7,-513,129,-723c65.3,
--210,155.3,-396.3,270,-559c6.7,-9.3,10,-15.3,10,-18z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.875em;height:3.6em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="3.6em" viewBox="0 0 875 3600"><path d="M76,0c-16.7,0,-25,3,-25,9c0,2,2,6.3,6,13c21.3,28.7,42.3,60.3,
-63,95c96.7,156.7,172.8,332.5,228.5,527.5c55.7,195,92.8,416.5,111.5,664.5
-c11.3,139.3,17,290.7,17,454c0,28,1.7,43,3.3,45l0,9
-c-3,4,-3.3,16.7,-3.3,38c0,162,-5.7,313.7,-17,455c-18.7,248,-55.8,469.3,-111.5,664
-c-55.7,194.7,-131.8,370.3,-228.5,527c-20.7,34.7,-41.7,66.3,-63,95c-2,3.3,-4,7,-6,11
-c0,7.3,5.7,11,17,11c0,0,11,0,11,0c9.3,0,14.3,-0.3,15,-1c5.3,-5.3,10.3,-11,15,-17
-c242.7,-294.7,395.3,-681.7,458,-1161c21.3,-164.7,33.3,-350.7,36,-558
-l0,-144c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
--470,-1265c-4.7,-6,-9.7,-11.7,-15,-17c-0.7,-0.7,-6.7,-1,-18,-1z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span></span></span></span> = <code>Stützvektor</code></p>
-</li>
-<li>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo fence="true">(</mo><mtable rowspacing="0.16em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>2</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow><annotation encoding="application/x-tex">\begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.6em;vertical-align:-1.55em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.875em;height:3.6em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="3.6em" viewBox="0 0 875 3600"><path d="M863,9c0,-2,-2,-5,-6,-9c0,0,-17,0,-17,0c-12.7,0,-19.3,0.3,-20,1
-c-5.3,5.3,-10.3,11,-15,17c-242.7,294.7,-395.3,682,-458,1162c-21.3,163.3,-33.3,349,
--36,557 l0,84c0.2,6,0,26,0,60c2,159.3,10,310.7,24,454c53.3,528,210,
-949.7,470,1265c4.7,6,9.7,11.7,15,17c0.7,0.7,7,1,19,1c0,0,18,0,18,0c4,-4,6,-7,6,-9
-c0,-2.7,-3.3,-8.7,-10,-18c-135.3,-192.7,-235.5,-414.3,-300.5,-665c-65,-250.7,-102.5,
--544.7,-112.5,-882c-2,-104,-3,-167,-3,-189
-l0,-92c0,-162.7,5.7,-314,17,-454c20.7,-272,63.7,-513,129,-723c65.3,
--210,155.3,-396.3,270,-559c6.7,-9.3,10,-15.3,10,-18z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.875em;height:3.6em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="3.6em" viewBox="0 0 875 3600"><path d="M76,0c-16.7,0,-25,3,-25,9c0,2,2,6.3,6,13c21.3,28.7,42.3,60.3,
-63,95c96.7,156.7,172.8,332.5,228.5,527.5c55.7,195,92.8,416.5,111.5,664.5
-c11.3,139.3,17,290.7,17,454c0,28,1.7,43,3.3,45l0,9
-c-3,4,-3.3,16.7,-3.3,38c0,162,-5.7,313.7,-17,455c-18.7,248,-55.8,469.3,-111.5,664
-c-55.7,194.7,-131.8,370.3,-228.5,527c-20.7,34.7,-41.7,66.3,-63,95c-2,3.3,-4,7,-6,11
-c0,7.3,5.7,11,17,11c0,0,11,0,11,0c9.3,0,14.3,-0.3,15,-1c5.3,-5.3,10.3,-11,15,-17
-c242.7,-294.7,395.3,-681.7,458,-1161c21.3,-164.7,33.3,-350.7,36,-558
-l0,-144c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
--470,-1265c-4.7,-6,-9.7,-11.7,-15,-17c-0.7,-0.7,-6.7,-1,-18,-1z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span></span></span></span> &amp; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo fence="true">(</mo><mtable rowspacing="0.16em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>3</mn></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow><annotation encoding="application/x-tex">\begin{pmatrix} 0 \\ 1 \\ 3 \end{pmatrix}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.6em;vertical-align:-1.55em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.875em;height:3.6em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="3.6em" viewBox="0 0 875 3600"><path d="M863,9c0,-2,-2,-5,-6,-9c0,0,-17,0,-17,0c-12.7,0,-19.3,0.3,-20,1
-c-5.3,5.3,-10.3,11,-15,17c-242.7,294.7,-395.3,682,-458,1162c-21.3,163.3,-33.3,349,
--36,557 l0,84c0.2,6,0,26,0,60c2,159.3,10,310.7,24,454c53.3,528,210,
-949.7,470,1265c4.7,6,9.7,11.7,15,17c0.7,0.7,7,1,19,1c0,0,18,0,18,0c4,-4,6,-7,6,-9
-c0,-2.7,-3.3,-8.7,-10,-18c-135.3,-192.7,-235.5,-414.3,-300.5,-665c-65,-250.7,-102.5,
--544.7,-112.5,-882c-2,-104,-3,-167,-3,-189
-l0,-92c0,-162.7,5.7,-314,17,-454c20.7,-272,63.7,-513,129,-723c65.3,
--210,155.3,-396.3,270,-559c6.7,-9.3,10,-15.3,10,-18z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.875em;height:3.6em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="3.6em" viewBox="0 0 875 3600"><path d="M76,0c-16.7,0,-25,3,-25,9c0,2,2,6.3,6,13c21.3,28.7,42.3,60.3,
-63,95c96.7,156.7,172.8,332.5,228.5,527.5c55.7,195,92.8,416.5,111.5,664.5
-c11.3,139.3,17,290.7,17,454c0,28,1.7,43,3.3,45l0,9
-c-3,4,-3.3,16.7,-3.3,38c0,162,-5.7,313.7,-17,455c-18.7,248,-55.8,469.3,-111.5,664
-c-55.7,194.7,-131.8,370.3,-228.5,527c-20.7,34.7,-41.7,66.3,-63,95c-2,3.3,-4,7,-6,11
-c0,7.3,5.7,11,17,11c0,0,11,0,11,0c9.3,0,14.3,-0.3,15,-1c5.3,-5.3,10.3,-11,15,-17
-c242.7,-294.7,395.3,-681.7,458,-1161c21.3,-164.7,33.3,-350.7,36,-558
-l0,-144c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
--470,-1265c-4.7,-6,-9.7,-11.7,-15,-17c-0.7,-0.7,-6.7,-1,-18,-1z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span></span></span></span> = <code>Spannvektoren</code></p>
-</li>
-</ul>
-</details>
+<p>mit <code>Factory-Methoden</code></p>
 <details>
-<summary><u><b>Was muss ich verw., wenn ich zeigen möchte, ob 2 Vektoren orthogonal zu einander sind ?</b></u></summary>
+<summary><u><b>Was passiert hier im Hintergrund ?: 
+<pre><code>val s = Seq(1,2,3)
+<p>println(s) //List(1,2,3)
+</code></pre> Wir haben in unserem Tabellen-Projekt bereits d. <code>iterable</code>-Schnittstelle implementiert:</b></u></summary></p>
 <ul>
-<li><code>Skalarprodukt</code>
+<li>eine Collection. d. Iterable ist stellt folgende Funktionen bereit:
 <ul>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&lt;</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo>&gt;</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">&lt;a,b&gt; = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></li>
+<li>Iteration: forach, map, flatMap, ...</li>
+<li>UmWandlung: toSeq, toSet, ...</li>
+<li>Größe: isEmpty, size, ...</li>
+<li>Elem.-Prüfungen: exists, forall, ...</li>
 </ul>
 </li>
 </ul>
 </details>
+<h2 id="seq">Seq</h2>
 <details>
-<summary><u><b>Wie lautet d. Formel zur Berechnung v. Winkeln ?</b></u></summary>
-<ul>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mo>&lt;</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo>&gt;</mo></mrow><mrow><mi mathvariant="normal">∣</mi><mi>a</mi><mi mathvariant="normal">∣</mi><mo>⋅</mo><mi mathvariant="normal">∣</mi><mi>b</mi><mi mathvariant="normal">∣</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{&lt;a,b&gt;}{|a| \cdot |b|}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4522em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9322em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∣</span><span class="mord mathnormal mtight">a</span><span class="mord mtight">∣</span><span class="mbin mtight">⋅</span><span class="mord mtight">∣</span><span class="mord mathnormal mtight">b</span><span class="mord mtight">∣</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4461em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mrel mtight">&lt;</span><span class="mord mathnormal mtight">a</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">b</span><span class="mrel mtight">&gt;</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
-</ul>
-</details>
-<details>
-<summary><u><b>Mit was kann ich 2 Vektoren fussieren ?</b></u></summary>
-<ul>
-<li><code>Vektorprodukt</code>
-<ul>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>a</mi><mo>×</mo><mi>b</mi><mi mathvariant="normal">∣</mi><mo>=</mo><mrow><mo fence="true">(</mo><mtable rowspacing="0.16em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>a</mi><mn>1</mn></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>a</mi><mn>2</mn></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>a</mi><mn>3</mn></msub></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow><mo>×</mo><mrow><mo fence="true">(</mo><mtable rowspacing="0.16em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>b</mi><mn>1</mn></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>b</mi><mn>2</mn></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>b</mi><mn>3</mn></msub></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">|a \times b| = \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} \times \begin{pmatrix} b_1 \\ b_2 \\ b_3 \end{pmatrix}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">b</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.6em;vertical-align:-1.55em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.875em;height:3.6em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="3.6em" viewBox="0 0 875 3600"><path d="M863,9c0,-2,-2,-5,-6,-9c0,0,-17,0,-17,0c-12.7,0,-19.3,0.3,-20,1
-c-5.3,5.3,-10.3,11,-15,17c-242.7,294.7,-395.3,682,-458,1162c-21.3,163.3,-33.3,349,
--36,557 l0,84c0.2,6,0,26,0,60c2,159.3,10,310.7,24,454c53.3,528,210,
-949.7,470,1265c4.7,6,9.7,11.7,15,17c0.7,0.7,7,1,19,1c0,0,18,0,18,0c4,-4,6,-7,6,-9
-c0,-2.7,-3.3,-8.7,-10,-18c-135.3,-192.7,-235.5,-414.3,-300.5,-665c-65,-250.7,-102.5,
--544.7,-112.5,-882c-2,-104,-3,-167,-3,-189
-l0,-92c0,-162.7,5.7,-314,17,-454c20.7,-272,63.7,-513,129,-723c65.3,
--210,155.3,-396.3,270,-559c6.7,-9.3,10,-15.3,10,-18z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.875em;height:3.6em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="3.6em" viewBox="0 0 875 3600"><path d="M76,0c-16.7,0,-25,3,-25,9c0,2,2,6.3,6,13c21.3,28.7,42.3,60.3,
-63,95c96.7,156.7,172.8,332.5,228.5,527.5c55.7,195,92.8,416.5,111.5,664.5
-c11.3,139.3,17,290.7,17,454c0,28,1.7,43,3.3,45l0,9
-c-3,4,-3.3,16.7,-3.3,38c0,162,-5.7,313.7,-17,455c-18.7,248,-55.8,469.3,-111.5,664
-c-55.7,194.7,-131.8,370.3,-228.5,527c-20.7,34.7,-41.7,66.3,-63,95c-2,3.3,-4,7,-6,11
-c0,7.3,5.7,11,17,11c0,0,11,0,11,0c9.3,0,14.3,-0.3,15,-1c5.3,-5.3,10.3,-11,15,-17
-c242.7,-294.7,395.3,-681.7,458,-1161c21.3,-164.7,33.3,-350.7,36,-558
-l0,-144c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
--470,-1265c-4.7,-6,-9.7,-11.7,-15,-17c-0.7,-0.7,-6.7,-1,-18,-1z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:3.6em;vertical-align:-1.55em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.875em;height:3.6em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="3.6em" viewBox="0 0 875 3600"><path d="M863,9c0,-2,-2,-5,-6,-9c0,0,-17,0,-17,0c-12.7,0,-19.3,0.3,-20,1
-c-5.3,5.3,-10.3,11,-15,17c-242.7,294.7,-395.3,682,-458,1162c-21.3,163.3,-33.3,349,
--36,557 l0,84c0.2,6,0,26,0,60c2,159.3,10,310.7,24,454c53.3,528,210,
-949.7,470,1265c4.7,6,9.7,11.7,15,17c0.7,0.7,7,1,19,1c0,0,18,0,18,0c4,-4,6,-7,6,-9
-c0,-2.7,-3.3,-8.7,-10,-18c-135.3,-192.7,-235.5,-414.3,-300.5,-665c-65,-250.7,-102.5,
--544.7,-112.5,-882c-2,-104,-3,-167,-3,-189
-l0,-92c0,-162.7,5.7,-314,17,-454c20.7,-272,63.7,-513,129,-723c65.3,
--210,155.3,-396.3,270,-559c6.7,-9.3,10,-15.3,10,-18z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.875em;height:3.6em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="3.6em" viewBox="0 0 875 3600"><path d="M76,0c-16.7,0,-25,3,-25,9c0,2,2,6.3,6,13c21.3,28.7,42.3,60.3,
-63,95c96.7,156.7,172.8,332.5,228.5,527.5c55.7,195,92.8,416.5,111.5,664.5
-c11.3,139.3,17,290.7,17,454c0,28,1.7,43,3.3,45l0,9
-c-3,4,-3.3,16.7,-3.3,38c0,162,-5.7,313.7,-17,455c-18.7,248,-55.8,469.3,-111.5,664
-c-55.7,194.7,-131.8,370.3,-228.5,527c-20.7,34.7,-41.7,66.3,-63,95c-2,3.3,-4,7,-6,11
-c0,7.3,5.7,11,17,11c0,0,11,0,11,0c9.3,0,14.3,-0.3,15,-1c5.3,-5.3,10.3,-11,15,-17
-c242.7,-294.7,395.3,-681.7,458,-1161c21.3,-164.7,33.3,-350.7,36,-558
-l0,-144c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
--470,-1265c-4.7,-6,-9.7,-11.7,-15,-17c-0.7,-0.7,-6.7,-1,-18,-1z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span></span></span></span></li>
-</ul>
-</li>
-</ul>
-</details>
-<details>
-<summary><u><b>Was ist der Normalvektor ?</b></u></summary>
-<ul>
-<li><code>Vektorprodukt</code>
-<ul>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>a</mi><mo>×</mo><mi>b</mi><mi mathvariant="normal">∣</mi><mo>=</mo><mrow><mo fence="true">(</mo><mtable rowspacing="0.16em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>a</mi><mn>1</mn></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>a</mi><mn>2</mn></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>a</mi><mn>3</mn></msub></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow><mo>×</mo><mrow><mo fence="true">(</mo><mtable rowspacing="0.16em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>b</mi><mn>1</mn></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>b</mi><mn>2</mn></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>b</mi><mn>3</mn></msub></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">|a \times b| = \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} \times \begin{pmatrix} b_1 \\ b_2 \\ b_3 \end{pmatrix}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">b</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.6em;vertical-align:-1.55em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.875em;height:3.6em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="3.6em" viewBox="0 0 875 3600"><path d="M863,9c0,-2,-2,-5,-6,-9c0,0,-17,0,-17,0c-12.7,0,-19.3,0.3,-20,1
-c-5.3,5.3,-10.3,11,-15,17c-242.7,294.7,-395.3,682,-458,1162c-21.3,163.3,-33.3,349,
--36,557 l0,84c0.2,6,0,26,0,60c2,159.3,10,310.7,24,454c53.3,528,210,
-949.7,470,1265c4.7,6,9.7,11.7,15,17c0.7,0.7,7,1,19,1c0,0,18,0,18,0c4,-4,6,-7,6,-9
-c0,-2.7,-3.3,-8.7,-10,-18c-135.3,-192.7,-235.5,-414.3,-300.5,-665c-65,-250.7,-102.5,
--544.7,-112.5,-882c-2,-104,-3,-167,-3,-189
-l0,-92c0,-162.7,5.7,-314,17,-454c20.7,-272,63.7,-513,129,-723c65.3,
--210,155.3,-396.3,270,-559c6.7,-9.3,10,-15.3,10,-18z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.875em;height:3.6em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="3.6em" viewBox="0 0 875 3600"><path d="M76,0c-16.7,0,-25,3,-25,9c0,2,2,6.3,6,13c21.3,28.7,42.3,60.3,
-63,95c96.7,156.7,172.8,332.5,228.5,527.5c55.7,195,92.8,416.5,111.5,664.5
-c11.3,139.3,17,290.7,17,454c0,28,1.7,43,3.3,45l0,9
-c-3,4,-3.3,16.7,-3.3,38c0,162,-5.7,313.7,-17,455c-18.7,248,-55.8,469.3,-111.5,664
-c-55.7,194.7,-131.8,370.3,-228.5,527c-20.7,34.7,-41.7,66.3,-63,95c-2,3.3,-4,7,-6,11
-c0,7.3,5.7,11,17,11c0,0,11,0,11,0c9.3,0,14.3,-0.3,15,-1c5.3,-5.3,10.3,-11,15,-17
-c242.7,-294.7,395.3,-681.7,458,-1161c21.3,-164.7,33.3,-350.7,36,-558
-l0,-144c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
--470,-1265c-4.7,-6,-9.7,-11.7,-15,-17c-0.7,-0.7,-6.7,-1,-18,-1z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:3.6em;vertical-align:-1.55em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.875em;height:3.6em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="3.6em" viewBox="0 0 875 3600"><path d="M863,9c0,-2,-2,-5,-6,-9c0,0,-17,0,-17,0c-12.7,0,-19.3,0.3,-20,1
-c-5.3,5.3,-10.3,11,-15,17c-242.7,294.7,-395.3,682,-458,1162c-21.3,163.3,-33.3,349,
--36,557 l0,84c0.2,6,0,26,0,60c2,159.3,10,310.7,24,454c53.3,528,210,
-949.7,470,1265c4.7,6,9.7,11.7,15,17c0.7,0.7,7,1,19,1c0,0,18,0,18,0c4,-4,6,-7,6,-9
-c0,-2.7,-3.3,-8.7,-10,-18c-135.3,-192.7,-235.5,-414.3,-300.5,-665c-65,-250.7,-102.5,
--544.7,-112.5,-882c-2,-104,-3,-167,-3,-189
-l0,-92c0,-162.7,5.7,-314,17,-454c20.7,-272,63.7,-513,129,-723c65.3,
--210,155.3,-396.3,270,-559c6.7,-9.3,10,-15.3,10,-18z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.875em;height:3.6em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="3.6em" viewBox="0 0 875 3600"><path d="M76,0c-16.7,0,-25,3,-25,9c0,2,2,6.3,6,13c21.3,28.7,42.3,60.3,
-63,95c96.7,156.7,172.8,332.5,228.5,527.5c55.7,195,92.8,416.5,111.5,664.5
-c11.3,139.3,17,290.7,17,454c0,28,1.7,43,3.3,45l0,9
-c-3,4,-3.3,16.7,-3.3,38c0,162,-5.7,313.7,-17,455c-18.7,248,-55.8,469.3,-111.5,664
-c-55.7,194.7,-131.8,370.3,-228.5,527c-20.7,34.7,-41.7,66.3,-63,95c-2,3.3,-4,7,-6,11
-c0,7.3,5.7,11,17,11c0,0,11,0,11,0c9.3,0,14.3,-0.3,15,-1c5.3,-5.3,10.3,-11,15,-17
-c242.7,-294.7,395.3,-681.7,458,-1161c21.3,-164.7,33.3,-350.7,36,-558
-l0,-144c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
--470,-1265c-4.7,-6,-9.7,-11.7,-15,-17c-0.7,-0.7,-6.7,-1,-18,-1z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span></span></span></span></li>
-</ul>
-</li>
-</ul>
-</details>
-<details>
-<summary><u><b>Wie bestimmt man die Normalform von Ebenen ?</b></u></summary>
+<summary><u><b>Welche Eigenschaft hat `Seq` ?</b></u></summary>
 <ul>
 <li>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>:</mo><mo stretchy="false">(</mo><mover accent="true"><mi>x</mi><mo>⃗</mo></mover><mo>−</mo><mover accent="true"><mi>c</mi><mo>⃗</mo></mover><mo stretchy="false">)</mo><mo>⋅</mo><mo stretchy="false">(</mo><mover accent="true"><mi>a</mi><mo>⃗</mo></mover><mo>×</mo><mover accent="true"><mi>b</mi><mo>⃗</mo></mover><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">E: (\vec{x} - \vec{c}) \cdot (\vec{a} \times \vec{b}) = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.714em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2077em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin"><path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
-3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
-10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
--1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
--7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
-H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
-c-16-25.333-24-45-24-59z"/></svg></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.714em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">c</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1799em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin"><path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
-3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
-10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
--1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
--7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
-H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
-c-16-25.333-24-45-24-59z"/></svg></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.714em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">a</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2355em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin"><path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
-3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
-10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
--1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
--7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
-H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
-c-16-25.333-24-45-24-59z"/></svg></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.2274em;vertical-align:-0.25em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9774em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">b</span></span><span style="top:-3.2634em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2355em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin"><path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
-3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
-10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
--1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
--7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
-H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
-c-16-25.333-24-45-24-59z"/></svg></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></p>
+<p>ist ein <code>Iterable</code> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder accentunder="true"><mrow><mtext>    </mtext><mstyle mathcolor="#83b7ea"><mtext>Elem.</mtext></mstyle><mtext>    </mtext></mrow><mo stretchy="true">→</mo></munder></mrow><annotation encoding="application/x-tex">\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Elem.}}\ \ \ \ }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2164em;vertical-align:-0.522em;"></span><span class="mord accentunder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span class="svg-align" style="top:-2.478em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.522em" viewBox="0 0 400000 522" preserveAspectRatio="xMaxYMin slice"><path d="M0 241v40h399891c-47.3 35.3-84 78-110 128
+-16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
+ 11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
+ 39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
+-40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
+-12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
+ 151.7 139 205zm0 0v40h399900v-40z"/></svg></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mord text" style="color:#83b7ea;"><span class="mord" style="color:#83b7ea;">Elem.</span></span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.522em;"><span></span></span></span></span></span></span></span></span> <strong>feste Pos.</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> man kann anhand dieser Pos. auf d. Elem. zugreifen</p>
+<details>
+<summary><u><b>Welche Eigenschaften werden `Seq` bereit gestellt ?</b></u></summary>
+<ul>
+<li>Zugriff ü. Position: <code>apply</code> (f. den Zugriff an bestimmter Pos.), <code>indexOf</code> (um Pos. eines bestimmten Elements zu bekommen)</li>
+<li>Sortierung: <code>sorted</code>, <code>sortBy</code></li>
+<li>Vgl.: <code>contains</code>, <code>startsWith</code>, <code>distinct</code></li>
+</ul>
+</details>
 </li>
+</ul>
+</details>
+<details>
+<summary><u><b>Was sind Besonderheiten einer <code>LinearSeq</code>?</b></u></summary>
+<ul>
+<li>effiziente <code>head</code> &amp; <code>tail</code><strong>-Methoden</strong></li>
+</ul>
+</details>
+<details>
+<summary><u><b>Was sind Besonderheiten einer <code>IndexSeq</code>?</b></u></summary>
+<ul>
+<li>Verfügung v. effizienten Methoden, um auf beliebige Elem. d. Seq. zuzugreifen</li>
+</ul>
+</details>
+<h2 id="set">Set</h2>
+<details>
+<summary><u><b>Was sind die Eigenschaften eines Sets ?</b></u></summary>
+<ul>
+<li>keine feste Reihenfolge</li>
+<li>Jedes Elem. nur <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>×</mo></mrow><annotation encoding="application/x-tex">1 \times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mord">×</span></span></span></span></li>
+</ul>
+</details>
+<details>
+<summary><u><b>Welche Funktionalität stellen Sets zur Verfügung ?</b></u></summary>
+<ul>
+<li><strong>Tests</strong>: <code>contains</code></li>
+<li><strong>Mengenoperationen</strong>: <code>intersect</code>, <code>union</code></li>
+</ul>
+</details>
+<details>
+<summary><u><b>Was muss ich verw., wenn ich ein Set sortieren möchte ?</b></u></summary>
+<ul>
+<li><code>SortedSet</code></li>
+</ul>
+</details>
+<details>
+<summary><u><b>Was muss ich verw., wenn ich ein Set speicherplatzsparend speichern möchte ?</b></u></summary>
+<ul>
 <li>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>x</mi><mo>−</mo><mrow><mtext>St</mtext><mover accent="true"><mtext>u</mtext><mo>¨</mo></mover><mtext>tztvektor</mtext></mrow><mo stretchy="false">]</mo><mo>⋅</mo><mtext>Normalvektor</mtext><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">[x - \text{Stütztvektor}] \cdot \text{Normalvektor} = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">St</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord">u</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">¨</span></span></span></span></span></span></span><span class="mord">tztvektor</span></span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord">Normalvektor</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></p>
+<p><code>BitSet</code></p>
 <details>
-<summary><u><b>Was bedeutet es, wenn das Ergebnis $E \ne 0$ ist?</b></u></summary>
+<summary><u><b>Was ist ein BitSet im Grunde ?</b></u></summary>
 <ul>
-<li>Punkt liegt <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">¬</mi></mrow><annotation encoding="application/x-tex">\lnot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord">¬</span></span></span></span> auf d. Ebene</li>
+<li>ein <code>sortedSet</code>, bei dem d. <strong>Zahlen</strong> <em>speichersparend gespeichert</em> werden</li>
 </ul>
 </details>
 </li>
 </ul>
 </details>
 <details>
-<summary><u><b>Gegeben ist $A = \begin{pmatrix} 2 \\ 1 \\ 3 \end{pmatrix}, \quad B = \begin{pmatrix} 4 \\ 1 \\ 4 \end{pmatrix}, \quad C = \begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix}$. Wie bestimmt man die Spannvektor ?
-</b></u></summary>
+<summary><u><b>Implementiere ein Set d. veränderlich und unveränderlich ist, wobei ein weiteres Element hinzugefügt wird. Schriebe zudem, ob es in-place verändert wird oder nicht: 
+<pre><code>val s1 = ??? //veränderlich
+??? //d. 4 soll hinzugefügt werdem
+println(???) //Ausgabe: ???
+<hr>
+<p>val s2 = ??? //unveränderlich
+???
+println(???) //Ausgabe: ???
+</code></pre></b></u></summary></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">val</span> s1 = scala.collection.mutable.<span class="hljs-type">Set</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>) <span class="hljs-comment">//veränderlich</span>
+<span class="hljs-keyword">val</span> s1.add(<span class="hljs-number">4</span>)
+println(s1) <span class="hljs-comment">//Ausgabe: HashSet(1,2,3,4)</span>
+----------------------------------
+<span class="hljs-keyword">val</span> s2 = scala.collection.immutable.<span class="hljs-type">Set</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>) <span class="hljs-comment">//unveränderlich</span>
+<span class="hljs-keyword">val</span> s3 = s2 + <span class="hljs-number">4</span>
+println(s3) <span class="hljs-comment">//Ausgabe: Set(1, 2, 3, 4)</span>
+</div></code></pre>
+</details>
+<h2 id="map">Map</h2>
+<details>
+<summary><u><b>Was ist ein Map ?</b></u></summary>
 <ul>
-<li>u = AB = B-A</li>
-<li>v = AC = C-A</li>
+<li>ein <code>Iterable</code> v. <strong>Schlüssel-Wert-Paaren</strong></li>
 </ul>
 </details>
 <details>
-<summary><u><b>Gegeben ist $A = \begin{pmatrix} 2 \\ 1 \\ 3 \end{pmatrix}, \quad B = \begin{pmatrix} 4 \\ 1 \\ 4 \end{pmatrix}, \quad C = \begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix}$. Bestimme d. Ebenengleichung ?
-</b></u></summary>
-<p><img src="image.png" alt="alt text"></p>
+<summary><u><b>Welche Funktionalitäten stellen Maps bereit ?</b></u></summary>
+<ul>
+<li><strong>Suche von Wert mit Schlüssel</strong>: <code>get</code>, <code>getOrElse</code>, <code>contains</code></li>
+<li><strong>Schlüssel und Werte</strong>: <code>keys</code>, <code>values</code></li>
+<li><strong>Transformationen</strong>: <code>filterKeys</code>, <code>mapValues</code></li>
+</ul>
 </details>
 <details>
-<summary><u><b></b></u></summary>
+<summary><u><b>Was muss ich verwenden, wenn ich möchte, dass ein Map sortiert ist ? </b></u></summary>
+<ul>
+<li>
+<p><code>SortedMap</code></p>
+<details>
+<summary><u><b>Wonach wird hier sortiert ?</b></u></summary>
+<ul>
+<li>N. den <code style="color: #ff6a00ff">keys</code></li>
+</ul>
+</details>
+</li>
+</ul>
+</details>
+</li>
+</ul>
+</details>
+<h1 id="scalacollectionimmutable">scala.collection.immutable</h1>
+<details>
+<summary><u><b>Wie sieht die Hierarchie der unveränderlichen Collections aus ?</b></u></summary>
+<p><img src="image-9.png" alt="alt text"></p>
 </details>
 &lt;script>
   window.MathJax = {
     tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
+      inlineMath: [['$', '$']]
     }
   };
 &lt;/script>
