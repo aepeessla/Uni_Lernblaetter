@@ -809,30 +809,35 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
     * Denaturierung $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Protein}}\ \ \ \ }$ aktiver oder deaktiviert
 </details>
 
-<details>
-<summary><u><b>Was ist d. Hauptaufgabe des Chaperonin-Zyklus ?</b></u></summary>
+<details class="f">
+<summary><u><b>Wie nennt man den Zyklus, um mislungenen Proteinen eine 2. Chance zu geben ?</b></u></summary>
 
-* d. Rettung falsch gefalteten Proteine
-</details>
+  * `Chaperonin-Zyklus`
+  <details class="r">
+  <summary><u><b>Was ist d. Hauptaufgabe des Chaperonin-Zyklus ?</b></u></summary>
 
-<details>
-<summary><u><b>Was sind die Schritte des Chaperonin-Zyklus ?</b></u></summary>
+  * d. Rettung falsch gefalteten Proteine
+  </details>
 
-* `Falsch gefaltete Proteine` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{haben}}\ \ \ \ }$ __rausragende hydrophobe Bereiche__ , d. gefählich sein können (Entropie, Hydrophobe Effekt, Verklumpung)
-* `kaputtes Protein` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{hineingezogen}}\ \ \ \ }$ vom <code style="color: #ff6a00ff">HSP60</code> in die obere Kammer <code style="color: #00ff2fff">GroEL</code> , welches d. __obere Öffnung des Chaperon-Koplexes__ ist. Dessen `Wand` zieht d. `hydrophilen Ränder` an
-* Das __Deckel lagert__ sich unter `ATP` __Verbrauch__ dran (<code style="color: #cc00ffff">GroES cap</code>) $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{schlagartige Veränderung}}\ \ \ \ }$ des ___Innenraums___($hydrophob \to hydrophil$) $\implies$ Dadruch ist d. `kaputte Protein` komplett isoliert, als würde es in einem Vakuum liegen & kann sich jzt. komplett frei falten
-* D. <code style="color: #cc00ffff">GroES cap</code> öffnet sich ernst, wenn das `kaputte Protein` richtig gefaltet hat.
+  <details class="f">
+  <summary><u><b>Was sind die Schritte des Chaperonin-Zyklus ?</b></u></summary>
+
+  * `Falsch gefaltete Proteine` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{haben}}\ \ \ \ }$ __rausragende hydrophobe Bereiche__ , d. gefählich sein können (Entropie, Hydrophobe Effekt, Verklumpung)
+  * `kaputtes Protein` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{hineingezogen}}\ \ \ \ }$ vom <code style="color: #ff6a00ff">HSP60</code> in die obere Kammer <code style="color: #00ff2fff">GroEL</code> , welches d. __obere Öffnung des Chaperon-Koplexes__ ist. Dessen `Wand` zieht d. `hydrophilen Ränder` an
+  * Das __Deckel lagert__ sich unter `ATP` __Verbrauch__ dran (<code style="color: #cc00ffff">GroES cap</code>) $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{schlagartige Veränderung}}\ \ \ \ }$ des ___Innenraums___($hydrophob \to hydrophil$) $\implies$ Dadruch ist d. `kaputte Protein` komplett isoliert, als würde es in einem Vakuum liegen & kann sich jzt. komplett frei falten
+  * D. <code style="color: #cc00ffff">GroES cap</code> öffnet sich ernst, wenn das `kaputte Protein` richtig gefaltet hat.
 
 
 
-![alt text](image-30.png)
+  ![alt text](image-30.png)
+  </details>
 </details>
 
 <h1>Energie & Enzyme</h1>
 
 <h2>Urey-Miller-Experiment</h2>
 
-<details>
+<details class="f">
 <summary><u><b>Was hat es bewiesen ?</b></u></summary>
 
 * Durch Zufuhr v. `Energie`(Blitze) sind aus einfachen, unlebenden Stoffen `Aminosäuren` entstanden
@@ -840,13 +845,13 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 
 <h2>ATP</h2>
 
-<details>
+<details class="r">
 <summary><u><b>Wie ist ATP aufgebaut?</b></u></summary>
 
 ![alt text](image-31.png)
 </details>
 
-<details>
+<details class="r">
 <summary><u><b>Was ist eine Redoxreaktion ?</b></u></summary>
 
 * hierbei handelt es sich um einen __Elektronentransfer__
@@ -854,7 +859,7 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
   * finden immer __gleichzeitig__ statt
 </details>
 
-<details>
+<details class="r">
 <summary><u><b>Wie nennt man d. Abgabe und die Aufnahme eines Elektrons ?</b></u></summary>
 
 * Abgabe = Oxidation
@@ -862,7 +867,7 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 </details>
 
 <details>
-<summary><u><b>Warum sind sie im Stoffwechsel so wichtig ?</b></u></summary>
+<summary><u><b>Warum sind sie im Stoffwechsel so wichtig & was ist die Lösung ?</b></u></summary>
 
 * sie nutzen kleine <code style="color: #a274bbff">Redox-Schritte</code>, um <span style="color: red">__Energie__ zu ü.tragen</span> anstatt `Energie` direkt aus `Zucker` zu __verbrennen__
 </details> 
