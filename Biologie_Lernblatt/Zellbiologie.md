@@ -486,7 +486,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 <details>
  <summary><b><u>Was ist die Folge von Kohäsion und Adhäsion bei Wasser?</u></b></summary>
 
-  * Wasser kann in `engen Röhren` <span style="color: red;">aufsteigen<span> $\implies$ wichtig f. Pflanzen/Bäume
+  * Wasser kann in `engen Röhren` <span style="color: red;">aufsteigen</span> $\implies$ wichtig f. Pflanzen/Bäume
   * `Wasseroberflächenspannung` $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{ermögl. Insekten}}\ \ \ \ }$ Auf Wasser zu laufen
   * natürl. `Klebestoff` $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{zsm.kleben v. Stoffen}}\ \ \ \ }$ wichtig f. <span style="color: red;">Stofftransport in biologischen Systemen <span>
 </details>
