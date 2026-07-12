@@ -1254,6 +1254,19 @@ Das sind `kleine Härrchen` d, aus `Mikrotubuli` bestehen & f. den Transport zus
 ## Mikroskop
 
 <details>
+<summary><u><b>Was sind d. 3 Teleskopenarten ?</b></u></summary>
+
+1) Lichtmikroskop(LM)
+1) Transmissions-Elektronenmikroskop(TEM)
+1) Raster-Elektronenmikroskop(REM)
+1) Focused Ion Beam Scanning Electron Microscopy(FIB-SEM) $\to$ 3D-Scan
+</details>
+
+
+
+
+
+<details>
 <summary><u><b> Wie wird bei gewöhnl. Mikroskopen & bei Elektromikroskopen d. heranzommen ermögl. ?</b></u></summary>
 
 * <span class="sub">gewöhnlicher Mikroskop</span>
@@ -1270,41 +1283,155 @@ Das sind `kleine Härrchen` d, aus `Mikrotubuli` bestehen & f. den Transport zus
 <details>
 <summary><u><b>Was sind die einzelnen Ebenen eines Transmissions-Elektronenmikroskops(TEM) & eines Lichtmikroskops(LM) ?</b></u></summary>
 
-* <span class="sub">TEM</span>
-  * ![alt text](image-39.png)
+* ![alt text](image-39.png)
+</details>
+
+
+
+<details>
+<summary><u><b>Was kann ich beim LM machen, was ich beim TEM nicht machen kann ?</b></u></summary>
+
+* beim `LM` kann ich eine Lebendigbeobachtung durchführen & bei `TEM` $\lnot$
+</details>
+
+
+
+<details>
+<summary><u><b>Wie lautet die Formel zur Bestimmung des Auflösungsvermögens eines Mikroskops ?</b></u></summary>
+
+$$d = \frac{\lambda}{A}$$
+  * $d =$ kleinster noch wahrnehmbarer Abstand zweier Punkte
+  * $\lambda =$ Wellenlänge
+  * $A =$ numerische Apetur d. Linsen(Beugung)
+</details>
+
+
+
+<details>
+<summary><u><b>Was ist die Wellenlänge des sichtbaren Lichts ?</b></u></summary>
+
+* $450 - 700 \text{nm}$
+</details>
+
+
+<details>
+<summary><u><b>Ordne d. Namen d. Kontraste v. Bild zu ?
+<img src="image-41.png"></b></u></summary>
+
+![alt text](image-40-1.png)
 </details>
 
 
 
 
+## Zellen
+
+<details>
+<summary><u><b>Wie groß sind üblicherweise prokaryotischen & eukaryotischen Zellen ?</b></u></summary>
+
+* <span class="sub">Prokaryoten</span>: zw. `1 & 10µm`
+* <span class="sub">Eukaryoten</span>: zw. `10 & 100µm`
+> Prokaryoten $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\times 10}\ \ \ \ }$ Eukaryoten
+</details>
 
 
 
+<details>
+<summary><u><b>Zeichne und beschrifte eukaryotische Zellen.</b></u></summary>
+
+![alt text](image-42.png)
+</details>
 
 
 
+<details>
+<summary><u><b>Liste d. Organellen auf d. eine tierische Zelle hat, aber d. pflanzl. Zelle nicht & anders herum.</b></u></summary>
+
+<table>
+  <thead>
+    <tr>
+      <th>Organell</th>
+      <th>Pflanze</th>
+      <th>Tier</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lysosom</td>
+      <td>x</td>
+      <td>√</td>
+    </tr>
+    <tr>
+      <td>Vakuole</td>
+      <td>√</td>
+      <td>x</td>
+    </tr>
+    <tr>
+      <td>Chloroplasten</td>
+      <td>√</td>
+      <td>x</td>
+    </tr>
+    <tr>
+      <td>Plasmodesmen</td>
+      <td>√</td>
+      <td>x</td>
+    </tr>
+    <tr>
+      <td>Zellwand & Zellwand d. Nachbarzelle </td>
+      <td>√</td>
+      <td>x</td>
+    </tr>
+  </tbody>
+</table>
+
+![alt text](image-43.png)
+![alt text](image-44.png)
+</details>
 
 
 
+## Organellen
 
+### Zellkern
 
+![alt text](image-45.png)
+![alt text](image-46.png)
 
+### Endoplasmatisches Retikulum
 
+![alt text](image-47.png)
 
+### Golgi-Apparat
+![alt text](image-48.png)
 
+### Lysosom
 
+![alt text](image-49.png)
 
+### Vakuole
 
+![alt text](image-50.png)
 
+### Peroxisomen
 
+![alt text](image-51.png)
 
+### Mitochrondrien & Chloroplast
 
+![alt text](image-52.png)
 
+### Zytosol mit Zytoskelett
 
+![alt text](IMG_3414.jpeg)
 
+### Zentrosome
 
+<details>
+<summary><u><b>Was ist das Zentrosome ?</b></u></summary>
 
-
+* MTOC = Microtubule Organising Centre
+* <span class="sub">Hauptaufgabe</span>: Steuerung der Zellteilung: Es bildet die Spindelfasern aus, welche die Chromosomen gleichmäßig auf die Tochterzellen verteilen.
+</details>
 
 
 
