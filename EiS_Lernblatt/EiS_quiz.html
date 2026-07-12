@@ -688,7 +688,7 @@ println(malZwei(<span class="hljs-number">5</span>)) <span class="hljs-comment">
   def bark: String = "Wau"
 }
 <p>trait CanHowl {
-def howl: String = &quot;Awoo0&quot;
+def howl: String = &quot;Awooo&quot;
 }
 </code></pre></b></u></summary></p>
   <details>
@@ -710,9 +710,151 @@ println(wolf.howl) <span class="hljs-comment">// Awooo</span>
   <details>
   <summary><u><b>Kann man ein trait überschreiben ?</b></u></summary>
 <ul>
-<li>Ja. man kann es mit <input type="text" id="eingabe1" placeholder="Wort eingeben..."><div id="ergebnis1"></div> ü. schrieben</li>
+<li>
+<p>Ja. man kann es mit <input type="text" id="eingabe1" placeholder="Wort eingeben..."><div id="ergebnis1"></div> ü. schrieben</p>
+</li>
+<li>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanBark</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wau&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanHowl</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">howl</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Awooo&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CanBark</span> </span>{
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wuff&quot;</span>
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Wolf</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CanBark</span>, <span class="hljs-title">CanHowl</span></span>
+
+<span class="hljs-keyword">val</span> dog = <span class="hljs-type">Dog</span>()
+println(dog.bark)
+
+<span class="hljs-keyword">val</span> wolf = <span class="hljs-type">Wolf</span>() <span class="hljs-comment">//Wuff</span>
+println(wolf.bark) <span class="hljs-comment">//Wau</span>
+</div></code></pre>
+</li>
 </ul>
   </details>
+<details>
+<summary><u><b>Können traits Felder haben ?</b></u></summary>
+<ul>
+<li>
+<p>Ja</p>
+<ul>
+<li>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanBark</span> </span>{
+  <span class="hljs-keyword">val</span> barkVolume: <span class="hljs-type">Int</span> = <span class="hljs-number">30</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wau&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanHowl</span> </span>{
+  <span class="hljs-keyword">val</span> howlVolume: <span class="hljs-type">Int</span> = <span class="hljs-number">100</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">howl</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Awooo&quot;</span>
+}
+</div></code></pre>
+</li>
+</ul>
+<details>
+<summary><u><b>Worauf müssen wir hier beim einmixen beachten ?</b></u></summary>
+<ul>
+<li>es dürfen keine <code>traits</code> zsm. eingemixt werden, d. <strong>gleiche benannte Felder</strong> oder <strong>Methoden</strong> haben !</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanBark</span> </span>{
+  <span class="hljs-keyword">val</span> volume: <span class="hljs-type">Int</span> = <span class="hljs-number">30</span> <span class="hljs-comment">// conflicting field</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wau&quot;</span>
+}
+  
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanHowl</span> </span>{
+  <span class="hljs-keyword">val</span> volume: <span class="hljs-type">Int</span> = <span class="hljs-number">100</span> <span class="hljs-comment">// conflicting field</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">howl</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Awooo&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Wolf</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CanBark</span>, <span class="hljs-title">CanHowl</span> <span class="hljs-comment">// error</span></span>
+</div></code></pre>
+</details>
+<details>
+<summary><u><b>Wir wollen, dass eine Klasse von einem trait und von Klassen erbt. Was ist das Verhältnis der Erbung ? </b></u></summary>
+<ul>
+<li>max. eine Klasse</li>
+<li>mehrere Traits</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanBark</span> </span>{
+ <span class="hljs-keyword">val</span> barkVolume: <span class="hljs-type">Int</span> = <span class="hljs-number">30</span>
+ <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wau&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanHowl</span> </span>{
+  <span class="hljs-keyword">val</span> howlVolume: <span class="hljs-type">Int</span> = <span class="hljs-number">100</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">howl</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Awooo&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Canine</span> </span>{ <span class="hljs-comment">// &quot;hundeartig&quot;</span>
+  <span class="hljs-keyword">val</span> cuteAsAPuppy: <span class="hljs-type">Boolean</span> = <span class="hljs-literal">true</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Canine</span>, <span class="hljs-title">CanBark</span> <span class="hljs-comment">// inherits from Canine, mixes in CanBark</span></span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Wolf</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Canine</span>, <span class="hljs-title">CanBark</span>, <span class="hljs-title">CanHowl</span></span>
+</div></code></pre>
+</details>
+</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Können traits Sachen erben ?</b></u></summary>
+<ul>
+<li>
+<p><code style="color: rgb(91, 218, 120)">Ja</code></p>
+<details>
+<summary><u><b>Wie können wir sicherstellen, dass mansche traits nur in bestimmten Klassen eingemixt werden können ? </b></u></summary>
+<ul>
+<li>Wir lassen das <code>trait</code> v. <strong>einer Klasse erben</strong>
+<ul>
+<li>wenn wir jzt. unsere Klasse v. diesem <code>trait</code> erben lassen &amp; eine weitere Klasse erben möchten, dann geht es <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">¬</mi></mrow><annotation encoding="application/x-tex">\lnot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord">¬</span></span></span></span>, weil wir bereits in unserem <code>trait</code> eine Klasse geerbt haben (Wir dürfen nur von einem <code>class</code> erben)</li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Canine</span> </span>{ <span class="hljs-comment">// &quot;hundeartig&quot;</span>
+  <span class="hljs-keyword">val</span> cuteAsAPuppy: <span class="hljs-type">Boolean</span> = <span class="hljs-literal">true</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanBark</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Canine</span> </span>{ <span class="hljs-comment">// inherits from Canine</span>
+  <span class="hljs-keyword">val</span> barkVolume: <span class="hljs-type">Int</span> = <span class="hljs-number">30</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wau&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanHowl</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Canine</span> </span>{ <span class="hljs-comment">// inherits from Canine</span>
+  <span class="hljs-keyword">val</span> howlVolume: <span class="hljs-type">Int</span> = <span class="hljs-number">100</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">howl</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Awooo&quot;</span>
+}
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Feline</span> </span>{ <span class="hljs-comment">// katzenartig</span>
+  <span class="hljs-keyword">val</span> sevenLifes: <span class="hljs-type">Boolean</span> = <span class="hljs-literal">true</span>
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Feline</span>, <span class="hljs-title">CanBark</span> <span class="hljs-comment">//Cat -&gt; Feline: class -&gt; CanBark -&gt; Canine(class) &lt;- error</span></span>
+</div></code></pre>
+</details>
+<details>
+<summary><u><b>Was ist eine andere Methode, die das einmixen in bestimmten Objekt-Typen ermöglicht ?</b></u></summary>
+<ul>
+<li><code style="color: rgb(77, 152, 195)">Self-Type Annotations</code></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanBark</span> </span>{
+  <span class="hljs-keyword">this</span>: <span class="hljs-type">Canine</span> =&gt; <span class="hljs-comment">// Self-Type: Dieser Trait darf nur in Instanzen von Canine eingemixt werden</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wau&quot;</span>
+}
+</div></code></pre>
+</details>
+<details>
+<summary><u><b>Wir haben folgendes <code>class C extends A with B with C</code>. Nach welcher Reihenfolge werden die traits ausgeführt ? </b></u></summary>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>→</mo><mi>B</mi><mo>→</mo><mi>A</mi><mo>→</mo><mo stretchy="false">(</mo><mi>S</mi><mi>u</mi><mi>p</mi><mi>e</mi><mi>r</mi><mi>k</mi><mi>l</mi><mi>a</mi><mi>s</mi><mi>s</mi><mi>e</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">C \to B \to A \to (Superklasse)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mord mathnormal">u</span><span class="mord mathnormal">p</span><span class="mord mathnormal" style="margin-right:0.0278em;">er</span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">a</span><span class="mord mathnormal">sse</span><span class="mclose">)</span></span></span></span></li>
+</ul>
+</details>
+</li>
+</ul>
+</details>
 &lt;script>
 const musterloesung = "override"; // Hier das Zielwort definieren
 const inputFeld = document.getElementById("eingabe1");

@@ -313,7 +313,7 @@
 }
 
 trait CanHowl {
-  def howl: String = "Awoo0"
+  def howl: String = "Awooo"
 }
 </code></pre></b></u></summary>
 
@@ -334,12 +334,192 @@ trait CanHowl {
   ```
   </details>
 
+
   <details>
   <summary><u><b>Kann man ein trait überschreiben ?</b></u></summary>
 
   * Ja. man kann es mit <input type="text" id="eingabe1" placeholder="Wort eingeben..."><div id="ergebnis1"></div> ü. schrieben
+  
+  * ```scala
+    trait CanBark {
+      def bark: String = "Wau"
+    }
 
+    trait CanHowl {
+      def howl: String = "Awooo"
+    }
+
+    class Dog extends CanBark {
+      override def bark: String = "Wuff"
+    }
+    class Wolf extends CanBark, CanHowl
+
+    val dog = Dog()
+    println(dog.bark)
+
+    val wolf = Wolf() //Wuff
+    println(wolf.bark) //Wau
+    ```
   </details>
+
+
+
+
+<details>
+<summary><u><b>Können traits Felder haben ?</b></u></summary>
+
+* Ja
+  * ```scala
+    trait CanBark {
+      val barkVolume: Int = 30
+      def bark: String = "Wau"
+    }
+
+    trait CanHowl {
+      val howlVolume: Int = 100
+      def howl: String = "Awooo"
+    }
+    ```
+
+  <details>
+  <summary><u><b>Worauf müssen wir hier beim einmixen beachten ?</b></u></summary>
+
+  * es dürfen keine `traits` zsm. eingemixt werden, d. __gleiche benannte Felder__ oder __Methoden__ haben !
+
+  ```scala
+  trait CanBark {
+    val volume: Int = 30 // conflicting field
+    def bark: String = "Wau"
+  }
+    
+  trait CanHowl {
+    val volume: Int = 100 // conflicting field
+    def howl: String = "Awooo"
+  }
+  
+  class Wolf extends CanBark, CanHowl // error
+  ``` 
+  </details>
+
+  <details>
+  <summary><u><b>Wir wollen, dass eine Klasse von einem trait und von Klassen erbt. Was ist das Verhältnis der Erbung ? </b></u></summary>
+
+  * max. eine Klasse
+  * mehrere Traits
+
+  ```scala
+  trait CanBark {
+   val barkVolume: Int = 30
+   def bark: String = "Wau"
+  }
+  
+  trait CanHowl {
+    val howlVolume: Int = 100
+    def howl: String = "Awooo"
+  }
+  
+  class Canine { // "hundeartig"
+    val cuteAsAPuppy: Boolean = true
+  }
+  
+  class Dog extends Canine, CanBark // inherits from Canine, mixes in CanBark
+  class Wolf extends Canine, CanBark, CanHowl
+  ```
+  </details>
+</details>
+
+
+
+<details>
+<summary><u><b>Können traits Sachen erben ?</b></u></summary>
+
+* <code style="color: rgb(91, 218, 120)">Ja</code>
+
+  <details>
+  <summary><u><b>Wie können wir sicherstellen, dass mansche traits nur in bestimmten Klassen eingemixt werden können ? </b></u></summary>
+
+  * Wir lassen das `trait` v. __einer Klasse erben__
+    * wenn wir jzt. unsere Klasse v. diesem `trait` erben lassen & eine weitere Klasse erben möchten, dann geht es $\lnot$, weil wir bereits in unserem `trait` eine Klasse geerbt haben (Wir dürfen nur von einem `class` erben)
+  
+  ```scala
+  class Canine { // "hundeartig"
+    val cuteAsAPuppy: Boolean = true
+  }
+
+  trait CanBark extends Canine { // inherits from Canine
+    val barkVolume: Int = 30
+    def bark: String = "Wau"
+  }
+
+  trait CanHowl extends Canine { // inherits from Canine
+    val howlVolume: Int = 100
+    def howl: String = "Awooo"
+  }
+
+
+  class Feline { // katzenartig
+    val sevenLifes: Boolean = true
+  }
+  class Cat extends Feline, CanBark //Cat -> Feline: class -> CanBark -> Canine(class) <- error
+  ```
+  </details>
+
+  <details>
+  <summary><u><b>Was ist eine andere Methode, die das einmixen in bestimmten Objekt-Typen ermöglicht ?</b></u></summary>
+
+  * <code style="color: rgb(77, 152, 195)">Self-Type Annotations</code>
+
+  ```scala
+  trait CanBark {
+    this: Canine => // Self-Type: Dieser Trait darf nur in Instanzen von Canine eingemixt werden
+    def bark: String = "Wau"
+  }
+  ```
+  </details>
+
+  <details>
+  <summary><u><b>Wir haben folgendes <code>class C extends A with B with C</code>. Nach welcher Reihenfolge werden die traits ausgeführt ? </b></u></summary>
+
+  * $C \to B \to A \to (Superklasse)$
+  </details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script>
