@@ -870,6 +870,7 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 <summary><u><b>Warum sind sie im Stoffwechsel so wichtig & was ist die Lösung ?</b></u></summary>
 
 * sie nutzen kleine <code style="color: #a274bbff">Redox-Schritte</code>, um <span style="color: red">__Energie__ zu ü.tragen</span> anstatt `Energie` direkt aus `Zucker` zu __verbrennen__
+* zudem würde debei jede Menge an Wärme freigesetzt werden, wobei wichtige molekulare Strukturen denaturieren würden $\implies$ kein Leben mögl.
 </details> 
 
 ![alt text](image-32.png)
