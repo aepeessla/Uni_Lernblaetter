@@ -286,21 +286,21 @@
         Person.printSpezies() 
       }
       ```
-      * ```scala
-        object A {
-          private var count: Int = 0
-          def numberOfObjects: Int = count
-        }
+    * ```scala
+      object A {
+        private var count: Int = 0
+        def numberOfObjects: Int = count
+      }
 
-        class A {
-        A.count += 1
-        }
+      class A {
+      A.count += 1
+      }
 
-        val a1 = A()
-        val a2 = A()
-        val a3 = A()
-        println(A.numberOfObjects) // 3     
-        ```
+      val a1 = A()
+      val a2 = A()
+      val a3 = A()
+      println(A.numberOfObjects) // 3     
+      ```
 </details>
 
 
