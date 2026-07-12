@@ -4,9 +4,11 @@
     color: #999999ff;
     padding: 2px 6px;          /* Ein bisschen Abstand, damit es gut aussieht */
     border-radius: 3px;  
-       }
+  }
+
   details {
     border: #e4e3e3ff 1px solid;
+    padding: 8px
   }
 
   h1 {
@@ -52,25 +54,28 @@
       <div id="ergebnis"></div>
 
       <script>
-          const musterloesung = "scala.collection.mutable.Map"; // Hier das Zielwort definieren
-          const inputFeld = document.getElementById("eingabe");
-          const ergebnisDiv = document.getElementById("ergebnis");
+      const musterloesung = "scala.collection.mutable.Map"; // Hier das Zielwort definieren
+      const inputFeld = document.getElementById("eingabe");
+      const ergebnisDiv = document.getElementById("ergebnis");
 
-          inputFeld.addEventListener("keypress", function(event) {
-              if (event.key === "Enter") {
-                  const nutzerEingabe = inputFeld.value;
-                  
-                  if (nutzerEingabe === musterloesung) {
-                      ergebnisDiv.innerHTML = `<span class="richtig">Richtig!</span>`;
-                  } else {
-                      ergebnisDiv.innerHTML = `<span class="falsch">Falsch!</span> Das Wort war nicht "${nutzerEingabe}".`;
-                  }
+      inputFeld.addEventListener("keypress", function(event) {
+          if (event.key === "Enter") {
+              const nutzerEingabe = inputFeld.value;
+              
+              if (nutzerEingabe === musterloesung) {
+                  ergebnisDiv.innerHTML = `<span class="richtig">Richtig!</span>`;
+              } else {
+                  ergebnisDiv.innerHTML = `<span class="falsch">Falsch!</span> Das Wort war nicht "${nutzerEingabe}".`;
               }
-          });
+        }
+      });
       </script>
 
     </details>
 </details>
+
+
+
 
 <details>
 <summary><u><b>Du hast eine Liste: <code>scala.collection.mutable.Map[A]</code> & möchtest den Wert bekommen, wenn es nicht vorhanden ist, dann soll (0: Long) zurückgegeben werden, wann es vorhanden ist, dann soll der Wert zurückgegeben werden.</b></u></summary>
@@ -78,11 +83,19 @@
 * `val current_count = <list>.getOrElse(key, 0L)`
 </details>
 
+
+
+
+
 <details>
 <summary><u><b>Entpackt .getOrElse() automatisch oder muss muss ich es mit .head extrahieren ?</b></u></summary>
 
-* Ja, d- Elem. wird als "nacktes" Elem. extrahiert
+* `.getOrElse()` entpackt autom.
 </details>
+
+
+
+
 
 <details>
 <summary><u><b>Wie macht man aus einer Liste eine String-Repräsentation ?</b></u></summary>
@@ -90,10 +103,14 @@
 * `<list>.mkString(<Was soll am Angfang stehen>, <Wie sollen die Elemente getrennt werden>, <was soll am Ende stehen>)`
 </details>
 
+
+
+
 <details>
 <summary><u><b>Wie funktioniert <code>override def equals(obj: any): Boolean = ???</code> ?</b></u></summary>
 
-* Wir vgl. unser aktuelle Objekt(`this`) mit einer anderen(`obj`)
+* Wir vgl. unser aktuelle Objekt(`this`) mit einem anderen(`obj`)
+
   <details>
   <summary><u><b>Wie wird `equals` aufgerufen ?</b></u></summary>
 
@@ -116,6 +133,8 @@
     ```
   </details>
 </details>
+
+
 
 
 <details>
@@ -145,13 +164,18 @@
     <details>
     <summary><u><b>Was währe empfehlenswert, wenn wir etwas f. den hashCode verwenden möchten ?</b></u></summary>
 
-    * Das verw. eines Objekts, dass unveränderl. ist
+    * Das __verw. eines Objekts__, dass <span style="color: red">unveränderl.</span> ist
     </details>
 </details>
 
 
 
 
+<details>
+<summary><u><b></b></u></summary>
+
+
+</details>
 
 
 

@@ -376,9 +376,11 @@ code {
     color: #999999ff;
     padding: 2px 6px;          /* Ein bisschen Abstand, damit es gut aussieht */
     border-radius: 3px;  
-       }
+  }
+
   details {
     border: #e4e3e3ff 1px solid;
+    padding: 8px
   }
 
   h1 {
@@ -423,22 +425,21 @@ code {
 <input type="text" id="eingabe" placeholder="Wort eingeben...">
 <div id="ergebnis"></div>
 &lt;script>
-    const musterloesung = "scala.collection.mutable.Map"; // Hier das Zielwort definieren
-    const inputFeld = document.getElementById("eingabe");
-    const ergebnisDiv = document.getElementById("ergebnis");
-<pre><code>inputFeld.addEventListener(&quot;keypress&quot;, function(event) {
-    if (event.key === &quot;Enter&quot;) {
-        const nutzerEingabe = inputFeld.value;
-        
-        if (nutzerEingabe === musterloesung) {
-            ergebnisDiv.innerHTML = `&lt;span class=&quot;richtig&quot;&gt;Richtig!&lt;/span&gt;`;
-        } else {
-            ergebnisDiv.innerHTML = `&lt;span class=&quot;falsch&quot;&gt;Falsch!&lt;/span&gt; Das Wort war nicht &quot;${nutzerEingabe}&quot;.`;
-        }
+const musterloesung = "scala.collection.mutable.Map"; // Hier das Zielwort definieren
+const inputFeld = document.getElementById("eingabe");
+const ergebnisDiv = document.getElementById("ergebnis");
+<p>inputFeld.addEventListener(&quot;keypress&quot;, function(event) {
+if (event.key === &quot;Enter&quot;) {
+const nutzerEingabe = inputFeld.value;</p>
+<pre><code>    if (nutzerEingabe === musterloesung) {
+        ergebnisDiv.innerHTML = `&lt;span class=&quot;richtig&quot;&gt;Richtig!&lt;/span&gt;`;
+    } else {
+        ergebnisDiv.innerHTML = `&lt;span class=&quot;falsch&quot;&gt;Falsch!&lt;/span&gt; Das Wort war nicht &quot;${nutzerEingabe}&quot;.`;
     }
-});
 </code></pre>
-&lt;/script>
+<p>}
+});
+&lt;/script></p>
 </li>
 </ul>
   </details>
@@ -454,7 +455,7 @@ code {
 <details>
 <summary><u><b>Entpackt .getOrElse() automatisch oder muss muss ich es mit .head extrahieren ?</b></u></summary>
 <ul>
-<li>Ja, d- Elem. wird als &quot;nacktes&quot; Elem. extrahiert</li>
+<li><code>.getOrElse()</code> entpackt autom.</li>
 </ul>
 </details>
 <details>
@@ -467,7 +468,7 @@ code {
 <summary><u><b>Wie funktioniert <code>override def equals(obj: any): Boolean = ???</code> ?</b></u></summary>
 <ul>
 <li>
-<p>Wir vgl. unser aktuelle Objekt(<code>this</code>) mit einer anderen(<code>obj</code>)</p>
+<p>Wir vgl. unser aktuelle Objekt(<code>this</code>) mit einem anderen(<code>obj</code>)</p>
 <details>
 <summary><u><b>Wie wird `equals` aufgerufen ?</b></u></summary>
 <pre class="hljs"><code><div>&lt;obj1&gt;.equals(&lt;obj2&gt;)
@@ -520,13 +521,16 @@ code {
 <details>
 <summary><u><b>Was währe empfehlenswert, wenn wir etwas f. den hashCode verwenden möchten ?</b></u></summary>
 <ul>
-<li>Das verw. eines Objekts, dass unveränderl. ist</li>
+<li>Das <strong>verw. eines Objekts</strong>, dass <span style="color: red">unveränderl.</span> ist</li>
 </ul>
 </details>
 </li>
 </ul>
 </li>
 </ul>
+</details>
+<details>
+<summary><u><b></b></u></summary>
 </details>
 &lt;script>
   window.MathJax = {
