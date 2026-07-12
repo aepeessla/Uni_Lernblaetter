@@ -1027,6 +1027,25 @@ inputFeld.addEventListener("keypress", function(event) {
 </li>
 </ul>
 </details>
+<details>
+<summary><u><b>Implementiere ein Set d. veränderlich und unveränderlich ist, wobei ein weiteres Element hinzugefügt wird. Schriebe zudem, ob es in-place verändert wird oder nicht: 
+<pre><code>val s1 = ??? //veränderlich
+??? //d. 4 soll hinzugefügt werdem
+println(???) //Ausgabe: ???
+<hr>
+<p>val s2 = ??? //unveränderlich
+???
+println(???) //Ausgabe: ???
+</code></pre></b></u></summary></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">val</span> s1 = scala.collection.mutable.<span class="hljs-type">Set</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>) <span class="hljs-comment">//veränderlich</span>
+<span class="hljs-keyword">val</span> s1.add(<span class="hljs-number">4</span>)
+println(s1) <span class="hljs-comment">//Ausgabe: HashSet(1,2,3,4)</span>
+----------------------------------
+<span class="hljs-keyword">val</span> s2 = scala.collection.immutable.<span class="hljs-type">Set</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>) <span class="hljs-comment">//unveränderlich</span>
+<span class="hljs-keyword">val</span> s3 = s2 + <span class="hljs-number">4</span>
+println(s3) <span class="hljs-comment">//Ausgabe: Set(1, 2, 3, 4)</span>
+</div></code></pre>
+</details>
 <h2 id="map">Map</h2>
 <details>
 <summary><u><b>Was ist ein Map ?</b></u></summary>
@@ -1060,6 +1079,10 @@ inputFeld.addEventListener("keypress", function(event) {
 </ul>
 </details>
 <h1 id="scalacollectionimmutable">scala.collection.immutable</h1>
+<details>
+<summary><u><b>Wie sieht die Hierarchie der unveränderlichen Collections aus ?</b></u></summary>
+<p><img src="image-9.png" alt="alt text"></p>
+</details>
 &lt;script>
   window.MathJax = {
     tex: {

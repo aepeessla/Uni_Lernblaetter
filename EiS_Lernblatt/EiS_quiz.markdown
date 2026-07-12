@@ -623,6 +623,10 @@ inputFeld.addEventListener("keypress", function(event) {
   * Verfügung v. effizienten Methoden, um auf beliebige Elem. d. Seq. zuzugreifen
   </details>
 
+
+
+
+
   ## Set
 
   <details>
@@ -665,6 +669,55 @@ inputFeld.addEventListener("keypress", function(event) {
 
 
 
+  <details>
+  <summary><u><b>Implementiere ein Set d. veränderlich und unveränderlich ist, wobei ein weiteres Element hinzugefügt wird. Schriebe zudem, ob es in-place verändert wird oder nicht: 
+  <pre><code>val s1 = ??? //veränderlich
+  ??? //d. 4 soll hinzugefügt werdem
+  println(???) //Ausgabe: ???
+  
+  -------------------------------------------
+  val s2 = ??? //unveränderlich
+  ???
+  println(???) //Ausgabe: ???
+  </code></pre></b></u></summary>
+
+  ```scala
+  val s1 = scala.collection.mutable.Set(1,2,3) //veränderlich
+  val s1.add(4)
+  println(s1) //Ausgabe: HashSet(1,2,3,4)
+  ----------------------------------
+  val s2 = scala.collection.immutable.Set(1,2,3) //unveränderlich
+  val s3 = s2 + 4
+  println(s3) //Ausgabe: Set(1, 2, 3, 4)
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+
+
+
+
+
+
+
+
   ## Map
 
   <details>
@@ -701,7 +754,11 @@ inputFeld.addEventListener("keypress", function(event) {
 
 # scala.collection.immutable
 
+<details>
+<summary><u><b>Wie sieht die Hierarchie der unveränderlichen Collections aus ?</b></u></summary>
 
+![alt text](image-9.png)
+</details>
 
 
 
