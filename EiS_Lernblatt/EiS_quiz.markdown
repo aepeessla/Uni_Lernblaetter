@@ -33,6 +33,11 @@
     font-weight: bold;
     text-decoration: underline
   }
+
+
+
+  .richtig { color: green; font-weight: bold; }
+  .falsch { color: red; font-weight: bold; }
 </style>
 
 
@@ -43,7 +48,26 @@
     <details>
     <summary><u><b>Wie mache ich sie veränderlich ?</b></u></summary>
 
-    * `scala.collection.mutable.Map`
+    * <input type="text" id="eingabe" placeholder="Wort eingeben...">
+      <div id="ergebnis"></div>
+
+      <script>
+          const musterloesung = "scala.collection.mutable.Map"; // Hier das Zielwort definieren
+          const inputFeld = document.getElementById("eingabe");
+          const ergebnisDiv = document.getElementById("ergebnis");
+
+          inputFeld.addEventListener("keypress", function(event) {
+              if (event.key === "Enter") {
+                  const nutzerEingabe = inputFeld.value;
+                  
+                  if (nutzerEingabe === musterloesung) {
+                      ergebnisDiv.innerHTML = `<span class="richtig">Richtig!</span>`;
+                  } else {
+                      ergebnisDiv.innerHTML = `<span class="falsch">Falsch!</span> Das Wort war nicht "${nutzerEingabe}".`;
+                  }
+              }
+          });
+      </script>
 
     </details>
 </details>
@@ -124,6 +148,7 @@
     * Das verw. eines Objekts, dass unveränderl. ist
     </details>
 </details>
+
 
 
 

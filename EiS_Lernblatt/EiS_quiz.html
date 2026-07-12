@@ -405,6 +405,11 @@ code {
     font-weight: bold;
     text-decoration: underline
   }
+
+
+
+  .richtig { color: green; font-weight: bold; }
+  .falsch { color: red; font-weight: bold; }
 &lt;/style>
 <details>
 <summary><u><b>Was muss ich verwenden, wenn ich eine Liste für Key-Value-Parre verwenden möchte ? </b></u></summary>
@@ -414,7 +419,27 @@ code {
   <details>
   <summary><u><b>Wie mache ich sie veränderlich ?</b></u></summary>
 <ul>
-<li><code>scala.collection.mutable.Map</code></li>
+<li>
+<input type="text" id="eingabe" placeholder="Wort eingeben...">
+<div id="ergebnis"></div>
+&lt;script>
+    const musterloesung = "scala.collection.mutable.Map"; // Hier das Zielwort definieren
+    const inputFeld = document.getElementById("eingabe");
+    const ergebnisDiv = document.getElementById("ergebnis");
+<pre><code>inputFeld.addEventListener(&quot;keypress&quot;, function(event) {
+    if (event.key === &quot;Enter&quot;) {
+        const nutzerEingabe = inputFeld.value;
+        
+        if (nutzerEingabe === musterloesung) {
+            ergebnisDiv.innerHTML = `&lt;span class=&quot;richtig&quot;&gt;Richtig!&lt;/span&gt;`;
+        } else {
+            ergebnisDiv.innerHTML = `&lt;span class=&quot;falsch&quot;&gt;Falsch!&lt;/span&gt; Das Wort war nicht &quot;${nutzerEingabe}&quot;.`;
+        }
+    }
+});
+</code></pre>
+&lt;/script>
+</li>
 </ul>
   </details>
 </li>
