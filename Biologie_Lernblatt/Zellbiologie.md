@@ -2,7 +2,7 @@
   details {
     margin-bottom: 7px  ;
     border: lightgrey 1px solid;
-    padding: 3px
+    padding: 8px
 }
   img {
   width: 300px;
@@ -18,7 +18,6 @@
   body {
     background: #ffffffff;
     color: #000000ff;
-    font-size: 20px;
   }
 
   h1 {

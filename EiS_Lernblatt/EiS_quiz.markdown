@@ -761,17 +761,34 @@ inputFeld.addEventListener("keypress", function(event) {
 </details>
 
 
+# Traverse
+
+<details>
+<summary><u><b>Was ist traverse ?</b></u></summary>
+
+* es wandert einen Baum systematisch ab
+</details>
+
+
+
+<details>
+<summary><u><b>Wir haben einen binären Baum, dass folgendes nutzt, links kleiner und rechts größer. Wie muss traverse nun den Pfad finden ?</b></u></summary>
+
+1) Start: `root`
+2) Vgl. meines Zielschlüssel mit dem Schlüssel im aktuellen Knoten
+  * Schlüssel $<$ mein Schlüssel $\implies$ „traversiere“ n. links
+  * Schlüssel $>$ mein Schlüssel $\implies$ „traversiere“ n. rechts
+3) Solange bis Knoten gefunden oder bei einem leeren Platz gelandet(`None`),wobei ein Knoten eingefügt werden kann
+</details>
 
 
 
 
+<details>
+<summary><u><b>Wie vergleiche ich im pattern-matching, eine bereits existierende Variabel</b></u></summary>
 
-
-
-
-
-
-
+* `case Node(key, _, _, _)`
+</details>
 
 
 
