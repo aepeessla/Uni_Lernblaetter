@@ -529,7 +529,7 @@ const nutzerEingabe = inputFeld.value;</p>
 </li>
 </ul>
 </details>
-<h1>Object</h1>
+<h1 id="object">Object</h1>
 <details>
 <summary><u><b>Wie wird ein Object noch genannt ?</b></u></summary>
 <ul>
@@ -546,6 +546,9 @@ const nutzerEingabe = inputFeld.value;</p>
 -40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
 -12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
  151.7 139 205zm0 0v40h399900v-40z"/></svg></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mord text" style="color:#83b7ea;"><span class="mord" style="color:#83b7ea;">Erstellung einer einizigen</span></span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7164em;"><span></span></span></span></span></span></span></span></span> <span style="color: red"><strong>Instanz</strong></span></p>
+</li>
+<li>
+<p><b><span style="color: red">kann keine Parameter bekommen</span></b></p>
 <details>
 <summary><u><b>Wann genau wird eine Instanz für dieses Object erstellt ?</b></u></summary>
 <ul>
@@ -558,7 +561,7 @@ const nutzerEingabe = inputFeld.value;</p>
 <li><span class="sub">Was schreiben wir in einem object ?</span>
 <ul>
 <li><code style="color: rgb(203, 52, 175)">Variabeln</code> oder <code style="color: rgb(69, 201, 159)">Methoden</code>, d. f. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∀</mi></mrow><annotation encoding="application/x-tex">\forall</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">∀</span></span></span></span> Objekte des <strong>gleichen Typs</strong> gelten sollen</li>
-<li>wenn wir aber <em>mehrere Objekte</em> erstellen wollen, dann def. wir ein <code>class</code> mit dem <strong>gleichen Namen</strong> wie das <code>object</code></li>
+<li>wenn wir aber <em>mehrere Objekte</em> erstellen wollen, dann def. wir ein <code>class</code> mit dem <strong>gleichen Namen</strong> wie das <code>object</code> = <code style="color: rgb(255, 0, 111)">Companion-Klasse</code></li>
 </ul>
 </li>
 </ul>
@@ -662,6 +665,24 @@ println(malZwei(<span class="hljs-number">5</span>)) <span class="hljs-comment">
   <span class="hljs-type">Person</span>.printSpezies() 
 }
 </div></code></pre>
+<ul>
+<li>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">A</span> </span>{
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> count: <span class="hljs-type">Int</span> = <span class="hljs-number">0</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">numberOfObjects</span></span>: <span class="hljs-type">Int</span> = count
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span> </span>{
+<span class="hljs-type">A</span>.count += <span class="hljs-number">1</span>
+}
+
+<span class="hljs-keyword">val</span> a1 = <span class="hljs-type">A</span>()
+<span class="hljs-keyword">val</span> a2 = <span class="hljs-type">A</span>()
+<span class="hljs-keyword">val</span> a3 = <span class="hljs-type">A</span>()
+println(<span class="hljs-type">A</span>.numberOfObjects) <span class="hljs-comment">// 3     </span>
+</div></code></pre>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -855,6 +876,43 @@ println(wolf.bark) <span class="hljs-comment">//Wau</span>
 </li>
 </ul>
 </details>
+<details>
+<summary><u><b>Was erzeugt ein trait autom. & was ermögl. es uns ?</b></u></summary>
+<ul>
+<li><code>trait</code> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder accentunder="true"><mrow><mtext>    </mtext><mstyle mathcolor="#83b7ea"><mtext>erzeugt</mtext></mstyle><mtext>    </mtext></mrow><mo stretchy="true">→</mo></munder></mrow><annotation encoding="application/x-tex">\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erzeugt}}\ \ \ \ }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3315em;vertical-align:-0.7164em;"></span><span class="mord accentunder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6151em;"><span class="svg-align" style="top:-2.2836em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.522em" viewBox="0 0 400000 522" preserveAspectRatio="xMaxYMin slice"><path d="M0 241v40h399891c-47.3 35.3-84 78-110 128
+-16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
+ 11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
+ 39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
+-40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
+-12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
+ 151.7 139 205zm0 0v40h399900v-40z"/></svg></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mord text" style="color:#83b7ea;"><span class="mord" style="color:#83b7ea;">erzeugt</span></span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7164em;"><span></span></span></span></span></span></span></span></span> <strong>Typ</strong></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Canine</span> </span>{ <span class="hljs-comment">// &quot;hundeartig&quot;</span>
+    <span class="hljs-keyword">val</span> cuteAsAPuppy: <span class="hljs-type">Boolean</span> = <span class="hljs-literal">true</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CanBark</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Canine</span> </span>{ <span class="hljs-comment">// inherits from Canine</span>
+  <span class="hljs-keyword">val</span> barkVolume: <span class="hljs-type">Int</span> = <span class="hljs-number">30</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wau&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Canine</span>, <span class="hljs-title">CanBark</span> </span>{
+  <span class="hljs-keyword">val</span> trustful: <span class="hljs-type">Boolean</span> = <span class="hljs-literal">true</span>
+}
+
+<span class="hljs-keyword">val</span> barker: <span class="hljs-type">CanBark</span> = <span class="hljs-type">Dog</span>()
+<span class="hljs-comment">// Wir können über barker nun auch wieder nur auf die Felder und Methoden zugreifen, die im CanBark (und dessen Oberklasse Canine) bekannt sind:</span>
+println(barker.bark) <span class="hljs-comment">// ok</span>
+println(barker.cuteAsAPuppy) <span class="hljs-comment">// ok</span>
+println(barker.trustful) <span class="hljs-comment">// error</span>
+</div></code></pre>
+</details>
+<details>
+<summary><u><b>Was sind die wichtigsten Unterschiede zu einer abstrakten Klasse ? </b></u></summary>
+<ul>
+<li>es lassen sich mehrere traits einmixen <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo><mover><mo><mo>=</mo></mo><mo stretchy="false" lspace="0em" rspace="0em">!</mo></mover></mo></mrow><annotation encoding="application/x-tex">\overset{!}{=}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.153em;"></span><span class="mrel"><span class="mop op-limits"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.153em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">=</span></span></span><span style="top:-3.5669em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mclose mtight">!</span></span></span></span></span></span></span></span></span></span></span></span> man kann nur v. einer abstrakten Klasse erben</li>
+</ul>
+</details>
 &lt;script>
 const musterloesung = "override"; // Hier das Zielwort definieren
 const inputFeld = document.getElementById("eingabe1");
@@ -873,6 +931,135 @@ inputFeld.addEventListener("keypress", function(event) {
 });
 &lt;/script>
 </details>
+<h1 id="calacollectionmutable">cala.collection.mutable</h1>
+<details>
+<summary><u><b>Wie sieht d. Hierarchie v. <code>scala.collection</code> aus ?</b></u></summary>
+<p><img src="image-8.png" alt="alt text"></p>
+</details>
+<details>
+<summary><u><b>Wie werden collection-Schnittstellen implementiert ?</b></u></summary>
+<ul>
+<li>
+<p>mit <code>Factory-Methoden</code></p>
+<details>
+<summary><u><b>Was passiert hier im Hintergrund ?: 
+<pre><code>val s = Seq(1,2,3)
+<p>println(s) //List(1,2,3)
+</code></pre> Wir haben in unserem Tabellen-Projekt bereits d. <code>iterable</code>-Schnittstelle implementiert:</b></u></summary></p>
+<ul>
+<li>eine Collection. d. Iterable ist stellt folgende Funktionen bereit:
+<ul>
+<li>Iteration: forach, map, flatMap, ...</li>
+<li>UmWandlung: toSeq, toSet, ...</li>
+<li>Größe: isEmpty, size, ...</li>
+<li>Elem.-Prüfungen: exists, forall, ...</li>
+</ul>
+</li>
+</ul>
+</details>
+<h2 id="seq">Seq</h2>
+<details>
+<summary><u><b>Welche Eigenschaft hat `Seq` ?</b></u></summary>
+<ul>
+<li>
+<p>ist ein <code>Iterable</code> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder accentunder="true"><mrow><mtext>    </mtext><mstyle mathcolor="#83b7ea"><mtext>Elem.</mtext></mstyle><mtext>    </mtext></mrow><mo stretchy="true">→</mo></munder></mrow><annotation encoding="application/x-tex">\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Elem.}}\ \ \ \ }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2164em;vertical-align:-0.522em;"></span><span class="mord accentunder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span class="svg-align" style="top:-2.478em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.522em" viewBox="0 0 400000 522" preserveAspectRatio="xMaxYMin slice"><path d="M0 241v40h399891c-47.3 35.3-84 78-110 128
+-16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
+ 11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
+ 39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
+-40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
+-12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
+ 151.7 139 205zm0 0v40h399900v-40z"/></svg></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mord text" style="color:#83b7ea;"><span class="mord" style="color:#83b7ea;">Elem.</span></span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.522em;"><span></span></span></span></span></span></span></span></span> <strong>feste Pos.</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> man kann anhand dieser Pos. auf d. Elem. zugreifen</p>
+<details>
+<summary><u><b>Welche Eigenschaften werden `Seq` bereit gestellt ?</b></u></summary>
+<ul>
+<li>Zugriff ü. Position: <code>apply</code> (f. den Zugriff an bestimmter Pos.), <code>indexOf</code> (um Pos. eines bestimmten Elements zu bekommen)</li>
+<li>Sortierung: <code>sorted</code>, <code>sortBy</code></li>
+<li>Vgl.: <code>contains</code>, <code>startsWith</code>, <code>distinct</code></li>
+</ul>
+</details>
+</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Was sind Besonderheiten einer <code>LinearSeq</code>?</b></u></summary>
+<ul>
+<li>effiziente <code>head</code> &amp; <code>tail</code><strong>-Methoden</strong></li>
+</ul>
+</details>
+<details>
+<summary><u><b>Was sind Besonderheiten einer <code>IndexSeq</code>?</b></u></summary>
+<ul>
+<li>Verfügung v. effizienten Methoden, um auf beliebige Elem. d. Seq. zuzugreifen</li>
+</ul>
+</details>
+<h2 id="set">Set</h2>
+<details>
+<summary><u><b>Was sind die Eigenschaften eines Sets ?</b></u></summary>
+<ul>
+<li>keine feste Reihenfolge</li>
+<li>Jedes Elem. nur <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>×</mo></mrow><annotation encoding="application/x-tex">1 \times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mord">×</span></span></span></span></li>
+</ul>
+</details>
+<details>
+<summary><u><b>Welche Funktionalität stellen Sets zur Verfügung ?</b></u></summary>
+<ul>
+<li><strong>Tests</strong>: <code>contains</code></li>
+<li><strong>Mengenoperationen</strong>: <code>intersect</code>, <code>union</code></li>
+</ul>
+</details>
+<details>
+<summary><u><b>Was muss ich verw., wenn ich ein Set sortieren möchte ?</b></u></summary>
+<ul>
+<li><code>SortedSet</code></li>
+</ul>
+</details>
+<details>
+<summary><u><b>Was muss ich verw., wenn ich ein Set speicherplatzsparend speichern möchte ?</b></u></summary>
+<ul>
+<li>
+<p><code>BitSet</code></p>
+<details>
+<summary><u><b>Was ist ein BitSet im Grunde ?</b></u></summary>
+<ul>
+<li>ein <code>sortedSet</code>, bei dem d. <strong>Zahlen</strong> <em>speichersparend gespeichert</em> werden</li>
+</ul>
+</details>
+</li>
+</ul>
+</details>
+<h2 id="map">Map</h2>
+<details>
+<summary><u><b>Was ist ein Map ?</b></u></summary>
+<ul>
+<li>ein <code>Iterable</code> v. <strong>Schlüssel-Wert-Paaren</strong></li>
+</ul>
+</details>
+<details>
+<summary><u><b>Welche Funktionalitäten stellen Maps bereit ?</b></u></summary>
+<ul>
+<li><strong>Suche von Wert mit Schlüssel</strong>: <code>get</code>, <code>getOrElse</code>, <code>contains</code></li>
+<li><strong>Schlüssel und Werte</strong>: <code>keys</code>, <code>values</code></li>
+<li><strong>Transformationen</strong>: <code>filterKeys</code>, <code>mapValues</code></li>
+</ul>
+</details>
+<details>
+<summary><u><b>Was muss ich verwenden, wenn ich möchte, dass ein Map sortiert ist ? </b></u></summary>
+<ul>
+<li>
+<p><code>SortedMap</code></p>
+<details>
+<summary><u><b>Wonach wird hier sortiert ?</b></u></summary>
+<ul>
+<li>N. den <code style="color: #ff6a00ff">keys</code></li>
+</ul>
+</details>
+</li>
+</ul>
+</details>
+</li>
+</ul>
+</details>
+<h1 id="scalacollectionimmutable">scala.collection.immutable</h1>
 &lt;script>
   window.MathJax = {
     tex: {

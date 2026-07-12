@@ -170,7 +170,7 @@
 
 
 
-<h1>Object</h1>
+# Object
 
 <details>
 <summary><u><b>Wie wird ein Object noch genannt ?</b></u></summary>
@@ -183,6 +183,7 @@
   <summary><u><b>Was ist die Eigenschaft eines Singletons ?</b></u></summary>
 
   * _Während d. Laufzeit_ $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Erstellung einer einizigen}}\ \ \ \ }$ <span style="color: red">__Instanz__</span>
+  * <b><span style="color: red">kann keine Parameter bekommen</span></b>
 
     <details>
     <summary><u><b>Wann genau wird eine Instanz für dieses Object erstellt ?</b></u></summary>
@@ -196,7 +197,7 @@
 
     * <span class="sub">Was schreiben wir in einem object ?</span>
       * <code style="color: rgb(203, 52, 175)">Variabeln</code> oder <code style="color: rgb(69, 201, 159)">Methoden</code>, d. f. $\forall$ Objekte des __gleichen Typs__ gelten sollen
-      * wenn wir aber _mehrere Objekte_ erstellen wollen, dann def. wir ein `class` mit dem __gleichen Namen__ wie das `object`
+      * wenn wir aber _mehrere Objekte_ erstellen wollen, dann def. wir ein `class` mit dem __gleichen Namen__ wie das `object` = <code style="color: rgb(255, 0, 111)">Companion-Klasse</code>
     
 
     <details>
@@ -285,6 +286,21 @@
         Person.printSpezies() 
       }
       ```
+      * ```scala
+        object A {
+          private var count: Int = 0
+          def numberOfObjects: Int = count
+        }
+
+        class A {
+        A.count += 1
+        }
+
+        val a1 = A()
+        val a2 = A()
+        val a3 = A()
+        println(A.numberOfObjects) // 3     
+        ```
 </details>
 
 
@@ -486,39 +502,40 @@ trait CanHowl {
 
 
 
+<details>
+<summary><u><b>Was erzeugt ein trait autom. & was ermögl. es uns ?</b></u></summary>
+
+* `trait` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{erzeugt}}\ \ \ \ }$ __Typ__
+
+```scala
+class Canine { // "hundeartig"
+    val cuteAsAPuppy: Boolean = true
+}
+
+trait CanBark extends Canine { // inherits from Canine
+  val barkVolume: Int = 30
+  def bark: String = "Wau"
+}
+
+class Dog extends Canine, CanBark {
+  val trustful: Boolean = true
+}
+
+val barker: CanBark = Dog()
+// Wir können über barker nun auch wieder nur auf die Felder und Methoden zugreifen, die im CanBark (und dessen Oberklasse Canine) bekannt sind:
+println(barker.bark) // ok
+println(barker.cuteAsAPuppy) // ok
+println(barker.trustful) // error
+```     
+</details>
 
 
 
+<details>
+<summary><u><b>Was sind die wichtigsten Unterschiede zu einer abstrakten Klasse ? </b></u></summary>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* es lassen sich mehrere traits einmixen $\overset{!}{=}$ man kann nur v. einer abstrakten Klasse erben 
+</details>
 
 
 
@@ -540,6 +557,161 @@ inputFeld.addEventListener("keypress", function(event) {
 });
 </script>
 </details>
+
+
+
+
+# cala.collection.mutable
+
+<details>
+<summary><u><b>Wie sieht d. Hierarchie v. <code>scala.collection</code> aus ?</b></u></summary>
+
+![alt text](image-8.png)
+</details>
+
+
+
+
+
+<details>
+<summary><u><b>Wie werden collection-Schnittstellen implementiert ?</b></u></summary>
+
+* mit `Factory-Methoden`
+
+  <details>
+  <summary><u><b>Was passiert hier im Hintergrund ?: 
+  <pre><code>val s = Seq(1,2,3)
+
+  println(s) //List(1,2,3)
+</code></pre> Wir haben in unserem Tabellen-Projekt bereits d. <code>iterable</code>-Schnittstelle implementiert:</b></u></summary>
+
+  * eine Collection. d. Iterable ist stellt folgende Funktionen bereit:
+    * Iteration: forach, map, flatMap, ...
+    * UmWandlung: toSeq, toSet, ...
+    * Größe: isEmpty, size, ...
+    * Elem.-Prüfungen: exists, forall, ...
+  </details>
+
+
+
+  ## Seq
+
+  <details>
+  <summary><u><b>Welche Eigenschaft hat `Seq` ?</b></u></summary>
+
+  * ist ein `Iterable` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Elem.}}\ \ \ \ }$ __feste Pos.__ $\implies$ man kann anhand dieser Pos. auf d. Elem. zugreifen
+    <details>
+    <summary><u><b>Welche Eigenschaften werden `Seq` bereit gestellt ?</b></u></summary>
+
+    * Zugriff ü. Position: `apply` (f. den Zugriff an bestimmter Pos.), `indexOf` (um Pos. eines bestimmten Elements zu bekommen)
+    * Sortierung: `sorted`, `sortBy`
+    * Vgl.: `contains`, `startsWith`, `distinct`
+    </details>
+  </details>
+
+  <details>
+  <summary><u><b>Was sind Besonderheiten einer <code>LinearSeq</code>?</b></u></summary>
+
+  * effiziente `head` & `tail`__-Methoden__
+  </details>
+
+
+
+  <details>
+  <summary><u><b>Was sind Besonderheiten einer <code>IndexSeq</code>?</b></u></summary>
+
+  * Verfügung v. effizienten Methoden, um auf beliebige Elem. d. Seq. zuzugreifen
+  </details>
+
+  ## Set
+
+  <details>
+  <summary><u><b>Was sind die Eigenschaften eines Sets ?</b></u></summary>
+
+  * keine feste Reihenfolge
+  * Jedes Elem. nur $1 \times$
+  </details>
+
+
+
+  <details>
+  <summary><u><b>Welche Funktionalität stellen Sets zur Verfügung ?</b></u></summary>
+
+  * __Tests__: `contains`
+  * __Mengenoperationen__: `intersect`, `union`
+  </details>
+
+
+
+  <details>
+  <summary><u><b>Was muss ich verw., wenn ich ein Set sortieren möchte ?</b></u></summary>
+
+  * `SortedSet`
+  </details>
+
+
+
+  <details>
+  <summary><u><b>Was muss ich verw., wenn ich ein Set speicherplatzsparend speichern möchte ?</b></u></summary>
+
+  * `BitSet`
+
+    <details>
+    <summary><u><b>Was ist ein BitSet im Grunde ?</b></u></summary>
+
+    * ein `sortedSet`, bei dem d. __Zahlen__ _speichersparend gespeichert_ werden
+    </details>
+  </details>
+
+
+
+  ## Map
+
+  <details>
+  <summary><u><b>Was ist ein Map ?</b></u></summary>
+
+  * ein `Iterable` v. __Schlüssel-Wert-Paaren__
+  </details>
+  
+
+  <details>
+  <summary><u><b>Welche Funktionalitäten stellen Maps bereit ?</b></u></summary>
+
+  * __Suche von Wert mit Schlüssel__: `get`, `getOrElse`, `contains`
+  * __Schlüssel und Werte__: `keys`, `values`
+  * __Transformationen__: `filterKeys`, `mapValues`
+  </details>
+
+  <details>
+  <summary><u><b>Was muss ich verwenden, wenn ich möchte, dass ein Map sortiert ist ? </b></u></summary>
+
+  * `SortedMap`
+
+    <details>
+    <summary><u><b>Wonach wird hier sortiert ?</b></u></summary>
+
+    * N. den <code style="color: #ff6a00ff">keys</code>
+    </details>
+  </details>
+</details>
+
+
+
+
+
+# scala.collection.immutable
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
