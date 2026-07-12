@@ -2,7 +2,7 @@
   details {
     margin-bottom: 7px  ;
     border: lightgrey 1px solid;
-    padding: 3px
+    padding: 8px
 }
   img {
   width: 300px;
@@ -18,7 +18,6 @@
   body {
     background: #ffffffff;
     color: #000000ff;
-    font-size: 20px;
   }
 
   h1 {
@@ -65,6 +64,14 @@
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .r {
+    background: #b7e99bff
+  }
+
+  .f {
+    background: #e99b9bff
   }
 </style>
 
@@ -122,27 +129,27 @@
 
 <h1>Viren & Phagen</h1>
 
-<details>
+<details class="r">
  <summary><b><u>Wrm. stellen <code>Viren</code> & <code>Phagen</code> eine Grenzform des Lebens dar ?</u></b></summary>
 
 * sind eigentl. nur eine Kapsel mit `Nukleinsäurenstrang`$^!$(R- oder DNA) $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{nicht ü.lebensfähig ohne}}\ \ \ \ }$ <code style="color:red">Wirtszelle</code>$^!$
 </details>
 
 
-<details>
+<details class="r">
   <summary><b><u>Was ist d. Unterschied zw. einem <code>Virus</code> & einer <code>Phage</code></u></b></summary>
 
   * <code>Phage</code> $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{spezialisiert auf}}\ \ \ \ }$ Bakterien
 </details>
 
-<details>
+<details class="r">
   <summary><b><u>Nach welches Prinzip sind <code>Viren</code> & <code>Phagen</code> aufgebaut ?</u></b></summary>
 
   * N. dem <code style="color:red">Baukastenprinzip</code>
 </details>
 
 
-<details>
+<details class="r">
   <summary><b><u>Welche Virenarten gibt es ?</u></b></summary>
 
   * TMV: ![alt text](image-10.png)
@@ -152,7 +159,7 @@
 </details>
 
 <div>
-  <details>
+  <details class="r">
     <summary><b><u>Was sind die beiden Virenstrukturen</u></b></summary>
 
   > <img src="image-4.png" style="width: 500px; height: auto;">
@@ -186,7 +193,7 @@
 </div>
 
 
-<details>
+<details class="f">
  <summary><b><u>Was sind d. Vermehrungszyklen von Bakteriophagen</u></b></summary>
 
   1) <u>Lytic Cycle (Zerstörerisch)$^!$</u>
@@ -203,7 +210,7 @@
   * es ist mögl. d. ein Virus v. <code>Lysogenic Cycle</code> $\to$  <code>Lytic Cycle</code>
 </details>
 
-<details>
+<details class="r">
   <summary><b><u>Welche 2 Vermehrungsarten gibt es ?</u></b></summary>
 
   1) <code>Burst</code>:
@@ -213,10 +220,9 @@
   ![alt text](image-7.png)
 
      * Vgl.: Versikel, Lysosomen
-
 </details>
 
-<details>
+<details class="r">
  <summary><b><u>Was sind d. 3 Domänen des Lebens ?</u></b></summary>
 
   1) <code>Procaryoten</code>: $\begin{cases}
@@ -231,10 +237,10 @@
   
 </details>
 
-<details>
+<details class="r">
  <summary><b><u>Was ist d. Hauptunterschied zw. <code>Eukaryoten</code> & <code>Prokaryoten</code> ?</u></b></summary>
 
-  * Zellkern Zellkern $ \begin{cases} \text{Eukaryoten = Zellkern} \\ \text{Prokaryoten = kein Zellkern} \end{cases} $
+  * Zellkern $ \begin{cases} \text{Eukaryoten = Zellkern} \\ \text{Prokaryoten = kein Zellkern} \end{cases} $
 
 </details>
 
@@ -259,7 +265,7 @@
 
 <h2>Kovalente Bindung</h2>
 
-<details>
+<details class="r">
  <summary><b><u>Was ist eine <code>kovalente</code> & eine <code>nicht kovalente Bindung</code></u></b></summary>
 
   * <code>Kovalente Bindung</code>
@@ -271,14 +277,13 @@
 </details>
 
 
-<details>
+<details class="r">
  <summary><b><u>Wie nennt man d. am schwächsten gebundenen Elektronen in d. äußeren Schale eines Atoms ? </u></b></summary>
 
   * <code>Valenzelektronen</code>
-  
 </details>
 
-<details>
+<details class="r">
  <summary><b><u>Wodurch ist d. Elektronenverteilung abhängig ? </u></b></summary>
 
   * <code>Elektronegativität</code>
@@ -296,7 +301,7 @@
 
   <img src="image-21.png" style="heigth: 500px; width:auto ">
 
-  <details>
+  <details class="f">
     <summary><b><u>Wie lautet d. Hierarchie der Stereoisomere & was bedeuten diese?</u></b></summary>
 
       <script type="module">
@@ -324,14 +329,14 @@
 </details>
 
 
-<details>
+<details class="r">
  <summary><b><u>Welche biologische Relevanz haben chirale C-Atome ?</u></b></summary>
 
   * <u>__Molekül-Vielfalt__</u>: chirales Zentrum $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{verdoppelt}}\ \ \ \ }$ Anzahl verfügbarer räuml. Formen
   * <u>__Biol. Aufgabe__</u>: Spiegelbilder $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{völlig andere}}\ \ \ \ }$ Funktionen $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{Grund}}\ \ \ \ }$ `Schlüssel-Schloss-Prinzip`
 </details>
 
-<details>
+<details class="r">
  <summary><b><u>Welche zwei großen Stoffgruppen sind typische Beispiele für Moleküle mit chiralen Zentren?</u></b></summary>
 
   * <code>Aminosäure</code>
@@ -339,7 +344,7 @@
   * <code>Kohlenhydrate</code>
 </details>
 
-<details>
+<details class="r">
  <summary><b><u>Welche Aminosäure bildet eine wichtige Ausnahme & ist nicht chiral? Warum?</u></b></summary>
 
   * `Glycin`
@@ -355,7 +360,7 @@
 
 <h2>Nicht kovalente Bindung</h2>
 
-<details>
+<details class="r">
  <summary><b><u>Welche nicht kovalente Bindungen gibt es ?</u></b></summary>
 
   * Ionen-Bindung
@@ -365,14 +370,14 @@
 
 <h2>Inonen</h2>
 
-<details>
+<details class="r">
  <summary><b><u>Wie entsteht eine Ionenbindung? (z. B. bei Kochsalz)</u></b></summary>
 
   * Durch die vollständige Übertragung v. Elektronen. 
   * Ein Atom (`Natrium`) $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{gibt ab}}\ \ \ \ }$ Elektron $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{wird zum}}\ \ \ \ }$ __positiven Kation__ ($Na^+$), d. andere (`Chlor`) nimmt es auf $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{wird zum}}\ \ \ \ }$ __negativen Anion__ ($Cl^-$). <span style="color: red">Die entgegengesetzten Ladungen ziehen sich elektrostatisch an</span>.
 </details>
 
-<details>
+<details class="r">
  <summary><b><u>In welcher Struktur liegen die Ionen im festen Zustand vor?</u></b></summary>
 
   * bilden ein festes, regelmäßiges `Kristallgitter` (Ionengitter)
@@ -380,25 +385,25 @@
   ![alt text](image-23.png)
 </details>
 
-<details>
+<details class="f">
  <summary><b><u>Welche Voraussetzung muss erfüllt sein, damit sich ein Salzkristall in Wasser auflöst?</u></b></summary>
 
   * $\text{Hydratationsenergie} > \text{Gitterenergie}$
 </details>
 
-<details>
+<details class="f">
  <summary><b><u>Was versteht man unter der "Gitterenergie" ?</u></b></summary>
 
   * Energie, d. Ionen im festen Kristalgitter zsm.hält $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{Überwindung}}\ \ \ \ }$ Zerstörung des Kristalgitters
 </details>
 
-<details>
+<details class="r">
  <summary><b><u>Was versteht man unter der "Hydratationsenergie" ?</u></b></summary>
 
   * Energie, d. freigesetzt wird, wenn sich Wassermoleküle an d. freigewordenen Ionen anlagern.
 </details>
 
-<details>
+<details class="r">
  <summary><b><u>Was versteht man unter einer "Hydrathülle" ?</u></b></summary>
 
   * Eine Schicht aus Wassermolekülen, d. sich beim Lösen um d. einzelnen Ionen herum anordnet.
@@ -410,40 +415,40 @@
 
 <h2>Wasserstoffbrückenbindung</h2>
 
-<details>
+<details class="f">
  <summary><b><u>Welcher Prozess beschreibt den ersten Schritt beim Lösen eines Salzes (aus energetischer Sicht) ?</u></b></summary>
 
   * D. __Aufbrechen des Ionengitters__. Die Ionen müssen aus ihrem festen Verband gelöst werden (dafür wird Gitterenergie verbraucht).
 </details>
 
-<details>
+<details class="f">
  <summary><b><u>Was ist die Gitterenergie ($U_L$)?</u></b></summary>
 
-  * feste Kristallgitter $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{GItterenergie}}\ \ \ \ }$ gasförmige Ionen
+  * feste Kristallgitter $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{Gitterenergie}}\ \ \ \ }$ gasförmige Ionen
   * __immer positiv__ (`endotherm`).
 </details>
 
 
-<details>
+<details class="f">
  <summary><b><u>
 Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 
   * `Hydratation`: Ionen $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{umgeben}}\ \ \ \ }$ Wassermoleküle $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{Entstehung}}\ \ \ \ }$ Hydrathülle $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{wird frei}}\ \ \ \ }$ Hydratationsenergie
 </details>
 
-<details>
+<details class="f">
  <summary><b><u>Was bestimmt, ob sich ein Salz löst oder nicht ?</u></b></summary>
 
   * Die `Lösungsenthalpie` ($\Delta H_{sol}$): $Gitterenergie + Hydratationsenergie$
 </details>
 
-<details>
+<details class="f">
  <summary><b><u>Wie lautet die Faustformel für die Lösungsenthalpie?</u></b></summary>
 
   * $\Delta H_{sol} = U_L + \Delta H_{hyd}$
 </details>
 
-<details>
+<details class="f">
  <summary><b><u>Was passiert energetisch, wenn sich ein Salz löst (exotherm vs. endotherm)?</u></b></summary>
 
   1) `Exotherm`: Es wird mehr Energie bei der Hydratation frei, als für das Gitter benötigt wurde ($\Delta H_{sol} < 0$) $\implies$ Glas wird warm.
@@ -452,19 +457,19 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 
 <h2>Aggerarzustände</h2>
 
-<details>
+<details class="r">
  <summary><b><u>Wie verhalten sich Wassermoleküle im festen Zustand (Eis)?</u></b></summary>
 
   * Wassermoleküle $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{durch}}\ \ \ \ }$ Wasserstoffbrückenbindungen $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{gehalten}}\ \ \ \ }$ festen Zustand
 </details>
 
-<details>
+<details class="r">
  <summary><b><u>Was passiert mit den Wasserstoffbrücken im flüssigen Zustand?</u></b></summary>
 
   * Wassermoleküle bewegen sich $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{ständig}}\ \ \ \ }$ brechen Wasserstoffbrücken & bilden sich neu.
 </details>
 
-<details>
+<details class="r">
  <summary><b><u>Wie ist die Struktur im gasförmigen Zustand?</u></b></summary>
 
   * Keine Wasserstoffbrückenbindung
@@ -487,7 +492,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 <details>
  <summary><b><u>Was ist die Folge von Kohäsion und Adhäsion bei Wasser?</u></b></summary>
 
-  * Wasser kann in `engen Röhren` <span style="color: red;">aufsteigen<span> $\implies$ wichtig f. Pflanzen/Bäume
+  * Wasser kann in `engen Röhren` <span style="color: red;">aufsteigen</span> $\implies$ wichtig f. Pflanzen/Bäume
   * `Wasseroberflächenspannung` $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{ermögl. Insekten}}\ \ \ \ }$ Auf Wasser zu laufen
   * natürl. `Klebestoff` $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{zsm.kleben v. Stoffen}}\ \ \ \ }$ wichtig f. <span style="color: red;">Stofftransport in biologischen Systemen <span>
 </details>
@@ -502,24 +507,24 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 
 <h2>Makromoleküle</h2>
 
-<details>
+<details class="r">
  <summary><b><u>Was sind d. 4 Klassen der Makromoleküle ?</u></b></summary>
 
   * Proteine(Polypaptide) <span style="color:red">60%</span>
-  * Nukleinsäuren <span style="color:red">20</span>
-  * Kohlenhydrate <span style="color:red">10</span>
-  * Lipide <span style="color:red">10</span>
+  * Nukleinsäuren <span style="color:red">20%</span>
+  * Kohlenhydrate <span style="color:red">10%</span>
+  * Lipide <span style="color:red">10%</span>
 
   ![alt text](image-13.png)
 </details>
 
-<details>
+<details class="r">
  <summary><b><u>Monomere -> Polymere</u></b></summary>
 
   <img src="image-14.png" style="width:800px; height:auto">
 </details>
 
-<details>
+<details class="r">
  <summary><b><u>Wie lautet d. Chemische Bezichnung v. Kohlenhydraten ?</u></b></summary>
 
   $(CH_20)_n$
@@ -534,14 +539,14 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 ![alt text](image-16.png)
 ![alt text](image-17.png)
 
-<details>
+<details class="r">
  <summary><b><u>Was sind Zuckerderivate ?</u></b></summary>
 
   * chem. Verbindungen, d. v. einf. Zuckern (Monosacchariden) abstammen
     * Also, quazi <code style="color: #7dc761ff">modifizierte Zuckermoleküle</code>
 </details>
 
-<details>
+<details class="r">
  <summary><b><u>Nenne d. 3 Zuckerderivate ?</u></b></summary>
 
   * <code style="color: #2b42a6ff">N-Acetylglucosamin</code>
@@ -553,7 +558,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 
 <h2>Apolare Moleküle</h2>
 
-<details>
+<details class="r">
  <summary><b><u>Was ist die Endotropie?</u></b></summary>
 
   * d. Unordnung
@@ -563,7 +568,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
   * wenn ich d. Endotopie verringern möchte muss ich __Energie aufwenden__
 </details>
 
-<details>
+<details class="r">
  <summary><b><u>Was sind <code>Apolare/Unpolare Moleküle</code> ?</u></b></summary>
 
   * Keine Ionen
@@ -596,7 +601,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 
 <h2>Van-der-Waals-Kräfte</h2>
 
-<details>
+<details class="r">
  <summary><b><u>Was ist Van-der-Waals-Kräfte</u></b></summary>
 
 * Sie ist d. "Wiedergutmachung" d. Natur, weil `apolare Moleküle` __keinen Dipol__ haben & somit einen `hydrophoben Effekt` verursachen. Diese <code style="color: #c4689eff">Hydrophobie</code> sorgt dafür, dass sich d. Wassermoleküle $\lnot$ frei bewegen können $$ \text{Entropie} \downarrow$$
@@ -608,7 +613,7 @@ D. <code style="color: #6879c4ff">Wasser</code> versucht den Störfaktor so klei
 
 <h2>Membran</h2>
 
-<details>
+<details class="r">
  <summary><b><u>Wie nennt man den Durchlässigkeitsgrad einer Membran ?</u></b></summary>
 
   * Permeabilität
@@ -634,7 +639,7 @@ D. <code style="color: #6879c4ff">Wasser</code> versucht den Störfaktor so klei
 
 <h1>Nukleinsäuren & Proteine</h1>
 
-<details>
+<details class="r">
 <summary><u><b>Was sind die Bestandteile der Bakterien & deren prozentuale Anteil ?</b></u></summary>
 
 * `70%`= Wasser
@@ -648,7 +653,7 @@ D. <code style="color: #6879c4ff">Wasser</code> versucht den Störfaktor so klei
     * <span style="color: ">dazu gehören auch Ionen<span>
 </details>
 
-<details>
+<details class="r">
 <summary><u><b>Was ist bei der replikation v. Eukaryoten & Prokaryoten anders?</u></b></summary>
 
 <u>__Prokaryoten__</u>
@@ -660,7 +665,7 @@ D. <code style="color: #6879c4ff">Wasser</code> versucht den Störfaktor so klei
 * Translation $\to$ Cytoplasma
 </details>
 
-<details>
+<details class="r">
 <summary><u><b>Wie nennt man die Eigenschaft d. prokaryotischen & d. eukaryotischen RNA ?</u></b></summary>
 
 <u>__Eukaryoten__</u>
@@ -672,7 +677,7 @@ D. <code style="color: #6879c4ff">Wasser</code> versucht den Störfaktor so klei
 
 <h2>Hershey & Chase</h2>
 
-<details>
+<details class="r">
 <summary><u><b>Was ist das Experiment? </b></u></summary>
 
 * `T-Phagen` werden radioaktiv makiert
@@ -689,13 +694,13 @@ __<u>Ergebnis</u>__:
 
 <h2>DNA</h2>
 
-<details>
+<details class="f">
 <summary><u><b>Wie sind die beiden Pentosen ?</b></u></summary>
 
 ![alt text](image-25.png)
 </details>
 
-<details>
+<details class="r">
 <summary><u><b>Was ist das 5` & das 3-Ende ?</b></u></summary>
 
 * `5-Ende`: Phosphatgruppe
@@ -704,26 +709,26 @@ __<u>Ergebnis</u>__:
 ![alt text](image-26.png)
 </details>
 
-<details>
+<details class="r">
 <summary><u><b>Wie viele Wasserstoffbrückenbindungen haben A-T und C-G ?</b></u></summary>
 
 * `A-T`: 2
 * `G-C`: 3
 </details>
 
-<details>
+<details class="r">
 <summary><u><b>Wie lautet der Aufbau eines Chromosoms ?</b></u></summary>
 
 ![alt text](image-27.png)
 </details>
 
-<details>
+<details class="r">
 <summary><u><b>Wie ist eine Histone aufgebaut ?</b></u></summary>
 
 ![alt text](image-28.png)
 </details>
 
-<details>
+<details class="r">
 <summary><u><b>Wie wird d. DNA aufeglockert und wie wird es verfestigt ?</b></u></summary>
 
 <u>__Lockerung__</u>
@@ -735,19 +740,19 @@ __<u>Ergebnis</u>__:
 * (De-)Methylierung
 </details>
 
-<details>
+<details class="r">
 <summary><u><b>Wie wird die DNA repliziert ?</b></u></summary>
 
 * semikonservativ
 </details>
 
-<details>
+<details class="f">
 <summary><u><b>Wie lautet die allgemeine Form einer Aminosäure ?</b></u></summary>
 
 ![alt text](image-29.png)
 </details>
 
-<details>
+<details class="r">
 <summary><u><b>Was sind die Schritte der Ribosomen ?</b></u></summary>
 
 1) Initiation
@@ -784,13 +789,13 @@ __<u>Ergebnis</u>__:
   >... <code style="color: #ff6a00ff">Sekretion</code>: Wenn sie als `Hormone` oder `Signalstoffe` __ausgeschüttet__ werden sollen
 </details>
 
-<details>
+<details class="r">
 <summary><u><b>Wie gelangen Proteine in Organellen wie Mitochondrien ?</b></u></summary>
 
 Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden Organell leiten
 </details>
 
-<details>
+<details class="f">
 <summary><u><b>Was sind die posttranslationalen Modifikationen ?</b></u></summary>
 
 * <u>__Proteolyse__</u>
