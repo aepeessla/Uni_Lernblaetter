@@ -352,7 +352,7 @@ trait CanHowl {
     class Dog extends CanBark {
       override def bark: String = "Wuff"
     }
-    class Wolf extends CanBark, CanHowl
+    class Wolf extends CanBark with CanHowl
 
     val dog = Dog()
     println(dog.bark)

@@ -725,7 +725,7 @@ println(wolf.howl) <span class="hljs-comment">// Awooo</span>
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CanBark</span> </span>{
   <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bark</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;Wuff&quot;</span>
 }
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Wolf</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CanBark</span>, <span class="hljs-title">CanHowl</span></span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Wolf</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CanBark</span> <span class="hljs-keyword">with</span> <span class="hljs-title">CanHowl</span></span>
 
 <span class="hljs-keyword">val</span> dog = <span class="hljs-type">Dog</span>()
 println(dog.bark)
