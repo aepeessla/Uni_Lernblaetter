@@ -288,6 +288,78 @@
 </details>
 
 
+# Traits
+
+<details>
+<summary><u><b>Was sind traits ?</b></u></summary>
+
+* Schnittstellen
+</details>
+
+
+
+<details>
+<summary><u><b>Wie viele traits kann eine Klasse erben ?</b></u></summary>
+
+* mehrere
+</details>
+
+
+
+<details>
+<summary><u><b>Wir haben folgendes
+<pre><code>trait CanBark {
+  def bark: String = "Wau"
+}
+
+trait CanHowl {
+  def howl: String = "Awoo0"
+}
+</code></pre></b></u></summary>
+
+  <details>
+  <summary><u><b>Wie können wir sie jzt. in die Klassen Dog und Wolf einmixen ?</b></u></summary>
+
+  * wir können sie einzeln oder kombiniert einmixen
+  ```scala
+  class Dog extends CanBark
+  class Wolf extends CanBark, CanHowl
+
+  val dog = Dog()
+  println(dog.bark) // Wau
+
+  val wolf = Wolf()
+  println(wolf.bark) //Wau
+  println(wolf.howl) // Awooo
+  ```
+  </details>
+
+  <details>
+  <summary><u><b>Kann man ein trait überschreiben ?</b></u></summary>
+
+  * Ja. man kann es mit <input type="text" id="eingabe1" placeholder="Wort eingeben..."><div id="ergebnis1"></div> ü. schrieben
+
+  </details>
+
+
+<script>
+const musterloesung = "override"; // Hier das Zielwort definieren
+const inputFeld = document.getElementById("eingabe1");
+const ergebnisDiv = document.getElementById("ergebnis1");
+
+inputFeld.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        const nutzerEingabe = inputFeld.value;
+        
+        if (nutzerEingabe === musterloesung) {
+            ergebnisDiv.innerHTML = `<span class="richtig">Richtig!</span>`;
+        } else {
+            ergebnisDiv.innerHTML = `<span class="falsch">Falsch!</span> Das Wort war nicht "${nutzerEingabe}".`;
+        }
+  }
+});
+</script>
+</details>
 
 
 

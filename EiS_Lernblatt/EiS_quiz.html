@@ -669,6 +669,68 @@ println(malZwei(<span class="hljs-number">5</span>)) <span class="hljs-comment">
 </li>
 </ul>
 </details>
+<h1 id="traits">Traits</h1>
+<details>
+<summary><u><b>Was sind traits ?</b></u></summary>
+<ul>
+<li>Schnittstellen</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Wie viele traits kann eine Klasse erben ?</b></u></summary>
+<ul>
+<li>mehrere</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Wir haben folgendes
+<pre><code>trait CanBark {
+  def bark: String = "Wau"
+}
+<p>trait CanHowl {
+def howl: String = &quot;Awoo0&quot;
+}
+</code></pre></b></u></summary></p>
+  <details>
+  <summary><u><b>Wie können wir sie jzt. in die Klassen Dog und Wolf einmixen ?</b></u></summary>
+<ul>
+<li>wir können sie einzeln oder kombiniert einmixen</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CanBark</span></span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Wolf</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CanBark</span>, <span class="hljs-title">CanHowl</span></span>
+
+<span class="hljs-keyword">val</span> dog = <span class="hljs-type">Dog</span>()
+println(dog.bark) <span class="hljs-comment">// Wau</span>
+
+<span class="hljs-keyword">val</span> wolf = <span class="hljs-type">Wolf</span>()
+println(wolf.bark) <span class="hljs-comment">//Wau</span>
+println(wolf.howl) <span class="hljs-comment">// Awooo</span>
+</div></code></pre>
+  </details>
+  <details>
+  <summary><u><b>Kann man ein trait überschreiben ?</b></u></summary>
+<ul>
+<li>Ja. man kann es mit <input type="text" id="eingabe1" placeholder="Wort eingeben..."><div id="ergebnis1"></div> ü. schrieben</li>
+</ul>
+  </details>
+&lt;script>
+const musterloesung = "override"; // Hier das Zielwort definieren
+const inputFeld = document.getElementById("eingabe1");
+const ergebnisDiv = document.getElementById("ergebnis1");
+
+inputFeld.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        const nutzerEingabe = inputFeld.value;
+        
+        if (nutzerEingabe === musterloesung) {
+            ergebnisDiv.innerHTML = `<span class="richtig">Richtig!</span>`;
+        } else {
+            ergebnisDiv.innerHTML = `<span class="falsch">Falsch!</span> Das Wort war nicht "${nutzerEingabe}".`;
+        }
+  }
+});
+&lt;/script>
+</details>
 &lt;script>
   window.MathJax = {
     tex: {
