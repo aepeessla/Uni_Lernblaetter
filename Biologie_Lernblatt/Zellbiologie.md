@@ -875,25 +875,25 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 
 ![alt text](image-32.png)
 
-<details>
+<details class="r">
 <summary><u><b>Was ist das Redoxpotenzial ?</b></u></summary>
 
 * Es beschreibt d. __Tendez__ eines Stoffes zu __oxidieren__ oder zu __reduzieren__
 </details> 
 
-<details>
+<details class="r">
 <summary><u><b>In welche Richtung fließen Elektronen ?</b></u></summary>
 
 * Elektronen fließen immer v. `Verbindungen` mit <code style="color: #ff0000ff">negativem Redoxpotenzial</code> zu Verbindungen mit <code style="color: #62d353ff">positivem Potenzial</code> 
 </details> 
 
-<details>
+<details class="f">
 <summary><u><b>Was ist die Bezugsspannung ?</b></u></summary>
 
 * Sie ist d. `Standardpotential`: $E^0$
 </details> 
 
-<details>
+<details class="f">
 <summary><u><b>Warum werden absolute elektronische Potentiale zu ihrem definierten Nullpunkt gemessen und was ist die Lösung dazu ?</b></u></summary>
 
 * Weil sie nicht messbar sind 
@@ -902,14 +902,14 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
   * Normalwasserstoffelektrode, welches als Standard-Nullpunkt dient ($E^{0^{'}} = 0.00 V$)
 </details> 
 
-<details>
+<details class="f">
 <summary><u><b>Was bedeutet ein negatives $E^{0^{'}}$ ?</b></u></summary>
 
 * Verbindung $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{gibt ab}}\ \ \ \ }$ Elektronen v. $H_2$
   * wirkt als `Elektronendonator`
 </details> 
 
-<details>
+<details class="f">
 <summary><u><b>Was bedeutet ein positives $E^{0^{'}}$ ?</b></u></summary>
 
 * Verbindung $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{nimmt auf}}\ \ \ \ }$ Elektronen v. $H_2$
@@ -920,7 +920,7 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 
 <h2>Begriffe:</h2>
 
-<details>
+<details class="r">
 <summary><u><b>Was ist ein System ?</b></u></summary>
 
 * bestimmter Teil des Universums
@@ -929,27 +929,29 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
     * lebender Organismus
 </details> 
 
-<details>
+<details class="r">
 <summary><u><b>Was ist ein offenes Systeme ?</b></u></summary>
 
 * Energie- & Materieaustausch
 </details> 
 
-<details>
+<details class="r">
 <summary><u><b>Was ist ein geschlossenes Systeme ?</b></u></summary>
 
 * __Nur__ Energieaustausch
 </details> 
 
-<details>
+<details class="r">
 <summary><u><b>Was ist ein abgeschlossenes(isoliertes) System?</b></u></summary>
 
 * d. Universum
   * $\forall$ anderen `natürl. Systeme` sind im Prinzip __offen__. Im `Labor` werden __geschlossene Systeme hergestellt__, um `thermodynamische Gleichgewichte` zu __untersuchen__
 </details> 
 
-<details>
+<details class="f">
 <summary><u><b>Was ist der Hauptsatz der Thermodynamik?</b></u></summary>
+
+* D. Energie, d. eine Zelle durch Nahrung aufnimmt, ist genau gleich d. Summe aus d. Energie, d. sie f. ihre Arbeit verbraucht, & d. Energie, d. sie als Wärme an d. Umgebung abgibt.
 
 * $\Delta H = H \text{Anfang} - H \text{Ende} = q - w$
   * $H$ = Gesamtenergie
@@ -965,15 +967,19 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 
 <h2>2. Hauptsatz der Thermodynamik</h2>
 
-<details>
+<details class="f">
 <summary><u><b>Was besagt dieses ?</b></u></summary>
 
+* Energie wird zwar n. dem ersten Hauptsatz erhalten, aber ihre Qualität nimmt ab. Wenn Energie umgewandelt wird, geht immer ein Teil als „ungeordnete“ Wärme an d. Umgebung verloren, d. $\lnot$ mehr vollständig in nützl. Arbeit umgewandelt werden kann
 * In einem `abgeschlossenen System` 
   * `Entropie` nimmt bei `spontanen Prozessen` <span style="color: red">__niemals__</span> ab, sondern __nimmt ständig zu__ oder __bleibt im Gleichgewicht__
 * Da d. Leben in offenen Systemen(wie Zellen) stattfindet $\to$ <span style="color: red">endergonische Reaktionen können</span> $\lnot$ <span style="color: red">freiwillig stattfinden</span> ohne, dass sie an __<code style="color: #ff6a00ff">exergonischen Prozesse</code> gekoppelt werden__ $\to$ erhöhen Entropie in d. Umgebung 
 
   <details>
   <summary><u><b>Was bedeutet das für Lebende Systeme ?</b></u></summary>
+
+
+
 
   * __Energetische Richtung__:
     * `spontane(freiwillige) Prozesse` laufen __immer__ in Richtung d. __größeren__ `Ethropie` ($Energie \to Wärme$)
@@ -984,13 +990,13 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
   </details> 
 </details> 
 
-<details>
+<details class="f">
 <summary><u><b>Wonach strebt der Zustand des Universums IMMER ?</b></u></summary>
 
 * N. d. max. Unordnung
 </details> 
 
-<details>
+<details class="f">
 <summary><u><b>Was dient als Kriterium, ob ein Prozess freiwillig war ?</b></u></summary>
 
 * D. `Spontanität`
@@ -1022,7 +1028,7 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 </details>
 </details> 
 
-<details>
+<details class="f">
 <summary><u><b>Wie nennt man eine un- & frewiwillige Reaktion ?</b></u></summary>
 
 * freiwillig $\implies$ <span style="color: red">Exer</span>gonische Reaktionen ($\Delta G < 0$)
@@ -1030,14 +1036,14 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 </details>
 
 
-<details>
-<summary><u><b>Wie kann thermische Energie in andere Energieformen umgewandelt werden ?</b></u></summary>
+<details class="f">
+<summary><u><b>Kann man 100% d. thermische Energie nutzen ?</b></u></summary>
 
-* Sie kann $\lnot$ `verlustfrei` umgewandelt werden
+* Nein, sie kann $\lnot$ `verlustfrei` umgewandelt werden
   * immer __Energieentwertung__ in Form v. `Wärme`
 </details> 
 
-<details>
+<details class="f">
 <summary><u><b>Was ist das Leben ?</b></u></summary>
 
 * Ein `Ordnungszustand` d. durch __ständigen Energie-import__ (Entropie-Export) erkauft wird
@@ -1045,7 +1051,7 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 
 * $\Delta S \ System + \Delta S \ Umgebung = \Delta S \ Universum \gt 0$
 
-<details>
+<details class="f">
 <summary><u><b>Wie lautet d. Formel für freie Energie ?</b></u></summary>
 
 * $\Delta G = \Delta H - T\Delta S$ 
@@ -1057,7 +1063,7 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
   ![alt text](image-33.png)
 </details>
 
-<details>
+<details class="f">
 <summary><u><b>Was passiert im Gleichgewicht ?</b></u></summary>
 
 * Zellen $\implies$ praktisch tot
@@ -1067,7 +1073,7 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 ![alt text](image-34.png)
 </details>
 
-<details>
+<details class="f">
 <summary><u><b>Was besagt die RGT-Regel ?</b></u></summary>
 
 * Reaktionsgeschwindigkeit-Temperatur-Regel
@@ -1075,10 +1081,14 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 </details>
 
 
-<details>
+<details class="f">
 <summary><u><b>Wenn Enzyme die Aktivierungsenergie senken, aber nicht das $\Delta G$ der Reaktion verändern – was bedeutet das für die Frage, ob eine Reaktion grundsätzlich möglich ist, im Vergleich dazu, wie schnell sie abläuft?</b></u></summary>
 
-* wenn eine keine Enzyme
+* $\Delta G$ $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{bestimmt}}\ \ \ \ }$ Reaktion "grundsächl. mögl."(<code style="color: #cb3838ff">exergonisch</code> oder <code style="color: #47b13cff">endergonisch</code>)
+  * wenn $Reaktion = endergonisch$: Enzym kann reaktion beschleunigen, aber Reaktion wird $\lnot$ <span style="color: red">freiwillig stattfinden</span>
+* `Kinetik` sorgt dafür, dass manche __exergonische Reaktionen__ $\lnot$ stattfinden können, weil d. `Energiebarriere` __zu groß ist__
+  * `Enzyme` sorgen hier dafür, dass d. <span style="color: red">Barriere gesenkt wird</span>
+
 </details>
 
 
@@ -1093,7 +1103,7 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 1) Hydrolase $\to$ __Hydrolyse__ (Zerlegung des Wassermoleküls in $OH^- \& H^+$)
 1) Lyase $\to$ __Eliminierungsreaktionen__
 1) Isomerase $\to$ __Isomerisierung__
-1) Ligase $\to$ __Bindungsaufbeu__ unter _ATP-Verbrauch_
+1) Ligase $\to$ __Bindungsaufbau__ unter _ATP-Verbrauch_
 1) Translokase $\to$ Carrier
 </details>
 
