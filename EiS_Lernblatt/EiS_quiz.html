@@ -529,8 +529,92 @@ const nutzerEingabe = inputFeld.value;</p>
 </li>
 </ul>
 </details>
+<h1>Object</h1>
 <details>
-<summary><u><b></b></u></summary>
+<summary><u><b>Wie wird ein Object noch genannt ?</b></u></summary>
+<ul>
+<li>
+<p>Singleton</p>
+<details>
+<summary><u><b>Was ist die Eigenschaft eines Singletons ?</b></u></summary>
+<ul>
+<li>
+<p><em>Während d. Laufzeit</em> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder accentunder="true"><mrow><mtext>    </mtext><mstyle mathcolor="#83b7ea"><mtext>Erstellung einer einizigen</mtext></mstyle><mtext>    </mtext></mrow><mo stretchy="true">→</mo></munder></mrow><annotation encoding="application/x-tex">\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Erstellung einer einizigen}}\ \ \ \ }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4109em;vertical-align:-0.7164em;"></span><span class="mord accentunder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span class="svg-align" style="top:-2.2836em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.522em" viewBox="0 0 400000 522" preserveAspectRatio="xMaxYMin slice"><path d="M0 241v40h399891c-47.3 35.3-84 78-110 128
+-16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
+ 11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
+ 39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
+-40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
+-12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
+ 151.7 139 205zm0 0v40h399900v-40z"/></svg></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mord text" style="color:#83b7ea;"><span class="mord" style="color:#83b7ea;">Erstellung einer einizigen</span></span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7164em;"><span></span></span></span></span></span></span></span></span> <span style="color: red"><strong>Instanz</strong></span></p>
+<details>
+<summary><u><b>Wann genau wird eine Instanz für dieses Object erstellt ?</b></u></summary>
+<ul>
+<li>Wenn es <em>im Code</em> <strong>zum ersten Mal aufgerufen</strong> wird</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Was schreiben wir in ein <code>object</code> & wie verwenden wir eine <code>class</code> mit dem object ?</b></u></summary>
+<ul>
+<li><span class="sub">Was schreiben wir in einem object ?</span>
+<ul>
+<li>Variabeln oder Methoden, d. f. \forall Objekte des gleichen Typs gelten sollen</li>
+<li>wenn wir aber mehrere Objekte erstellen wollen, dann def. wir ein <code>class</code> mit dem <strong>gleichen Namen</strong> wie das <code>object</code></li>
+</ul>
+</li>
+</ul>
+<details>
+<summary><u><b>Welche Eigenschaften haben diese "best friends" ?</b></u></summary>
+<ul>
+<li>
+<p>gegenseitiger Zugriff auf <code style="color: #ff6a00ff">private</code> Felder</p>
+<details>
+<summary><u><b>Mit was kann ich "Fabrik-Methoden" erstellen, die bequem Objekte erstellt ohne die Verwendung von <code>new</code> ?</b></u></summary>
+<ul>
+<li><code style="color: rgb(83, 201, 67)">apply</code></li>
+</ul>
+</details>
+</li>
+</ul>
+</details>
+</details>
+</li>
+</ul>
+</details> 
+<ul>
+<li><span class="sub">Beispiel: </span>
+<ul>
+<li>
+<pre class="hljs"><code><div><span class="hljs-comment">// 1. Die Klasse für die individuellen Personen</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>(<span class="hljs-params">val name: <span class="hljs-type">String</span></span>)</span>
+
+<span class="hljs-comment">// 2. Das Companion Object für die &quot;allgemeinen&quot; Dinge</span>
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Person</span> </span>{
+  <span class="hljs-comment">// Eine Konstante, die für alle gilt</span>
+  <span class="hljs-keyword">val</span> spezies = <span class="hljs-string">&quot;Mensch&quot;</span>
+  
+  <span class="hljs-comment">// Eine Hilfsmethode, die nicht an einer speziellen Person klebt</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">printSpezies</span></span>(): <span class="hljs-type">Unit</span> = println(<span class="hljs-string">s&quot;Alle Personen sind vom Typ <span class="hljs-subst">$spezies</span>&quot;</span>)
+  
+  <span class="hljs-comment">// Die &quot;Fabrik&quot;-Methode (apply)</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>(name: <span class="hljs-type">String</span>): <span class="hljs-type">Person</span> = <span class="hljs-keyword">new</span> <span class="hljs-type">Person</span>(name)
+}
+
+<span class="hljs-comment">// Benutzung im Code:</span>
+<span class="hljs-meta">@main</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span></span>(): <span class="hljs-type">Unit</span> = {
+  <span class="hljs-comment">// Individuelle Personen (Instanzen)</span>
+  <span class="hljs-keyword">val</span> p1 = <span class="hljs-type">Person</span>(<span class="hljs-string">&quot;Efe&quot;</span>) 
+  <span class="hljs-keyword">val</span> p2 = <span class="hljs-type">Person</span>(<span class="hljs-string">&quot;Sude&quot;</span>)
+  
+  <span class="hljs-comment">// Aufruf von globaler Logik aus dem Companion Object</span>
+  <span class="hljs-type">Person</span>.printSpezies() 
+}
+</div></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </details>
 &lt;script>
   window.MathJax = {

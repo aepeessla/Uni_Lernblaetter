@@ -170,16 +170,77 @@
 
 
 
+<h1>Object</h1>
 
 <details>
-<summary><u><b></b></u></summary>
+<summary><u><b>Wie wird ein Object noch genannt ?</b></u></summary>
+
+* Singleton
 
 
+
+  <details>
+  <summary><u><b>Was ist die Eigenschaft eines Singletons ?</b></u></summary>
+
+  * _Während d. Laufzeit_ $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Erstellung einer einizigen}}\ \ \ \ }$ <span style="color: red">__Instanz__</span>
+
+    <details>
+    <summary><u><b>Wann genau wird eine Instanz für dieses Object erstellt ?</b></u></summary>
+
+    * Wenn es _im Code_ __zum ersten Mal aufgerufen__ wird
+    </details>
+
+
+    <details>
+    <summary><u><b>Was schreiben wir in ein <code>object</code> & wie verwenden wir eine <code>class</code> mit dem object ?</b></u></summary>
+
+    * <span class="sub">Was schreiben wir in einem object ?</span>
+      * Variabeln oder Methoden, d. f. \forall Objekte des gleichen Typs gelten sollen
+      * wenn wir aber mehrere Objekte erstellen wollen, dann def. wir ein `class` mit dem __gleichen Namen__ wie das `object`
+    
+
+    <details>
+    <summary><u><b>Welche Eigenschaften haben diese "best friends" ?</b></u></summary>
+
+    * gegenseitiger Zugriff auf <code style="color: #ff6a00ff">private</code> Felder
+
+      <details>
+      <summary><u><b>Mit was kann ich "Fabrik-Methoden" erstellen, die bequem Objekte erstellt ohne die Verwendung von <code>new</code> ?</b></u></summary>
+
+      * <code style="color: rgb(83, 201, 67)">apply</code>
+      </details>
+    </details>
+    </details>
+  </details> 
+
+  * <span class="sub">Beispiel: </span>
+    * ```scala
+      // 1. Die Klasse für die individuellen Personen
+      class Person(val name: String)
+
+      // 2. Das Companion Object für die "allgemeinen" Dinge
+      object Person {
+        // Eine Konstante, die für alle gilt
+        val spezies = "Mensch"
+        
+        // Eine Hilfsmethode, die nicht an einer speziellen Person klebt
+        def printSpezies(): Unit = println(s"Alle Personen sind vom Typ $spezies")
+        
+        // Die "Fabrik"-Methode (apply)
+        def apply(name: String): Person = new Person(name)
+      }
+
+      // Benutzung im Code:
+      @main def main(): Unit = {
+        // Individuelle Personen (Instanzen)
+        val p1 = Person("Efe") 
+        val p2 = Person("Sude")
+        
+        // Aufruf von globaler Logik aus dem Companion Object
+        Person.printSpezies() 
+      }
+      ```
 </details>
-
-
-
-
 
 
 
