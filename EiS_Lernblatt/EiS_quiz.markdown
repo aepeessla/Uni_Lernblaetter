@@ -195,8 +195,8 @@
     <summary><u><b>Was schreiben wir in ein <code>object</code> & wie verwenden wir eine <code>class</code> mit dem object ?</b></u></summary>
 
     * <span class="sub">Was schreiben wir in einem object ?</span>
-      * Variabeln oder Methoden, d. f. \forall Objekte des gleichen Typs gelten sollen
-      * wenn wir aber mehrere Objekte erstellen wollen, dann def. wir ein `class` mit dem __gleichen Namen__ wie das `object`
+      * <code style="color: rgb(203, 52, 175)">Variabeln</code> oder <code style="color: rgb(69, 201, 159)">Methoden</code>, d. f. $\forall$ Objekte des __gleichen Typs__ gelten sollen
+      * wenn wir aber _mehrere Objekte_ erstellen wollen, dann def. wir ein `class` mit dem __gleichen Namen__ wie das `object`
     
 
     <details>
@@ -207,7 +207,52 @@
       <details>
       <summary><u><b>Mit was kann ich "Fabrik-Methoden" erstellen, die bequem Objekte erstellt ohne die Verwendung von <code>new</code> ?</b></u></summary>
 
-      * <code style="color: rgb(83, 201, 67)">apply</code>
+      * <code style="color: rgb(83, 201, 67)">def apply()</code>
+
+      <details>
+      <summary><u><b>Wie funktioniert <code style="color: rgb(83, 201, 67)">def apply()</code> ?</b></u></summary>
+
+      * ist nur eine gewöhnl. Methode $\implies$ man kann mehrere hintereinander erstellen (ist bisschen wwie d. pattern-matching)
+        * ```scala
+          class Counter[A](initialElements: Iterable[A]) { 
+            // ... Implementierung ... 
+          }
+
+          object Counter {
+            // 1. Die "Standard-Fabrik" (wie der Konstruktor)
+            def apply[A](elements: Iterable[A]): Counter[A] = new Counter(elements)
+
+            // 2. Eine "Spezial-Fabrik" für einen leeren Counter
+            def apply[A](): Counter[A] = new Counter(Iterable.empty)
+          }
+          ```
+      </details>
+
+      <details>
+      <summary><u><b>Steht apply immer nur in einem Objekt ?</b></u></summary>
+
+      * __Nein__, sie ist $\lnot$ spezifisch f. ein `object`
+        * <span class="sub">Normal class</span>:
+          ```scala
+          class Multiplizierer(faktor: Int) {
+            // Wenn ich eine Instanz "m" habe, kann ich schreiben: m(5)
+            def apply(x: Int): Int = x * faktor
+          }
+
+          val malZwei = new Multiplizierer(2)
+          println(malZwei(5)) // Gibt 10 aus. Hier wird intern malZwei.apply(5) aufgerufen.
+          ```
+        * <span class="sub">object</span>:
+          * ```scala
+            object Counter {
+              // Hier wird das Object wie eine Funktion aufgerufen, um eine Klasse zu bauen
+              def apply[A](elements: Iterable[A]): Counter[A] = new Counter(elements)
+            }
+            val c = Counter(Iterable(1, 2, 3)) // Aufruf von Counter.apply(...)
+            ``` 
+      </details>
+
+
       </details>
     </details>
     </details>

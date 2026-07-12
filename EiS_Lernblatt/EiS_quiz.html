@@ -557,8 +557,8 @@ const nutzerEingabe = inputFeld.value;</p>
 <ul>
 <li><span class="sub">Was schreiben wir in einem object ?</span>
 <ul>
-<li>Variabeln oder Methoden, d. f. \forall Objekte des gleichen Typs gelten sollen</li>
-<li>wenn wir aber mehrere Objekte erstellen wollen, dann def. wir ein <code>class</code> mit dem <strong>gleichen Namen</strong> wie das <code>object</code></li>
+<li><code style="color: rgb(203, 52, 175)">Variabeln</code> oder <code style="color: rgb(69, 201, 159)">Methoden</code>, d. f. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∀</mi></mrow><annotation encoding="application/x-tex">\forall</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">∀</span></span></span></span> Objekte des <strong>gleichen Typs</strong> gelten sollen</li>
+<li>wenn wir aber <em>mehrere Objekte</em> erstellen wollen, dann def. wir ein <code>class</code> mit dem <strong>gleichen Namen</strong> wie das <code>object</code></li>
 </ul>
 </li>
 </ul>
@@ -570,8 +570,61 @@ const nutzerEingabe = inputFeld.value;</p>
 <details>
 <summary><u><b>Mit was kann ich "Fabrik-Methoden" erstellen, die bequem Objekte erstellt ohne die Verwendung von <code>new</code> ?</b></u></summary>
 <ul>
-<li><code style="color: rgb(83, 201, 67)">apply</code></li>
+<li><code style="color: rgb(83, 201, 67)">def apply()</code></li>
 </ul>
+<details>
+<summary><u><b>Wie funktioniert <code style="color: rgb(83, 201, 67)">def apply()</code> ?</b></u></summary>
+<ul>
+<li>ist nur eine gewöhnl. Methode <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> man kann mehrere hintereinander erstellen (ist bisschen wwie d. pattern-matching)
+<ul>
+<li>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Counter</span>[<span class="hljs-type">A</span>](<span class="hljs-params">initialElements: <span class="hljs-type">Iterable</span>[<span class="hljs-type">A</span>]</span>) </span>{ 
+  <span class="hljs-comment">// ... Implementierung ... </span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Counter</span> </span>{
+  <span class="hljs-comment">// 1. Die &quot;Standard-Fabrik&quot; (wie der Konstruktor)</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>[<span class="hljs-type">A</span>](elements: <span class="hljs-type">Iterable</span>[<span class="hljs-type">A</span>]): <span class="hljs-type">Counter</span>[<span class="hljs-type">A</span>] = <span class="hljs-keyword">new</span> <span class="hljs-type">Counter</span>(elements)
+
+  <span class="hljs-comment">// 2. Eine &quot;Spezial-Fabrik&quot; für einen leeren Counter</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>[<span class="hljs-type">A</span>](): <span class="hljs-type">Counter</span>[<span class="hljs-type">A</span>] = <span class="hljs-keyword">new</span> <span class="hljs-type">Counter</span>(<span class="hljs-type">Iterable</span>.empty)
+}
+</div></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</details>
+<details>
+<summary><u><b>Steht apply immer nur in einem Objekt ?</b></u></summary>
+<ul>
+<li><strong>Nein</strong>, sie ist <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">¬</mi></mrow><annotation encoding="application/x-tex">\lnot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord">¬</span></span></span></span> spezifisch f. ein <code>object</code>
+<ul>
+<li><span class="sub">Normal class</span>:<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Multiplizierer</span>(<span class="hljs-params">faktor: <span class="hljs-type">Int</span></span>) </span>{
+  <span class="hljs-comment">// Wenn ich eine Instanz &quot;m&quot; habe, kann ich schreiben: m(5)</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>(x: <span class="hljs-type">Int</span>): <span class="hljs-type">Int</span> = x * faktor
+}
+
+<span class="hljs-keyword">val</span> malZwei = <span class="hljs-keyword">new</span> <span class="hljs-type">Multiplizierer</span>(<span class="hljs-number">2</span>)
+println(malZwei(<span class="hljs-number">5</span>)) <span class="hljs-comment">// Gibt 10 aus. Hier wird intern malZwei.apply(5) aufgerufen.</span>
+</div></code></pre>
+</li>
+<li><span class="sub">object</span>:
+<ul>
+<li>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Counter</span> </span>{
+  <span class="hljs-comment">// Hier wird das Object wie eine Funktion aufgerufen, um eine Klasse zu bauen</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>[<span class="hljs-type">A</span>](elements: <span class="hljs-type">Iterable</span>[<span class="hljs-type">A</span>]): <span class="hljs-type">Counter</span>[<span class="hljs-type">A</span>] = <span class="hljs-keyword">new</span> <span class="hljs-type">Counter</span>(elements)
+}
+<span class="hljs-keyword">val</span> c = <span class="hljs-type">Counter</span>(<span class="hljs-type">Iterable</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)) <span class="hljs-comment">// Aufruf von Counter.apply(...)</span>
+</div></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</details>
 </details>
 </li>
 </ul>
