@@ -1462,7 +1462,7 @@ $$d = \frac{\lambda}{A}$$
   1) Innenmembran
   1) Nucleoplasma
   1) Nucleolus
-  1) Nicleolus
+  1) Nucleolus
   1) Chromatin
   1) Kernlamina
   1) Kernhülle
