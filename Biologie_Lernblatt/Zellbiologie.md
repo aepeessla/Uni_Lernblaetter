@@ -8,8 +8,8 @@
     font-size: 20px
   }
   img {
-  width: 500px;
-  height: auto;
+    width: 600px;
+    height: auto;
   }
 
   code {
@@ -1453,8 +1453,7 @@ $$d = \frac{\lambda}{A}$$
 ## Organellen
 
 ### Zellkern
-
-![alt text](image-42.png)
+<img src="image-42.png">
   <details>
   <summary><u><b>Lösung:</b></u></summary>
 
