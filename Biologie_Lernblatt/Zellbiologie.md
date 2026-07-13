@@ -8,7 +8,7 @@
     font-size: 20px
   }
   img {
-    width: 600px;
+    width: auto;
     height: auto;
   }
 
@@ -1491,7 +1491,7 @@ $$d = \frac{\lambda}{A}$$
 
 ### Endoplasmatisches Retikulum
 
-![alt text](image-47.png)
+![alt text](image-45.png)
 
 ### Golgi-Apparat
 ![alt text](image-48.png)
