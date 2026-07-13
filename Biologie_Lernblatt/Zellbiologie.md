@@ -1306,7 +1306,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 
 <details>
-<summary><u><b>Was sind die einzelnen Ebenen eines Transmissions-Elektronenmikroskops(TEM) & eines Lichtmikroskops(LM) ?</b></u></summary>
+<summary class="n"><u><b>Was sind die einzelnen Ebenen eines Transmissions-Elektronenmikroskops(TEM) & eines Lichtmikroskops(LM) ?</b></u></summary>
 
 <img src="image-53.png" style="height: 600px; width: auto">  
 
@@ -1330,33 +1330,36 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 
 <details>
-<summary><u><b>Was kann ich beim LM machen, was ich beim TEM nicht machen kann ?</b></u></summary>
+<summary class="r"><u><b>Was kann ich beim LM machen, was ich beim TEM nicht machen kann ?</b></u></summary>
 
-* beim `LM` kann ich eine Lebendigbeobachtung durchführen & bei `TEM` $\lnot$
+* beim `LM` kann ich eine __Lebendigbeobachtung__ durchführen & bei `TEM` $\lnot$
 </details>
 
 
 
 <details>
-<summary><u><b>Wie lautet die Formel zur Bestimmung des Auflösungsvermögens eines Mikroskops ?</b></u></summary>
+<summary class="n"><u><b>Wie lautet die Formel zur Bestimmung des Auflösungsvermögens eines Mikroskops ?</b></u></summary>
 
 $$d = \frac{\lambda}{A}$$
   * $d =$ kleinster noch wahrnehmbarer Abstand zweier Punkte
   * $\lambda =$ Wellenlänge
-  * $A =$ numerische Apetur d. Linsen(Beugung)
+  * $A =$ __numerische Apetur d. Linsen__(Beugung)
 </details>
 
 
 
 <details>
-<summary><u><b>Was ist die Wellenlänge des sichtbaren Lichts ?</b></u></summary>
+<summary class="n"><u><b>Was ist die Wellenlänge des sichtbaren Lichts für Menschen?</b></u></summary>
 
 * $450 - 700 \text{nm}$
+
+<img src="https://www.gigahertz-optik.com/assets/Grundlagen-der-Lichtmesstechnik/Abb-II-1-Visible-spectrum5.jpg">
 </details>
 
 
 <details>
 <summary><u><b>Ordne d. Namen d. Kontraste v. Bild zu ?
+
 <img src="image-41.png"></b></u></summary>
 
 ![alt text](image-40-1.png)
