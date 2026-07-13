@@ -1308,7 +1308,23 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 <details>
 <summary><u><b>Was sind die einzelnen Ebenen eines Transmissions-Elektronenmikroskops(TEM) & eines Lichtmikroskops(LM) ?</b></u></summary>
 
-<img src="image-39.png" style="height: 600px; width: auto">  
+<img src="image-53.png" style="height: 600px; width: auto">  
+
+  <details>
+  <summary><u><b>Lösung</b></u></summary>
+
+  1) Lichtquelle
+  2) Kondensorlinse
+  3) Probe
+  4) Objektivlinse
+  5) Okular
+  6) Auge
+  7) Kathode
+  8) Anode
+  9) Projektorlinse
+  10) Beobachtungs-Leuchtschirm, Film, Monitor
+
+  </details>
 </details>
 
 
