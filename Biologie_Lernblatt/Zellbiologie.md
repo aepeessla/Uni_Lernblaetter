@@ -1260,8 +1260,8 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 ## Mikroskop
 
-<details class="n">
-<summary><u><b>Was sind d. Teleskopenarten ?</b></u></summary>
+<details>
+<summary class="n"><u><b>Was sind d. Teleskopenarten ?</b></u></summary>
 
 1) Lichtmikroskop(LM)
 1) Transmissions-Elektronenmikroskop(TEM)
@@ -1274,7 +1274,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 
 <details>
-<summary><u><b>Wie wird bei gewöhnl. Mikroskopen & bei Elektromikroskopen d. heranzommen ermögl. ?</b></u></summary>
+<summary class="n"><u><b>Wie wird bei gewöhnl. Mikroskopen & bei Elektromikroskopen d. heranzommen ermögl. ?</b></u></summary>
 
 <table>
 <tr>
@@ -1308,7 +1308,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 <details>
 <summary><u><b>Was sind die einzelnen Ebenen eines Transmissions-Elektronenmikroskops(TEM) & eines Lichtmikroskops(LM) ?</b></u></summary>
 
-* ![alt text](image-39.png)
+<img src="image-39.png" style="height: 600px; width: auto">  
 </details>
 
 
