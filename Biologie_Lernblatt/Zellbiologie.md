@@ -1284,7 +1284,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 <tr>
 <td>
 
-`Glaslinsen` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{brechen/biegen}}\ \ \ \ }$ <code style="color: #56a6bcff">Lichtstrahlen</code> 
+<code>Glaslinsen</code> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{brechen/biegen}}\ \ \ \ }$ <code style="color: #56a6bcff">Lichtstrahlen</code> 
 
 </td>
 <td>
