@@ -1490,8 +1490,6 @@ $$d = \frac{\lambda}{A}$$
   </details>
   </details>
 
-![alt text](image-46.png)
-
 ### Endoplasmatisches Retikulum
 
 ![alt text](image-47.png)
