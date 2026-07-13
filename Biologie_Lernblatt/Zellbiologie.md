@@ -1247,11 +1247,11 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 ## Zilien
 
-<details class="n">
-<summary><u><b>Was sind d. Zilien ?</b></u></summary>
+<details>
+<summary class="f"><u><b>Was sind d. Zilien ?</b></u></summary>
 
-* D. sind `kleine Härrchen` d, aus <code style="background: #ff0000ff">Mikrotubuli</code> bestehen & f. den Transport zuständig sind
-* befinden sich auf __eukaryotischen Zellen__
+* D. sind `kleine Härrchen` d, aus <code style="background:">Mikrotubuli</code> bestehen & f. den Transport zuständig sind
+* <span class="f">befinden sich auf __eukaryotischen Zellen__<span>
   * <span class="a1">Beispiel:</span>
     * __Eileiter__ (um die Eizelle zu transportieren)
     * __Atemwege__ (Schleim raustranportieren)
@@ -1264,12 +1264,12 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 ## Mikroskop
 
 <details>
-<summary class="n"><u><b>Was sind d. Teleskopenarten ?</b></u></summary>
+<summary class="f"><u><b>Was sind d. Teleskopenarten ?</b></u></summary>
 
 1) Lichtmikroskop(LM)
 1) Transmissions-Elektronenmikroskop(TEM)
 1) Raster-Elektronenmikroskop(REM)
-1) Focused Ion Beam Scanning Electron Microscopy(FIB-SEM) $\to$ 3D-Scan
+1) <span class="f">Focused Ion Beam Scanning Electron Microscopy(FIB-SEM) $\to$ 3D-Scan<span>
 </details>
 
 
@@ -1277,7 +1277,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 
 <details>
-<summary class="n"><u><b>Wie wird bei gewöhnl. Mikroskopen & bei Elektromikroskopen d. heranzommen ermögl. ?</b></u></summary>
+<summary class="r"><u><b>Wie wird bei gewöhnl. Mikroskopen & bei Elektromikroskopen d. heranzommen ermögl. ?</b></u></summary>
 
 <table>
 <tr>
@@ -1309,7 +1309,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 
 <details>
-<summary class="n"><u><b>Was sind die einzelnen Ebenen eines Transmissions-Elektronenmikroskops(TEM) & eines Lichtmikroskops(LM) ?</b></u></summary>
+<summary class="r"><u><b>Was sind die einzelnen Ebenen eines Transmissions-Elektronenmikroskops(TEM) & eines Lichtmikroskops(LM) ?</b></u></summary>
 
 <img src="image-53.png" style="height: 600px; width: auto">  
 
@@ -1341,7 +1341,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 
 <details>
-<summary class="n"><u><b>Wie lautet die Formel zur Bestimmung des Auflösungsvermögens eines Mikroskops ?</b></u></summary>
+<summary class="r"><u><b>Wie lautet die Formel zur Bestimmung des Auflösungsvermögens eines Mikroskops ?</b></u></summary>
 
 $$d = \frac{\lambda}{A}$$
   * $d =$ kleinster noch wahrnehmbarer Abstand zweier Punkte
@@ -1352,7 +1352,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Was ist die Wellenlänge des sichtbaren Lichts für Menschen?</b></u></summary>
+<summary class="r"><u><b>Was ist die Wellenlänge des sichtbaren Lichts für Menschen?</b></u></summary>
 
 * $450 - 700 \text{nm}$
 
@@ -1374,7 +1374,7 @@ $$d = \frac{\lambda}{A}$$
 ## Zellen
 
 <details>
-<summary class="n"><u><b>Wie groß sind üblicherweise prokaryotischen & eukaryotischen Zellen ?</b></u></summary>
+<summary class="r"><u><b>Wie groß sind üblicherweise prokaryotischen & eukaryotischen Zellen ?</b></u></summary>
 
 * <span class="sub">Prokaryoten</span>: zw. `1 & 10µm`
 * <span class="sub">Eukaryoten</span>: zw. `10 & 100µm`
@@ -1384,7 +1384,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Zeichne und beschrifte eukaryotische Zellen.</b></u></summary>
+<summary class="f"><u><b>Zeichne und beschrifte eukaryotische Zellen.</b></u></summary>
 
 ![alt text](image-54.png)
   <details>
@@ -1394,7 +1394,7 @@ $$d = \frac{\lambda}{A}$$
   1) Kernmembran
   1) Versikel
   1) Mitochondrium
-  1) Perosiom
+  1) <span class="f">Perosiom<span>
   1) Golgi-Apparat
   1) endoplasmatischen Retikulum
   1) Cytosol
@@ -1405,7 +1405,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Liste d. Organellen auf d. eine tierische Zelle hat, aber d. pflanzl. Zelle nicht & anders herum.</b></u></summary>
+<summary class="f"><u><b>Liste d. Organellen auf d. eine tierische Zelle hat, aber d. pflanzl. Zelle nicht & anders herum.</b></u></summary>
 
 <table>
   <thead>
@@ -1432,7 +1432,7 @@ $$d = \frac{\lambda}{A}$$
       <td>x</td>
     </tr>
     <tr>
-      <td>Plasmodesmen</td>
+      <td><span class="f">Plasmodesmen<span></td>
       <td>√</td>
       <td>x</td>
     </tr>
