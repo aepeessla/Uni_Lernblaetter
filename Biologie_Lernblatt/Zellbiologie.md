@@ -1277,24 +1277,30 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 <summary><u><b>Wie wird bei gewöhnl. Mikroskopen & bei Elektromikroskopen d. heranzommen ermögl. ?</b></u></summary>
 
 <table>
-  <tr>
-    <th>LM</th>
-    <th>EM</th>
-  </tr>
-  <tr>
-    <td>
-    `Glaslinsen` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{brechen/biegen}}\ \ \ \ }$ <code style="color: #56a6bcff">Lichtstrahlen</code>
-    </td>
-    <td>
-      * statt `Licht` $\to$ `Elektronen`
-      * `Probe` muss __speziell präpariert__ werden + im __Vakkum__ sein
-      * statt `Linsen` $\to$ `spulenförm. Elektromagnete` (hierdurch laufen Elektronenstrahlen)
-      * Bild als Foto auf Bildschirm erzeugt
-    </td>
-  </tr>
+<tr>
+<th>LM</th>
+<th>EM</th>
+</tr>
+<tr>
+<td>
+
+`Glaslinsen` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{brechen/biegen}}\ \ \ \ }$ <code style="color: #56a6bcff">Lichtstrahlen</code> 
+
+</td>
+<td>
+
+* statt `Licht` $\to$ `Elektronen`
+* `Probe` muss __speziell präpariert__ werden + im __Vakkum__ sein
+* statt `Linsen` $\to$ `spulenförm. Elektromagnete` (hierdurch laufen Elektronenstrahlen)
+* Bild als Foto auf Bildschirm erzeugt
+
+</td>
+</tr>
 </table>
 
 </details>
+
+
 
 
 
