@@ -4,6 +4,9 @@
     border: lightgrey 1px solid;
     padding: 8px
 }
+  summary {
+    font-size: 20px
+  }
   img {
   width: 500px;
   height: auto;
@@ -1371,7 +1374,7 @@ $$d = \frac{\lambda}{A}$$
 ## Zellen
 
 <details>
-<summary><u><b>Wie groß sind üblicherweise prokaryotischen & eukaryotischen Zellen ?</b></u></summary>
+<summary class="n"><u><b>Wie groß sind üblicherweise prokaryotischen & eukaryotischen Zellen ?</b></u></summary>
 
 * <span class="sub">Prokaryoten</span>: zw. `1 & 10µm`
 * <span class="sub">Eukaryoten</span>: zw. `10 & 100µm`
@@ -1381,15 +1384,28 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary><u><b>Zeichne und beschrifte eukaryotische Zellen.</b></u></summary>
+<summary class="n"><u><b>Zeichne und beschrifte eukaryotische Zellen.</b></u></summary>
 
-![alt text](image-42.png)
+![alt text](image-54.png)
+  <details>
+  <summary><u><b>Lösung:</b></u></summary>
+
+  1) Lysosom
+  1) Kernmembran
+  1) Versikel
+  1) Mitochondrium
+  1) Perosiom
+  1) Golgi-Apparat
+  1) endoplasmatischen Retikulum
+  1) Cytosol
+  1) Plasmamembran
+  </details>
 </details>
 
 
 
 <details>
-<summary><u><b>Liste d. Organellen auf d. eine tierische Zelle hat, aber d. pflanzl. Zelle nicht & anders herum.</b></u></summary>
+<summary class="n"><u><b>Liste d. Organellen auf d. eine tierische Zelle hat, aber d. pflanzl. Zelle nicht & anders herum.</b></u></summary>
 
 <table>
   <thead>
@@ -1438,7 +1454,42 @@ $$d = \frac{\lambda}{A}$$
 
 ### Zellkern
 
-![alt text](image-45.png)
+![alt text](image-42.png)
+  <details>
+  <summary><u><b>Lösung:</b></u></summary>
+
+  1) Außenmembran
+  1) Innenmembran
+  1) Nucleolusplasma
+  1) Nucleolus
+  1) Nicleolus
+  1) Chromatin
+  1) Kernlamina
+  1) Kernhülle
+  1) Kernpore
+  1) Proteinfibrillen
+  1) Cytoplasma
+  1) Kernhülle
+  1) nucleärer "Käfig"
+  1) Nucleoplasma
+
+  * Euckromatin = aktiv
+  * Heterochromatin = inaktiv
+
+  <details>
+  <summary><u><b>Aus was besteht das Kernporenkomplex ?</b></u></summary>
+
+  * Multiproteinkomplex
+  </details>
+
+  <details>
+  <summary><u><b>Wie ist der Transport von Molekülen durch den Kernporenkomplex?</b></u></summary>
+
+  * selektiv
+  * aktiv
+  </details>
+  </details>
+
 ![alt text](image-46.png)
 
 ### Endoplasmatisches Retikulum
