@@ -1494,7 +1494,7 @@ $$d = \frac{\lambda}{A}$$
 ![alt text](image-45.png)
 
 ### Golgi-Apparat
-![alt text](image-46.png)
+![alt text](image-47.png)
 
 ### Lysosom
 
