@@ -5,7 +5,7 @@
     padding: 8px
 }
   img {
-  width: 300px;
+  width: 500px;
   height: auto;
   }
 
