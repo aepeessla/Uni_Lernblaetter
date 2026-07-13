@@ -1508,6 +1508,7 @@ $$d = \frac{\lambda}{A}$$
 ### Peroxisomen
 
 ![alt text](image-51.png)
+![alt text](image-46.png)
 
 ### Mitochrondrien & Chloroplast
 
