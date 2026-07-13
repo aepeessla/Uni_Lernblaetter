@@ -236,11 +236,24 @@ $\boxed{x_1 + x_2 + x_3 = 4}$
 <details>
 <summary><u><b>Wie berechnet man den Schnittpunkt 2er Ebenen ?</b></u></summary>
 
-1) 
+1) Gleichsetzen mit Addition oder Subtraktion
+1) Nach Var. umstellen
+  * wenn Gleichungen $\lt$ Variabeln => ein Var. frei wählbar
+1) Parameterform aufschreiben
 </details>
 
 
 
+
+<details>
+<summary><u><b>Wie berechnet man den Schnittpunkt von einer Gerade und einer Ebene ?</b></u></summary>
+
+> wenn es geschirben ist als $(1,2,3) + \lambda(1,2,3)$, dann ist es eigentl.: $\begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} + \lambda \cdot \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}$
+1) Gerade in Einzelteile zerlegen
+1) Einzelteile in Ebene einsetzen
+1) N. \lambda umstellen
+1) In Formel eins.: $\boxed{a + \lambda \cdot b}$
+</details>
 
 
 
