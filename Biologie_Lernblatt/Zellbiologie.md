@@ -1250,8 +1250,8 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 <details>
 <summary class="f"><u><b>Was sind d. Zilien ?</b></u></summary>
 
-* D. sind `kleine Härrchen` d, aus <code style="background:">Mikrotubuli</code> bestehen & f. den Transport zuständig sind
-* <span class="f">befinden sich auf __eukaryotischen Zellen__<span>
+* D. sind `kleine Härrchen` d, aus <code style="background: red">Mikrotubuli</code> bestehen & f. den Transport zuständig sind
+* <span class="">befinden sich auf __eukaryotischen Zellen__<span>
   * <span class="a1">Beispiel:</span>
     * __Eileiter__ (um die Eizelle zu transportieren)
     * __Atemwege__ (Schleim raustranportieren)
