@@ -73,6 +73,9 @@
   .f {
     background: #e99b9bff
   }
+  .n {
+    background: #9bd2e9ff
+  }
 </style>
 
 
@@ -1241,10 +1244,10 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 ## Zilien
 
-<details>
+<details class="n">
 <summary><u><b>Was sind d. Zilien ?</b></u></summary>
 
-* D. sind `kleine Härrchen` d, aus `Mikrotubuli` bestehen & f. den Transport zuständig sind
+* D. sind `kleine Härrchen` d, aus <code style="background: #ff0000ff">Mikrotubuli</code> bestehen & f. den Transport zuständig sind
 * befinden sich auf __eukaryotischen Zellen__
   * <span class="a1">Beispiel:</span>
     * __Eileiter__ (um die Eizelle zu transportieren)
@@ -1257,8 +1260,8 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 ## Mikroskop
 
-<details>
-<summary><u><b>Was sind d. 3 Teleskopenarten ?</b></u></summary>
+<details class="n">
+<summary><u><b>Was sind d. Teleskopenarten ?</b></u></summary>
 
 1) Lichtmikroskop(LM)
 1) Transmissions-Elektronenmikroskop(TEM)
@@ -1273,13 +1276,24 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 <details>
 <summary><u><b> Wie wird bei gewöhnl. Mikroskopen & bei Elektromikroskopen d. heranzommen ermögl. ?</b></u></summary>
 
-* <span class="sub">gewöhnlicher Mikroskop</span>
-  * `Glaslinsen` __biegen__ oder __brechen__ <code style="color: #56a6bcff">Lichtstrahlen</code> 
-* <span class="sub">Elektromikroskop</span>
-  * statt `Licht` $\to$ `Elektronen`
-  * `Probe` muss __speziell präpariert__ werden + im __Vakkum__ sein
-  * statt `Linsen` $\to$ `spulenförm. Elektromagnete` (hierdurch laufen Elektronenstrahlen)
-  * Bild als Foto auf Bildschirm erzeugt
+  <table>
+  <tr>
+    <th>LM</th>
+    <th>EM</th>
+  </tr>
+  <tr>
+    <td>
+
+    `Glaslinsen` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{brechen/biegen}}\ \ \ \ }$  <code style="color: #56a6bcff">Lichtstrahlen</code> </td>
+    <td>
+    
+    * statt `Licht` $\to$ `Elektronen`
+    * `Probe` muss __speziell präpariert__ werden + im __Vakkum__ sein
+    * statt `Linsen` $\to$ `spulenförm. Elektromagnete` (hierdurch laufen Elektronenstrahlen)
+    * Bild als Foto auf Bildschirm erzeugt</td>
+  </tr>
+</table>
+
 </details>
 
 
