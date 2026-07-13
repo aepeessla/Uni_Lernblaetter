@@ -1460,7 +1460,7 @@ $$d = \frac{\lambda}{A}$$
 
   1) Außenmembran
   1) Innenmembran
-  1) Nucleolusplasma
+  1) Nucleoplasma
   1) Nucleolus
   1) Nicleolus
   1) Chromatin
