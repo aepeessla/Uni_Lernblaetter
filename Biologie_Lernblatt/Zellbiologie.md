@@ -1244,8 +1244,9 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 <details>
 <summary><u><b>Was sind d. Zilien ?</b></u></summary>
 
-Das sind `kleine Härrchen` d, aus `Mikrotubuli` bestehen & f. den Transport zuständig sind
-  * <span class="sub">Beispiel:</span>
+* D. sind `kleine Härrchen` d, aus `Mikrotubuli` bestehen & f. den Transport zuständig sind
+* befinden sich auf __eukaryotischen Zellen__
+  * <span class="a1">Beispiel:</span>
     * __Eileiter__ (um die Eizelle zu transportieren)
     * __Atemwege__ (Schleim raustranportieren)
 
@@ -1433,7 +1434,7 @@ $$d = \frac{\lambda}{A}$$
 <summary><u><b>Was ist das Zentrosome ?</b></u></summary>
 
 * MTOC = Microtubule Organising Centre
-* <span class="sub">Hauptaufgabe</span>: Steuerung der Zellteilung: Es bildet die Spindelfasern aus, welche die Chromosomen gleichmäßig auf die Tochterzellen verteilen.
+* <span class="a1">Hauptaufgabe</span>: Steuerung der Zellteilung: Es bildet die Spindelfasern aus, welche die Chromosomen gleichmäßig auf die Tochterzellen verteilen.
 </details>
 
 
