@@ -1246,8 +1246,11 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 Das sind `kleine Härrchen` d, aus `Mikrotubuli` bestehen & f. den Transport zuständig sind
   * <span class="sub">Beispiel:</span>
-    * Eileiter (um die Eizelle zu transportieren)
-    * Atemwege (Schleim raustranportieren)
+    * __Eileiter__ (um die Eizelle zu transportieren)
+    * __Atemwege__ (Schleim raustranportieren)
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTz8ZnAR-h8SiK-IRIbKMyO0hCseUDK4J17gmSd9yycA&s=10">
+<img src="https://www.medi-karriere.de/wp-content/uploads/2024/08/Flimmerhaerchen-Zilium-Grafik.jpg">
 </details>
 
 
