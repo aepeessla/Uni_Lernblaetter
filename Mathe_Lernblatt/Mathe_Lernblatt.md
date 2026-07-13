@@ -53,6 +53,16 @@
     width: 500px;
     height: auto
   }
+
+  .r {
+    background: green;
+  }
+  .f {
+    background: red;
+  }
+  .n {
+    background: #b6d2e7ff;
+  }
 </style>
 
 <h1>Normalenformen</h1>
@@ -233,6 +243,12 @@ $\boxed{x_1 + x_2 + x_3 = 4}$
    * $\vec{x} = \begin{pmatrix} 4 \\ 0 \\ 0 \end{pmatrix} + r \cdot \begin{pmatrix} -4 \\ 4 \\ 0 \end{pmatrix} + s \cdot \begin{pmatrix} -4 \\ 0 \\ 4 \end{pmatrix} \quad (r, s \in \mathbb{R})$
 </details>
 
+
+
+
+
+# Schnittpunkte
+
 <details>
 <summary><u><b>Wie berechnet man den Schnittpunkt 2er Ebenen ?</b></u></summary>
 
@@ -257,8 +273,14 @@ $\boxed{x_1 + x_2 + x_3 = 4}$
 
 
 
+# Paralellogram
 
+<details>
+<summary class="n"><u><b>Wie berechnet man den Inhalt eines Parallelograms ?</b></u></summary>
 
+* ist $a$ & $b$ __linearunabhängig__ ?
+$$\boxed{A = ||a \times b||}$$
+</details>
 
 
 
