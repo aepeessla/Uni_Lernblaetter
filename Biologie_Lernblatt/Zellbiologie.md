@@ -1502,6 +1502,7 @@ $$d = \frac{\lambda}{A}$$
 
 ### Vakuole
 
+* Tonoplast & nicht Tonoblast
 ![alt text](image-50.png)
 
 ### Peroxisomen
