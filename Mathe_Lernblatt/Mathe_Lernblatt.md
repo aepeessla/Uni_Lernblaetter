@@ -285,6 +285,12 @@ $$\boxed{A = ||a \times b||}$$
 
 
 
+<details>
+<summary class="n"><u><b>Wie berechnet man das Volumen eines Parallelograms ?</b></u></summary>
+
+* $$\boxed{|(a \times b) * c|}$$
+</details>
+
 
 
 
