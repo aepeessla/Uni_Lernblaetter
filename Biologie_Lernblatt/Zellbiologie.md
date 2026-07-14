@@ -1732,19 +1732,18 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Was ist das Myosin & erkläre den Zsm.hang zum Aktin?</b></u></summary>
+<summary class="n"><u><b>Was sind die Myosin Arten und wo kommen sie vor ?</b></u></summary>
 
-* <span class="a1">Myosin</span> = Motorprotein
-![alt text](image-70.png)
+![alt text](image-71.png)
 </details>
 
 
 
-
 <details>
-<summary class="n"><u><b>Was sind die Myosin Arten und wo kommen sie vor ?</b></u></summary>
+<summary class="n"><u><b>Was ist das Myosin & erkläre den Zsm.hang zum Aktin?</b></u></summary>
 
-![alt text](image-71.png)
+* <span class="a1">Myosin</span> = Motorprotein
+![alt text](image-70.png)
 </details>
 
 
@@ -1758,6 +1757,29 @@ $$d = \frac{\lambda}{A}$$
 ![alt text](image-72.png)
 </details>
 
+
+
+
+<details>
+<summary class="n"><u><b>Wie heißen die 2 Motorabhängigen Motorproteine ?</b></u></summary>
+
+* `Dyenin` & `Kinesin`
+![alt text](image-80.png)
+
+  <details>
+  <summary class="n"><u><b>Lösung:</b></u></summary>
+
+  1) Dyenin
+  2) leichte Ketten
+  3) schwere Ketten
+  4) Kinesin
+  5) Minusende
+  6) Plusende
+  7) Mikrotubulus
+  8) Dyenin
+  9) Kinesin
+  </details>
+</details>
 
 
 
@@ -1800,28 +1822,6 @@ $$d = \frac{\lambda}{A}$$
 ![alt text](image-78.png)
 </details>
 
-
-
-<details>
-<summary class="n"><u><b>Wie heißen die 2 Motorabhängigen Motorproteine ?</b></u></summary>
-
-* `Dyenin` & `Kinesin`
-![alt text](image-80.png)
-
-  <details>
-  <summary class="n"><u><b>Lösung:</b></u></summary>
-
-  1) Dyenin
-  2) leichte Ketten
-  3) schwere Ketten
-  4) Kinesin
-  5) Minusende
-  6) Plusende
-  7) Mikrotubulus
-  8) Dyenin
-  9) Kinesin
-  </details>
-</details>
 
 
 
