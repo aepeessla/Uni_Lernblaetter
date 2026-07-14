@@ -1695,7 +1695,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Was sind die verschiedenen funktionelle Strukturen v. Aktinfilamenten ?</b></u></summary>
+<summary class=""><u><b>Was sind die verschiedenen funktionelle Strukturen v. Aktinfilamenten ?</b></u></summary>
 
 ![alt text](image-62.png)
 </details>
