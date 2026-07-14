@@ -1257,7 +1257,57 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
     * __Atemwege__ (Schleim raustranportieren)
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTz8ZnAR-h8SiK-IRIbKMyO0hCseUDK4J17gmSd9yycA&s=10">
-<img src="https://www.medi-karriere.de/wp-content/uploads/2024/08/Flimmerhaerchen-Zilium-Grafik.jpg">
+
+
+  <details>
+<summary class="n"><u><b>Wie lautet der Aufbau von Zilien ?</b></u></summary>
+
+![alt text](image-81.png)
+  <details>
+  <summary class="n"><u><b>Lösung:</b></u></summary>
+
+  1) Mikrotubuli
+  2) Plasmamembran
+  3) Basalkörperkomplex 
+  </details>
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Wie ist die Anordnung der Mikrotubuliröhre von Zilien und Basalkörper ?</b></u></summary>
+
+
+![alt text](image-82.png)
+</details>
+
+
+
+
+<details>
+<summary class="n"><u><b>Wie nennt man die Zilie, die auf jeder Oberfläche von Zellen ist ?</b></u></summary>
+
+* `Primärcilium`
+![alt text](image-83.png)
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Was sind Hemmstoffe des Zytoskeletts ?</b></u></summary>
+
+![alt text](image-84.png)
+</details>
+
+
+
+
+  <details>
+  <summary class="n"><u><b>Was sind d. beiden Arten von Zilien ?</b></u></summary>
+
+  1) `Motile` (bewegl. Zilien) $\implies$ Flüssigkeitstransport
+  2) `Primäre` (Sensorische Zilien) $\implies$ Kommunikation(Entw.)
+  </details>        
 </details>
 
 
@@ -1668,10 +1718,129 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Nenne die aktiv bindenden Proteine</b></u></summary>
+<summary class="n"><u><b>Nenne die Aktin-bindenden Proteine</b></u></summary>
 
 ![alt text](image-66.png)
 </details>
+
+
+
+
+<details>
+<summary class="n"><u><b>Welche Eigenschaft verleit das Aktin bei der Zellbewegung ?</b></u></summary>
+
+![alt text](image-67.png)
+![alt text](image-68.png)
+![alt text](image-69.png)
+</details>
+
+
+
+
+<details>
+<summary class="n"><u><b>Was ist das Myosin & erkläre den Zsm.hang zum Aktin?</b></u></summary>
+
+* <span class="a1">Myosin</span> = Motorprotein
+![alt text](image-70.png)
+</details>
+
+
+
+
+<details>
+<summary class="n"><u><b>Was sind die Myosin Arten und wo kommen sie vor ?</b></u></summary>
+
+![alt text](image-71.png)
+</details>
+
+
+
+
+<details>
+<summary class="n"><u><b>Wie arbeiten Actin- und Myosinfilamente bei der Muskelkontraktion zsm. ?</b></u></summary>
+
+* Mysoin $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{abhängig}}\ \ \ \ }$ Aktin
+* Bindung an Actin $+$ ATP = Konformationsänderung(= Kontraktion)
+![alt text](image-72.png)
+</details>
+
+
+
+
+
+## Mikrotubuli
+
+<details>
+<summary class="n"><u><b>Wie lautet der Aufbau der Makrotubuli ?</b></u></summary>
+
+![alt text](image-73.png)
+</details>
+
+
+
+
+<details>
+<summary class="n"><u><b>Woraus wächst Miktotubuli</b></u></summary>
+
+* `Mikrotubuli-organisierten Zentrum` (MTOC)
+![alt text](image-74.png)
+</details>
+
+
+
+
+<details>
+<summary class="n"><u><b>Woraus entstehen Mikrotubuli in tierischen Zellen ?</b></u></summary>
+
+* Keimbildungsstellen am Centrosom 
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Wie lautet der Aufbau von Mikrotubuli ?</b></u></summary>
+
+![alt text](image-76.png)
+![alt text](image-75.png)
+![alt text](image-77.png)
+![alt text](image-78.png)
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Wie heißen die 2 Motorabhängigen Motorproteine ?</b></u></summary>
+
+* `Dyenin` & `Kinesin`
+![alt text](image-80.png)
+
+  <details>
+  <summary class="n"><u><b>Lösung:</b></u></summary>
+
+  1) Dyenin
+  2) leichte Ketten
+  3) schwere Ketten
+  4) Kinesin
+  5) Minusende
+  6) Plusende
+  7) Mikrotubulus
+  8) Dyenin
+  9) Kinesin
+  </details>
+</details>
+
+
+
+
+<details>
+<summary class="n"><u><b>Wie bewegen sich Kinesin & Myosin Motorproteine ?</b></u></summary>
+
+![alt text](image-79.png)
+</details>
+
+
+
+
 
 <hr>
 
