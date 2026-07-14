@@ -1313,7 +1313,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 1) Lichtmikroskop(LM)
 1) Transmissions-Elektronenmikroskop(TEM)
 1) Raster-Elektronenmikroskop(REM)
-1) <span class="f">Focused Ion Beam Scanning Electron Microscopy(FIB-SEM) $\to$ 3D-Scan<span>
+1) <span class="">Focused Ion Beam Scanning Electron Microscopy(FIB-SEM) $\to$ 3D-Scan<span>
 1) Fluoreszensmikroskopie
 1) Lebenszellenmikroskopie mit Grün Fluoreszierenden Proteins (GFP)
 1) Expansions Mikroskopie
@@ -1384,7 +1384,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 ![alt text](image-55.png)
   <details>
-  <summary class="n"><u><b></b></u></summary>
+  <summary class="n"><u><b>Lösung:</b></u></summary>
 
   1) Epifluoreszenzbeleuchtung
   2) Anregungsfilter
