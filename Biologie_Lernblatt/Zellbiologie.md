@@ -1264,13 +1264,15 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 ## Mikroskop
 
 <details>
-<summary class="f"><u><b>Was sind d. Teleskopenarten ?</b></u></summary>
+<summary class="n"><u><b>Was sind d. Teleskopenarten ?</b></u></summary>
 
 1) Lichtmikroskop(LM)
 1) Transmissions-Elektronenmikroskop(TEM)
 1) Raster-Elektronenmikroskop(REM)
 1) <span class="f">Focused Ion Beam Scanning Electron Microscopy(FIB-SEM) $\to$ 3D-Scan<span>
 1) Fluoreszensmikroskopie
+1) Lebenszellenmikroskopie mit Grün Fluoreszierenden Proteins (GFP)
+1) Expansions Mikroskopie
 </details>
 
 
@@ -1352,6 +1354,16 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 
 <details>
+<summary class="n"><u><b>Was ist d. Besonderheit des Lebendzellenmikroskopie ?</b></u></summary>
+
+* Lebendigbeobachtung
+</details>
+
+
+
+
+
+<details>
 <summary class="r"><u><b>Was kann ich beim LM machen, was ich beim TEM nicht machen kann ?</b></u></summary>
 
 * beim `LM` kann ich eine __Lebendigbeobachtung__ durchführen & bei `TEM` $\lnot$
@@ -1381,11 +1393,31 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Wie funktioniert die Fluoreszenzmikroskopie</b></u></summary>
+<summary class="n"><u><b>Wie funktioniert die Fluoreszenzmikroskopie ?</b></u></summary>
 
 * Immunfluorenszenz-Technik
 ![alt text](image-48.png)
 </details>
+
+
+
+<details>
+<summary class="n"><u><b>Wie funktioniert die Expansions Mikroskopie ?</b></u></summary>
+
+* <span class="a1">Markierung (Labeling)</span>: 
+  * `Zielstrukturen` (z. B. Proteine im Zellskelett) in _fixierten Probe_ __mit fluoreszierenden Antikörpern markiert__
+    * `fluo. Antik.` __tragen__ _einen_ <span style="color: red">speziellen chemischen „Anker“ </span>
+
+* <span class="a1">Einbettung (Embedding)</span>: Probe $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{eingebettet}}\ \ \ \ }$  wasserabsorbierendes `Hydrogel-Netzwerk` 
+  * Dabei $\to$ Anker an den fluoreszierenden Markierungen fest mit dem Hydrogel verknüpft $\implies$ biol. Strukturen physisch im Gel „eingefangen“
+
+* <span class="a1">Verdauung (Digestion)</span>: Mit Enzym (Protease) $\to$ ursprünglichen Proteine der Probe $\to$ teilweise abgebaut $\to$  Probe verliert mechanische Starrheit, während fluoreszierenden Markierungen fest im Hydrogel verankert bleiben & ihre relative Position exakt beibehalten
+
+* <span class="a1">Expansion</span>: Gel $\to$ gelegt $\to$ in Wasser $\to$ saugt sich voll $\implies$ quillt massiv auf und dehnt sich um den Faktor 4 oder mehr aus $\leftarrow$ Da Marker fest im Gel sitzen, bewegen sie sich mit dem Gel auseinander – das Bild der Zelle wird also „vergrößert“
+
+![alt text](image-56.png)
+</details>
+
 
 
 
@@ -1561,20 +1593,66 @@ $$d = \frac{\lambda}{A}$$
 
 # Zytoskelett
 
+<details>
+<summary class="n"><u><b>Was sind die beiden Gerüstsubstanzen ?</b></u></summary>
+
+![alt text](image-57.png)
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Was sind d. Zellbewegungstypen ?</b></u></summary>
+
+![alt text](image-58.png)
+</details>
 
 
 
 
+<details>
+<summary class="n"><u><b>Was sind die 3 Grundtypen von Filamenten und was sind jeweils die Eigenschaften ?</b></u></summary>
+
+![alt text](image-59.png)
+</details>
 
 
 
 
+<details>
+<summary class="n"><u><b>Wie lautet der Aufbau von Intermediärfilamenten ?</b></u></summary>
+
+![alt text](image-60.png)
+</details>
 
 
 
 
+<details>
+<summary class="n"><u><b>Was sind Beispiele für Intermediärfilamente ?</b></u></summary>
+
+![alt text](image-61.png)
+</details>
 
 
+
+
+<details>
+<summary class="n"><u><b>Was sind die verschiedenen funktionelle Strukturen v. Aktinfilamenten ?</b></u></summary>
+
+![alt text](image-62.png)
+</details>
+
+
+
+
+<details>
+<summary class="n"><u><b>Wie werden die sensorischen Haarzellen im Innenohr genannt ?</b></u></summary>
+
+* `Stereocilien`
+  * __Aufbau__ wie `Mikrovilli`, aber nur $+$ `Aktin`
+![alt text](image-63.png)
+</details>
 
 
 
