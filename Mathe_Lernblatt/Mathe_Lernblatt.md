@@ -32,7 +32,7 @@
     text-align: center;
   }
 
-  .ÜSchrift{
+  .a1{
     font-weight: bold;
     text-decoration: underline
   }
@@ -288,26 +288,70 @@ $$\boxed{A = ||a \times b||}$$
 <details>
 <summary class="n"><u><b>Wie berechnet man das Volumen eines Parallelograms ?</b></u></summary>
 
-* $$\boxed{|(a \times b) * c|}$$
+* $$\boxed{\left \langle (a \times b) * c \right \rangle}$$
 </details>
 
 
 
 
+# Unterraum
+
+<details>
+<summary class="n"><u><b>Was muss gelten, sodass eine Gerade ein Unterraum ist ?</b></u></summary>
+
+* Es muss immer d. `Nullpunkt` _des Koordinatensystems_ im __Unterraum enthalten sein__
+  * wenn `Ebene & Gerade` $\lnot$ durch den Punkt $\implies$ autom. $\lnot$ im Unterraum
+
+1) Nullvektor enthalten ?
+1) Abgeschlossenheit durch Addition: U + U = U
+1) Abgeschlossenheit durch Multiplikation: Vektorraum des Unterraum aus U \cdot \lambda = immer in U ?
+</details>
 
 
 
+<details>
+<summary class="n"><u><b>Wie bestimme ich d. Basen im Unterraum ?</b></u></summary>
+
+* Ich muss d. parametrische Form v. U darstellen & d. 2 Vektoren sind dann autom. meine Basen
+
+* <span class="a1">Bsp:</span>
+  $$U := {(x_1,x_2,x_3) \in \mathbb{R}^3: x_1 + x_2 + x_3 = 0}$$
+  1 Gleichung $<$ 3 Var. = 2 Var. frei $\implies x_2 = s, x_3 = t$
+  $$x_1+t+s = 0$$
+  $$x_1 = -t-s$$
+  $$U = \begin{pmatrix} -t-s \\ t \\ s \end{pmatrix} = t \cdot \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix} + s \cdot \begin{pmatrix} -1 \\ 0 \\ 1 \end{pmatrix}$$
+Somit ist die Basis autom.: $B = \left\{ \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}, \begin{pmatrix} -1 \\ 0 \\ 1 \end{pmatrix} \right\}$
+</details>
 
 
 
+# Basen
 
 
+<details>
+<summary class="n"><u><b>Wie kann ich Basen ergänzen ?</b></u></summary>
+
+* wenn ich zu wenig Basen habe \implies Einheitsvektoren verw. 
+  * dabei immer gucken, ob d. `Basen`, d. ich __bereits habe__ <span style="color: red">linear unabhängig</span> sind !
+</details>
 
 
+# Koordinatenvektoren
+
+<details>
+<summary class="n"><u><b>Wie berechnet man Koordinatenvektoren ?</b></u></summary>
+
+![alt text](image-1.png)
+</details>
 
 
+# Abbildungsmatrizzen
+
+<details>
+<summary class=""><u><b>Wie berechnet man Abbildungsmatrizzen & wie lautet d. Schreibweise ?</b></u></summary>
 
 
+</details>
 
 
 

@@ -399,7 +399,7 @@ code {
     text-align: center;
   }
 
-  .ÜSchrift{
+  .a1{
     font-weight: bold;
     text-decoration: underline
   }
@@ -683,7 +683,51 @@ $$\boxed{A = ||a \times b||}$$</li>
 <details>
 <summary class="n"><u><b>Wie berechnet man das Volumen eines Parallelograms ?</b></u></summary>
 <ul>
-<li>$$\boxed{|(a \times b) * c|}$$</li>
+<li>$$\boxed{\left \langle (a \times b) * c \right \rangle}$$</li>
+</ul>
+</details>
+<h1 id="unterraum">Unterraum</h1>
+<details>
+<summary class="n"><u><b>Was muss gelten, sodass eine Gerade ein Unterraum ist ?</b></u></summary>
+<ul>
+<li>Es muss immer d. <code>Nullpunkt</code> <em>des Koordinatensystems</em> im <strong>Unterraum enthalten sein</strong>
+<ul>
+<li>wenn <code>Ebene &amp; Gerade</code> $\lnot$ durch den Punkt $\implies$ autom. $\lnot$ im Unterraum</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>Nullvektor enthalten ?</li>
+<li>Abgeschlossenheit durch Addition: U + U = U</li>
+<li>Abgeschlossenheit durch Multiplikation: Vektorraum des Unterraum aus U \cdot \lambda = immer in U ?</li>
+</ol>
+</details>
+<details>
+<summary class="n"><u><b>Wie bestimme ich d. Basen im Unterraum ?</b></u></summary>
+<ul>
+<li>
+<p>Ich muss d. parametrische Form v. U darstellen &amp; d. 2 Vektoren sind dann autom. meine Basen</p>
+</li>
+<li>
+<p><span class="a1">Bsp:</span>
+$$U := {(x_1,x_2,x_3) \in \mathbb{R}^3: x_1 + x_2 + x_3 = 0}$$
+1 Gleichung $&lt;$ 3 Var. = 2 Var. frei $\implies x_2 = s, x_3 = t$
+$$x_1+t+s = 0$$
+$$x_1 = -t-s$$
+$$U = \begin{pmatrix} -t-s \ t \ s \end{pmatrix} = t \cdot \begin{pmatrix} -1 \ 1 \ 0 \end{pmatrix} + s \cdot \begin{pmatrix} -1 \ 0 \ 1 \end{pmatrix}$$
+Somit ist die Basis autom.: $B = \left{ \begin{pmatrix} -1 \ 1 \ 0 \end{pmatrix}, \begin{pmatrix} -1 \ 0 \ 1 \end{pmatrix} \right}$</p>
+</li>
+</ul>
+</details>
+<h1 id="basen">Basen</h1>
+<details>
+<summary class="n"><u><b>Wie kann ich Basen ergänzen ?</b></u></summary>
+<ul>
+<li>wenn ich zu wenig Basen habe \implies Einheitsvektoren verw.
+<ul>
+<li>dabei immer gucken, ob d. <code>Basen</code>, d. ich <strong>bereits habe</strong> <span style="color: red">linear unabhängig</span> sind !</li>
+</ul>
+</li>
 </ul>
 </details>
 <script>

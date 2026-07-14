@@ -1270,6 +1270,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 1) Transmissions-Elektronenmikroskop(TEM)
 1) Raster-Elektronenmikroskop(REM)
 1) <span class="f">Focused Ion Beam Scanning Electron Microscopy(FIB-SEM) $\to$ 3D-Scan<span>
+1) Fluoreszensmikroskopie
 </details>
 
 
@@ -1333,6 +1334,24 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 
 <details>
+<summary class="n"><u><b>Wie lautet der Strahlengang eines Fluoreszenzmikroskops ?</b></u></summary>
+
+![alt text](image-55.png)
+  <details>
+  <summary class="n"><u><b></b></u></summary>
+
+  1) Epifluoreszenzbeleuchtung
+  2) Anregungsfilter
+  3) Emissionsfilter
+  4) Dichroischer Spiegel
+  6) Mikroskop-Objektiv
+  7) Zelle
+  </details>
+</details>
+
+
+
+<details>
 <summary class="r"><u><b>Was kann ich beim LM machen, was ich beim TEM nicht machen kann ?</b></u></summary>
 
 * beim `LM` kann ich eine __Lebendigbeobachtung__ durchführen & bei `TEM` $\lnot$
@@ -1358,6 +1377,17 @@ $$d = \frac{\lambda}{A}$$
 
 <img src="https://www.gigahertz-optik.com/assets/Grundlagen-der-Lichtmesstechnik/Abb-II-1-Visible-spectrum5.jpg">
 </details>
+  </details>
+
+
+<details>
+<summary class="n"><u><b>Wie funktioniert die Fluoreszenzmikroskopie</b></u></summary>
+
+* Immunfluorenszenz-Technik
+![alt text](image-48.png)
+</details>
+
+
 
 
 <details>
@@ -1527,6 +1557,9 @@ $$d = \frac{\lambda}{A}$$
 * <span class="a1">Hauptaufgabe</span>: Steuerung der Zellteilung: Es bildet die Spindelfasern aus, welche die Chromosomen gleichmäßig auf die Tochterzellen verteilen.
 </details>
 
+
+
+# Zytoskelett
 
 
 
