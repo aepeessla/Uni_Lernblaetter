@@ -1618,6 +1618,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 
+## Intermediärfilamente
 
 <details>
 <summary class="n"><u><b>Wie lautet der Aufbau von Intermediärfilamenten ?</b></u></summary>
@@ -1627,11 +1628,23 @@ $$d = \frac{\lambda}{A}$$
 
 
 
-
 <details>
 <summary class="n"><u><b>Was sind Beispiele für Intermediärfilamente ?</b></u></summary>
 
 ![alt text](image-61.png)
+</details>
+
+
+
+
+
+## Aktinfilamente
+
+<details>
+<summary class="n"><u><b>Wie lautet der Aufbau & die Eigenschaften von Aktinfilamenten ?</b></u></summary>
+
+![alt text](image-64.png)
+* durch Polarität $\implies$ können nur in eine Richtung aufgebaut werden
 </details>
 
 
@@ -1645,6 +1658,22 @@ $$d = \frac{\lambda}{A}$$
 
 
 
+
+<details>
+<summary class="n"><u><b>Wie funktioniert die Filamentbildung ?</b></u></summary>
+
+![alt text](image-65.png)
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Nenne die aktiv bindenden Proteine</b></u></summary>
+
+![alt text](image-66.png)
+</details>
+
+<hr>
 
 <details>
 <summary class="n"><u><b>Wie werden die sensorischen Haarzellen im Innenohr genannt ?</b></u></summary>
