@@ -1638,7 +1638,7 @@ $$d = \frac{\lambda}{A}$$
 # Zytoskelett
 
 <details>
-<summary class="n"><u><b>Was sind die beiden Gerüstsubstanzen ?</b></u></summary>
+<summary class="r"><u><b>Was sind die beiden Gerüstsubstanzen ?</b></u></summary>
 
 ![alt text](image-57.png)
 </details>
@@ -1646,7 +1646,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Was sind d. Zellbewegungstypen ?</b></u></summary>
+<summary class="r"><u><b>Was sind d. Zellbewegungstypen ?</b></u></summary>
 
 ![alt text](image-58.png)
 </details>
@@ -1655,7 +1655,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Was sind die 3 Grundtypen von Filamenten und was sind jeweils die Eigenschaften ?</b></u></summary>
+<summary class="r"><u><b>Was sind die 3 Grundtypen von Filamenten und was sind jeweils die Eigenschaften ?</b></u></summary>
 
 ![alt text](image-59.png)
 </details>
@@ -1665,7 +1665,7 @@ $$d = \frac{\lambda}{A}$$
 ## Intermediärfilamente
 
 <details>
-<summary class="n"><u><b>Wie lautet der Aufbau von Intermediärfilamenten ?</b></u></summary>
+<summary class="r"><u><b>Wie lautet der Aufbau von Intermediärfilamenten ?</b></u></summary>
 
 ![alt text](image-60.png)
 </details>
@@ -1673,7 +1673,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Was sind Beispiele für Intermediärfilamente ?</b></u></summary>
+<summary class="f"><u><b>Was sind Beispiele für Intermediärfilamente ?</b></u></summary>
 
 ![alt text](image-61.png)
 </details>
@@ -1704,7 +1704,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Wie funktioniert die Filamentbildung ?</b></u></summary>
+<summary class="f"><u><b>Wie funktioniert die Filamentbildung ?</b></u></summary>
 
 ![alt text](image-65.png)
 </details>
@@ -1712,7 +1712,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Nenne die Aktin-bindenden Proteine</b></u></summary>
+<summary class="r"><u><b>Nenne die Aktin-bindenden Proteine</b></u></summary>
 
 ![alt text](image-66.png)
 </details>
@@ -1721,7 +1721,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Welche Eigenschaft verleit das Aktin bei der Zellbewegung ?</b></u></summary>
+<summary class=""><u><b>Welche Eigenschaft verleit das Aktin bei der Zellbewegung ?</b></u></summary>
 
 ![alt text](image-67.png)
 ![alt text](image-68.png)
@@ -1732,7 +1732,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Was sind die Myosin Arten und wo kommen sie vor ?</b></u></summary>
+<summary class="r"><u><b>Was sind die Myosin Arten und wo kommen sie vor ?</b></u></summary>
 
 ![alt text](image-71.png)
 </details>
@@ -1740,7 +1740,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Was ist das Myosin & erkläre den Zsm.hang zum Aktin?</b></u></summary>
+<summary class="r"><u><b>Was ist das Myosin I & erkläre den Zsm.hang zum Aktin?</b></u></summary>
 
 * <span class="a1">Myosin</span> = Motorprotein
 ![alt text](image-70.png)
@@ -1750,7 +1750,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Wie arbeiten Actin- und Myosinfilamente bei der Muskelkontraktion zsm. ?</b></u></summary>
+<summary class="f"><u><b>Wie funktioniert Myosin II ?</b></u></summary>
 
 * Mysoin $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{abhängig}}\ \ \ \ }$ Aktin
 * Bindung an Actin $+$ ATP = Konformationsänderung(= Kontraktion)
@@ -1761,7 +1761,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Wie heißen die 2 Motorabhängigen Motorproteine ?</b></u></summary>
+<summary class="f"><u><b>Nenne 2 Myosin V Proteine?</b></u></summary>
 
 * `Dyenin` & `Kinesin`
 ![alt text](image-80.png)
