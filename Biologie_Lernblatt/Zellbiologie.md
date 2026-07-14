@@ -700,7 +700,7 @@ __<u>Ergebnis</u>__:
 
 <h2>DNA</h2>
 
-<details class="f">
+<details class="r">
 <summary><u><b>Wie sind die beiden Pentosen ?</b></u></summary>
 
 ![alt text](image-25.png)
@@ -752,7 +752,7 @@ __<u>Ergebnis</u>__:
 * semikonservativ
 </details>
 
-<details class="f">
+<details class="r">
 <summary><u><b>Wie lautet die allgemeine Form einer Aminosäure ?</b></u></summary>
 
 ![alt text](image-29.png)
@@ -778,7 +778,7 @@ __<u>Ergebnis</u>__:
 </details>
 
 <details>
-<summary><u><b>Wo bleiben Proteine ohne Signal ?</b></u></summary>
+<summary class="r"><u><b>Wo bleiben Proteine ohne Signal ?</b></u></summary>
 
 * im `Cytosol`
 </details>
@@ -787,12 +787,6 @@ __<u>Ergebnis</u>__:
 <summary><u><b>Was passiert bei einer Signalsequenz für das ER ?</b></u></summary>
 
 * `Proteine` mit __Signalsequenz__ werden bei <code>Translation</code> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{direkt Eingeschleußt in}}\ \ \ \ }$ <code style="color: #69c99fff">ER</code>
-* <code style="color: #e463dfff">Golgi-Apparat</code> fungiert als Versadtszentrum. `Proteine` werden in <code style="color: #b1c03cff">Versikel</code> verpackt & zum <code style="color: #e463dfff">Golgi-Apparat</code> __transportiert__. Dort bekomemn sie eine `Addresse` (Bsp.: Glykosylierung). Dannach werden sie __verschickt__. Sie kommen in ...
-  >... <code style="color: #8cb2d4ff">Lysosomen</code>, wenn die als Verdauungsenzyme gebracuht werden 
-  >
-  >... <code style="color: #b266c0ff">Membran</code>. Wenn sie als Membranproteine eingebaut werden sollen
-  >
-  >... <code style="color: #ff6a00ff">Sekretion</code>: Wenn sie als `Hormone` oder `Signalstoffe` __ausgeschüttet__ werden sollen
 </details>
 
 <details class="r">
@@ -893,13 +887,13 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 * Elektronen fließen immer v. `Verbindungen` mit <code style="color: #ff0000ff">negativem Redoxpotenzial</code> zu Verbindungen mit <code style="color: #62d353ff">positivem Potenzial</code> 
 </details> 
 
-<details class="f">
+<details class="r">
 <summary><u><b>Was ist die Bezugsspannung ?</b></u></summary>
 
 * Sie ist d. `Standardpotential`: $E^0$
 </details> 
 
-<details class="f">
+<details class="r">
 <summary><u><b>Warum werden absolute elektronische Potentiale zu ihrem definierten Nullpunkt gemessen und was ist die Lösung dazu ?</b></u></summary>
 
 * Weil sie nicht messbar sind 
@@ -908,14 +902,14 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
   * Normalwasserstoffelektrode, welches als Standard-Nullpunkt dient ($E^{0^{'}} = 0.00 V$)
 </details> 
 
-<details class="f">
+<details class="r">
 <summary><u><b>Was bedeutet ein negatives $E^{0^{'}}$ ?</b></u></summary>
 
 * Verbindung $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{gibt ab}}\ \ \ \ }$ Elektronen v. $H_2$
   * wirkt als `Elektronendonator`
 </details> 
 
-<details class="f">
+<details class="r">
 <summary><u><b>Was bedeutet ein positives $E^{0^{'}}$ ?</b></u></summary>
 
 * Verbindung $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{nimmt auf}}\ \ \ \ }$ Elektronen v. $H_2$
@@ -996,20 +990,20 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
   </details> 
 </details> 
 
-<details class="f">
+<details class="r">
 <summary><u><b>Wonach strebt der Zustand des Universums IMMER ?</b></u></summary>
 
-* N. d. max. Unordnung
+* N. d. max. Entropie
 </details> 
 
-<details class="f">
-<summary><u><b>Was dient als Kriterium, ob ein Prozess freiwillig war ?</b></u></summary>
+<details >
+<summary class="f"><u><b>Was dient als Kriterium, ob ein Prozess freiwillig war ?</b></u></summary>
 
 * D. `Spontanität`
 * freie Energie $(\Delta G) < 0$
 
 <details>
-<summary><u><b>Was bedeutet d. ?</b></u></summary>
+<summary class="r"><u><b>Was bedeutet d. ?</b></u></summary>
 
 * Wie __freiwillig__ findet eine Reaktion statt
 </details>
@@ -1029,13 +1023,13 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 <details>
 <summary><u><b>Was genau ist die Aktivierungsenergie ?</b></u></summary>
 
-* `Energiebarriere`, d. jedes Molekül __ü.winden__ muss \to damit es reagieren kann
+* `Energiebarriere`, d. jedes Molekül __ü.winden__ muss $\to$ damit es reagieren kann
 * `Enzyme` -> __senken__ "Hürde" -> damit <span style="color: red">Reaktion bei Körpertemperatur stattfinden kann</span> , ohne dass man d. Molekül erst erhitzen muss
 </details>
 </details> 
 
 <details class="f">
-<summary><u><b>Wie nennt man eine un- & frewiwillige Reaktion ?</b></u></summary>
+<summary><u><b>Wie nennt man eine un- & freiwillige Reaktion ?</b></u></summary>
 
 * freiwillig $\implies$ <span style="color: red">Exer</span>gonische Reaktionen ($\Delta G < 0$)
 * unfreiwillig $\implies$ <span style="color: red">Ender</span>gonische Reaktionen ($\Delta G > 0$)
