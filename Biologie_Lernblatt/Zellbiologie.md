@@ -1240,6 +1240,36 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 # Zellorganellen
 
+<details>
+<summary class="n"><u><b>Wie gelangen Viren in die Virtszellen ?</b></u></summary>
+
+* `Endozytose`
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Nenne die Arten wie Zellen Sachen in die Zelle aufnehmen und benenne diese Stoffe.</b></u></summary>
+
+![alt text](image-121.png)
+![alt text](image-122.png)
+![
+  
+](image-123.png)
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Was ist die Zellpolarität ?</b></u></summary>
+
+![alt text](image-124.png)
+</details>
+
+
+
+
+
 ## Zilien
 
 <details>
@@ -1511,6 +1541,17 @@ $$d = \frac{\lambda}{A}$$
 
 
 
+
+<details>
+<summary class="n"><u><b>Nenne die drei Transportmechanismen? </b></u></summary>
+
+![alt text](image-110.png)
+</details>
+
+
+
+
+
 <details>
 <summary class="f"><u><b>Liste d. Organellen auf d. eine tierische Zelle hat, aber d. pflanzl. Zelle nicht & anders herum.</b></u></summary>
 
@@ -1596,12 +1637,102 @@ $$d = \frac{\lambda}{A}$$
   </details>
   </details>
 
+
+<details>
+<summary class="n"><u><b>Beschreibe den Transport in den Zellkernporen.</b></u></summary>
+
+![alt text](image-111.png)
+
+  <details>
+  <summary class="n"><u><b>Erkläre den Proteinimport in Mitochtondrien ?</b></u></summary>
+
+  ![alt text](image-112.png)
+  </details>
+</details>
+
+
+
+
+
 ### Endoplasmatisches Retikulum
 
 ![alt text](image-45.png)
 
+<details>
+<summary class="n"><u><b>Wie werden Proteine an die richtigen Stellen gelenkt ? </b></u></summary>
+
+* durch Adress-Signale
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Wie verläuft die Synthese & Import von Protein ?</b></u></summary>
+
+![alt text](image-113.png)
+
+  <details>
+  <summary class="n"><u><b>Erkläre den Transport von Sekretorischen Proteinen und Membranproteinen.</b></u></summary>
+
+  ![alt text](image-114.png)
+  </details>
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Was ist die häufigste Modifikation von proteinen in ER ?</b></u></summary>
+
+![alt text](image-115.png)
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Beschreibe die Rolle der Chaperone</b></u></summary>
+
+![alt text](image-116.png)
+</details>
+
+
+
+
 ### Golgi-Apparat
 ![alt text](image-47.png)
+
+
+
+<details>
+<summary class="n"><u><b>Wie werden Versikel gebildet ?</b></u></summary>
+
+![alt text](image-117.png)
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Nenne die Coatprotein Komplexe und deren Vorkommen.</b></u></summary>
+
+![alt text](image-118.png)
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Wie finden Versikel ihren Ziel ?</b></u></summary>
+
+* `Schlüsselschlossprinzip`
+![alt text](image-119.png)
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Wie werden Lysosomale Enzyme sortiert ?</b></u></summary>
+
+![alt text](image-120.png)
+</details>
+
 
 ### Lysosom
 
@@ -1633,6 +1764,27 @@ $$d = \frac{\lambda}{A}$$
 * MTOC = Microtubule Organising Centre
 * <span class="a1">Hauptaufgabe</span>: Steuerung der Zellteilung: Es bildet die Spindelfasern aus, welche die Chromosomen gleichmäßig auf die Tochterzellen verteilen.
 </details>
+
+
+
+
+### Zellulärer Transportprozess
+
+<details>
+<summary class="n"><u><b>Wie nennt man die Import und Export-Mechanismen ?</b></u></summary>
+
+
+![alt text](image-108.png)
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Zeichne die Transportwege der Organellen</b></u></summary>
+
+![alt text](image-109.png)
+</details>
+
 
 
 
@@ -2101,12 +2253,23 @@ $\implies$ __Nische-Mikroumgebung__
 
 #### Plasmodesmen
 
+<details>
+<summary class="n"><u><b>Was machen Plasmodesmen ?</b></u></summary>
+
+![alt text](image-105.png)
+</details>
 
 
 
 
 
+<details>
+<summary class="n"><u><b>Was ist das Symplast und Apoplast ?</b></u></summary>
 
+![alt text](image-106.png)
+</details>
+
+![alt text](image-107.png)
 
 
 
