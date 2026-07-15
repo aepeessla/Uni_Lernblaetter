@@ -79,6 +79,7 @@
   .n {
     background: #9bd2e9ff
   }
+  
 </style>
 
 
@@ -1673,7 +1674,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="f"><u><b>Was sind Beispiele für Intermediärfilamente ?</b></u></summary>
+<summary class="r"><u><b>Was sind Beispiele für Intermediärfilamente ?</b></u></summary>
 
 ![alt text](image-61.png)
 </details>
@@ -1848,36 +1849,257 @@ $$d = \frac{\lambda}{A}$$
 
 
 
+# Extrazellulärmatrix
+
+<details>
+<summary class="n"><u><b>Was ist die Definion von einem Gewebe ?</b></u></summary>
+
+* Zellverbände $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{zsm.gehalten durch}}\ \ \ \ }$ <span style="color: red">Zell-Zell-Adhäsion</span> & <span style="color: red">extrazelluläre Matrix</span>(ECM)
+  * ECM v. selbste gebildet $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{abgegeben}}\ \ \ \ }$ Umgebung
+
+$\implies$ __Nische-Mikroumgebung__
+</details>
 
 
 
 
+<details>
+<summary class="n"><u><b>Was sind die Eigenschaften der ECM bei tierischen Zellen ?</b></u></summary>
+
+* ECM $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{prod. durch}}\ \ \ \ }$ Bindegewebe (Fibroblasten, Osteoblasten, Adipozyten(Fettzellen))
+  <details>
+  <summary class="n"><u><b>Was sind die ECM Komponenten ?</b></u></summary>
+
+  * Basallamina (besteht aus Laminin und Kollagen)
+  * Kollagenfabrillen
+  * Fibronektin
+  * Proteoglykane
+  </details>
+</details>
 
 
 
 
+<details>
+<summary class="n"><u><b>Was sind die Eigenschaften der ECM bei pflanzl. Zellen ?</b></u></summary>
+
+* $\forall$ Zellen $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{bilden}}\ \ \ \ }$ `Zellwand`
+  <details>
+  <summary class="n"><u><b>Woraus besteht die Zellwand ?</b></u></summary>
+
+  `Zellulosefibrillen` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{quervernetzt durch}}\ \ \ \ }$ andere __Polysaccharide__
+  ![alt text](image-85.png)
+  </details>
+</details>
+
+ 
+
+
+<details>
+<summary class="n"><u><b>Was sind die Komponenten der tierischen ECM ?</b></u></summary>
+
+![alt text](image-90.png)
+</details>
+
+## Kollagen
+
+<details>
+<summary class="n"><u><b>Beschrifte: <img src="image-86.png"></b></u></summary>
+
+1) Epithel
+1) Basallamina
+1) Makrophage
+1) Fibroblast
+1) Glykosaminoglykane, Proteoglykane & Glykoproteine
+1) Kollagenfaser
+1) Kapillare
+1) elastische Faser
+1) Mastzelle
+</details>
 
 
 
 
+<details>
+<summary class="n"><u><b>Wie lautet die Struktur von Kollagenfasern ?</b></u></summary>
+
+![alt text](image-87.png)
+</details>
 
 
 
 
+<details>
+<summary class="n"><u><b>Welche Eigenschfaten verleiht die Kollagenbeschichtung und was kann passieren, wenn sie nicht richtig zsm.gesetzt wird ?</b></u></summary>
+
+* Bestimmt Straffheit d. Haut
+  * <span class="a1">wenn falsch</span> $\implies$ Ü.dehnbarkeit d. Haut 
+</details>
 
 
 
 
+<details>
+<summary class="n"><u><b>Beschrifte die Kollagensynthese.</b></u></summary>
+
+* ___Endoplasmatische Retikulum___ $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Synthese v.}}\ \ \ \ }$ $\alpha$ 1/ $\alpha$ 2
+* Bildung v. Prokollagen $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{unterstüzt durch}}\ \ \ \ }$ `Hsp47` $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Transport durch}}\ \ \ \ }$ <code style="color: #9a6fc7ff">Golgi-Apparat</code> mit __lateraler Assoziation__ $\to$ <span style="color: red">__Exocytose__</span> $\to$ __Abspaltung__ d. `Propeptide` $\to$ <span style="color: #6fc82fff">Selbst-Assoziation</span>  d. `Kollagenmoleküle` (periodisch)
+
+![alt text](image-88.png)
+</details>
+
+
+
+### Narbenbildung
+
+<details>
+<summary class="n"><u><b>Nenne 2 Narbenarten und was die Ursache dafür ist</b></u></summary>
+
+![alt text](image-89.png)
+</details>
 
 
 
 
+### Strukturglykoproteine
+
+<details>
+<summary class="n"><u><b>Nenne ein Strukturglykogenprotein.</b></u></summary>
+
+* `Proteoglycane`
+
+![alt text](image-91.png)
+</details>
 
 
 
 
+<details>
+<summary class="n"><u><b>Was ist die wichtigste Klasse von Zelladhäsionsproteinen ?</b></u></summary>
+
+![alt text](image-94.png)
+</details>
 
 
+#### Intergrine
+
+
+<details>
+<summary class="n"><u><b>Was machen Intergrine und Fibronectin. Beschreeibe jeweils deren Aufgabe ?</b></u></summary>
+
+* sie verbinden `ECM` mit `Zytoskelett` $\implies$ Ankerpunkte v. Zellen
+
+![alt text](image-92.png)
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Was verbinden aktive Intergine ?</b></u></summary>
+
+* ECM mit Zytoskelett
+![alt text](image-102.png)
+![alt text](image-103.png)
+</details>
+
+
+
+### Glykokalix
+
+
+<details>
+<summary class="n"><u><b>Was ist die Glykokalix ?</b></u></summary>
+
+![alt text](image-93.png)
+</details>
+
+
+
+### Zellerkennung
+
+<details>
+<summary class="n"><u><b>Wodurch können sich Zellen erkennen ?</b></u></summary>
+
+![alt text](image-95.png)
+</details>
+
+
+
+### Zellverbindung
+
+<details>
+<summary class="n"><u><b>Nenne die prinzipiellen Typen von Zellverbindungen.</b></u></summary>
+
+![alt text](image-96.png)
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Wie sind Hautzellen miteinander verbunden ?</b></u></summary>
+
+![alt text](image-97.png)
+</details>
+
+
+
+
+<details>
+  <summary class="n"><u><b>Catahine sind ... abhängige Zelladhäsionsmoleküle.</b></u></summary>
+
+  * $Ca^{2+}$
+  </details>
+
+
+
+#### Desmosomen
+
+<details>
+<summary class="n"><u><b>Was sind die Desmosomen ?</b></u></summary>
+
+![alt text](image-98.png)
+</details>
+
+
+#### Tight junction
+
+<details>
+<summary class="n"><u><b>Was ist die Aufgabe von tight junctions ?</b></u></summary>
+
+![alt text](image-99.png)
+</details>
+
+
+#### Hemidesmosomen
+
+<details>
+<summary class="n"><u><b>Was sind die Eigenschaften von Hemidesmosomen ?</b></u></summary>
+
+![alt text](image-100.png)
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Was heften Zellen an die ECM ?</b></u></summary>
+
+* `Fokalkontakte`
+![alt text](image-101.png)
+</details>
+
+
+
+#### Gap junction
+
+<details>
+<summary class="n"><u><b>Wie werden Gap junctions gebildet ?</b></u></summary>
+
+![alt text](image-104.png)
+</details>
+
+
+
+#### Plasmodesmen
 
 
 
