@@ -1605,7 +1605,7 @@ $$d = \frac{\lambda}{A}$$
 
 ## Organellen
 
-### Zellkern
+### <span class="w">Zellkern</span>
 <img src="image-42.png">
   <details>
   <summary><u><b>Lösung:</b></u></summary>
