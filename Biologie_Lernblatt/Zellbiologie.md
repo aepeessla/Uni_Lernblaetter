@@ -200,7 +200,7 @@
 </div>
 
 
-<details class="f">
+<details class="r">
  <summary><b><u>Was sind d. Vermehrungszyklen von Bakteriophagen</u></b></summary>
 
   1) <u>Lytic Cycle (Zerstörerisch)$^!$</u>
@@ -392,13 +392,13 @@
   ![alt text](image-23.png)
 </details>
 
-<details class="f">
+<details class="r">
  <summary><b><u>Welche Voraussetzung muss erfüllt sein, damit sich ein Salzkristall in Wasser auflöst?</u></b></summary>
 
   * $\text{Hydratationsenergie} > \text{Gitterenergie}$
 </details>
 
-<details class="f">
+<details class="r">
  <summary><b><u>Was versteht man unter der "Gitterenergie" ?</u></b></summary>
 
   * Energie, d. Ionen im festen Kristalgitter zsm.hält $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{Überwindung}}\ \ \ \ }$ Zerstörung des Kristalgitters
@@ -422,8 +422,8 @@
 
 <h2>Wasserstoffbrückenbindung</h2>
 
-<details class="f">
- <summary><b><u>Welcher Prozess beschreibt den ersten Schritt beim Lösen eines Salzes (aus energetischer Sicht) ?</u></b></summary>
+<details>
+ <summary class="r"><b><u>Welcher Prozess beschreibt den ersten Schritt beim Lösen eines Salzes (aus energetischer Sicht) ?</u></b></summary>
 
   * D. __Aufbrechen des Ionengitters__. Die Ionen müssen aus ihrem festen Verband gelöst werden (dafür wird Gitterenergie verbraucht).
 </details>
@@ -436,7 +436,7 @@
 </details>
 
 
-<details class="f">
+<details class="r">
  <summary><b><u>
 Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 
@@ -497,7 +497,7 @@ Welcher Prozess beschreibt den zweiten Schritt beim Lösen ?</u></b></summary>
 </details>
 
 <details>
- <summary><b><u>Was ist die Folge von Kohäsion und Adhäsion bei Wasser?</u></b></summary>
+ <summary class="f"><b><u>Was ist die Folge von Kohäsion und Adhäsion bei Wasser?</u></b></summary>
 
   * Wasser kann in `engen Röhren` <span style="color: red;">aufsteigen</span> $\implies$ wichtig f. Pflanzen/Bäume
   * `Wasseroberflächenspannung` $\underrightarrow{\ \ \ \ \textcolor{#c72483}{\text{ermögl. Insekten}}\ \ \ \ }$ Auf Wasser zu laufen
@@ -998,7 +998,7 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 </details> 
 
 <details >
-<summary class="f"><u><b>Was dient als Kriterium, ob ein Prozess freiwillig war ?</b></u></summary>
+<summary class="r"><u><b>Was dient als Kriterium, ob ein Prozess freiwillig war ?</b></u></summary>
 
 * D. `Spontanität`
 * freie Energie $(\Delta G) < 0$
@@ -1010,13 +1010,13 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
 </details>
 
 <details>
-<summary><u><b>Wann ist eine Reaktion spontan ?</b></u></summary>
+<summary class="r"><u><b>Wann ist eine Reaktion spontan ?</b></u></summary>
 
 * Wenn Reaktion __ohne__ <span style="color: red">dauerhafte Energiezufuhr v. Außerhalb</span> ___ablaufen kann___ $\implies \Delta G < 0$
 </details>
 
 <details>
-<summary><u><b>Reaktionen können eine hohe Aktivierungsenergie benötigen. Welche Einheit kann diese Aktivierungsenergie senken ?</b></u></summary>
+<summary class="r"><u><b>Reaktionen können eine hohe Aktivierungsenergie benötigen. Welche Einheit kann diese Aktivierungsenergie senken ?</b></u></summary>
 
 * `Enzyme`
 </details>
@@ -1118,8 +1118,8 @@ Durch __spezifische__ `Import-Signale`, d. d. Protein direkt zum entsprechenden 
   * 1 = Nummer des Enzyms in der Unterklasse
 </details>
 
-<details class="f">
-<summary><u><b>Erkläre das Enzym-Substrak.Komplex anhand der Hexokinase.</b></u></summary>
+<details>
+<summary class="r"><u><b>Erkläre das Enzym-Substrak.Komplex anhand der Hexokinase.</b></u></summary>
 
 * <code style="color: #ff6a00ff">Hexokinase</code> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{trifft auf}}\ \ \ \ }$ __Substrat__(<code style="color: #674026ff">Glucose</code> &  <code style="color: #9bb832ff">ATP</code>) $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Anpassung}}\ \ \ \ }$ Substrat trifft auf <span style="color: red">aktive Zentrum</span> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Denaturierung}}\ \ \ \ }$ <span style="color: red">Schlüssel-Schloss-Prinzip</span> mögl. $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Enzym katalysiert Reaktion}}\ \ \ \ }$ __neue Produkte__ $=$ <code style="color: #3b2415ff">Glucose-6-Phosphat</code> & <code style="color: #5b6c1dff">ADP</code> $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{kein Schlüssel-Schloss-Prinzip}}\ \ \ \ }$ neue Produkte lösen sich ab $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Ennzym wieder}}\ \ \ \ }$ __Ursprüngl. Form__ f. nächsten Durchgang
 </details>
@@ -1241,7 +1241,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 # Zellorganellen
 
 <details>
-<summary class="n"><u><b>Wie gelangen Viren in die Virtszellen ?</b></u></summary>
+<summary class="r"><u><b>Wie gelangen Viren in die Virtszellen ?</b></u></summary>
 
 * `Endozytose`
 </details>
@@ -1253,9 +1253,11 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 ![alt text](image-121.png)
 ![alt text](image-122.png)
-![
-  
-](image-123.png)
+  <details>
+  <summary class="n"><u><b>Wie wird das Autophagozytose gebildet ?</b></u></summary>
+
+  ![alt text](image-123.png)
+  </details>
 </details>
 
 
@@ -1273,7 +1275,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 ## Zilien
 
 <details>
-<summary class="f"><u><b>Was sind d. Zilien ?</b></u></summary>
+<summary class="r"><u><b>Was sind d. Zilien ?</b></u></summary>
 
 * D. sind `kleine Härrchen` d, aus <code style="background: red">Mikrotubuli</code> bestehen & f. den Transport zuständig sind
 * <span class="">befinden sich auf __eukaryotischen Zellen__<span>
@@ -1429,7 +1431,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 
 <details>
-<summary class="n"><u><b>Was ist d. Besonderheit des Lebendzellenmikroskopie ?</b></u></summary>
+<summary class="r"><u><b>Was ist d. Besonderheit des Lebendzellenmikroskopie ?</b></u></summary>
 
 * Lebendigbeobachtung
 </details>
@@ -1477,7 +1479,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Wie funktioniert die Expansions Mikroskopie ?</b></u></summary>
+<summary class="f"><u><b>Wie funktioniert die Expansions Mikroskopie ?</b></u></summary>
 
 * <span class="a1">Markierung (Labeling)</span>: 
   * `Zielstrukturen` (z. B. Proteine im Zellskelett) in _fixierten Probe_ __mit fluoreszierenden Antikörpern markiert__
@@ -1486,7 +1488,7 @@ $$d = \frac{\lambda}{A}$$
 * <span class="a1">Einbettung (Embedding)</span>: Probe $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{eingebettet}}\ \ \ \ }$  wasserabsorbierendes `Hydrogel-Netzwerk` 
   * Dabei $\to$ Anker an den fluoreszierenden Markierungen fest mit dem Hydrogel verknüpft $\implies$ biol. Strukturen physisch im Gel „eingefangen“
 
-* <span class="a1">Verdauung (Digestion)</span>: Mit Enzym (Protease) $\to$ ursprünglichen Proteine der Probe $\to$ teilweise abgebaut $\to$  Probe verliert mechanische Starrheit, während fluoreszierenden Markierungen fest im Hydrogel verankert bleiben & ihre relative Position exakt beibehalten
+* <span class="a1">Verdauung (Digestion)</span>: Mit Enzym <span class="f">(Protease)</span> $\to$ ursprünglichen Proteine der Probe $\to$ teilweise abgebaut $\to$  Probe verliert mechanische Starrheit, während fluoreszierenden Markierungen fest im Hydrogel verankert bleiben & ihre relative Position exakt beibehalten
 
 * <span class="a1">Expansion</span>: Gel $\to$ gelegt $\to$ in Wasser $\to$ saugt sich voll $\implies$ quillt massiv auf und dehnt sich um den Faktor 4 oder mehr aus $\leftarrow$ Da Marker fest im Gel sitzen, bewegen sie sich mit dem Gel auseinander – das Bild der Zelle wird also „vergrößert“
 
