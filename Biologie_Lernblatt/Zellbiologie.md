@@ -77,7 +77,10 @@
     background: #e99b9bff
   }
   .n {
-    background: #9bd2e9ff
+    background: #9bb5e9ff
+  }
+  .w{
+    background: #ff0090ff
   }
   
 </style>
@@ -1341,7 +1344,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 ## Mikroskop
 
 <details>
-<summary class="f"><u><b>Was sind d. Teleskopenarten ?</b></u></summary>
+<summary class="w"><u><b>Was sind d. Teleskopenarten ?</b></u></summary>
 
 1) Lichtmikroskop(LM)
 1) Transmissions-Elektronenmikroskop(TEM)
@@ -1413,7 +1416,7 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 
 
 <details>
-<summary class="n"><u><b>Wie lautet der Strahlengang eines Fluoreszenzmikroskops ?</b></u></summary>
+<summary class="w"><u><b>Wie lautet der Strahlengang eines Fluoreszenzmikroskops ?</b></u></summary>
 
 ![alt text](image-55.png)
   <details>
@@ -1470,7 +1473,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Wie funktioniert die Fluoreszenzmikroskopie ?</b></u></summary>
+<summary class="w"><u><b>Wie funktioniert die Fluoreszenzmikroskopie ?</b></u></summary>
 
 * Immunfluorenszenz-Technik
 ![alt text](image-48.png)
@@ -1490,7 +1493,7 @@ $$d = \frac{\lambda}{A}$$
 
 * <span class="a1">Verdauung (Digestion)</span>: Mit Enzym <span class="f">(Protease)</span> $\to$ ursprünglichen Proteine der Probe $\to$ teilweise abgebaut $\to$  Probe verliert mechanische Starrheit, während fluoreszierenden Markierungen fest im Hydrogel verankert bleiben & ihre relative Position exakt beibehalten
 
-* <span class="a1">Expansion</span>: Gel $\to$ gelegt $\to$ in Wasser $\to$ saugt sich voll $\implies$ quillt massiv auf und dehnt sich um den Faktor 4 oder mehr aus $\leftarrow$ Da Marker fest im Gel sitzen, bewegen sie sich mit dem Gel auseinander – das Bild der Zelle wird also „vergrößert“
+* <span class="a1">Expansion</span>: Gel $\to$ gelegt $\to$ in Wasser $\to$ saugt sich voll $\implies$ quillt massiv auf und dehnt sich aus($+4 \times$) $\leftarrow$ Da Marker fest im Gel sitzen, bewegen sie sich mit dem Gel auseinander – das Bild der Zelle wird also „vergrößert“
 
 ![alt text](image-56.png)
 </details>
@@ -1545,7 +1548,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Nenne die drei Transportmechanismen? </b></u></summary>
+<summary class="f"><u><b>Nenne die drei Transportmechanismen? </b></u></summary>
 
 ![alt text](image-110.png)
 </details>
@@ -1555,7 +1558,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="f"><u><b>Liste d. Organellen auf d. eine tierische Zelle hat, aber d. pflanzl. Zelle nicht & anders herum.</b></u></summary>
+<summary class="w"><u><b>Liste d. Organellen auf d. eine tierische Zelle hat, aber d. pflanzl. Zelle nicht & anders herum.</b></u></summary>
 
 <table>
   <thead>
@@ -1616,10 +1619,10 @@ $$d = \frac{\lambda}{A}$$
   1) Kernlamina
   1) Kernhülle
   1) Kernpore
-  1) Proteinfibrillen
+  1) <span class="f">Proteinfibrillen<span>
   1) Cytoplasma
-  1) Kernhülle
-  1) nucleärer "Käfig"
+  1) <span class="f">Kernhülle<span>
+  1) <span class="f">nucleärer<span> "Käfig"
   1) Nucleoplasma
 
   * Euckromatin = aktiv
