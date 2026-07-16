@@ -1341,14 +1341,14 @@ $$v = \frac{V_{max}[S]}{K_m + [S]}$$
 ## Mikroskop
 
 <details>
-<summary class="n"><u><b>Was sind d. Teleskopenarten ?</b></u></summary>
+<summary class="f"><u><b>Was sind d. Teleskopenarten ?</b></u></summary>
 
 1) Lichtmikroskop(LM)
 1) Transmissions-Elektronenmikroskop(TEM)
 1) Raster-Elektronenmikroskop(REM)
-1) <span class="">Focused Ion Beam Scanning Electron Microscopy(FIB-SEM) $\to$ 3D-Scan<span>
+1) <span class="">Focused Ion Beam Scanning Electron Microscopy(FIB-SEM) $\to$ 3D-Scan</span>
 1) Fluoreszensmikroskopie
-1) Lebenszellenmikroskopie mit Grün Fluoreszierenden Proteins (GFP)
+1) <span class="f">Lebenszellenmikroskopie</span> mit Grün Fluoreszierenden Proteins (GFP)
 1) Expansions Mikroskopie
 </details>
 
