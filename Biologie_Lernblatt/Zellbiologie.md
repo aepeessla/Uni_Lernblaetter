@@ -1644,7 +1644,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Beschreibe den Transport in den Zellkernporen.</b></u></summary>
+<summary class="w"><u><b>Beschreibe den Transport in den Zellkernporen.</b></u></summary>
 
 ![alt text](image-111.png)
 
@@ -1664,7 +1664,7 @@ $$d = \frac{\lambda}{A}$$
 ![alt text](image-45.png)
 
 <details>
-<summary class="n"><u><b>Wie werden Proteine an die richtigen Stellen gelenkt ? </b></u></summary>
+<summary class="w"><u><b>Wie werden Proteine an die richtigen Stellen gelenkt ? </b></u></summary>
 
 * durch Adress-Signale
 </details>
@@ -1672,12 +1672,12 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Wie verläuft die Synthese & Import von Protein ?</b></u></summary>
+<summary class="w"><u><b>Wie verläuft die Synthese & Import von Protein ?</b></u></summary>
 
 ![alt text](image-113.png)
 
   <details>
-  <summary class="n"><u><b>Erkläre den Transport von Sekretorischen Proteinen und Membranproteinen.</b></u></summary>
+  <summary class="w"><u><b>Erkläre den Transport von Sekretorischen Proteinen und Membranproteinen.</b></u></summary>
 
   ![alt text](image-114.png)
   </details>
@@ -1686,7 +1686,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Was ist die häufigste Modifikation von proteinen in ER ?</b></u></summary>
+<summary class="w"><u><b>Was ist die häufigste Modifikation von proteinen in ER ?</b></u></summary>
 
 ![alt text](image-115.png)
 </details>
@@ -1694,7 +1694,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Beschreibe die Rolle der Chaperone</b></u></summary>
+<summary class="w"><u><b>Beschreibe die Rolle der Chaperone</b></u></summary>
 
 ![alt text](image-116.png)
 </details>
@@ -1708,7 +1708,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Wie werden Versikel gebildet ?</b></u></summary>
+<summary class="w"><u><b>Wie werden Versikel gebildet ?</b></u></summary>
 
 ![alt text](image-117.png)
 </details>
@@ -1716,7 +1716,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Nenne die Coatprotein Komplexe und deren Vorkommen.</b></u></summary>
+<summary class="w"><u><b>Nenne die Coatprotein Komplexe und deren Vorkommen.</b></u></summary>
 
 ![alt text](image-118.png)
 </details>
@@ -1724,7 +1724,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="n"><u><b>Wie finden Versikel ihren Ziel ?</b></u></summary>
+<summary class="w"><u><b>Wie finden Versikel ihren Ziel ?</b></u></summary>
 
 * `Schlüsselschlossprinzip`
 ![alt text](image-119.png)
@@ -1776,7 +1776,7 @@ $$d = \frac{\lambda}{A}$$
 ### Zellulärer Transportprozess
 
 <details>
-<summary class="n"><u><b>Wie nennt man die Import und Export-Mechanismen ?</b></u></summary>
+<summary class="r"><u><b>Wie nennt man die Import und Export-Mechanismen ?</b></u></summary>
 
 
 ![alt text](image-108.png)
@@ -1796,7 +1796,7 @@ $$d = \frac{\lambda}{A}$$
 # Zytoskelett
 
 <details>
-<summary class="r"><u><b>Was sind die beiden Gerüstsubstanzen ?</b></u></summary>
+<summary class="w"><u><b>Was sind die beiden Gerüstsubstanzen ?</b></u></summary>
 
 ![alt text](image-57.png)
 </details>
@@ -1804,7 +1804,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="r"><u><b>Was sind d. Zellbewegungstypen ?</b></u></summary>
+<summary class="w"><u><b>Was sind d. Zellbewegungstypen ?</b></u></summary>
 
 ![alt text](image-58.png)
 </details>
@@ -1813,7 +1813,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="r"><u><b>Was sind die 3 Grundtypen von Filamenten und was sind jeweils die Eigenschaften ?</b></u></summary>
+<summary class="w"><u><b>Was sind die 3 Grundtypen von Filamenten und was sind jeweils die Eigenschaften ?</b></u></summary>
 
 ![alt text](image-59.png)
 </details>
@@ -1823,7 +1823,7 @@ $$d = \frac{\lambda}{A}$$
 ## Intermediärfilamente
 
 <details>
-<summary class="r"><u><b>Wie lautet der Aufbau von Intermediärfilamenten ?</b></u></summary>
+<summary class="w"><u><b>Wie lautet der Aufbau von Intermediärfilamenten ?</b></u></summary>
 
 ![alt text](image-60.png)
 </details>
@@ -1831,7 +1831,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="r"><u><b>Was sind Beispiele für Intermediärfilamente ?</b></u></summary>
+<summary class="w"><u><b>Was sind Beispiele für Intermediärfilamente ?</b></u></summary>
 
 ![alt text](image-61.png)
 </details>
@@ -1843,7 +1843,7 @@ $$d = \frac{\lambda}{A}$$
 ## Aktinfilamente
 
 <details>
-<summary class="n"><u><b>Wie lautet der Aufbau & die Eigenschaften von Aktinfilamenten ?</b></u></summary>
+<summary class="w"><u><b>Wie lautet der Aufbau & die Eigenschaften von Aktinfilamenten ?</b></u></summary>
 
 ![alt text](image-64.png)
 * durch Polarität $\implies$ können nur in eine Richtung aufgebaut werden
@@ -1862,7 +1862,7 @@ $$d = \frac{\lambda}{A}$$
 
 
 <details>
-<summary class="f"><u><b>Wie funktioniert die Filamentbildung ?</b></u></summary>
+<summary class="w"><u><b>Wie funktioniert die Filamentbildung ?</b></u></summary>
 
 ![alt text](image-65.png)
 </details>

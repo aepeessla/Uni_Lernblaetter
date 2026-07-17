@@ -325,6 +325,7 @@ Somit ist die Basis autom.: $B = \left\{ \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatr
 
 
 
+
 # Basen
 
 
