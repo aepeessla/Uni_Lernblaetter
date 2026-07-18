@@ -61,7 +61,10 @@
     background: red;
   }
   .n {
-    background: #b6d2e7ff;
+    background: #8ac0e9ff;
+  }
+  .w {
+    background: #ff0059ff;
   }
 </style>
 
@@ -345,13 +348,54 @@ Somit ist die Basis autom.: $B = \left\{ \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatr
 ![alt text](image-1.png)
 </details>
 
+# Rang von Matrizzen
+
+<details>
+<summary class="n"><u><b>Wie lautet die Notation ?</b></u></summary>
+
+* $rang(A)$
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Wie berechnet man dieses ?</b></u></summary>
+
+* Gauß-Algorithmus anw.
+  = Zählen d. Zeilen
+    * 0 Zeile: $\lnot$ zählen
+    * $\ne$ 0: zählen
+</details>
+
+
+
+
+<details>
+<summary class="n"><u><b>Was ist die Eigenschaft des Rangs eine Matrizze $A$ mit der transpornierten Form $A^T$ ?</b></u></summary>
+
+* Gauß-Algorithmus anw.
+  = Zählen d. Zeilen
+    * 0 Zeile: $\lnot$ zählen
+    * $\ne$ 0: zählen
+</details>
+
 
 # Abbildungsmatrizzen
 
 <details>
-<summary class=""><u><b>Wie berechnet man Abbildungsmatrizzen & wie lautet d. Schreibweise ?</b></u></summary>
+<summary class="n"><u><b>Wie berechnet man Abbildungsmatrizzen & wie lautet d. Schreibweise ?</b></u></summary>
+
+1) Abbildung berechnen (meistens $\varphi$ oder $\psi$)
+</details>
 
 
+
+
+
+<details>
+<summary class="n"><u><b>Welche Eigenschaft hat der Rang einer Matrix $A$ & d. transpornierten Form $A^T$ ?</b></u></summary>
+
+* $\text{rang}=(A) = \text{rang}(A^T)$
 </details>
 
 
