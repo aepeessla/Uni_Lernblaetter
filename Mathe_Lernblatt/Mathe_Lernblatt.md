@@ -32,7 +32,7 @@
     text-align: center;
   }
 
-  .ÜSchrift{
+  .a1{
     font-weight: bold;
     text-decoration: underline
   }
@@ -52,6 +52,19 @@
   img {
     width: 500px;
     height: auto
+  }
+
+  .r {
+    background: green;
+  }
+  .f {
+    background: red;
+  }
+  .n {
+    background: #8ac0e9ff;
+  }
+  .w {
+    background: #ff0059ff;
   }
 </style>
 
@@ -233,40 +246,157 @@ $\boxed{x_1 + x_2 + x_3 = 4}$
    * $\vec{x} = \begin{pmatrix} 4 \\ 0 \\ 0 \end{pmatrix} + r \cdot \begin{pmatrix} -4 \\ 4 \\ 0 \end{pmatrix} + s \cdot \begin{pmatrix} -4 \\ 0 \\ 4 \end{pmatrix} \quad (r, s \in \mathbb{R})$
 </details>
 
+
+
+
+
+# Schnittpunkte
+
 <details>
 <summary><u><b>Wie berechnet man den Schnittpunkt 2er Ebenen ?</b></u></summary>
 
-1) 
+1) Gleichsetzen mit Addition oder Subtraktion
+1) Nach Var. umstellen
+  * wenn Gleichungen $\lt$ Variabeln => ein Var. frei wählbar
+1) Parameterform aufschreiben
+</details>
+
+
+
+
+<details>
+<summary><u><b>Wie berechnet man den Schnittpunkt von einer Gerade und einer Ebene ?</b></u></summary>
+
+> wenn es geschirben ist als $(1,2,3) + \lambda(1,2,3)$, dann ist es eigentl.: $\begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} + \lambda \cdot \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}$
+1) Gerade in Einzelteile zerlegen
+1) Einzelteile in Ebene einsetzen
+1) N. \lambda umstellen
+1) In Formel eins.: $\boxed{a + \lambda \cdot b}$
+</details>
+
+
+
+# Paralellogram
+
+<details>
+<summary class="n"><u><b>Wie berechnet man den Inhalt eines Parallelograms ?</b></u></summary>
+
+* ist $a$ & $b$ __linearunabhängig__ ?
+$$\boxed{A = ||a \times b||}$$
+</details>
+
+
+
+
+<details>
+<summary class="n"><u><b>Wie berechnet man das Volumen eines Parallelograms ?</b></u></summary>
+
+* $$\boxed{\left \langle (a \times b) * c \right \rangle}$$
+</details>
+
+
+
+
+# Unterraum
+
+<details>
+<summary class="n"><u><b>Was muss gelten, sodass eine Gerade ein Unterraum ist ?</b></u></summary>
+
+* Es muss immer d. `Nullpunkt` _des Koordinatensystems_ im __Unterraum enthalten sein__
+  * wenn `Ebene & Gerade` $\lnot$ durch den Punkt $\implies$ autom. $\lnot$ im Unterraum
+
+1) Nullvektor enthalten ?
+1) Abgeschlossenheit durch Addition: U + U = U
+1) Abgeschlossenheit durch Multiplikation: Vektorraum des Unterraum aus U \cdot \lambda = immer in U ?
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Wie bestimme ich d. Basen im Unterraum ?</b></u></summary>
+
+* Ich muss d. parametrische Form v. U darstellen & d. 2 Vektoren sind dann autom. meine Basen
+
+* <span class="a1">Bsp:</span>
+  $$U := {(x_1,x_2,x_3) \in \mathbb{R}^3: x_1 + x_2 + x_3 = 0}$$
+  1 Gleichung $<$ 3 Var. = 2 Var. frei $\implies x_2 = s, x_3 = t$
+  $$x_1+t+s = 0$$
+  $$x_1 = -t-s$$
+  $$U = \begin{pmatrix} -t-s \\ t \\ s \end{pmatrix} = t \cdot \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix} + s \cdot \begin{pmatrix} -1 \\ 0 \\ 1 \end{pmatrix}$$
+Somit ist die Basis autom.: $B = \left\{ \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}, \begin{pmatrix} -1 \\ 0 \\ 1 \end{pmatrix} \right\}$
+</details>
+
+
+
+
+# Basen
+
+
+<details>
+<summary class="n"><u><b>Wie kann ich Basen ergänzen ?</b></u></summary>
+
+* wenn ich zu wenig Basen habe \implies Einheitsvektoren verw. 
+  * dabei immer gucken, ob d. `Basen`, d. ich __bereits habe__ <span style="color: red">linear unabhängig</span> sind !
+</details>
+
+
+# Koordinatenvektoren
+
+<details>
+<summary class="n"><u><b>Wie berechnet man Koordinatenvektoren ?</b></u></summary>
+
+![alt text](image-1.png)
+</details>
+
+# Rang von Matrizzen
+
+<details>
+<summary class="n"><u><b>Wie lautet die Notation ?</b></u></summary>
+
+* $rang(A)$
+</details>
+
+
+
+<details>
+<summary class="n"><u><b>Wie berechnet man dieses ?</b></u></summary>
+
+* Gauß-Algorithmus anw.
+  = Zählen d. Zeilen
+    * 0 Zeile: $\lnot$ zählen
+    * $\ne$ 0: zählen
+</details>
+
+
+
+
+<details>
+<summary class="n"><u><b>Was ist die Eigenschaft des Rangs eine Matrizze $A$ mit der transpornierten Form $A^T$ ?</b></u></summary>
+
+* Gauß-Algorithmus anw.
+  = Zählen d. Zeilen
+    * 0 Zeile: $\lnot$ zählen
+    * $\ne$ 0: zählen
+</details>
+
+
+# Abbildungsmatrizzen
+
+<details>
+<summary class="n"><u><b>Wie berechnet man Abbildungsmatrizzen & wie lautet d. Schreibweise ?</b></u></summary>
+
+1) Abbildung berechnen (meistens $\varphi$ oder $\psi$)
 </details>
 
 
 
 
 
+<details>
+<summary class="n"><u><b>Welche Eigenschaft hat der Rang einer Matrix $A$ & d. transpornierten Form $A^T$ ?</b></u></summary>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* $\text{rang}=(A) = \text{rang}(A^T)$
+</details>
 
 
 
