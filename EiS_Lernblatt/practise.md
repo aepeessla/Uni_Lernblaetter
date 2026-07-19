@@ -90,7 +90,12 @@
 
 ## 1. `val s = Seat("2","8")`
 
-* Das Problem ist, dass die Parameter der Klasse Seat die Datentypen <code style="color: rgb(76, 215, 58)">Int</code> haben müssen, welches eine ganze Zahl repräsentiert. Die ü.geb. Parameter jedoch haben den Datentyp <code style="color: rgb(76, 215, 58)">String</code>. Gleichzeitig wurden die Parameter `row` & `number` mit <code style="color: rgb(112, 132, 231)">val</code> deklariert, welches bedeutet, dass es eine <span style="color: red">unveränderliche Variabel</span> ist. Somit muss der ü.geb. Datentyp __IMMER__ ein  <code style="color: rgb(76, 215, 58)">Int</code> sein !
+* Das Problem ist, dass die Parameter der Klasse `Seat` die Datentypen <code style="color: rgb(76, 215, 58)">Int</code> haben müssen, welches eine ganze Zahl repräsentiert. Die ü.geb. Parameter jedoch haben den Datentyp <code style="color: rgb(76, 215, 58)">String</code>. Somit muss der ü.geb. Datentyp __IMMER__ ein  <code style="color: rgb(76, 215, 58)">Int</code> sein !
+
+* <span class="a1">Lösung</span>:
+    ```scala
+    val s = Seat(2,8)
+    ```
 
 ___
 ## 2
@@ -110,17 +115,46 @@ def describe(seat: Seat): String =
 
 ## <span class="f">3  </span>
 
-Das Probelm hiebei ist, dass bei der Kontrolle nicht auf den Seat selbst zugegriffen wird, sondern auf seinen Value. D.h., dass bei Seat(2,8) garnicht auf das Seat-Objekt selbst geschaut wird, sondern auf seinen Wert "Jonas", welches nicht als key enthalten ist. 
+* Es handelt sich um eine <span style="color: red">normale Klasse</span>, nicht um eine case class. 
+* Scala (und Java) $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{vgl.}}\ \ \ \ }$ __normale Klassen__ $\implies$ __Referenzidentität__ (Speicheradresse)
+    * Da `wanted` = <span style="color: red">neu erzeugtes Objekt</span> $\implies$ andere __Speicheradresse__ als das Objekt, das in der Map liegt
+        * deshalb liefert `contains` d. Ergebnis <code style="color: rgb(76, 215, 58)">False</code>
 
-* <span class="a1">Lösung</span>:
-    ```scala
-    val wanted = Seat(2,8)
-    println(Reservations.contains(wanted))
-    ```
-
+* <span class="a1">Lösung</span>: `case class` def. (`case class Seat(row: Int, number: Int)`), da Case Classes autom. strukturelle Gleichheit (equals und hashCode) implementieren
 
 
+# Aufgabe 3)
 
+![alt text](image-11.png)
+
+## 1
+
+```scala
+case class Temperature(celsius: Double) extends Ordered[Temperature] {
+    override def compare(that: Temperature): Int =
+        if (this.celsius < that.celsius) {
+            -1
+        } else if (this.celsius > that.celsius) {
+            +1
+        } else {
+            0
+        }
+}
+```
+# <span class="f">4  </span>
+* `Ordered[Temperature]` = <span style="color: red">Trait von Scala</span>
+    * enthält bereits die vollständige, fertige Logik für sämtliche Vergleichsoperatoren (<, <=, >, >=)
+        * Diese Operatoren sind dort so def., dass sie intern einfach compare aufrufen & d. Ergebnis auswerten (z. B. ist a < b intern definiert als a.compare(b) < 0). Sobald du also compare implementierst, funktionieren alle anderen Operatoren autom. „out of the box“.
+
+* durch Erben v. `Ordered[Temperature]` (`extends Ordered[...]`) $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{meine Klasse bekommt bereitgestellt}}\ \ \ \ }$ Methode compare
+
+### Eselsbrücke:
+
+>* __Trait__ (Ordered): Das Wort ist ein Eigenschaftswort (Adjektiv)
+>    * beschreibt eine Fähigkeit
+>    * Wenn eine Klasse Ordered implementiert, bedeutet das einfach nur: „Man kann Objekte dieser Klasse miteinander vergleichen (größer, kleiner, gleich).“
+>
+>* Die __Datenstruktur__ (z. B. List, Set, Tree): Das sind Hauptwörter (Substantive). Das sind die tatsächlichen Behälter, in denen man ganz viele Temperaturen speichert.
 
 
 
