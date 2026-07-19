@@ -281,6 +281,340 @@ def nextStatus(status: DeliveryStatus): DeliveryStatus = {
     * garantiert dem `Compiler`, dass jedes ü.geb Objekt <span style="color: red">mind. d. __Schnittstelle v. CounterLog__ (also d. Methode <code>add</code>) besitzt.</span>
 
 
+# Aufgabe 8
+
+![alt text](<Bildschirmfoto 2026-07-19 um 21.16.19.png>)
+
+## 1
+
+```scala
+def movieCount(movies: Seq[Movie]): Int = movies.size
+```
+
+## 2
+
+* mind. 120 min. lang
+* available == True
+
+```scala
+def availableLongMovies(movies: Seq[Movie]): Seq[Movie] = {
+  movies.filter((m: Movie) => m.available == true && m.minutes >= 120)
+}
+```
+
+## 3
+
+```scala
+def hasRating(movies: Seq[Movie], rating: Double): Boolean = {
+  movies.exists((m:Movie) => m.rating == rating)
+}
+```
+
+## 4
+
+```scala
+def bestMovie(movies: Seq[Movie]): Movie = {
+  if (movies.isEmpty) {
+    throw new IllegalArgumentException("Die übergebene Liste ist leer.")
+  }
+
+  movies.maxBy(_.rating)
+}
+```
+
+
+# Aufgabe 9
+
+![alt text](image-16.png)
+
+## 1,2,3
+
+* "current stores the next number that should be returned": Bevor es returned wird muss kontrolliert werden, dass `current < limit -1` ist 
+
+```scala
+class ZeroUntilIterator(limit: Int) extends Iterator[Int] {
+  private var current: Int = 0
+
+  override def hasNext: Boolean = {
+    current < limit //Gibt autom. true und false zurück
+  }
+
+  override def next(): Int = {
+    if (hasNext == true) {
+      val hasNextBool = true
+      println(current)
+    } else {
+      hasNextBool = false
+    }
+  }
+}
+
+```
+## 4
+
+* `Iterator`: Konkrete __Cursor/Zeiger__, d. den Zustand des aktuellen Durchlaufs hält
+  * liefert ü. next() d. Elem. nacheinander & ist n. einem Durchlauf verbraucht (kann $\lnot$ zurückgesetzt werden)
+* `Iterable` ist jedoch ein `trait`, welches einer Collection d. Eigenschaften verleit durchiteriert zu werden. Man kann also durch sie wandern & mit den einzelnen Elem. arbeiten => filter, minBy, maxBy, ...
+
+
+# Aufgabe 10
+
+![alt text](<Bildschirmfoto 2026-07-19 um 22.22.48.png>)
+
+# 1
+
+* Man kann `Report` $\lnot$ direkt instanzieren, weil es verschiede Arten v. einem __Report__ gibt. Würde mann nur `class Report` machen, dann müssten $\forall$ Report-Objekte den gleichen Aufbau wie `class Report` haben. Zudem handelt es sich hier um eine __abstrakte Klasse__, welches einf. nur bedeutet, dass d. Klasse ein reines Baumplan f. d. Unterklassen ist. D. Unterklassen d. v. d. abstrakten Klasse erben, müssen d. vordefinierten Felder v. d. abstrakten Klasse erben !
+* Zudem haben wir `def body: String`, welches $\lnot$ def. ist, sondern __abstrakt__ 
+
+# 2
+
+* wir "müssen" `protected` ver., damit jeder Reporter Zugriff auf den Titel haben kann oder vlt. sogar verändern kann.
+
+# 3
+```text
+Report: Status
+All good
+```
+
+# 4
+```text
+Report: Values
+2, 4, 6
+```
+
+> * wenn man von einer abstrakten Klasse erbt, dann muss man es auch als Parameter d. Unterklasse schrieben (<span style="color: red">ohne val/var!</span>)
+>```scala
+>abstract class Workout(val duration: Int) {
+>  // Eine bereits fertig definierte Methode (Konkret)
+>  def summary: String = s"Workout dauerte $duration Minuten."
+>
+>  // Eine unvollständige Methode (Abstrakt)
+>  def caloriesBurned: Int
+>}
+>
+>class WeightTraining(val weights: Seq[Int], duration: Int) extends Workout(duration){
+>  override def caloriesBurned: Int = {
+>    duration * 5 + weights.sum
+>  }
+>}
+>```
+
+
+# Aufgabe 11
+
+![alt text](image-17.png)
+
+## 1
+
+* m0 = String
+* m1 = Int
+* m2 = Double
+* m3 = Boolean
+* m4 = ArraySeq[Int]
+* m5 = ArraySeq[Int]
+* m6 = Int => Boolean
+* m7 = Option[Int]
+* m8 = Map[String, Int]
+* m9 = Option[Int]
+
+## 2
+
+* m3 = true
+
+## 3
+
+* m7 = Some(3)
+
+## 4
+
+* m9 = None
+
+# Aufgabe 12
+
+![alt text](image-18.png)
+
+```scala
+class EightRegisters[A]() extends RegisterBank[A] {
+  private val slots: mutable.ArraySeq[Option[A]] = 
+    mutable.ArraySeq(None, None, None, None, None, None, None, None)
+
+  override def clear(): Unit = {
+    for (i <- slots.indices) slots(i) = None
+  }
+
+  override def isEmpty: Boolean = slots.forall(_ == None)
+
+  override def read(index: Int): Option[A] = {
+    if (index < 0 || index > 7) None // Beide ungültigen Grenzen abfangen!
+    else slots(index)                 // Ist bereits ein Option[A]
+  }
+
+  override def write(index: Int, elem: A): Unit = {
+    if (index < 0 || index > 7) {
+      throw new IllegalArgumentException("Index out of bounds")
+    }
+    slots(index) = Some(elem) // Unbedingt verpacken!
+  }
+
+  override def contains(elem: A): Boolean = slots.contains(Some(elem))
+}
+```
+
+
+# Aufgabe 13
+
+![alt text](image-19.png)
+
+```scala
+case class Priority(level: Int) extends Ordered[Priority] {
+   override def compare(that: Priority): Int = this.level - that.level
+}
+```
+
+## 4
+
+* Es heißt "Rich Interface", weil Entwickler nur eine einzige Methode selbst ausprogrammieren müssen (compare), d. `Trait` dir dafür aber geschenkt einen riesigen Satz an fertigen Operatoren mitliefert! Sobald `compare` steht, funktionieren auf deinen Objekten autom. `<`, `>`, `<=`, & `>=`
+
+# Aufgabe 14
+
+![alt text](image-20.png)
+
+## 1
+
+* D. Grund f. den Fehler ist, dass man statt ein Int, ein Double ü.geb. hat.
+```scala
+val location = ProductLocation(1,2)
+```
+
+## 2
+* D. Grund f. den Fehler ist, dass location.shelf \lnot einmal ausgeführt wird, sondern, aufgrund v. s"" sofort zu einem String anwendet. 
+
+```scala
+def locationText(location: ProductLocation): Strong = s"shelf ${location.shelf}, box ${location.box}"
+```
+
+## 3
+
+* D. Fehler ist, dass Storage mit einem `val` deklariert wurde, welches es zu einem unveränderl. Var. macht
+
+```scala
+val Storage2 = Storage +  (ProductLocation(3,1) -> "Tape")
+```
+
+
+# Aufgabe 15
+
+![alt text](<Bildschirmfoto 2026-07-20 um 00.25.10.png>)
+
+## 1
+
+```text
+lamp.execute(ShowLamp()) = off
+```
+## 2
+
+```scala
+class LampMachine() {
+  private var isOn: Boolean = false
+    
+  def execute(command: LampCommand): Unit =
+    command match {
+      case TurnOn()  => isOn = true
+      case TurnOff() => isOn = false
+      case Toggle()  => isOn = !isOn
+      case ShowLamp() => 
+        if (isOn) println("on") else println("off")
+      
+      // Der entscheidende Fall: Rekursiver Aufruf!
+      case RepeatLamp(repetitions, commands) =>
+        for (_ <- 0 until repetitions) {
+          // Nutze die zweite execute-Methode, um die Liste abzuarbeiten
+          execute(commands) 
+        }
+    }
+
+  // Hier wird einfach die Liste von Befehlen nacheinander ausgeführt
+  def execute(commands: Seq[LampCommand]): Unit = {
+    commands.foreach(c => execute(c))
+  }
+
+  def reset(): Unit = { isOn = false }
+}
+```
+
+# Aufagbe 16
+
+![alt text](image-21.png)
+
+```scala
+def defaultValue(t: AttributeType): String = {
+  t match {
+    case IntType => "0"
+    case DoubleType => "0.0"
+    case TextType => ""
+  }
+}
+```
+
+```scala
+def isNumeric(t: AttributeType): Boolean = {
+  t match {
+    case IntType => true
+    case DoubleType => true
+    case TextType => false
+  }
+}
+```
+
+>* Wenn ein match-Ausdruck $\lnot \forall$ Fälle abdeckt, gibt d. Compiler eine Warnung bezüglich d. __Unvollständigkeit__ ("not exhaustive") aus. 
+>* Tritt dieser $\lnot$ abgedeckte Fall dann während d. Ausf. ein, stürzt d. Programm mit einem `MatchError` ab
+
+
+
+# Aufgabe 17
+
+![alt text](<Bildschirmfoto 2026-07-20 um 00.54.47.png>)
+
+## 1
+
+```scala
+def paidOrders(orders: Seq[Order]): Seq[Order] = {
+  orders.filter(order => order.paid == true)
+}
+```
+
+## 2
+
+```scala
+def hasLargeOrder(orders: Seq[Order]): Boolean = {
+  orders.exists(order => order.totalEuro >= 100.0)
+}
+```
+
+## 3
+
+```scala
+def totalItems(orders: Seq[Order]): Int = {
+  orders.map(_.itemCount).sum
+}
+```
+
+## 4
+
+```scala
+def smallestPaidOrder(orders: Seq[Order]): Option[Order] = {
+  orders.filter(_.paid).minByOption(_.totalEuro)
+}
+```
+
+>* erst filtern und dann minByOption verw. 
+
+
+# Aufgabe 18
+
+![alt text](<Bildschirmfoto 2026-07-20 um 01.14.18.png>)
+
+
 
 
 
