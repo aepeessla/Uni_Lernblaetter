@@ -546,7 +546,6 @@ code {
  151.7 139 205zm0 0v40h399900v-40z"/></svg></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mord text" style="color:#83b7ea;"><span class="mord" style="color:#83b7ea;">meine Klasse bekommt bereitgestellt</span></span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7164em;"><span></span></span></span></span></span></span></span></span> Methode compare</p>
 </li>
 </ul>
-<h3 id="eselsbrücke">Eselsbrücke:</h3>
 <blockquote>
 <ul>
 <li>
@@ -561,6 +560,85 @@ code {
 </li>
 </ul>
 </blockquote>
+<h1 id="aufgabe-4">Aufgabe 4</h1>
+<p><img src="image-12.png" alt="alt text"></p>
+<h2 id="1-1">1</h2>
+<ul>
+<li>q0 = List[int]</li>
+<li>q1 = Int =&gt; Boolean</li>
+<li>q2 = List[Int]</li>
+<li>q3 = List[Double]</li>
+<li>q4 = Double</li>
+<li>q5 = Map[Int,String]</li>
+<li>q6 = Option[String]</li>
+<li>q7 = String</li>
+<li>q8 = Int</li>
+<li>q9 = Boolean</li>
+</ul>
+<h2 id="2-1">2</h2>
+<ul>
+<li>q4 = 30.0</li>
+</ul>
+<h2 id="3-1">3</h2>
+<ul>
+<li>q7 = &quot;unknown&quot;</li>
+</ul>
+<h2 id="4-1">4</h2>
+<ul>
+<li>q9 = True</li>
+</ul>
+<h3 id="spickzettel">Spickzettel:</h3>
+<blockquote>
+<ul>
+<li>Immer gucken, was am <strong>Ende herauskommt</strong></li>
+<li><span class="a1">Klassen-Typen</span>: Wenn eine Klasse schon feste Datentypen hat Student(name: String, points: Int) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder accentunder="true"><mrow><mtext>    </mtext><mstyle mathcolor="#83b7ea"><mtext>Typ</mtext></mstyle><mtext>    </mtext></mrow><mo stretchy="true">→</mo></munder></mrow><annotation encoding="application/x-tex">\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Typ}}\ \ \ \ }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3998em;vertical-align:-0.7164em;"></span><span class="mord accentunder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6833em;"><span class="svg-align" style="top:-2.2836em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.522em" viewBox="0 0 400000 522" preserveAspectRatio="xMaxYMin slice"><path d="M0 241v40h399891c-47.3 35.3-84 78-110 128
+-16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
+ 11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
+ 39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
+-40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
+-12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
+ 151.7 139 205zm0 0v40h399900v-40z"/></svg></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mord text" style="color:#83b7ea;"><span class="mord" style="color:#83b7ea;">Typ</span></span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7164em;"><span></span></span></span></span></span></span></span></span>  Student</li>
+<li>eine <code>normale Klasse</code> wird <span style="color: red">immer anhand dessen <strong>Speicheraddresse</strong> vergl.</span>
+<ul>
+<li>Beim <code>case class</code> wird mit dem HashCode vergl.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h1 id="aufgabe-5">Aufgabe 5</h1>
+<p><img src="image-13.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FixedHistory</span>[<span class="hljs-type">A</span>](<span class="hljs-params"></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">History</span>[<span class="hljs-type">A</span>] </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> entries: mutable.<span class="hljs-type">ArraySeq</span>[<span class="hljs-type">Option</span>[<span class="hljs-type">A</span>]] =
+        mutable.<span class="hljs-type">ArraySeq</span>(<span class="hljs-type">None</span>, <span class="hljs-type">None</span>, <span class="hljs-type">None</span>, <span class="hljs-type">None</span>, <span class="hljs-type">None</span>, <span class="hljs-type">None</span>, <span class="hljs-type">None</span>, <span class="hljs-type">None</span>)
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> iterator: <span class="hljs-type">Int</span> = <span class="hljs-number">0</span>
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">size</span></span>: <span class="hljs-type">Int</span> = entries.count(_.isDefined)
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">clear</span></span>(): <span class="hljs-type">Unit</span> = {
+        <span class="hljs-keyword">for</span> (i &lt;- entries.indices) entries(i) = <span class="hljs-type">None</span>
+        iterator = <span class="hljs-number">0</span>
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isEmpty</span></span>: <span class="hljs-type">Boolean</span> = size == <span class="hljs-number">0</span>
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span></span>(elem: <span class="hljs-type">A</span>): <span class="hljs-type">Unit</span> = {
+        <span class="hljs-keyword">if</span> (iterator &gt;= <span class="hljs-number">8</span>) {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalArgumentException</span>(<span class="hljs-string">&quot;History ist voll.&quot;</span>)
+        }
+        entries(iterator) = <span class="hljs-type">Some</span>(elem) <span class="hljs-comment">// Verpacken!</span>
+        iterator += <span class="hljs-number">1</span>
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">contains</span></span>(elem: <span class="hljs-type">A</span>): <span class="hljs-type">Boolean</span> = entries.contains(<span class="hljs-type">Some</span>(elem)) <span class="hljs-comment">// Verpackt suchen!</span>
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span></span>(index: <span class="hljs-type">Int</span>): <span class="hljs-type">Option</span>[<span class="hljs-type">A</span>] = entries(index) <span class="hljs-comment">// Ist schon eine Option!</span>
+}
+</div></code></pre>
+<h1 id="aufgabe-6">Aufgabe 6</h1>
+<p><img src="image-14.png" alt="alt text"></p>
+<pre class="hljs"><code><div>
+</div></code></pre>
 &lt;script>
   window.MathJax = {
     tex: {

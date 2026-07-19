@@ -148,13 +148,98 @@ case class Temperature(celsius: Double) extends Ordered[Temperature] {
 
 * durch Erben v. `Ordered[Temperature]` (`extends Ordered[...]`) $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{meine Klasse bekommt bereitgestellt}}\ \ \ \ }$ Methode compare
 
-### Eselsbrücke:
+
 
 >* __Trait__ (Ordered): Das Wort ist ein Eigenschaftswort (Adjektiv)
 >    * beschreibt eine Fähigkeit
 >    * Wenn eine Klasse Ordered implementiert, bedeutet das einfach nur: „Man kann Objekte dieser Klasse miteinander vergleichen (größer, kleiner, gleich).“
 >
 >* Die __Datenstruktur__ (z. B. List, Set, Tree): Das sind Hauptwörter (Substantive). Das sind die tatsächlichen Behälter, in denen man ganz viele Temperaturen speichert.
+
+
+# Aufgabe 4
+
+
+![alt text](image-12.png)
+
+## 1
+
+* q0 = List[int]
+* q1 = Int => Boolean
+* q2 = List[Int]
+* q3 = List[Double]
+* q4 = Double
+* q5 = Map[Int,String]
+* q6 = Option[String]
+* q7 = String
+* q8 = Int
+* q9 = Boolean
+
+## 2
+* q4 = 30.0
+
+## 3
+* q7 = "unknown"
+
+## 4
+* q9 = True
+
+
+### Spickzettel:
+
+>* Immer gucken, was am __Ende herauskommt__
+>* <span class="a1">Klassen-Typen</span>: Wenn eine Klasse schon feste Datentypen hat Student(name: String, points: Int) $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{Typ}}\ \ \ \ }$  Student
+>* eine `normale Klasse` wird <span style="color: red">immer anhand dessen __Speicheraddresse__ vergl.</span>
+>   * Beim `case class` wird mit dem HashCode vergl. 
+
+
+
+
+
+# Aufgabe 5
+
+![alt text](image-13.png)
+
+```scala
+class FixedHistory[A]() extends History[A] {
+    private val entries: mutable.ArraySeq[Option[A]] =
+        mutable.ArraySeq(None, None, None, None, None, None, None, None)
+
+    private var iterator: Int = 0
+
+    override def size: Int = entries.count(_.isDefined)
+
+    override def clear(): Unit = {
+        for (i <- entries.indices) entries(i) = None
+        iterator = 0
+    }
+
+    override def isEmpty: Boolean = size == 0
+
+    override def add(elem: A): Unit = {
+        if (iterator >= 8) {
+            throw new IllegalArgumentException("History ist voll.")
+        }
+        entries(iterator) = Some(elem) // Verpacken!
+        iterator += 1
+    }
+
+    override def contains(elem: A): Boolean = entries.contains(Some(elem)) // Verpackt suchen!
+
+    override def get(index: Int): Option[A] = entries(index) // Ist schon eine Option!
+}
+```
+
+
+# Aufgabe 6
+
+![alt text](image-14.png)
+
+```scala
+
+```
+
+
 
 
 
