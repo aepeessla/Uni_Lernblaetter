@@ -386,7 +386,37 @@ Somit ist die Basis autom.: $B = \left\{ \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatr
 <summary class="n"><u><b>Wie berechnet man Abbildungsmatrizzen & wie lautet d. Schreibweise ?</b></u></summary>
 
 1) Abbildung berechnen (meistens $\varphi$ oder $\psi$)
+2) $x_1 \cdot <Zielbasis_1> + x_2 \cdot  <Zielbasis_w> + \dots = Abbildung$
+1) Gleichungen lösen
+![alt text](IMG_3512.jpeg)
+![alt text](IMG_3513.jpeg)
 </details>
+
+
+
+# Kern einer linearen Abbildung
+
+<details>
+<summary class="n"><u><b>Wie berechnet man den Kern ?</b></u></summary>
+
+1) Abbildung einsetzten
+2) Abbildungen = 0 $\to$ umstellen
+
+
+</details>
+
+
+# Basis des Bildes berechnen
+
+<details>
+<summary class="n"><u><b>Wie berechnet man die Basis eines Bildes ?</b></u></summary>
+
+1) Kontrolle, ob $\forall$ linear unabhängig
+1) Spalten v. ursprüngl. Matrix als Basisvektor aufschrieben
+  * <span style="color: red">Nur wenn d. Zeile n. dem Gauß-Algorithmus auch den Pivot-Elem. hat !!!</span>
+</details>
+
+
 
 
 
