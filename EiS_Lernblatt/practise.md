@@ -235,21 +235,50 @@ class FixedHistory[A]() extends History[A] {
 
 ![alt text](image-14.png)
 
-```scala
+## 1
 
+```scala
+def isFinished(status: DeliveryStatus): Boolean = {
+    status match {
+        case DeliveryStatus.Delivered => true
+        case _ => false
+    }
+}
 ```
 
+# 2
+
+```scala
+def nextStatus(status: DeliveryStatus): DeliveryStatus = {
+    status match {
+        case DeliveryStatus.Ordered => DeliveryStatus.Packed
+        case DeliveryStatus.Packed => DeliveryStatus.Sent
+        case DeliveryStatus.Sent => DeliveryStatus.Delivered
+        case DeliveryStatus.Delivered => DeliveryStatus.Delivered
+    }
+}
+```
+## 3
+
+* Es ist besser, dass wir `enum` verw. haben und somit einen eigenen Datentyp def. haben, weil wir somit garantieren, dass es` Ordered, Packed, Sent` oder `Delivered` sein muss. Wäre es ein <code style="color: rgb(76, 215, 58)">String</code>, dann könnte man es ganz einfach mit einem anderen String ersätzen und es würde x Status geben. Somit könnten wir auch das Pattern-Matching $\lnot$ so schön anw. können.
 
 
+# Aufgabe 7
 
+![alt text](image-15.png)
 
+## 1
 
+* e1 = Seq(-1,4,5,-2,8)
 
+## 2
 
+* e2 = Seq(5,8)
 
+## 3
 
-
-
+* statische Typ $\underrightarrow{\ \ \ \ \textcolor{#83b7ea}{\text{bestimmt}}\ \ \ \ }$  zur Kompilierzeit, welche Methoden ü.haupt auf dem Objekt aufgerufen werden dürfen
+    * garantiert dem `Compiler`, dass jedes ü.geb Objekt <span style="color: red">mind. d. __Schnittstelle v. CounterLog__ (also d. Methode <code>add</code>) besitzt.</span>
 
 
 
