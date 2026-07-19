@@ -306,8 +306,8 @@ $$\boxed{A = ||a \times b||}$$
   * wenn `Ebene & Gerade` $\lnot$ durch den Punkt $\implies$ autom. $\lnot$ im Unterraum
 
 1) Nullvektor enthalten ?
-1) Abgeschlossenheit durch Addition: U + U = U
-1) Abgeschlossenheit durch Multiplikation: Vektorraum des Unterraum aus U \cdot \lambda = immer in U ?
+1) Abgeschlossenheit durch Addition: $U + U = U$
+1) Abgeschlossenheit durch Multiplikation: Vektorraum des Unterraum aus U $\cdot \lambda$ = immer in U ?
 </details>
 
 
