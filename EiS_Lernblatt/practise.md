@@ -615,6 +615,141 @@ def smallestPaidOrder(orders: Seq[Order]): Option[Order] = {
 ![alt text](<Bildschirmfoto 2026-07-20 um 01.14.18.png>)
 
 
+## 1
+
+1) `val p1 = MultiPrinter()`
+1) `p1.printAll(Seq("setup", "check"))`
+1) `lines.foreach(printLine)`
+1) `lines.append(line)`
+   * `ArrayBuffer("setup", "check")`
+
+
+1) `printReport(p1)`
+1) `printer.printline("start")` & `printer.printline("finish")`
+1) `lines.append(line)`
+   * `ArrayBuffer("setup", "check", "start", "finish")`
+
+
+1) `val r1 = p1.output`
+1) `ArrayBuffer("setup", "check", "start", "finish")` $\to$ `Seq("setup", "check", "start", "finish")` 
+
+
+
+
+## 2
+
+* `printReport(p2)`
+* `printLine("start")`
+  * `ArrayBuffer("LOG: start")`
+* `printLine("finish")`
+  * `ArrayBuffer("LOG: start", "LOG: finish")`
+* `ArrayBuffer("LOG: start", "LOG: finish")` $\to$ `Seq("LOG: start", "LOG: finish")`
+
+## 3
+
+>* Wenn ein Parameter den Typ d. Oberklasse hat (z. B. printer: Printer), erlaubt der Compiler zur Kompilierzeit nur den Aufruf v. Methoden, d. direkt in d. Oberklasse def. sind.
+>* Methoden aus __Unterklassen__ (wie printAll aus MultiPrinter) sind ü. diesen Parameter $\lnot$ aufrufbar, selbst wenn zur Laufzeit ein Unterklassen-Objekt ü.geb wird!
+
+
+# Aufgabe 20
+
+![alt text](image-22.png)
+
+## 1
+
+```scala
+class NoDiscount extends PriceRule {
+  override def apply(price: Double): Double = {
+    if (!valid(price)) {
+      throw new IllegalArgumentException("Der Peris muss positiv sein !")
+    }
+    price
+  }
+}
+
+class PercantageDiscount(percent: Double) extends PriceRule {
+  override def apply(price: Double): Double = {
+    if (!valid(price)) {
+      throw new IllegalArgumentException("Der Peris muss positiv sein !")
+    }
+    val newPrice = price - (price * (percent/100))
+    newPrice
+  }
+}
+```
+
+# 3
+
+* Es ist eine hilfreiche Methode, weil es autom. für jede Unterklasse zur Verfügung steht. Das heißt, dass wir nur die `valid()`-Methode verändern müssen, wodurch $\forall$ anderen Unterklassen autom. diese Bedingung umsetzten. Man muss dann $\lnot$ durch jede Unterklasse gehen & d. Bedingung manuell anpassen.
+
+
+# Aufgabe 20
+
+![alt text](image-23.png)
+
+# 1
+
+```scala
+class NumberBox(private val numbers: Seq[Int]) extends Iterable[Int] {
+  override def iterator: Iterator[Int] = {
+    numbers.iterator
+  }
+}
+```
+
+## 3
+* Es heißt "<code style="color: #d6548fff">Rich Interface</code>", weil Entwickler __nur eine einzige Methode selbst ausprogrammieren müssen__ (compare), d. `Trait` dir dafür aber geschenkt einen riesigen Satz an fertigen Operatoren mitliefert! Sobald `.iterator` steht, stehen filter, map und exists zur Verfügung. 
+
+
+---
+
+
+
+# 1
+```scala
+val schublade = scala.collection.mutable.ArrayBuffer[String]("Stift")
+schublade.append("Block")
+```
+* D. Grund, weshalb es dennoch funktioniert ist, dass sich val im Grunde nicht verändert. val ist immer n. der Datentyp scala.collection.mutable.ArrayBuffer[String]. D. was sich ändert ist d. Inhalt d. Liste, welches ebenso keinen Fehler verursacht, weil es mutable ist.
+
+# 2
+
+* Scala geht immer von rechts nach links ausgeführt. Wer als letztes deklariert wurde, hat quazi die Oberhand.
+
+# 3
+
+neueIds hat erhält den Wert None, weil foreach immer ein Unit zurückgibt. Sie ist lediglich nur da, um side-effects auszuführen, wie zum Beispiel print. Stattdessen müssen wir map benuten, welches automatisch den gleichen Listentyp übernimt und die Werte hineinpackt, an dem die Operation angewendet wurden. 
+
+# Exception Handling (try-catch-finally)
+# File I/O
+# Generische Typen
+# Indizes (HashIndex / TreeIndex):
+
+# cheat sheet
+val index = (0 until table.numRecords)
+  .groupBy(id => table.getRecord(id).getValue(attribute))
+  .to(HashMap)
+
+* Abfrage
+  ```scala
+  def get(key: Value): Seq[RecordID] = index.getOrElse(key, Seq())
+  ```[cite: 2]
+  ```
+
+Tree 
+```scala
+def getRange(lower: Value, upper: Value): Seq[RecordID] = {
+  index.range(lower, upper)
+       .flatMap((key, ids) => ids)
+       .toSeq
+}
+```[cite: 2]
+```
+* *Merke für `flatMap`:* Holt alle Sequenzen von RecordIDs aus dem Bereich und klopft sie zu einer einzigen, flachen Liste zusammen[cite: 2]!
+
+
+![alt text](image-24.png)
+
 
 
 

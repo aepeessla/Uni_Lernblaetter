@@ -923,6 +923,143 @@ All good
 </blockquote>
 <h1 id="aufgabe-18">Aufgabe 18</h1>
 <p><img src="Bildschirmfoto 2026-07-20 um 01.14.18.png" alt="alt text"></p>
+<h2 id="1">1</h2>
+<ol>
+<li>
+<p><code>val p1 = MultiPrinter()</code></p>
+</li>
+<li>
+<p><code>p1.printAll(Seq(&quot;setup&quot;, &quot;check&quot;))</code></p>
+</li>
+<li>
+<p><code>lines.foreach(printLine)</code></p>
+</li>
+<li>
+<p><code>lines.append(line)</code></p>
+<ul>
+<li><code>ArrayBuffer(&quot;setup&quot;, &quot;check&quot;)</code></li>
+</ul>
+</li>
+<li>
+<p><code>printReport(p1)</code></p>
+</li>
+<li>
+<p><code>printer.printline(&quot;start&quot;)</code> &amp; <code>printer.printline(&quot;finish&quot;)</code></p>
+</li>
+<li>
+<p><code>lines.append(line)</code></p>
+<ul>
+<li><code>ArrayBuffer(&quot;setup&quot;, &quot;check&quot;, &quot;start&quot;, &quot;finish&quot;)</code></li>
+</ul>
+</li>
+<li>
+<p><code>val r1 = p1.output</code></p>
+</li>
+<li>
+<p><code>ArrayBuffer(&quot;setup&quot;, &quot;check&quot;, &quot;start&quot;, &quot;finish&quot;)</code> $\to$ <code>Seq(&quot;setup&quot;, &quot;check&quot;, &quot;start&quot;, &quot;finish&quot;)</code></p>
+</li>
+</ol>
+<h2 id="2">2</h2>
+<ul>
+<li><code>printReport(p2)</code></li>
+<li><code>printLine(&quot;start&quot;)</code>
+<ul>
+<li><code>ArrayBuffer(&quot;LOG: start&quot;)</code></li>
+</ul>
+</li>
+<li><code>printLine(&quot;finish&quot;)</code>
+<ul>
+<li><code>ArrayBuffer(&quot;LOG: start&quot;, &quot;LOG: finish&quot;)</code></li>
+</ul>
+</li>
+<li><code>ArrayBuffer(&quot;LOG: start&quot;, &quot;LOG: finish&quot;)</code> $\to$ <code>Seq(&quot;LOG: start&quot;, &quot;LOG: finish&quot;)</code></li>
+</ul>
+<h2 id="3">3</h2>
+<blockquote>
+<ul>
+<li>Wenn ein Parameter den Typ d. Oberklasse hat (z. B. printer: Printer), erlaubt der Compiler zur Kompilierzeit nur den Aufruf v. Methoden, d. direkt in d. Oberklasse def. sind.</li>
+<li>Methoden aus <strong>Unterklassen</strong> (wie printAll aus MultiPrinter) sind ü. diesen Parameter $\lnot$ aufrufbar, selbst wenn zur Laufzeit ein Unterklassen-Objekt ü.geb wird!</li>
+</ul>
+</blockquote>
+<h1 id="aufgabe-20">Aufgabe 20</h1>
+<p><img src="image-22.png" alt="alt text"></p>
+<h2 id="1">1</h2>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NoDiscount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">PriceRule</span> </span>{
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>(price: <span class="hljs-type">Double</span>): <span class="hljs-type">Double</span> = {
+    <span class="hljs-keyword">if</span> (!valid(price)) {
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalArgumentException</span>(<span class="hljs-string">"Der Peris muss positiv sein !"</span>)
+    }
+    price
+  }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PercantageDiscount</span>(<span class="hljs-params">percent: <span class="hljs-type">Double</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">PriceRule</span> </span>{
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>(price: <span class="hljs-type">Double</span>): <span class="hljs-type">Double</span> = {
+    <span class="hljs-keyword">if</span> (!valid(price)) {
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalArgumentException</span>(<span class="hljs-string">"Der Peris muss positiv sein !"</span>)
+    }
+    <span class="hljs-keyword">val</span> newPrice = price - (price * (percent/<span class="hljs-number">100</span>))
+    newPrice
+  }
+}
+</div></code></pre>
+<h1 id="3">3</h1>
+<ul>
+<li>Es ist eine hilfreiche Methode, weil es autom. für jede Unterklasse zur Verfügung steht. Das heißt, dass wir nur die <code>valid()</code>-Methode verändern müssen, wodurch $\forall$ anderen Unterklassen autom. diese Bedingung umsetzten. Man muss dann $\lnot$ durch jede Unterklasse gehen &amp; d. Bedingung manuell anpassen.</li>
+</ul>
+<h1 id="aufgabe-20">Aufgabe 20</h1>
+<p><img src="image-23.png" alt="alt text"></p>
+<h1 id="1">1</h1>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NumberBox</span>(<span class="hljs-params">private val numbers: <span class="hljs-type">Seq</span>[<span class="hljs-type">Int</span>]</span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Iterable</span>[<span class="hljs-type">Int</span>] </span>{
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">iterator</span></span>: <span class="hljs-type">Iterator</span>[<span class="hljs-type">Int</span>] = {
+    numbers.iterator
+  }
+}
+</div></code></pre>
+<h2 id="3">3</h2>
+<ul>
+<li>Es heißt &quot;<code style="color: #d6548fff">Rich Interface</code>&quot;, weil Entwickler <strong>nur eine einzige Methode selbst ausprogrammieren müssen</strong> (compare), d. <code>Trait</code> dir dafür aber geschenkt einen riesigen Satz an fertigen Operatoren mitliefert! Sobald <code>.iterator</code> steht, stehen filter, map und exists zur Verfügung.</li>
+</ul>
+<hr>
+<h1 id="1">1</h1>
+<pre class="hljs"><code><div><span class="hljs-keyword">val</span> schublade = scala.collection.mutable.<span class="hljs-type">ArrayBuffer</span>[<span class="hljs-type">String</span>](<span class="hljs-string">"Stift"</span>)
+schublade.append(<span class="hljs-string">"Block"</span>)
+</div></code></pre>
+<ul>
+<li>D. Grund, weshalb es dennoch funktioniert ist, dass sich val im Grunde nicht verändert. val ist immer n. der Datentyp scala.collection.mutable.ArrayBuffer[String]. D. was sich ändert ist d. Inhalt d. Liste, welches ebenso keinen Fehler verursacht, weil es mutable ist.</li>
+</ul>
+<h1 id="2">2</h1>
+<ul>
+<li>Scala geht immer von rechts nach links ausgeführt. Wer als letztes deklariert wurde, hat quazi die Oberhand.</li>
+</ul>
+<h1 id="3">3</h1>
+<p>neueIds hat erhält den Wert None, weil foreach immer ein Unit zurückgibt. Sie ist lediglich nur da, um side-effects auszuführen, wie zum Beispiel print. Stattdessen müssen wir map benuten, welches automatisch den gleichen Listentyp übernimt und die Werte hineinpackt, an dem die Operation angewendet wurden.</p>
+<h1 id="exception-handling-try-catch-finally">Exception Handling (try-catch-finally)</h1>
+<h1 id="file-io">File I/O</h1>
+<h1 id="generische-typen">Generische Typen</h1>
+<h1 id="indizes-hashindex--treeindex">Indizes (HashIndex / TreeIndex):</h1>
+<h1 id="cheat-sheet">cheat sheet</h1>
+<p>val index = (0 until table.numRecords)
+.groupBy(id =&gt; table.getRecord(id).getValue(attribute))
+.to(HashMap)</p>
+<ul>
+<li>Abfrage<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span></span>(key: <span class="hljs-type">Value</span>): <span class="hljs-type">Seq</span>[<span class="hljs-type">RecordID</span>] = index.getOrElse(key, <span class="hljs-type">Seq</span>())
+```[cite: <span class="hljs-number">2</span>]
+</div></code></pre>
+</li>
+</ul>
+<p>Tree</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getRange</span></span>(lower: <span class="hljs-type">Value</span>, upper: <span class="hljs-type">Value</span>): <span class="hljs-type">Seq</span>[<span class="hljs-type">RecordID</span>] = {
+  index.range(lower, upper)
+       .flatMap((key, ids) =&gt; ids)
+       .toSeq
+}
+```[cite: <span class="hljs-number">2</span>]
+</div></code></pre>
+<ul>
+<li><em>Merke für <code>flatMap</code>:</em> Holt alle Sequenzen von RecordIDs aus dem Bereich und klopft sie zu einer einzigen, flachen Liste zusammen[cite: 2]!</li>
+</ul>
+<p><img src="image-24.png" alt="alt text"></p>
 <script>
   window.MathJax = {
     tex: {
