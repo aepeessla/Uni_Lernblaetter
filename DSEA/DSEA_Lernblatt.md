@@ -3,7 +3,7 @@
     margin-bottom: 7px  ;
     border: lightgrey 1px solid;
     padding: 8px
-}
+  }
   summary {
     font-size: 20px
   }
@@ -93,6 +93,101 @@
 * $\Omega$ => best case
 * $\theta$ => avarage case
 </details>
+
+
+# Monogame
+
+<details>
+<summary class="n"><u><b>Was sind Monogame ?</b></u></summary>
+
+* Ehe f. $\forall$
+* es gibt eine gerade Anzahl an Personen
+  * wir wollen $n$ Paare
+  * _jede Person_ hat eine __Präferenz__ ($p_1: p_3 \lt p_4 \lt p_2$)
+</details>
+
+<details>
+<summary class="n"><u><b>
+* $p_1$: $p_4 < p_2 < p_3$ 
+* $p_2$: $p_4 < p_3 < p_1$ 
+* $p_3$: $p_4 < p_1 < p_2$ 
+* $p_4$: $p_3 < p_1 < p_2$
+</b></u></summary>
+
+* Ehe f. $\forall$
+* es gibt eine gerade Anzahl an Personen
+  * wir wollen $n$ Paare
+  * _jede Person_ hat eine __Präferenz__ ($p_1: p_3 \lt p_4 \lt p_2$)
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
