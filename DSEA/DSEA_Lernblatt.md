@@ -159,7 +159,24 @@
     </table>
 
     </details>
+
+    1) <span class="a1">Heiratsantrag</span>:
+    * Jede Person macht ihrer aktuell höchsten Wahl einen Antrag
+      * $p_1 \to p_3$
+      * $p_2 \to p_1$
+      * $p_3 \to p_2$
+      * $p_4 \to p_2$
+      
+    2) <span class="a1">Kandidat halten/ablehnen</span>:
+    * $p_1$ bekommt nur den Antrag v. $p_2$ $\implies$ hält $p_2$.
+    * $p_3$ bekommt nur den Antrag v. $p_1$ $\implies$ hält $p_1$
+    * $p_2$ bekommt Anträge v. $p_3$ & $p_4$. Da $p_2$ d. Person $p_3$ lieber mag als $p_4$, hält $p_2$ d. Person $p_3$ & lehnt $p_4$ ab
+
+    3) <span class="a1">Symmetrisch streichen</span>:
+    * Wenn $x$ von $y$ abgelehnt wird (oder $x$ jemand Schlechteres als seine aktuelle Zusage verfällt), streichst du d. Verbindung $x \leftrightarrow y$ bei beiden Personen durch
+      * Da $p_2$ d. Person $p_4$ ablehnt, streichst du $p_4$ in d. Zeile v. $p_2$ & $p_2$ in d. Zeile v. $p_4$.
 </details>
+
 
 
 
