@@ -114,10 +114,50 @@
 * $p_4$: $p_3 < p_1 < p_2$
 </b></u></summary>
 
-* Ehe f. $\forall$
-* es gibt eine gerade Anzahl an Personen
-  * wir wollen $n$ Paare
-  * _jede Person_ hat eine __Präferenz__ ($p_1: p_3 \lt p_4 \lt p_2$)
+* Bei $n$ Paaren $\to n - 1$ Möglichkeiten
+* <span class="a1">Instabilität prüfen</span>:
+  * <details>
+    <summary class="n"><u><b>Wie finde ich die Paare heraus ?</b></u></summary>
+
+    * <span class="a1">Eliminations-Tabelle</span>:
+      <table>
+      <thead>
+        <tr>
+          <th>Person</th>
+          <th>1.Wahl</th>
+          <th>2.Wahl</th>
+          <th>3.Wahl</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$p_1$</td>
+          <td>$p_2$</td>
+          <td>$p_3$</td>
+          <td>$p_4$</td>
+        </tr>
+        <tr>
+          <td>$p_3$</td>
+          <td>$p_1$</td>
+          <td>$p_2$</td>
+          <td>$p_2$</td>
+        </tr>
+        <tr>
+          <td>$p_2$</td>
+          <td>$p_3$</td>
+          <td>$p_1$</td>
+          <td>$p_1$</td>
+        </tr>
+        <tr>
+          <td>$p_4$</td>
+          <td>$p_4$</td>
+          <td>$p_4$</td>
+          <td>$p_3$</td>
+        </tr>
+      </tbody>
+    </table>
+
+    </details>
 </details>
 
 
