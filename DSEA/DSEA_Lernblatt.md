@@ -115,7 +115,7 @@
 * $p_4$: $p_3 < p_1 < p_2$
 </b></u></summary>
 
-* Bei $n$ Paaren $\to n - 1$ Möglichkeiten
+* Bei $n$ Paaren $\to (2n - 1)!!$ Möglichkeiten
 * <span class="a1">Instabilität prüfen</span>:
   * <details>
     <summary class="n"><u><b>Wie finde ich die Paare heraus ?</b></u></summary>
