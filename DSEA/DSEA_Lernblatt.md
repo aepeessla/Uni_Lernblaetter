@@ -84,98 +84,11 @@
   }
 </style>
 
-# Notationen
-
-<details>
-<summary class="n"><u><b>Welche 3 Notationen gibt es ?</b></u></summary>
-
-* $O$ => worst case
-* $\Omega$ => best case
-* $\theta$ => avarage case
-</details>
-
-
-# Monogame
-
-<details>
-<summary class="n"><u><b>Was sind Monogame ?</b></u></summary>
-
-* Ehe f. $\forall$
-* es gibt eine gerade Anzahl an Personen
-  * wir wollen $n$ Paare
-  * _jede Person_ hat eine __Präferenz__ ($p_1: p_3 \lt p_4 \lt p_2$)
-</details>
-
-<details>
-<summary class="n"><u><b>
-
-* $p_1$: $p_4 < p_2 < p_3$
-* $p_2$: $p_4 < p_3 < p_1$ 
-* $p_3$: $p_4 < p_1 < p_2$ 
-* $p_4$: $p_3 < p_1 < p_2$
-</b></u></summary>
-
-* Bei $n$ Paaren $\to (2n - 1)!!$ Möglichkeiten
-* <span class="a1">Instabilität prüfen</span>:
-  * <details>
-    <summary class="n"><u><b>Wie finde ich die Paare heraus ?</b></u></summary>
-
-    * <span class="a1">Eliminations-Tabelle</span>:
-      <table>
-      <thead>
-        <tr>
-          <th>Person</th>
-          <th>1.Wahl</th>
-          <th>2.Wahl</th>
-          <th>3.Wahl</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>$p_1$</td>
-          <td>$p_2$</td>
-          <td>$p_3$</td>
-          <td>$p_4$</td>
-        </tr>
-        <tr>
-          <td>$p_3$</td>
-          <td>$p_1$</td>
-          <td>$p_2$</td>
-          <td>$p_2$</td>
-        </tr>
-        <tr>
-          <td>$p_2$</td>
-          <td>$p_3$</td>
-          <td>$p_1$</td>
-          <td>$p_1$</td>
-        </tr>
-        <tr>
-          <td>$p_4$</td>
-          <td>$p_4$</td>
-          <td>$p_4$</td>
-          <td>$p_3$</td>
-        </tr>
-      </tbody>
-    </table>
-
-    </details>
-
-    1) <span class="a1">Heiratsantrag</span>:
-    * Jede Person macht ihrer aktuell höchsten Wahl einen Antrag
-      * $p_1 \to p_3$
-      * $p_2 \to p_1$
-      * $p_3 \to p_2$
-      * $p_4 \to p_2$
-      
-    2) <span class="a1">Kandidat halten/ablehnen</span>:
-    * $p_1$ bekommt nur den Antrag v. $p_2$ $\implies$ hält $p_2$.
-    * $p_3$ bekommt nur den Antrag v. $p_1$ $\implies$ hält $p_1$
-    * $p_2$ bekommt Anträge v. $p_3$ & $p_4$. Da $p_2$ d. Person $p_3$ lieber mag als $p_4$, hält $p_2$ d. Person $p_3$ & lehnt $p_4$ ab
-
-    3) <span class="a1">Symmetrisch streichen</span>:
-    * Wenn $x$ von $y$ abgelehnt wird (oder $x$ jemand Schlechteres als seine aktuelle Zusage verfällt), streichst du d. Verbindung $x \leftrightarrow y$ bei beiden Personen durch
-      * Da $p_2$ d. Person $p_4$ ablehnt, streichst du $p_4$ in d. Zeile v. $p_2$ & $p_2$ in d. Zeile v. $p_4$.
-</details>
+```plaintext
+for (i = 1; i <= n; i++) do
+    for (j = i + 1; j <= n; j++) do
+        Zähler++;
+```
 
 
 
