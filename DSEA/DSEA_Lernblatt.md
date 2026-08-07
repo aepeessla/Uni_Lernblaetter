@@ -84,33 +84,11 @@
   }
 </style>
 
-# Divide-&-Conquer-Algorithmus
-
-* <span class="a1">Übersicht</span>:
-  * Merge-Sort f. Sortierung
-  * Karatsuba-Multiplikation
-  * Diskrete Fouriertransformation
-  * Master-THeorem
-
-
-## Merge-Sort
-
-<details>
-<summary class="n"><u><b>Wie funktioniert das Merge-Sort ?
-
-`[5,6,3,4,9,1,2,7]`</b></u></summary>
-
-1. Teil = Rokusiv aufteilen
-  * `[5,6,3,4,9,1,2,7]`
-  * `[5,6,3,4]`, `[9,1,2,7]`
-  * `[5,6]`, `[3,4]`, `[9,1]`,`[2,7]`
-  * `[5]`, `[6]`, `[3]`, `[4]`, `[9]`,`[1]`,`[2]`,`[7]`
-2. Teil = Merge
-  * `[5,6]`, `[3,4]`, `[1,9]`,`[2,7]`
-  * `[3,4,5,6]`, `[1,2,7,9]`
-  * `[1,2,3,4,5,6,7,9]`
-</details>
-
+```plaintext
+for (i = 1; i <= n; i++) do
+    for (j = i + 1; j <= n; j++) do
+        Zähler++;
+```
 
 
 
