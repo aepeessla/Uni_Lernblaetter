@@ -450,128 +450,19 @@ code {
     background: #ff0090ff
   }
 </style>
-<h1 id="notationen">Notationen</h1>
+<h1 id="divide--conquer-algorithmus">Divide-&amp;-Conquer-Algorithmus</h1>
+<ul>
+<li><span class="a1">Übersicht</span>:
+<ul>
+<li>Merge-Sort f. Sortierung</li>
+<li>Karatsuba-Multiplikation</li>
+<li>Diskrete Fouriertransformation</li>
+<li>MAster-THeorem</li>
+</ul>
+</li>
+</ul>
 <details>
-<summary class="n"><u><b>Welche 3 Notationen gibt es ?</b></u></summary>
-<ul>
-<li>$O$ =&gt; worst case</li>
-<li>$\Omega$ =&gt; best case</li>
-<li>$\theta$ =&gt; avarage case</li>
-</ul>
-</details>
-<h1 id="monogame">Monogame</h1>
-<details>
-<summary class="n"><u><b>Was sind Monogame ?</b></u></summary>
-<ul>
-<li>Ehe f. $\forall$</li>
-<li>es gibt eine gerade Anzahl an Personen
-<ul>
-<li>wir wollen $n$ Paare</li>
-<li><em>jede Person</em> hat eine <strong>Präferenz</strong> ($p_1: p_3 \lt p_4 \lt p_2$)</li>
-</ul>
-</li>
-</ul>
-</details>
-<details>
-<summary class="n"><u><b>
-<ul>
-<li>
-<p>$p_1$: $p_4 &lt; p_2 &lt; p_3$</p>
-</li>
-<li>
-<p>$p_2$: $p_4 &lt; p_3 &lt; p_1$</p>
-</li>
-<li>
-<p>$p_3$: $p_4 &lt; p_1 &lt; p_2$</p>
-</li>
-<li>
-<p>$p_4$: $p_3 &lt; p_1 &lt; p_2$
-</b></u></summary></p>
-</li>
-<li>
-<p>Bei $n$ Paaren $\to n - 1$ Möglichkeiten</p>
-</li>
-<li>
-<p><span class="a1">Instabilität prüfen</span>:</p>
-<ul>
-<li>
-<details>
-<summary class="n"><u><b>Wie finde ich die Paare heraus ?</b></u></summary>
-<ul>
-<li><span class="a1">Eliminations-Tabelle</span>:<table>
-<thead>
-  <tr>
-    <th>Person</th>
-    <th>1.Wahl</th>
-    <th>2.Wahl</th>
-    <th>3.Wahl</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>$p_1$</td>
-    <td>$p_2$</td>
-    <td>$p_3$</td>
-    <td>$p_4$</td>
-  </tr>
-  <tr>
-    <td>$p_3$</td>
-    <td>$p_1$</td>
-    <td>$p_2$</td>
-    <td>$p_2$</td>
-  </tr>
-  <tr>
-    <td>$p_2$</td>
-    <td>$p_3$</td>
-    <td>$p_1$</td>
-    <td>$p_1$</td>
-  </tr>
-  <tr>
-    <td>$p_4$</td>
-    <td>$p_4$</td>
-    <td>$p_4$</td>
-    <td>$p_3$</td>
-  </tr>
-</tbody>
-</li>
-</ul>
-</table>
-</details>
-<ol>
-<li><span class="a1">Heiratsantrag</span>:</li>
-</ol>
-<ul>
-<li>Jede Person macht ihrer aktuell höchsten Wahl einen Antrag
-<ul>
-<li>$p_1 \to p_3$</li>
-<li>$p_2 \to p_1$</li>
-<li>$p_3 \to p_2$</li>
-<li>$p_4 \to p_2$</li>
-</ul>
-</li>
-</ul>
-<ol start="2">
-<li><span class="a1">Kandidat halten/ablehnen</span>:</li>
-</ol>
-<ul>
-<li>$p_1$ bekommt nur den Antrag v. $p_2$ $\implies$ hält $p_2$.</li>
-<li>$p_3$ bekommt nur den Antrag v. $p_1$ $\implies$ hält $p_1$</li>
-<li>$p_2$ bekommt Anträge v. $p_3$ &amp; $p_4$. Da $p_2$ d. Person $p_3$ lieber mag als $p_4$, hält $p_2$ d. Person $p_3$ &amp; lehnt $p_4$ ab</li>
-</ul>
-<ol start="3">
-<li><span class="a1">Symmetrisch streichen</span>:</li>
-</ol>
-<ul>
-<li>Wenn $x$ von $y$ abgelehnt wird (oder $x$ jemand Schlechteres als seine aktuelle Zusage verfällt), streichst du d. Verbindung $x \leftrightarrow y$ bei beiden Personen durch
-<ul>
-<li>Da $p_2$ d. Person $p_4$ ablehnt, streichst du $p_4$ in d. Zeile v. $p_2$ &amp; $p_2$ in d. Zeile v. $p_4$.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<summary class="n"><u><b></b></u></summary>
 </details>
 <script>
   window.MathJax = {
