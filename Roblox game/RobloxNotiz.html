@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RobloxNotiz.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<style>
+  details {
+    margin-bottom: 7px  ;
+    border: lightgrey 1px solid;
+    padding: 8px
+  }
+  summary {
+    font-size: 20px
+  }
+  img {
+    width: auto;
+    height: auto;
+  }
+
+  code {
+    background: #eeeeeeff 2px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 6px
+  }
+
+  body {
+    background: #ffffffff;
+    color: #000000ff;
+  }
+
+  h1 {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  h2 {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  h3 {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  /* Zielvorgabe für alle Blockquotes */
+  blockquote {
+    border-left: 5px solid #7cb459ff; /* Ein farbiger Strich links */
+    padding-left: 20px;             /* Abstand zum Text */
+    background-color: #edfbeaff;      /* Ein leichter Hintergrund */
+    margin-left: 10px;              /* Die eigentliche Einrückung */
+    color: #333;                    /* Textfarbe */
+  }
+
+  /* Optional: Wenn du das Aussehen der Liste im Blockquote verändern willst */
+  blockquote ul {
+    list-style-type: square;
+  }
+
+
+  ul li, ol li {
+    margin-top: 20px; /* Gewünschten Abstand hier anpassen */
+  }
+
+  .a1 {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .mermaid {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .r {
+    background: #b7e99bff
+  }
+
+  .f {
+    background: #e99b9bff
+  }
+  .n {
+    background: #9bb5e9ff
+  }
+  .w{
+    background: #ff0090ff
+  }
+</style>
+<h1 id="skript">Skript</h1>
+<h2 id="print">print</h2>
+<ul>
+<li>wenn ich einf. in <code>workspace</code> einen <strong>Script</strong> hinzufüge &amp; dann <code>Play</code> drücke, dann wird d. Code ausgeführt &amp; ausgeggeben</li>
+</ul>
+<pre class="hljs"><code><div>print(&quot;Hello World&quot;)
+</div></code></pre>
+<p><img src="image.png" alt="alt text"></p>
+<p><span class="a1">Ausgabe<span>:</p>
+<p><img src="image-1.png" alt="alt text"></p>
+<ul>
+<li>wenn man auf<code>Hello world:1</code> drauf klickt, dann geht man zu dem Script, wo man es geschrieben hat !</li>
+</ul>
+<h1 id="remoteevent">RemoteEvent</h1>
+<h2 id="client-to-server">Client $\to$ Server</h2>
+<p>You can use a <code>LocalScript</code> to Trigger an event on the <span style="color: blue">server</span> by calling the <code>FireServer()</code> method on a <code>RemoteEvent</code>. If you pass arguments to <code>FireServer()</code>, they pass to  the event handler on the server with certain <span style="color: blue">limitations</span>.</p>
+<ul>
+<li>the first parameter of the event handler on the server is always the <code>Player</code> object of the client that calls it, and additional parameters follow.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Client</th>
+<th><code>RemoteEvent:FireServer(args)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Server</strong></td>
+<td><code>RemoteEvent.OnServerEvent:Connect(function(player, args))</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="server-to-client">Server $\to$ Client</h2>
+<p>You can use a <code>Script</code> to trigger an event on a <span style="color: blue">client</span> by calling the <code>FireServer()</code> method on a <code>RemoteEvent</code>. The first argument fpr <code>FireServer()</code> is the <code>Player</code> object of the client that you wan to respond to the event, and additional arguments pass to the client with certain <span style="color: blue">limitations</span>.</p>
+<ul>
+<li>The event handler doesn't need to include the <code>Player</code>object as its first argument because you can determine the player on the client with <code>Players.LocalPlayer</code>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Server</th>
+<th><code>RemoteEvent:FireClient(player, args)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Client</strong></td>
+<td><code>RemtoteEvent.OnClickEvent:Connect(function(args))</code></td>
+</tr>
+</tbody>
+</table>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+</body>
+</html>

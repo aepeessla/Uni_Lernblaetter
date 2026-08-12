@@ -100,6 +100,30 @@ print("Hello World")
 * wenn man auf`Hello world:1` drauf klickt, dann geht man zu dem Script, wo man es geschrieben hat !
 
 
+# RemoteEvent
+
+## Client $\to$ Server
+You can use a `LocalScript` to Trigger an event on the <span style="color: blue">server</span> by calling the `FireServer()` method on a `RemoteEvent`. If you pass arguments to `FireServer()`, they pass to  the event handler on the server with certain <span style="color: blue">limitations</span>.
+* the first parameter of the event handler on the server is always the `Player` object of the client that calls it, and additional parameters follow.
+
+| Client | `RemoteEvent:FireServer(args)` |
+| --- | --- |
+| __Server__ | `RemoteEvent.OnServerEvent:Connect(function(player, args))` |
+
+## Server $\to$ Client
+
+You can use a `Script` to trigger an event on a <span style="color: blue">client</span> by calling the `FireServer()` method on a `RemoteEvent`. The first argument fpr `FireServer()` is the `Player` object of the client that you wan to respond to the event, and additional arguments pass to the client with certain <span style="color: blue">limitations</span>.
+* The event handler doesn't need to include the `Player`object as its first argument because you can determine the player on the client with `Players.LocalPlayer`.
+
+| Server | `RemoteEvent:FireClient(player, args)`|
+|--|--|
+|__Client__| `RemtoteEvent.OnClickEvent:Connect(function(args))`|
+
+
+
+
+
+
 <script>
   window.MathJax = {
     tex: {
