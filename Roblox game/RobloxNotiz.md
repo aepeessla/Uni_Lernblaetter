@@ -1,6 +1,6 @@
 <style>
   details {
-    margin-bottom: 7px  ;
+    margin-bottom: 5px  ;
     border: lightgrey 1px solid;
     padding: 8px
   }
@@ -68,56 +68,165 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   }
-
-  .r {
-    background: #b7e99bff
-  }
-
-  .f {
-    background: #e99b9bff
-  }
-  .n {
-    background: #9bb5e9ff
-  }
-  .w{
-    background: #ff0090ff
-  }
 </style>
 
-# Skript
+# Syntax
 
-## print
-* wenn ich einf. in `workspace` einen **Script** hinzufüge & dann `Play` drücke, dann wird d. Code ausgeführt & ausgeggeben 
+<details>
+<summary ><u><b>Syntax</b></u></summary>
 
-```luau
-print("Hello World")
-```
-![alt text](image.png)
-
-<span class="a1">Ausgabe<span>:
-
-![alt text](image-1.png)
-* wenn man auf`Hello world:1` drauf klickt, dann geht man zu dem Script, wo man es geschrieben hat !
+* `t = math.clamp(t, 0, 1)`:
+  * $\lt 0 \implies t = 0$
+  * $=0 \implies t = [0,1]$
+  * $\gt \implies t = 1$
+</details>
 
 
-# RemoteEvent
 
-## Client $\to$ Server
-You can use a `LocalScript` to Trigger an event on the <span style="color: blue">server</span> by calling the `FireServer()` method on a `RemoteEvent`. If you pass arguments to `FireServer()`, they pass to  the event handler on the server with certain <span style="color: blue">limitations</span>.
-* the first parameter of the event handler on the server is always the `Player` object of the client that calls it, and additional parameters follow.
+# House Stylization
 
-| Client | `RemoteEvent:FireServer(args)` |
-| --- | --- |
-| __Server__ | `RemoteEvent.OnServerEvent:Connect(function(player, args))` |
+## Open StylizationGui with the machine
 
-## Server $\to$ Client
+* `CustomazationGui` = <code style="color: #37aa28ff">game.StarterGui.CustomizationGui</code>(<code style="color: #00b3ffff">SurfaceGui</code>)
+  * ![alt text](image-2.png)
+* `HouseCustomazationGui` = <code style="color: #37aa28ff">game.StarterGui.HouseCostumazationGui</code>(<code style="color: #00b3ffff">SurfaceGui</code>)
+  * ![alt text](image-3.png)
+* **Server-Skript (Sign-Aktualisierung & Haus-Logik):**
+  `ChangeSignManager` = <code style="color: #37aa28ff">game.ServerScriptService.CustomizeHouse</code> 
 
-You can use a `Script` to trigger an event on a <span style="color: blue">client</span> by calling the `FireServer()` method on a `RemoteEvent`. The first argument fpr `FireServer()` is the `Player` object of the client that you wan to respond to the event, and additional arguments pass to the client with certain <span style="color: blue">limitations</span>.
-* The event handler doesn't need to include the `Player`object as its first argument because you can determine the player on the client with `Players.LocalPlayer`.
+* **Local-Skript (GUI-Tabs & Schließen-Button):**
+<code style="color: #37aa28ff">game.StarterGui.CustomizationGui.MainFrame.CustomizationButtonLogic</code>
 
-| Server | `RemoteEvent:FireClient(player, args)`|
-|--|--|
-|__Client__| `RemtoteEvent.OnClickEvent:Connect(function(args))`|
+* **Das Namensschild im Haus:**
+<code style="color: #37aa28ff">game.Workspace.Houses.[HausName].Ebene1.NamensSchild.NameDisplay.PlayerName</code>
+
+* **Das UI selbst:**
+<code style="color: #37aa28ff">game.StarterGui.CustomizationGui</code>
+
+
+
+
+
+
+
+
+
+
+# Roblox Tycoon: Sign Customization & GUI Fix
+
+1) CustomizationButtonLogic
+2) SignTextChangingLogic(LocalScript) $\to$ CustomizationEvent(RemoteEvent) $\to$ ChangeSignManager(Server-Skript)
+
+
+## CustomizationButtonLogic
+
+* **Pfad**:
+  * <code style="color: #37aa28ff">game.StarterGui.CustomizationGui.MainFrame.CustomizationButtonLogic</code>
+
+* **Logik**:
+  * Steuert den CostumizationGui
+    * Tabwechsel
+    * schließt d. Gui(`CloseGuiButton`)
+
+<hr>
+
+## ChangeSignManager(Server-Skript)
+* **Pfad**:
+  * <code style="color: #37aa28ff">game.ServerScriptService.ChangeSignManager</code>
+
+* **Logik**:
+  * hier wird d. Nachricht v. Client aufgenommen(`CustomizationEvent`: <code style="color: #37aa28ff">game.ReplicatedStorage.CustomizationEvent</code>)
+  * iteriert durch jedes haus bis d. Haus mit dem SpielerID gefunden wurde $\implies$ Ändert das entsprechende Schild in diesem Haus
+
+<hr>
+
+## SignTextChangingLogic
+<code style="color: #37aa28ff">game.StarterGui.CustomizationGui.MainFrame.SignPage.TextBox.SignTextChangingLogic</code>
+
+* Dieser empfängt den RemoteEvent ()
+
+
+
+
+
+<pre>
+👤 [ Spieler ]
+    │
+    ▼ (Klickt auf ProximityPrompt / Öffnet Menü)
+🖥️ [ StarterGui.CustomizationGui ]
+    │
+    ├── 📄 [ CustomizationButtonLogic ] (LocalScript)
+    │     ├── Steuert die Reiter (Farben, Schilder, Flügel)
+    │     └── Sendet Signale oder triggert Funktionen
+    │
+    ▼ (Spieler tippt Emoji ein / ändert Text)
+📡 [ RemoteFunction / RemoteEvent ] ("CustomizeHouse" / "updateSign")
+    │
+    ▼ (Server verarbeitet das Signal sicher)
+⚙️ [ ServerScriptService ] (Zentraler Manager)
+    ├── Prüft: Welches Haus gehört dem Spieler? (`getPlayerHouse`)
+    └── Findet das Zielobjekt im Workspace:
+          │
+          ▼
+🏠 [ Workspace.Houses.HouseX ]
+    └── Ebene1 ➔ NamensSchild ➔ NameDisplay ➔ 🪧 [ PlayerName ] (TextLabels)
+</pre>
+
+
+
+
+
+
+
+<hr>
+
+
+# 🛠️ Roblox Tycoon: Anpassungssystem (Customization)
+
+## 📁 1. Relevante Pfade
+* 🖥️ **GUI (Client):** `game.StarterGui.CustomizationGui`
+* 📡 **Netzwerk-Events:** 
+  * `game.ReplicatedStorage.CustomizationEvent` (für Textänderungen)
+  * `game.ReplicatedStorage.ToggleCustomizationGui` (für das Öffnen/Schließen)
+* ⚙️ **Server-Skripte:**
+  * `game.ServerScriptService.ChangeSignManager`
+  * `game.Workspace.Houses.[HouseName].Ebene1.CustomizationMachine.ProximityPrompt.CostumazationGuiHandler`
+* 🪧 **Zielobjekt im Workspace:** `game.Workspace.Houses.[HouseName].Ebene1.NamensSchild.NameDisplay.PlayerName`
+
+---
+
+## 🔗 2. Verbindungen und Datenfluss
+
+### Menü öffnen:
+👤 Spieler klickt $\to$ 🖱️ `ProximityPrompt` $\to$ ⚙️ `CostumazationGuiHandler` (Server) $\to$ 📡 `ToggleCustomizationGui` (`FireClient`) $\to$ 🖥️ `CustomizationButtonLogic` (Client öffnet GUI)
+
+### Text/Emoji ändern:
+⌨️ `TextBox` Eingabe $\to$ 📄 `SignTextChangingLogic` (Client) $\to$ 📡 `CustomizationEvent` (`FireServer`) $\to$ ⚙️ `ChangeSignManager` (Server aktualisiert Workspace)
+
+---
+
+## 📄 3. Erklärung der einzelnen Komponenten
+
+* 📄 **`CostumazationGuiHandler`** (Server-Skript im ProximityPrompt): Fängt den Klick an der Maschine ab und signalisiert dem Client per `RemoteEvent`, dass das Menü geöffnet werden soll.
+* 📄 **`CustomizationButtonLogic`** (LocalScript im MainFrame): Verwaltet die UI-Navigation (Wechseln zwischen den Reiter-Seiten wie Farben, Schilder, Flügel) und schließt das Menü über den Schließen-Button. Lauscht zudem auf das Öffnungs-Signal vom Server.
+* 📄 **`SignTextChangingLogic`** (LocalScript in der TextBox): Überwacht die Texteingabe des Spielers, begrenzt die Länge auf ein Zeichen (für Emojis) und sendet den neuen Inhalt an den Server.
+* 📄 **`ChangeSignManager`** (Server-Skript im ServerScriptService): Empfängt die Textänderung, sucht das passende Haus des Spielers im Workspace und aktualisiert das Namensschild für alle Spieler sichtbar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -450,58 +450,64 @@ code {
     background: #ff0090ff
   }
 </style>
-<h1 id="skript">Skript</h1>
-<h2 id="print">print</h2>
+<h1 id="syntax">Syntax</h1>
 <ul>
-<li>wenn ich einf. in <code>workspace</code> einen <strong>Script</strong> hinzufüge &amp; dann <code>Play</code> drücke, dann wird d. Code ausgeführt &amp; ausgeggeben</li>
+<li><code>t = math.clamp(t, 0, 1)</code>:
+<ul>
+<li>$\lt 0 \implies t = 0$</li>
+<li>$=0 \implies t = [0,1]$</li>
+<li>$\gt \implies t = 1$</li>
 </ul>
-<pre class="hljs"><code><div>print(&quot;Hello World&quot;)
+</li>
+</ul>
+<h1 id="rainbow-effekt">Rainbow Effekt</h1>
+<blockquote>
+<p>Wo liegen d. Karten ?</p>
+<ul>
+<li><strong>StarterPlayer</strong> $\rightarrow$ <code>StarterPlayerScripts</code></li>
+<li><strong>CardsTemplateScript</strong> $\rightarrow$ <code>ReplicatedStorage</code></li>
+<li><strong>CardTemplate</strong> $\rightarrow$ <code>workspace</code></li>
+</ul>
+</blockquote>
+<ul>
+<li>Roblox-Service, dass Updates v. <code>Client</code> aus Info. zum Frame des Spielers v. d. Kamera in <code>workspace</code> gibt $\implies$ <code style="color: red">game:GetService(&quot;RunService&quot;)</code></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">local</span> RunService = game:GetService(<span class="hljs-string">"RunService"</span>)
 </div></code></pre>
-<p><img src="image.png" alt="alt text"></p>
-<p><span class="a1">Ausgabe<span>:</p>
-<p><img src="image-1.png" alt="alt text"></p>
 <ul>
-<li>wenn man auf<code>Hello world:1</code> drauf klickt, dann geht man zu dem Script, wo man es geschrieben hat !</li>
+<li>Zugreiden auf d. Kamera im <code>workspace</code> $\implies$ = <code style="color: red">Workspace.CurrentCamera</code></li>
 </ul>
-<h1 id="remoteevent">RemoteEvent</h1>
-<h2 id="client-to-server">Client $\to$ Server</h2>
-<p>You can use a <code>LocalScript</code> to Trigger an event on the <span style="color: blue">server</span> by calling the <code>FireServer()</code> method on a <code>RemoteEvent</code>. If you pass arguments to <code>FireServer()</code>, they pass to  the event handler on the server with certain <span style="color: blue">limitations</span>.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">local</span> RunService = game:GetService(<span class="hljs-string">"RunService"</span>)
+<span class="hljs-keyword">local</span> Camera = workspace.CurrentCamera
+</div></code></pre>
 <ul>
-<li>the first parameter of the event handler on the server is always the <code>Player</code> object of the client that calls it, and additional parameters follow.</li>
+<li>Def. d. Farbpaletten</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>Client</th>
-<th><code>RemoteEvent:FireServer(args)</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Server</strong></td>
-<td><code>RemoteEvent.OnServerEvent:Connect(function(player, args))</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="server-to-client">Server $\to$ Client</h2>
-<p>You can use a <code>Script</code> to trigger an event on a <span style="color: blue">client</span> by calling the <code>FireServer()</code> method on a <code>RemoteEvent</code>. The first argument fpr <code>FireServer()</code> is the <code>Player</code> object of the client that you wan to respond to the event, and additional arguments pass to the client with certain <span style="color: blue">limitations</span>.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">local</span> RunService = game:GetService(<span class="hljs-string">"RunService"</span>)
+<span class="hljs-keyword">local</span> Camera = workspace.CurrentCamera
+
+<span class="hljs-keyword">local</span> metallic_effect = {
+ Color3.fromRGB(..., ..., ...),
+ Color3.fromRGB(..., ..., ...),
+}
+</div></code></pre>
 <ul>
-<li>The event handler doesn't need to include the <code>Player</code>object as its first argument because you can determine the player on the client with <code>Players.LocalPlayer</code>.</li>
+<li>Die Funktion <code>evaluatePalette</code> nimmt einen Fortschrittswert <code>t</code> zw. <code>0.0</code> (ganz links) &amp; <code>1.0</code> (ganz rechts) &amp; berechnet ü. lineare Interpolation (Color3:Lerp) d. exakte Mischfarbe f. diesen Frame:</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>Server</th>
-<th><code>RemoteEvent:FireClient(player, args)</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Client</strong></td>
-<td><code>RemtoteEvent.OnClickEvent:Connect(function(args))</code></td>
-</tr>
-</tbody>
-</table>
+<pre class="hljs"><code><div><span class="hljs-keyword">local</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">evaluatePalette</span><span class="hljs-params">(palette, t)</span></span>
+	t = <span class="hljs-built_in">math</span>.clamp(t, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>)
+	<span class="hljs-keyword">local</span> count = #palette
+	<span class="hljs-keyword">if</span> count &lt;= <span class="hljs-number">1</span> <span class="hljs-keyword">then</span> <span class="hljs-keyword">return</span> palette[<span class="hljs-number">1</span>] <span class="hljs-keyword">or</span> Color3.new(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>) <span class="hljs-keyword">end</span>
+	
+  <span class="hljs-comment">-- hier wird es in gleichmäßige teile geteilt indem eine Farbe angezeigt wird</span>
+	<span class="hljs-keyword">local</span> scaledT = t * (count - <span class="hljs-number">1</span>)
+	<span class="hljs-keyword">local</span> index = <span class="hljs-built_in">math</span>.<span class="hljs-built_in">floor</span>(scaledT) + <span class="hljs-number">1</span>
+	<span class="hljs-keyword">local</span> frac = scaledT - <span class="hljs-built_in">math</span>.<span class="hljs-built_in">floor</span>(scaledT)
+	
+	<span class="hljs-keyword">if</span> index &gt;= count <span class="hljs-keyword">then</span> <span class="hljs-keyword">return</span> palette[count] <span class="hljs-keyword">end</span>
+	<span class="hljs-keyword">return</span> palette[index]:Lerp(palette[index + <span class="hljs-number">1</span>], frac)
+<span class="hljs-keyword">end</span>
+</div></code></pre>
 <script>
   window.MathJax = {
     tex: {
