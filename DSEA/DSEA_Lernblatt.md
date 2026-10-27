@@ -118,7 +118,7 @@
 <summary class="n"><u><b>Was sind die Schritte zur Ordnung von asymptotischen Wachstums ?</b></u></summary>
 
   1) __<u>$\forall$ Funk. vereinf.</u>__
-  2) Jede Funktion in eine feinere Klasse einordnen(Tabelle)
+  2) __<u>Jede Funktion in eine feinere Klasse einordnen(Tabelle)</u>__
 
   <table>
   <thead>
@@ -155,6 +155,11 @@
   </tbody>
 </table>
 
+  3) __<u>V. oben n- unten lesen = richtige Reihenfolge</u>__
+  4) __<u>Nur benachbarte Funktionen per Grenzwert absichern, also $\lim \frac{f}{g}$</u>__
+     * <b><span style="color: #5b34eb">Grenzwert-Kriterium</span></b>
+     * __Nenner__: D. Funktion, die ich denke, dass langsamer ist
+        * Wenn **Ergebnis** $= 0$, dann <span style="color: red">echt langsamer</span>: ≺
 </details>
 
 
