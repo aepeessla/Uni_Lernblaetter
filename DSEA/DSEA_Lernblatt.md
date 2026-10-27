@@ -88,19 +88,25 @@
 # Allgemein
 
 ## Gaußsche Summenformel:
-  * $\boxed{\binom{n+1}{2} \text{ oder} \approx \binom{n}{2}}$
-  
-  * Beispiel:
-    * $\binom{n}{2} = \frac{n(n-1)}{2}$
-      * $\mathcal{O}(n^2)$
 
-  <details>
-  <summary class="n"><u><b>Was ist ein Binom ?</b></u></summary>
+<details>
+<summary class="n"><u><b>Wie lautet d. Gaußsche Summenformel ?</b></u></summary>
+
+  * $\boxed{\binom{n+1}{k} \text{ oder} \approx \binom{n}{k}}$
     
-  * $\binom{n}{k}$
-    * n = Gesamtzahl d. Elem.
-    * k = Paarung
-  </details>
+    * __Genauer__:
+      * $\binom{n}{k} = \frac{n!}{k! \cdot (n - k)!}$
+  
+
+    <details>
+    <summary class="n"><u><b>Was ist ein Binom ?</b></u></summary>
+      
+    * $\binom{n}{k}$
+      * n = Gesamtzahl d. Elem.
+      * k = Paarung
+    </details>
+</details>
+  
 
 
 
