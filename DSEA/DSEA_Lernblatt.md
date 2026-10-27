@@ -163,7 +163,30 @@
 </details>
 
 
+<details>
+<summary class="n"><u><b>Wie bestimmt man im Allgemeinen d. Laufzeit eines Codes ?</b></u></summary>
 
+1) __<u>Konstante Operationen/Basisoperationen feststellen ($\mathcal{O}(1)$)</u>__
+    * jede Zeile anschauen & zählt elem. Aktionen:
+      * **Zuw.** (=)
+      * __Rechenop.__ (+, -)
+      * __Vgl.__ (<, <=)
+2) __<u>Schleifenhierarchie & Durchläufe bestimmen (von innen nach außen)</u>__:
+    * __<u>Außerhalb der Schleifen</u>__:
+      * Wie viele Zeilen laufen 1 $\times$ (Bsp.: Startwertw., return)
+      * __<u>Innere Schleifen</u>__:
+        * Wie oft läuft d. <code style="color: #ff6a00ff">innerste Schleife</code> in Abhängigkeit d. **äußeren Zähler**?
+      * __<u>Äußere Schleifen</u>__:
+        * Wie oft werden d. Schleifen __insgesamt__ durchlaufen (z.B.: als Summenformel aufgestellt)?
+3) __<u>Multiplikation von Durchläufen $\times$ Operationen</u>__:
+    * Für jede Ebene rechnet man: $\text{Anzahl d. Schleifendurchläufe} \times \text{Operationen in dieser Ebene}$. 
+4) __<u>Man addiert alle Ebenen zusammen.</u>__:
+    * Man addiert alle Ebenen zsm.
+5) __<u>Fallunterscheidung (Best Case vs. Worst Case)</u>__: 
+    * Man prüft, ob bedingte Verzw. (if/else) vorhanden sind, d. d. Anzahl d. Operationen abhängig v. d. Eingabe schwanken lassen
+ 
+
+</details>
 
 
 

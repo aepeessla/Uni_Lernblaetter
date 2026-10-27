@@ -538,6 +538,56 @@ code {
 </li>
 </ol>
 </details>
+<details>
+<summary class="n"><u><b>Wie bestimmt man im Allgemeinen d. Laufzeit eines Codes ?</b></u></summary>
+<ol>
+<li><strong><u>Konstante Operationen/Basisoperationen feststellen (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.0278em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span>)</u></strong>
+<ul>
+<li>jede Zeile anschauen &amp; zählt elem. Aktionen:
+<ul>
+<li><strong>Zuw.</strong> (=)</li>
+<li><strong>Rechenop.</strong> (+, -)</li>
+<li><strong>Vgl.</strong> (&lt;, &lt;=)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><u>Schleifenhierarchie &amp; Durchläufe bestimmen (von innen nach außen)</u></strong>:
+<ul>
+<li><strong><u>Außerhalb der Schleifen</u></strong>:
+<ul>
+<li>Wie viele Zeilen laufen 1 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">×</span></span></span></span> (Bsp.: Startwertw., return)</li>
+<li><strong><u>Innere Schleifen</u></strong>:
+<ul>
+<li>Wie oft läuft d. <code style="color: #ff6a00ff">innerste Schleife</code> in Abhängigkeit d. <strong>äußeren Zähler</strong>?</li>
+</ul>
+</li>
+<li><strong><u>Äußere Schleifen</u></strong>:
+<ul>
+<li>Wie oft werden d. Schleifen <strong>insgesamt</strong> durchlaufen (z.B.: als Summenformel aufgestellt)?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><u>Multiplikation von Durchläufen <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">×</span></span></span></span> Operationen</u></strong>:
+<ul>
+<li>Für jede Ebene rechnet man: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext>Anzahl d. Schleifendurchl</mtext><mover accent="true"><mtext>a</mtext><mo>¨</mo></mover><mtext>ufe</mtext></mrow><mo>×</mo><mtext>Operationen in dieser Ebene</mtext></mrow><annotation encoding="application/x-tex">\text{Anzahl d. Schleifendurchläufe} \times \text{Operationen in dieser Ebene}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord">Anzahl d. Schleifendurchl</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord">a</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">¨</span></span></span></span></span></span></span><span class="mord">ufe</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Operationen in dieser Ebene</span></span></span></span></span>.</li>
+</ul>
+</li>
+<li><strong><u>Man addiert alle Ebenen zusammen.</u></strong>:
+<ul>
+<li>Man addiert alle Ebenen zsm.</li>
+</ul>
+</li>
+<li><strong><u>Fallunterscheidung (Best Case vs. Worst Case)</u></strong>:
+<ul>
+<li>Man prüft, ob bedingte Verzw. (if/else) vorhanden sind, d. d. Anzahl d. Operationen abhängig v. d. Eingabe schwanken lassen</li>
+</ul>
+</li>
+</ol>
+</details>
 <script>
   window.MathJax = {
     tex: {
