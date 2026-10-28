@@ -172,7 +172,7 @@
       * __Rechenop.__ (+, -)
       * __Vgl.__ (<, <=)
 2) __<u>Schleifenhierarchie & Durchläufe bestimmen (von innen nach außen)</u>__:
-    * __<u>Außerhalb der Schleifen</u>__:
+    * __<u>Außerhalb d. Schleifen</u>__:
       * Wie viele Zeilen laufen 1 $\times$ (Bsp.: Startwertw., return)
       * __<u>Innere Schleifen</u>__:
         * Wie oft läuft d. <code style="color: #ff6a00ff">innerste Schleife</code> in Abhängigkeit d. **äußeren Zähler**?
