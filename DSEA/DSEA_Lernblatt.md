@@ -188,8 +188,27 @@
 
 </details>
 
+# Landau Symbole
 
+<details>
+<summary class="n"><u><b></b></u></summary>
 
+  <details>
+  <summary class="n"><u><b>Was sind d, Landau Symbole ?</b></u></summary>
+
+  1) $\mathcal{O}$
+     * __<u>Def.</u>__: $\mathcal{O}(T) = \{f: \mathbb{N} \to \mathbb{N} | \exists c, n_0 \in \mathbb{N} \text{ so dass } \color{#ff0037} f(n)  \color{#001eff} \le \color{#ff0037} c \cdot T(n) \color{#000000} \text{ für } \forall n \ge n_0 \}$
+       * D. ist d. <span style="color: rgb(255, 0, 0) ">obere Grenze</span> 
+
+  2) $\Omega$
+     * __<u>Def.</u>__: $\Omega(T) = \{f: \mathbb{N} \to \mathbb{N} | \exists c, n_0 \in \mathbb{N} \text{ so dass } \color{#ff0037} f(n) \color{#001eff} \ge \color{#ff0037}c \cdot T(n) \color{#000000} \text{ für } \forall n  \le  n_0 \}$
+       * D. ist d. <span style="color: rgb(255, 0, 0) ">untere Grenze</span>
+
+  3) $\Theta$
+     * $\Theta(n) = \mathcal{O}(n) \cap \Omega(n)$
+       * D. ist d. <span style="color: rgb(255, 0, 0) ">Bereich zw.</span> d. obere & d. unteren Grenze
+  </details>
+</details>
 
 
 
