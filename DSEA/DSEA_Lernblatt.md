@@ -102,6 +102,10 @@
     * k = Paarung
   </details>
 
+## Logarithmusgesetze
+
+![alt text](image.png)
+
 
 
 
